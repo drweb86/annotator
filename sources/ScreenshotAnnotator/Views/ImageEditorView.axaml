@@ -1,0 +1,151 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="using:ScreenshotAnnotator.ViewModels"
+             xmlns:controls="using:ScreenshotAnnotator.Controls"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="600"
+             x:Class="ScreenshotAnnotator.Views.ImageEditorView"
+             x:DataType="vm:ImageEditorViewModel">
+
+  <Design.DataContext>
+    <vm:ImageEditorViewModel />
+  </Design.DataContext>
+
+  <DockPanel>
+    <!-- Toolbar -->
+    <Border DockPanel.Dock="Top"
+            Background="#F0F0F0"
+            BorderBrush="#CCCCCC"
+            BorderThickness="0,0,0,1"
+            Padding="8">
+      <StackPanel Orientation="Horizontal" Spacing="8">
+
+        <!-- Load Image Button -->
+        <Button Command="{Binding LoadImageCommand}"
+                ToolTip.Tip="Load Image"
+                Padding="8"
+                Background="Transparent">
+          <Panel>
+            <Path Data="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+                  Fill="#333333"
+                  Stretch="Uniform"
+                  Width="20" Height="20"/>
+          </Panel>
+        </Button>
+
+        <!-- Separator -->
+        <Border Width="1" Background="#CCCCCC" Margin="4,0"/>
+
+        <!-- Select/Move Tool Button -->
+        <ToggleButton IsChecked="{Binding IsSelectToolSelected}"
+                      Command="{Binding SelectSelectToolCommand}"
+                      ToolTip.Tip="Select and Move Tool (Click and drag shapes to move them)"
+                      Padding="8">
+          <Panel>
+            <!-- Pointer/Cursor Icon -->
+            <Path Data="M2,2 L2,18 L7,13 L10,20 L13,19 L10,12 L18,12 Z"
+                  Fill="#333333"
+                  Stretch="Uniform"
+                  Width="20" Height="20"/>
+          </Panel>
+        </ToggleButton>
+
+        <!-- Arrow Tool Button -->
+        <ToggleButton IsChecked="{Binding IsArrowToolSelected}"
+                      Command="{Binding SelectArrowToolCommand}"
+                      ToolTip.Tip="Arrow Tool"
+                      Padding="8">
+          <Panel>
+            <!-- Arrow Icon -->
+            <Path Data="M2,2 L18,10 L10,12 L8,20 Z M10,12 L18,18"
+                  Stroke="#333333"
+                  StrokeThickness="2"
+                  Fill="Transparent"
+                  Stretch="Uniform"
+                  Width="20" Height="20"/>
+          </Panel>
+        </ToggleButton>
+
+        <!-- Callout Tool Button -->
+        <ToggleButton IsChecked="{Binding IsCalloutToolSelected}"
+                      Command="{Binding SelectCalloutToolCommand}"
+                      ToolTip.Tip="Callout Tool"
+                      Padding="8">
+          <Panel>
+            <!-- Callout Icon (speech bubble) -->
+            <Path Data="M4,4 L16,4 L16,12 L10,12 L8,16 L8,12 L4,12 Z"
+                  Stroke="#333333"
+                  StrokeThickness="2"
+                  Fill="Transparent"
+                  Stretch="Uniform"
+                  Width="20" Height="20"/>
+          </Panel>
+        </ToggleButton>
+
+        <!-- Trim/Crop Tool Button -->
+        <ToggleButton IsChecked="{Binding IsTrimToolSelected}"
+                      Command="{Binding SelectTrimToolCommand}"
+                      ToolTip.Tip="Trim/Crop Tool"
+                      Padding="8">
+          <Panel>
+            <!-- Crop Icon -->
+            <Path Data="M7,3 L7,7 L3,7 M17,17 L17,13 L21,13 M7,7 L17,7 L17,17 L7,17"
+                  Stroke="#333333"
+                  StrokeThickness="2"
+                  Fill="Transparent"
+                  Stretch="Uniform"
+                  Width="20" Height="20"/>
+          </Panel>
+        </ToggleButton>
+
+        <!-- Separator -->
+        <Border Width="1" Background="#CCCCCC" Margin="4,0"/>
+
+        <!-- Clear All Button -->
+        <Button Command="{Binding ClearShapesCommand}"
+                ToolTip.Tip="Clear All Annotations"
+                Padding="8"
+                Background="Transparent">
+          <Panel>
+            <!-- Trash/Clear Icon -->
+            <Path Data="M9,3V4H4V6H5V19A2,2 0 0,0 7,21H17A2,2 0 0,0 19,19V6H20V4H15V3H9M7,6H17V19H7V6M9,8V17H11V8H9M13,8V17H15V8H13Z"
+                  Fill="#D32F2F"
+                  Stretch="Uniform"
+                  Width="20" Height="20"/>
+          </Panel>
+        </Button>
+
+        <!-- Apply Trim Button -->
+        <Button Command="{Binding ApplyTrimCommand}"
+                ToolTip.Tip="Apply Trim"
+                Padding="8"
+                Background="Transparent"
+                IsEnabled="{Binding IsTrimToolSelected}">
+          <Panel>
+            <!-- Checkmark Icon -->
+            <Path Data="M9,20.42L2.79,14.21L5.62,11.38L9,14.77L18.88,4.88L21.71,7.71L9,20.42Z"
+                  Fill="#2E7D32"
+                  Stretch="Uniform"
+                  Width="20" Height="20"/>
+          </Panel>
+        </Button>
+
+        <TextBlock Text="{Binding CurrentTool}"
+                   VerticalAlignment="Center"
+                   Margin="16,0,0,0"
+                   FontSize="12"
+                   Foreground="#666666"/>
+      </StackPanel>
+    </Border>
+
+    <!-- Image Editor Canvas -->
+    <ScrollViewer HorizontalScrollBarVisibility="Auto"
+                  VerticalScrollBarVisibility="Auto"
+                  Background="White">
+      <controls:ImageEditorCanvas Image="{Binding Image}"
+                                  CurrentTool="{Binding CurrentTool}"
+                                  Shapes="{Binding Shapes}"/>
+    </ScrollViewer>
+  </DockPanel>
+</UserControl>
