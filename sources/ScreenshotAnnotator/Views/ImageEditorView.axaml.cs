@@ -31,12 +31,26 @@ public partial class ImageEditorView : UserControl
                     {
                         viewModel.SetTopLevel(topLevel);
                     }
+
+                    // Load project files on startup
+                    viewModel.RefreshProjectFilesCommand.Execute(null);
                 }
             }
         };
 
         // Add keyboard shortcuts
         this.KeyDown += OnKeyDown;
+    }
+
+    private void OnFileListDoubleTapped(object? sender, Avalonia.Input.TappedEventArgs e)
+    {
+        if (sender is ListBox listBox && listBox.SelectedItem is Services.ProjectFileInfo fileInfo)
+        {
+            if (DataContext is ImageEditorViewModel viewModel)
+            {
+                _ = viewModel.OpenProjectFileCommand.ExecuteAsync(fileInfo);
+            }
+        }
     }
 
     private async void OnKeyDown(object? sender, KeyEventArgs e)
@@ -98,6 +112,18 @@ public partial class ImageEditorView : UserControl
         else if (isCtrl && isShift && e.Key == Key.X)
         {
             viewModel.ClearShapesCommand.Execute(null);
+            e.Handled = true;
+        }
+        // F9 - Toggle file browser
+        else if (e.Key == Key.F9)
+        {
+            viewModel.ToggleFileBrowserCommand.Execute(null);
+            e.Handled = true;
+        }
+        // F12 - Take screenshot
+        else if (e.Key == Key.F12)
+        {
+            await viewModel.TakeScreenshotCommand.ExecuteAsync(null);
             e.Handled = true;
         }
     }

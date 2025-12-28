@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text.Json;
 using System;
 using Avalonia.Platform.Storage;
+using ScreenshotAnnotator.Services;
 
 namespace ScreenshotAnnotator.ViewModels;
 
@@ -99,10 +100,21 @@ public partial class ImageEditorViewModel : ViewModelBase
 
     private Avalonia.Controls.TopLevel? _topLevel;
     private string? _currentFilePath;
+    private Avalonia.Controls.Window? _mainWindow;
+
+    [ObservableProperty]
+    private ObservableCollection<ProjectFileInfo> _projectFiles = new();
+
+    [ObservableProperty]
+    private bool _isFileBrowserVisible = true;
 
     public void SetTopLevel(Avalonia.Controls.TopLevel topLevel)
     {
         _topLevel = topLevel;
+        if (topLevel is Avalonia.Controls.Window window)
+        {
+            _mainWindow = window;
+        }
     }
 
     [RelayCommand]
@@ -423,5 +435,134 @@ public partial class ImageEditorViewModel : ViewModelBase
         Image = null;
         Shapes.Clear();
         _currentFilePath = null;
+    }
+
+    [RelayCommand]
+    private async Task TakeScreenshot()
+    {
+        try
+        {
+            // Hide the main window
+            if (_mainWindow != null)
+            {
+                _mainWindow.Hide();
+            }
+
+            // Wait a bit for window to hide
+            await Task.Delay(300);
+
+            // Capture screenshot
+            var screenshot = await ScreenshotService.CaptureScreenshotAsync();
+
+            // Restore window
+            if (_mainWindow != null)
+            {
+                _mainWindow.Show();
+            }
+
+            if (screenshot != null)
+            {
+                // Create new project with screenshot
+                Image = screenshot;
+                Shapes.Clear();
+
+                // Auto-save to projects folder
+                var filePath = ProjectManager.GetTimestampedFilePath(".anp");
+                _currentFilePath = filePath;
+                await SaveProjectToFile(filePath);
+
+                // Refresh file list
+                RefreshProjectFiles();
+            }
+        }
+        catch
+        {
+            // Restore window in case of error
+            if (_mainWindow != null)
+            {
+                _mainWindow.Show();
+            }
+        }
+    }
+
+    [RelayCommand]
+    private void RefreshProjectFiles()
+    {
+        ProjectFiles.Clear();
+        var files = ProjectManager.GetProjectFiles();
+        foreach (var file in files)
+        {
+            ProjectFiles.Add(file);
+        }
+    }
+
+    [RelayCommand]
+    private async Task OpenProjectFile(ProjectFileInfo? fileInfo)
+    {
+        if (fileInfo == null) return;
+
+        try
+        {
+            if (fileInfo.IsProject)
+            {
+                // Open as project
+                _currentFilePath = fileInfo.FilePath;
+                await LoadProjectFromFile(fileInfo.FilePath);
+            }
+            else
+            {
+                // Open as image
+                Image = new Bitmap(fileInfo.FilePath);
+                Shapes.Clear();
+                _currentFilePath = null;
+            }
+        }
+        catch
+        {
+            // Handle errors
+        }
+    }
+
+    [RelayCommand]
+    private void ToggleFileBrowser()
+    {
+        IsFileBrowserVisible = !IsFileBrowserVisible;
+    }
+
+    [RelayCommand]
+    private void DeleteProjectFile(ProjectFileInfo? fileInfo)
+    {
+        if (fileInfo == null) return;
+
+        try
+        {
+            if (File.Exists(fileInfo.FilePath))
+            {
+                File.Delete(fileInfo.FilePath);
+                RefreshProjectFiles();
+            }
+        }
+        catch
+        {
+            // Handle errors
+        }
+    }
+
+    [RelayCommand]
+    private void OpenProjectsFolder()
+    {
+        try
+        {
+            var folder = ProjectManager.GetProjectsFolder();
+            System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo
+            {
+                FileName = folder,
+                UseShellExecute = true
+            });
+        }
+        catch
+        {
+            // Handle errors
+        }
     }
 }
