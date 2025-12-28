@@ -4,6 +4,12 @@ using CommunityToolkit.Mvvm.Input;
 using ScreenshotAnnotator.Models;
 using System.Collections.ObjectModel;
 using System.Threading.Tasks;
+using Avalonia.Input;
+using System.IO;
+using System.Linq;
+using System.Text.Json;
+using System;
+using Avalonia.Platform.Storage;
 
 namespace ScreenshotAnnotator.ViewModels;
 
@@ -29,6 +35,13 @@ public partial class ImageEditorViewModel : ViewModelBase
 
     [ObservableProperty]
     private bool _isTrimToolSelected;
+
+    private Controls.ImageEditorCanvas? _editorCanvas;
+
+    public void SetEditorCanvas(Controls.ImageEditorCanvas canvas)
+    {
+        _editorCanvas = canvas;
+    }
 
     [RelayCommand]
     private void SelectSelectTool()
@@ -59,42 +72,6 @@ public partial class ImageEditorViewModel : ViewModelBase
     }
 
     [RelayCommand]
-    private async Task LoadImage()
-    {
-        // This will be connected to a file picker
-        // For now, create a sample image
-        var width = 800;
-        var height = 600;
-        var bitmap = new WriteableBitmap(
-            new Avalonia.PixelSize(width, height),
-            new Avalonia.Vector(96, 96),
-            Avalonia.Platform.PixelFormat.Bgra8888,
-            Avalonia.Platform.AlphaFormat.Premul
-        );
-
-        using (var buffer = bitmap.Lock())
-        {
-            unsafe
-            {
-                var ptr = (uint*)buffer.Address;
-                for (int y = 0; y < height; y++)
-                {
-                    for (int x = 0; x < width; x++)
-                    {
-                        // Create a gradient background
-                        byte r = (byte)(x * 255 / width);
-                        byte g = (byte)(y * 255 / height);
-                        byte b = 200;
-                        ptr[y * width + x] = 0xFF000000 | ((uint)b << 16) | ((uint)g << 8) | r;
-                    }
-                }
-            }
-        }
-
-        Image = bitmap;
-    }
-
-    [RelayCommand]
     private void ClearShapes()
     {
         Shapes.Clear();
@@ -118,5 +95,333 @@ public partial class ImageEditorViewModel : ViewModelBase
     partial void OnCurrentToolChanged(ToolType value)
     {
         UpdateToolSelection();
+    }
+
+    private Avalonia.Controls.TopLevel? _topLevel;
+    private string? _currentFilePath;
+
+    public void SetTopLevel(Avalonia.Controls.TopLevel topLevel)
+    {
+        _topLevel = topLevel;
+    }
+
+    [RelayCommand]
+    private async Task CopyToClipboard()
+    {
+        if (_editorCanvas == null || Image == null || _topLevel == null) return;
+
+        try
+        {
+            var renderedImage = _editorCanvas.RenderToImage();
+            if (renderedImage == null) return;
+
+            var clipboard = _topLevel.Clipboard;
+            if (clipboard == null) return;
+
+            // Save bitmap to PNG stream
+            using var stream = new MemoryStream();
+            renderedImage.Save(stream);
+            stream.Position = 0;
+
+            // Copy as PNG image data
+#pragma warning disable CS0618 // Type or member is obsolete
+            var dataObject = new DataObject();
+            dataObject.Set("image/png", stream.ToArray());
+            await clipboard.SetDataObjectAsync(dataObject);
+#pragma warning restore CS0618 // Type or member is obsolete
+        }
+        catch
+        {
+            // Handle clipboard errors silently
+        }
+    }
+
+    [RelayCommand]
+    private async Task PasteFromClipboard()
+    {
+        if (_topLevel == null) return;
+
+        try
+        {
+            var clipboard = _topLevel.Clipboard;
+            if (clipboard == null) return;
+
+#pragma warning disable CS0618 // Type or member is obsolete
+            var formats = await clipboard.GetFormatsAsync();
+
+            // Try to get image data
+            if (formats.Contains("image/png"))
+            {
+                var data = await clipboard.GetDataAsync("image/png");
+                if (data is byte[] bytes)
+                {
+                    using var stream = new MemoryStream(bytes);
+                    var bitmap = new Bitmap(stream);
+                    Image = bitmap;
+                    Shapes.Clear();
+                }
+            }
+#pragma warning restore CS0618 // Type or member is obsolete
+        }
+        catch
+        {
+            // Handle clipboard errors silently
+        }
+    }
+
+    [RelayCommand]
+    private async Task SaveAsImage()
+    {
+        if (_editorCanvas == null || Image == null || _topLevel == null) return;
+
+        try
+        {
+            var storageProvider = _topLevel.StorageProvider;
+            if (storageProvider == null) return;
+
+            var file = await storageProvider.SaveFilePickerAsync(new FilePickerSaveOptions
+            {
+                Title = "Save Image",
+                FileTypeChoices = new[]
+                {
+                    new FilePickerFileType("PNG Image") { Patterns = new[] { "*.png" } },
+                    new FilePickerFileType("JPEG Image") { Patterns = new[] { "*.jpg", "*.jpeg" } },
+                    new FilePickerFileType("WebP Image") { Patterns = new[] { "*.webp" } },
+                    new FilePickerFileType("BMP Image") { Patterns = new[] { "*.bmp" } }
+                },
+                SuggestedFileName = "annotated_image",
+                DefaultExtension = "png"
+            });
+
+            if (file != null)
+            {
+                var renderedImage = _editorCanvas.RenderToImage();
+                if (renderedImage != null)
+                {
+                    await using var stream = await file.OpenWriteAsync();
+                    renderedImage.Save(stream);
+                }
+            }
+        }
+        catch
+        {
+            // Handle save errors
+        }
+    }
+
+    [RelayCommand]
+    private async Task LoadImage()
+    {
+        if (_topLevel == null) return;
+
+        try
+        {
+            var storageProvider = _topLevel.StorageProvider;
+            if (storageProvider == null) return;
+
+            var files = await storageProvider.OpenFilePickerAsync(new FilePickerOpenOptions
+            {
+                Title = "Open Image",
+                FileTypeFilter = new[]
+                {
+                    new FilePickerFileType("Image Files")
+                    {
+                        Patterns = new[] { "*.png", "*.jpg", "*.jpeg", "*.webp", "*.bmp" }
+                    },
+                    new FilePickerFileType("All Files") { Patterns = new[] { "*.*" } }
+                },
+                AllowMultiple = false
+            });
+
+            if (files.Count > 0)
+            {
+                var file = files[0];
+                await using var stream = await file.OpenReadAsync();
+                Image = new Bitmap(stream);
+                Shapes.Clear();
+            }
+        }
+        catch
+        {
+            // Handle load errors
+        }
+    }
+
+    [RelayCommand]
+    private async Task SaveProject()
+    {
+        if (_currentFilePath != null)
+        {
+            await SaveProjectToFile(_currentFilePath);
+        }
+        else
+        {
+            await SaveProjectAs();
+        }
+    }
+
+    [RelayCommand]
+    private async Task SaveProjectAs()
+    {
+        if (_editorCanvas == null || Image == null || _topLevel == null) return;
+
+        try
+        {
+            var storageProvider = _topLevel.StorageProvider;
+            if (storageProvider == null) return;
+
+            var file = await storageProvider.SaveFilePickerAsync(new FilePickerSaveOptions
+            {
+                Title = "Save Project",
+                FileTypeChoices = new[]
+                {
+                    new FilePickerFileType("Annotator Project") { Patterns = new[] { "*.anp" } }
+                },
+                SuggestedFileName = "project",
+                DefaultExtension = "anp"
+            });
+
+            if (file != null)
+            {
+                _currentFilePath = file.Path.LocalPath;
+                await SaveProjectToFile(_currentFilePath);
+            }
+        }
+        catch
+        {
+            // Handle save errors
+        }
+    }
+
+    private async Task SaveProjectToFile(string filePath)
+    {
+        if (_editorCanvas == null || Image == null) return;
+
+        try
+        {
+            var project = new AnnotatorProject
+            {
+                Version = 1
+            };
+
+            // Save base image as Base64
+            using (var imageStream = new MemoryStream())
+            {
+                Image.Save(imageStream);
+                project.BaseImageBase64 = Convert.ToBase64String(imageStream.ToArray());
+            }
+
+            // Save preview (with annotations) as Base64
+            var renderedImage = _editorCanvas.RenderToImage();
+            if (renderedImage != null)
+            {
+                using var previewStream = new MemoryStream();
+                renderedImage.Save(previewStream);
+                project.PreviewImageBase64 = Convert.ToBase64String(previewStream.ToArray());
+            }
+
+            // Save shapes
+            foreach (var shape in Shapes)
+            {
+                if (shape is ArrowShape arrow)
+                {
+                    project.Shapes.Add(SerializableArrowShape.FromArrowShape(arrow));
+                }
+                else if (shape is CalloutShape callout)
+                {
+                    project.Shapes.Add(SerializableCalloutShape.FromCalloutShape(callout));
+                }
+            }
+
+            // Serialize to JSON and save
+            var json = JsonSerializer.Serialize(project, new JsonSerializerOptions
+            {
+                WriteIndented = true
+            });
+
+            await File.WriteAllTextAsync(filePath, json);
+        }
+        catch
+        {
+            // Handle save errors
+        }
+    }
+
+    [RelayCommand]
+    private async Task OpenProject()
+    {
+        if (_topLevel == null) return;
+
+        try
+        {
+            var storageProvider = _topLevel.StorageProvider;
+            if (storageProvider == null) return;
+
+            var files = await storageProvider.OpenFilePickerAsync(new FilePickerOpenOptions
+            {
+                Title = "Open Project",
+                FileTypeFilter = new[]
+                {
+                    new FilePickerFileType("Annotator Project") { Patterns = new[] { "*.anp" } },
+                    new FilePickerFileType("All Files") { Patterns = new[] { "*.*" } }
+                },
+                AllowMultiple = false
+            });
+
+            if (files.Count > 0)
+            {
+                var file = files[0];
+                _currentFilePath = file.Path.LocalPath;
+                await LoadProjectFromFile(_currentFilePath);
+            }
+        }
+        catch
+        {
+            // Handle load errors
+        }
+    }
+
+    private async Task LoadProjectFromFile(string filePath)
+    {
+        try
+        {
+            var json = await File.ReadAllTextAsync(filePath);
+            var project = JsonSerializer.Deserialize<AnnotatorProject>(json);
+
+            if (project == null) return;
+
+            // Load base image
+            var imageBytes = Convert.FromBase64String(project.BaseImageBase64);
+            using (var stream = new MemoryStream(imageBytes))
+            {
+                Image = new Bitmap(stream);
+            }
+
+            // Load shapes
+            Shapes.Clear();
+            foreach (var shape in project.Shapes)
+            {
+                if (shape is SerializableArrowShape arrow)
+                {
+                    Shapes.Add(arrow.ToArrowShape());
+                }
+                else if (shape is SerializableCalloutShape callout)
+                {
+                    Shapes.Add(callout.ToCalloutShape());
+                }
+            }
+        }
+        catch
+        {
+            // Handle load errors
+        }
+    }
+
+    [RelayCommand]
+    private void NewProject()
+    {
+        Image = null;
+        Shapes.Clear();
+        _currentFilePath = null;
     }
 }

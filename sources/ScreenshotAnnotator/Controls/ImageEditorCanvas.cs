@@ -19,6 +19,14 @@ public class ImageEditorCanvas : Control
     private AnnotationShape? _selectedShape;
     private bool _isDraggingShape;
     private Point _lastMousePosition;
+    private bool _isDraggingArrowStart;
+    private bool _isDraggingArrowEnd;
+    private bool _isDraggingCalloutCorner;
+    private CalloutShape.Corner _draggedCorner;
+    private TextBox? _textEditor;
+    private CalloutShape? _editingCallout;
+
+    public Canvas? OverlayCanvas { get; set; }
 
     public static readonly StyledProperty<Bitmap?> ImageProperty =
         AvaloniaProperty.Register<ImageEditorCanvas, Bitmap?>(nameof(Image));
@@ -66,6 +74,86 @@ public class ImageEditorCanvas : Control
     public ImageEditorCanvas()
     {
         Shapes.CollectionChanged += (s, e) => InvalidateVisual();
+        DoubleTapped += OnDoubleTapped;
+    }
+
+    private void OnDoubleTapped(object? sender, TappedEventArgs e)
+    {
+        var point = e.GetPosition(this);
+
+        // Check if double-clicking on a callout
+        if (_selectedShape is CalloutShape callout && callout.HitTest(point))
+        {
+            ShowTextEditor(callout);
+            e.Handled = true;
+        }
+    }
+
+    private void ShowTextEditor(CalloutShape callout)
+    {
+        if (OverlayCanvas == null) return;
+
+        // Hide any existing text editor
+        HideTextEditor();
+
+        _editingCallout = callout;
+
+        // Create a TextBox for editing
+        _textEditor = new TextBox
+        {
+            Text = callout.Text,
+            Width = Math.Max(callout.Rectangle.Width - 10, 100),
+            TextWrapping = Avalonia.Media.TextWrapping.Wrap,
+            AcceptsReturn = true,
+            BorderThickness = new Thickness(2),
+            BorderBrush = Brushes.Blue,
+            Background = Brushes.White,
+            Padding = new Thickness(5),
+            FontSize = 14
+        };
+
+        // Position the TextBox
+        Canvas.SetLeft(_textEditor, callout.Rectangle.Left + 5);
+        Canvas.SetTop(_textEditor, callout.Rectangle.Top + 5);
+
+        // Handle when user finishes editing
+        _textEditor.LostFocus += (s, e) => OnTextEditingComplete();
+        _textEditor.KeyDown += (s, e) =>
+        {
+            if (e.Key == Key.Escape)
+            {
+                HideTextEditor();
+                e.Handled = true;
+            }
+        };
+
+        // Add to overlay canvas
+        OverlayCanvas.Children.Add(_textEditor);
+        _textEditor.Focus();
+        _textEditor.SelectAll();
+    }
+
+    private void OnTextEditingComplete()
+    {
+        if (_textEditor != null && _editingCallout != null)
+        {
+            _editingCallout.Text = _textEditor.Text ?? "";
+            InvalidateVisual();
+        }
+        HideTextEditor();
+    }
+
+    private void HideTextEditor()
+    {
+        if (_textEditor != null && OverlayCanvas != null)
+        {
+            if (OverlayCanvas.Children.Contains(_textEditor))
+            {
+                OverlayCanvas.Children.Remove(_textEditor);
+            }
+            _textEditor = null;
+            _editingCallout = null;
+        }
     }
 
     protected override void OnPointerPressed(PointerPressedEventArgs e)
@@ -79,11 +167,36 @@ public class ImageEditorCanvas : Control
         // If no specific tool is selected, try to select/drag existing shapes
         if (CurrentTool == ToolType.None)
         {
-            // Check if clicking on a selected shape's beak (for callouts)
-            if (_selectedShape is CalloutShape selectedCallout && selectedCallout.IsPointOnBeak(point))
+            // Check if clicking on a selected arrow's handles
+            if (_selectedShape is ArrowShape selectedArrow)
             {
-                _isDraggingBeak = true;
-                return;
+                if (selectedArrow.IsPointOnStartHandle(point))
+                {
+                    _isDraggingArrowStart = true;
+                    return;
+                }
+                if (selectedArrow.IsPointOnEndHandle(point))
+                {
+                    _isDraggingArrowEnd = true;
+                    return;
+                }
+            }
+
+            // Check if clicking on a selected callout's handles
+            if (_selectedShape is CalloutShape selectedCallout)
+            {
+                if (selectedCallout.IsPointOnBeak(point))
+                {
+                    _isDraggingBeak = true;
+                    return;
+                }
+
+                if (selectedCallout.IsPointOnCornerHandle(point, out var corner))
+                {
+                    _isDraggingCalloutCorner = true;
+                    _draggedCorner = corner;
+                    return;
+                }
             }
 
             // Check if clicking on any existing shape (reverse order to select top-most)
@@ -154,6 +267,30 @@ public class ImageEditorCanvas : Control
 
         var point = e.GetPosition(this);
 
+        // Handle dragging arrow start handle
+        if (_isDraggingArrowStart && _selectedShape is ArrowShape arrowStart)
+        {
+            arrowStart.MoveStartPoint(point);
+            InvalidateVisual();
+            return;
+        }
+
+        // Handle dragging arrow end handle
+        if (_isDraggingArrowEnd && _selectedShape is ArrowShape arrowEnd)
+        {
+            arrowEnd.MoveEndPoint(point);
+            InvalidateVisual();
+            return;
+        }
+
+        // Handle dragging callout corner
+        if (_isDraggingCalloutCorner && _selectedShape is CalloutShape calloutResize)
+        {
+            calloutResize.ResizeFromCorner(_draggedCorner, point);
+            InvalidateVisual();
+            return;
+        }
+
         // Handle dragging existing shapes
         if (_isDraggingShape && _selectedShape != null)
         {
@@ -214,6 +351,24 @@ public class ImageEditorCanvas : Control
         base.OnPointerReleased(e);
 
         // Stop dragging
+        if (_isDraggingArrowStart)
+        {
+            _isDraggingArrowStart = false;
+            return;
+        }
+
+        if (_isDraggingArrowEnd)
+        {
+            _isDraggingArrowEnd = false;
+            return;
+        }
+
+        if (_isDraggingCalloutCorner)
+        {
+            _isDraggingCalloutCorner = false;
+            return;
+        }
+
         if (_isDraggingShape)
         {
             _isDraggingShape = false;
@@ -325,5 +480,30 @@ public class ImageEditorCanvas : Control
             return new Size(Image.PixelSize.Width, Image.PixelSize.Height);
         }
         return base.MeasureOverride(availableSize);
+    }
+
+    public RenderTargetBitmap? RenderToImage()
+    {
+        if (Image == null) return null;
+
+        var width = Image.PixelSize.Width;
+        var height = Image.PixelSize.Height;
+
+        var renderTarget = new RenderTargetBitmap(new PixelSize(width, height), new Vector(96, 96));
+
+        using (var context = renderTarget.CreateDrawingContext())
+        {
+            // Draw the base image
+            var imageRect = new Rect(0, 0, width, height);
+            context.DrawImage(Image, imageRect);
+
+            // Draw all completed shapes
+            foreach (var shape in Shapes)
+            {
+                shape.Render(context);
+            }
+        }
+
+        return renderTarget;
     }
 }

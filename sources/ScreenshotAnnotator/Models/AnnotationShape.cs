@@ -81,6 +81,28 @@ public class ArrowShape : AnnotationShape
         EndPoint = new Point(EndPoint.X + offset.X, EndPoint.Y + offset.Y);
     }
 
+    public bool IsPointOnStartHandle(Point point)
+    {
+        var distance = Math.Sqrt(Math.Pow(point.X - StartPoint.X, 2) + Math.Pow(point.Y - StartPoint.Y, 2));
+        return distance < 8;
+    }
+
+    public bool IsPointOnEndHandle(Point point)
+    {
+        var distance = Math.Sqrt(Math.Pow(point.X - EndPoint.X, 2) + Math.Pow(point.Y - EndPoint.Y, 2));
+        return distance < 8;
+    }
+
+    public void MoveStartPoint(Point newPosition)
+    {
+        StartPoint = newPosition;
+    }
+
+    public void MoveEndPoint(Point newPosition)
+    {
+        EndPoint = newPosition;
+    }
+
     private double DistanceFromPointToLine(Point point, Point lineStart, Point lineEnd)
     {
         var dx = lineEnd.X - lineStart.X;
@@ -125,57 +147,59 @@ public class CalloutShape : AnnotationShape
         var rectCenter = Rectangle.Center;
         var beakSide = GetBeakSide();
 
+        var segments = figure.Segments;
+
         switch (beakSide)
         {
             case BeakSide.Bottom:
-                figure.Segments.Add(new LineSegment { Point = Rectangle.TopRight });
-                figure.Segments.Add(new LineSegment { Point = Rectangle.BottomRight });
+                segments!.Add(new LineSegment { Point = Rectangle.TopRight });
+                segments.Add(new LineSegment { Point = Rectangle.BottomRight });
 
                 // Add beak on bottom
                 var beakX = Math.Max(Rectangle.Left, Math.Min(Rectangle.Right, BeakPoint.X));
-                figure.Segments.Add(new LineSegment { Point = new Point(beakX + 10, Rectangle.Bottom) });
-                figure.Segments.Add(new LineSegment { Point = BeakPoint });
-                figure.Segments.Add(new LineSegment { Point = new Point(beakX - 10, Rectangle.Bottom) });
+                segments.Add(new LineSegment { Point = new Point(beakX + 10, Rectangle.Bottom) });
+                segments.Add(new LineSegment { Point = BeakPoint });
+                segments.Add(new LineSegment { Point = new Point(beakX - 10, Rectangle.Bottom) });
 
-                figure.Segments.Add(new LineSegment { Point = Rectangle.BottomLeft });
+                segments.Add(new LineSegment { Point = Rectangle.BottomLeft });
                 break;
 
             case BeakSide.Top:
                 var topBeakX = Math.Max(Rectangle.Left, Math.Min(Rectangle.Right, BeakPoint.X));
-                figure.Segments.Add(new LineSegment { Point = new Point(topBeakX - 10, Rectangle.Top) });
-                figure.Segments.Add(new LineSegment { Point = BeakPoint });
-                figure.Segments.Add(new LineSegment { Point = new Point(topBeakX + 10, Rectangle.Top) });
+                segments!.Add(new LineSegment { Point = new Point(topBeakX - 10, Rectangle.Top) });
+                segments.Add(new LineSegment { Point = BeakPoint });
+                segments.Add(new LineSegment { Point = new Point(topBeakX + 10, Rectangle.Top) });
 
-                figure.Segments.Add(new LineSegment { Point = Rectangle.TopRight });
-                figure.Segments.Add(new LineSegment { Point = Rectangle.BottomRight });
-                figure.Segments.Add(new LineSegment { Point = Rectangle.BottomLeft });
+                segments.Add(new LineSegment { Point = Rectangle.TopRight });
+                segments.Add(new LineSegment { Point = Rectangle.BottomRight });
+                segments.Add(new LineSegment { Point = Rectangle.BottomLeft });
                 break;
 
             case BeakSide.Left:
-                figure.Segments.Add(new LineSegment { Point = Rectangle.TopRight });
-                figure.Segments.Add(new LineSegment { Point = Rectangle.BottomRight });
-                figure.Segments.Add(new LineSegment { Point = Rectangle.BottomLeft });
+                segments!.Add(new LineSegment { Point = Rectangle.TopRight });
+                segments.Add(new LineSegment { Point = Rectangle.BottomRight });
+                segments.Add(new LineSegment { Point = Rectangle.BottomLeft });
 
                 var leftBeakY = Math.Max(Rectangle.Top, Math.Min(Rectangle.Bottom, BeakPoint.Y));
-                figure.Segments.Add(new LineSegment { Point = new Point(Rectangle.Left, leftBeakY + 10) });
-                figure.Segments.Add(new LineSegment { Point = BeakPoint });
-                figure.Segments.Add(new LineSegment { Point = new Point(Rectangle.Left, leftBeakY - 10) });
+                segments.Add(new LineSegment { Point = new Point(Rectangle.Left, leftBeakY + 10) });
+                segments.Add(new LineSegment { Point = BeakPoint });
+                segments.Add(new LineSegment { Point = new Point(Rectangle.Left, leftBeakY - 10) });
                 break;
 
             case BeakSide.Right:
-                figure.Segments.Add(new LineSegment { Point = Rectangle.TopRight });
+                segments!.Add(new LineSegment { Point = Rectangle.TopRight });
 
                 var rightBeakY = Math.Max(Rectangle.Top, Math.Min(Rectangle.Bottom, BeakPoint.Y));
-                figure.Segments.Add(new LineSegment { Point = new Point(Rectangle.Right, rightBeakY - 10) });
-                figure.Segments.Add(new LineSegment { Point = BeakPoint });
-                figure.Segments.Add(new LineSegment { Point = new Point(Rectangle.Right, rightBeakY + 10) });
+                segments.Add(new LineSegment { Point = new Point(Rectangle.Right, rightBeakY - 10) });
+                segments.Add(new LineSegment { Point = BeakPoint });
+                segments.Add(new LineSegment { Point = new Point(Rectangle.Right, rightBeakY + 10) });
 
-                figure.Segments.Add(new LineSegment { Point = Rectangle.BottomRight });
-                figure.Segments.Add(new LineSegment { Point = Rectangle.BottomLeft });
+                segments.Add(new LineSegment { Point = Rectangle.BottomRight });
+                segments.Add(new LineSegment { Point = Rectangle.BottomLeft });
                 break;
         }
 
-        geometry.Figures.Add(figure);
+        geometry.Figures!.Add(figure);
 
         // Draw the callout
         context.DrawGeometry(brush, pen, geometry);
@@ -244,6 +268,78 @@ public class CalloutShape : AnnotationShape
         BeakPoint = newPosition;
     }
 
+    public bool IsPointOnCornerHandle(Point point, out Corner corner)
+    {
+        corner = Corner.None;
+        var handleSize = 8;
+
+        if (IsPointNearHandle(point, Rectangle.TopLeft, handleSize))
+        {
+            corner = Corner.TopLeft;
+            return true;
+        }
+        if (IsPointNearHandle(point, Rectangle.TopRight, handleSize))
+        {
+            corner = Corner.TopRight;
+            return true;
+        }
+        if (IsPointNearHandle(point, Rectangle.BottomLeft, handleSize))
+        {
+            corner = Corner.BottomLeft;
+            return true;
+        }
+        if (IsPointNearHandle(point, Rectangle.BottomRight, handleSize))
+        {
+            corner = Corner.BottomRight;
+            return true;
+        }
+
+        return false;
+    }
+
+    private bool IsPointNearHandle(Point point, Point handleCenter, double handleSize)
+    {
+        var distance = Math.Sqrt(Math.Pow(point.X - handleCenter.X, 2) + Math.Pow(point.Y - handleCenter.Y, 2));
+        return distance < handleSize;
+    }
+
+    public void ResizeFromCorner(Corner corner, Point newPosition)
+    {
+        var left = Rectangle.Left;
+        var top = Rectangle.Top;
+        var right = Rectangle.Right;
+        var bottom = Rectangle.Bottom;
+
+        switch (corner)
+        {
+            case Corner.TopLeft:
+                left = newPosition.X;
+                top = newPosition.Y;
+                break;
+            case Corner.TopRight:
+                right = newPosition.X;
+                top = newPosition.Y;
+                break;
+            case Corner.BottomLeft:
+                left = newPosition.X;
+                bottom = newPosition.Y;
+                break;
+            case Corner.BottomRight:
+                right = newPosition.X;
+                bottom = newPosition.Y;
+                break;
+        }
+
+        // Ensure minimum size
+        if (right - left < 20) return;
+        if (bottom - top < 20) return;
+
+        Rectangle = new Rect(
+            new Point(left, top),
+            new Point(right, bottom)
+        );
+    }
+
     private void DrawHandle(DrawingContext context, Point center, double size, IBrush brush)
     {
         var rect = new Rect(center.X - size / 2, center.Y - size / 2, size, size);
@@ -269,6 +365,15 @@ public class CalloutShape : AnnotationShape
     private enum BeakSide
     {
         Top, Bottom, Left, Right
+    }
+
+    public enum Corner
+    {
+        None,
+        TopLeft,
+        TopRight,
+        BottomLeft,
+        BottomRight
     }
 }
 
