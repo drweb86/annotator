@@ -37,6 +37,9 @@ public partial class ImageEditorViewModel : ViewModelBase
     [ObservableProperty]
     private bool _isTrimToolSelected;
 
+    [ObservableProperty]
+    private string _headerInformation = "Annotator - V" + CopyrightInfo.Version.ToString(3);
+
     private Controls.ImageEditorCanvas? _editorCanvas;
 
     public void SetEditorCanvas(Controls.ImageEditorCanvas canvas)
@@ -557,6 +560,40 @@ public partial class ImageEditorViewModel : ViewModelBase
             System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo
             {
                 FileName = folder,
+                UseShellExecute = true
+            });
+        }
+        catch
+        {
+            // Handle errors
+        }
+    }
+
+    [RelayCommand]
+    private void OpenWebsite()
+    {
+        try
+        {
+            System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo
+            {
+                FileName = ApplicationLinks.AboutUrl,
+                UseShellExecute = true
+            });
+        }
+        catch
+        {
+            // Handle errors
+        }
+    }
+
+    [RelayCommand]
+    private void OpenLicense()
+    {
+        try
+        {
+            System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo
+            {
+                FileName = ApplicationLinks.LicenseUrl,
                 UseShellExecute = true
             });
         }

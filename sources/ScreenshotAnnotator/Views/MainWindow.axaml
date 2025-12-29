@@ -8,6 +8,8 @@
         x:Class="ScreenshotAnnotator.Views.MainWindow"
         Icon="/Assets/avalonia-logo.ico"
         Title="Screenshot Annotator - Image Editor"
+		ExtendClientAreaToDecorationsHint="{Binding CanExtendClientAreaToDecorationsHint}"
+		x:DataType="views:MainWindow"
         Width="1200" Height="800">
         <views:MainView />
 </Window>

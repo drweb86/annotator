@@ -13,33 +13,44 @@
   </Design.DataContext>
 
   <DockPanel>
-    <!-- Menu Bar -->
-    <Menu DockPanel.Dock="Top">
-      <MenuItem Header="_File">
-        <MenuItem Header="_New Project" Command="{Binding NewProjectCommand}" InputGesture="Ctrl+N"/>
-        <MenuItem Header="_Open Image..." Command="{Binding LoadImageCommand}" InputGesture="Ctrl+O"/>
-        <MenuItem Header="Open _Project..." Command="{Binding OpenProjectCommand}" InputGesture="Ctrl+Shift+O"/>
-        <Separator/>
-        <MenuItem Header="_Save Project" Command="{Binding SaveProjectCommand}" InputGesture="Ctrl+S"/>
-        <MenuItem Header="Save Project _As..." Command="{Binding SaveProjectAsCommand}" InputGesture="Ctrl+Shift+S"/>
-        <Separator/>
-        <MenuItem Header="Save As _Image..." Command="{Binding SaveAsImageCommand}" InputGesture="Ctrl+E"/>
-      </MenuItem>
-      <MenuItem Header="_Edit">
-        <MenuItem Header="_Copy Result" Command="{Binding CopyToClipboardCommand}" InputGesture="Ctrl+C"/>
-        <MenuItem Header="_Paste Image" Command="{Binding PasteFromClipboardCommand}" InputGesture="Ctrl+V"/>
-        <Separator/>
-        <MenuItem Header="C_lear All Annotations" Command="{Binding ClearShapesCommand}" InputGesture="Ctrl+Shift+X"/>
-      </MenuItem>
-      <MenuItem Header="_View">
-        <MenuItem Header="Toggle File _Browser" Command="{Binding ToggleFileBrowserCommand}" InputGesture="F9"/>
-      </MenuItem>
-      <MenuItem Header="_Capture">
-        <MenuItem Header="Take _Screenshot" Command="{Binding TakeScreenshotCommand}" InputGesture="F12"/>
-        <Separator/>
-        <MenuItem Header="Open Projects _Folder" Command="{Binding OpenProjectsFolderCommand}"/>
-      </MenuItem>
-    </Menu>
+	  <StackPanel Orientation="Horizontal" DockPanel.Dock="Top">
+		  <!-- Menu Bar -->
+		  <Menu>
+			  <MenuItem x:Name="AboutMenuItem"
+	              Header="{Binding HeaderInformation}">
+				  <MenuItem.Items>
+					  <MenuItem Header="Web-Site" Command="{Binding OpenWebsiteCommand}" />
+					  <MenuItem Header="License" Command="{Binding OpenLicenseCommand}" />
+				  </MenuItem.Items>
+			  </MenuItem>
+
+			  <MenuItem Header="_File">
+				  <MenuItem Header="_New Project" Command="{Binding NewProjectCommand}" InputGesture="Ctrl+N"/>
+				  <MenuItem Header="_Open Image..." Command="{Binding LoadImageCommand}" InputGesture="Ctrl+O"/>
+				  <MenuItem Header="Open _Project..." Command="{Binding OpenProjectCommand}" InputGesture="Ctrl+Shift+O"/>
+				  <Separator/>
+				  <MenuItem Header="_Save Project" Command="{Binding SaveProjectCommand}" InputGesture="Ctrl+S"/>
+				  <MenuItem Header="Save Project _As..." Command="{Binding SaveProjectAsCommand}" InputGesture="Ctrl+Shift+S"/>
+				  <Separator/>
+				  <MenuItem Header="Save As _Image..." Command="{Binding SaveAsImageCommand}" InputGesture="Ctrl+E"/>
+			  </MenuItem>
+			  <MenuItem Header="_Edit">
+				  <MenuItem Header="_Copy Result" Command="{Binding CopyToClipboardCommand}" InputGesture="Ctrl+C"/>
+				  <MenuItem Header="_Paste Image" Command="{Binding PasteFromClipboardCommand}" InputGesture="Ctrl+V"/>
+				  <Separator/>
+				  <MenuItem Header="C_lear All Annotations" Command="{Binding ClearShapesCommand}" InputGesture="Ctrl+Shift+X"/>
+			  </MenuItem>
+			  <MenuItem Header="_View">
+				  <MenuItem Header="Toggle File _Browser" Command="{Binding ToggleFileBrowserCommand}" InputGesture="F9"/>
+			  </MenuItem>
+			  <MenuItem Header="_Capture">
+				  <MenuItem Header="Take _Screenshot" Command="{Binding TakeScreenshotCommand}" InputGesture="F12"/>
+				  <Separator/>
+				  <MenuItem Header="Open Projects _Folder" Command="{Binding OpenProjectsFolderCommand}"/>
+			  </MenuItem>
+		  </Menu>
+	  </StackPanel>
+    
 
     <!-- Toolbar -->
     <Border DockPanel.Dock="Top"
