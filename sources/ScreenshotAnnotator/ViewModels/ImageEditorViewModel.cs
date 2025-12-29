@@ -1,16 +1,17 @@
+using Avalonia.Controls;
+using Avalonia.Input;
 using Avalonia.Media.Imaging;
+using Avalonia.Platform.Storage;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using ScreenshotAnnotator.Models;
+using ScreenshotAnnotator.Services;
+using System;
 using System.Collections.ObjectModel;
-using System.Threading.Tasks;
-using Avalonia.Input;
 using System.IO;
 using System.Linq;
 using System.Text.Json;
-using System;
-using Avalonia.Platform.Storage;
-using ScreenshotAnnotator.Services;
+using System.Threading.Tasks;
 
 namespace ScreenshotAnnotator.ViewModels;
 
@@ -443,30 +444,38 @@ public partial class ImageEditorViewModel : ViewModelBase
     [RelayCommand]
     private async Task TakeScreenshot()
     {
+        if (_mainWindow is null)
+            return;
+
         try
         {
             // Hide the main window
-            if (_mainWindow != null)
-            {
-                _mainWindow.Hide();
-            }
+            _mainWindow.WindowState = WindowState.Minimized;
 
             // Wait a bit for window to hide
             await Task.Delay(300);
 
             // Capture screenshot
             var screenshot = await ScreenshotService.CaptureScreenshotAsync();
+            if (screenshot is null)
+                return;
 
-            // Restore window
-            if (_mainWindow != null)
-            {
-                _mainWindow.Show();
-            }
+                // Show preview window for area selection
+                var previewViewModel = new ScreenshotPreviewViewModel();
+                previewViewModel.SetScreenshot(screenshot);
 
-            if (screenshot != null)
+                var previewWindow = new Views.ScreenshotPreviewWindow
+                {
+                    DataContext = previewViewModel
+                };
+
+                await previewWindow.ShowDialog(_mainWindow);
+
+            // Check if user confirmed the selection
+            if (previewViewModel.CroppedImage != null)
             {
-                // Create new project with screenshot
-                Image = screenshot;
+                // Use the cropped image
+                Image = previewViewModel.CroppedImage;
                 Shapes.Clear();
 
                 // Auto-save to projects folder
@@ -481,10 +490,10 @@ public partial class ImageEditorViewModel : ViewModelBase
         catch
         {
             // Restore window in case of error
-            if (_mainWindow != null)
-            {
-                _mainWindow.Show();
-            }
+        }
+        finally
+        {
+            _mainWindow.WindowState = WindowState.Normal;
         }
     }
 

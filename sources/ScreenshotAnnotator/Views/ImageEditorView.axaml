@@ -33,6 +33,8 @@
 				  <MenuItem Header="Save Project _As..." Command="{Binding SaveProjectAsCommand}" InputGesture="Ctrl+Shift+S"/>
 				  <Separator/>
 				  <MenuItem Header="Save As _Image..." Command="{Binding SaveAsImageCommand}" InputGesture="Ctrl+E"/>
+				  <Separator/>
+				  <MenuItem Header="Open Projects _Folder" Command="{Binding OpenProjectsFolderCommand}"/>
 			  </MenuItem>
 			  <MenuItem Header="_Edit">
 				  <MenuItem Header="_Copy Result" Command="{Binding CopyToClipboardCommand}" InputGesture="Ctrl+C"/>
@@ -43,47 +45,78 @@
 			  <MenuItem Header="_View">
 				  <MenuItem Header="Toggle File _Browser" Command="{Binding ToggleFileBrowserCommand}" InputGesture="F9"/>
 			  </MenuItem>
-			  <MenuItem Header="_Capture">
-				  <MenuItem Header="Take _Screenshot" Command="{Binding TakeScreenshotCommand}" InputGesture="F12"/>
-				  <Separator/>
-				  <MenuItem Header="Open Projects _Folder" Command="{Binding OpenProjectsFolderCommand}"/>
-			  </MenuItem>
 		  </Menu>
 	  </StackPanel>
     
 
     <!-- Toolbar -->
     <Border DockPanel.Dock="Top"
-            Background="#F0F0F0"
+            Background="#1C1C1C"
             BorderBrush="#CCCCCC"
             BorderThickness="0,0,0,1"
             Padding="8">
-      <StackPanel Orientation="Horizontal" Spacing="8">
+		<Border.Styles>
+			<Style Selector="TextBlock">
+				<Setter Property="Foreground" Value="#E6E6E6" />
+				<Setter Property="FontSize" Value="12" />
+				<Setter Property="HorizontalAlignment" Value="Center" />
+			</Style>
+			<Style Selector="Button">
+				<Setter Property="Padding" Value="8" />
+				<Setter Property="Background" Value="Transparent" />
+			</Style>
+			<Style Selector="ToggleButton">
+				<Setter Property="Padding" Value="8" />
+				<Setter Property="Background" Value="Transparent" />
+			</Style>
+			<Style Selector="Path">
+				<Setter Property="Stretch" Value="Uniform" />
+				<Setter Property="Width" Value="20" />
+				<Setter Property="Height" Value="20" />
+			</Style>
+			<Style Selector="Ellipse">
+				<Setter Property="Stretch" Value="Uniform" />
+				<Setter Property="Width" Value="20" />
+				<Setter Property="Height" Value="20" />
+			</Style>
+			<Style Selector="StackPanel">
+				<Setter Property="Spacing" Value="8" />
+			</Style>
+		</Border.Styles>
+      <StackPanel Orientation="Horizontal">
+
+        <!-- Take Screenshot Button -->
+        <Button Command="{Binding TakeScreenshotCommand}"
+                ToolTip.Tip="Take Screenshot (F12)">
+          <StackPanel HorizontalAlignment="Center">
+            <Ellipse Fill="#F44336"
+                     Stroke="#C62828"
+                     StrokeThickness="2"/>
+            <TextBlock Text="Screenshot" />
+          </StackPanel>
+        </Button>
+
+        <!-- Separator -->
+        <Border Width="1" Background="#CCCCCC" Margin="4,0"/>
 
         <!-- Paste from Clipboard Button -->
         <Button Command="{Binding PasteFromClipboardCommand}"
-                ToolTip.Tip="Paste Image from Clipboard (Ctrl+V)"
-                Padding="8"
-                Background="Transparent">
-          <Panel>
+                ToolTip.Tip="Paste Image from Clipboard (Ctrl+V)">
+          <StackPanel HorizontalAlignment="Center">
             <Path Data="M19,20H5V4H7V7H17V4H19M12,2A1,1 0 0,1 13,3A1,1 0 0,1 12,4A1,1 0 0,1 11,3A1,1 0 0,1 12,2M19,2H14.82C14.4,0.84 13.3,0 12,0C10.7,0 9.6,0.84 9.18,2H5A2,2 0 0,0 3,4V20A2,2 0 0,0 5,22H19A2,2 0 0,0 21,20V4A2,2 0 0,0 19,2Z"
-                  Fill="#1976D2"
-                  Stretch="Uniform"
-                  Width="20" Height="20"/>
-          </Panel>
+                  Fill="#1976D2" />
+            <TextBlock Text="Paste" />
+          </StackPanel>
         </Button>
 
         <!-- Copy to Clipboard Button -->
         <Button Command="{Binding CopyToClipboardCommand}"
-                ToolTip.Tip="Copy Result to Clipboard (Ctrl+C)"
-                Padding="8"
-                Background="Transparent">
-          <Panel>
+                ToolTip.Tip="Copy Result to Clipboard (Ctrl+C)">
+          <StackPanel HorizontalAlignment="Center">
             <Path Data="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"
-                  Fill="#1976D2"
-                  Stretch="Uniform"
-                  Width="20" Height="20"/>
-          </Panel>
+                  Fill="#1976D2" />
+            <TextBlock Text="Copy" />
+          </StackPanel>
         </Button>
 
         <!-- Separator -->
@@ -92,63 +125,51 @@
         <!-- Select/Move Tool Button -->
         <ToggleButton IsChecked="{Binding IsSelectToolSelected}"
                       Command="{Binding SelectSelectToolCommand}"
-                      ToolTip.Tip="Select and Move Tool (Click and drag shapes to move them)"
-                      Padding="8">
-          <Panel>
-            <!-- Pointer/Cursor Icon -->
+                      ToolTip.Tip="Select and Move Tool (Click and drag shapes to move them)">
+          <StackPanel HorizontalAlignment="Center">
             <Path Data="M2,2 L2,18 L7,13 L10,20 L13,19 L10,12 L18,12 Z"
-                  Fill="#333333"
-                  Stretch="Uniform"
-                  Width="20" Height="20"/>
-          </Panel>
+                  Fill="#333333" />
+            <TextBlock Text="Select" />
+          </StackPanel>
         </ToggleButton>
 
         <!-- Arrow Tool Button -->
         <ToggleButton IsChecked="{Binding IsArrowToolSelected}"
                       Command="{Binding SelectArrowToolCommand}"
-                      ToolTip.Tip="Arrow Tool"
-                      Padding="8">
-          <Panel>
-            <!-- Arrow Icon -->
+                      ToolTip.Tip="Arrow Tool">
+          <StackPanel HorizontalAlignment="Center">
             <Path Data="M2,2 L18,10 L10,12 L8,20 Z M10,12 L18,18"
                   Stroke="#333333"
                   StrokeThickness="2"
-                  Fill="Transparent"
-                  Stretch="Uniform"
-                  Width="20" Height="20"/>
-          </Panel>
+                  Fill="Transparent" />
+            <TextBlock Text="Arrow" />
+          </StackPanel>
         </ToggleButton>
 
         <!-- Callout Tool Button -->
         <ToggleButton IsChecked="{Binding IsCalloutToolSelected}"
                       Command="{Binding SelectCalloutToolCommand}"
-                      ToolTip.Tip="Callout Tool"
-                      Padding="8">
-          <Panel>
-            <!-- Callout Icon (speech bubble) -->
+                      ToolTip.Tip="Callout Tool">
+          <StackPanel HorizontalAlignment="Center">
             <Path Data="M4,4 L16,4 L16,12 L10,12 L8,16 L8,12 L4,12 Z"
                   Stroke="#333333"
                   StrokeThickness="2"
-                  Fill="Transparent"
-                  Stretch="Uniform"
-                  Width="20" Height="20"/>
-          </Panel>
+                  Fill="Transparent" />
+            <TextBlock Text="Callout" />
+          </StackPanel>
         </ToggleButton>
 
         <!-- Trim/Crop Tool Button -->
         <ToggleButton IsChecked="{Binding IsTrimToolSelected}"
                       Command="{Binding SelectTrimToolCommand}"
-                      ToolTip.Tip="Trim/Crop Tool"
-                      Padding="8">
-          <Panel>
-            <!-- Crop Icon -->
+                      ToolTip.Tip="Trim/Crop Tool">
+          <StackPanel HorizontalAlignment="Center">
             <Path Data="M7,3 L7,7 L3,7 M17,17 L17,13 L21,13 M7,7 L17,7 L17,17 L7,17"
                   Stroke="#333333"
                   StrokeThickness="2"
-                  Fill="Transparent"
-                  Stretch="Uniform"
-                  Width="20" Height="20"/>
-          </Panel>
+                  Fill="Transparent" />
+            <TextBlock Text="Trim" />
+          </StackPanel>
         </ToggleButton>
 
         <!-- Separator -->
@@ -156,38 +177,24 @@
 
         <!-- Clear All Button -->
         <Button Command="{Binding ClearShapesCommand}"
-                ToolTip.Tip="Clear All Annotations"
-                Padding="8"
-                Background="Transparent">
-          <Panel>
-            <!-- Trash/Clear Icon -->
+                ToolTip.Tip="Clear All Annotations">
+          <StackPanel HorizontalAlignment="Center">
             <Path Data="M9,3V4H4V6H5V19A2,2 0 0,0 7,21H17A2,2 0 0,0 19,19V6H20V4H15V3H9M7,6H17V19H7V6M9,8V17H11V8H9M13,8V17H15V8H13Z"
-                  Fill="#D32F2F"
-                  Stretch="Uniform"
-                  Width="20" Height="20"/>
-          </Panel>
+                  Fill="#D32F2F" />
+            <TextBlock Text="Clear" />
+          </StackPanel>
         </Button>
 
         <!-- Apply Trim Button -->
         <Button Command="{Binding ApplyTrimCommand}"
                 ToolTip.Tip="Apply Trim"
-                Padding="8"
-                Background="Transparent"
                 IsEnabled="{Binding IsTrimToolSelected}">
-          <Panel>
-            <!-- Checkmark Icon -->
+          <StackPanel HorizontalAlignment="Center">
             <Path Data="M9,20.42L2.79,14.21L5.62,11.38L9,14.77L18.88,4.88L21.71,7.71L9,20.42Z"
-                  Fill="#2E7D32"
-                  Stretch="Uniform"
-                  Width="20" Height="20"/>
-          </Panel>
+                  Fill="#2E7D32" />
+            <TextBlock Text="Apply" />
+          </StackPanel>
         </Button>
-
-        <TextBlock Text="{Binding CurrentTool}"
-                   VerticalAlignment="Center"
-                   Margin="16,0,0,0"
-                   FontSize="12"
-                   Foreground="#666666"/>
       </StackPanel>
     </Border>
 

@@ -1,0 +1,257 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:vm="using:ScreenshotAnnotator.ViewModels"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="600"
+        x:Class="ScreenshotAnnotator.Views.ScreenshotPreviewWindow"
+        x:DataType="vm:ScreenshotPreviewViewModel"
+        Title="Screenshot Preview - Select Area"
+        WindowStartupLocation="CenterScreen"
+		WindowState="Maximized"
+        Width="1000"
+        Height="700"
+        Background="Black">
+
+  <Design.DataContext>
+    <vm:ScreenshotPreviewViewModel />
+  </Design.DataContext>
+
+  <DockPanel>
+    <!-- Top toolbar -->
+    <Border DockPanel.Dock="Top"
+            Background="#2A2A2A"
+            Padding="10">
+      <Grid>
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="*"/>
+          <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Grid.Column="0"
+                   Text="Click and drag to select area, or adjust corner points. Use magnifier for precision. Press OK when ready."
+                   Foreground="White"
+                   VerticalAlignment="Center"
+                   FontSize="14"/>
+
+        <StackPanel Grid.Column="1" Orientation="Horizontal" Spacing="10">
+          <Button Command="{Binding ConfirmCommand}"
+                  Content="OK"
+                  Padding="20,8"
+                  Background="#4CAF50"
+                  Foreground="White"
+                  FontSize="14"
+                  FontWeight="Bold"
+                  CornerRadius="4"/>
+
+          <Button Command="{Binding CancelCommand}"
+                  Content="Cancel"
+                  Padding="20,8"
+                  Background="#F44336"
+                  Foreground="White"
+                  FontSize="14"
+                  CornerRadius="4"/>
+        </StackPanel>
+      </Grid>
+    </Border>
+
+    <!-- Main canvas area -->
+    <Grid DockPanel.Dock="Top" Background="Black">
+      <Viewbox x:Name="ImageViewbox" Stretch="Uniform" Margin="20">
+        <Canvas x:Name="MainCanvas"
+                Width="{Binding Screenshot.PixelSize.Width}"
+                Height="{Binding Screenshot.PixelSize.Height}"
+                Background="Transparent"
+                PointerMoved="Canvas_PointerMoved"
+                PointerPressed="Canvas_PointerPressed"
+                PointerReleased="Canvas_PointerReleased">
+
+          <!-- Screenshot image -->
+          <Image Source="{Binding Screenshot}"
+                 Width="{Binding Screenshot.PixelSize.Width}"
+                 Height="{Binding Screenshot.PixelSize.Height}"
+                 Stretch="None"/>
+
+          <!-- Semi-transparent overlay to show unselected areas -->
+          <Canvas Width="{Binding Screenshot.PixelSize.Width}"
+                  Height="{Binding Screenshot.PixelSize.Height}">
+            <!-- Top overlay -->
+            <Rectangle Fill="#80000000"
+                       Canvas.Left="0"
+                       Canvas.Top="0"
+                       Width="{Binding Screenshot.PixelSize.Width}"
+                       Height="{Binding SelectionRect.Y}"/>
+
+            <!-- Bottom overlay -->
+            <Rectangle Fill="#80000000"
+                       Canvas.Left="0"
+                       Canvas.Top="{Binding SelectionRect.Bottom}"
+                       Width="{Binding Screenshot.PixelSize.Width}"
+                       Height="{Binding Screenshot.PixelSize.Height}"/>
+
+            <!-- Left overlay -->
+            <Rectangle Fill="#80000000"
+                       Canvas.Left="0"
+                       Canvas.Top="{Binding SelectionRect.Y}"
+                       Width="{Binding SelectionRect.X}"
+                       Height="{Binding SelectionRect.Height}"/>
+
+            <!-- Right overlay -->
+            <Rectangle Fill="#80000000"
+                       Canvas.Left="{Binding SelectionRect.Right}"
+                       Canvas.Top="{Binding SelectionRect.Y}"
+                       Width="{Binding Screenshot.PixelSize.Width}"
+                       Height="{Binding SelectionRect.Height}"/>
+          </Canvas>
+
+          <!-- Selection rectangle border -->
+          <Rectangle Stroke="#FF6B00"
+                     StrokeThickness="3"
+                     Fill="Transparent"
+                     Canvas.Left="{Binding SelectionRect.X}"
+                     Canvas.Top="{Binding SelectionRect.Y}"
+                     Width="{Binding SelectionRect.Width}"
+                     Height="{Binding SelectionRect.Height}">
+            <Rectangle.Effect>
+              <DropShadowEffect Color="Black" BlurRadius="4" Opacity="0.6" OffsetX="0" OffsetY="0"/>
+            </Rectangle.Effect>
+          </Rectangle>
+
+          <!-- Anchor points -->
+          <!-- Top-Left -->
+          <Ellipse x:Name="TopLeftAnchor"
+                   Fill="#FF6B00"
+                   Stroke="White"
+                   StrokeThickness="3"
+                   Width="20"
+                   Height="20"
+                   Canvas.Left="{Binding TopLeft.X}"
+                   Canvas.Top="{Binding TopLeft.Y}"
+                   Margin="-10,-10,0,0"
+                   Cursor="SizeAll"
+                   PointerPressed="Anchor_PointerPressed"
+                   PointerMoved="Anchor_PointerMoved"
+                   PointerReleased="Anchor_PointerReleased"
+                   Tag="TopLeft">
+            <Ellipse.Effect>
+              <DropShadowEffect Color="Black" BlurRadius="6" Opacity="0.8" OffsetX="0" OffsetY="0"/>
+            </Ellipse.Effect>
+          </Ellipse>
+
+          <!-- Top-Right -->
+          <Ellipse x:Name="TopRightAnchor"
+                   Fill="#FF6B00"
+                   Stroke="White"
+                   StrokeThickness="3"
+                   Width="20"
+                   Height="20"
+                   Canvas.Left="{Binding TopRight.X}"
+                   Canvas.Top="{Binding TopRight.Y}"
+                   Margin="-10,-10,0,0"
+                   Cursor="SizeAll"
+                   PointerPressed="Anchor_PointerPressed"
+                   PointerMoved="Anchor_PointerMoved"
+                   PointerReleased="Anchor_PointerReleased"
+                   Tag="TopRight">
+            <Ellipse.Effect>
+              <DropShadowEffect Color="Black" BlurRadius="6" Opacity="0.8" OffsetX="0" OffsetY="0"/>
+            </Ellipse.Effect>
+          </Ellipse>
+
+          <!-- Bottom-Left -->
+          <Ellipse x:Name="BottomLeftAnchor"
+                   Fill="#FF6B00"
+                   Stroke="White"
+                   StrokeThickness="3"
+                   Width="20"
+                   Height="20"
+                   Canvas.Left="{Binding BottomLeft.X}"
+                   Canvas.Top="{Binding BottomLeft.Y}"
+                   Margin="-10,-10,0,0"
+                   Cursor="SizeAll"
+                   PointerPressed="Anchor_PointerPressed"
+                   PointerMoved="Anchor_PointerMoved"
+                   PointerReleased="Anchor_PointerReleased"
+                   Tag="BottomLeft">
+            <Ellipse.Effect>
+              <DropShadowEffect Color="Black" BlurRadius="6" Opacity="0.8" OffsetX="0" OffsetY="0"/>
+            </Ellipse.Effect>
+          </Ellipse>
+
+          <!-- Bottom-Right -->
+          <Ellipse x:Name="BottomRightAnchor"
+                   Fill="#FF6B00"
+                   Stroke="White"
+                   StrokeThickness="3"
+                   Width="20"
+                   Height="20"
+                   Canvas.Left="{Binding BottomRight.X}"
+                   Canvas.Top="{Binding BottomRight.Y}"
+                   Margin="-10,-10,0,0"
+                   Cursor="SizeAll"
+                   PointerPressed="Anchor_PointerPressed"
+                   PointerMoved="Anchor_PointerMoved"
+                   PointerReleased="Anchor_PointerReleased"
+                   Tag="BottomRight">
+            <Ellipse.Effect>
+              <DropShadowEffect Color="Black" BlurRadius="6" Opacity="0.8" OffsetX="0" OffsetY="0"/>
+            </Ellipse.Effect>
+          </Ellipse>
+
+          <!-- Magnifier -->
+          <Border x:Name="Magnifier"
+                  IsVisible="{Binding ShowMagnifier}"
+                  Width="200"
+                  Height="200"
+                  Background="White"
+                  BorderBrush="#FF6B00"
+                  BorderThickness="4"
+                  CornerRadius="100"
+                  Canvas.Left="{Binding MagnifierPosition.X}"
+                  Canvas.Top="{Binding MagnifierPosition.Y}"
+                  Margin="-230,-230,0,0">
+            <Border.Effect>
+              <DropShadowEffect Color="Black" BlurRadius="15" Opacity="0.9" OffsetX="0" OffsetY="0"/>
+            </Border.Effect>
+            <Grid>
+              <!-- Magnified content -->
+              <Border CornerRadius="96"
+                      ClipToBounds="True">
+                <Image Source="{Binding MagnifierContent}"
+                       Stretch="None"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"/>
+              </Border>
+
+              <!-- Crosshair -->
+              <Canvas>
+                <!-- Vertical line -->
+                <Rectangle Fill="#FF0000"
+                           Width="2"
+                           Height="200"
+                           Canvas.Left="99"
+                           Canvas.Top="0"
+                           Opacity="0.8"/>
+                <!-- Horizontal line -->
+                <Rectangle Fill="#FF0000"
+                           Width="200"
+                           Height="2"
+                           Canvas.Left="0"
+                           Canvas.Top="99"
+                           Opacity="0.8"/>
+                <!-- Center dot -->
+                <Ellipse Fill="#FF0000"
+                         Stroke="White"
+                         StrokeThickness="1"
+                         Width="8"
+                         Height="8"
+                         Canvas.Left="96"
+                         Canvas.Top="96"/>
+              </Canvas>
+            </Grid>
+          </Border>
+        </Canvas>
+      </Viewbox>
+    </Grid>
+  </DockPanel>
+</Window>
