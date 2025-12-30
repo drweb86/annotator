@@ -1,6 +1,8 @@
 using Avalonia.Controls;
 using Avalonia.Input;
+using Avalonia.Input.Platform;
 using Avalonia.Media.Imaging;
+using Avalonia.Platform;
 using Avalonia.Platform.Storage;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
@@ -140,11 +142,7 @@ public partial class ImageEditorViewModel : ViewModelBase
             stream.Position = 0;
 
             // Copy as PNG image data
-#pragma warning disable CS0618 // Type or member is obsolete
-            var dataObject = new DataObject();
-            dataObject.Set("image/png", stream.ToArray());
-            await clipboard.SetDataObjectAsync(dataObject);
-#pragma warning restore CS0618 // Type or member is obsolete
+            await clipboard.SetValueAsync(DataFormat.Bitmap, new Bitmap(stream));
         }
         catch
         {
