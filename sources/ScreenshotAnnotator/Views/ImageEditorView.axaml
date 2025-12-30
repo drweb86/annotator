@@ -219,16 +219,16 @@
       <!-- File Browser Panel -->
       <Border Grid.Row="1"
               Height="200"
-              BorderBrush="#CCCCCC"
+              BorderBrush="Black"
               BorderThickness="0,1,0,0"
               Background="#F8F8F8"
               IsVisible="{Binding IsFileBrowserVisible}">
         <DockPanel>
           <!-- File Browser Header -->
           <Border DockPanel.Dock="Top"
-                  Background="#E0E0E0"
+                  Background="#1C1C1C"
+                  BorderBrush="Black"
                   Padding="8"
-                  BorderBrush="#CCCCCC"
                   BorderThickness="0,0,0,1">
             <Grid>
               <Grid.ColumnDefinitions>
@@ -257,64 +257,38 @@
           <!-- File List -->
           <ListBox DockPanel.Dock="Top"
                    ItemsSource="{Binding ProjectFiles}"
-                   Background="Transparent"
+                   Background="#1C1C1C"
+                   BorderBrush="#CCCCCC"
+				   ScrollViewer.HorizontalScrollBarVisibility="Visible"
                    BorderThickness="0"
                    DoubleTapped="OnFileListDoubleTapped">
+			  <ListBox.Styles>
+				  <Style Selector="ScrollBar">
+					  <Setter Property="AllowAutoHide" Value="False" />
+				  </Style>  
+			  </ListBox.Styles>
+			  
+			  <ListBox.ItemsPanel>
+				  <ItemsPanelTemplate>
+					  <StackPanel Orientation="Horizontal"/>
+				  </ItemsPanelTemplate>
+			  </ListBox.ItemsPanel>
             <ListBox.ItemTemplate>
               <DataTemplate>
-                <Grid Margin="4">
-                  <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
-                  </Grid.RowDefinitions>
-                  <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="Auto"/>
-                  </Grid.ColumnDefinitions>
-
-                  <!-- Thumbnail Image -->
-                  <Image Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"
-                         Source="{Binding Thumbnail}"
-                         MaxWidth="100"
-                         MaxHeight="100"
-                         Margin="0,0,0,4"
-                         HorizontalAlignment="Center"
-                         Stretch="Uniform"/>
-
-                  <!-- File Name -->
-                  <TextBlock Grid.Row="1" Grid.Column="0"
-                             Text="{Binding FileName}"
-                             FontSize="12"
-                             TextTrimming="CharacterEllipsis"
-                             ToolTip.Tip="{Binding FileName}">
-                    <TextBlock.ContextMenu>
-                      <ContextMenu>
-                        <MenuItem Header="Open" Command="{Binding $parent[ListBox].((vm:ImageEditorViewModel)DataContext).OpenProjectFileCommand}" CommandParameter="{Binding}"/>
-                        <MenuItem Header="Delete" Command="{Binding $parent[ListBox].((vm:ImageEditorViewModel)DataContext).DeleteProjectFileCommand}" CommandParameter="{Binding}"/>
-                      </ContextMenu>
-                    </TextBlock.ContextMenu>
-                  </TextBlock>
-
-                  <!-- Delete Button -->
-                  <Button Grid.Row="1" Grid.Column="1"
-                          Command="{Binding $parent[ListBox].((vm:ImageEditorViewModel)DataContext).DeleteProjectFileCommand}"
-                          CommandParameter="{Binding}"
-                          Padding="2"
-                          Background="Transparent"
-                          ToolTip.Tip="Delete">
-                    <Path Data="M6,19A2,2 0 0,0 8,21H16A2,2 0 0,0 18,19V7H6V19M8,9H16V19H8V9M15.5,4L14.5,3H9.5L8.5,4H5V6H19V4H15.5Z"
-                          Fill="#D32F2F"
-                          Stretch="Uniform"
-                          Width="12" Height="12"/>
-                  </Button>
-
-                  <!-- Date -->
-                  <TextBlock Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2"
-                             Text="{Binding ModifiedDate, StringFormat='{}{0:yyyy-MM-dd HH:mm}'}"
-                             FontSize="10"
-                             Foreground="#666666"/>
-                </Grid>
+					<Image Source="{Binding Thumbnail}"
+						   MaxWidth="100"
+						   MaxHeight="100"
+						   ToolTip.Tip="{Binding ModifiedDate, StringFormat='{}{0:yyyy-MM-dd HH:mm}'}"
+						   Margin="8"
+						   HorizontalAlignment="Center"
+						   Stretch="Uniform">
+						<Image.ContextMenu>
+							<ContextMenu>
+								<MenuItem Header="Open" Command="{Binding $parent[ListBox].((vm:ImageEditorViewModel)DataContext).OpenProjectFileCommand}" CommandParameter="{Binding}"/>
+								<MenuItem Header="Delete" Command="{Binding $parent[ListBox].((vm:ImageEditorViewModel)DataContext).DeleteProjectFileCommand}" CommandParameter="{Binding}"/>
+							</ContextMenu>
+						</Image.ContextMenu>
+				</Image>
               </DataTemplate>
             </ListBox.ItemTemplate>
             <ListBox.Styles>

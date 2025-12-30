@@ -2,7 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Text.Json;
 using Avalonia.Media.Imaging;
+using ScreenshotAnnotator.Models;
 
 namespace ScreenshotAnnotator.Services;
 
@@ -63,8 +65,12 @@ public static class ProjectManager
                         Extension = ext
                     };
 
-                    // Load thumbnail for image files
-                    if (ext != ".anp")
+                    // Load thumbnail for all files (images and projects)
+                    if (ext == ".anp")
+                    {
+                        projectFileInfo.Thumbnail = LoadProjectThumbnail(file);
+                    }
+                    else
                     {
                         projectFileInfo.Thumbnail = LoadThumbnail(file);
                     }
@@ -90,6 +96,42 @@ public static class ProjectManager
         {
             using var stream = File.OpenRead(filePath);
             var bitmap = new Bitmap(stream);
+
+            // Create a thumbnail (max 100x100)
+            var maxSize = 100.0;
+            var scale = Math.Min(maxSize / bitmap.PixelSize.Width, maxSize / bitmap.PixelSize.Height);
+
+            if (scale < 1)
+            {
+                var newWidth = (int)(bitmap.PixelSize.Width * scale);
+                var newHeight = (int)(bitmap.PixelSize.Height * scale);
+                return bitmap.CreateScaledBitmap(new Avalonia.PixelSize(newWidth, newHeight));
+            }
+
+            return bitmap;
+        }
+        catch
+        {
+            return null;
+        }
+    }
+
+    private static Bitmap? LoadProjectThumbnail(string filePath)
+    {
+        try
+        {
+            var json = File.ReadAllText(filePath);
+            var project = JsonSerializer.Deserialize<AnnotatorProject>(json);
+
+            if (project == null || string.IsNullOrEmpty(project.PreviewImageBase64))
+            {
+                return null;
+            }
+
+            // Decode base64 image
+            var imageBytes = Convert.FromBase64String(project.PreviewImageBase64);
+            using var memoryStream = new MemoryStream(imageBytes);
+            var bitmap = new Bitmap(memoryStream);
 
             // Create a thumbnail (max 100x100)
             var maxSize = 100.0;
