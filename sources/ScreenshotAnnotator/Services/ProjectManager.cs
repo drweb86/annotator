@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using Avalonia.Media.Imaging;
 
 namespace ScreenshotAnnotator.Services;
 
@@ -12,6 +13,7 @@ public class ProjectFileInfo
     public DateTime ModifiedDate { get; set; }
     public bool IsProject { get; set; }
     public string Extension { get; set; } = "";
+    public Bitmap? Thumbnail { get; set; }
 }
 
 public static class ProjectManager
@@ -52,14 +54,22 @@ public static class ProjectManager
                     ext == ".jpeg" || ext == ".webp" || ext == ".bmp")
                 {
                     var fileInfo = new FileInfo(file);
-                    files.Add(new ProjectFileInfo
+                    var projectFileInfo = new ProjectFileInfo
                     {
                         FilePath = file,
                         FileName = Path.GetFileName(file),
                         ModifiedDate = fileInfo.LastWriteTime,
                         IsProject = ext == ".anp",
                         Extension = ext
-                    });
+                    };
+
+                    // Load thumbnail for image files
+                    if (ext != ".anp")
+                    {
+                        projectFileInfo.Thumbnail = LoadThumbnail(file);
+                    }
+
+                    files.Add(projectFileInfo);
                 }
             }
 
@@ -72,6 +82,32 @@ public static class ProjectManager
         }
 
         return files;
+    }
+
+    private static Bitmap? LoadThumbnail(string filePath)
+    {
+        try
+        {
+            using var stream = File.OpenRead(filePath);
+            var bitmap = new Bitmap(stream);
+
+            // Create a thumbnail (max 100x100)
+            var maxSize = 100.0;
+            var scale = Math.Min(maxSize / bitmap.PixelSize.Width, maxSize / bitmap.PixelSize.Height);
+
+            if (scale < 1)
+            {
+                var newWidth = (int)(bitmap.PixelSize.Width * scale);
+                var newHeight = (int)(bitmap.PixelSize.Height * scale);
+                return bitmap.CreateScaledBitmap(new Avalonia.PixelSize(newWidth, newHeight));
+            }
+
+            return bitmap;
+        }
+        catch
+        {
+            return null;
+        }
     }
 
     public static string GenerateTimestampedFileName(string extension)

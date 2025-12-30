@@ -15,7 +15,7 @@ public enum ToolType
 public abstract class AnnotationShape
 {
     public Color StrokeColor { get; set; } = Colors.Red;
-    public double StrokeThickness { get; set; } = 2.0;
+    public double StrokeThickness { get; set; } = 10.0;
     public bool IsSelected { get; set; }
 
     public abstract void Render(DrawingContext context);
@@ -32,28 +32,84 @@ public class ArrowShape : AnnotationShape
     {
         var color = IsSelected ? Colors.Blue : StrokeColor;
         var thickness = IsSelected ? StrokeThickness + 1 : StrokeThickness;
-        var pen = new Pen(new SolidColorBrush(color), thickness);
+        var pen = new Pen(new SolidColorBrush(color), thickness)
+        {
+            LineCap = PenLineCap.Round // Rounded start
+        };
 
-        // Draw main line
-        context.DrawLine(pen, StartPoint, EndPoint);
+        // Shadow parameters
+        var shadowOffset = new Vector(3, 3);
+        var shadowColor = Color.FromArgb(100, 0, 0, 0); // Semi-transparent black
+        var shadowPen = new Pen(new SolidColorBrush(shadowColor), thickness)
+        {
+            LineCap = PenLineCap.Round
+        };
+        var shadowBrush = new SolidColorBrush(shadowColor);
 
-        // Draw arrowhead
+        // Draw arrowhead as solid triangle (twice as large)
         var angle = Math.Atan2(EndPoint.Y - StartPoint.Y, EndPoint.X - StartPoint.X);
-        var arrowLength = 15;
-        var arrowAngle = Math.PI / 6; // 30 degrees
+        var arrowLength = 40; // Twice as large (was 20)
+        var arrowWidth = 30;  // Twice as large (was 15)
 
-        var point1 = new Point(
-            EndPoint.X - arrowLength * Math.Cos(angle - arrowAngle),
-            EndPoint.Y - arrowLength * Math.Sin(angle - arrowAngle)
+        // Calculate the three points of the triangle beak
+        var perpAngle = angle + Math.PI / 2;
+        var halfWidth = arrowWidth / 2;
+
+        // Base left point
+        var baseLeft = new Point(
+            EndPoint.X - arrowLength * Math.Cos(angle) - halfWidth * Math.Cos(perpAngle),
+            EndPoint.Y - arrowLength * Math.Sin(angle) - halfWidth * Math.Sin(perpAngle)
         );
 
-        var point2 = new Point(
-            EndPoint.X - arrowLength * Math.Cos(angle + arrowAngle),
-            EndPoint.Y - arrowLength * Math.Sin(angle + arrowAngle)
+        // Base right point
+        var baseRight = new Point(
+            EndPoint.X - arrowLength * Math.Cos(angle) + halfWidth * Math.Cos(perpAngle),
+            EndPoint.Y - arrowLength * Math.Sin(angle) + halfWidth * Math.Sin(perpAngle)
         );
 
-        context.DrawLine(pen, EndPoint, point1);
-        context.DrawLine(pen, EndPoint, point2);
+        // Base center point (where the line should end)
+        var baseCenter = new Point(
+            EndPoint.X - arrowLength * Math.Cos(angle),
+            EndPoint.Y - arrowLength * Math.Sin(angle)
+        );
+
+        // Tip point (at the end)
+        var tip = EndPoint;
+
+        // Draw shadow for main line (ending at the base of the triangle)
+        var shadowStart = new Point(StartPoint.X + shadowOffset.X, StartPoint.Y + shadowOffset.Y);
+        var shadowLineEnd = new Point(baseCenter.X + shadowOffset.X, baseCenter.Y + shadowOffset.Y);
+        context.DrawLine(shadowPen, shadowStart, shadowLineEnd);
+
+        // Create geometry for the arrow beak triangle shadow
+        var shadowBeakGeometry = new StreamGeometry();
+        using (var ctx = shadowBeakGeometry.Open())
+        {
+            ctx.BeginFigure(new Point(baseLeft.X + shadowOffset.X, baseLeft.Y + shadowOffset.Y), true);
+            ctx.LineTo(new Point(tip.X + shadowOffset.X, tip.Y + shadowOffset.Y));
+            ctx.LineTo(new Point(baseRight.X + shadowOffset.X, baseRight.Y + shadowOffset.Y));
+            ctx.EndFigure(true);
+        }
+
+        // Draw the shadow beak
+        context.DrawGeometry(shadowBrush, null, shadowBeakGeometry);
+
+        // Draw main line (ending at the base of the triangle to avoid overlap)
+        context.DrawLine(pen, StartPoint, baseCenter);
+
+        // Create geometry for the arrow beak triangle
+        var beakGeometry = new StreamGeometry();
+        using (var ctx = beakGeometry.Open())
+        {
+            ctx.BeginFigure(baseLeft, true);
+            ctx.LineTo(tip);
+            ctx.LineTo(baseRight);
+            ctx.EndFigure(true);
+        }
+
+        // Draw the solid triangle beak
+        var brush = new SolidColorBrush(color);
+        context.DrawGeometry(brush, null, beakGeometry);
 
         // Draw selection handles if selected
         if (IsSelected)
