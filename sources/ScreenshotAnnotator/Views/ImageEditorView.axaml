@@ -36,9 +36,6 @@
 				  <Separator/>
 				  <MenuItem Header="Open Projects _Folder" Command="{Binding OpenProjectsFolderCommand}"/>
 			  </MenuItem>
-			  <MenuItem Header="_Edit">
-				  <MenuItem Header="C_lear All Annotations" Command="{Binding ClearShapesCommand}" InputGesture="Ctrl+Shift+X"/>
-			  </MenuItem>
 			  <MenuItem Header="_View">
 				  <MenuItem Header="Toggle File _Browser" Command="{Binding ToggleFileBrowserCommand}" InputGesture="F9"/>
 			  </MenuItem>
@@ -171,16 +168,6 @@
 
         <!-- Separator -->
         <Border Width="1" Background="#CCCCCC" Margin="4,0"/>
-
-        <!-- Clear All Button -->
-        <Button Command="{Binding ClearShapesCommand}"
-                ToolTip.Tip="Clear All Annotations">
-          <StackPanel HorizontalAlignment="Center">
-            <Path Data="M9,3V4H4V6H5V19A2,2 0 0,0 7,21H17A2,2 0 0,0 19,19V6H20V4H15V3H9M7,6H17V19H7V6M9,8V17H11V8H9M13,8V17H15V8H13Z"
-                  Fill="#D32F2F" />
-            <TextBlock Text="Clear" />
-          </StackPanel>
-        </Button>
 
         <!-- Apply Trim Button -->
         <Button Command="{Binding ApplyTrimCommand}"

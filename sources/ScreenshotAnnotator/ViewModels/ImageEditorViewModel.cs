@@ -79,12 +79,6 @@ public partial class ImageEditorViewModel : ViewModelBase
     }
 
     [RelayCommand]
-    private void ClearShapes()
-    {
-        Shapes.Clear();
-    }
-
-    [RelayCommand]
     private void ApplyTrim()
     {
         // This would crop the image to the trim rectangle

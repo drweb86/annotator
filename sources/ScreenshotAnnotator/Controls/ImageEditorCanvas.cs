@@ -523,6 +523,16 @@ public class ImageEditorCanvas : Control
         if (_textEditor != null)
             return;
 
+        // Delete selected shape on Delete key press
+        if (e.Key == Key.Delete && _selectedShape != null)
+        {
+            Shapes.Remove(_selectedShape);
+            _selectedShape = null;
+            InvalidateVisual();
+            e.Handled = true;
+            return;
+        }
+
         // If a callout is selected and user presses a key, open text editor
         if (_selectedShape is CalloutShape callout && !e.Handled)
         {

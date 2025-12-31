@@ -108,12 +108,6 @@ public partial class ImageEditorView : UserControl
             await viewModel.SaveAsImageCommand.ExecuteAsync(null);
             e.Handled = true;
         }
-        // Ctrl+Shift+X - Clear all annotations
-        else if (isCtrl && isShift && e.Key == Key.X)
-        {
-            viewModel.ClearShapesCommand.Execute(null);
-            e.Handled = true;
-        }
         // F9 - Toggle file browser
         else if (e.Key == Key.F9)
         {
