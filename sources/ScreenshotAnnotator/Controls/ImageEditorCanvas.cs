@@ -227,37 +227,63 @@ public class ImageEditorCanvas : Control
         }
         else
         {
-            // Tool is selected - create new shape
-            _isDrawing = true;
-
-            switch (CurrentTool)
+            // Tool is selected - check if clicking on existing shape first
+            bool clickedOnShape = false;
+            for (int i = Shapes.Count - 1; i >= 0; i--)
             {
-                case ToolType.Arrow:
-                    _currentShape = new ArrowShape
-                    {
-                        StartPoint = point,
-                        EndPoint = point
-                    };
-                    break;
+                if (Shapes[i].HitTest(point))
+                {
+                    // User clicked on existing shape - switch to selector tool
+                    CurrentTool = ToolType.None;
 
-                case ToolType.Callout:
-                    _currentShape = new CalloutShape
-                    {
-                        Rectangle = new Rect(point, new Size(0, 0)),
-                        BeakPoint = point
-                    };
-                    _isDraggingBeak = false;
-                    break;
+                    // Deselect previous shape
+                    if (_selectedShape != null)
+                        _selectedShape.IsSelected = false;
 
-                case ToolType.Trim:
-                    _currentTrimRect = new TrimRectangle
-                    {
-                        Rectangle = new Rect(point, new Size(0, 0))
-                    };
-                    break;
+                    // Select this shape
+                    _selectedShape = Shapes[i];
+                    _selectedShape.IsSelected = true;
+                    _isDraggingShape = true;
+                    InvalidateVisual();
+                    clickedOnShape = true;
+                    return;
+                }
             }
 
-            InvalidateVisual();
+            // No shape was clicked - create new shape
+            if (!clickedOnShape)
+            {
+                _isDrawing = true;
+
+                switch (CurrentTool)
+                {
+                    case ToolType.Arrow:
+                        _currentShape = new ArrowShape
+                        {
+                            StartPoint = point,
+                            EndPoint = point
+                        };
+                        break;
+
+                    case ToolType.Callout:
+                        _currentShape = new CalloutShape
+                        {
+                            Rectangle = new Rect(point, new Size(0, 0)),
+                            BeakPoint = point
+                        };
+                        _isDraggingBeak = false;
+                        break;
+
+                    case ToolType.Trim:
+                        _currentTrimRect = new TrimRectangle
+                        {
+                            Rectangle = new Rect(point, new Size(0, 0))
+                        };
+                        break;
+                }
+
+                InvalidateVisual();
+            }
         }
     }
 

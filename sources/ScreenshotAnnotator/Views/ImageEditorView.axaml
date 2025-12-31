@@ -210,7 +210,7 @@
         <Grid>
           <controls:ImageEditorCanvas x:Name="EditorCanvas"
                                       Image="{Binding Image}"
-                                      CurrentTool="{Binding CurrentTool}"
+                                      CurrentTool="{Binding CurrentTool, Mode=TwoWay}"
                                       Shapes="{Binding Shapes}"/>
           <Canvas x:Name="OverlayCanvas" />
         </Grid>
