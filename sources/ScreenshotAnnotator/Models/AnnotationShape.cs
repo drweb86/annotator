@@ -193,74 +193,101 @@ public class CalloutShape : AnnotationShape
         var color = IsSelected ? Colors.Blue : StrokeColor;
         var thickness = IsSelected ? StrokeThickness + 1 : StrokeThickness;
         var pen = new Pen(new SolidColorBrush(color), thickness);
-        var brush = new SolidColorBrush(Colors.White);
+        var fillBrush = new SolidColorBrush(color);
 
-        // Create path for callout with beak
-        var geometry = new PathGeometry();
-        var figure = new PathFigure { StartPoint = Rectangle.TopLeft, IsClosed = true };
+        // Shadow parameters
+        var shadowOffset = new Vector(3, 3);
+        var shadowColor = Color.FromArgb(100, 0, 0, 0); // Semi-transparent black
+        var shadowBrush = new SolidColorBrush(shadowColor);
 
-        // Determine which side the beak is on
+        // Create rounded rectangle geometry
+        var cornerRadius = 10.0;
+
+        // Calculate arrow geometry first
         var rectCenter = Rectangle.Center;
-        var beakSide = GetBeakSide();
+        Point arrowStart = GetEdgePoint(rectCenter, BeakPoint);
+        Point arrowEnd = BeakPoint;
 
-        var segments = figure.Segments;
+        var angle = Math.Atan2(arrowEnd.Y - arrowStart.Y, arrowEnd.X - arrowStart.X);
+        var arrowLength = 40; // Twice as large (was 20)
+        var arrowWidth = 30;  // Twice as large (was 15)
 
-        switch (beakSide)
+        var perpAngle = angle + Math.PI / 2;
+        var halfWidth = arrowWidth / 2;
+
+        var baseLeft = new Point(
+            arrowEnd.X - arrowLength * Math.Cos(angle) - halfWidth * Math.Cos(perpAngle),
+            arrowEnd.Y - arrowLength * Math.Sin(angle) - halfWidth * Math.Sin(perpAngle)
+        );
+
+        var baseRight = new Point(
+            arrowEnd.X - arrowLength * Math.Cos(angle) + halfWidth * Math.Cos(perpAngle),
+            arrowEnd.Y - arrowLength * Math.Sin(angle) + halfWidth * Math.Sin(perpAngle)
+        );
+
+        var baseCenter = new Point(
+            arrowEnd.X - arrowLength * Math.Cos(angle),
+            arrowEnd.Y - arrowLength * Math.Sin(angle)
+        );
+
+        // Draw all shadows first (so they appear behind everything)
+
+        // Shadow for rounded rectangle
+        var shadowRect = new Rect(
+            Rectangle.X + shadowOffset.X,
+            Rectangle.Y + shadowOffset.Y,
+            Rectangle.Width,
+            Rectangle.Height
+        );
+        context.DrawRectangle(shadowBrush, null, shadowRect, cornerRadius, cornerRadius);
+
+        // Shadow for arrow line (only if it's outside the rectangle)
+        var shadowPen = new Pen(shadowBrush, thickness)
         {
-            case BeakSide.Bottom:
-                segments!.Add(new LineSegment { Point = Rectangle.TopRight });
-                segments.Add(new LineSegment { Point = Rectangle.BottomRight });
+            LineCap = PenLineCap.Round
+        };
+        var shadowArrowStart = new Point(arrowStart.X + shadowOffset.X, arrowStart.Y + shadowOffset.Y);
+        var shadowArrowBaseCenter = new Point(baseCenter.X + shadowOffset.X, baseCenter.Y + shadowOffset.Y);
 
-                // Add beak on bottom
-                var beakX = Math.Max(Rectangle.Left, Math.Min(Rectangle.Right, BeakPoint.X));
-                segments.Add(new LineSegment { Point = new Point(beakX + 10, Rectangle.Bottom) });
-                segments.Add(new LineSegment { Point = BeakPoint });
-                segments.Add(new LineSegment { Point = new Point(beakX - 10, Rectangle.Bottom) });
-
-                segments.Add(new LineSegment { Point = Rectangle.BottomLeft });
-                break;
-
-            case BeakSide.Top:
-                var topBeakX = Math.Max(Rectangle.Left, Math.Min(Rectangle.Right, BeakPoint.X));
-                segments!.Add(new LineSegment { Point = new Point(topBeakX - 10, Rectangle.Top) });
-                segments.Add(new LineSegment { Point = BeakPoint });
-                segments.Add(new LineSegment { Point = new Point(topBeakX + 10, Rectangle.Top) });
-
-                segments.Add(new LineSegment { Point = Rectangle.TopRight });
-                segments.Add(new LineSegment { Point = Rectangle.BottomRight });
-                segments.Add(new LineSegment { Point = Rectangle.BottomLeft });
-                break;
-
-            case BeakSide.Left:
-                segments!.Add(new LineSegment { Point = Rectangle.TopRight });
-                segments.Add(new LineSegment { Point = Rectangle.BottomRight });
-                segments.Add(new LineSegment { Point = Rectangle.BottomLeft });
-
-                var leftBeakY = Math.Max(Rectangle.Top, Math.Min(Rectangle.Bottom, BeakPoint.Y));
-                segments.Add(new LineSegment { Point = new Point(Rectangle.Left, leftBeakY + 10) });
-                segments.Add(new LineSegment { Point = BeakPoint });
-                segments.Add(new LineSegment { Point = new Point(Rectangle.Left, leftBeakY - 10) });
-                break;
-
-            case BeakSide.Right:
-                segments!.Add(new LineSegment { Point = Rectangle.TopRight });
-
-                var rightBeakY = Math.Max(Rectangle.Top, Math.Min(Rectangle.Bottom, BeakPoint.Y));
-                segments.Add(new LineSegment { Point = new Point(Rectangle.Right, rightBeakY - 10) });
-                segments.Add(new LineSegment { Point = BeakPoint });
-                segments.Add(new LineSegment { Point = new Point(Rectangle.Right, rightBeakY + 10) });
-
-                segments.Add(new LineSegment { Point = Rectangle.BottomRight });
-                segments.Add(new LineSegment { Point = Rectangle.BottomLeft });
-                break;
+        // Only draw arrow shadow outside rectangle bounds
+        if (!Rectangle.Contains(shadowArrowStart) || !Rectangle.Contains(shadowArrowBaseCenter))
+        {
+            context.DrawLine(shadowPen, shadowArrowStart, shadowArrowBaseCenter);
         }
 
-        geometry.Figures!.Add(figure);
+        // Shadow for arrow head
+        var shadowArrowGeometry = new StreamGeometry();
+        using (var ctx = shadowArrowGeometry.Open())
+        {
+            ctx.BeginFigure(new Point(baseLeft.X + shadowOffset.X, baseLeft.Y + shadowOffset.Y), true);
+            ctx.LineTo(new Point(arrowEnd.X + shadowOffset.X, arrowEnd.Y + shadowOffset.Y));
+            ctx.LineTo(new Point(baseRight.X + shadowOffset.X, baseRight.Y + shadowOffset.Y));
+            ctx.EndFigure(true);
+        }
+        context.DrawGeometry(shadowBrush, null, shadowArrowGeometry);
 
-        // Draw the callout
-        context.DrawGeometry(brush, pen, geometry);
+        // Draw filled rounded rectangle (on top of shadows)
+        context.DrawRectangle(fillBrush, pen, Rectangle, cornerRadius, cornerRadius);
 
-        // Draw text if any
+        // Draw arrow line
+        var arrowPen = new Pen(fillBrush, thickness)
+        {
+            LineCap = PenLineCap.Round
+        };
+        context.DrawLine(arrowPen, arrowStart, baseCenter);
+
+        // Draw arrow head triangle
+        var arrowGeometry = new StreamGeometry();
+        using (var ctx = arrowGeometry.Open())
+        {
+            ctx.BeginFigure(baseLeft, true);
+            ctx.LineTo(arrowEnd);
+            ctx.LineTo(baseRight);
+            ctx.EndFigure(true);
+        }
+        context.DrawGeometry(fillBrush, null, arrowGeometry);
+
+        // Draw text if any - centered horizontally and vertically, white color, size 24
         if (!string.IsNullOrWhiteSpace(Text))
         {
             var formattedText = new FormattedText(
@@ -268,13 +295,17 @@ public class CalloutShape : AnnotationShape
                 System.Globalization.CultureInfo.CurrentCulture,
                 FlowDirection.LeftToRight,
                 new Typeface("Arial"),
-                14,
-                Brushes.Black
-            );
+                24,
+                Brushes.White
+            )
+            {
+                TextAlignment = TextAlignment.Center
+            };
 
+            // Center text in rectangle
             var textPoint = new Point(
-                Rectangle.Left + 5,
-                Rectangle.Top + 5
+                Rectangle.Left + (Rectangle.Width - formattedText.Width) / 2,
+                Rectangle.Top + (Rectangle.Height - formattedText.Height) / 2
             );
 
             context.DrawText(formattedText, textPoint);
@@ -290,11 +321,51 @@ public class CalloutShape : AnnotationShape
             DrawHandle(context, Rectangle.BottomLeft, handleSize, handleBrush);
             DrawHandle(context, Rectangle.BottomRight, handleSize, handleBrush);
 
-            // Draw beak handle
-            var beakHandleSize = 8;
-            var beakHandleBrush = Brushes.Orange;
-            DrawHandle(context, BeakPoint, beakHandleSize, beakHandleBrush);
+            // Draw arrow handle
+            var arrowHandleSize = 8;
+            var arrowHandleBrush = Brushes.Orange;
+            DrawHandle(context, BeakPoint, arrowHandleSize, arrowHandleBrush);
         }
+    }
+
+    private Point GetEdgePoint(Point center, Point target)
+    {
+        // Find intersection of line from center to target with rectangle edge
+        var dx = target.X - center.X;
+        var dy = target.Y - center.Y;
+
+        if (dx == 0 && dy == 0)
+            return center;
+
+        // Calculate intersections with all four edges
+        double t = double.MaxValue;
+
+        // Top edge
+        if (dy < 0)
+        {
+            var tTop = (Rectangle.Top - center.Y) / dy;
+            if (tTop > 0) t = Math.Min(t, tTop);
+        }
+        // Bottom edge
+        if (dy > 0)
+        {
+            var tBottom = (Rectangle.Bottom - center.Y) / dy;
+            if (tBottom > 0) t = Math.Min(t, tBottom);
+        }
+        // Left edge
+        if (dx < 0)
+        {
+            var tLeft = (Rectangle.Left - center.X) / dx;
+            if (tLeft > 0) t = Math.Min(t, tLeft);
+        }
+        // Right edge
+        if (dx > 0)
+        {
+            var tRight = (Rectangle.Right - center.X) / dx;
+            if (tRight > 0) t = Math.Min(t, tRight);
+        }
+
+        return new Point(center.X + t * dx, center.Y + t * dy);
     }
 
     public bool IsPointOnBeak(Point point)

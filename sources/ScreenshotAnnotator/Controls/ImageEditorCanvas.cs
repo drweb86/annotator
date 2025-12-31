@@ -75,6 +75,7 @@ public class ImageEditorCanvas : Control
     {
         Shapes.CollectionChanged += (s, e) => InvalidateVisual();
         DoubleTapped += OnDoubleTapped;
+        Focusable = true; // Allow the canvas to receive keyboard input
     }
 
     private void OnDoubleTapped(object? sender, TappedEventArgs e)
@@ -102,14 +103,18 @@ public class ImageEditorCanvas : Control
         _textEditor = new TextBox
         {
             Text = callout.Text,
-            Width = Math.Max(callout.Rectangle.Width - 10, 100),
+            Width = Math.Max(callout.Rectangle.Width, 100),
+            Height = Math.Max(callout.Rectangle.Height, 50),
             TextWrapping = Avalonia.Media.TextWrapping.Wrap,
             AcceptsReturn = true,
-            BorderThickness = new Thickness(2),
-            BorderBrush = Brushes.Blue,
-            Background = Brushes.White,
-            Padding = new Thickness(5),
-            FontSize = 14
+            BorderThickness = new Thickness(0),
+            BorderBrush = Brushes.Transparent,
+            Background = Brushes.Transparent,
+            Foreground = Brushes.White,
+            Padding = new Thickness(10),
+            FontSize = 24,
+            TextAlignment = TextAlignment.Center,
+            VerticalContentAlignment = Avalonia.Layout.VerticalAlignment.Center
         };
 
         // Position the TextBox
@@ -212,6 +217,7 @@ public class ImageEditorCanvas : Control
                     _selectedShape = Shapes[i];
                     _selectedShape.IsSelected = true;
                     _isDraggingShape = true;
+                    Focus(); // Set focus to receive keyboard events
                     InvalidateVisual();
                     return;
                 }
@@ -244,6 +250,7 @@ public class ImageEditorCanvas : Control
                     _selectedShape = Shapes[i];
                     _selectedShape.IsSelected = true;
                     _isDraggingShape = true;
+                    Focus(); // Set focus to receive keyboard events
                     InvalidateVisual();
                     clickedOnShape = true;
                     return;
@@ -506,6 +513,30 @@ public class ImageEditorCanvas : Control
             return new Size(Image.PixelSize.Width, Image.PixelSize.Height);
         }
         return base.MeasureOverride(availableSize);
+    }
+
+    protected override void OnKeyDown(KeyEventArgs e)
+    {
+        base.OnKeyDown(e);
+
+        // If text editor is already open, let it handle the keys
+        if (_textEditor != null)
+            return;
+
+        // If a callout is selected and user presses a key, open text editor
+        if (_selectedShape is CalloutShape callout && !e.Handled)
+        {
+            // Don't trigger on special keys
+            if (e.Key != Key.Escape && e.Key != Key.Tab &&
+                e.Key != Key.LeftCtrl && e.Key != Key.RightCtrl &&
+                e.Key != Key.LeftAlt && e.Key != Key.RightAlt &&
+                e.Key != Key.LeftShift && e.Key != Key.RightShift &&
+                e.Key != Key.Delete)
+            {
+                ShowTextEditor(callout);
+                e.Handled = true;
+            }
+        }
     }
 
     public RenderTargetBitmap? RenderToImage()

@@ -368,6 +368,9 @@ public partial class ImageEditorViewModel : ViewModelBase
 
         try
         {
+            // Autosave current project before opening a new one
+            await AutoSaveCurrentProject();
+
             var storageProvider = _topLevel.StorageProvider;
             if (storageProvider == null) return;
 
@@ -392,6 +395,25 @@ public partial class ImageEditorViewModel : ViewModelBase
         catch
         {
             // Handle load errors
+        }
+    }
+
+    public async Task AutoSaveCurrentProject()
+    {
+        // Only autosave if we have a current project file and there are shapes or an image
+        if (_currentFilePath != null && Image != null && (Shapes.Count > 0 || !string.IsNullOrEmpty(_currentFilePath)))
+        {
+            try
+            {
+                await SaveProjectToFile(_currentFilePath);
+
+                // Refresh project files to show updated thumbnails
+                RefreshProjectFiles();
+            }
+            catch
+            {
+                // Silently handle autosave errors
+            }
         }
     }
 
@@ -513,6 +535,9 @@ public partial class ImageEditorViewModel : ViewModelBase
 
         try
         {
+            // Autosave current project before opening a new one
+            await AutoSaveCurrentProject();
+
             if (fileInfo.IsProject)
             {
                 // Open as project
