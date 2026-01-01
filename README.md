@@ -9,6 +9,7 @@ Features:
 
 # Screenshots
 
+<img width="1200" height="800" alt="image" src="https://github.com/user-attachments/assets/740a0785-1bde-45a6-9cea-97b8233a2fe9" />
 
 
 
