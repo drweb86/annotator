@@ -15,6 +15,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Files", "Files", "{BED71DF5-9683-4D69-ACA6-6FE190A3C126}"
 	ProjectSection(SolutionItems) = preProject
 		..\CHANGELOG.md = ..\CHANGELOG.md
+		..\README.md = ..\README.md
 	EndProjectSection
 EndProject
 Global

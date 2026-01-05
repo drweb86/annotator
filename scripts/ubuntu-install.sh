@@ -3,10 +3,10 @@
 # Fail on first error.
 set -e
 
-version=2025.12.26
+version=2025.12.29
 
-sourceCodeInstallationDirectory=/usr/local/src/dotnet-ftps-server
-binariesInstallationDirectory=/usr/local/dotnet-ftps-server
+sourceCodeInstallationDirectory=/usr/local/src/screenshot-annotator
+binariesInstallationDirectory=/usr/local/screenshot-annotator
 
 if [ "$EUID" -eq 0 ]
   then echo "Please do not run this script with sudo, root permissions"
@@ -30,7 +30,7 @@ sudo rm -rf ${binariesInstallationDirectory}
 echo
 echo Get source code
 echo
-sudo git clone https://github.com/drweb86/dotnet-ftps-server.git ${sourceCodeInstallationDirectory}
+sudo git clone https://github.com/drweb86/annotator.git ${sourceCodeInstallationDirectory}
 cd ${sourceCodeInstallationDirectory}
 
 echo
@@ -42,12 +42,12 @@ echo
 echo Building
 echo
 cd ./sources
-sudo /root/.dotnet/dotnet publish FtpsServer.Ubuntu.slnx /p:Version=${version} /p:AssemblyVersion=${version} -c Release --property:PublishDir=${binariesInstallationDirectory} --use-current-runtime --self-contained
+sudo /root/.dotnet/dotnet publish ScreenshotAnnotator.sln /p:Version=${version} /p:AssemblyVersion=${version} -c Release --property:PublishDir=${binariesInstallationDirectory} --use-current-runtime --self-contained
 
 echo
 echo Prepare PNG icon for Gnome, ico files are not handled
 echo
-sudo cp "${sourceCodeInstallationDirectory}/sources/FtpsServerWindows/FtpsApp.png" "${binariesInstallationDirectory}/Icon.png"
+sudo cp "${sourceCodeInstallationDirectory}/scripts/App.png" "${binariesInstallationDirectory}/Icon.png"
 
 echo
 echo Prepare shortcut
@@ -57,49 +57,28 @@ echo
 echo Prepare shortcut for Console
 echo
 
-temporaryShortcutConsole=/tmp/FTPS-console.desktop
-sudo rm -f ${temporaryShortcutConsole}
-cat > ${temporaryShortcutConsole} << EOL
-[Desktop Entry]
-Version=${version}
-Name=FTPS Console
-GenericName=FTPS Server for file sharing
-Categories=Network;System;Utility;
-Comment=FTPS server for file sharing
-Keywords=ftp;sftp;file;transfer;server
-Type=Application
-Terminal=true
-Path=${binariesInstallationDirectory}
-Exec=${binariesInstallationDirectory}/ftps-server
-Icon=${binariesInstallationDirectory}/Icon.png
-EOL
-shortcutFileConsole=/usr/share/applications/FTPS-console.desktop
-sudo cp ${temporaryShortcutConsole} "${shortcutFileConsole}"
-sudo chmod a+x "${shortcutFileConsole}"
-sudo dbus-launch gio set "${shortcutFileConsole}" metadata::trusted true
-
 echo
 echo Prepare shortcut for UI
 echo
 
-temporaryShortcutUI=/tmp/FTPS.desktop
+temporaryShortcutUI=/tmp/Screenshot_Annotator.desktop
 sudo rm -f ${temporaryShortcutUI}
 cat > ${temporaryShortcutUI} << EOL
 [Desktop Entry]
 Version=${version}
-Name=FTPS UI
-GenericName=FTPS Server for file sharing
-Categories=Network;System;Utility;
-Comment=FTPS server for file sharing
-Keywords=ftp;sftp;file;transfer;server
+Name=Screenshot Annotator
+GenericName=Helps to annotate screenshots
+Categories=Screenshot;
+Comment=Helps to annotate screenshots
+Keywords=screenshot;annotate;annotator
 Type=Application
 Terminal=false
-StartupWMClass=FtpsServerAvalonia.Desktop
+StartupWMClass=ScreenshotAnnotator.Desktop
 Path=${binariesInstallationDirectory}
-Exec=${binariesInstallationDirectory}/FtpsServerAvalonia.Desktop
+Exec=${binariesInstallationDirectory}/ScreenshotAnnotator.Desktop
 Icon=${binariesInstallationDirectory}/Icon.png
 EOL
-shortcutFileUI=/usr/share/applications/FTPS.desktop
+shortcutFileUI=/usr/share/applications/Screenshot_Annotator.desktop
 sudo cp ${temporaryShortcutUI} "${shortcutFileUI}"
 sudo chmod a+x "${shortcutFileUI}"
 sudo dbus-launch gio set "${shortcutFileUI}" metadata::trusted true
@@ -114,11 +93,10 @@ echo
 echo Binaries: ${binariesInstallationDirectory}
 echo Sources: ${sourceCodeInstallationDirectory}
 echo
-echo Shortcuts for quick search is provisioned:
-echo     search menu for FTPS UI or FTPS Console.
+echo Shortcut for quick search is provisioned:
+echo     search menu for Screnshot Annotator.
 echo
-echo UI tool: ${binariesInstallationDirectory}/FtpsServerAvalonia.Desktop
-echo Console tool: ${binariesInstallationDirectory}/ftps-server
+echo UI tool: ${binariesInstallationDirectory}/ScreenshotAnnotator.Desktop
 echo
 echo
 sleep 2m

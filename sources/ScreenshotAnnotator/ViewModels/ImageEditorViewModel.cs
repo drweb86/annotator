@@ -38,6 +38,18 @@ public partial class ImageEditorViewModel : ViewModelBase
     private bool _isCalloutToolSelected;
 
     [ObservableProperty]
+    private bool _isCalloutNoArrowToolSelected;
+
+    [ObservableProperty]
+    private bool _isBorderedRectangleToolSelected;
+
+    [ObservableProperty]
+    private bool _isBlurRectangleToolSelected;
+
+    [ObservableProperty]
+    private bool _isSelectorToolSelected;
+
+    [ObservableProperty]
     private bool _isTrimToolSelected;
 
     [ObservableProperty]
@@ -72,6 +84,34 @@ public partial class ImageEditorViewModel : ViewModelBase
     }
 
     [RelayCommand]
+    private void SelectCalloutNoArrowTool()
+    {
+        CurrentTool = ToolType.CalloutNoArrow;
+        UpdateToolSelection();
+    }
+
+    [RelayCommand]
+    private void SelectBorderedRectangleTool()
+    {
+        CurrentTool = ToolType.BorderedRectangle;
+        UpdateToolSelection();
+    }
+
+    [RelayCommand]
+    private void SelectBlurRectangleTool()
+    {
+        CurrentTool = ToolType.BlurRectangle;
+        UpdateToolSelection();
+    }
+
+    [RelayCommand]
+    private void SelectSelectorTool()
+    {
+        CurrentTool = ToolType.Selector;
+        UpdateToolSelection();
+    }
+
+    [RelayCommand]
     private void SelectTrimTool()
     {
         CurrentTool = ToolType.Trim;
@@ -90,6 +130,10 @@ public partial class ImageEditorViewModel : ViewModelBase
         IsSelectToolSelected = CurrentTool == ToolType.None;
         IsArrowToolSelected = CurrentTool == ToolType.Arrow;
         IsCalloutToolSelected = CurrentTool == ToolType.Callout;
+        IsCalloutNoArrowToolSelected = CurrentTool == ToolType.CalloutNoArrow;
+        IsBorderedRectangleToolSelected = CurrentTool == ToolType.BorderedRectangle;
+        IsBlurRectangleToolSelected = CurrentTool == ToolType.BlurRectangle;
+        IsSelectorToolSelected = CurrentTool == ToolType.Selector;
         IsTrimToolSelected = CurrentTool == ToolType.Trim;
     }
 
@@ -339,6 +383,18 @@ public partial class ImageEditorViewModel : ViewModelBase
                 {
                     project.Shapes.Add(SerializableCalloutShape.FromCalloutShape(callout));
                 }
+                else if (shape is CalloutNoArrowShape calloutNoArrow)
+                {
+                    project.Shapes.Add(SerializableCalloutNoArrowShape.FromCalloutNoArrowShape(calloutNoArrow));
+                }
+                else if (shape is BorderedRectangleShape borderedRect)
+                {
+                    project.Shapes.Add(SerializableBorderedRectangleShape.FromBorderedRectangleShape(borderedRect));
+                }
+                else if (shape is BlurRectangleShape blurRect)
+                {
+                    project.Shapes.Add(SerializableBlurRectangleShape.FromBlurRectangleShape(blurRect));
+                }
             }
 
             // Serialize to JSON and save
@@ -438,6 +494,26 @@ public partial class ImageEditorViewModel : ViewModelBase
                 else if (shape is SerializableCalloutShape callout)
                 {
                     Shapes.Add(callout.ToCalloutShape());
+                }
+                else if (shape is SerializableCalloutNoArrowShape calloutNoArrow)
+                {
+                    Shapes.Add(calloutNoArrow.ToCalloutNoArrowShape());
+                }
+                else if (shape is SerializableBorderedRectangleShape borderedRect)
+                {
+                    Shapes.Add(borderedRect.ToBorderedRectangleShape());
+                }
+                else if (shape is SerializableBlurRectangleShape blurRect)
+                {
+                    var blurShape = blurRect.ToBlurRectangleShape();
+                    Shapes.Add(blurShape);
+
+                    // Set up refresh callback for loaded blur shapes
+                    if (_editorCanvas != null)
+                    {
+                        blurShape.RefreshBlur = rect => _editorCanvas.CreateBlurredImagePublic(rect);
+                        blurShape.BlurredImage = _editorCanvas.CreateBlurredImagePublic(blurShape.Rectangle);
+                    }
                 }
             }
         }

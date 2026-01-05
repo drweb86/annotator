@@ -153,6 +153,61 @@
           </StackPanel>
         </ToggleButton>
 
+        <!-- Callout No Arrow Tool Button -->
+        <ToggleButton IsChecked="{Binding IsCalloutNoArrowToolSelected}"
+                      Command="{Binding SelectCalloutNoArrowToolCommand}"
+                      ToolTip.Tip="Callout without Arrow Tool">
+          <StackPanel HorizontalAlignment="Center">
+            <Path Data="M4,4 L16,4 L16,12 L4,12 Z"
+                  Stroke="#D8DEE3"
+                  StrokeThickness="2"
+                  Fill="Transparent" />
+            <TextBlock Text="Note" />
+          </StackPanel>
+        </ToggleButton>
+
+        <!-- Bordered Rectangle Tool Button -->
+        <ToggleButton IsChecked="{Binding IsBorderedRectangleToolSelected}"
+                      Command="{Binding SelectBorderedRectangleToolCommand}"
+                      ToolTip.Tip="Bordered Rectangle Tool">
+          <StackPanel HorizontalAlignment="Center">
+            <Path Data="M2,2 L18,2 L18,18 L2,18 Z"
+                  Stroke="#D8DEE3"
+                  StrokeThickness="2"
+                  Fill="Transparent" />
+            <TextBlock Text="Border" />
+          </StackPanel>
+        </ToggleButton>
+
+        <!-- Blur Rectangle Tool Button -->
+        <ToggleButton IsChecked="{Binding IsBlurRectangleToolSelected}"
+                      Command="{Binding SelectBlurRectangleToolCommand}"
+                      ToolTip.Tip="Blur Rectangle Tool">
+          <StackPanel HorizontalAlignment="Center">
+            <Path Data="M2,2 L18,2 L18,18 L2,18 Z M5,5 L15,5 L15,15 L5,15 Z"
+                  Stroke="#D8DEE3"
+                  StrokeThickness="2"
+                  Fill="#80808080" />
+            <TextBlock Text="Blur" />
+          </StackPanel>
+        </ToggleButton>
+
+        <!-- Separator -->
+        <Border Width="1" Background="#CCCCCC" Margin="4,0"/>
+
+        <!-- Selector Tool Button -->
+        <ToggleButton IsChecked="{Binding IsSelectorToolSelected}"
+                      Command="{Binding SelectSelectorToolCommand}"
+                      ToolTip.Tip="Selector Tool (Ctrl+C to copy, Delete to remove)">
+          <StackPanel HorizontalAlignment="Center">
+            <Path Data="M2,2 L2,18 M2,2 L18,2 M18,2 L18,18 M2,18 L18,18"
+                  Stroke="#D8DEE3"
+                  StrokeThickness="2"
+                  StrokeDashArray="2,2" />
+            <TextBlock Text="Select" />
+          </StackPanel>
+        </ToggleButton>
+
         <!-- Trim/Crop Tool Button -->
         <ToggleButton IsChecked="{Binding IsTrimToolSelected}"
                       Command="{Binding SelectTrimToolCommand}"
