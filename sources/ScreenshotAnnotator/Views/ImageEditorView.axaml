@@ -13,13 +13,21 @@
   </Design.DataContext>
 
   <DockPanel>
-	  <StackPanel Orientation="Horizontal" DockPanel.Dock="Top">
+	  <DockPanel DockPanel.Dock="Top">
 		  <!-- Menu Bar -->
-		  <Menu>
+		  <Menu DockPanel.Dock="Left">
 			  <MenuItem x:Name="AboutMenuItem"
 	              Header="{Binding HeaderInformation}">
+				  <MenuItem.Icon>
+					  <Image Source="../Assets/App.png" />
+				  </MenuItem.Icon>
 				  <MenuItem.Items>
-					  <MenuItem Header="Web-Site" Command="{Binding OpenWebsiteCommand}" />
+					  <MenuItem Header="Web-Site"
+								Command="{Binding OpenWebsiteCommand}">
+						  <MenuItem.Icon>
+							  <Image Source="../Assets/App.png" />
+						  </MenuItem.Icon>
+					  </MenuItem>
 					  <MenuItem Header="License" Command="{Binding OpenLicenseCommand}" />
 				  </MenuItem.Items>
 			  </MenuItem>
@@ -35,7 +43,25 @@
 				  <MenuItem Header="Toggle File _Browser" Command="{Binding ToggleFileBrowserCommand}" InputGesture="F9"/>
 			  </MenuItem>
 		  </Menu>
-	  </StackPanel>
+
+		  <!-- Current File Name Display -->
+		  <Border DockPanel.Dock="Left"
+		          Background="#2C2C2C"
+		          CornerRadius="4"
+		          Padding="12,4"
+		          Margin="8,4,8,4"
+		          VerticalAlignment="Center"
+		          ToolTip.Tip="{Binding CurrentFilePathTooltip}"
+				  IsVisible="{Binding !!CurrentFileName}">
+			  <TextBlock Text="{Binding CurrentFileName}"
+			             Foreground="#FFA500"
+			             FontWeight="SemiBold"
+			             FontSize="13"/>
+		  </Border>
+		  <Border DockPanel.Dock="Right">
+			  <!-- Draggable area -->
+		  </Border>
+	  </DockPanel>
     
 
     <!-- Toolbar -->
@@ -318,20 +344,37 @@
 			  </ListBox.ItemsPanel>
             <ListBox.ItemTemplate>
               <DataTemplate>
-					<Image Source="{Binding Thumbnail}"
-						   MaxWidth="100"
-						   MaxHeight="100"
-						   ToolTip.Tip="{Binding ModifiedDate, StringFormat='{}{0:yyyy-MM-dd HH:mm}'}"
-						   Margin="8"
-						   HorizontalAlignment="Center"
-						   Stretch="Uniform">
-						<Image.ContextMenu>
-							<ContextMenu>
-								<MenuItem Header="Open" Command="{Binding $parent[ListBox].((vm:ImageEditorViewModel)DataContext).OpenProjectFileCommand}" CommandParameter="{Binding}"/>
-								<MenuItem Header="Delete" Command="{Binding $parent[ListBox].((vm:ImageEditorViewModel)DataContext).DeleteProjectFileCommand}" CommandParameter="{Binding}"/>
-							</ContextMenu>
-						</Image.ContextMenu>
-				</Image>
+					<Border BorderThickness="3"
+					        CornerRadius="4"
+					        Padding="4"
+					        Margin="4">
+						<Border.Styles>
+							<Style Selector="Border">
+								<Setter Property="BorderBrush" Value="Transparent"/>
+								<Setter Property="Background" Value="Transparent"/>
+							</Style>
+							<Style Selector="Border[Tag=True]">
+								<Setter Property="BorderBrush" Value="#FFA500"/>
+								<Setter Property="Background" Value="#40FFA500"/>
+							</Style>
+						</Border.Styles>
+						<Border.Tag>
+							<Binding Path="IsCurrentFile"/>
+						</Border.Tag>
+						<Image Source="{Binding Thumbnail}"
+							   MaxWidth="100"
+							   MaxHeight="100"
+							   ToolTip.Tip="{Binding ModifiedDate, StringFormat='{}{0:yyyy-MM-dd HH:mm}'}"
+							   HorizontalAlignment="Center"
+							   Stretch="Uniform">
+							<Image.ContextMenu>
+								<ContextMenu>
+									<MenuItem Header="Open" Command="{Binding $parent[ListBox].((vm:ImageEditorViewModel)DataContext).OpenProjectFileCommand}" CommandParameter="{Binding}"/>
+									<MenuItem Header="Delete" Command="{Binding $parent[ListBox].((vm:ImageEditorViewModel)DataContext).DeleteProjectFileCommand}" CommandParameter="{Binding}"/>
+								</ContextMenu>
+							</Image.ContextMenu>
+						</Image>
+					</Border>
               </DataTemplate>
             </ListBox.ItemTemplate>
             <ListBox.Styles>

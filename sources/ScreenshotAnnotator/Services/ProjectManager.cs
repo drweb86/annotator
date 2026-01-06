@@ -1,10 +1,11 @@
+using Avalonia.Media.Imaging;
+using Avalonia.Platform.Storage;
+using ScreenshotAnnotator.Models;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text.Json;
-using Avalonia.Media.Imaging;
-using ScreenshotAnnotator.Models;
 
 namespace ScreenshotAnnotator.Services;
 
@@ -13,14 +14,15 @@ public class ProjectFileInfo
     public string FilePath { get; set; } = "";
     public string FileName { get; set; } = "";
     public DateTime ModifiedDate { get; set; }
-    public bool IsProject { get; set; }
-    public string Extension { get; set; } = "";
     public Bitmap? Thumbnail { get; set; }
+    public bool IsCurrentFile { get; set; }
 }
 
 public static class ProjectManager
 {
     private static string? _projectsFolder;
+    public const string Extension = ".anp";
+    public static FilePickerFileType PickerFilter => new FilePickerFileType("Annotator Project") { Patterns = ["*" + Extension ] };
 
     public static string GetProjectsFolder()
     {
@@ -45,38 +47,21 @@ public static class ProjectManager
 
         try
         {
-            var allFiles = Directory.GetFiles(folder);
+            var allFiles = Directory.GetFiles(folder, "*" + Extension);
 
             foreach (var file in allFiles)
             {
-                var ext = Path.GetExtension(file).ToLowerInvariant();
-
                 // Only include supported file types
-                if (ext == ".anp" || ext == ".png" || ext == ".jpg" ||
-                    ext == ".jpeg" || ext == ".webp" || ext == ".bmp")
+                var fileInfo = new FileInfo(file);
+                var projectFileInfo = new ProjectFileInfo
                 {
-                    var fileInfo = new FileInfo(file);
-                    var projectFileInfo = new ProjectFileInfo
-                    {
-                        FilePath = file,
-                        FileName = Path.GetFileName(file),
-                        ModifiedDate = fileInfo.LastWriteTime,
-                        IsProject = ext == ".anp",
-                        Extension = ext
-                    };
+                    FilePath = file,
+                    FileName = Path.GetFileName(file),
+                    ModifiedDate = fileInfo.LastWriteTime,
+                    Thumbnail = LoadProjectThumbnail(file)
+                };
 
-                    // Load thumbnail for all files (images and projects)
-                    if (ext == ".anp")
-                    {
-                        projectFileInfo.Thumbnail = LoadProjectThumbnail(file);
-                    }
-                    else
-                    {
-                        projectFileInfo.Thumbnail = LoadThumbnail(file);
-                    }
-
-                    files.Add(projectFileInfo);
-                }
+                files.Add(projectFileInfo);
             }
 
             // Sort by modified date descending (newest first)
@@ -88,32 +73,6 @@ public static class ProjectManager
         }
 
         return files;
-    }
-
-    private static Bitmap? LoadThumbnail(string filePath)
-    {
-        try
-        {
-            using var stream = File.OpenRead(filePath);
-            var bitmap = new Bitmap(stream);
-
-            // Create a thumbnail (max 100x100)
-            var maxSize = 100.0;
-            var scale = Math.Min(maxSize / bitmap.PixelSize.Width, maxSize / bitmap.PixelSize.Height);
-
-            if (scale < 1)
-            {
-                var newWidth = (int)(bitmap.PixelSize.Width * scale);
-                var newHeight = (int)(bitmap.PixelSize.Height * scale);
-                return bitmap.CreateScaledBitmap(new Avalonia.PixelSize(newWidth, newHeight));
-            }
-
-            return bitmap;
-        }
-        catch
-        {
-            return null;
-        }
     }
 
     private static Bitmap? LoadProjectThumbnail(string filePath)
@@ -152,16 +111,16 @@ public static class ProjectManager
         }
     }
 
-    public static string GenerateTimestampedFileName(string extension)
+    public static string GenerateTimestampedFileName()
     {
         var timestamp = DateTime.Now.ToString("yyyy-MM-dd_HH-mm-ss");
-        return $"{timestamp}{extension}";
+        return $"{timestamp}{Extension}";
     }
 
-    public static string GetTimestampedFilePath(string extension)
+    public static string GetTimestampedFilePath()
     {
         var folder = GetProjectsFolder();
-        var fileName = GenerateTimestampedFileName(extension);
+        var fileName = GenerateTimestampedFileName();
         return Path.Combine(folder, fileName);
     }
 }

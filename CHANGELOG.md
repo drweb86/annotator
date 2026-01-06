@@ -6,11 +6,13 @@
 - Note, border, selection, blur tools.
 - Selection tool allows to delete portion of background image (Del button) or copy to clipboard (Ctrl+C) portion or result image.
 - Export project/image, Import project/image.
+- Active project name is shown.
 
 ## Bug Fixes
 
 - Import images did not save project
 - New did not save project.
+- Icon.
 
 # 2025.12.29
 
