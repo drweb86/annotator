@@ -222,10 +222,11 @@ public partial class ImageEditorViewModel : ViewModelBase
     }
 
     [RelayCommand]
-    private async Task SaveAsImage()
+    private async Task Export()
     {
-        if (_editorCanvas == null || Image == null || _topLevel == null) return;
-
+        if (_editorCanvas == null || Image == null || _topLevel == null ||
+            _currentFilePath is null) return;
+        await SaveProject();
         try
         {
             var storageProvider = _topLevel.StorageProvider;
@@ -233,9 +234,10 @@ public partial class ImageEditorViewModel : ViewModelBase
 
             var file = await storageProvider.SaveFilePickerAsync(new FilePickerSaveOptions
             {
-                Title = "Save Image",
+                Title = "Export",
                 FileTypeChoices = new[]
                 {
+                    new FilePickerFileType("Annotator Project") { Patterns = new[] { "*.anp" } },
                     new FilePickerFileType("PNG Image") { Patterns = new[] { "*.png" } },
                     new FilePickerFileType("JPEG Image") { Patterns = new[] { "*.jpg", "*.jpeg" } },
                     new FilePickerFileType("WebP Image") { Patterns = new[] { "*.webp" } },
@@ -247,6 +249,16 @@ public partial class ImageEditorViewModel : ViewModelBase
 
             if (file != null)
             {
+                var localFileName = file.TryGetLocalPath();
+                if (localFileName is not null && localFileName.ToLowerInvariant().EndsWith(".anp"))
+                {
+                    await using var stream = await file.OpenWriteAsync();
+                    await FileHelper.CopyFileAsync(_currentFilePath, stream);
+
+                    return;
+                }
+
+
                 var renderedImage = _editorCanvas.RenderToImage();
                 if (renderedImage != null)
                 {
@@ -262,9 +274,12 @@ public partial class ImageEditorViewModel : ViewModelBase
     }
 
     [RelayCommand]
-    private async Task LoadImage()
+    private async Task Import()
     {
         if (_topLevel == null) return;
+
+        if (_currentFilePath is not null)
+            await SaveProject();
 
         try
         {
@@ -273,11 +288,13 @@ public partial class ImageEditorViewModel : ViewModelBase
 
             var files = await storageProvider.OpenFilePickerAsync(new FilePickerOpenOptions
             {
-                Title = "Open Image",
+                Title = "Import Project or Image",
                 FileTypeFilter = new[]
                 {
+                    new FilePickerFileType("Annotator Project") { Patterns = new[] { "*.anp" } },
                     new FilePickerFileType("Image Files")
                     {
+
                         Patterns = new[] { "*.png", "*.jpg", "*.jpeg", "*.webp", "*.bmp" }
                     },
                     new FilePickerFileType("All Files") { Patterns = new[] { "*.*" } }
@@ -287,10 +304,26 @@ public partial class ImageEditorViewModel : ViewModelBase
 
             if (files.Count > 0)
             {
+                _currentFilePath = null;
                 var file = files[0];
-                await using var stream = await file.OpenReadAsync();
-                Image = new Bitmap(stream);
+                var localFileName = file.TryGetLocalPath();
                 Shapes.Clear();
+
+                var filePath = ProjectManager.GetTimestampedFilePath(".anp");
+                _currentFilePath = filePath;
+                if (localFileName is not null && localFileName.ToLowerInvariant().EndsWith(".anp"))
+                {
+                    await FileHelper.CopyFileAsync(file.Path.LocalPath, filePath);
+                    await LoadProjectFromFile(_currentFilePath);
+                }
+                else
+                {
+                    await using var stream = await file.OpenReadAsync();
+                    Image = new Bitmap(stream);
+                    await SaveProject();
+                }
+                await SaveProject();
+                RefreshProjectFiles();
             }
         }
         catch
@@ -408,43 +441,6 @@ public partial class ImageEditorViewModel : ViewModelBase
         catch
         {
             // Handle save errors
-        }
-    }
-
-    [RelayCommand]
-    private async Task OpenProject()
-    {
-        if (_topLevel == null) return;
-
-        try
-        {
-            // Autosave current project before opening a new one
-            await AutoSaveCurrentProject();
-
-            var storageProvider = _topLevel.StorageProvider;
-            if (storageProvider == null) return;
-
-            var files = await storageProvider.OpenFilePickerAsync(new FilePickerOpenOptions
-            {
-                Title = "Open Project",
-                FileTypeFilter = new[]
-                {
-                    new FilePickerFileType("Annotator Project") { Patterns = new[] { "*.anp" } },
-                    new FilePickerFileType("All Files") { Patterns = new[] { "*.*" } }
-                },
-                AllowMultiple = false
-            });
-
-            if (files.Count > 0)
-            {
-                var file = files[0];
-                _currentFilePath = file.Path.LocalPath;
-                await LoadProjectFromFile(_currentFilePath);
-            }
-        }
-        catch
-        {
-            // Handle load errors
         }
     }
 

@@ -81,31 +81,13 @@ public partial class ImageEditorView : UserControl
         // Ctrl+O - Open image
         else if (isCtrl && !isShift && e.Key == Key.O)
         {
-            await viewModel.LoadImageCommand.ExecuteAsync(null);
-            e.Handled = true;
-        }
-        // Ctrl+Shift+O - Open project
-        else if (isCtrl && isShift && e.Key == Key.O)
-        {
-            await viewModel.OpenProjectCommand.ExecuteAsync(null);
+            await viewModel.ImportCommand.ExecuteAsync(null);
             e.Handled = true;
         }
         // Ctrl+S - Save project
         else if (isCtrl && !isShift && e.Key == Key.S)
         {
-            await viewModel.SaveProjectCommand.ExecuteAsync(null);
-            e.Handled = true;
-        }
-        // Ctrl+Shift+S - Save project as
-        else if (isCtrl && isShift && e.Key == Key.S)
-        {
-            await viewModel.SaveProjectAsCommand.ExecuteAsync(null);
-            e.Handled = true;
-        }
-        // Ctrl+E - Export/Save as image
-        else if (isCtrl && !isShift && e.Key == Key.E)
-        {
-            await viewModel.SaveAsImageCommand.ExecuteAsync(null);
+            await viewModel.ExportCommand.ExecuteAsync(null);
             e.Handled = true;
         }
         // F9 - Toggle file browser

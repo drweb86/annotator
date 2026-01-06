@@ -26,13 +26,8 @@
 
 			  <MenuItem Header="_File">
 				  <MenuItem Header="_New Project" Command="{Binding NewProjectCommand}" InputGesture="Ctrl+N"/>
-				  <MenuItem Header="_Open Image..." Command="{Binding LoadImageCommand}" InputGesture="Ctrl+O"/>
-				  <MenuItem Header="Open _Project..." Command="{Binding OpenProjectCommand}" InputGesture="Ctrl+Shift+O"/>
-				  <Separator/>
-				  <MenuItem Header="_Save Project" Command="{Binding SaveProjectCommand}" InputGesture="Ctrl+S"/>
-				  <MenuItem Header="Save Project _As..." Command="{Binding SaveProjectAsCommand}" InputGesture="Ctrl+Shift+S"/>
-				  <Separator/>
-				  <MenuItem Header="Save As _Image..." Command="{Binding SaveAsImageCommand}" InputGesture="Ctrl+E"/>
+				  <MenuItem Header="Import..." Command="{Binding ImportCommand}" InputGesture="Ctrl+O"/>
+				  <MenuItem Header="Export..." Command="{Binding ExportCommand}" InputGesture="Ctrl+S" />
 				  <Separator/>
 				  <MenuItem Header="Open Projects _Folder" Command="{Binding OpenProjectsFolderCommand}"/>
 			  </MenuItem>

@@ -155,7 +155,7 @@ public static class ProjectManager
     public static string GenerateTimestampedFileName(string extension)
     {
         var timestamp = DateTime.Now.ToString("yyyy-MM-dd_HH-mm-ss");
-        return $"screenshot_{timestamp}{extension}";
+        return $"{timestamp}{extension}";
     }
 
     public static string GetTimestampedFilePath(string extension)

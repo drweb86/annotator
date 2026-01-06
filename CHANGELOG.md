@@ -1,11 +1,11 @@
-# 2025.01.05
+# 2025.01.06
 (unpublished)
 
 ## New Features
 
 - Note, border, selection, blur tools.
 - Selection tool allows to delete portion of background image (Del button) or copy to clipboard (Ctrl+C) portion or result image.
-
+- Export project/image, Import project/image.
 
 # 2025.12.29
 

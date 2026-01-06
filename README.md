@@ -4,7 +4,7 @@ Screenshot annotator software for Windows and Ubuntu.
 
 Features:
 
-- **Arrows**,
+- **Arrows**
 - **Callouts**
 - **Notes**
 - **Border Selection**
