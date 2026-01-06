@@ -347,7 +347,7 @@
 					<Border BorderThickness="3"
 					        CornerRadius="4"
 					        Padding="4"
-					        Margin="4">
+					        Margin="4 4 4 12">
 						<Border.Styles>
 							<Style Selector="Border">
 								<Setter Property="BorderBrush" Value="Transparent"/>

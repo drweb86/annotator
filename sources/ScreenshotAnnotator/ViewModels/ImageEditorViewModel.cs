@@ -249,14 +249,14 @@ public partial class ImageEditorViewModel : ViewModelBase
                 Title = "Export",
                 FileTypeChoices = new[]
                 {
-                    ProjectManager.PickerFilter,
                     new FilePickerFileType("PNG Image") { Patterns = new[] { "*.png" } },
                     new FilePickerFileType("JPEG Image") { Patterns = new[] { "*.jpg", "*.jpeg" } },
                     new FilePickerFileType("WebP Image") { Patterns = new[] { "*.webp" } },
-                    new FilePickerFileType("BMP Image") { Patterns = new[] { "*.bmp" } }
+                    new FilePickerFileType("BMP Image") { Patterns = new[] { "*.bmp" } },
+
+                    ProjectManager.PickerFilter,
                 },
                 SuggestedFileName = "annotated_image",
-                DefaultExtension = "png"
             });
 
             if (file != null)
@@ -302,6 +302,11 @@ public partial class ImageEditorViewModel : ViewModelBase
                 Title = "Import Project or Image",
                 FileTypeFilter = new[]
                 {
+                    new FilePickerFileType("All supported files")
+                    {
+
+                        Patterns = new[] { "*.png", "*.jpg", "*.jpeg", "*.webp", "*.bmp", "*" + ProjectManager.Extension }
+                    },
                     ProjectManager.PickerFilter,
                     new FilePickerFileType("Image Files")
                     {
