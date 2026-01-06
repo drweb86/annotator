@@ -118,13 +118,6 @@ public partial class ImageEditorViewModel : ViewModelBase
         UpdateToolSelection();
     }
 
-    [RelayCommand]
-    private void ApplyTrim()
-    {
-        // This would crop the image to the trim rectangle
-        // Implementation depends on the trim rectangle from the canvas
-    }
-
     private void UpdateToolSelection()
     {
         IsSelectToolSelected = CurrentTool == ToolType.None;
@@ -447,7 +440,7 @@ public partial class ImageEditorViewModel : ViewModelBase
     public async Task AutoSaveCurrentProject()
     {
         // Only autosave if we have a current project file and there are shapes or an image
-        if (_currentFilePath != null && Image != null && (Shapes.Count > 0 || !string.IsNullOrEmpty(_currentFilePath)))
+        if (_currentFilePath != null && Image != null && _currentFilePath is not null)
         {
             try
             {
@@ -520,11 +513,57 @@ public partial class ImageEditorViewModel : ViewModelBase
     }
 
     [RelayCommand]
-    private void NewProject()
+    private async Task NewProject()
     {
-        Image = null;
+        if (_currentFilePath != null)
+        {
+            await SaveProjectToFile(_currentFilePath);
+        }
+
+
+        // Create a default canvas with screen dimensions and a light background color
+        var screenWidth = 1920;
+        var screenHeight = 1080;
+
+        // Try to get actual screen dimensions
+        if (_mainWindow?.Screens?.Primary != null)
+        {
+            var primaryScreen = _mainWindow.Screens.Primary;
+            screenWidth = primaryScreen.Bounds.Width;
+            screenHeight = primaryScreen.Bounds.Height;
+        }
+
+        // Create a bitmap with a light beige/cream background color good for annotations
+        var backgroundColor = new Avalonia.Media.Color(255, 245, 245, 240); // Light beige/cream
+
+        using (var bitmap = new Avalonia.Media.Imaging.RenderTargetBitmap(
+            new Avalonia.PixelSize(screenWidth, screenHeight),
+            new Avalonia.Vector(96, 96)))
+        {
+            using (var context = bitmap.CreateDrawingContext())
+            {
+                context.DrawRectangle(
+                    new Avalonia.Media.SolidColorBrush(backgroundColor),
+                    null,
+                    new Avalonia.Rect(0, 0, screenWidth, screenHeight));
+            }
+
+            // Convert to Bitmap
+            using (var memoryStream = new MemoryStream())
+            {
+                bitmap.Save(memoryStream);
+                memoryStream.Position = 0;
+                Image = new Bitmap(memoryStream);
+            }
+        }
+
         Shapes.Clear();
-        _currentFilePath = null;
+
+        // Auto-save the new project
+        var filePath = ProjectManager.GetTimestampedFilePath(".anp");
+        _currentFilePath = filePath;
+        await SaveProjectToFile(filePath);
+        RefreshProjectFiles();
     }
 
     [RelayCommand]

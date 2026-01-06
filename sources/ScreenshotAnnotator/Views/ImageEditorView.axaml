@@ -25,7 +25,7 @@
 			  </MenuItem>
 
 			  <MenuItem Header="_File">
-				  <MenuItem Header="_New Project" Command="{Binding NewProjectCommand}" InputGesture="Ctrl+N"/>
+				  <MenuItem Header="New..." Command="{Binding NewProjectCommand}" InputGesture="Ctrl+N"/>
 				  <MenuItem Header="Import..." Command="{Binding ImportCommand}" InputGesture="Ctrl+O"/>
 				  <MenuItem Header="Export..." Command="{Binding ExportCommand}" InputGesture="Ctrl+S" />
 				  <Separator/>
@@ -73,6 +73,26 @@
 			</Style>
 		</Border.Styles>
       <StackPanel Orientation="Horizontal">
+
+        <!-- New Project Button -->
+        <Button Command="{Binding NewProjectCommand}"
+                ToolTip.Tip="New Project (Ctrl+N)">
+          <StackPanel HorizontalAlignment="Center">
+            <Path Data="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+                  Fill="#4CAF50" />
+            <TextBlock Text="New" />
+          </StackPanel>
+        </Button>
+
+        <!-- Import Button -->
+        <Button Command="{Binding ImportCommand}"
+                ToolTip.Tip="Import Project or Image (Ctrl+O)">
+          <StackPanel HorizontalAlignment="Center">
+            <Path Data="M5,20H19V18H5M19,9H15V3H9V9H5L12,16L19,9Z"
+                  Fill="#2196F3" />
+            <TextBlock Text="Import" />
+          </StackPanel>
+        </Button>
 
         <!-- Take Screenshot Button -->
         <Button Command="{Binding TakeScreenshotCommand}"
@@ -215,20 +235,6 @@
             <TextBlock Text="Trim" />
           </StackPanel>
         </ToggleButton>
-
-        <!-- Separator -->
-        <Border Width="1" Background="#CCCCCC" Margin="4,0"/>
-
-        <!-- Apply Trim Button -->
-        <Button Command="{Binding ApplyTrimCommand}"
-                ToolTip.Tip="Apply Trim"
-                IsEnabled="{Binding IsTrimToolSelected}">
-          <StackPanel HorizontalAlignment="Center">
-            <Path Data="M9,20.42L2.79,14.21L5.62,11.38L9,14.77L18.88,4.88L21.71,7.71L9,20.42Z"
-                  Fill="#2E7D32" />
-            <TextBlock Text="Apply" />
-          </StackPanel>
-        </Button>
       </StackPanel>
     </Border>
 
@@ -243,7 +249,7 @@
       <ScrollViewer Grid.Row="0"
                     HorizontalScrollBarVisibility="Auto"
                     VerticalScrollBarVisibility="Auto"
-                    Background="White">
+                    Background="Black">
         <Grid>
           <controls:ImageEditorCanvas x:Name="EditorCanvas"
                                       Image="{Binding Image}"

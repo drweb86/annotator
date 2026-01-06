@@ -80,7 +80,7 @@ public static class ProjectManager
             }
 
             // Sort by modified date descending (newest first)
-            files = files.OrderByDescending(f => f.ModifiedDate).ToList();
+            files = files.OrderByDescending(f => f.FileName).ToList();
         }
         catch
         {
