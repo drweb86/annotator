@@ -21,5 +21,9 @@
       <PrivateAssets Condition="'$(Configuration)' != 'Debug'">All</PrivateAssets>
     </PackageReference>
     <PackageReference Include="CommunityToolkit.Mvvm" />
+	<PackageReference Include="SkiaSharp" />
+	<PackageReference Include="SkiaSharp.NativeAssets.Linux" />
+	<PackageReference Include="SkiaSharp.NativeAssets.macOS" />
+    <PackageReference Include="SkiaSharp.NativeAssets.Win32" />
   </ItemGroup>
 </Project>

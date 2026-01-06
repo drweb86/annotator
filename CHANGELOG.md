@@ -12,6 +12,7 @@
 - Import images did not save project
 - New did not save project.
 - Icon.
+- Export to images was not using selected format.
 
 # 2025.12.29
 

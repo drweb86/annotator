@@ -7,6 +7,7 @@ using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using ScreenshotAnnotator.Models;
 using ScreenshotAnnotator.Services;
+using SkiaSharp;
 using System;
 using System.Collections.ObjectModel;
 using System.IO;
@@ -252,7 +253,6 @@ public partial class ImageEditorViewModel : ViewModelBase
                     new FilePickerFileType("PNG Image") { Patterns = new[] { "*.png" } },
                     new FilePickerFileType("JPEG Image") { Patterns = new[] { "*.jpg", "*.jpeg" } },
                     new FilePickerFileType("WebP Image") { Patterns = new[] { "*.webp" } },
-                    new FilePickerFileType("BMP Image") { Patterns = new[] { "*.bmp" } },
 
                     ProjectManager.PickerFilter,
                 },
@@ -272,10 +272,34 @@ public partial class ImageEditorViewModel : ViewModelBase
 
 
                 var renderedImage = _editorCanvas.RenderToImage();
-                if (renderedImage != null)
+                if (renderedImage != null && localFileName != null)
                 {
-                    await using var stream = await file.OpenWriteAsync();
-                    renderedImage.Save(stream);
+                    var extension = Path.GetExtension(localFileName).ToLowerInvariant();
+
+                    // Convert Avalonia bitmap to SkiaSharp bitmap for encoding
+                    using var memStream = new MemoryStream();
+                    renderedImage.Save(memStream); // Save as PNG first
+                    memStream.Position = 0;
+
+                    using var skBitmap = SKBitmap.Decode(memStream);
+                    if (skBitmap != null)
+                    {
+                        await using var outputStream = await file.OpenWriteAsync();
+
+                        SKEncodedImageFormat format = extension switch
+                        {
+                            ".jpg" or ".jpeg" => SKEncodedImageFormat.Jpeg,
+                            ".webp" => SKEncodedImageFormat.Webp,
+                            ".bmp" => SKEncodedImageFormat.Bmp,
+                            _ => SKEncodedImageFormat.Png
+                        };
+
+                        int quality = (format == SKEncodedImageFormat.Jpeg || format == SKEncodedImageFormat.Webp) ? 90 : 100;
+
+                        using var image = SKImage.FromBitmap(skBitmap);
+                        using var data = image.Encode(format, quality);
+                        data.SaveTo(outputStream);
+                    }
                 }
             }
         }

@@ -84,13 +84,37 @@ public class ImageEditorCanvas : Control
     static ImageEditorCanvas()
     {
         AffectsRender<ImageEditorCanvas>(ImageProperty, ShapesProperty);
+        CurrentToolProperty.Changed.AddClassHandler<ImageEditorCanvas>((x, e) => x.OnCurrentToolChanged(e));
     }
 
     public ImageEditorCanvas()
     {
-        Shapes.CollectionChanged += (s, e) => InvalidateVisual();
+        Shapes.CollectionChanged += (s, e) =>
+        {
+            // Clear selector when shapes change (e.g., project loaded)
+            ClearSelector();
+            InvalidateVisual();
+        };
         DoubleTapped += OnDoubleTapped;
         Focusable = true; // Allow the canvas to receive keyboard input
+    }
+
+    private void OnCurrentToolChanged(AvaloniaPropertyChangedEventArgs e)
+    {
+        // Clear selector rectangle when switching away from selector tool
+        if (e.OldValue is ToolType oldTool && oldTool == ToolType.Selector)
+        {
+            ClearSelector();
+        }
+
+        // Also clear selected shape when switching tools
+        _selectedShape = null;
+        InvalidateVisual();
+    }
+
+    private void ClearSelector()
+    {
+        _currentSelectorRect = null;
     }
 
     private void OnDoubleTapped(object? sender, TappedEventArgs e)
@@ -740,6 +764,25 @@ public class ImageEditorCanvas : Control
         // If text editor is already open, let it handle the keys
         if (_textEditor != null)
             return;
+
+        // Select entire canvas on Ctrl+A
+        if (e.Key == Key.A && e.KeyModifiers.HasFlag(KeyModifiers.Control) && Image != null)
+        {
+            // Switch to selector tool if not already selected
+            if (CurrentTool != ToolType.Selector)
+            {
+                CurrentTool = ToolType.Selector;
+            }
+
+            // Create selector rectangle for entire image
+            _currentSelectorRect = new SelectorRectangle
+            {
+                Rectangle = new Rect(0, 0, Image.PixelSize.Width, Image.PixelSize.Height)
+            };
+            InvalidateVisual();
+            e.Handled = true;
+            return;
+        }
 
         // Delete selected shape on Delete key press
         if (e.Key == Key.Delete && _selectedShape != null)
