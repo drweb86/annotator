@@ -16,6 +16,6 @@ You can select certain part of image and either delete portion of background ima
 
 # Screenshots
 
-<img width="1200" height="800" alt="image" src="https://github.com/user-attachments/assets/740a0785-1bde-45a6-9cea-97b8233a2fe9" />
+<img width="1262" height="1069" alt="image" src="https://github.com/user-attachments/assets/5c73a83f-a3ca-4081-8e30-cafee1a4ee42" />
 
 [Installation and uninstallation on Ubuntu](./Ubuntu.md)
