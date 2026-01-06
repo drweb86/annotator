@@ -2,7 +2,6 @@ using Avalonia.Controls;
 using Avalonia.Input;
 using Avalonia.Input.Platform;
 using Avalonia.Media.Imaging;
-using Avalonia.Platform;
 using Avalonia.Platform.Storage;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
@@ -239,7 +238,7 @@ public partial class ImageEditorViewModel : ViewModelBase
     {
         if (_editorCanvas == null || Image == null || _topLevel == null ||
             _currentFilePath is null) return;
-        await SaveProject();
+        await SaveCurrentProject();
         try
         {
             var storageProvider = _topLevel.StorageProvider;
@@ -291,8 +290,7 @@ public partial class ImageEditorViewModel : ViewModelBase
     {
         if (_topLevel == null) return;
 
-        if (_currentFilePath is not null)
-            await SaveProject();
+        await SaveCurrentProject();
 
         try
         {
@@ -328,15 +326,14 @@ public partial class ImageEditorViewModel : ViewModelBase
                 if (localFileName is not null && localFileName.ToLowerInvariant().EndsWith(ProjectManager.Extension))
                 {
                     await FileHelper.CopyFileAsync(file.Path.LocalPath, filePath);
-                    await LoadProjectFromFile();
+                    await LoadCurrentProject();
                 }
                 else
                 {
                     await using var stream = await file.OpenReadAsync();
                     Image = new Bitmap(stream);
-                    await SaveProject();
                 }
-                await SaveProject();
+                await SaveCurrentProject();
                 RefreshProjectFiles();
             }
         }
@@ -346,18 +343,9 @@ public partial class ImageEditorViewModel : ViewModelBase
         }
     }
 
-    [RelayCommand]
-    private async Task SaveProject()
+    private async Task SaveCurrentProject()
     {
-        if (_currentFilePath is not null)
-        {
-            await SaveProjectToFile(_currentFilePath);
-        }
-    }
-
-    private async Task SaveProjectToFile(string filePath)
-    {
-        if (_editorCanvas == null || Image == null) return;
+        if (_editorCanvas == null || Image == null || _currentFilePath is null) return;
 
         try
         {
@@ -413,7 +401,7 @@ public partial class ImageEditorViewModel : ViewModelBase
                 WriteIndented = true
             });
 
-            await File.WriteAllTextAsync(filePath, json);
+            await File.WriteAllTextAsync(_currentFilePath, json);
         }
         catch
         {
@@ -428,7 +416,7 @@ public partial class ImageEditorViewModel : ViewModelBase
         {
             try
             {
-                await SaveProjectToFile(_currentFilePath);
+                await SaveCurrentProject();
 
                 // Refresh project files to show updated thumbnails
                 RefreshProjectFiles();
@@ -440,7 +428,7 @@ public partial class ImageEditorViewModel : ViewModelBase
         }
     }
 
-    private async Task LoadProjectFromFile()
+    private async Task LoadCurrentProject()
     {
         if (_currentFilePath is null)
             return;
@@ -502,10 +490,7 @@ public partial class ImageEditorViewModel : ViewModelBase
     [RelayCommand]
     private async Task NewProject()
     {
-        if (_currentFilePath != null)
-        {
-            await SaveProjectToFile(_currentFilePath);
-        }
+        await SaveCurrentProject();
 
 
         // Create a default canvas with screen dimensions and a light background color
@@ -550,7 +535,7 @@ public partial class ImageEditorViewModel : ViewModelBase
         var filePath = ProjectManager.GetTimestampedFilePath();
         _currentFilePath = filePath;
         UpdateCurrentFileNameDisplay();
-        await SaveProjectToFile(filePath);
+        await SaveCurrentProject();
         RefreshProjectFiles();
     }
 
@@ -595,7 +580,7 @@ public partial class ImageEditorViewModel : ViewModelBase
                 var filePath = ProjectManager.GetTimestampedFilePath();
                 _currentFilePath = filePath;
                 UpdateCurrentFileNameDisplay();
-                await SaveProjectToFile(filePath);
+                await SaveCurrentProject();
 
                 // Refresh file list
                 RefreshProjectFiles();
@@ -638,7 +623,7 @@ public partial class ImageEditorViewModel : ViewModelBase
             // Open as project
             _currentFilePath = fileInfo.FilePath;
             UpdateCurrentFileNameDisplay();
-            await LoadProjectFromFile();
+            await LoadCurrentProject();
             RefreshProjectFiles();
         }
         catch
@@ -657,9 +642,19 @@ public partial class ImageEditorViewModel : ViewModelBase
     private void DeleteProjectFile(ProjectFileInfo? fileInfo)
     {
         if (fileInfo == null) return;
-
+        
         try
         {
+            if (fileInfo.IsCurrentFile)
+            {
+                // close
+                _currentFilePath = null;
+                Image?.Dispose();
+                Image = null;
+                Shapes.Clear();
+                UpdateCurrentFileNameDisplay();
+            }
+
             if (File.Exists(fileInfo.FilePath))
             {
                 File.Delete(fileInfo.FilePath);
