@@ -47,6 +47,9 @@ public partial class ScreenshotPreviewWindow : Window
 
         var position = e.GetPosition(MainCanvas);
 
+        // Hide floating buttons while dragging
+        ViewModel.HideFloatingButtons();
+
         // Start drag selection
         _isDraggingSelection = true;
         _dragStartPoint = position;
@@ -63,6 +66,9 @@ public partial class ScreenshotPreviewWindow : Window
         {
             _isDraggingSelection = false;
             e.Pointer.Capture(null);
+
+            // Show floating buttons after selection
+            ViewModel.ShowFloatingButtonsIfValid();
         }
 
         // Hide magnifier when not dragging
@@ -76,9 +82,13 @@ public partial class ScreenshotPreviewWindow : Window
     {
         if (sender is not Ellipse ellipse) return;
         if (ellipse.Tag is not string anchorName) return;
+        if (ViewModel == null) return;
 
         // Prevent canvas drag selection when dragging anchor
         _isDraggingSelection = false;
+
+        // Hide floating buttons while dragging anchor
+        ViewModel.HideFloatingButtons();
 
         _draggingAnchor = anchorName;
         _isDragging = true;
@@ -112,6 +122,9 @@ public partial class ScreenshotPreviewWindow : Window
         if (ViewModel != null)
         {
             ViewModel.UpdateMagnifier(default, false);
+
+            // Show floating buttons after anchor adjustment
+            ViewModel.ShowFloatingButtonsIfValid();
         }
     }
 

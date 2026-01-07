@@ -295,6 +295,9 @@ public class CalloutShape : AnnotationShape
         // Draw text if any - centered horizontally and vertically, white color, size 24
         if (!string.IsNullOrWhiteSpace(Text))
         {
+            var padding = 20.0; // Padding inside the rectangle
+            var maxWidth = Math.Max(50, Rectangle.Width - padding * 2); // Max width for text wrapping
+
             var formattedText = new FormattedText(
                 Text,
                 System.Globalization.CultureInfo.CurrentCulture,
@@ -304,12 +307,14 @@ public class CalloutShape : AnnotationShape
                 Brushes.White
             )
             {
-                TextAlignment = TextAlignment.Center
+                TextAlignment = TextAlignment.Center,
+                MaxTextWidth = maxWidth,
+                MaxTextHeight = Math.Max(30, Rectangle.Height - padding * 2)
             };
 
-            // Center text in rectangle
+            // Center text in rectangle using actual bounds
             var textPoint = new Point(
-                Rectangle.Left + (Rectangle.Width - formattedText.Width) / 2,
+                Rectangle.Left + padding,
                 Rectangle.Top + (Rectangle.Height - formattedText.Height) / 2
             );
 
@@ -541,6 +546,9 @@ public class CalloutNoArrowShape : AnnotationShape
         // Draw text if any - centered horizontally and vertically, white color, size 24
         if (!string.IsNullOrWhiteSpace(Text))
         {
+            var padding = 20.0; // Padding inside the rectangle
+            var maxWidth = Math.Max(50, Rectangle.Width - padding * 2); // Max width for text wrapping
+
             var formattedText = new FormattedText(
                 Text,
                 System.Globalization.CultureInfo.CurrentCulture,
@@ -550,12 +558,14 @@ public class CalloutNoArrowShape : AnnotationShape
                 Brushes.White
             )
             {
-                TextAlignment = TextAlignment.Center
+                TextAlignment = TextAlignment.Center,
+                MaxTextWidth = maxWidth,
+                MaxTextHeight = Math.Max(30, Rectangle.Height - padding * 2)
             };
 
-            // Center text in rectangle
+            // Center text in rectangle using actual bounds
             var textPoint = new Point(
-                Rectangle.Left + (Rectangle.Width - formattedText.Width) / 2,
+                Rectangle.Left + padding,
                 Rectangle.Top + (Rectangle.Height - formattedText.Height) / 2
             );
 

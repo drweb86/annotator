@@ -11,5 +11,15 @@
 
     <Application.Styles>
         <FluentTheme />
+
+        <!-- Custom tooltip styling for better visibility -->
+        <Style Selector="ToolTip">
+            <Setter Property="Background" Value="#2C2C2C"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="BorderBrush" Value="#FFA500"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Padding" Value="8,4"/>
+            <Setter Property="FontSize" Value="13"/>
+        </Style>
     </Application.Styles>
 </Application>

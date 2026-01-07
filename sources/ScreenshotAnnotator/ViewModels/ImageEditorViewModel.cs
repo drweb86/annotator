@@ -560,6 +560,10 @@ public partial class ImageEditorViewModel : ViewModelBase
 
         Shapes.Clear();
 
+        // Reset tool to selector (None) to clear any active tool
+        CurrentTool = ToolType.None;
+        UpdateToolSelection();
+
         // Auto-save the new project
         var filePath = ProjectManager.GetTimestampedFilePath();
         _currentFilePath = filePath;

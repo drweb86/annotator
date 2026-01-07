@@ -90,17 +90,19 @@ public static class ScreenshotService
 
     private static async Task<Bitmap?> CaptureScreenshotLinuxAsync()
     {
-        // Use imagemagick import or gnome-screenshot
+        // Try multiple screenshot methods for better compatibility
         try
         {
             var tempFile = System.IO.Path.GetTempFileName() + ".png";
 
+            // Try gnome-screenshot first
             var processInfo = new System.Diagnostics.ProcessStartInfo
             {
                 FileName = "gnome-screenshot",
-                Arguments = $"-f {tempFile}",
+                Arguments = $"-f \"{tempFile}\"",
                 UseShellExecute = false,
-                CreateNoWindow = true
+                CreateNoWindow = true,
+                RedirectStandardError = true
             };
 
             using (var process = System.Diagnostics.Process.Start(processInfo))
@@ -116,6 +118,62 @@ public static class ScreenshotService
                         return bitmap;
                     }
                 }
+            }
+
+            // Try scrot as fallback
+            processInfo = new System.Diagnostics.ProcessStartInfo
+            {
+                FileName = "scrot",
+                Arguments = $"\"{tempFile}\"",
+                UseShellExecute = false,
+                CreateNoWindow = true,
+                RedirectStandardError = true
+            };
+
+            using (var process = System.Diagnostics.Process.Start(processInfo))
+            {
+                if (process != null)
+                {
+                    await process.WaitForExitAsync();
+
+                    if (System.IO.File.Exists(tempFile))
+                    {
+                        var bitmap = new Bitmap(tempFile);
+                        System.IO.File.Delete(tempFile);
+                        return bitmap;
+                    }
+                }
+            }
+
+            // Try import (ImageMagick) as second fallback
+            processInfo = new System.Diagnostics.ProcessStartInfo
+            {
+                FileName = "import",
+                Arguments = $"-window root \"{tempFile}\"",
+                UseShellExecute = false,
+                CreateNoWindow = true,
+                RedirectStandardError = true
+            };
+
+            using (var process = System.Diagnostics.Process.Start(processInfo))
+            {
+                if (process != null)
+                {
+                    await process.WaitForExitAsync();
+
+                    if (System.IO.File.Exists(tempFile))
+                    {
+                        var bitmap = new Bitmap(tempFile);
+                        System.IO.File.Delete(tempFile);
+                        return bitmap;
+                    }
+                }
+            }
+
+            // Clean up temp file if nothing worked
+            if (System.IO.File.Exists(tempFile))
+            {
+                System.IO.File.Delete(tempFile);
             }
         }
         catch

@@ -198,6 +198,41 @@
             </Ellipse.Effect>
           </Ellipse>
 
+          <!-- Floating Action Buttons -->
+          <StackPanel Orientation="Horizontal"
+                      Spacing="10"
+                      IsVisible="{Binding ShowFloatingButtons}"
+                      Canvas.Left="{Binding FloatingButtonsPosition.X}"
+                      Canvas.Top="{Binding FloatingButtonsPosition.Y}">
+            <Button Command="{Binding ConfirmCommand}"
+                    Content="✓ Accept"
+                    Padding="16,10"
+                    Background="#4CAF50"
+                    Foreground="White"
+                    FontSize="16"
+                    FontWeight="Bold"
+                    CornerRadius="6"
+                    BorderThickness="0">
+              <Button.Effect>
+                <DropShadowEffect Color="Black" BlurRadius="12" Opacity="0.7" OffsetX="0" OffsetY="2"/>
+              </Button.Effect>
+            </Button>
+
+            <Button Command="{Binding CancelCommand}"
+                    Content="✕ Cancel"
+                    Padding="16,10"
+                    Background="#F44336"
+                    Foreground="White"
+                    FontSize="16"
+                    FontWeight="Bold"
+                    CornerRadius="6"
+                    BorderThickness="0">
+              <Button.Effect>
+                <DropShadowEffect Color="Black" BlurRadius="12" Opacity="0.7" OffsetX="0" OffsetY="2"/>
+              </Button.Effect>
+            </Button>
+          </StackPanel>
+
           <!-- Magnifier -->
           <Border x:Name="Magnifier"
                   IsVisible="{Binding ShowMagnifier}"

@@ -153,9 +153,9 @@ public class ImageEditorCanvas : Control
             Height = Math.Max(callout.Rectangle.Height, 50),
             TextWrapping = Avalonia.Media.TextWrapping.Wrap,
             AcceptsReturn = true,
-            BorderThickness = new Thickness(0),
-            BorderBrush = Brushes.Transparent,
-            Background = Brushes.Transparent,
+            BorderThickness = new Thickness(2),
+            BorderBrush = new SolidColorBrush(Color.FromRgb(255, 165, 0)), // Orange border
+            Background = new SolidColorBrush(Color.FromRgb(40, 40, 40)), // Dark gray background
             Foreground = Brushes.White,
             Padding = new Thickness(10),
             FontSize = 24,
@@ -201,9 +201,9 @@ public class ImageEditorCanvas : Control
             Height = Math.Max(calloutNoArrow.Rectangle.Height, 50),
             TextWrapping = Avalonia.Media.TextWrapping.Wrap,
             AcceptsReturn = true,
-            BorderThickness = new Thickness(0),
-            BorderBrush = Brushes.Transparent,
-            Background = Brushes.Transparent,
+            BorderThickness = new Thickness(2),
+            BorderBrush = new SolidColorBrush(Color.FromRgb(255, 165, 0)), // Orange border
+            Background = new SolidColorBrush(Color.FromRgb(40, 40, 40)), // Dark gray background
             Foreground = Brushes.White,
             Padding = new Thickness(10),
             FontSize = 24,

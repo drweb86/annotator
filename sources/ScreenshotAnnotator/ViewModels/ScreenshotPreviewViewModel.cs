@@ -40,6 +40,12 @@ public partial class ScreenshotPreviewViewModel : ViewModelBase
     [ObservableProperty]
     private bool _isConfirmed;
 
+    [ObservableProperty]
+    private bool _showFloatingButtons;
+
+    [ObservableProperty]
+    private Point _floatingButtonsPosition;
+
     public Bitmap? CroppedImage { get; private set; }
 
     public ScreenshotPreviewViewModel()
@@ -90,6 +96,7 @@ public partial class ScreenshotPreviewViewModel : ViewModelBase
 
         SelectionRect = new Rect(x, y, width, height);
         UpdateAnchorPoints();
+        UpdateFloatingButtons();
     }
 
     private void UpdateAnchorPoints()
@@ -98,6 +105,42 @@ public partial class ScreenshotPreviewViewModel : ViewModelBase
         TopRight = SelectionRect.TopRight;
         BottomLeft = SelectionRect.BottomLeft;
         BottomRight = SelectionRect.BottomRight;
+    }
+
+    private void UpdateFloatingButtons()
+    {
+        if (Screenshot == null) return;
+
+        // Show buttons if selection has a reasonable size
+        ShowFloatingButtons = SelectionRect.Width > 50 && SelectionRect.Height > 50;
+
+        if (ShowFloatingButtons)
+        {
+            // Position buttons below the selection rectangle, centered
+            const double buttonWidth = 200; // Approximate width of both buttons together
+            var buttonX = SelectionRect.Center.X - buttonWidth / 2;
+            var buttonY = SelectionRect.Bottom + 15;
+
+            // If buttons would go off the bottom, put them above
+            if (buttonY + 60 > Screenshot.PixelSize.Height)
+            {
+                buttonY = SelectionRect.Top - 60;
+            }
+
+            // If buttons would go off the right edge, adjust left
+            if (buttonX + buttonWidth > Screenshot.PixelSize.Width)
+            {
+                buttonX = Screenshot.PixelSize.Width - buttonWidth - 10;
+            }
+
+            // If buttons would go off the left edge, adjust right
+            if (buttonX < 10)
+            {
+                buttonX = 10;
+            }
+
+            FloatingButtonsPosition = new Point(buttonX, buttonY);
+        }
     }
 
     public void UpdateAnchorPoint(string anchor, Point newPosition)
@@ -136,6 +179,16 @@ public partial class ScreenshotPreviewViewModel : ViewModelBase
         );
 
         UpdateSelectionRect(normalizedRect);
+    }
+
+    public void HideFloatingButtons()
+    {
+        ShowFloatingButtons = false;
+    }
+
+    public void ShowFloatingButtonsIfValid()
+    {
+        UpdateFloatingButtons();
     }
 
     public void UpdateMagnifier(Point position, bool show)

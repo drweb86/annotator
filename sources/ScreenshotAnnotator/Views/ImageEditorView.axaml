@@ -15,7 +15,21 @@
   <DockPanel>
 	  <DockPanel DockPanel.Dock="Top">
 		  <!-- Menu Bar -->
-		  <Menu DockPanel.Dock="Left">
+		  <Menu DockPanel.Dock="Left" Background="#1C1C1C">
+			  <Menu.Styles>
+				  <Style Selector="MenuItem">
+					  <Setter Property="Foreground" Value="White"/>
+				  </Style>
+				  <Style Selector="MenuItem:selected /template/ ContentPresenter">
+					  <Setter Property="Background" Value="#404040"/>
+				  </Style>
+				  <Style Selector="MenuItem:pointerover /template/ ContentPresenter">
+					  <Setter Property="Background" Value="#404040"/>
+				  </Style>
+				  <Style Selector="Border#PART_SelectedIndicator">
+					  <Setter Property="Background" Value="#404040"/>
+				  </Style>
+			  </Menu.Styles>
 			  <MenuItem x:Name="AboutMenuItem"
 	              Header="{Binding HeaderInformation}">
 				  <MenuItem.Icon>
@@ -308,6 +322,7 @@
               <TextBlock Grid.Column="0"
                          Text="Projects"
                          FontWeight="Bold"
+                         Foreground="White"
                          VerticalAlignment="Center"/>
 
               <Button Grid.Column="1"
