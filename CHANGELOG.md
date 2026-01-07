@@ -2,6 +2,7 @@
 
 ## New Features
 - Easier screenshot capturing.
+- Update check.
 
 ## Bug Fixes
 - (Ubuntu) Screenshot: fails to make screenshots (critical)
