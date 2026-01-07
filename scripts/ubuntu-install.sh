@@ -3,7 +3,7 @@
 # Fail on first error.
 set -e
 
-version=2025.01.06
+version=2025.01.07
 
 sourceCodeInstallationDirectory=/usr/local/src/screenshot-annotator
 binariesInstallationDirectory=/usr/local/screenshot-annotator
