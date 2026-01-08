@@ -23,9 +23,9 @@ fi
 echo
 echo Install .Net 10
 echo
-wget https://dot.net/v1/dotnet-install.sh -O dotnet-install.sh
-chmod +x ./dotnet-install.sh
-./dotnet-install.sh --channel 10.0
+wget https://dot.net/v1/dotnet-install.sh -O /tmp/dotnet-install.sh
+chmod +x /tmp/dotnet-install.sh
+/tmp/dotnet-install.sh --channel 10.0
 sudo apt install dbus-x11
 
 echo
@@ -39,7 +39,11 @@ echo Get source code
 echo
 sudo git clone https://github.com/drweb86/annotator.git ${sourceCodeInstallationDirectory}
 cd ${sourceCodeInstallationDirectory}
+echo "A"
 sudo git fetch --tags
+echo "B"
+git describe --tags --abbrev=0
+echo "C"
 version=$(git describe --tags --abbrev=0 2>/dev/null)
 echo "Latest tag: $version"
 
