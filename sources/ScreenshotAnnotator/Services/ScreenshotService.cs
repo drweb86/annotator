@@ -1,4 +1,5 @@
 using Avalonia.Media.Imaging;
+using NLog;
 using System;
 using System.Runtime.InteropServices;
 using System.Threading.Tasks;
@@ -7,30 +8,42 @@ namespace ScreenshotAnnotator.Services;
 
 public static class ScreenshotService
 {
+    private static readonly Logger Logger = LoggingService.GetLogger("ScreenshotService");
+
     public static async Task<Bitmap?> CaptureScreenshotAsync()
     {
         try
         {
+            Logger.Info("Starting screenshot capture");
+            Logger.Debug($"Platform: {RuntimeInformation.OSDescription}");
+            Logger.Debug($"Framework: {RuntimeInformation.FrameworkDescription}");
+            Logger.Debug($"Architecture: {RuntimeInformation.ProcessArchitecture}");
+
             // Small delay to allow window to hide
             await Task.Delay(100);
 
             if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
             {
+                Logger.Info("Using Windows screenshot method");
                 return CaptureScreenshotWindows();
             }
             else if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
             {
+                Logger.Info("Using Linux screenshot method");
                 return await CaptureScreenshotLinuxAsync();
             }
             else if (RuntimeInformation.IsOSPlatform(OSPlatform.OSX))
             {
+                Logger.Info("Using macOS screenshot method");
                 return await CaptureScreenshotMacAsync();
             }
 
+            Logger.Warn("Unknown platform, screenshot not supported");
             return null;
         }
-        catch
+        catch (Exception ex)
         {
+            Logger.Error(ex, "Failed to capture screenshot");
             return null;
         }
     }
@@ -42,6 +55,7 @@ public static class ScreenshotService
             // Get screen dimensions
             var screenWidth = GetSystemMetrics(0);  // SM_CXSCREEN
             var screenHeight = GetSystemMetrics(1); // SM_CYSCREEN
+            Logger.Debug($"Windows screen dimensions: {screenWidth}x{screenHeight}");
 
             // Create bitmap
             var bitmap = new WriteableBitmap(
@@ -80,10 +94,12 @@ public static class ScreenshotService
             DeleteDC(memDC);
             ReleaseDC(IntPtr.Zero, screenDC);
 
+            Logger.Info("Windows screenshot captured successfully");
             return bitmap;
         }
-        catch
+        catch (Exception ex)
         {
+            Logger.Error(ex, "Failed to capture Windows screenshot");
             return null;
         }
     }
@@ -91,17 +107,21 @@ public static class ScreenshotService
     private static async Task<Bitmap?> CaptureScreenshotLinuxAsync()
     {
         // Try multiple screenshot methods for better compatibility
+        var tempFile = "";
         try
         {
-            var tempFile = System.IO.Path.GetTempFileName() + ".png";
+            tempFile = System.IO.Path.GetTempFileName() + ".png";
+            Logger.Debug($"Linux temp file: {tempFile}");
 
             // Try gnome-screenshot first
+            Logger.Info("Attempting gnome-screenshot");
             var processInfo = new System.Diagnostics.ProcessStartInfo
             {
                 FileName = "gnome-screenshot",
                 Arguments = $"-f \"{tempFile}\"",
                 UseShellExecute = false,
                 CreateNoWindow = true,
+                RedirectStandardOutput = true,
                 RedirectStandardError = true
             };
 
@@ -110,23 +130,41 @@ public static class ScreenshotService
                 if (process != null)
                 {
                     await process.WaitForExitAsync();
+                    var stderr = await process.StandardError.ReadToEndAsync();
+                    var stdout = await process.StandardOutput.ReadToEndAsync();
+
+                    Logger.Debug($"gnome-screenshot exit code: {process.ExitCode}");
+                    if (!string.IsNullOrWhiteSpace(stdout)) Logger.Debug($"gnome-screenshot stdout: {stdout}");
+                    if (!string.IsNullOrWhiteSpace(stderr)) Logger.Warn($"gnome-screenshot stderr: {stderr}");
 
                     if (System.IO.File.Exists(tempFile))
                     {
+                        var fileInfo = new System.IO.FileInfo(tempFile);
+                        Logger.Info($"gnome-screenshot succeeded, file size: {fileInfo.Length} bytes");
                         var bitmap = new Bitmap(tempFile);
                         System.IO.File.Delete(tempFile);
                         return bitmap;
                     }
+                    else
+                    {
+                        Logger.Warn($"gnome-screenshot did not create file at {tempFile}");
+                    }
+                }
+                else
+                {
+                    Logger.Error("Failed to start gnome-screenshot process");
                 }
             }
 
             // Try scrot as fallback
+            Logger.Info("Attempting scrot");
             processInfo = new System.Diagnostics.ProcessStartInfo
             {
                 FileName = "scrot",
                 Arguments = $"\"{tempFile}\"",
                 UseShellExecute = false,
                 CreateNoWindow = true,
+                RedirectStandardOutput = true,
                 RedirectStandardError = true
             };
 
@@ -135,23 +173,41 @@ public static class ScreenshotService
                 if (process != null)
                 {
                     await process.WaitForExitAsync();
+                    var stderr = await process.StandardError.ReadToEndAsync();
+                    var stdout = await process.StandardOutput.ReadToEndAsync();
+
+                    Logger.Debug($"scrot exit code: {process.ExitCode}");
+                    if (!string.IsNullOrWhiteSpace(stdout)) Logger.Debug($"scrot stdout: {stdout}");
+                    if (!string.IsNullOrWhiteSpace(stderr)) Logger.Warn($"scrot stderr: {stderr}");
 
                     if (System.IO.File.Exists(tempFile))
                     {
+                        var fileInfo = new System.IO.FileInfo(tempFile);
+                        Logger.Info($"scrot succeeded, file size: {fileInfo.Length} bytes");
                         var bitmap = new Bitmap(tempFile);
                         System.IO.File.Delete(tempFile);
                         return bitmap;
                     }
+                    else
+                    {
+                        Logger.Warn($"scrot did not create file at {tempFile}");
+                    }
+                }
+                else
+                {
+                    Logger.Error("Failed to start scrot process");
                 }
             }
 
             // Try import (ImageMagick) as second fallback
+            Logger.Info("Attempting import (ImageMagick)");
             processInfo = new System.Diagnostics.ProcessStartInfo
             {
                 FileName = "import",
                 Arguments = $"-window root \"{tempFile}\"",
                 UseShellExecute = false,
                 CreateNoWindow = true,
+                RedirectStandardOutput = true,
                 RedirectStandardError = true
             };
 
@@ -160,15 +216,33 @@ public static class ScreenshotService
                 if (process != null)
                 {
                     await process.WaitForExitAsync();
+                    var stderr = await process.StandardError.ReadToEndAsync();
+                    var stdout = await process.StandardOutput.ReadToEndAsync();
+
+                    Logger.Debug($"import exit code: {process.ExitCode}");
+                    if (!string.IsNullOrWhiteSpace(stdout)) Logger.Debug($"import stdout: {stdout}");
+                    if (!string.IsNullOrWhiteSpace(stderr)) Logger.Warn($"import stderr: {stderr}");
 
                     if (System.IO.File.Exists(tempFile))
                     {
+                        var fileInfo = new System.IO.FileInfo(tempFile);
+                        Logger.Info($"import succeeded, file size: {fileInfo.Length} bytes");
                         var bitmap = new Bitmap(tempFile);
                         System.IO.File.Delete(tempFile);
                         return bitmap;
                     }
+                    else
+                    {
+                        Logger.Warn($"import did not create file at {tempFile}");
+                    }
+                }
+                else
+                {
+                    Logger.Error("Failed to start import process");
                 }
             }
+
+            Logger.Error("All Linux screenshot methods failed");
 
             // Clean up temp file if nothing worked
             if (System.IO.File.Exists(tempFile))
@@ -176,9 +250,13 @@ public static class ScreenshotService
                 System.IO.File.Delete(tempFile);
             }
         }
-        catch
+        catch (Exception ex)
         {
-            // Ignore
+            Logger.Error(ex, "Exception during Linux screenshot capture");
+            if (!string.IsNullOrEmpty(tempFile) && System.IO.File.Exists(tempFile))
+            {
+                try { System.IO.File.Delete(tempFile); } catch { }
+            }
         }
 
         return null;
@@ -187,16 +265,21 @@ public static class ScreenshotService
     private static async Task<Bitmap?> CaptureScreenshotMacAsync()
     {
         // Use screencapture command
+        var tempFile = "";
         try
         {
-            var tempFile = System.IO.Path.GetTempFileName() + ".png";
+            tempFile = System.IO.Path.GetTempFileName() + ".png";
+            Logger.Debug($"macOS temp file: {tempFile}");
+            Logger.Info("Attempting screencapture");
 
             var processInfo = new System.Diagnostics.ProcessStartInfo
             {
                 FileName = "screencapture",
                 Arguments = $"-x {tempFile}",
                 UseShellExecute = false,
-                CreateNoWindow = true
+                CreateNoWindow = true,
+                RedirectStandardOutput = true,
+                RedirectStandardError = true
             };
 
             using (var process = System.Diagnostics.Process.Start(processInfo))
@@ -204,21 +287,42 @@ public static class ScreenshotService
                 if (process != null)
                 {
                     await process.WaitForExitAsync();
+                    var stderr = await process.StandardError.ReadToEndAsync();
+                    var stdout = await process.StandardOutput.ReadToEndAsync();
+
+                    Logger.Debug($"screencapture exit code: {process.ExitCode}");
+                    if (!string.IsNullOrWhiteSpace(stdout)) Logger.Debug($"screencapture stdout: {stdout}");
+                    if (!string.IsNullOrWhiteSpace(stderr)) Logger.Warn($"screencapture stderr: {stderr}");
 
                     if (System.IO.File.Exists(tempFile))
                     {
+                        var fileInfo = new System.IO.FileInfo(tempFile);
+                        Logger.Info($"screencapture succeeded, file size: {fileInfo.Length} bytes");
                         var bitmap = new Bitmap(tempFile);
                         System.IO.File.Delete(tempFile);
                         return bitmap;
                     }
+                    else
+                    {
+                        Logger.Warn($"screencapture did not create file at {tempFile}");
+                    }
+                }
+                else
+                {
+                    Logger.Error("Failed to start screencapture process");
                 }
             }
         }
-        catch
+        catch (Exception ex)
         {
-            // Ignore
+            Logger.Error(ex, "Exception during macOS screenshot capture");
+            if (!string.IsNullOrEmpty(tempFile) && System.IO.File.Exists(tempFile))
+            {
+                try { System.IO.File.Delete(tempFile); } catch { }
+            }
         }
 
+        Logger.Error("macOS screenshot failed");
         return null;
     }
 

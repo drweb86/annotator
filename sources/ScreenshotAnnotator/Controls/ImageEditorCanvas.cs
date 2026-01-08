@@ -17,7 +17,6 @@ public class ImageEditorCanvas : Control
     private Point _startPoint;
     private bool _isDrawing;
     private AnnotationShape? _currentShape;
-    private TrimRectangle? _currentTrimRect;
     private SelectorRectangle? _currentSelectorRect;
     private bool _isDraggingBeak;
     private AnnotationShape? _selectedShape;
@@ -59,16 +58,6 @@ public class ImageEditorCanvas : Control
     {
         get => GetValue(ShapesProperty);
         set => SetValue(ShapesProperty, value);
-    }
-
-    public TrimRectangle? TrimRect
-    {
-        get => _currentTrimRect;
-        set
-        {
-            _currentTrimRect = value;
-            InvalidateVisual();
-        }
     }
 
     public SelectorRectangle? SelectorRect
@@ -337,6 +326,18 @@ public class ImageEditorCanvas : Control
                 }
             }
 
+            // Check if clicking on a selected highlighter's handles
+            if (_selectedShape is HighlighterShape selectedHighlighter)
+            {
+                var highlighterCorner = selectedHighlighter.GetCornerAtPoint(point);
+                if (highlighterCorner != null)
+                {
+                    _isDraggingCalloutCorner = true;
+                    _draggedCorner = (CalloutShape.Corner)(int)highlighterCorner;
+                    return;
+                }
+            }
+
             // Check if clicking on any existing shape (reverse order to select top-most)
             for (int i = Shapes.Count - 1; i >= 0; i--)
             {
@@ -442,11 +443,18 @@ public class ImageEditorCanvas : Control
                         };
                         break;
 
-                    case ToolType.Trim:
-                        _currentTrimRect = new TrimRectangle
+                    case ToolType.Highlighter:
+                        _currentShape = new HighlighterShape
                         {
-                            Rectangle = new Rect(point, new Size(0, 0))
+                            StartPoint = point,
+                            EndPoint = point
                         };
+                        break;
+
+                    case ToolType.VerticalCutOut:
+                    case ToolType.HorizontalCutOut:
+                        // Cut out tools will be handled in OnPointerReleased
+                        _isDrawing = true;
                         break;
                 }
 
@@ -509,6 +517,14 @@ public class ImageEditorCanvas : Control
             return;
         }
 
+        // Handle dragging highlighter corner
+        if (_isDraggingCalloutCorner && _selectedShape is HighlighterShape highlighterResize)
+        {
+            highlighterResize.ResizeCorner((HighlighterShape.Corner)(int)_draggedCorner, point);
+            InvalidateVisual();
+            return;
+        }
+
         // Handle dragging existing shapes
         if (_isDraggingShape && _selectedShape != null)
         {
@@ -526,6 +542,9 @@ public class ImageEditorCanvas : Control
             InvalidateVisual();
             return;
         }
+
+        // Update last mouse position for cut tool visual feedback
+        _lastMousePosition = point;
 
         // Handle drawing new shapes
         if (!_isDrawing) return;
@@ -589,12 +608,18 @@ public class ImageEditorCanvas : Control
                 }
                 break;
 
-            case ToolType.Trim:
-                if (_currentTrimRect != null)
+            case ToolType.Highlighter:
+                if (_currentShape is HighlighterShape highlighter)
                 {
-                    _currentTrimRect.Rectangle = new Rect(_startPoint, point);
+                    highlighter.EndPoint = point;
                     InvalidateVisual();
                 }
+                break;
+
+            case ToolType.VerticalCutOut:
+            case ToolType.HorizontalCutOut:
+                // Visual feedback will be shown in Render
+                InvalidateVisual();
                 break;
         }
     }
@@ -638,8 +663,29 @@ public class ImageEditorCanvas : Control
 
         _isDrawing = false;
 
+        // Handle cut out tools
+        var point = e.GetPosition(this);
+        if (CurrentTool == ToolType.VerticalCutOut)
+        {
+            // Clamp to image boundaries
+            var clampedStartX = ClampX(_startPoint.X);
+            var clampedEndX = ClampX(point.X);
+            PerformVerticalCutOut(clampedStartX, clampedEndX);
+            InvalidateVisual();
+            return;
+        }
+        else if (CurrentTool == ToolType.HorizontalCutOut)
+        {
+            // Clamp to image boundaries
+            var clampedStartY = ClampY(_startPoint.Y);
+            var clampedEndY = ClampY(point.Y);
+            PerformHorizontalCutOut(clampedStartY, clampedEndY);
+            InvalidateVisual();
+            return;
+        }
+
         // Add the completed shape to the collection
-        if (_currentShape != null && CurrentTool != ToolType.Trim)
+        if (_currentShape != null)
         {
             // Only add if the shape has some size
             bool shouldAdd = false;
@@ -674,6 +720,11 @@ public class ImageEditorCanvas : Control
                     // Set up callback to refresh blur when moved/resized
                     blurRect.RefreshBlur = CreateBlurredImage;
                 }
+            }
+            else if (_currentShape is HighlighterShape highlighter)
+            {
+                var rect = new Rect(highlighter.StartPoint, highlighter.EndPoint);
+                shouldAdd = rect.Width > 5 && rect.Height > 5;
             }
 
             if (shouldAdd)
@@ -710,40 +761,40 @@ public class ImageEditorCanvas : Control
         // Draw selector rectangle
         _currentSelectorRect?.Render(context);
 
-        // Draw trim rectangle
-        _currentTrimRect?.Render(context);
-
-        // Draw overlay for area outside trim rectangle
-        if (_currentTrimRect != null && Image != null)
+        // Draw visual feedback for cut tools
+        if (_isDrawing && Image != null)
         {
-            var fullRect = new Rect(0, 0, Image.PixelSize.Width, Image.PixelSize.Height);
-            var trimRect = _currentTrimRect.Rectangle;
-
-            var darkBrush = new SolidColorBrush(Colors.Black) { Opacity = 0.5 };
-
-            // Top
-            if (trimRect.Top > 0)
+            if (CurrentTool == ToolType.VerticalCutOut)
             {
-                context.DrawRectangle(darkBrush, null,
-                    new Rect(0, 0, fullRect.Width, trimRect.Top));
+                // Clamp to image boundaries
+                var clampedStartX = ClampX(_startPoint.X);
+                var clampedEndX = ClampX(_lastMousePosition.X);
+                var leftX = Math.Min(clampedStartX, clampedEndX);
+                var rightX = Math.Max(clampedStartX, clampedEndX);
+                var height = Image.PixelSize.Height;
+
+                var cutBrush = new SolidColorBrush(Color.FromArgb(100, 255, 0, 0)); // Semi-transparent red
+                var cutPen = new Pen(new SolidColorBrush(Colors.Red), 2.0);
+                cutPen.DashStyle = new DashStyle(new[] { 4.0, 4.0 }, 0);
+
+                var cutRect = new Rect(leftX, 0, rightX - leftX, height);
+                context.DrawRectangle(cutBrush, cutPen, cutRect);
             }
-
-            // Bottom
-            if (trimRect.Bottom < fullRect.Height)
+            else if (CurrentTool == ToolType.HorizontalCutOut)
             {
-                context.DrawRectangle(darkBrush, null,
-                    new Rect(0, trimRect.Bottom, fullRect.Width, fullRect.Height - trimRect.Bottom));
-            }
+                // Clamp to image boundaries
+                var clampedStartY = ClampY(_startPoint.Y);
+                var clampedEndY = ClampY(_lastMousePosition.Y);
+                var topY = Math.Min(clampedStartY, clampedEndY);
+                var bottomY = Math.Max(clampedStartY, clampedEndY);
+                var width = Image.PixelSize.Width;
 
-            // Left
-            context.DrawRectangle(darkBrush, null,
-                new Rect(0, trimRect.Top, trimRect.Left, trimRect.Height));
+                var cutBrush = new SolidColorBrush(Color.FromArgb(100, 255, 0, 0)); // Semi-transparent red
+                var cutPen = new Pen(new SolidColorBrush(Colors.Red), 2.0);
+                cutPen.DashStyle = new DashStyle(new[] { 4.0, 4.0 }, 0);
 
-            // Right
-            if (trimRect.Right < fullRect.Width)
-            {
-                context.DrawRectangle(darkBrush, null,
-                    new Rect(trimRect.Right, trimRect.Top, fullRect.Width - trimRect.Right, trimRect.Height));
+                var cutRect = new Rect(0, topY, width, bottomY - topY);
+                context.DrawRectangle(cutBrush, cutPen, cutRect);
             }
         }
     }
@@ -1027,5 +1078,267 @@ public class ImageEditorCanvas : Control
         {
             // Silently handle errors
         }
+    }
+
+    private void PerformVerticalCutOut(double startX, double endX)
+    {
+        if (Image == null) return;
+
+        try
+        {
+            var leftX = Math.Min(startX, endX);
+            var rightX = Math.Max(startX, endX);
+            var cutWidth = rightX - leftX;
+
+            if (cutWidth < 5) return; // Too small to cut
+
+            var oldWidth = Image.PixelSize.Width;
+            var oldHeight = Image.PixelSize.Height;
+            var newWidth = oldWidth - (int)cutWidth;
+
+            if (newWidth <= 0) return;
+
+            // Create new image without the vertical slice
+            var newImage = new RenderTargetBitmap(new PixelSize(newWidth, oldHeight), new Vector(96, 96));
+
+            using (var context = newImage.CreateDrawingContext())
+            {
+                // Draw left part
+                if (leftX > 0)
+                {
+                    var sourceRect = new Rect(0, 0, leftX, oldHeight);
+                    var destRect = new Rect(0, 0, leftX, oldHeight);
+                    context.DrawImage(Image, sourceRect, destRect);
+                }
+
+                // Draw right part
+                if (rightX < oldWidth)
+                {
+                    var sourceRect = new Rect(rightX, 0, oldWidth - rightX, oldHeight);
+                    var destRect = new Rect(leftX, 0, oldWidth - rightX, oldHeight);
+                    context.DrawImage(Image, sourceRect, destRect);
+                }
+            }
+
+            // Adjust shapes
+            foreach (var shape in Shapes.ToList())
+            {
+                AdjustShapeForVerticalCut(shape, leftX, cutWidth);
+            }
+
+            // Convert to bitmap and replace the image
+            using var stream = new MemoryStream();
+            newImage.Save(stream);
+            stream.Position = 0;
+            Image = new Bitmap(stream);
+        }
+        catch
+        {
+            // Silently handle errors
+        }
+    }
+
+    private void PerformHorizontalCutOut(double startY, double endY)
+    {
+        if (Image == null) return;
+
+        try
+        {
+            var topY = Math.Min(startY, endY);
+            var bottomY = Math.Max(startY, endY);
+            var cutHeight = bottomY - topY;
+
+            if (cutHeight < 5) return; // Too small to cut
+
+            var oldWidth = Image.PixelSize.Width;
+            var oldHeight = Image.PixelSize.Height;
+            var newHeight = oldHeight - (int)cutHeight;
+
+            if (newHeight <= 0) return;
+
+            // Create new image without the horizontal slice
+            var newImage = new RenderTargetBitmap(new PixelSize(oldWidth, newHeight), new Vector(96, 96));
+
+            using (var context = newImage.CreateDrawingContext())
+            {
+                // Draw top part
+                if (topY > 0)
+                {
+                    var sourceRect = new Rect(0, 0, oldWidth, topY);
+                    var destRect = new Rect(0, 0, oldWidth, topY);
+                    context.DrawImage(Image, sourceRect, destRect);
+                }
+
+                // Draw bottom part
+                if (bottomY < oldHeight)
+                {
+                    var sourceRect = new Rect(0, bottomY, oldWidth, oldHeight - bottomY);
+                    var destRect = new Rect(0, topY, oldWidth, oldHeight - bottomY);
+                    context.DrawImage(Image, sourceRect, destRect);
+                }
+            }
+
+            // Adjust shapes
+            foreach (var shape in Shapes.ToList())
+            {
+                AdjustShapeForHorizontalCut(shape, topY, cutHeight);
+            }
+
+            // Convert to bitmap and replace the image
+            using var stream = new MemoryStream();
+            newImage.Save(stream);
+            stream.Position = 0;
+            Image = new Bitmap(stream);
+        }
+        catch
+        {
+            // Silently handle errors
+        }
+    }
+
+    private void AdjustShapeForVerticalCut(object shape, double cutX, double cutWidth)
+    {
+        if (shape is ArrowShape arrow)
+        {
+            arrow.StartPoint = AdjustPointForVerticalCut(arrow.StartPoint, cutX, cutWidth);
+            arrow.EndPoint = AdjustPointForVerticalCut(arrow.EndPoint, cutX, cutWidth);
+        }
+        else if (shape is CalloutShape callout)
+        {
+            var rect = callout.Rectangle;
+            var newTopLeft = AdjustPointForVerticalCut(rect.TopLeft, cutX, cutWidth);
+            var newBottomRight = AdjustPointForVerticalCut(rect.BottomRight, cutX, cutWidth);
+            callout.Rectangle = new Rect(newTopLeft, newBottomRight);
+            callout.BeakPoint = AdjustPointForVerticalCut(callout.BeakPoint, cutX, cutWidth);
+        }
+        else if (shape is CalloutNoArrowShape calloutNoArrow)
+        {
+            var rect = calloutNoArrow.Rectangle;
+            var newTopLeft = AdjustPointForVerticalCut(rect.TopLeft, cutX, cutWidth);
+            var newBottomRight = AdjustPointForVerticalCut(rect.BottomRight, cutX, cutWidth);
+            calloutNoArrow.Rectangle = new Rect(newTopLeft, newBottomRight);
+        }
+        else if (shape is BorderedRectangleShape borderedRect)
+        {
+            var rect = borderedRect.Rectangle;
+            var newTopLeft = AdjustPointForVerticalCut(rect.TopLeft, cutX, cutWidth);
+            var newBottomRight = AdjustPointForVerticalCut(rect.BottomRight, cutX, cutWidth);
+            borderedRect.Rectangle = new Rect(newTopLeft, newBottomRight);
+        }
+        else if (shape is BlurRectangleShape blurRect)
+        {
+            var rect = blurRect.Rectangle;
+            var newTopLeft = AdjustPointForVerticalCut(rect.TopLeft, cutX, cutWidth);
+            var newBottomRight = AdjustPointForVerticalCut(rect.BottomRight, cutX, cutWidth);
+            blurRect.Rectangle = new Rect(newTopLeft, newBottomRight);
+        }
+        else if (shape is HighlighterShape highlighter)
+        {
+            highlighter.StartPoint = AdjustPointForVerticalCut(highlighter.StartPoint, cutX, cutWidth);
+            highlighter.EndPoint = AdjustPointForVerticalCut(highlighter.EndPoint, cutX, cutWidth);
+        }
+        else if (shape is SelectorRectangle selector)
+        {
+            var rect = selector.Rectangle;
+            var newTopLeft = AdjustPointForVerticalCut(rect.TopLeft, cutX, cutWidth);
+            var newBottomRight = AdjustPointForVerticalCut(rect.BottomRight, cutX, cutWidth);
+            selector.Rectangle = new Rect(newTopLeft, newBottomRight);
+        }
+    }
+
+    private void AdjustShapeForHorizontalCut(object shape, double cutY, double cutHeight)
+    {
+        if (shape is ArrowShape arrow)
+        {
+            arrow.StartPoint = AdjustPointForHorizontalCut(arrow.StartPoint, cutY, cutHeight);
+            arrow.EndPoint = AdjustPointForHorizontalCut(arrow.EndPoint, cutY, cutHeight);
+        }
+        else if (shape is CalloutShape callout)
+        {
+            var rect = callout.Rectangle;
+            var newTopLeft = AdjustPointForHorizontalCut(rect.TopLeft, cutY, cutHeight);
+            var newBottomRight = AdjustPointForHorizontalCut(rect.BottomRight, cutY, cutHeight);
+            callout.Rectangle = new Rect(newTopLeft, newBottomRight);
+            callout.BeakPoint = AdjustPointForHorizontalCut(callout.BeakPoint, cutY, cutHeight);
+        }
+        else if (shape is CalloutNoArrowShape calloutNoArrow)
+        {
+            var rect = calloutNoArrow.Rectangle;
+            var newTopLeft = AdjustPointForHorizontalCut(rect.TopLeft, cutY, cutHeight);
+            var newBottomRight = AdjustPointForHorizontalCut(rect.BottomRight, cutY, cutHeight);
+            calloutNoArrow.Rectangle = new Rect(newTopLeft, newBottomRight);
+        }
+        else if (shape is BorderedRectangleShape borderedRect)
+        {
+            var rect = borderedRect.Rectangle;
+            var newTopLeft = AdjustPointForHorizontalCut(rect.TopLeft, cutY, cutHeight);
+            var newBottomRight = AdjustPointForHorizontalCut(rect.BottomRight, cutY, cutHeight);
+            borderedRect.Rectangle = new Rect(newTopLeft, newBottomRight);
+        }
+        else if (shape is BlurRectangleShape blurRect)
+        {
+            var rect = blurRect.Rectangle;
+            var newTopLeft = AdjustPointForHorizontalCut(rect.TopLeft, cutY, cutHeight);
+            var newBottomRight = AdjustPointForHorizontalCut(rect.BottomRight, cutY, cutHeight);
+            blurRect.Rectangle = new Rect(newTopLeft, newBottomRight);
+        }
+        else if (shape is HighlighterShape highlighter)
+        {
+            highlighter.StartPoint = AdjustPointForHorizontalCut(highlighter.StartPoint, cutY, cutHeight);
+            highlighter.EndPoint = AdjustPointForHorizontalCut(highlighter.EndPoint, cutY, cutHeight);
+        }
+        else if (shape is SelectorRectangle selector)
+        {
+            var rect = selector.Rectangle;
+            var newTopLeft = AdjustPointForHorizontalCut(rect.TopLeft, cutY, cutHeight);
+            var newBottomRight = AdjustPointForHorizontalCut(rect.BottomRight, cutY, cutHeight);
+            selector.Rectangle = new Rect(newTopLeft, newBottomRight);
+        }
+    }
+
+    private Point AdjustPointForVerticalCut(Point point, double cutX, double cutWidth)
+    {
+        if (point.X <= cutX)
+        {
+            return point;
+        }
+        else if (point.X > cutX + cutWidth)
+        {
+            return new Point(point.X - cutWidth, point.Y);
+        }
+        else
+        {
+            // Point is within cut area, move to cut edge
+            return new Point(cutX, point.Y);
+        }
+    }
+
+    private Point AdjustPointForHorizontalCut(Point point, double cutY, double cutHeight)
+    {
+        if (point.Y <= cutY)
+        {
+            return point;
+        }
+        else if (point.Y > cutY + cutHeight)
+        {
+            return new Point(point.X, point.Y - cutHeight);
+        }
+        else
+        {
+            // Point is within cut area, move to cut edge
+            return new Point(point.X, cutY);
+        }
+    }
+
+    private double ClampX(double x)
+    {
+        if (Image == null) return x;
+        return Math.Max(0, Math.Min(x, Image.PixelSize.Width));
+    }
+
+    private double ClampY(double y)
+    {
+        if (Image == null) return y;
+        return Math.Max(0, Math.Min(y, Image.PixelSize.Height));
     }
 }

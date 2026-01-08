@@ -23,6 +23,7 @@ public class AnnotatorProject
 [JsonDerivedType(typeof(SerializableCalloutNoArrowShape), "calloutnoarrow")]
 [JsonDerivedType(typeof(SerializableBorderedRectangleShape), "borderedrectangle")]
 [JsonDerivedType(typeof(SerializableBlurRectangleShape), "blurrectangle")]
+[JsonDerivedType(typeof(SerializableHighlighterShape), "highlighter")]
 public abstract class SerializableShape
 {
     public string Type { get; set; } = "";
@@ -276,6 +277,58 @@ public class SerializableBlurRectangleShape : SerializableShape
         return new BlurRectangleShape
         {
             Rectangle = new Rect(RectX, RectY, RectWidth, RectHeight),
+            StrokeColor = UIntToColor(StrokeColor),
+            StrokeThickness = StrokeThickness
+        };
+    }
+
+    private static uint ColorToUInt(Avalonia.Media.Color color)
+    {
+        return ((uint)color.A << 24) | ((uint)color.R << 16) | ((uint)color.G << 8) | color.B;
+    }
+
+    private static Avalonia.Media.Color UIntToColor(uint color)
+    {
+        return Avalonia.Media.Color.FromArgb(
+            (byte)((color >> 24) & 0xFF),
+            (byte)((color >> 16) & 0xFF),
+            (byte)((color >> 8) & 0xFF),
+            (byte)(color & 0xFF)
+        );
+    }
+}
+
+public class SerializableHighlighterShape : SerializableShape
+{
+    public double StartX { get; set; }
+    public double StartY { get; set; }
+    public double EndX { get; set; }
+    public double EndY { get; set; }
+
+    public SerializableHighlighterShape()
+    {
+        Type = "highlighter";
+    }
+
+    public static SerializableHighlighterShape FromHighlighterShape(HighlighterShape highlighter)
+    {
+        return new SerializableHighlighterShape
+        {
+            StartX = highlighter.StartPoint.X,
+            StartY = highlighter.StartPoint.Y,
+            EndX = highlighter.EndPoint.X,
+            EndY = highlighter.EndPoint.Y,
+            StrokeColor = ColorToUInt(highlighter.StrokeColor),
+            StrokeThickness = highlighter.StrokeThickness
+        };
+    }
+
+    public HighlighterShape ToHighlighterShape()
+    {
+        return new HighlighterShape
+        {
+            StartPoint = new Point(StartX, StartY),
+            EndPoint = new Point(EndX, EndY),
             StrokeColor = UIntToColor(StrokeColor),
             StrokeThickness = StrokeThickness
         };

@@ -50,10 +50,16 @@ public partial class ImageEditorViewModel : ViewModelBase
     private bool _isSelectorToolSelected;
 
     [ObservableProperty]
-    private bool _isTrimToolSelected;
+    private bool _isVerticalCutOutToolSelected;
 
     [ObservableProperty]
-    private string _headerInformation = "Annotator - V" + CopyrightInfo.Version.ToString(3);
+    private bool _isHorizontalCutOutToolSelected;
+
+    [ObservableProperty]
+    private bool _isHighlighterToolSelected;
+
+    [ObservableProperty]
+    private string _headerInformation = "Screenshot Annotator - V" + CopyrightInfo.Version.ToString(3);
 
     [ObservableProperty]
     private string? _currentFileName;
@@ -132,9 +138,23 @@ public partial class ImageEditorViewModel : ViewModelBase
     }
 
     [RelayCommand]
-    private void SelectTrimTool()
+    private void SelectVerticalCutOutTool()
     {
-        CurrentTool = ToolType.Trim;
+        CurrentTool = ToolType.VerticalCutOut;
+        UpdateToolSelection();
+    }
+
+    [RelayCommand]
+    private void SelectHorizontalCutOutTool()
+    {
+        CurrentTool = ToolType.HorizontalCutOut;
+        UpdateToolSelection();
+    }
+
+    [RelayCommand]
+    private void SelectHighlighterTool()
+    {
+        CurrentTool = ToolType.Highlighter;
         UpdateToolSelection();
     }
 
@@ -147,7 +167,9 @@ public partial class ImageEditorViewModel : ViewModelBase
         IsBorderedRectangleToolSelected = CurrentTool == ToolType.BorderedRectangle;
         IsBlurRectangleToolSelected = CurrentTool == ToolType.BlurRectangle;
         IsSelectorToolSelected = CurrentTool == ToolType.Selector;
-        IsTrimToolSelected = CurrentTool == ToolType.Trim;
+        IsVerticalCutOutToolSelected = CurrentTool == ToolType.VerticalCutOut;
+        IsHorizontalCutOutToolSelected = CurrentTool == ToolType.HorizontalCutOut;
+        IsHighlighterToolSelected = CurrentTool == ToolType.Highlighter;
     }
 
     partial void OnCurrentToolChanged(ToolType value)
@@ -158,12 +180,25 @@ public partial class ImageEditorViewModel : ViewModelBase
     private Avalonia.Controls.TopLevel? _topLevel;
     private string? _currentFilePath;
     private Avalonia.Controls.Window? _mainWindow;
+    private ApplicationSettings _settings;
 
     [ObservableProperty]
     private ObservableCollection<ProjectFileInfo> _projectFiles = new();
 
     [ObservableProperty]
     private bool _isFileBrowserVisible = true;
+
+    public ImageEditorViewModel()
+    {
+        _settings = ApplicationSettings.Load();
+        _isFileBrowserVisible = _settings.IsFileBrowserVisible;
+    }
+
+    partial void OnIsFileBrowserVisibleChanged(bool value)
+    {
+        _settings.IsFileBrowserVisible = value;
+        _settings.Save();
+    }
 
     public void SetTopLevel(Avalonia.Controls.TopLevel topLevel)
     {
@@ -422,6 +457,10 @@ public partial class ImageEditorViewModel : ViewModelBase
                 {
                     project.Shapes.Add(SerializableBlurRectangleShape.FromBlurRectangleShape(blurRect));
                 }
+                else if (shape is HighlighterShape highlighter)
+                {
+                    project.Shapes.Add(SerializableHighlighterShape.FromHighlighterShape(highlighter));
+                }
             }
 
             // Serialize to JSON and save
@@ -507,6 +546,10 @@ public partial class ImageEditorViewModel : ViewModelBase
                         blurShape.RefreshBlur = rect => _editorCanvas.CreateBlurredImagePublic(rect);
                         blurShape.BlurredImage = _editorCanvas.CreateBlurredImagePublic(blurShape.Rectangle);
                     }
+                }
+                else if (shape is SerializableHighlighterShape highlighter)
+                {
+                    Shapes.Add(highlighter.ToHighlighterShape());
                 }
             }
         }
@@ -706,6 +749,28 @@ public partial class ImageEditorViewModel : ViewModelBase
         try
         {
             var folder = ProjectManager.GetProjectsFolder();
+            System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo
+            {
+                FileName = folder,
+                UseShellExecute = true
+            });
+        }
+        catch
+        {
+            // Handle errors
+        }
+    }
+
+    [RelayCommand]
+    private void OpenLogsFolder()
+    {
+        try
+        {
+            var folder = LoggingService.GetLogDirectory();
+            if (!Directory.Exists(folder))
+            {
+                Directory.CreateDirectory(folder);
+            }
             System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo
             {
                 FileName = folder,

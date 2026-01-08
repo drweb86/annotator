@@ -5,9 +5,14 @@
              xmlns:vm="using:ScreenshotAnnotator.ViewModels"
              xmlns:controls="using:ScreenshotAnnotator.Controls"
 			 xmlns:views="using:ScreenshotAnnotator.Views"
+			 xmlns:converters="using:ScreenshotAnnotator.Converters"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="600"
              x:Class="ScreenshotAnnotator.Views.ImageEditorView"
              x:DataType="vm:ImageEditorViewModel">
+
+  <UserControl.Resources>
+    <converters:BoolToChevronPathConverter x:Key="BoolToChevronPathConverter"/>
+  </UserControl.Resources>
 
   <Design.DataContext>
     <vm:ImageEditorViewModel />
@@ -53,9 +58,7 @@
 				  <MenuItem Header="Export..." Command="{Binding ExportCommand}" InputGesture="Ctrl+S" />
 				  <Separator/>
 				  <MenuItem Header="Open Projects _Folder" Command="{Binding OpenProjectsFolderCommand}"/>
-			  </MenuItem>
-			  <MenuItem Header="_View">
-				  <MenuItem Header="Toggle File _Browser" Command="{Binding ToggleFileBrowserCommand}" InputGesture="F9"/>
+				  <MenuItem Header="Open _Logs Folder" Command="{Binding OpenLogsFolderCommand}"/>
 			  </MenuItem>
 		  </Menu>
 
@@ -183,7 +186,20 @@
           </StackPanel>
         </ToggleButton>
 
-        <!-- Arrow Tool Button -->
+		  <!-- Selector Tool Button -->
+		  <ToggleButton IsChecked="{Binding IsSelectorToolSelected}"
+						Command="{Binding SelectSelectorToolCommand}"
+						ToolTip.Tip="Selector Tool (Ctrl+C to copy, Delete to remove)">
+			  <StackPanel HorizontalAlignment="Center">
+				  <Path Data="M2,2 L2,18 M2,2 L18,2 M18,2 L18,18 M2,18 L18,18"
+						Stroke="#D8DEE3"
+						StrokeThickness="2"
+						StrokeDashArray="2,2" />
+				  <TextBlock Text="Select" />
+			  </StackPanel>
+		  </ToggleButton>
+
+		  <!-- Arrow Tool Button -->
         <ToggleButton IsChecked="{Binding IsArrowToolSelected}"
                       Command="{Binding SelectArrowToolCommand}"
                       ToolTip.Tip="Arrow Tool">
@@ -235,6 +251,20 @@
           </StackPanel>
         </ToggleButton>
 
+
+		  <!-- Highlighter Tool Button -->
+		  <ToggleButton IsChecked="{Binding IsHighlighterToolSelected}"
+						Command="{Binding SelectHighlighterToolCommand}"
+						ToolTip.Tip="Highlighter Tool (Draw yellow transparent rectangles)">
+			  <StackPanel HorizontalAlignment="Center">
+				  <Path Data="M2,2 L18,2 L18,18 L2,18 Z"
+						Stroke="Transparent"
+						StrokeThickness="0"
+						Fill="#80FFFF00" />
+				  <TextBlock Text="Highlight" />
+			  </StackPanel>
+		  </ToggleButton>
+
         <!-- Blur Rectangle Tool Button -->
         <ToggleButton IsChecked="{Binding IsBlurRectangleToolSelected}"
                       Command="{Binding SelectBlurRectangleToolCommand}"
@@ -251,31 +281,32 @@
         <!-- Separator -->
         <Border Width="1" Background="#CCCCCC" Margin="4,0"/>
 
-        <!-- Selector Tool Button -->
-        <ToggleButton IsChecked="{Binding IsSelectorToolSelected}"
-                      Command="{Binding SelectSelectorToolCommand}"
-                      ToolTip.Tip="Selector Tool (Ctrl+C to copy, Delete to remove)">
+        <!-- Vertical Cut Out Tool Button -->
+        <ToggleButton IsChecked="{Binding IsVerticalCutOutToolSelected}"
+                      Command="{Binding SelectVerticalCutOutToolCommand}"
+                      ToolTip.Tip="Remove vertical slice">
           <StackPanel HorizontalAlignment="Center">
-            <Path Data="M2,2 L2,18 M2,2 L18,2 M18,2 L18,18 M2,18 L18,18"
-                  Stroke="#D8DEE3"
+            <Path Data="M2,10 L18,10 M10,8 L10,12"
+                  Stroke="#FF6B6B"
                   StrokeThickness="2"
-                  StrokeDashArray="2,2" />
-            <TextBlock Text="Select" />
+                  Fill="Transparent" />
+            <TextBlock Text="Cut |" />
           </StackPanel>
         </ToggleButton>
 
-        <!-- Trim/Crop Tool Button -->
-        <ToggleButton IsChecked="{Binding IsTrimToolSelected}"
-                      Command="{Binding SelectTrimToolCommand}"
-                      ToolTip.Tip="Trim/Crop Tool">
+        <!-- Horizontal Cut Out Tool Button -->
+        <ToggleButton IsChecked="{Binding IsHorizontalCutOutToolSelected}"
+                      Command="{Binding SelectHorizontalCutOutToolCommand}"
+                      ToolTip.Tip="Remove horizontal slice">
           <StackPanel HorizontalAlignment="Center">
-            <Path Data="M7,3 L7,7 L3,7 M17,17 L17,13 L21,13 M7,7 L17,7 L17,17 L7,17"
-                  Stroke="#D8DEE3"
+            <Path Data="M10,2 L10,18 M8,10 L12,10"
+                  Stroke="#FF6B6B"
                   StrokeThickness="2"
                   Fill="Transparent" />
-            <TextBlock Text="Trim" />
+            <TextBlock Text="Cut -" />
           </StackPanel>
         </ToggleButton>
+
       </StackPanel>
     </Border>
 
@@ -304,11 +335,9 @@
 
       <!-- File Browser Panel -->
       <Border Grid.Row="1"
-              Height="200"
               BorderBrush="Black"
               BorderThickness="0,1,0,0"
-              Background="#F8F8F8"
-              IsVisible="{Binding IsFileBrowserVisible}">
+              Background="#F8F8F8">
         <DockPanel>
           <!-- File Browser Header -->
           <Border DockPanel.Dock="Top"
@@ -318,17 +347,30 @@
                   BorderThickness="0,0,0,1">
             <Grid>
               <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="Auto"/>
               </Grid.ColumnDefinitions>
 
-              <TextBlock Grid.Column="0"
+              <Button Grid.Column="0"
+                      Command="{Binding ToggleFileBrowserCommand}"
+                      ToolTip.Tip="Collapse/Expand Projects Panel"
+                      Padding="4"
+                      Margin="0,0,8,0"
+                      Background="Transparent">
+                <Path Data="{Binding IsFileBrowserVisible, Converter={StaticResource BoolToChevronPathConverter}}"
+                      Fill="#D8DEE3"
+                      Stretch="Uniform"
+                      Width="16" Height="16"/>
+              </Button>
+
+              <TextBlock Grid.Column="1"
                          Text="Projects"
                          FontWeight="Bold"
                          Foreground="White"
                          VerticalAlignment="Center"/>
 
-              <Button Grid.Column="1"
+              <Button Grid.Column="2"
                       Command="{Binding RefreshProjectFilesCommand}"
                       ToolTip.Tip="Refresh"
                       Padding="4"
@@ -348,6 +390,8 @@
                    BorderBrush="#CCCCCC"
 				   ScrollViewer.HorizontalScrollBarVisibility="Visible"
                    BorderThickness="0"
+                   Height="160"
+                   IsVisible="{Binding IsFileBrowserVisible}"
                    DoubleTapped="OnFileListDoubleTapped">
 			  <ListBox.Styles>
 				  <Style Selector="ScrollBar">

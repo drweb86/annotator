@@ -10,6 +10,7 @@ Screenshot annotator software for Windows and Ubuntu.
 - **Border Selection** - Highlight areas with bordered rectangles
 - **Blur** - Obscure sensitive information with blur effects
 - **Selection Tool** - Select portions of the image to copy (Ctrl+C) or delete (Delete key)
+- **Cut out vertical and horizontal slices** - Cut out vertical or horizontal areas of image
 - **Project Management** - Automatic project saving and preview thumbnails
 - **Cross-Platform** - Works on both Windows and Ubuntu
 
@@ -24,7 +25,7 @@ See [Installation and uninstallation on Ubuntu](./Ubuntu.md) for Ubuntu-specific
 ## Technology Stack
 
 - Built with [Avalonia UI](https://avaloniaui.net/) for cross-platform support
-- .NET 8.0
+- .NET 10
 - SkiaSharp for image processing
 
 ## Development

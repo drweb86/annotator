@@ -1,5 +1,6 @@
 using Avalonia.Controls;
 using ScreenshotAnnotator.ViewModels;
+using ScreenshotAnnotator.Services;
 using System;
 using System.ComponentModel;
 using System.Runtime.InteropServices;
@@ -24,6 +25,9 @@ public partial class MainWindow : Window
 
             // Perform autosave
             await viewModel.AutoSaveCurrentProject();
+
+            // Shutdown logging
+            LoggingService.Shutdown();
 
             // Now actually close
             Closing -= OnClosing; // Remove handler to prevent recursion

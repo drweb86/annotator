@@ -1,3 +1,8 @@
+# 2025.01.08
+
+## New Features
+- Vertical and horizontal cut tools.
+
 # 2025.01.07
 
 ## New Features

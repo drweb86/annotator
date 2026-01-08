@@ -6,6 +6,7 @@ using System.Linq;
 using Avalonia.Markup.Xaml;
 using ScreenshotAnnotator.ViewModels;
 using ScreenshotAnnotator.Views;
+using ScreenshotAnnotator.Services;
 
 namespace ScreenshotAnnotator;
 
@@ -13,6 +14,7 @@ public partial class App : Application
 {
     public override void Initialize()
     {
+        LoggingService.Initialize();
         AvaloniaXamlLoader.Load(this);
     }
 
