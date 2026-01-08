@@ -1,7 +1,13 @@
-# 2025.01.08
+# 2025.01.09
 
 ## New Features
 - Vertical and horizontal cut tools.
+
+## Changes
+- (Ubuntu) installation is simplified.
+
+## Bug Fixes
+- (Ubuntu) Screenshot: fails to make screenshots (critical)
 
 # 2025.01.07
 

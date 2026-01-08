@@ -142,8 +142,9 @@ public static class ScreenshotService
                         var fileInfo = new System.IO.FileInfo(tempFile);
                         Logger.Info($"gnome-screenshot succeeded, file size: {fileInfo.Length} bytes");
                         var bitmap = new Bitmap(tempFile);
+                        var writableBitmap = ConvertToWriteableBitmap(bitmap);
                         System.IO.File.Delete(tempFile);
-                        return bitmap;
+                        return writableBitmap;
                     }
                     else
                     {
@@ -185,8 +186,9 @@ public static class ScreenshotService
                         var fileInfo = new System.IO.FileInfo(tempFile);
                         Logger.Info($"scrot succeeded, file size: {fileInfo.Length} bytes");
                         var bitmap = new Bitmap(tempFile);
+                        var writableBitmap = ConvertToWriteableBitmap(bitmap);
                         System.IO.File.Delete(tempFile);
-                        return bitmap;
+                        return writableBitmap;
                     }
                     else
                     {
@@ -228,8 +230,9 @@ public static class ScreenshotService
                         var fileInfo = new System.IO.FileInfo(tempFile);
                         Logger.Info($"import succeeded, file size: {fileInfo.Length} bytes");
                         var bitmap = new Bitmap(tempFile);
+                        var writableBitmap = ConvertToWriteableBitmap(bitmap);
                         System.IO.File.Delete(tempFile);
-                        return bitmap;
+                        return writableBitmap;
                     }
                     else
                     {
@@ -324,6 +327,31 @@ public static class ScreenshotService
 
         Logger.Error("macOS screenshot failed");
         return null;
+    }
+
+    private static WriteableBitmap ConvertToWriteableBitmap(Bitmap source)
+    {
+        var writableBitmap = new WriteableBitmap(
+            new Avalonia.PixelSize(source.PixelSize.Width, source.PixelSize.Height),
+            source.Dpi,
+            Avalonia.Platform.PixelFormat.Bgra8888,
+            Avalonia.Platform.AlphaFormat.Premul
+        );
+
+        using (var sourceBuffer = source.Lock())
+        using (var destBuffer = writableBitmap.Lock())
+        {
+            unsafe
+            {
+                var sourcePtr = (byte*)sourceBuffer.Address;
+                var destPtr = (byte*)destBuffer.Address;
+                var bufferSize = sourceBuffer.RowBytes * source.PixelSize.Height;
+
+                Buffer.MemoryCopy(sourcePtr, destPtr, bufferSize, bufferSize);
+            }
+        }
+
+        return writableBitmap;
     }
 
     #region Windows API
