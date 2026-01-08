@@ -331,6 +331,7 @@ public static class ScreenshotService
 
     private static WriteableBitmap ConvertToWriteableBitmap(Bitmap source)
     {
+        // Create a WriteableBitmap with the same dimensions
         var writableBitmap = new WriteableBitmap(
             new Avalonia.PixelSize(source.PixelSize.Width, source.PixelSize.Height),
             source.Dpi,
@@ -338,17 +339,15 @@ public static class ScreenshotService
             Avalonia.Platform.AlphaFormat.Premul
         );
 
-        using (var sourceBuffer = source.Lock())
+        // Copy pixel data from source bitmap to writable bitmap
         using (var destBuffer = writableBitmap.Lock())
         {
-            unsafe
-            {
-                var sourcePtr = (byte*)sourceBuffer.Address;
-                var destPtr = (byte*)destBuffer.Address;
-                var bufferSize = sourceBuffer.RowBytes * source.PixelSize.Height;
-
-                Buffer.MemoryCopy(sourcePtr, destPtr, bufferSize, bufferSize);
-            }
+            source.CopyPixels(
+                new Avalonia.PixelRect(0, 0, source.PixelSize.Width, source.PixelSize.Height),
+                destBuffer.Address,
+                destBuffer.RowBytes * source.PixelSize.Height,
+                destBuffer.RowBytes
+            );
         }
 
         return writableBitmap;
