@@ -144,8 +144,8 @@ public class ImageEditorCanvas : Control
             AcceptsReturn = true,
             BorderThickness = new Thickness(2),
             BorderBrush = new SolidColorBrush(Color.FromRgb(255, 165, 0)), // Orange border
-            Background = new SolidColorBrush(Color.FromRgb(40, 40, 40)), // Dark gray background
-            Foreground = Brushes.White,
+            // Background = new SolidColorBrush(Color.FromRgb(40, 40, 40)), // Dark gray background
+            // Foreground = Brushes.White,
             Padding = new Thickness(10),
             FontSize = 24,
             TextAlignment = TextAlignment.Center,
@@ -192,8 +192,8 @@ public class ImageEditorCanvas : Control
             AcceptsReturn = true,
             BorderThickness = new Thickness(2),
             BorderBrush = new SolidColorBrush(Color.FromRgb(255, 165, 0)), // Orange border
-            Background = new SolidColorBrush(Color.FromRgb(40, 40, 40)), // Dark gray background
-            Foreground = Brushes.White,
+            // Background = new SolidColorBrush(Color.FromRgb(40, 40, 40)), // Dark gray background
+            // Foreground = Brushes.White,
             Padding = new Thickness(10),
             FontSize = 24,
             TextAlignment = TextAlignment.Center,

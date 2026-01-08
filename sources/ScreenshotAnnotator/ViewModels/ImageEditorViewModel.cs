@@ -259,6 +259,13 @@ public partial class ImageEditorViewModel : ViewModelBase
                     var bitmap = new Bitmap(stream);
                     Image = bitmap;
                     Shapes.Clear();
+
+                    // Auto-save the pasted image to projects folder
+                    var filePath = ProjectManager.GetTimestampedFilePath();
+                    _currentFilePath = filePath;
+                    UpdateCurrentFileNameDisplay();
+                    await SaveCurrentProject();
+                    RefreshProjectFiles();
                 }
             }
 #pragma warning restore CS0618 // Type or member is obsolete

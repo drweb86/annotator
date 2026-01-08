@@ -18,13 +18,13 @@ public partial class MainWindow : Window
     private async void OnClosing(object? sender, WindowClosingEventArgs e)
     {
         // Autosave before closing
-        if (DataContext is ImageEditorViewModel viewModel)
+        if (DataContext is MainViewModel viewModel)
         {
             // Cancel the close temporarily
             e.Cancel = true;
 
             // Perform autosave
-            await viewModel.AutoSaveCurrentProject();
+            await viewModel.ImageEditor.AutoSaveCurrentProject();
 
             // Shutdown logging
             LoggingService.Shutdown();

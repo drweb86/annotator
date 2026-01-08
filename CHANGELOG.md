@@ -7,7 +7,10 @@
 - (Ubuntu) installation is simplified.
 
 ## Bug Fixes
-- (Ubuntu) Screenshot: fails to make screenshots (critical)
+- (Ubuntu) Screenshot: fails to make screenshots (critical).
+- Fix menu visibility on light theme.
+- Fix textbox color on light theme.
+- Fix autosave on window close.
 
 # 2025.01.07
 
