@@ -59,7 +59,7 @@ public partial class ImageEditorViewModel : ViewModelBase
     private bool _isHighlighterToolSelected;
 
     [ObservableProperty]
-    private string _headerInformation = "Screenshot Annotator - V" + CopyrightInfo.Version.ToString(3);
+    private string _headerInformation = "[ Screenshot Annotator - V" + CopyrightInfo.Version.ToString(3) + " ]";
 
     [ObservableProperty]
     private string? _currentFileName;

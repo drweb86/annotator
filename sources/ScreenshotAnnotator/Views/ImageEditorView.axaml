@@ -21,21 +21,7 @@
   <DockPanel>
 	  <DockPanel DockPanel.Dock="Top">
 		  <!-- Menu Bar -->
-		  <Menu DockPanel.Dock="Left" Background="#1C1C1C">
-			  <Menu.Styles>
-				  <Style Selector="MenuItem">
-					  <Setter Property="Foreground" Value="White"/>
-				  </Style>
-				  <Style Selector="MenuItem:selected /template/ ContentPresenter">
-					  <Setter Property="Background" Value="#404040"/>
-				  </Style>
-				  <Style Selector="MenuItem:pointerover /template/ ContentPresenter">
-					  <Setter Property="Background" Value="#404040"/>
-				  </Style>
-				  <Style Selector="Border#PART_SelectedIndicator">
-					  <Setter Property="Background" Value="#404040"/>
-				  </Style>
-			  </Menu.Styles>
+		  <Menu DockPanel.Dock="Left">
 			  <MenuItem x:Name="AboutMenuItem"
 	              Header="{Binding HeaderInformation}">
 				  <MenuItem.Icon>
@@ -52,7 +38,7 @@
 				  </MenuItem.Items>
 			  </MenuItem>
 
-			  <MenuItem Header="_File">
+			  <MenuItem Header="[ File ]">
 				  <MenuItem Header="New..." Command="{Binding NewProjectCommand}" InputGesture="Ctrl+N"/>
 				  <MenuItem Header="Import..." Command="{Binding ImportCommand}" InputGesture="Ctrl+O"/>
 				  <MenuItem Header="Export..." Command="{Binding ExportCommand}" InputGesture="Ctrl+S" />

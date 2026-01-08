@@ -27,6 +27,8 @@ wget https://dot.net/v1/dotnet-install.sh -O /tmp/dotnet-install.sh
 chmod +x /tmp/dotnet-install.sh
 /tmp/dotnet-install.sh --channel 10.0
 sudo apt install dbus-x11
+# We use it to get screenshot.
+sudo apt install gnome-screenshot
 
 echo
 echo Cleaning installation directories
@@ -41,9 +43,6 @@ sudo git clone https://github.com/drweb86/annotator.git ${sourceCodeInstallation
 sudo git config --global --add safe.directory ${sourceCodeInstallationDirectory}
 cd ${sourceCodeInstallationDirectory}
 sudo git fetch --tags
-echo "B"
-sudo git describe --tags --abbrev=0
-echo "C"
 version=$(sudo git describe --tags --abbrev=0 2>/dev/null)
 echo "Latest tag: $version"
 
