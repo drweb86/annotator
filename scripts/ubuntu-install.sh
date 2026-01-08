@@ -3,7 +3,14 @@
 # Fail on first error.
 set -e
 
-version=2025.01.07
+# Default values
+LATEST_SOURCES=false
+for arg in "$@"; do
+    if [[ "$arg" == "--latest" ]]; then
+        echo "Using latest sources! Not sources related to version."
+        LATEST_SOURCES=true
+    fi
+done
 
 sourceCodeInstallationDirectory=/usr/local/src/screenshot-annotator
 binariesInstallationDirectory=/usr/local/screenshot-annotator
@@ -32,11 +39,20 @@ echo Get source code
 echo
 sudo git clone https://github.com/drweb86/annotator.git ${sourceCodeInstallationDirectory}
 cd ${sourceCodeInstallationDirectory}
+version=$(git describe --tags --abbrev=0 2>/dev/null || echo "$version")
+echo "Latest tag: $version"
 
-echo
-echo Update to tag
-echo
-sudo git checkout tags/${version}
+if [ "$LATEST_SOURCES" = true ]; then
+	echo
+	echo Update to main sources
+	echo
+	sudo git checkout -b main
+else
+	echo
+	echo Update to tag
+	echo
+	sudo git checkout tags/${version}
+fi
 
 echo
 echo Building
