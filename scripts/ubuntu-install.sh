@@ -37,8 +37,9 @@ sudo rm -rf ${binariesInstallationDirectory}
 echo
 echo Get source code
 echo
-sudo git clone --tags https://github.com/drweb86/annotator.git ${sourceCodeInstallationDirectory}
+sudo git clone https://github.com/drweb86/annotator.git ${sourceCodeInstallationDirectory}
 cd ${sourceCodeInstallationDirectory}
+sudo git fetch --tags
 version=$(git describe --tags --abbrev=0 2>/dev/null)
 echo "Latest tag: $version"
 
