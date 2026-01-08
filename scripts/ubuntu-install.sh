@@ -38,8 +38,8 @@ echo
 echo Get source code
 echo
 sudo git clone https://github.com/drweb86/annotator.git ${sourceCodeInstallationDirectory}
+sudo git config --global --add safe.directory ${sourceCodeInstallationDirectory}
 cd ${sourceCodeInstallationDirectory}
-echo "A"
 sudo git fetch --tags
 echo "B"
 sudo git describe --tags --abbrev=0
