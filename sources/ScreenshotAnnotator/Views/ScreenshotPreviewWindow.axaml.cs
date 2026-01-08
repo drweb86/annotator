@@ -4,6 +4,7 @@ using Avalonia.Controls.Shapes;
 using Avalonia.Input;
 using ScreenshotAnnotator.ViewModels;
 using System;
+using System.Runtime.InteropServices;
 
 namespace ScreenshotAnnotator.Views;
 
@@ -18,6 +19,17 @@ public partial class ScreenshotPreviewWindow : Window
     public ScreenshotPreviewWindow()
     {
         InitializeComponent();
+
+        // Workaround with full screen not implemented by Avalonia for Ubuntu.
+        if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
+        {
+            var screen = Screens.ScreenFromVisual(this);
+            if (screen is not null)
+            {
+                this.Width = screen.Bounds.Width;
+                this.Height = screen.Bounds.Height;
+            }
+        }
     }
 
     private void Canvas_PointerMoved(object? sender, PointerEventArgs e)

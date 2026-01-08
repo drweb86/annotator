@@ -2,6 +2,7 @@ using Avalonia;
 using Avalonia.Media.Imaging;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
+using ScreenshotAnnotator.Services;
 using System;
 
 namespace ScreenshotAnnotator.ViewModels;
@@ -276,58 +277,74 @@ public partial class ScreenshotPreviewViewModel : ViewModelBase
     [RelayCommand]
     private void Confirm()
     {
-        if (Screenshot == null) return;
-        if (_screenshotWriteable == null) return;
-
-        // Crop the image to the selection by copying pixels
-        var width = (int)SelectionRect.Width;
-        var height = (int)SelectionRect.Height;
-        var startX = (int)SelectionRect.X;
-        var startY = (int)SelectionRect.Y;
-
-        if (startX > 0 && (startX + 1) < _screenshotWriteable.PixelSize.Width)
+        var previewLogger = LoggingService.GetLogger("PreviewLogger");
+        if (Screenshot is null)
         {
-            startX++;
+            previewLogger.Info("Screenshot is null");
+            return;
         }
-        if (startX > 0 && (startX + width + 1) < _screenshotWriteable.PixelSize.Width)
+        if (_screenshotWriteable is null)
         {
-            width++;
-        }
-        if (startY > 0 && (startY + 1) < _screenshotWriteable.PixelSize.Height)
-        {
-            startY++;
-        }
-        if (startY > 0 && (startY + height + 1) < _screenshotWriteable.PixelSize.Height)
-        {
-            height++;
+            previewLogger.Info("_screenshotWriteable is null");
+            return;
         }
 
-        var bitmap = new WriteableBitmap(
-            new PixelSize(width, height),
-            new Vector(96, 96),
-            Avalonia.Platform.PixelFormat.Bgra8888,
-            Avalonia.Platform.AlphaFormat.Premul
-        );
-
-        using (var srcLock = _screenshotWriteable.Lock())
-        using (var dstLock = bitmap.Lock())
+        try
         {
-            unsafe
+            // Crop the image to the selection by copying pixels
+            var width = (int)SelectionRect.Width;
+            var height = (int)SelectionRect.Height;
+            var startX = (int)SelectionRect.X;
+            var startY = (int)SelectionRect.Y;
+
+            if (startX > 0 && (startX + 1) < _screenshotWriteable.PixelSize.Width)
             {
-                var srcPtr = (byte*)srcLock.Address.ToPointer();
-                var dstPtr = (byte*)dstLock.Address.ToPointer();
+                startX++;
+            }
+            if (startX > 0 && (startX + width + 1) < _screenshotWriteable.PixelSize.Width)
+            {
+                width++;
+            }
+            if (startY > 0 && (startY + 1) < _screenshotWriteable.PixelSize.Height)
+            {
+                startY++;
+            }
+            if (startY > 0 && (startY + height + 1) < _screenshotWriteable.PixelSize.Height)
+            {
+                height++;
+            }
 
-                for (int y = 0; y < height; y++)
+            var bitmap = new WriteableBitmap(
+                new PixelSize(width, height),
+                new Vector(96, 96),
+                Avalonia.Platform.PixelFormat.Bgra8888,
+                Avalonia.Platform.AlphaFormat.Premul
+            );
+
+            using (var srcLock = _screenshotWriteable.Lock())
+            using (var dstLock = bitmap.Lock())
+            {
+                unsafe
                 {
-                    int srcIndex = ((startY + y) * srcLock.RowBytes) + (startX * 4);
-                    int dstIndex = y * dstLock.RowBytes;
-                    Buffer.MemoryCopy(srcPtr + srcIndex, dstPtr + dstIndex, width * 4, width * 4);
+                    var srcPtr = (byte*)srcLock.Address.ToPointer();
+                    var dstPtr = (byte*)dstLock.Address.ToPointer();
+
+                    for (int y = 0; y < height; y++)
+                    {
+                        int srcIndex = ((startY + y) * srcLock.RowBytes) + (startX * 4);
+                        int dstIndex = y * dstLock.RowBytes;
+                        Buffer.MemoryCopy(srcPtr + srcIndex, dstPtr + dstIndex, width * 4, width * 4);
+                    }
                 }
             }
-        }
 
-        CroppedImage = bitmap;
-        IsConfirmed = true;
+            CroppedImage = bitmap;
+            IsConfirmed = true;
+        }
+        catch (Exception ex)
+        {
+            previewLogger.Fatal(ex);
+        }
     }
 
     [RelayCommand]
