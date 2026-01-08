@@ -42,9 +42,9 @@ cd ${sourceCodeInstallationDirectory}
 echo "A"
 sudo git fetch --tags
 echo "B"
-git describe --tags --abbrev=0
+sudo git describe --tags --abbrev=0
 echo "C"
-version=$(git describe --tags --abbrev=0 2>/dev/null)
+version=$(sudo git describe --tags --abbrev=0 2>/dev/null)
 echo "Latest tag: $version"
 
 if [ "$LATEST_SOURCES" = true ]; then
