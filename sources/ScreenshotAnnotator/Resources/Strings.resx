@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+
+  <!-- Window Titles -->
+  <data name="Window_Title" xml:space="preserve">
+    <value>Screenshot Annotator - Image Editor</value>
+    <comment>Main window title</comment>
+  </data>
+
+  <!-- Header Information -->
+  <data name="Header_ScreenshotAnnotator" xml:space="preserve">
+    <value>[ Screenshot Annotator - V{0} ]</value>
+    <comment>Header with version. {0} is replaced with version number</comment>
+  </data>
+
+  <data name="Copyright_Text" xml:space="preserve">
+    <value>Annotator {0} : Copyright (c) 2025-{1} Siarhei Kuchuk</value>
+    <comment>Copyright text. {0} is version, {1} is current year</comment>
+  </data>
+
+  <!-- Menu Items -->
+  <data name="Menu_File" xml:space="preserve">
+    <value>[ File ]</value>
+    <comment>File menu label</comment>
+  </data>
+
+  <data name="Menu_New" xml:space="preserve">
+    <value>New...</value>
+    <comment>New file menu item</comment>
+  </data>
+
+  <data name="Menu_Import" xml:space="preserve">
+    <value>Import...</value>
+    <comment>Import menu item</comment>
+  </data>
+
+  <data name="Menu_Export" xml:space="preserve">
+    <value>Export...</value>
+    <comment>Export menu item</comment>
+  </data>
+
+  <data name="Menu_OpenProjectsFolder" xml:space="preserve">
+    <value>Open Projects _Folder</value>
+    <comment>Open projects folder menu item</comment>
+  </data>
+
+  <data name="Menu_OpenLogsFolder" xml:space="preserve">
+    <value>Open _Logs Folder</value>
+    <comment>Open logs folder menu item</comment>
+  </data>
+
+  <data name="Menu_WebSite" xml:space="preserve">
+    <value>Web-Site</value>
+    <comment>Website menu label</comment>
+  </data>
+
+  <data name="Menu_License" xml:space="preserve">
+    <value>License</value>
+    <comment>License menu item</comment>
+  </data>
+
+  <!-- Tool Buttons -->
+  <data name="Tool_New" xml:space="preserve">
+    <value>New</value>
+    <comment>New tool button</comment>
+  </data>
+
+  <data name="Tool_Import" xml:space="preserve">
+    <value>Import</value>
+    <comment>Import tool button</comment>
+  </data>
+
+  <data name="Tool_Screenshot" xml:space="preserve">
+    <value>Screenshot</value>
+    <comment>Screenshot tool button</comment>
+  </data>
+
+  <data name="Tool_Copy" xml:space="preserve">
+    <value>Copy</value>
+    <comment>Copy tool button</comment>
+  </data>
+
+  <data name="Tool_Paste" xml:space="preserve">
+    <value>Paste</value>
+    <comment>Paste tool button</comment>
+  </data>
+
+  <data name="Tool_Select" xml:space="preserve">
+    <value>Select</value>
+    <comment>Select tool button</comment>
+  </data>
+
+  <data name="Tool_Arrow" xml:space="preserve">
+    <value>Arrow</value>
+    <comment>Arrow annotation tool</comment>
+  </data>
+
+  <data name="Tool_Callout" xml:space="preserve">
+    <value>Callout</value>
+    <comment>Callout annotation tool</comment>
+  </data>
+
+  <data name="Tool_Note" xml:space="preserve">
+    <value>Note</value>
+    <comment>Note annotation tool</comment>
+  </data>
+
+  <data name="Tool_Border" xml:space="preserve">
+    <value>Border</value>
+    <comment>Border annotation tool</comment>
+  </data>
+
+  <data name="Tool_Highlight" xml:space="preserve">
+    <value>Highlight</value>
+    <comment>Highlight annotation tool</comment>
+  </data>
+
+  <data name="Tool_Blur" xml:space="preserve">
+    <value>Blur</value>
+    <comment>Blur annotation tool</comment>
+  </data>
+
+  <data name="Tool_CutVertical" xml:space="preserve">
+    <value>Cut |</value>
+    <comment>Cut vertical tool</comment>
+  </data>
+
+  <data name="Tool_CutHorizontal" xml:space="preserve">
+    <value>Cut -</value>
+    <comment>Cut horizontal tool</comment>
+  </data>
+
+  <!-- Tooltips -->
+  <data name="Tooltip_New" xml:space="preserve">
+    <value>Create a new project</value>
+    <comment>Tooltip for New button</comment>
+  </data>
+
+  <data name="Tooltip_Import" xml:space="preserve">
+    <value>Import a project or image</value>
+    <comment>Tooltip for Import button</comment>
+  </data>
+
+  <data name="Tooltip_Screenshot" xml:space="preserve">
+    <value>Take a screenshot</value>
+    <comment>Tooltip for Screenshot button</comment>
+  </data>
+
+  <data name="Tooltip_Copy" xml:space="preserve">
+    <value>Copy to clipboard</value>
+    <comment>Tooltip for Copy button</comment>
+  </data>
+
+  <data name="Tooltip_Paste" xml:space="preserve">
+    <value>Paste from clipboard</value>
+    <comment>Tooltip for Paste button</comment>
+  </data>
+
+  <data name="Tooltip_Select" xml:space="preserve">
+    <value>Select and edit annotations</value>
+    <comment>Tooltip for Select tool</comment>
+  </data>
+
+  <data name="Tooltip_Arrow" xml:space="preserve">
+    <value>Draw an arrow</value>
+    <comment>Tooltip for Arrow tool</comment>
+  </data>
+
+  <data name="Tooltip_Callout" xml:space="preserve">
+    <value>Add a callout</value>
+    <comment>Tooltip for Callout tool</comment>
+  </data>
+
+  <data name="Tooltip_Note" xml:space="preserve">
+    <value>Add a text note</value>
+    <comment>Tooltip for Note tool</comment>
+  </data>
+
+  <data name="Tooltip_Border" xml:space="preserve">
+    <value>Draw a border/rectangle</value>
+    <comment>Tooltip for Border tool</comment>
+  </data>
+
+  <data name="Tooltip_Highlight" xml:space="preserve">
+    <value>Highlight an area</value>
+    <comment>Tooltip for Highlight tool</comment>
+  </data>
+
+  <data name="Tooltip_Blur" xml:space="preserve">
+    <value>Blur an area</value>
+    <comment>Tooltip for Blur tool</comment>
+  </data>
+
+  <data name="Tooltip_CutVertical" xml:space="preserve">
+    <value>Cut image vertically</value>
+    <comment>Tooltip for Cut vertical tool</comment>
+  </data>
+
+  <data name="Tooltip_CutHorizontal" xml:space="preserve">
+    <value>Cut image horizontally</value>
+    <comment>Tooltip for Cut horizontal tool</comment>
+  </data>
+
+  <data name="Tooltip_CollapseExpandPanel" xml:space="preserve">
+    <value>Collapse/Expand Projects Panel</value>
+    <comment>Tooltip for panel toggle button</comment>
+  </data>
+
+  <data name="Tooltip_Refresh" xml:space="preserve">
+    <value>Refresh</value>
+    <comment>Tooltip for Refresh button</comment>
+  </data>
+
+  <!-- Panel Headers -->
+  <data name="Panel_Projects" xml:space="preserve">
+    <value>Projects</value>
+    <comment>Projects panel header</comment>
+  </data>
+
+  <!-- Dialog Titles -->
+  <data name="Dialog_Export_Title" xml:space="preserve">
+    <value>Export</value>
+    <comment>Export dialog title</comment>
+  </data>
+
+  <data name="Dialog_Import_Title" xml:space="preserve">
+    <value>Import Project or Image</value>
+    <comment>Import dialog title</comment>
+  </data>
+
+  <!-- File Type Descriptions -->
+  <data name="FileType_PNG" xml:space="preserve">
+    <value>PNG Image</value>
+    <comment>PNG file type description</comment>
+  </data>
+
+  <data name="FileType_JPEG" xml:space="preserve">
+    <value>JPEG Image</value>
+    <comment>JPEG file type description</comment>
+  </data>
+
+  <data name="FileType_WebP" xml:space="preserve">
+    <value>WebP Image</value>
+    <comment>WebP file type description</comment>
+  </data>
+
+  <data name="FileType_AllSupported" xml:space="preserve">
+    <value>All supported files</value>
+    <comment>All supported files type description</comment>
+  </data>
+
+  <data name="FileType_Images" xml:space="preserve">
+    <value>Image Files</value>
+    <comment>Image files type description</comment>
+  </data>
+
+  <data name="FileType_AllFiles" xml:space="preserve">
+    <value>All Files</value>
+    <comment>All files type description</comment>
+  </data>
+
+  <data name="FileType_AnnotatorProject" xml:space="preserve">
+    <value>Annotator Project</value>
+    <comment>Annotator project file type description</comment>
+  </data>
+
+  <!-- Screenshot Preview Window -->
+  <data name="Screenshot_Instructions" xml:space="preserve">
+    <value>Click and drag to select area, or adjust corner points. Use magnifier for precision. Press OK when ready.</value>
+    <comment>Screenshot preview instructions</comment>
+  </data>
+
+  <data name="Button_OK" xml:space="preserve">
+    <value>OK</value>
+    <comment>OK button text</comment>
+  </data>
+
+  <data name="Button_Cancel" xml:space="preserve">
+    <value>Cancel</value>
+    <comment>Cancel button text</comment>
+  </data>
+
+  <data name="Button_Accept" xml:space="preserve">
+    <value>✓ Accept</value>
+    <comment>Accept button text</comment>
+  </data>
+
+  <data name="Button_CancelX" xml:space="preserve">
+    <value>✕ Cancel</value>
+    <comment>Cancel button text with X symbol</comment>
+  </data>
+
+  <!-- Update Checker -->
+  <data name="Update_NewVersionAvailable" xml:space="preserve">
+    <value>New {0} version is available.</value>
+    <comment>Update notification message. {0} is replaced with version number</comment>
+  </data>
+
+  <data name="Button_Download" xml:space="preserve">
+    <value>Download</value>
+    <comment>Download button text</comment>
+  </data>
+
+  <!-- Context Menu -->
+  <data name="ContextMenu_Open" xml:space="preserve">
+    <value>Open</value>
+    <comment>Context menu - Open project</comment>
+  </data>
+
+  <data name="ContextMenu_Delete" xml:space="preserve">
+    <value>Delete</value>
+    <comment>Context menu - Delete project</comment>
+  </data>
+</root>

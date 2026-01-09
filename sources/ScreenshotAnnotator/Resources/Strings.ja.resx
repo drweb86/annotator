@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+
+  <!-- Japanese Translation -->
+
+  <data name="Window_Title" xml:space="preserve">
+    <value>スクリーンショット注釈 - 画像エディター</value>
+  </data>
+
+  <data name="Header_ScreenshotAnnotator" xml:space="preserve">
+    <value>[ スクリーンショット注釈 - V{0} ]</value>
+  </data>
+
+  <data name="Copyright_Text" xml:space="preserve">
+    <value>注釈ツール {0} : Copyright (c) 2025-{1} Siarhei Kuchuk</value>
+  </data>
+
+  <data name="Menu_File" xml:space="preserve">
+    <value>[ ファイル ]</value>
+  </data>
+
+  <data name="Menu_New" xml:space="preserve">
+    <value>新規...</value>
+  </data>
+
+  <data name="Menu_Import" xml:space="preserve">
+    <value>インポート...</value>
+  </data>
+
+  <data name="Menu_Export" xml:space="preserve">
+    <value>エクスポート...</value>
+  </data>
+
+  <data name="Menu_OpenProjectsFolder" xml:space="preserve">
+    <value>プロジェクトフォルダーを開く(_P)</value>
+  </data>
+
+  <data name="Menu_OpenLogsFolder" xml:space="preserve">
+    <value>ログフォルダーを開く(_L)</value>
+  </data>
+
+  <data name="Menu_WebSite" xml:space="preserve">
+    <value>ウェブサイト</value>
+  </data>
+
+  <data name="Menu_License" xml:space="preserve">
+    <value>ライセンス</value>
+  </data>
+
+  <data name="Tool_New" xml:space="preserve">
+    <value>新規</value>
+  </data>
+
+  <data name="Tool_Import" xml:space="preserve">
+    <value>インポート</value>
+  </data>
+
+  <data name="Tool_Screenshot" xml:space="preserve">
+    <value>スクリーンショット</value>
+  </data>
+
+  <data name="Tool_Copy" xml:space="preserve">
+    <value>コピー</value>
+  </data>
+
+  <data name="Tool_Paste" xml:space="preserve">
+    <value>貼り付け</value>
+  </data>
+
+  <data name="Tool_Select" xml:space="preserve">
+    <value>選択</value>
+  </data>
+
+  <data name="Tool_Arrow" xml:space="preserve">
+    <value>矢印</value>
+  </data>
+
+  <data name="Tool_Callout" xml:space="preserve">
+    <value>吹き出し</value>
+  </data>
+
+  <data name="Tool_Note" xml:space="preserve">
+    <value>メモ</value>
+  </data>
+
+  <data name="Tool_Border" xml:space="preserve">
+    <value>枠線</value>
+  </data>
+
+  <data name="Tool_Highlight" xml:space="preserve">
+    <value>ハイライト</value>
+  </data>
+
+  <data name="Tool_Blur" xml:space="preserve">
+    <value>ぼかし</value>
+  </data>
+
+  <data name="Tool_CutVertical" xml:space="preserve">
+    <value>カット |</value>
+  </data>
+
+  <data name="Tool_CutHorizontal" xml:space="preserve">
+    <value>カット -</value>
+  </data>
+
+  <data name="Tooltip_New" xml:space="preserve">
+    <value>新しいプロジェクトを作成</value>
+  </data>
+
+  <data name="Tooltip_Import" xml:space="preserve">
+    <value>プロジェクトまたは画像をインポート</value>
+  </data>
+
+  <data name="Tooltip_Screenshot" xml:space="preserve">
+    <value>スクリーンショットを撮る</value>
+  </data>
+
+  <data name="Tooltip_Copy" xml:space="preserve">
+    <value>クリップボードにコピー</value>
+  </data>
+
+  <data name="Tooltip_Paste" xml:space="preserve">
+    <value>クリップボードから貼り付け</value>
+  </data>
+
+  <data name="Tooltip_Select" xml:space="preserve">
+    <value>注釈を選択して編集</value>
+  </data>
+
+  <data name="Tooltip_Arrow" xml:space="preserve">
+    <value>矢印を描く</value>
+  </data>
+
+  <data name="Tooltip_Callout" xml:space="preserve">
+    <value>吹き出しを追加</value>
+  </data>
+
+  <data name="Tooltip_Note" xml:space="preserve">
+    <value>テキストメモを追加</value>
+  </data>
+
+  <data name="Tooltip_Border" xml:space="preserve">
+    <value>枠線/矩形を描く</value>
+  </data>
+
+  <data name="Tooltip_Highlight" xml:space="preserve">
+    <value>領域をハイライト</value>
+  </data>
+
+  <data name="Tooltip_Blur" xml:space="preserve">
+    <value>領域をぼかす</value>
+  </data>
+
+  <data name="Tooltip_CutVertical" xml:space="preserve">
+    <value>画像を縦にカット</value>
+  </data>
+
+  <data name="Tooltip_CutHorizontal" xml:space="preserve">
+    <value>画像を横にカット</value>
+  </data>
+
+  <data name="Tooltip_CollapseExpandPanel" xml:space="preserve">
+    <value>プロジェクトパネルを折りたたむ/展開</value>
+  </data>
+
+  <data name="Tooltip_Refresh" xml:space="preserve">
+    <value>更新</value>
+  </data>
+
+  <data name="Panel_Projects" xml:space="preserve">
+    <value>プロジェクト</value>
+  </data>
+
+  <data name="Dialog_Export_Title" xml:space="preserve">
+    <value>エクスポート</value>
+  </data>
+
+  <data name="Dialog_Import_Title" xml:space="preserve">
+    <value>プロジェクトまたは画像をインポート</value>
+  </data>
+
+  <data name="FileType_PNG" xml:space="preserve">
+    <value>PNG 画像</value>
+  </data>
+
+  <data name="FileType_JPEG" xml:space="preserve">
+    <value>JPEG 画像</value>
+  </data>
+
+  <data name="FileType_WebP" xml:space="preserve">
+    <value>WebP 画像</value>
+  </data>
+
+  <data name="FileType_AllSupported" xml:space="preserve">
+    <value>サポートされているすべてのファイル</value>
+  </data>
+
+  <data name="FileType_Images" xml:space="preserve">
+    <value>画像ファイル</value>
+  </data>
+
+  <data name="FileType_AllFiles" xml:space="preserve">
+    <value>すべてのファイル</value>
+  </data>
+
+  <data name="FileType_AnnotatorProject" xml:space="preserve">
+    <value>注釈プロジェクト</value>
+  </data>
+
+  <data name="Screenshot_Instructions" xml:space="preserve">
+    <value>クリックしてドラッグして領域を選択するか、コーナーポイントを調整します。精度を高めるには虫眼鏡を使用します。準備ができたらOKを押します。</value>
+  </data>
+
+  <data name="Button_OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+
+  <data name="Button_Cancel" xml:space="preserve">
+    <value>キャンセル</value>
+  </data>
+
+  <data name="Button_Accept" xml:space="preserve">
+    <value>✓ 承認</value>
+  </data>
+
+  <data name="Button_CancelX" xml:space="preserve">
+    <value>✕ キャンセル</value>
+  </data>
+
+  <data name="Update_NewVersionAvailable" xml:space="preserve">
+    <value>新しいバージョン {0} が利用可能です。</value>
+  </data>
+
+  <data name="Button_Download" xml:space="preserve">
+    <value>ダウンロード</value>
+  </data>
+
+  <data name="ContextMenu_Open" xml:space="preserve">
+    <value>開く</value>
+  </data>
+
+  <data name="ContextMenu_Delete" xml:space="preserve">
+    <value>削除</value>
+  </data>
+</root>

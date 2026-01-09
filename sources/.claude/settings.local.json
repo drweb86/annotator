@@ -4,7 +4,9 @@
       "Bash(dotnet build:*)",
       "Bash(dir:*)",
       "Bash(dotnet:*)",
-      "Bash(cat:*)"
+      "Bash(cat:*)",
+      "Bash(git describe:*)",
+      "Bash(tree:*)"
     ]
   }
 }

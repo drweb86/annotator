@@ -59,7 +59,7 @@ public partial class ImageEditorViewModel : ViewModelBase
     private bool _isHighlighterToolSelected;
 
     [ObservableProperty]
-    private string _headerInformation = "[ Screenshot Annotator - V" + CopyrightInfo.Version.ToString(3) + " ]";
+    private string _headerInformation = LocalizationManager.Instance.GetString("Header_ScreenshotAnnotator", CopyrightInfo.Version.ToString(3));
 
     [ObservableProperty]
     private string? _currentFileName;
@@ -289,12 +289,12 @@ public partial class ImageEditorViewModel : ViewModelBase
 
             var file = await storageProvider.SaveFilePickerAsync(new FilePickerSaveOptions
             {
-                Title = "Export",
+                Title = LocalizationManager.Instance["Dialog_Export_Title"],
                 FileTypeChoices = new[]
                 {
-                    new FilePickerFileType("PNG Image") { Patterns = new[] { "*.png" } },
-                    new FilePickerFileType("JPEG Image") { Patterns = new[] { "*.jpg", "*.jpeg" } },
-                    new FilePickerFileType("WebP Image") { Patterns = new[] { "*.webp" } },
+                    new FilePickerFileType(LocalizationManager.Instance["FileType_PNG"]) { Patterns = new[] { "*.png" } },
+                    new FilePickerFileType(LocalizationManager.Instance["FileType_JPEG"]) { Patterns = new[] { "*.jpg", "*.jpeg" } },
+                    new FilePickerFileType(LocalizationManager.Instance["FileType_WebP"]) { Patterns = new[] { "*.webp" } },
 
                     ProjectManager.PickerFilter,
                 },
@@ -365,21 +365,21 @@ public partial class ImageEditorViewModel : ViewModelBase
 
             var files = await storageProvider.OpenFilePickerAsync(new FilePickerOpenOptions
             {
-                Title = "Import Project or Image",
+                Title = LocalizationManager.Instance["Dialog_Import_Title"],
                 FileTypeFilter = new[]
                 {
-                    new FilePickerFileType("All supported files")
+                    new FilePickerFileType(LocalizationManager.Instance["FileType_AllSupported"])
                     {
 
                         Patterns = new[] { "*.png", "*.jpg", "*.jpeg", "*.webp", "*.bmp", "*" + ProjectManager.Extension }
                     },
                     ProjectManager.PickerFilter,
-                    new FilePickerFileType("Image Files")
+                    new FilePickerFileType(LocalizationManager.Instance["FileType_Images"])
                     {
 
                         Patterns = new[] { "*.png", "*.jpg", "*.jpeg", "*.webp", "*.bmp" }
                     },
-                    new FilePickerFileType("All Files") { Patterns = new[] { "*.*" } }
+                    new FilePickerFileType(LocalizationManager.Instance["FileType_AllFiles"]) { Patterns = new[] { "*.*" } }
                 },
                 AllowMultiple = false
             });

@@ -3,6 +3,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:vm="using:ScreenshotAnnotator.ViewModels"
+        xmlns:local="using:ScreenshotAnnotator.Markup"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="600"
         x:Class="ScreenshotAnnotator.Views.ScreenshotPreviewWindow"
         x:DataType="vm:ScreenshotPreviewViewModel"
@@ -29,14 +30,14 @@
         </Grid.ColumnDefinitions>
 
         <TextBlock Grid.Column="0"
-                   Text="Click and drag to select area, or adjust corner points. Use magnifier for precision. Press OK when ready."
+                   Text="{local:Localize Screenshot_Instructions}"
                    Foreground="White"
                    VerticalAlignment="Center"
                    FontSize="14"/>
 
         <StackPanel Grid.Column="1" Orientation="Horizontal" Spacing="10">
           <Button Command="{Binding ConfirmCommand}"
-                  Content="OK"
+                  Content="{local:Localize Button_OK}"
                   Padding="20,8"
                   Background="#4CAF50"
                   Foreground="White"
@@ -45,7 +46,7 @@
                   CornerRadius="4"/>
 
           <Button Command="{Binding CancelCommand}"
-                  Content="Cancel"
+                  Content="{local:Localize Button_Cancel}"
                   Padding="20,8"
                   Background="#F44336"
                   Foreground="White"
@@ -205,7 +206,7 @@
                       Canvas.Left="{Binding FloatingButtonsPosition.X}"
                       Canvas.Top="{Binding FloatingButtonsPosition.Y}">
             <Button Command="{Binding ConfirmCommand}"
-                    Content="✓ Accept"
+                    Content="{local:Localize Button_Accept}"
                     Padding="16,10"
                     Background="#4CAF50"
                     Foreground="White"
@@ -219,7 +220,7 @@
             </Button>
 
             <Button Command="{Binding CancelCommand}"
-                    Content="✕ Cancel"
+                    Content="{local:Localize Button_CancelX}"
                     Padding="16,10"
                     Background="#F44336"
                     Foreground="White"

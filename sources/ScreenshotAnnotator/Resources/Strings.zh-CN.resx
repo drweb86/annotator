@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+
+  <!-- Chinese (Simplified) Translation -->
+
+  <data name="Window_Title" xml:space="preserve">
+    <value>截图注释器 - 图像编辑器</value>
+  </data>
+
+  <data name="Header_ScreenshotAnnotator" xml:space="preserve">
+    <value>[ 截图注释器 - V{0} ]</value>
+  </data>
+
+  <data name="Copyright_Text" xml:space="preserve">
+    <value>注释器 {0} : Copyright (c) 2025-{1} Siarhei Kuchuk</value>
+  </data>
+
+  <data name="Menu_File" xml:space="preserve">
+    <value>[ 文件 ]</value>
+  </data>
+
+  <data name="Menu_New" xml:space="preserve">
+    <value>新建...</value>
+  </data>
+
+  <data name="Menu_Import" xml:space="preserve">
+    <value>导入...</value>
+  </data>
+
+  <data name="Menu_Export" xml:space="preserve">
+    <value>导出...</value>
+  </data>
+
+  <data name="Menu_OpenProjectsFolder" xml:space="preserve">
+    <value>打开项目文件夹(_P)</value>
+  </data>
+
+  <data name="Menu_OpenLogsFolder" xml:space="preserve">
+    <value>打开日志文件夹(_L)</value>
+  </data>
+
+  <data name="Menu_WebSite" xml:space="preserve">
+    <value>网站</value>
+  </data>
+
+  <data name="Menu_License" xml:space="preserve">
+    <value>许可证</value>
+  </data>
+
+  <data name="Tool_New" xml:space="preserve">
+    <value>新建</value>
+  </data>
+
+  <data name="Tool_Import" xml:space="preserve">
+    <value>导入</value>
+  </data>
+
+  <data name="Tool_Screenshot" xml:space="preserve">
+    <value>截图</value>
+  </data>
+
+  <data name="Tool_Copy" xml:space="preserve">
+    <value>复制</value>
+  </data>
+
+  <data name="Tool_Paste" xml:space="preserve">
+    <value>粘贴</value>
+  </data>
+
+  <data name="Tool_Select" xml:space="preserve">
+    <value>选择</value>
+  </data>
+
+  <data name="Tool_Arrow" xml:space="preserve">
+    <value>箭头</value>
+  </data>
+
+  <data name="Tool_Callout" xml:space="preserve">
+    <value>标注</value>
+  </data>
+
+  <data name="Tool_Note" xml:space="preserve">
+    <value>注释</value>
+  </data>
+
+  <data name="Tool_Border" xml:space="preserve">
+    <value>边框</value>
+  </data>
+
+  <data name="Tool_Highlight" xml:space="preserve">
+    <value>高亮</value>
+  </data>
+
+  <data name="Tool_Blur" xml:space="preserve">
+    <value>模糊</value>
+  </data>
+
+  <data name="Tool_CutVertical" xml:space="preserve">
+    <value>裁剪 |</value>
+  </data>
+
+  <data name="Tool_CutHorizontal" xml:space="preserve">
+    <value>裁剪 -</value>
+  </data>
+
+  <data name="Tooltip_New" xml:space="preserve">
+    <value>创建新项目</value>
+  </data>
+
+  <data name="Tooltip_Import" xml:space="preserve">
+    <value>导入项目或图像</value>
+  </data>
+
+  <data name="Tooltip_Screenshot" xml:space="preserve">
+    <value>截取屏幕</value>
+  </data>
+
+  <data name="Tooltip_Copy" xml:space="preserve">
+    <value>复制到剪贴板</value>
+  </data>
+
+  <data name="Tooltip_Paste" xml:space="preserve">
+    <value>从剪贴板粘贴</value>
+  </data>
+
+  <data name="Tooltip_Select" xml:space="preserve">
+    <value>选择和编辑注释</value>
+  </data>
+
+  <data name="Tooltip_Arrow" xml:space="preserve">
+    <value>绘制箭头</value>
+  </data>
+
+  <data name="Tooltip_Callout" xml:space="preserve">
+    <value>添加标注</value>
+  </data>
+
+  <data name="Tooltip_Note" xml:space="preserve">
+    <value>添加文本注释</value>
+  </data>
+
+  <data name="Tooltip_Border" xml:space="preserve">
+    <value>绘制边框/矩形</value>
+  </data>
+
+  <data name="Tooltip_Highlight" xml:space="preserve">
+    <value>高亮区域</value>
+  </data>
+
+  <data name="Tooltip_Blur" xml:space="preserve">
+    <value>模糊区域</value>
+  </data>
+
+  <data name="Tooltip_CutVertical" xml:space="preserve">
+    <value>垂直裁剪图像</value>
+  </data>
+
+  <data name="Tooltip_CutHorizontal" xml:space="preserve">
+    <value>水平裁剪图像</value>
+  </data>
+
+  <data name="Tooltip_CollapseExpandPanel" xml:space="preserve">
+    <value>折叠/展开项目面板</value>
+  </data>
+
+  <data name="Tooltip_Refresh" xml:space="preserve">
+    <value>刷新</value>
+  </data>
+
+  <data name="Panel_Projects" xml:space="preserve">
+    <value>项目</value>
+  </data>
+
+  <data name="Dialog_Export_Title" xml:space="preserve">
+    <value>导出</value>
+  </data>
+
+  <data name="Dialog_Import_Title" xml:space="preserve">
+    <value>导入项目或图像</value>
+  </data>
+
+  <data name="FileType_PNG" xml:space="preserve">
+    <value>PNG 图像</value>
+  </data>
+
+  <data name="FileType_JPEG" xml:space="preserve">
+    <value>JPEG 图像</value>
+  </data>
+
+  <data name="FileType_WebP" xml:space="preserve">
+    <value>WebP 图像</value>
+  </data>
+
+  <data name="FileType_AllSupported" xml:space="preserve">
+    <value>所有支持的文件</value>
+  </data>
+
+  <data name="FileType_Images" xml:space="preserve">
+    <value>图像文件</value>
+  </data>
+
+  <data name="FileType_AllFiles" xml:space="preserve">
+    <value>所有文件</value>
+  </data>
+
+  <data name="FileType_AnnotatorProject" xml:space="preserve">
+    <value>注释器项目</value>
+  </data>
+
+  <data name="Screenshot_Instructions" xml:space="preserve">
+    <value>单击并拖动以选择区域，或调整角点。使用放大镜获得精确度。准备好后按确定。</value>
+  </data>
+
+  <data name="Button_OK" xml:space="preserve">
+    <value>确定</value>
+  </data>
+
+  <data name="Button_Cancel" xml:space="preserve">
+    <value>取消</value>
+  </data>
+
+  <data name="Button_Accept" xml:space="preserve">
+    <value>✓ 接受</value>
+  </data>
+
+  <data name="Button_CancelX" xml:space="preserve">
+    <value>✕ 取消</value>
+  </data>
+
+  <data name="Update_NewVersionAvailable" xml:space="preserve">
+    <value>新版本 {0} 可用。</value>
+  </data>
+
+  <data name="Button_Download" xml:space="preserve">
+    <value>下载</value>
+  </data>
+
+  <data name="ContextMenu_Open" xml:space="preserve">
+    <value>打开</value>
+  </data>
+
+  <data name="ContextMenu_Delete" xml:space="preserve">
+    <value>删除</value>
+  </data>
+</root>

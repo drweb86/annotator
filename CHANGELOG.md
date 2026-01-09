@@ -1,3 +1,10 @@
+﻿# 2025.01.10
+
+## New Features
+- Translation to Russian, Spanish (Español), Chinese Simplified (简体中文),
+German (Deutsch), Japanese (日本語),
+Portuguese Brazilian (Português do Brasil), Korean (한국어)
+
 # 2025.01.09
 
 ## New Features

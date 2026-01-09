@@ -17,6 +17,6 @@ public static class CopyrightInfo
                 .GetName()
             .Version ?? throw new InvalidProgramException("Failed to get assembly from !");
 
-        Copyright = string.Format(CultureInfo.CurrentUICulture, "Annotator {0} : Copyright (c) 2025-{1} Siarhei Kuchuk", Version, DateTime.Now.Year);
+        Copyright = LocalizationManager.Instance.GetString("Copyright_Text", Version, DateTime.Now.Year);
     }
 }

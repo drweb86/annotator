@@ -1,6 +1,8 @@
-# Screenshot Annotator
+﻿# Screenshot Annotator
 
 Screenshot annotator software for Windows and Ubuntu.
+
+Localized to Russian, Spanish (Español), Chinese Simplified (简体中文), German (Deutsch), Japanese (日本語), Portuguese Brazilian (Português do Brasil), Korean (한국어) languages.
 
 ## Features
 
@@ -11,6 +13,7 @@ Screenshot annotator software for Windows and Ubuntu.
 - **Blur** - Obscure sensitive information with blur effects
 - **Selection Tool** - Select portions of the image to copy (Ctrl+C) or delete (Delete key)
 - **Cut out vertical and horizontal slices** - Cut out vertical or horizontal areas of image
+- **Highlighter** - Highlights areas of interest
 - **Project Management** - Automatic project saving and preview thumbnails
 - **Cross-Platform** - Works on both Windows and Ubuntu
 

@@ -22,7 +22,7 @@ public static class ProjectManager
 {
     private static string? _projectsFolder;
     public const string Extension = ".anp";
-    public static FilePickerFileType PickerFilter => new FilePickerFileType("Annotator Project") { Patterns = ["*" + Extension ] };
+    public static FilePickerFileType PickerFilter => new FilePickerFileType(LocalizationManager.Instance["FileType_AnnotatorProject"]) { Patterns = ["*" + Extension ] };
 
     public static string GetProjectsFolder()
     {

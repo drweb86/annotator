@@ -15,6 +15,10 @@ public partial class App : Application
     public override void Initialize()
     {
         LoggingService.Initialize();
+
+        // Initialize localization manager
+        _ = LocalizationManager.Instance;
+
         AvaloniaXamlLoader.Load(this);
     }
 

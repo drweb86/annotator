@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+
+  <!-- Korean Translation -->
+
+  <data name="Window_Title" xml:space="preserve">
+    <value>스크린샷 주석기 - 이미지 편집기</value>
+  </data>
+
+  <data name="Header_ScreenshotAnnotator" xml:space="preserve">
+    <value>[ 스크린샷 주석기 - V{0} ]</value>
+  </data>
+
+  <data name="Copyright_Text" xml:space="preserve">
+    <value>주석기 {0} : Copyright (c) 2025-{1} Siarhei Kuchuk</value>
+  </data>
+
+  <data name="Menu_File" xml:space="preserve">
+    <value>[ 파일 ]</value>
+  </data>
+
+  <data name="Menu_New" xml:space="preserve">
+    <value>새로 만들기...</value>
+  </data>
+
+  <data name="Menu_Import" xml:space="preserve">
+    <value>가져오기...</value>
+  </data>
+
+  <data name="Menu_Export" xml:space="preserve">
+    <value>내보내기...</value>
+  </data>
+
+  <data name="Menu_OpenProjectsFolder" xml:space="preserve">
+    <value>프로젝트 폴더 열기(_P)</value>
+  </data>
+
+  <data name="Menu_OpenLogsFolder" xml:space="preserve">
+    <value>로그 폴더 열기(_L)</value>
+  </data>
+
+  <data name="Menu_WebSite" xml:space="preserve">
+    <value>웹사이트</value>
+  </data>
+
+  <data name="Menu_License" xml:space="preserve">
+    <value>라이선스</value>
+  </data>
+
+  <data name="Tool_New" xml:space="preserve">
+    <value>새로 만들기</value>
+  </data>
+
+  <data name="Tool_Import" xml:space="preserve">
+    <value>가져오기</value>
+  </data>
+
+  <data name="Tool_Screenshot" xml:space="preserve">
+    <value>스크린샷</value>
+  </data>
+
+  <data name="Tool_Copy" xml:space="preserve">
+    <value>복사</value>
+  </data>
+
+  <data name="Tool_Paste" xml:space="preserve">
+    <value>붙여넣기</value>
+  </data>
+
+  <data name="Tool_Select" xml:space="preserve">
+    <value>선택</value>
+  </data>
+
+  <data name="Tool_Arrow" xml:space="preserve">
+    <value>화살표</value>
+  </data>
+
+  <data name="Tool_Callout" xml:space="preserve">
+    <value>콜아웃</value>
+  </data>
+
+  <data name="Tool_Note" xml:space="preserve">
+    <value>메모</value>
+  </data>
+
+  <data name="Tool_Border" xml:space="preserve">
+    <value>테두리</value>
+  </data>
+
+  <data name="Tool_Highlight" xml:space="preserve">
+    <value>하이라이트</value>
+  </data>
+
+  <data name="Tool_Blur" xml:space="preserve">
+    <value>흐림</value>
+  </data>
+
+  <data name="Tool_CutVertical" xml:space="preserve">
+    <value>자르기 |</value>
+  </data>
+
+  <data name="Tool_CutHorizontal" xml:space="preserve">
+    <value>자르기 -</value>
+  </data>
+
+  <data name="Tooltip_New" xml:space="preserve">
+    <value>새 프로젝트 만들기</value>
+  </data>
+
+  <data name="Tooltip_Import" xml:space="preserve">
+    <value>프로젝트 또는 이미지 가져오기</value>
+  </data>
+
+  <data name="Tooltip_Screenshot" xml:space="preserve">
+    <value>스크린샷 캡처</value>
+  </data>
+
+  <data name="Tooltip_Copy" xml:space="preserve">
+    <value>클립보드에 복사</value>
+  </data>
+
+  <data name="Tooltip_Paste" xml:space="preserve">
+    <value>클립보드에서 붙여넣기</value>
+  </data>
+
+  <data name="Tooltip_Select" xml:space="preserve">
+    <value>주석 선택 및 편집</value>
+  </data>
+
+  <data name="Tooltip_Arrow" xml:space="preserve">
+    <value>화살표 그리기</value>
+  </data>
+
+  <data name="Tooltip_Callout" xml:space="preserve">
+    <value>콜아웃 추가</value>
+  </data>
+
+  <data name="Tooltip_Note" xml:space="preserve">
+    <value>텍스트 메모 추가</value>
+  </data>
+
+  <data name="Tooltip_Border" xml:space="preserve">
+    <value>테두리/사각형 그리기</value>
+  </data>
+
+  <data name="Tooltip_Highlight" xml:space="preserve">
+    <value>영역 하이라이트</value>
+  </data>
+
+  <data name="Tooltip_Blur" xml:space="preserve">
+    <value>영역 흐리게</value>
+  </data>
+
+  <data name="Tooltip_CutVertical" xml:space="preserve">
+    <value>이미지를 세로로 자르기</value>
+  </data>
+
+  <data name="Tooltip_CutHorizontal" xml:space="preserve">
+    <value>이미지를 가로로 자르기</value>
+  </data>
+
+  <data name="Tooltip_CollapseExpandPanel" xml:space="preserve">
+    <value>프로젝트 패널 접기/펼치기</value>
+  </data>
+
+  <data name="Tooltip_Refresh" xml:space="preserve">
+    <value>새로고침</value>
+  </data>
+
+  <data name="Panel_Projects" xml:space="preserve">
+    <value>프로젝트</value>
+  </data>
+
+  <data name="Dialog_Export_Title" xml:space="preserve">
+    <value>내보내기</value>
+  </data>
+
+  <data name="Dialog_Import_Title" xml:space="preserve">
+    <value>프로젝트 또는 이미지 가져오기</value>
+  </data>
+
+  <data name="FileType_PNG" xml:space="preserve">
+    <value>PNG 이미지</value>
+  </data>
+
+  <data name="FileType_JPEG" xml:space="preserve">
+    <value>JPEG 이미지</value>
+  </data>
+
+  <data name="FileType_WebP" xml:space="preserve">
+    <value>WebP 이미지</value>
+  </data>
+
+  <data name="FileType_AllSupported" xml:space="preserve">
+    <value>지원되는 모든 파일</value>
+  </data>
+
+  <data name="FileType_Images" xml:space="preserve">
+    <value>이미지 파일</value>
+  </data>
+
+  <data name="FileType_AllFiles" xml:space="preserve">
+    <value>모든 파일</value>
+  </data>
+
+  <data name="FileType_AnnotatorProject" xml:space="preserve">
+    <value>주석기 프로젝트</value>
+  </data>
+
+  <data name="Screenshot_Instructions" xml:space="preserve">
+    <value>클릭하고 드래그하여 영역을 선택하거나 모서리 포인트를 조정합니다. 정밀도를 높이려면 돋보기를 사용하세요. 준비가 되면 확인을 누르세요.</value>
+  </data>
+
+  <data name="Button_OK" xml:space="preserve">
+    <value>확인</value>
+  </data>
+
+  <data name="Button_Cancel" xml:space="preserve">
+    <value>취소</value>
+  </data>
+
+  <data name="Button_Accept" xml:space="preserve">
+    <value>✓ 수락</value>
+  </data>
+
+  <data name="Button_CancelX" xml:space="preserve">
+    <value>✕ 취소</value>
+  </data>
+
+  <data name="Update_NewVersionAvailable" xml:space="preserve">
+    <value>새 버전 {0}을(를) 사용할 수 있습니다.</value>
+  </data>
+
+  <data name="Button_Download" xml:space="preserve">
+    <value>다운로드</value>
+  </data>
+
+  <data name="ContextMenu_Open" xml:space="preserve">
+    <value>열기</value>
+  </data>
+
+  <data name="ContextMenu_Delete" xml:space="preserve">
+    <value>삭제</value>
+  </data>
+</root>

@@ -6,6 +6,7 @@
              xmlns:controls="using:ScreenshotAnnotator.Controls"
 			 xmlns:views="using:ScreenshotAnnotator.Views"
 			 xmlns:converters="using:ScreenshotAnnotator.Converters"
+			 xmlns:local="using:ScreenshotAnnotator.Markup"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="600"
              x:Class="ScreenshotAnnotator.Views.ImageEditorView"
              x:DataType="vm:ImageEditorViewModel">
@@ -28,23 +29,23 @@
 					  <Image Source="../Assets/App.png" />
 				  </MenuItem.Icon>
 				  <MenuItem.Items>
-					  <MenuItem Header="Web-Site"
+					  <MenuItem Header="{local:Localize Menu_WebSite}"
 								Command="{Binding OpenWebsiteCommand}">
 						  <MenuItem.Icon>
 							  <Image Source="../Assets/App.png" />
 						  </MenuItem.Icon>
 					  </MenuItem>
-					  <MenuItem Header="License" Command="{Binding OpenLicenseCommand}" />
+					  <MenuItem Header="{local:Localize Menu_License}" Command="{Binding OpenLicenseCommand}" />
 				  </MenuItem.Items>
 			  </MenuItem>
 
-			  <MenuItem Header="[ File ]">
-				  <MenuItem Header="New..." Command="{Binding NewProjectCommand}" InputGesture="Ctrl+N"/>
-				  <MenuItem Header="Import..." Command="{Binding ImportCommand}" InputGesture="Ctrl+O"/>
-				  <MenuItem Header="Export..." Command="{Binding ExportCommand}" InputGesture="Ctrl+S" />
+			  <MenuItem Header="{local:Localize Menu_File}">
+				  <MenuItem Header="{local:Localize Menu_New}" Command="{Binding NewProjectCommand}" InputGesture="Ctrl+N"/>
+				  <MenuItem Header="{local:Localize Menu_Import}" Command="{Binding ImportCommand}" InputGesture="Ctrl+O"/>
+				  <MenuItem Header="{local:Localize Menu_Export}" Command="{Binding ExportCommand}" InputGesture="Ctrl+S" />
 				  <Separator/>
-				  <MenuItem Header="Open Projects _Folder" Command="{Binding OpenProjectsFolderCommand}"/>
-				  <MenuItem Header="Open _Logs Folder" Command="{Binding OpenLogsFolderCommand}"/>
+				  <MenuItem Header="{local:Localize Menu_OpenProjectsFolder}" Command="{Binding OpenProjectsFolderCommand}"/>
+				  <MenuItem Header="{local:Localize Menu_OpenLogsFolder}" Command="{Binding OpenLogsFolderCommand}"/>
 			  </MenuItem>
 		  </Menu>
 
@@ -106,32 +107,32 @@
 
         <!-- New Project Button -->
         <Button Command="{Binding NewProjectCommand}"
-                ToolTip.Tip="New Project (Ctrl+N)">
+                ToolTip.Tip="{local:Localize Tooltip_New}">
           <StackPanel HorizontalAlignment="Center">
             <Path Data="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
                   Fill="#4CAF50" />
-            <TextBlock Text="New" />
+            <TextBlock Text="{local:Localize Tool_New}" />
           </StackPanel>
         </Button>
 
         <!-- Import Button -->
         <Button Command="{Binding ImportCommand}"
-                ToolTip.Tip="Import Project or Image (Ctrl+O)">
+                ToolTip.Tip="{local:Localize Tooltip_Import}">
           <StackPanel HorizontalAlignment="Center">
             <Path Data="M5,20H19V18H5M19,9H15V3H9V9H5L12,16L19,9Z"
                   Fill="#2196F3" />
-            <TextBlock Text="Import" />
+            <TextBlock Text="{local:Localize Tool_Import}" />
           </StackPanel>
         </Button>
 
         <!-- Take Screenshot Button -->
         <Button Command="{Binding TakeScreenshotCommand}"
-                ToolTip.Tip="Take Screenshot (F12)">
+                ToolTip.Tip="{local:Localize Tooltip_Screenshot}">
           <StackPanel HorizontalAlignment="Center">
             <Ellipse Fill="#F44336"
                      Stroke="#C62828"
                      StrokeThickness="2"/>
-            <TextBlock Text="Screenshot" />
+            <TextBlock Text="{local:Localize Tool_Screenshot}" />
           </StackPanel>
         </Button>
 
@@ -140,21 +141,21 @@
 
 		  <!-- Copy to Clipboard Button -->
 		  <Button Command="{Binding CopyToClipboardCommand}"
-				  ToolTip.Tip="Copy Result to Clipboard (Ctrl+C)">
+				  ToolTip.Tip="{local:Localize Tooltip_Copy}">
 			  <StackPanel HorizontalAlignment="Center">
 				  <Path Data="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"
 						Fill="#1976D2" />
-				  <TextBlock Text="Copy" />
+				  <TextBlock Text="{local:Localize Tool_Copy}" />
 			  </StackPanel>
 		  </Button>
-		  
+
         <!-- Paste from Clipboard Button -->
         <Button Command="{Binding PasteFromClipboardCommand}"
-                ToolTip.Tip="Paste Image from Clipboard (Ctrl+V)">
+                ToolTip.Tip="{local:Localize Tooltip_Paste}">
           <StackPanel HorizontalAlignment="Center">
             <Path Data="M19,20H5V4H7V7H17V4H19M12,2A1,1 0 0,1 13,3A1,1 0 0,1 12,4A1,1 0 0,1 11,3A1,1 0 0,1 12,2M19,2H14.82C14.4,0.84 13.3,0 12,0C10.7,0 9.6,0.84 9.18,2H5A2,2 0 0,0 3,4V20A2,2 0 0,0 5,22H19A2,2 0 0,0 21,20V4A2,2 0 0,0 19,2Z"
                   Fill="#1976D2" />
-            <TextBlock Text="Paste" />
+            <TextBlock Text="{local:Localize Tool_Paste}" />
           </StackPanel>
         </Button>
 
@@ -164,76 +165,76 @@
         <!-- Select/Move Tool Button -->
         <ToggleButton IsChecked="{Binding IsSelectToolSelected}"
                       Command="{Binding SelectSelectToolCommand}"
-                      ToolTip.Tip="Select and Move Tool (Click and drag shapes to move them)">
+                      ToolTip.Tip="{local:Localize Tooltip_Select}">
           <StackPanel HorizontalAlignment="Center">
             <Path Data="M2,2 L2,18 L7,13 L10,20 L13,19 L10,12 L18,12 Z"
                   Fill="#D8DEE3" />
-            <TextBlock Text="Select" />
+            <TextBlock Text="{local:Localize Tool_Select}" />
           </StackPanel>
         </ToggleButton>
 
 		  <!-- Selector Tool Button -->
 		  <ToggleButton IsChecked="{Binding IsSelectorToolSelected}"
 						Command="{Binding SelectSelectorToolCommand}"
-						ToolTip.Tip="Selector Tool (Ctrl+C to copy, Delete to remove)">
+						ToolTip.Tip="{local:Localize Tooltip_Select}">
 			  <StackPanel HorizontalAlignment="Center">
 				  <Path Data="M2,2 L2,18 M2,2 L18,2 M18,2 L18,18 M2,18 L18,18"
 						Stroke="#D8DEE3"
 						StrokeThickness="2"
 						StrokeDashArray="2,2" />
-				  <TextBlock Text="Select" />
+				  <TextBlock Text="{local:Localize Tool_Select}" />
 			  </StackPanel>
 		  </ToggleButton>
 
 		  <!-- Arrow Tool Button -->
         <ToggleButton IsChecked="{Binding IsArrowToolSelected}"
                       Command="{Binding SelectArrowToolCommand}"
-                      ToolTip.Tip="Arrow Tool">
+                      ToolTip.Tip="{local:Localize Tooltip_Arrow}">
           <StackPanel HorizontalAlignment="Center">
             <Path Data="M2,2 L18,10 L10,12 L8,20 Z M10,12 L18,18"
                   Stroke="#D8DEE3"
                   StrokeThickness="2"
                   Fill="Transparent" />
-            <TextBlock Text="Arrow" />
+            <TextBlock Text="{local:Localize Tool_Arrow}" />
           </StackPanel>
         </ToggleButton>
 
         <!-- Callout Tool Button -->
         <ToggleButton IsChecked="{Binding IsCalloutToolSelected}"
                       Command="{Binding SelectCalloutToolCommand}"
-                      ToolTip.Tip="Callout Tool">
+                      ToolTip.Tip="{local:Localize Tooltip_Callout}">
           <StackPanel HorizontalAlignment="Center">
             <Path Data="M4,4 L16,4 L16,12 L10,12 L8,16 L8,12 L4,12 Z"
                   Stroke="#D8DEE3"
                   StrokeThickness="2"
                   Fill="Transparent" />
-            <TextBlock Text="Callout" />
+            <TextBlock Text="{local:Localize Tool_Callout}" />
           </StackPanel>
         </ToggleButton>
 
         <!-- Callout No Arrow Tool Button -->
         <ToggleButton IsChecked="{Binding IsCalloutNoArrowToolSelected}"
                       Command="{Binding SelectCalloutNoArrowToolCommand}"
-                      ToolTip.Tip="Callout without Arrow Tool">
+                      ToolTip.Tip="{local:Localize Tooltip_Note}">
           <StackPanel HorizontalAlignment="Center">
             <Path Data="M4,4 L16,4 L16,12 L4,12 Z"
                   Stroke="#D8DEE3"
                   StrokeThickness="2"
                   Fill="Transparent" />
-            <TextBlock Text="Note" />
+            <TextBlock Text="{local:Localize Tool_Note}" />
           </StackPanel>
         </ToggleButton>
 
         <!-- Bordered Rectangle Tool Button -->
         <ToggleButton IsChecked="{Binding IsBorderedRectangleToolSelected}"
                       Command="{Binding SelectBorderedRectangleToolCommand}"
-                      ToolTip.Tip="Bordered Rectangle Tool">
+                      ToolTip.Tip="{local:Localize Tooltip_Border}">
           <StackPanel HorizontalAlignment="Center">
             <Path Data="M2,2 L18,2 L18,18 L2,18 Z"
                   Stroke="#D8DEE3"
                   StrokeThickness="2"
                   Fill="Transparent" />
-            <TextBlock Text="Border" />
+            <TextBlock Text="{local:Localize Tool_Border}" />
           </StackPanel>
         </ToggleButton>
 
@@ -241,26 +242,26 @@
 		  <!-- Highlighter Tool Button -->
 		  <ToggleButton IsChecked="{Binding IsHighlighterToolSelected}"
 						Command="{Binding SelectHighlighterToolCommand}"
-						ToolTip.Tip="Highlighter Tool (Draw yellow transparent rectangles)">
+						ToolTip.Tip="{local:Localize Tooltip_Highlight}">
 			  <StackPanel HorizontalAlignment="Center">
 				  <Path Data="M2,2 L18,2 L18,18 L2,18 Z"
 						Stroke="Transparent"
 						StrokeThickness="0"
 						Fill="#80FFFF00" />
-				  <TextBlock Text="Highlight" />
+				  <TextBlock Text="{local:Localize Tool_Highlight}" />
 			  </StackPanel>
 		  </ToggleButton>
 
         <!-- Blur Rectangle Tool Button -->
         <ToggleButton IsChecked="{Binding IsBlurRectangleToolSelected}"
                       Command="{Binding SelectBlurRectangleToolCommand}"
-                      ToolTip.Tip="Blur Rectangle Tool">
+                      ToolTip.Tip="{local:Localize Tooltip_Blur}">
           <StackPanel HorizontalAlignment="Center">
             <Path Data="M2,2 L18,2 L18,18 L2,18 Z M5,5 L15,5 L15,15 L5,15 Z"
                   Stroke="#D8DEE3"
                   StrokeThickness="2"
                   Fill="#80808080" />
-            <TextBlock Text="Blur" />
+            <TextBlock Text="{local:Localize Tool_Blur}" />
           </StackPanel>
         </ToggleButton>
 
@@ -270,26 +271,26 @@
         <!-- Vertical Cut Out Tool Button -->
         <ToggleButton IsChecked="{Binding IsVerticalCutOutToolSelected}"
                       Command="{Binding SelectVerticalCutOutToolCommand}"
-                      ToolTip.Tip="Remove vertical slice">
+                      ToolTip.Tip="{local:Localize Tooltip_CutVertical}">
           <StackPanel HorizontalAlignment="Center">
             <Path Data="M2,10 L18,10 M10,8 L10,12"
                   Stroke="#FF6B6B"
                   StrokeThickness="2"
                   Fill="Transparent" />
-            <TextBlock Text="Cut |" />
+            <TextBlock Text="{local:Localize Tool_CutVertical}" />
           </StackPanel>
         </ToggleButton>
 
         <!-- Horizontal Cut Out Tool Button -->
         <ToggleButton IsChecked="{Binding IsHorizontalCutOutToolSelected}"
                       Command="{Binding SelectHorizontalCutOutToolCommand}"
-                      ToolTip.Tip="Remove horizontal slice">
+                      ToolTip.Tip="{local:Localize Tooltip_CutHorizontal}">
           <StackPanel HorizontalAlignment="Center">
             <Path Data="M10,2 L10,18 M8,10 L12,10"
                   Stroke="#FF6B6B"
                   StrokeThickness="2"
                   Fill="Transparent" />
-            <TextBlock Text="Cut -" />
+            <TextBlock Text="{local:Localize Tool_CutHorizontal}" />
           </StackPanel>
         </ToggleButton>
 
@@ -340,7 +341,7 @@
 
               <Button Grid.Column="0"
                       Command="{Binding ToggleFileBrowserCommand}"
-                      ToolTip.Tip="Collapse/Expand Projects Panel"
+                      ToolTip.Tip="{local:Localize Tooltip_CollapseExpandPanel}"
                       Padding="4"
                       Margin="0,0,8,0"
                       Background="Transparent">
@@ -351,14 +352,14 @@
               </Button>
 
               <TextBlock Grid.Column="1"
-                         Text="Projects"
+                         Text="{local:Localize Panel_Projects}"
                          FontWeight="Bold"
                          Foreground="White"
                          VerticalAlignment="Center"/>
 
               <Button Grid.Column="2"
                       Command="{Binding RefreshProjectFilesCommand}"
-                      ToolTip.Tip="Refresh"
+                      ToolTip.Tip="{local:Localize Tooltip_Refresh}"
                       Padding="4"
                       Background="Transparent">
                 <Path Data="M17.65,6.35C16.2,4.9 14.21,4 12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20C15.73,20 18.84,17.45 19.73,14H17.65C16.83,16.33 14.61,18 12,18A6,6 0 0,1 6,12A6,6 0 0,1 12,6C13.66,6 15.14,6.69 16.22,7.78L13,11H20V4L17.65,6.35Z"
@@ -417,8 +418,8 @@
 							   Stretch="Uniform">
 							<Image.ContextMenu>
 								<ContextMenu>
-									<MenuItem Header="Open" Command="{Binding $parent[ListBox].((vm:ImageEditorViewModel)DataContext).OpenProjectFileCommand}" CommandParameter="{Binding}"/>
-									<MenuItem Header="Delete" Command="{Binding $parent[ListBox].((vm:ImageEditorViewModel)DataContext).DeleteProjectFileCommand}" CommandParameter="{Binding}"/>
+									<MenuItem Header="{local:Localize ContextMenu_Open}" Command="{Binding $parent[ListBox].((vm:ImageEditorViewModel)DataContext).OpenProjectFileCommand}" CommandParameter="{Binding}"/>
+									<MenuItem Header="{local:Localize ContextMenu_Delete}" Command="{Binding $parent[ListBox].((vm:ImageEditorViewModel)DataContext).DeleteProjectFileCommand}" CommandParameter="{Binding}"/>
 								</ContextMenu>
 							</Image.ContextMenu>
 						</Image>

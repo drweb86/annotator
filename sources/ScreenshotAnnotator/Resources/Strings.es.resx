@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+
+  <!-- Spanish Translation -->
+
+  <data name="Window_Title" xml:space="preserve">
+    <value>Anotador de Capturas - Editor de Imágenes</value>
+  </data>
+
+  <data name="Header_ScreenshotAnnotator" xml:space="preserve">
+    <value>[ Anotador de Capturas - V{0} ]</value>
+  </data>
+
+  <data name="Copyright_Text" xml:space="preserve">
+    <value>Anotador {0} : Copyright (c) 2025-{1} Siarhei Kuchuk</value>
+  </data>
+
+  <data name="Menu_File" xml:space="preserve">
+    <value>[ Archivo ]</value>
+  </data>
+
+  <data name="Menu_New" xml:space="preserve">
+    <value>Nuevo...</value>
+  </data>
+
+  <data name="Menu_Import" xml:space="preserve">
+    <value>Importar...</value>
+  </data>
+
+  <data name="Menu_Export" xml:space="preserve">
+    <value>Exportar...</value>
+  </data>
+
+  <data name="Menu_OpenProjectsFolder" xml:space="preserve">
+    <value>Abrir carpeta de _proyectos</value>
+  </data>
+
+  <data name="Menu_OpenLogsFolder" xml:space="preserve">
+    <value>Abrir carpeta de _registros</value>
+  </data>
+
+  <data name="Menu_WebSite" xml:space="preserve">
+    <value>Sitio web</value>
+  </data>
+
+  <data name="Menu_License" xml:space="preserve">
+    <value>Licencia</value>
+  </data>
+
+  <data name="Tool_New" xml:space="preserve">
+    <value>Nuevo</value>
+  </data>
+
+  <data name="Tool_Import" xml:space="preserve">
+    <value>Importar</value>
+  </data>
+
+  <data name="Tool_Screenshot" xml:space="preserve">
+    <value>Captura</value>
+  </data>
+
+  <data name="Tool_Copy" xml:space="preserve">
+    <value>Copiar</value>
+  </data>
+
+  <data name="Tool_Paste" xml:space="preserve">
+    <value>Pegar</value>
+  </data>
+
+  <data name="Tool_Select" xml:space="preserve">
+    <value>Seleccionar</value>
+  </data>
+
+  <data name="Tool_Arrow" xml:space="preserve">
+    <value>Flecha</value>
+  </data>
+
+  <data name="Tool_Callout" xml:space="preserve">
+    <value>Llamada</value>
+  </data>
+
+  <data name="Tool_Note" xml:space="preserve">
+    <value>Nota</value>
+  </data>
+
+  <data name="Tool_Border" xml:space="preserve">
+    <value>Borde</value>
+  </data>
+
+  <data name="Tool_Highlight" xml:space="preserve">
+    <value>Resaltar</value>
+  </data>
+
+  <data name="Tool_Blur" xml:space="preserve">
+    <value>Difuminar</value>
+  </data>
+
+  <data name="Tool_CutVertical" xml:space="preserve">
+    <value>Cortar |</value>
+  </data>
+
+  <data name="Tool_CutHorizontal" xml:space="preserve">
+    <value>Cortar -</value>
+  </data>
+
+  <data name="Tooltip_New" xml:space="preserve">
+    <value>Crear un nuevo proyecto</value>
+  </data>
+
+  <data name="Tooltip_Import" xml:space="preserve">
+    <value>Importar un proyecto o imagen</value>
+  </data>
+
+  <data name="Tooltip_Screenshot" xml:space="preserve">
+    <value>Tomar una captura de pantalla</value>
+  </data>
+
+  <data name="Tooltip_Copy" xml:space="preserve">
+    <value>Copiar al portapapeles</value>
+  </data>
+
+  <data name="Tooltip_Paste" xml:space="preserve">
+    <value>Pegar desde el portapapeles</value>
+  </data>
+
+  <data name="Tooltip_Select" xml:space="preserve">
+    <value>Seleccionar y editar anotaciones</value>
+  </data>
+
+  <data name="Tooltip_Arrow" xml:space="preserve">
+    <value>Dibujar una flecha</value>
+  </data>
+
+  <data name="Tooltip_Callout" xml:space="preserve">
+    <value>Agregar una llamada</value>
+  </data>
+
+  <data name="Tooltip_Note" xml:space="preserve">
+    <value>Agregar una nota de texto</value>
+  </data>
+
+  <data name="Tooltip_Border" xml:space="preserve">
+    <value>Dibujar un borde/rectángulo</value>
+  </data>
+
+  <data name="Tooltip_Highlight" xml:space="preserve">
+    <value>Resaltar un área</value>
+  </data>
+
+  <data name="Tooltip_Blur" xml:space="preserve">
+    <value>Difuminar un área</value>
+  </data>
+
+  <data name="Tooltip_CutVertical" xml:space="preserve">
+    <value>Cortar imagen verticalmente</value>
+  </data>
+
+  <data name="Tooltip_CutHorizontal" xml:space="preserve">
+    <value>Cortar imagen horizontalmente</value>
+  </data>
+
+  <data name="Tooltip_CollapseExpandPanel" xml:space="preserve">
+    <value>Contraer/Expandir panel de proyectos</value>
+  </data>
+
+  <data name="Tooltip_Refresh" xml:space="preserve">
+    <value>Actualizar</value>
+  </data>
+
+  <data name="Panel_Projects" xml:space="preserve">
+    <value>Proyectos</value>
+  </data>
+
+  <data name="Dialog_Export_Title" xml:space="preserve">
+    <value>Exportar</value>
+  </data>
+
+  <data name="Dialog_Import_Title" xml:space="preserve">
+    <value>Importar proyecto o imagen</value>
+  </data>
+
+  <data name="FileType_PNG" xml:space="preserve">
+    <value>Imagen PNG</value>
+  </data>
+
+  <data name="FileType_JPEG" xml:space="preserve">
+    <value>Imagen JPEG</value>
+  </data>
+
+  <data name="FileType_WebP" xml:space="preserve">
+    <value>Imagen WebP</value>
+  </data>
+
+  <data name="FileType_AllSupported" xml:space="preserve">
+    <value>Todos los archivos compatibles</value>
+  </data>
+
+  <data name="FileType_Images" xml:space="preserve">
+    <value>Archivos de imagen</value>
+  </data>
+
+  <data name="FileType_AllFiles" xml:space="preserve">
+    <value>Todos los archivos</value>
+  </data>
+
+  <data name="FileType_AnnotatorProject" xml:space="preserve">
+    <value>Proyecto de Anotador</value>
+  </data>
+
+  <data name="Screenshot_Instructions" xml:space="preserve">
+    <value>Haga clic y arrastre para seleccionar el área, o ajuste los puntos de las esquinas. Use la lupa para mayor precisión. Presione OK cuando esté listo.</value>
+  </data>
+
+  <data name="Button_OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+
+  <data name="Button_Cancel" xml:space="preserve">
+    <value>Cancelar</value>
+  </data>
+
+  <data name="Button_Accept" xml:space="preserve">
+    <value>✓ Aceptar</value>
+  </data>
+
+  <data name="Button_CancelX" xml:space="preserve">
+    <value>✕ Cancelar</value>
+  </data>
+
+  <data name="Update_NewVersionAvailable" xml:space="preserve">
+    <value>Nueva versión {0} disponible.</value>
+  </data>
+
+  <data name="Button_Download" xml:space="preserve">
+    <value>Descargar</value>
+  </data>
+
+  <data name="ContextMenu_Open" xml:space="preserve">
+    <value>Abrir</value>
+  </data>
+
+  <data name="ContextMenu_Delete" xml:space="preserve">
+    <value>Eliminar</value>
+  </data>
+</root>
