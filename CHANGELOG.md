@@ -1,4 +1,10 @@
-﻿# 2025.01.10
+﻿# 2025.01.11
+
+## Bug Fixes
+- Single click to open project, not double click.
+- Delete button for project was not discoverable.
+
+# 2025.01.10
 
 ## New Features
 - Translation to Russian, Spanish (Español), Chinese Simplified (简体中文),

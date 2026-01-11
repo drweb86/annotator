@@ -42,10 +42,18 @@ public partial class ImageEditorView : UserControl
         this.KeyDown += OnKeyDown;
     }
 
-    private void OnFileListDoubleTapped(object? sender, Avalonia.Input.TappedEventArgs e)
+    private void OnFileListTapped(object? sender, Avalonia.Input.TappedEventArgs e)
     {
+        // Single click to open project
         if (sender is ListBox listBox && listBox.SelectedItem is Services.ProjectFileInfo fileInfo)
         {
+            // Check if the tap was on the delete button by checking if it's a Button
+            if (e.Source is Button)
+            {
+                // Don't open if delete button was clicked
+                return;
+            }
+
             if (DataContext is ImageEditorViewModel viewModel)
             {
                 _ = viewModel.OpenProjectFileCommand.ExecuteAsync(fileInfo);

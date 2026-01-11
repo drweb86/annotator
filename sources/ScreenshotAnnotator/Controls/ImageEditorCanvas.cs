@@ -125,7 +125,7 @@ public class ImageEditorCanvas : Control
         }
     }
 
-    private void ShowTextEditor(CalloutShape callout)
+    private void ShowTextEditor(CalloutShape callout, string? initialText = null)
     {
         if (OverlayCanvas == null) return;
 
@@ -170,10 +170,20 @@ public class ImageEditorCanvas : Control
         // Add to overlay canvas
         OverlayCanvas.Children.Add(_textEditor);
         _textEditor.Focus();
-        _textEditor.SelectAll();
+
+        // If initial text was provided (from keystroke), append it instead of selecting all
+        if (!string.IsNullOrEmpty(initialText))
+        {
+            _textEditor.Text = callout.Text + initialText;
+            _textEditor.CaretIndex = _textEditor.Text.Length;
+        }
+        else
+        {
+            _textEditor.SelectAll();
+        }
     }
 
-    private void ShowTextEditorForCalloutNoArrow(CalloutNoArrowShape calloutNoArrow)
+    private void ShowTextEditorForCalloutNoArrow(CalloutNoArrowShape calloutNoArrow, string? initialText = null)
     {
         if (OverlayCanvas == null) return;
 
@@ -218,7 +228,17 @@ public class ImageEditorCanvas : Control
         // Add to overlay canvas
         OverlayCanvas.Children.Add(_textEditor);
         _textEditor.Focus();
-        _textEditor.SelectAll();
+
+        // If initial text was provided (from keystroke), append it instead of selecting all
+        if (!string.IsNullOrEmpty(initialText))
+        {
+            _textEditor.Text = calloutNoArrow.Text + initialText;
+            _textEditor.CaretIndex = _textEditor.Text.Length;
+        }
+        else
+        {
+            _textEditor.SelectAll();
+        }
     }
 
     private void OnTextEditingComplete()
@@ -875,9 +895,11 @@ public class ImageEditorCanvas : Control
                 e.Key != Key.LeftCtrl && e.Key != Key.RightCtrl &&
                 e.Key != Key.LeftAlt && e.Key != Key.RightAlt &&
                 e.Key != Key.LeftShift && e.Key != Key.RightShift &&
-                e.Key != Key.Delete)
+                e.Key != Key.Delete && e.Key != Key.Back)
             {
-                ShowTextEditor(callout);
+                // Get the character representation of the key
+                string? initialChar = GetCharFromKey(e.Key, e.KeyModifiers.HasFlag(KeyModifiers.Shift));
+                ShowTextEditor(callout, initialChar);
                 e.Handled = true;
             }
         }
@@ -890,12 +912,77 @@ public class ImageEditorCanvas : Control
                 e.Key != Key.LeftCtrl && e.Key != Key.RightCtrl &&
                 e.Key != Key.LeftAlt && e.Key != Key.RightAlt &&
                 e.Key != Key.LeftShift && e.Key != Key.RightShift &&
-                e.Key != Key.Delete)
+                e.Key != Key.Delete && e.Key != Key.Back)
             {
-                ShowTextEditorForCalloutNoArrow(calloutNoArrow);
+                // Get the character representation of the key
+                string? initialChar = GetCharFromKey(e.Key, e.KeyModifiers.HasFlag(KeyModifiers.Shift));
+                ShowTextEditorForCalloutNoArrow(calloutNoArrow, initialChar);
                 e.Handled = true;
             }
         }
+    }
+
+    private string? GetCharFromKey(Key key, bool shiftPressed)
+    {
+        // Convert Key enum to character string
+        // Handle letters
+        if (key >= Key.A && key <= Key.Z)
+        {
+            char c = (char)('a' + (key - Key.A));
+            if (shiftPressed)
+                c = char.ToUpper(c);
+            return c.ToString();
+        }
+
+        // Handle numbers and their shift symbols
+        if (key >= Key.D0 && key <= Key.D9)
+        {
+            if (shiftPressed)
+            {
+                return (key - Key.D0) switch
+                {
+                    0 => ")",
+                    1 => "!",
+                    2 => "@",
+                    3 => "#",
+                    4 => "$",
+                    5 => "%",
+                    6 => "^",
+                    7 => "&",
+                    8 => "*",
+                    9 => "(",
+                    _ => null
+                };
+            }
+            return ((char)('0' + (key - Key.D0))).ToString();
+        }
+
+        // Handle numpad numbers
+        if (key >= Key.NumPad0 && key <= Key.NumPad9)
+        {
+            return ((char)('0' + (key - Key.NumPad0))).ToString();
+        }
+
+        // Handle space
+        if (key == Key.Space)
+            return " ";
+
+        // Handle common punctuation
+        return key switch
+        {
+            Key.OemPeriod => shiftPressed ? ">" : ".",
+            Key.OemComma => shiftPressed ? "<" : ",",
+            Key.OemQuestion => shiftPressed ? "?" : "/",
+            Key.OemSemicolon => shiftPressed ? ":" : ";",
+            Key.OemQuotes => shiftPressed ? "\"" : "'",
+            Key.OemOpenBrackets => shiftPressed ? "{" : "[",
+            Key.OemCloseBrackets => shiftPressed ? "}" : "]",
+            Key.OemPipe => shiftPressed ? "|" : "\\",
+            Key.OemMinus => shiftPressed ? "_" : "-",
+            Key.OemPlus => shiftPressed ? "+" : "=",
+            Key.OemTilde => shiftPressed ? "~" : "`",
+            _ => null
+        };
     }
 
     private async void CopySelectorToClipboard()
