@@ -1,4 +1,10 @@
-﻿# 2025.01.11
+﻿# 2025.01.16
+(unpublished)
+
+## Changes
+- V-cut, H-cut icons were changed.
+
+# 2025.01.11
 
 ## Bug Fixes
 - Single click to open project, not double click.

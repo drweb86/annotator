@@ -273,10 +273,19 @@
                       Command="{Binding SelectVerticalCutOutToolCommand}"
                       ToolTip.Tip="{local:Localize Tooltip_CutVertical}">
           <StackPanel HorizontalAlignment="Center">
-            <Path Data="M2,10 L18,10 M10,8 L10,12"
-                  Stroke="#FF6B6B"
-                  StrokeThickness="2"
-                  Fill="Transparent" />
+			  <Canvas Width="20" Height="20">
+				  <Path
+	                  Fill="Transparent"
+	                  StrokeThickness="2"
+				      Stroke="#D8DEE3"
+				      Stretch="None"
+			          Data="M 0,0 H 20 V 20 H 0 Z" />
+				  <Path
+				      Fill="#FF6B6B"
+				      StrokeThickness="0"
+				      Stretch="None"
+                      Data="M 7,0 H 13 V 20 H 7 Z" />
+			  </Canvas>
             <TextBlock Text="{local:Localize Tool_CutVertical}" />
           </StackPanel>
         </ToggleButton>
@@ -286,10 +295,19 @@
                       Command="{Binding SelectHorizontalCutOutToolCommand}"
                       ToolTip.Tip="{local:Localize Tooltip_CutHorizontal}">
           <StackPanel HorizontalAlignment="Center">
-            <Path Data="M10,2 L10,18 M8,10 L12,10"
-                  Stroke="#FF6B6B"
-                  StrokeThickness="2"
-                  Fill="Transparent" />
+			  <Canvas Width="20" Height="20">
+			      <Path
+	                  Fill="Transparent"
+	                  StrokeThickness="2"
+				      Stroke="#D8DEE3"
+				      Stretch="None"
+			          Data="M 0,0 H 20 V 20 H 0 Z" />
+			      <Path
+				      Fill="#FF6B6B"
+				      StrokeThickness="0"
+				      Stretch="None"
+                      Data="M 0,7 H 20 V 13 H 0 Z" />
+			  </Canvas>
             <TextBlock Text="{local:Localize Tool_CutHorizontal}" />
           </StackPanel>
         </ToggleButton>
