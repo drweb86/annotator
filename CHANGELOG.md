@@ -7,6 +7,7 @@
 ## Bug Fixes
 - Selection area on taking screenshot or switching between screeenshots is not removed!
 - Selection with Ctrl+A not worked after clicking on toolbar or bottom area.
+- During taking screenshot previous active project was not saved and changes were lost.
 
 # 2025.01.11
 

@@ -658,6 +658,9 @@ public partial class ImageEditorViewModel : ViewModelBase
             // Check if user confirmed the selection
             if (previewViewModel.CroppedImage != null)
             {
+                await SaveCurrentProject();
+                _editorCanvas?.ClearSelector();
+
                 // Use the cropped image
                 Image = previewViewModel.CroppedImage;
                 Shapes.Clear();
