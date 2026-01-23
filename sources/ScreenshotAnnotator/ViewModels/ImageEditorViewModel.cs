@@ -523,6 +523,7 @@ public partial class ImageEditorViewModel : ViewModelBase
             }
 
             // Load shapes
+            _editorCanvas.ClearSelector();
             Shapes.Clear();
             foreach (var shape in project.Shapes)
             {

@@ -1,8 +1,11 @@
-﻿# 2025.01.16
+﻿# 2025.01.23
 (unpublished)
 
 ## Changes
 - V-cut, H-cut icons were changed.
+
+## Bug Fixes
+- Selection area on taking screenshot or switching between screeenshots is not removed!
 
 # 2025.01.11
 

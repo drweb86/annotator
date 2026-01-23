@@ -101,7 +101,7 @@ public class ImageEditorCanvas : Control
         InvalidateVisual();
     }
 
-    private void ClearSelector()
+    public void ClearSelector()
     {
         _currentSelectorRect = null;
     }
