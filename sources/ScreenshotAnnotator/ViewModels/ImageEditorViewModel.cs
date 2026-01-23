@@ -170,6 +170,7 @@ public partial class ImageEditorViewModel : ViewModelBase
         IsVerticalCutOutToolSelected = CurrentTool == ToolType.VerticalCutOut;
         IsHorizontalCutOutToolSelected = CurrentTool == ToolType.HorizontalCutOut;
         IsHighlighterToolSelected = CurrentTool == ToolType.Highlighter;
+        _editorCanvas?.Focus();
     }
 
     partial void OnCurrentToolChanged(ToolType value)
@@ -523,7 +524,8 @@ public partial class ImageEditorViewModel : ViewModelBase
             }
 
             // Load shapes
-            _editorCanvas.ClearSelector();
+            _editorCanvas?.ClearSelector();
+            _editorCanvas?.Focus();
             Shapes.Clear();
             foreach (var shape in project.Shapes)
             {
