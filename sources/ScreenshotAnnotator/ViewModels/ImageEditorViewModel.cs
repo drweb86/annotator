@@ -417,7 +417,7 @@ public partial class ImageEditorViewModel : ViewModelBase
 
     private async Task SaveCurrentProject()
     {
-        if (_editorCanvas == null || Image == null || _currentFilePath is null) return;
+        if (_editorCanvas == null || _editorCanvas.Image == null || _currentFilePath is null) return;
 
         try
         {
@@ -426,10 +426,10 @@ public partial class ImageEditorViewModel : ViewModelBase
                 Version = 1
             };
 
-            // Save base image as Base64
+            // Save base image as Base64 - use canvas image as it may have been modified by cut operations
             using (var imageStream = new MemoryStream())
             {
-                Image.Save(imageStream);
+                _editorCanvas.Image.Save(imageStream);
                 project.BaseImageBase64 = Convert.ToBase64String(imageStream.ToArray());
             }
 
@@ -488,7 +488,7 @@ public partial class ImageEditorViewModel : ViewModelBase
     public async Task AutoSaveCurrentProject()
     {
         // Only autosave if we have a current project file and there are shapes or an image
-        if (_currentFilePath != null && Image != null && _currentFilePath is not null)
+        if (_currentFilePath != null && _editorCanvas?.Image != null)
         {
             try
             {
