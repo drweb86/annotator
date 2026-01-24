@@ -88,7 +88,9 @@ if ($LastExitCode -ne 0)
 Write-Output "The following artefacts are produced. Release them"
 Get-ChildItem ".\Output"
 
-# Write-Output "The following artefacts are produced. Release to win-get."
-# Get-ChildItem ".\Output" *.exe | Get-FileHash
+& "$PSScriptRoot\winget-pkgs.ps1"
+
+Write-Output "The following artefacts are produced. Release to win-get."
+Get-ChildItem ".\Output" *.exe | Get-FileHash
 
 Write-Output "A. Release files were put into win-get repo fork. Release it"

@@ -1,6 +1,6 @@
 ﻿# Screenshot Annotator
 
-Screenshot annotator software for Windows and Ubuntu.
+Screenshot annotator software for Windows and Linux.
 
 Localized to Russian, Spanish (Español), Chinese Simplified (简体中文), German (Deutsch), Japanese (日本語), Portuguese Brazilian (Português do Brasil), Korean (한국어) languages.
 
@@ -15,7 +15,7 @@ Localized to Russian, Spanish (Español), Chinese Simplified (简体中文), Ger
 - **Cut out vertical and horizontal slices** - Cut out vertical or horizontal areas of image
 - **Highlighter** - Highlights areas of interest
 - **Project Management** - Automatic project saving and preview thumbnails
-- **Cross-Platform** - Works on both Windows and Ubuntu
+- **Cross-Platform** - Works on both Windows and Linux
 
 ## Screenshots
 
