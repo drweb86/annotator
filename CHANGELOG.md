@@ -1,4 +1,4 @@
-﻿# 2025.01.23
+﻿# 2026.01.23
 
 ## Changes
 - V-cut, H-cut icons were changed.
@@ -9,20 +9,20 @@
 - During taking screenshot previous active project was not saved and changes were lost.
 - Cut out areas of image were not saved.
 
-# 2025.01.11
+# 2026.01.11
 
 ## Bug Fixes
 - Single click to open project, not double click.
 - Delete button for project was not discoverable.
 
-# 2025.01.10
+# 2026.01.10
 
 ## New Features
 - Translation to Russian, Spanish (Español), Chinese Simplified (简体中文),
 German (Deutsch), Japanese (日本語),
 Portuguese Brazilian (Português do Brasil), Korean (한국어)
 
-# 2025.01.09
+# 2026.01.09
 
 ## New Features
 - Vertical and horizontal cut tools.
@@ -36,7 +36,7 @@ Portuguese Brazilian (Português do Brasil), Korean (한국어)
 - Fix textbox color on light theme.
 - Fix autosave on window close.
 
-# 2025.01.07
+# 2026.01.07
 
 ## New Features
 - Easier screenshot capturing.
@@ -52,7 +52,7 @@ Portuguese Brazilian (Português do Brasil), Korean (한국어)
 - (Ubuntu) Tooltip in toolbar: white text on white background (hard to see text)
 - Apart of that in Note and Callout tool long text is not splitted into several lines when user exits editor
 
-# 2025.01.06
+# 2026.01.06
 
 ## New Features
 
