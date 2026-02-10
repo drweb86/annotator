@@ -229,6 +229,30 @@
     <value>Projets</value>
   </data>
 
+  <data name="Panel_Properties" xml:space="preserve">
+    <value>Propriétés</value>
+  </data>
+
+  <data name="Props_Font" xml:space="preserve">
+    <value>Police</value>
+  </data>
+
+  <data name="Props_Size" xml:space="preserve">
+    <value>Taille</value>
+  </data>
+
+  <data name="Props_Bold" xml:space="preserve">
+    <value>Gras</value>
+  </data>
+
+  <data name="Props_Italic" xml:space="preserve">
+    <value>Italique</value>
+  </data>
+
+  <data name="Props_Color" xml:space="preserve">
+    <value>Couleur</value>
+  </data>
+
   <data name="Dialog_Export_Title" xml:space="preserve">
     <value>Exporter</value>
   </data>

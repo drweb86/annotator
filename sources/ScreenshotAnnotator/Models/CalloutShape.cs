@@ -10,6 +10,13 @@ public class CalloutShape : AnnotationShape
     public Point BeakPoint { get; set; }
     public string Text { get; set; } = "";
 
+    /// <summary>Font family name for the callout text. Default "Arial" when not set (existing projects).</summary>
+    public string FontFamily { get; set; } = "Arial";
+    /// <summary>Font size in pixels. Default 24 when not set (existing projects).</summary>
+    public double FontSize { get; set; } = 24;
+    public bool FontBold { get; set; }
+    public bool FontItalic { get; set; }
+
     public override void Render(DrawingContext context)
     {
         var color = IsSelected ? Colors.Blue : StrokeColor;
@@ -109,18 +116,22 @@ public class CalloutShape : AnnotationShape
         }
         context.DrawGeometry(fillBrush, null, arrowGeometry);
 
-        // Draw text if any - centered horizontally and vertically, white color, size 24
+        // Draw text if any - centered horizontally and vertically, white color
         if (!string.IsNullOrWhiteSpace(Text))
         {
             var padding = 20.0; // Padding inside the rectangle
             var maxWidth = Math.Max(50, Rectangle.Width - padding * 2); // Max width for text wrapping
 
+            var typeface = new Typeface(
+                FontFamily,
+                FontItalic ? FontStyle.Italic : FontStyle.Normal,
+                FontBold ? FontWeight.Bold : FontWeight.Normal);
             var formattedText = new FormattedText(
                 Text,
                 System.Globalization.CultureInfo.CurrentCulture,
                 FlowDirection.LeftToRight,
-                new Typeface("Arial"),
-                24,
+                typeface,
+                FontSize,
                 Brushes.White
             )
             {

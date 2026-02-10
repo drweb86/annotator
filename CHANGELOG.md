@@ -1,4 +1,11 @@
-﻿# 2026.01.23
+﻿# 2026.02.10
+(unpublished)
+
+## New Features
+- Properties of text.
+- Properties of arrow.
+
+# 2026.01.23
 
 ## Changes
 - V-cut, H-cut icons were changed.

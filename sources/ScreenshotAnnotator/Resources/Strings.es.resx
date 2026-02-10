@@ -229,6 +229,30 @@
     <value>Proyectos</value>
   </data>
 
+  <data name="Panel_Properties" xml:space="preserve">
+    <value>Propiedades</value>
+  </data>
+
+  <data name="Props_Font" xml:space="preserve">
+    <value>Fuente</value>
+  </data>
+
+  <data name="Props_Size" xml:space="preserve">
+    <value>Tamaño</value>
+  </data>
+
+  <data name="Props_Bold" xml:space="preserve">
+    <value>Negrita</value>
+  </data>
+
+  <data name="Props_Italic" xml:space="preserve">
+    <value>Cursiva</value>
+  </data>
+
+  <data name="Props_Color" xml:space="preserve">
+    <value>Color</value>
+  </data>
+
   <data name="Dialog_Export_Title" xml:space="preserve">
     <value>Exportar</value>
   </data>

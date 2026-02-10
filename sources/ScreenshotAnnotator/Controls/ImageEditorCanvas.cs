@@ -70,6 +70,24 @@ public class ImageEditorCanvas : Control
         }
     }
 
+    /// <summary>Currently selected shape (when using Select tool). Null when none selected.</summary>
+    public AnnotationShape? SelectedShape => _selectedShape;
+
+    /// <summary>Raised when the selected shape changes (select, deselect, delete, or tool change).</summary>
+    public event EventHandler? SelectedShapeChanged;
+
+    private void SetSelectedShape(AnnotationShape? shape)
+    {
+        if (_selectedShape == shape) return;
+        if (_selectedShape != null)
+            _selectedShape.IsSelected = false;
+        _selectedShape = shape;
+        if (_selectedShape != null)
+            _selectedShape.IsSelected = true;
+        SelectedShapeChanged?.Invoke(this, EventArgs.Empty);
+        InvalidateVisual();
+    }
+
     static ImageEditorCanvas()
     {
         AffectsRender<ImageEditorCanvas>(ImageProperty, ShapesProperty);
@@ -97,8 +115,7 @@ public class ImageEditorCanvas : Control
         }
 
         // Also clear selected shape when switching tools
-        _selectedShape = null;
-        InvalidateVisual();
+        SetSelectedShape(null);
     }
 
     public void ClearSelector()
@@ -144,10 +161,12 @@ public class ImageEditorCanvas : Control
             AcceptsReturn = true,
             BorderThickness = new Thickness(2),
             BorderBrush = new SolidColorBrush(Color.FromRgb(255, 165, 0)), // Orange border
-            // Background = new SolidColorBrush(Color.FromRgb(40, 40, 40)), // Dark gray background
-            // Foreground = Brushes.White,
+            Background = new SolidColorBrush(Color.FromRgb(40, 40, 40)), // Dark gray background
             Padding = new Thickness(10),
-            FontSize = 24,
+            FontFamily = new Avalonia.Media.FontFamily(callout.FontFamily),
+            FontSize = callout.FontSize,
+            FontWeight = callout.FontBold ? FontWeight.Bold : FontWeight.Normal,
+            FontStyle = callout.FontItalic ? FontStyle.Italic : FontStyle.Normal,
             TextAlignment = TextAlignment.Center,
             VerticalContentAlignment = Avalonia.Layout.VerticalAlignment.Center
         };
@@ -202,10 +221,12 @@ public class ImageEditorCanvas : Control
             AcceptsReturn = true,
             BorderThickness = new Thickness(2),
             BorderBrush = new SolidColorBrush(Color.FromRgb(255, 165, 0)), // Orange border
-            // Background = new SolidColorBrush(Color.FromRgb(40, 40, 40)), // Dark gray background
-            // Foreground = Brushes.White,
             Padding = new Thickness(10),
-            FontSize = 24,
+            Background = new SolidColorBrush(Color.FromRgb(40, 40, 40)), // Dark gray background
+            FontFamily = new Avalonia.Media.FontFamily(calloutNoArrow.FontFamily),
+            FontSize = calloutNoArrow.FontSize,
+            FontWeight = calloutNoArrow.FontBold ? FontWeight.Bold : FontWeight.Normal,
+            FontStyle = calloutNoArrow.FontItalic ? FontStyle.Italic : FontStyle.Normal,
             TextAlignment = TextAlignment.Center,
             VerticalContentAlignment = Avalonia.Layout.VerticalAlignment.Center
         };
@@ -363,27 +384,16 @@ public class ImageEditorCanvas : Control
             {
                 if (Shapes[i].HitTest(point))
                 {
-                    // Deselect previous shape
-                    if (_selectedShape != null)
-                        _selectedShape.IsSelected = false;
-
                     // Select this shape
-                    _selectedShape = Shapes[i];
-                    _selectedShape.IsSelected = true;
+                    SetSelectedShape(Shapes[i]);
                     _isDraggingShape = true;
                     Focus(); // Set focus to receive keyboard events
-                    InvalidateVisual();
                     return;
                 }
             }
 
             // Click on empty space - deselect
-            if (_selectedShape != null)
-            {
-                _selectedShape.IsSelected = false;
-                _selectedShape = null;
-                InvalidateVisual();
-            }
+            SetSelectedShape(null);
         }
         else
         {
@@ -396,13 +406,8 @@ public class ImageEditorCanvas : Control
                     // User clicked on existing shape - switch to selector tool
                     CurrentTool = ToolType.None;
 
-                    // Deselect previous shape
-                    if (_selectedShape != null)
-                        _selectedShape.IsSelected = false;
-
                     // Select this shape
-                    _selectedShape = Shapes[i];
-                    _selectedShape.IsSelected = true;
+                    SetSelectedShape(Shapes[i]);
                     _isDraggingShape = true;
                     Focus(); // Set focus to receive keyboard events
                     InvalidateVisual();
@@ -858,9 +863,9 @@ public class ImageEditorCanvas : Control
         // Delete selected shape on Delete key press
         if (e.Key == Key.Delete && _selectedShape != null)
         {
-            Shapes.Remove(_selectedShape);
-            _selectedShape = null;
-            InvalidateVisual();
+            var toRemove = _selectedShape;
+            SetSelectedShape(null);
+            Shapes.Remove(toRemove);
             e.Handled = true;
             return;
         }

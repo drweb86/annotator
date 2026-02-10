@@ -16,7 +16,7 @@ public partial class ImageEditorView : UserControl
             var editorCanvas = this.FindControl<Controls.ImageEditorCanvas>("EditorCanvas");
             var overlayCanvas = this.FindControl<Canvas>("OverlayCanvas");
 
-            if (editorCanvas != null && overlayCanvas != null)
+                if (editorCanvas != null && overlayCanvas != null)
             {
                 editorCanvas.OverlayCanvas = overlayCanvas;
 
@@ -24,6 +24,10 @@ public partial class ImageEditorView : UserControl
                 if (DataContext is ImageEditorViewModel viewModel)
                 {
                     viewModel.SetEditorCanvas(editorCanvas);
+                    editorCanvas.SelectedShapeChanged += (_, _) =>
+                    {
+                        viewModel.SelectedShape = editorCanvas.SelectedShape;
+                    };
 
                     // Set the TopLevel for clipboard access
                     var topLevel = TopLevel.GetTopLevel(this);

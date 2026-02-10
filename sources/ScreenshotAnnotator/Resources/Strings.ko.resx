@@ -229,6 +229,30 @@
     <value>프로젝트</value>
   </data>
 
+  <data name="Panel_Properties" xml:space="preserve">
+    <value>속성</value>
+  </data>
+
+  <data name="Props_Font" xml:space="preserve">
+    <value>글꼴</value>
+  </data>
+
+  <data name="Props_Size" xml:space="preserve">
+    <value>크기</value>
+  </data>
+
+  <data name="Props_Bold" xml:space="preserve">
+    <value>굵게</value>
+  </data>
+
+  <data name="Props_Italic" xml:space="preserve">
+    <value>기울임</value>
+  </data>
+
+  <data name="Props_Color" xml:space="preserve">
+    <value>색상</value>
+  </data>
+
   <data name="Dialog_Export_Title" xml:space="preserve">
     <value>내보내기</value>
   </data>

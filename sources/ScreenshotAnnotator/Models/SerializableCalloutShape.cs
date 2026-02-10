@@ -12,6 +12,13 @@ public class SerializableCalloutShape : SerializableShape
     public double BeakY { get; set; }
     public string Text { get; set; } = "";
 
+    /// <summary>Optional. When missing (old projects), default Arial is used.</summary>
+    public string? FontFamily { get; set; }
+    /// <summary>Optional. When missing (old projects), default 24 is used.</summary>
+    public double? FontSize { get; set; }
+    public bool? FontBold { get; set; }
+    public bool? FontItalic { get; set; }
+
     public SerializableCalloutShape()
     {
         Type = "callout";
@@ -28,6 +35,10 @@ public class SerializableCalloutShape : SerializableShape
             BeakX = callout.BeakPoint.X,
             BeakY = callout.BeakPoint.Y,
             Text = callout.Text,
+            FontFamily = callout.FontFamily,
+            FontSize = callout.FontSize,
+            FontBold = callout.FontBold,
+            FontItalic = callout.FontItalic,
             StrokeColor = ColorToUInt(callout.StrokeColor),
             StrokeThickness = callout.StrokeThickness
         };
@@ -40,6 +51,10 @@ public class SerializableCalloutShape : SerializableShape
             Rectangle = new Rect(RectX, RectY, RectWidth, RectHeight),
             BeakPoint = new Point(BeakX, BeakY),
             Text = Text,
+            FontFamily = FontFamily ?? "Arial",
+            FontSize = FontSize ?? 24,
+            FontBold = FontBold ?? false,
+            FontItalic = FontItalic ?? false,
             StrokeColor = UIntToColor(StrokeColor),
             StrokeThickness = StrokeThickness
         };

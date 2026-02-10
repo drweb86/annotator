@@ -1,6 +1,7 @@
 using Avalonia.Controls;
 using Avalonia.Input;
 using Avalonia.Input.Platform;
+using Avalonia.Media;
 using Avalonia.Media.Imaging;
 using Avalonia.Platform.Storage;
 using CommunityToolkit.Mvvm.ComponentModel;
@@ -9,6 +10,7 @@ using ScreenshotAnnotator.Models;
 using ScreenshotAnnotator.Services;
 using SkiaSharp;
 using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
@@ -67,11 +69,149 @@ public partial class ImageEditorViewModel : ViewModelBase
     [ObservableProperty]
     private string? _currentFilePathTooltip;
 
+    [ObservableProperty]
+    private AnnotationShape? _selectedShape;
+
+    /// <summary>Preset colors for arrow: current color first, then best colors for annotations. Updated when selection changes.</summary>
+    [ObservableProperty]
+    private ObservableCollection<Color> _arrowColorPresets = new();
+
     private Controls.ImageEditorCanvas? _editorCanvas;
+
+    private static readonly Color[] ArrowPresetColorsDefault = new[]
+    {
+        Colors.Red,
+        Colors.Blue,
+        Colors.Green,
+        Color.FromRgb(255, 165, 0),   // Orange
+        Colors.Yellow,
+        Colors.Purple,
+        Colors.Black,
+    };
 
     public void SetEditorCanvas(Controls.ImageEditorCanvas canvas)
     {
         _editorCanvas = canvas;
+    }
+
+    private void RefreshCanvas()
+    {
+        _editorCanvas?.InvalidateVisual();
+    }
+
+    partial void OnSelectedShapeChanged(AnnotationShape? value)
+    {
+        UpdateArrowColorPresets();
+        OnPropertyChanged(nameof(IsTextShapeSelected));
+        OnPropertyChanged(nameof(IsArrowShapeSelected));
+        OnPropertyChanged(nameof(SelectedTextFontFamily));
+        OnPropertyChanged(nameof(SelectedTextFontSize));
+        OnPropertyChanged(nameof(SelectedTextFontBold));
+        OnPropertyChanged(nameof(SelectedTextFontItalic));
+        OnPropertyChanged(nameof(SelectedArrowColor));
+        OnPropertyChanged(nameof(FontFamilyChoices));
+    }
+
+    private void UpdateArrowColorPresets()
+    {
+        ArrowColorPresets.Clear();
+        if (SelectedShape is ArrowShape arrow)
+        {
+            var current = arrow.StrokeColor;
+            ArrowColorPresets.Add(current);
+            foreach (var c in ArrowPresetColorsDefault)
+            {
+                if (c != current)
+                    ArrowColorPresets.Add(c);
+            }
+        }
+    }
+
+    public bool IsTextShapeSelected => SelectedShape is CalloutShape or CalloutNoArrowShape;
+    public bool IsArrowShapeSelected => SelectedShape is ArrowShape;
+
+    public string SelectedTextFontFamily
+    {
+        get => SelectedShape is CalloutShape c ? c.FontFamily : SelectedShape is CalloutNoArrowShape n ? n.FontFamily : "Arial";
+        set
+        {
+            if (SelectedShape is CalloutShape cs) { cs.FontFamily = value; RefreshCanvas(); }
+            if (SelectedShape is CalloutNoArrowShape cn) { cn.FontFamily = value; RefreshCanvas(); }
+            OnPropertyChanged();
+        }
+    }
+
+    public double SelectedTextFontSize
+    {
+        get => SelectedShape is CalloutShape c ? c.FontSize : SelectedShape is CalloutNoArrowShape n ? n.FontSize : 24;
+        set
+        {
+            if (SelectedShape is CalloutShape cs) { cs.FontSize = value; RefreshCanvas(); }
+            if (SelectedShape is CalloutNoArrowShape cn) { cn.FontSize = value; RefreshCanvas(); }
+            OnPropertyChanged();
+        }
+    }
+
+    public bool SelectedTextFontBold
+    {
+        get => SelectedShape is CalloutShape c ? c.FontBold : SelectedShape is CalloutNoArrowShape n ? n.FontBold : false;
+        set
+        {
+            if (SelectedShape is CalloutShape cs) { cs.FontBold = value; RefreshCanvas(); }
+            if (SelectedShape is CalloutNoArrowShape cn) { cn.FontBold = value; RefreshCanvas(); }
+            OnPropertyChanged();
+        }
+    }
+
+    public bool SelectedTextFontItalic
+    {
+        get => SelectedShape is CalloutShape c ? c.FontItalic : SelectedShape is CalloutNoArrowShape n ? n.FontItalic : false;
+        set
+        {
+            if (SelectedShape is CalloutShape cs) { cs.FontItalic = value; RefreshCanvas(); }
+            if (SelectedShape is CalloutNoArrowShape cn) { cn.FontItalic = value; RefreshCanvas(); }
+            OnPropertyChanged();
+        }
+    }
+
+    public Color SelectedArrowColor
+    {
+        get => SelectedShape is ArrowShape a ? a.StrokeColor : Colors.Red;
+        set
+        {
+            if (SelectedShape is ArrowShape a)
+            {
+                a.StrokeColor = value;
+                UpdateArrowColorPresets();
+                RefreshCanvas();
+            }
+            OnPropertyChanged();
+        }
+    }
+
+    /// <summary>Used by the color preset buttons; parameter is the Color from CommandParameter.</summary>
+    [RelayCommand]
+    private void SetArrowColorFromPreset(object? parameter)
+    {
+        if (parameter is Color color)
+            SelectedArrowColor = color;
+    }
+
+    private static readonly string[] FontFamilyChoicesDefault = new[]
+    {
+        "Arial", "Segoe UI", "Calibri", "Times New Roman", "Verdana", "Tahoma", "Georgia", "Courier New"
+    };
+
+    /// <summary>Font families for the combo: default list plus current shape's font if not in list (e.g. from loaded project).</summary>
+    public IEnumerable<string> FontFamilyChoices
+    {
+        get
+        {
+            var current = SelectedTextFontFamily;
+            if (string.IsNullOrEmpty(current) || FontFamilyChoicesDefault.Contains(current, StringComparer.OrdinalIgnoreCase))
+                return FontFamilyChoicesDefault;
+            return new[] { current }.Concat(FontFamilyChoicesDefault);
+        }
     }
 
     private void UpdateCurrentFileNameDisplay()
