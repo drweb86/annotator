@@ -19,6 +19,16 @@ using System.Threading.Tasks;
 
 namespace ScreenshotAnnotator.ViewModels;
 
+/// <summary>Wrapper for arrow color preset so we can bind IsSelected in the template.</summary>
+public partial class ArrowColorPresetItem : ViewModelBase
+{
+    [ObservableProperty]
+    private Color _color;
+
+    [ObservableProperty]
+    private bool _isSelected;
+}
+
 public partial class ImageEditorViewModel : ViewModelBase
 {
     [ObservableProperty]
@@ -72,9 +82,9 @@ public partial class ImageEditorViewModel : ViewModelBase
     [ObservableProperty]
     private AnnotationShape? _selectedShape;
 
-    /// <summary>Preset colors for arrow: current color first, then best colors for annotations. Updated when selection changes.</summary>
+    /// <summary>Preset colors for arrow with selection state for the UI.</summary>
     [ObservableProperty]
-    private ObservableCollection<Color> _arrowColorPresets = new();
+    private ObservableCollection<ArrowColorPresetItem> _arrowColorPresetItems = new();
 
     private Controls.ImageEditorCanvas? _editorCanvas;
 
@@ -110,21 +120,34 @@ public partial class ImageEditorViewModel : ViewModelBase
         OnPropertyChanged(nameof(SelectedTextFontItalic));
         OnPropertyChanged(nameof(SelectedArrowColor));
         OnPropertyChanged(nameof(FontFamilyChoices));
+        RefreshCanvas();
     }
 
     private void UpdateArrowColorPresets()
     {
-        ArrowColorPresets.Clear();
+        ArrowColorPresetItems.Clear();
         if (SelectedShape is ArrowShape arrow)
         {
-            var current = arrow.StrokeColor;
-            ArrowColorPresets.Add(current);
+            var selected = arrow.StrokeColor;
             foreach (var c in ArrowPresetColorsDefault)
             {
-                if (c != current)
-                    ArrowColorPresets.Add(c);
+                ArrowColorPresetItems.Add(new ArrowColorPresetItem
+                {
+                    Color = c,
+                    IsSelected = ColorsEqual(c, selected)
+                });
             }
         }
+    }
+
+    private static bool ColorsEqual(Color a, Color b)
+        => a.A == b.A && a.R == b.R && a.G == b.G && a.B == b.B;
+
+    private void UpdateArrowColorPresetSelection()
+    {
+        var selected = SelectedArrowColor;
+        foreach (var item in ArrowColorPresetItems)
+            item.IsSelected = ColorsEqual(item.Color, selected);
     }
 
     public bool IsTextShapeSelected => SelectedShape is CalloutShape or CalloutNoArrowShape;
@@ -182,7 +205,7 @@ public partial class ImageEditorViewModel : ViewModelBase
             if (SelectedShape is ArrowShape a)
             {
                 a.StrokeColor = value;
-                UpdateArrowColorPresets();
+                UpdateArrowColorPresetSelection();
                 RefreshCanvas();
             }
             OnPropertyChanged();

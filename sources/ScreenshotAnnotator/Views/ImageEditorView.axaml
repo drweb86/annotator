@@ -14,6 +14,8 @@
   <UserControl.Resources>
     <converters:BoolToChevronPathConverter x:Key="BoolToChevronPathConverter"/>
     <converters:ColorToBrushConverter x:Key="ColorToBrushConverter"/>
+    <converters:BoolToBorderBrushConverter x:Key="SelectedToBorderBrushConverter"/>
+    <converters:BoolToThicknessConverter x:Key="SelectedToThicknessConverter"/>
   </UserControl.Resources>
 
   <Design.DataContext>
@@ -382,19 +384,27 @@
           <!-- Arrow properties -->
           <StackPanel IsVisible="{Binding IsArrowShapeSelected}" Spacing="8">
             <TextBlock Text="{local:Localize Props_Color}" Foreground="#CCCCCC" FontSize="12"/>
-            <ItemsControl ItemsSource="{Binding ArrowColorPresets}">
+            <ItemsControl ItemsSource="{Binding ArrowColorPresetItems}">
               <ItemsControl.ItemsPanel>
                 <ItemsPanelTemplate>
                   <WrapPanel/>
                 </ItemsPanelTemplate>
               </ItemsControl.ItemsPanel>
               <ItemsControl.ItemTemplate>
-                <DataTemplate>
-                  <Button Width="28" Height="28" Margin="2" Padding="0"
-                          Command="{Binding $parent[ItemsControl].DataContext.SetArrowColorFromPresetCommand}"
-                          CommandParameter="{Binding}"
-                          Background="{Binding Converter={StaticResource ColorToBrushConverter}}"
-                          Cursor="Hand"/>
+                <DataTemplate DataType="vm:ArrowColorPresetItem">
+                  <Border Width="40" Height="40" Margin="3" Padding="0"
+                          Background="{Binding Color, Converter={StaticResource ColorToBrushConverter}}"
+                          BorderBrush="{Binding IsSelected, Converter={StaticResource SelectedToBorderBrushConverter}}"
+                          BorderThickness="{Binding IsSelected, Converter={StaticResource SelectedToThicknessConverter}}"
+                          CornerRadius="3" Cursor="Hand"
+                          PointerPressed="OnColorPresetPressed">
+                    <Border.Styles>
+                      <Style Selector="Border:pointerover">
+                        <Setter Property="BorderThickness" Value="2"/>
+                        <Setter Property="BorderBrush" Value="#E0E0E0"/>
+                      </Style>
+                    </Border.Styles>
+                  </Border>
                 </DataTemplate>
               </ItemsControl.ItemTemplate>
             </ItemsControl>

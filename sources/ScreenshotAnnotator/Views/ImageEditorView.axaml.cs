@@ -1,5 +1,6 @@
 using Avalonia.Controls;
 using Avalonia.Input;
+using Avalonia.Media;
 using ScreenshotAnnotator.ViewModels;
 
 namespace ScreenshotAnnotator.Views;
@@ -44,6 +45,15 @@ public partial class ImageEditorView : UserControl
 
         // Add keyboard shortcuts
         this.KeyDown += OnKeyDown;
+    }
+
+    private void OnColorPresetPressed(object? sender, PointerPressedEventArgs e)
+    {
+        if (DataContext is not ImageEditorViewModel viewModel) return;
+        if (sender is Border border && border.DataContext is ArrowColorPresetItem item)
+        {
+            viewModel.SetArrowColorFromPresetCommand.Execute(item.Color);
+        }
     }
 
     private void OnFileListTapped(object? sender, Avalonia.Input.TappedEventArgs e)
