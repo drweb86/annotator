@@ -1,10 +1,12 @@
-using Avalonia;
+﻿using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Input;
 using Avalonia.Input.Platform;
 using Avalonia.Media;
 using Avalonia.Media.Imaging;
 using ScreenshotAnnotator.Models;
+using ScreenshotAnnotator.Services;
+using ScreenshotAnnotator.ViewModels;
 using System;
 using System.Collections.ObjectModel;
 using System.IO;
@@ -42,6 +44,12 @@ public class ImageEditorCanvas : Control
         AvaloniaProperty.Register<ImageEditorCanvas, ObservableCollection<AnnotationShape>>(
             nameof(Shapes), new ObservableCollection<AnnotationShape>());
 
+    private ImageEditorViewModel? _imageEditorViewModel;
+    public void SetViewModel(ImageEditorViewModel model)
+    {
+        _imageEditorViewModel = model;
+    }
+
     public Bitmap? Image
     {
         get => GetValue(ImageProperty);
@@ -75,6 +83,12 @@ public class ImageEditorCanvas : Control
 
     /// <summary>Raised when the selected shape changes (select, deselect, delete, or tool change).</summary>
     public event EventHandler? SelectedShapeChanged;
+
+    /// <summary>Clears the current shape selection (e.g. before export/save preview).</summary>
+    public void ClearSelection()
+    {
+        SetSelectedShape(null);
+    }
 
     private void SetSelectedShape(AnnotationShape? shape)
     {
@@ -837,8 +851,14 @@ public class ImageEditorCanvas : Control
     {
         base.OnKeyDown(e);
 
+        var topLevel = TopLevel.GetTopLevel(this);
+
+        if (topLevel is null ||
+            _imageEditorViewModel is null)
+            return;
+
         // If text editor is already open, let it handle the keys
-        if (_textEditor != null)
+        if (_textEditor is not null)
             return;
 
         // Select entire canvas on Ctrl+A
@@ -884,28 +904,17 @@ public class ImageEditorCanvas : Control
         }
 
         // Copy selector area on Ctrl+C
-        if (e.Key == Key.C && e.KeyModifiers.HasFlag(KeyModifiers.Control) &&
-            _currentSelectorRect != null && CurrentTool == ToolType.Selector)
+        if (e.Key == Key.C && e.KeyModifiers.HasFlag(KeyModifiers.Control))
         {
-            CopySelectorToClipboard();
-            e.Handled = true;
-            return;
-        }
-
-        if (e.Key == Key.C && e.KeyModifiers.HasFlag(KeyModifiers.Control) &&
-            SelectedShape is not null && _textEditor is null && _imageEditorViewModel is not null &&
-            TopLevel.GetTopLevel(this) is TopLevel topLevel)
-        {
-            _imageEditorViewModel.ClipboardService.CopySingleShape(_imageEditorViewModel, topLevel.Clipboard);
+            _imageEditorViewModel.CopyToClipboardCommand.Execute(null);
             e.Handled = true;
             return;
         }
 
         if (e.Key == Key.V && e.KeyModifiers.HasFlag(KeyModifiers.Control) &&
-            this.SelectedShape is not null && this._textEditor is null && this._imageEditorViewModel is not null &&
-            TopLevel.GetTopLevel(this) is TopLevel topLevel2)
+            this.SelectedShape is not null)
         {
-            this._imageEditorViewModel.ClipboardService.Paste(_imageEditorViewModel, topLevel2.Clipboard);
+            this._imageEditorViewModel.ClipboardService.Paste(_imageEditorViewModel, topLevel.Clipboard);
             e.Handled = true;
             return;
         }
@@ -1006,53 +1015,6 @@ public class ImageEditorCanvas : Control
             Key.OemTilde => shiftPressed ? "~" : "`",
             _ => null
         };
-    }
-
-    private async void CopySelectorToClipboard()
-    {
-        if (_currentSelectorRect == null || Image == null) return;
-
-        try
-        {
-            // First, render the full image with all shapes using the same method as CopyToClipboard
-            var fullRenderedImage = ProjectRenderer.RenderToImage(Image, Shapes);
-            if (fullRenderedImage == null) return;
-
-            var selectorRect = _currentSelectorRect.Rectangle;
-
-            // Crop the rendered image to the selector area
-            var cropX = (int)Math.Max(0, Math.Min(selectorRect.X, fullRenderedImage.PixelSize.Width));
-            var cropY = (int)Math.Max(0, Math.Min(selectorRect.Y, fullRenderedImage.PixelSize.Height));
-            var cropWidth = (int)Math.Max(1, Math.Min(selectorRect.Width, fullRenderedImage.PixelSize.Width - cropX));
-            var cropHeight = (int)Math.Max(1, Math.Min(selectorRect.Height, fullRenderedImage.PixelSize.Height - cropY));
-
-            var croppedImage = new RenderTargetBitmap(new PixelSize(cropWidth, cropHeight));
-
-            using (var context = croppedImage.CreateDrawingContext())
-            {
-                // Draw the cropped portion from the full rendered image
-                var sourceRect = new Rect(cropX, cropY, cropWidth, cropHeight);
-                var destRect = new Rect(0, 0, cropWidth, cropHeight);
-
-                context.DrawImage(fullRenderedImage, sourceRect, destRect);
-            }
-
-            // Copy to clipboard
-            if (TopLevel.GetTopLevel(this) is TopLevel topLevel && topLevel.Clipboard != null)
-            {
-                using var stream = new MemoryStream();
-                croppedImage.Save(stream);
-                stream.Position = 0;
-
-                var clipboard = topLevel.Clipboard;
-                if (clipboard == null) return;
-                await clipboard.SetValueAsync(DataFormat.Bitmap, new Bitmap(stream));
-            }
-        }
-        catch
-        {
-            // Silently handle clipboard errors
-        }
     }
 
     public Bitmap? CreateBlurredImagePublic(Rect rect)

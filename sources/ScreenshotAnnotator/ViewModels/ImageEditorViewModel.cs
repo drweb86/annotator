@@ -31,6 +31,8 @@ public partial class ArrowColorPresetItem : ViewModelBase
 
 public partial class ImageEditorViewModel : ViewModelBase
 {
+    internal readonly IClipboardService ClipboardService = new ClipboardService();
+
     [ObservableProperty]
     private Bitmap? _image;
 
@@ -102,6 +104,7 @@ public partial class ImageEditorViewModel : ViewModelBase
     public void SetEditorCanvas(Controls.ImageEditorCanvas canvas)
     {
         _editorCanvas = canvas;
+        canvas.SetViewModel(this);
     }
 
     private void RefreshCanvas()
@@ -376,27 +379,21 @@ public partial class ImageEditorViewModel : ViewModelBase
     [RelayCommand]
     private async Task CopyToClipboard()
     {
-        if (_editorCanvas == null || Image == null || _topLevel == null) return;
+        if (_topLevel is null ||
+            _editorCanvas is null)
+            return;
 
-        try
+        if (_editorCanvas.SelectorRect is not null)
         {
-            var renderedImage = _editorCanvas.RenderToImage();
-            if (renderedImage == null) return;
-
-            var clipboard = _topLevel.Clipboard;
-            if (clipboard == null) return;
-
-            // Save bitmap to PNG stream
-            using var stream = new MemoryStream();
-            renderedImage.Save(stream);
-            stream.Position = 0;
-
-            // Copy as PNG image data
-            await clipboard.SetValueAsync(DataFormat.Bitmap, new Bitmap(stream));
+            await ClipboardService.CopyArea(this, _topLevel.Clipboard, _editorCanvas.SelectorRect.Rectangle);
         }
-        catch
+        else if (SelectedShape is not null)
         {
-            // Handle clipboard errors silently
+            await ClipboardService.CopySingleShape(this, _topLevel.Clipboard);
+        }
+        else
+        {
+            await ClipboardService.CopyAll(this, _topLevel.Clipboard);
         }
     }
 
@@ -477,7 +474,7 @@ public partial class ImageEditorViewModel : ViewModelBase
                 }
 
 
-                var renderedImage = _editorCanvas.RenderToImage();
+                var renderedImage = ProjectRenderer.Render(Image, Shapes, out var _);
                 if (renderedImage != null && localFileName != null)
                 {
                     var extension = Path.GetExtension(localFileName).ToLowerInvariant();
@@ -597,7 +594,7 @@ public partial class ImageEditorViewModel : ViewModelBase
             }
 
             // Save preview (with annotations) as Base64
-            var renderedImage = _editorCanvas.RenderToImage();
+            var renderedImage = ProjectRenderer.Render(Image, Shapes, out var _);
             if (renderedImage != null)
             {
                 using var previewStream = new MemoryStream();
