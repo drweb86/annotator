@@ -1,9 +1,19 @@
-﻿# 2026.02.10
+﻿# 2026.02.16
 (unpublished)
 
 ## New Features
 - Properties of text.
 - Properties of arrow.
+- Ctrl+C/Ctrl+V works for shapes.
+- Drag and Drop for images into app.
+
+## Changes
+- During saving preview or export, any selected shape gets unselected.
+- Add export to toolbar near import to toolbar.
+
+## Bug Fixes
+- Pasting of screenshot did not work for Windows.
+- During export of figures that are outside of backgrouind image - they were trimmed.
 
 # 2026.01.23
 

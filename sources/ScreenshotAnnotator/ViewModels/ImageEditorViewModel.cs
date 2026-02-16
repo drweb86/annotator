@@ -1,3 +1,4 @@
+using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Input;
 using Avalonia.Input.Platform;
@@ -6,6 +7,7 @@ using Avalonia.Media.Imaging;
 using Avalonia.Platform.Storage;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
+using NLog;
 using ScreenshotAnnotator.Models;
 using ScreenshotAnnotator.Services;
 using SkiaSharp;
@@ -404,29 +406,46 @@ public partial class ImageEditorViewModel : ViewModelBase
 
         try
         {
+            // Try to paste image from clipboard
             var clipboard = _topLevel.Clipboard;
             if (clipboard == null) return;
 
 #pragma warning disable CS0618 // Type or member is obsolete
             var formats = await clipboard.GetFormatsAsync();
 
-            // Try to get image data
-            if (formats.Contains("image/png"))
+            foreach (var format in GetImageClipboardFormatsToTry(formats))
             {
-                var data = await clipboard.GetDataAsync("image/png");
-                if (data is byte[] bytes)
+                var data = await clipboard.GetDataAsync(format);
+                if (data is byte[] bytes && bytes.Length > 0)
                 {
-                    using var stream = new MemoryStream(bytes);
-                    var bitmap = new Bitmap(stream);
-                    Image = bitmap;
+                    try
+                    {
+                        using var stream = new MemoryStream(bytes);
+                        var bitmap = new Bitmap(stream);
+                        Image = bitmap;
+                        Shapes.Clear();
+                        var filePath = ProjectManager.GetTimestampedFilePath();
+                        _currentFilePath = filePath;
+                        UpdateCurrentFileNameDisplay();
+                        await SaveCurrentProject();
+                        RefreshProjectFiles();
+                        return;
+                    }
+                    catch
+                    {
+                        // Decode failed, try next format
+                    }
+                }
+                else if (data is Bitmap bmp)
+                {
+                    Image = bmp;
                     Shapes.Clear();
-
-                    // Auto-save the pasted image to projects folder
                     var filePath = ProjectManager.GetTimestampedFilePath();
                     _currentFilePath = filePath;
                     UpdateCurrentFileNameDisplay();
                     await SaveCurrentProject();
                     RefreshProjectFiles();
+                    return;
                 }
             }
 #pragma warning restore CS0618 // Type or member is obsolete
@@ -437,11 +456,23 @@ public partial class ImageEditorViewModel : ViewModelBase
         }
     }
 
+    /// <summary>Order of clipboard formats to try when pasting image (Windows screenshot often uses Bitmap/DIB).</summary>
+    private static IEnumerable<string> GetImageClipboardFormatsToTry(IEnumerable<string> available)
+    {
+        var preferred = new[] { "image/png", "PNG", "image/bmp", "Bitmap", "DeviceIndependentBitmap", "image/jpeg", "image/jpg" };
+        foreach (var fmt in preferred)
+        {
+            if (available.Contains(fmt, StringComparer.OrdinalIgnoreCase))
+                yield return fmt;
+        }
+    }
+
     [RelayCommand]
     private async Task Export()
     {
         if (_editorCanvas == null || Image == null || _topLevel == null ||
             _currentFilePath is null) return;
+        _editorCanvas.ClearSelection();
         await SaveCurrentProject();
         try
         {
@@ -517,12 +548,14 @@ public partial class ImageEditorViewModel : ViewModelBase
     {
         if (_topLevel == null) return;
 
-        await SaveCurrentProject();
-
         try
         {
             var storageProvider = _topLevel.StorageProvider;
             if (storageProvider == null) return;
+
+            var imageExtensions = ImageFileManager.SupportedImageExtensions
+                .Select(x => "*" + x)
+                .ToArray();
 
             var files = await storageProvider.OpenFilePickerAsync(new FilePickerOpenOptions
             {
@@ -531,14 +564,12 @@ public partial class ImageEditorViewModel : ViewModelBase
                 {
                     new FilePickerFileType(LocalizationManager.Instance["FileType_AllSupported"])
                     {
-
-                        Patterns = new[] { "*.png", "*.jpg", "*.jpeg", "*.webp", "*.bmp", "*" + ProjectManager.Extension }
+                        Patterns = imageExtensions.Union(["*" + ProjectManager.Extension]).ToArray()
                     },
                     ProjectManager.PickerFilter,
                     new FilePickerFileType(LocalizationManager.Instance["FileType_Images"])
                     {
-
-                        Patterns = new[] { "*.png", "*.jpg", "*.jpeg", "*.webp", "*.bmp" }
+                        Patterns = imageExtensions
                     },
                     new FilePickerFileType(LocalizationManager.Instance["FileType_AllFiles"]) { Patterns = new[] { "*.*" } }
                 },
@@ -547,27 +578,41 @@ public partial class ImageEditorViewModel : ViewModelBase
 
             if (files.Count > 0)
             {
-                _currentFilePath = null;
-                var file = files[0];
-                var localFileName = file.TryGetLocalPath();
-                Shapes.Clear();
-
-                var filePath = ProjectManager.GetTimestampedFilePath();
-                _currentFilePath = filePath;
-                UpdateCurrentFileNameDisplay();
-                if (localFileName is not null && localFileName.ToLowerInvariant().EndsWith(ProjectManager.Extension))
-                {
-                    await FileHelper.CopyFileAsync(file.Path.LocalPath, filePath);
-                    await LoadCurrentProject();
-                }
-                else
-                {
-                    await using var stream = await file.OpenReadAsync();
-                    Image = new Bitmap(stream);
-                }
-                await SaveCurrentProject();
-                RefreshProjectFiles();
+                await ImportByFile(files[0]);
             }
+        }
+        catch
+        {
+            // Handle load errors
+        }
+    }
+
+    public async Task ImportByFile(IStorageFile file)
+    {
+        if (_topLevel is null)
+            return;
+
+        await SaveCurrentProject();
+
+        try
+        {
+            _currentFilePath = null;
+            Shapes.Clear();
+
+            _currentFilePath = ProjectManager.GetTimestampedFilePath();
+            UpdateCurrentFileNameDisplay();
+            if (file.Name.ToLowerInvariant().EndsWith(ProjectManager.Extension))
+            {
+                await FileHelper.CopyFileAsync(file.Path.LocalPath, _currentFilePath);
+                await LoadCurrentProject();
+            }
+            else
+            {
+                await using var stream = await file.OpenReadAsync();
+                Image = new Bitmap(stream);
+            }
+            await SaveCurrentProject();
+            RefreshProjectFiles();
         }
         catch
         {
@@ -581,6 +626,8 @@ public partial class ImageEditorViewModel : ViewModelBase
 
         try
         {
+            _editorCanvas.ClearSelection();
+
             var project = new AnnotatorProject
             {
                 Version = 1
@@ -837,6 +884,7 @@ public partial class ImageEditorViewModel : ViewModelBase
             // Handle errors
         }
     }
+
 
     [RelayCommand]
     private void ToggleFileBrowser()

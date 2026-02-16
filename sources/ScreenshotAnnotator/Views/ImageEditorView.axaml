@@ -128,6 +128,16 @@
           </StackPanel>
         </Button>
 
+        <!-- Export Button -->
+        <Button Command="{Binding ExportCommand}"
+                ToolTip.Tip="{local:Localize Tooltip_Export}">
+          <StackPanel HorizontalAlignment="Center">
+            <Path Data="M5,20H19V18H5M19,9H15V3H9V9H5L12,16L19,9Z"
+                  Fill="#4CAF50" />
+            <TextBlock Text="{local:Localize Tool_Export}" />
+          </StackPanel>
+        </Button>
+
         <!-- Take Screenshot Button -->
         <Button Command="{Binding TakeScreenshotCommand}"
                 ToolTip.Tip="{local:Localize Tooltip_Screenshot}">
@@ -320,8 +330,8 @@
 
 	  <views:UpdateCheckExpanderView DockPanel.Dock="Top" />
 
-	  <!-- Main Content Area -->
-    <Grid>
+	  <!-- Main Content Area (drag-drop target for images and project files) -->
+    <Grid x:Name="MainContentGrid">
       <Grid.ColumnDefinitions>
         <ColumnDefinition Width="*"/>
         <ColumnDefinition Width="Auto"/>
@@ -392,8 +402,8 @@
               </ItemsControl.ItemsPanel>
               <ItemsControl.ItemTemplate>
                 <DataTemplate DataType="vm:ArrowColorPresetItem">
-                  <Border Width="40" Height="40" Margin="3" Padding="0"
-                          Background="{Binding Color, Converter={StaticResource ColorToBrushConverter}}"
+                  <Border Width="40" Height="40" Margin="3" Padding="6"
+                          Background="#2D2D30"
                           BorderBrush="{Binding IsSelected, Converter={StaticResource SelectedToBorderBrushConverter}}"
                           BorderThickness="{Binding IsSelected, Converter={StaticResource SelectedToThicknessConverter}}"
                           CornerRadius="3" Cursor="Hand"
@@ -404,6 +414,9 @@
                         <Setter Property="BorderBrush" Value="#E0E0E0"/>
                       </Style>
                     </Border.Styles>
+                    <Path Data="M2,2 L18,10 L10,12 L8,20 Z M10,12 L18,18"
+                          Fill="{Binding Color, Converter={StaticResource ColorToBrushConverter}}"
+                          Stretch="Uniform"/>
                   </Border>
                 </DataTemplate>
               </ItemsControl.ItemTemplate>

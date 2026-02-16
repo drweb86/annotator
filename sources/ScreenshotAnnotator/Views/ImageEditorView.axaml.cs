@@ -1,6 +1,8 @@
+using System.Linq;
 using Avalonia.Controls;
 using Avalonia.Input;
 using Avalonia.Media;
+using Avalonia.Platform.Storage;
 using ScreenshotAnnotator.ViewModels;
 
 namespace ScreenshotAnnotator.Views;
@@ -10,6 +12,14 @@ public partial class ImageEditorView : UserControl
     public ImageEditorView()
     {
         InitializeComponent();
+
+        var mainGrid = this.FindControl<Grid>("MainContentGrid");
+        if (mainGrid != null)
+        {
+            DragDrop.SetAllowDrop(mainGrid, true);
+            mainGrid.AddHandler(DragDrop.DragOverEvent, OnDragOver);
+            mainGrid.AddHandler(DragDrop.DropEvent, OnDrop);
+        }
 
         // Connect the overlay canvas to the editor canvas
         this.Loaded += (s, e) =>
@@ -73,6 +83,22 @@ public partial class ImageEditorView : UserControl
                 _ = viewModel.OpenProjectFileCommand.ExecuteAsync(fileInfo);
             }
         }
+    }
+
+    private void OnDragOver(object? sender, DragEventArgs e)
+    {
+        if (e.DataTransfer.TryGetFiles()?.Any() == true)
+            e.DragEffects = DragDropEffects.Copy;
+    }
+
+    private async void OnDrop(object? sender, DragEventArgs e)
+    {
+        if (DataContext is not ImageEditorViewModel viewModel) return;
+        var file = e.DataTransfer.TryGetFiles()?.First(x => x is IStorageFile);
+        if (file is null)
+            return;
+
+        await viewModel.ImportByFile((IStorageFile)file);
     }
 
     private async void OnKeyDown(object? sender, KeyEventArgs e)

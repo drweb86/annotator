@@ -128,6 +128,11 @@
     <comment>Import tool button</comment>
   </data>
 
+  <data name="Tool_Export" xml:space="preserve">
+    <value>Export</value>
+    <comment>Export tool button</comment>
+  </data>
+
   <data name="Tool_Screenshot" xml:space="preserve">
     <value>Screenshot</value>
     <comment>Screenshot tool button</comment>
@@ -197,6 +202,11 @@
   <data name="Tooltip_Import" xml:space="preserve">
     <value>Import a project or image</value>
     <comment>Tooltip for Import button</comment>
+  </data>
+
+  <data name="Tooltip_Export" xml:space="preserve">
+    <value>Export image or project</value>
+    <comment>Tooltip for Export button</comment>
   </data>
 
   <data name="Tooltip_Screenshot" xml:space="preserve">
