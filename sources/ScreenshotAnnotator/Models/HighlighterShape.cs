@@ -57,6 +57,8 @@ public class HighlighterShape : AnnotationShape
         EndPoint += offset;
     }
 
+    public override Rect GetBounds() => new Rect(StartPoint, EndPoint);
+
     public Corner? GetCornerAtPoint(Point point, double handleSize = 8)
     {
         var rect = new Rect(StartPoint, EndPoint);

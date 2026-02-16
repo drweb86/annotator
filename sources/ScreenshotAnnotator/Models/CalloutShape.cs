@@ -228,6 +228,16 @@ public class CalloutShape : AnnotationShape
         BeakPoint = new Point(BeakPoint.X + offset.X, BeakPoint.Y + offset.Y);
     }
 
+    public override Rect GetBounds()
+    {
+        var r = Rectangle;
+        var minX = Math.Min(r.Left, BeakPoint.X);
+        var minY = Math.Min(r.Top, BeakPoint.Y);
+        var maxX = Math.Max(r.Right, BeakPoint.X);
+        var maxY = Math.Max(r.Bottom, BeakPoint.Y);
+        return new Rect(minX, minY, maxX - minX, maxY - minY);
+    }
+
     public void MoveBeak(Point newPosition)
     {
         BeakPoint = newPosition;

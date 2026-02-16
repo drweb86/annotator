@@ -893,10 +893,10 @@ public class ImageEditorCanvas : Control
         }
 
         if (e.Key == Key.C && e.KeyModifiers.HasFlag(KeyModifiers.Control) &&
-            this.SelectedShape is not null && this._textEditor is null && this._imageEditorViewModel is not null &&
+            SelectedShape is not null && _textEditor is null && _imageEditorViewModel is not null &&
             TopLevel.GetTopLevel(this) is TopLevel topLevel)
         {
-            this._imageEditorViewModel.ClipboardService.Copy(_imageEditorViewModel, topLevel.Clipboard, Services.ClipboardScope.Unknown);
+            _imageEditorViewModel.ClipboardService.CopySingleShape(_imageEditorViewModel, topLevel.Clipboard);
             e.Handled = true;
             return;
         }
@@ -1015,7 +1015,7 @@ public class ImageEditorCanvas : Control
         try
         {
             // First, render the full image with all shapes using the same method as CopyToClipboard
-            var fullRenderedImage = RenderToImage();
+            var fullRenderedImage = ProjectRenderer.RenderToImage(Image, Shapes);
             if (fullRenderedImage == null) return;
 
             var selectorRect = _currentSelectorRect.Rectangle;
@@ -1053,31 +1053,6 @@ public class ImageEditorCanvas : Control
         {
             // Silently handle clipboard errors
         }
-    }
-
-    public RenderTargetBitmap? RenderToImage()
-    {
-        if (Image == null) return null;
-
-        var width = Image.PixelSize.Width;
-        var height = Image.PixelSize.Height;
-
-        var renderTarget = new RenderTargetBitmap(new PixelSize(width, height), new Vector(96, 96));
-
-        using (var context = renderTarget.CreateDrawingContext())
-        {
-            // Draw the base image
-            var imageRect = new Rect(0, 0, width, height);
-            context.DrawImage(Image, imageRect);
-
-            // Draw all completed shapes
-            foreach (var shape in Shapes)
-            {
-                shape.Render(context);
-            }
-        }
-
-        return renderTarget;
     }
 
     public Bitmap? CreateBlurredImagePublic(Rect rect)

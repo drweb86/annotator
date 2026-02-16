@@ -73,6 +73,8 @@ public class BorderedRectangleShape : AnnotationShape
         );
     }
 
+    public override Rect GetBounds() => Rectangle;
+
     public bool IsPointOnCornerHandle(Point point, out CalloutShape.Corner corner)
     {
         corner = CalloutShape.Corner.None;

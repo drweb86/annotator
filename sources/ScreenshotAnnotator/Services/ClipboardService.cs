@@ -17,7 +17,7 @@ enum ClipboardScope
 
 interface IClipboardService
 {
-    Task Copy(ImageEditorViewModel imageEditorViewModel, IClipboard? clipboard, ClipboardScope copyScope);
+    Task CopySingleShape(ImageEditorViewModel imageEditorViewModel, IClipboard? clipboard);
     Task Paste(ImageEditorViewModel imageEditorViewModel, IClipboard? clipboard);
 }
 
@@ -25,17 +25,14 @@ internal class ClipboardService: IClipboardService
 {
     private readonly DataFormat<byte[]> _singleShapeCopy = DataFormat.CreateBytesApplicationFormat("annotator-data");
 
-    public async Task Copy(ImageEditorViewModel imageEditorViewModel, IClipboard? clipboard, ClipboardScope copyScope)
+    public async Task CopySingleShape(ImageEditorViewModel imageEditorViewModel, IClipboard? clipboard)
     {
         if (clipboard is null)
             return;
 
-        if (copyScope == ClipboardScope.Unknown)
+        if (ShapeIsSelected(imageEditorViewModel))
         {
-            if (ShapeIsSelected(imageEditorViewModel))
-            {
-                await CopyShapeDataForPaste(clipboard, imageEditorViewModel.SelectedShape!);
-            }
+            await CopyShapeDataForPaste(clipboard, imageEditorViewModel.SelectedShape!);
         }
     }
 

@@ -37,6 +37,8 @@ public class BlurRectangleShape : AnnotationShape
         }
     }
 
+    public override Rect GetBounds() => Rectangle;
+
     public override bool HitTest(Point point)
     {
         return Rectangle.Contains(point);

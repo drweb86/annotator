@@ -12,4 +12,6 @@ public abstract class AnnotationShape
     public abstract void Render(DrawingContext context);
     public abstract bool HitTest(Point point);
     public abstract void Move(Vector offset);
+    /// <summary>Bounding rectangle for export (include stroke/arrow head).</summary>
+    public abstract Rect GetBounds();
 }

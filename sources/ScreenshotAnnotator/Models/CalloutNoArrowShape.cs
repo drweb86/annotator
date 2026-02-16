@@ -90,6 +90,8 @@ public class CalloutNoArrowShape : AnnotationShape
         return Rectangle.Contains(point);
     }
 
+    public override Rect GetBounds() => Rectangle;
+
     public override void Move(Vector offset)
     {
         Rectangle = new Rect(

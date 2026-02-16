@@ -118,6 +118,16 @@ public class ArrowShape : AnnotationShape
         EndPoint = new Point(EndPoint.X + offset.X, EndPoint.Y + offset.Y);
     }
 
+    public override Rect GetBounds()
+    {
+        const double arrowHeadPadding = 45;
+        var minX = Math.Min(StartPoint.X, EndPoint.X) - arrowHeadPadding;
+        var minY = Math.Min(StartPoint.Y, EndPoint.Y) - arrowHeadPadding;
+        var maxX = Math.Max(StartPoint.X, EndPoint.X) + arrowHeadPadding;
+        var maxY = Math.Max(StartPoint.Y, EndPoint.Y) + arrowHeadPadding;
+        return new Rect(minX, minY, maxX - minX, maxY - minY);
+    }
+
     public bool IsPointOnStartHandle(Point point)
     {
         var distance = Math.Sqrt(Math.Pow(point.X - StartPoint.X, 2) + Math.Pow(point.Y - StartPoint.Y, 2));
