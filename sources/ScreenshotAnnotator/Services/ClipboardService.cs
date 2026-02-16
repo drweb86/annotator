@@ -2,20 +2,16 @@
 using Avalonia.Input;
 using Avalonia.Input.Platform;
 using Avalonia.Media.Imaging;
+using NLog;
 using ScreenshotAnnotator.Models;
 using ScreenshotAnnotator.ViewModels;
+using System;
 using System.IO;
 using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
 
 namespace ScreenshotAnnotator.Services;
-
-enum ClipboardScope
-{
-    Unknown,
-    Global
-}
 
 interface IClipboardService
 {
@@ -27,6 +23,7 @@ interface IClipboardService
 
 internal class ClipboardService: IClipboardService
 {
+    private static readonly Logger Logger = LoggingService.GetLogger("ClipboardService");
     private readonly DataFormat<byte[]> _singleShapeCopy = DataFormat.CreateBytesApplicationFormat("annotator-data");
 
     public async Task CopyAll(ImageEditorViewModel imageEditorViewModel, IClipboard? clipboard)
@@ -43,9 +40,9 @@ internal class ClipboardService: IClipboardService
 
             await CopyImage(clipboard, image);
         }
-        catch
+        catch (Exception e)
         {
-            // Silently handle clipboard errors
+            Logger.Fatal(e);
         }
     }
     public async Task CopyArea(ImageEditorViewModel imageEditorViewModel, IClipboard? clipboard, Rect area)
@@ -62,9 +59,9 @@ internal class ClipboardService: IClipboardService
 
             await CopyImage(clipboard, image);
         }
-        catch
+        catch (Exception e)
         {
-            // Silently handle clipboard errors
+            Logger.Fatal(e);
         }
     }
 
@@ -82,9 +79,16 @@ internal class ClipboardService: IClipboardService
         if (clipboard is null)
             return;
 
-        if (ShapeIsSelected(imageEditorViewModel))
+        try
         {
-            await CopyShapeDataForPaste(clipboard, imageEditorViewModel.SelectedShape!);
+            if (ShapeIsSelected(imageEditorViewModel))
+            {
+                await CopyShapeDataForPaste(clipboard, imageEditorViewModel.SelectedShape!);
+            }
+        }
+        catch (Exception e)
+        {
+            Logger.Fatal(e);
         }
     }
 
@@ -107,31 +111,38 @@ internal class ClipboardService: IClipboardService
 
     public async Task Paste(ImageEditorViewModel imageEditorViewModel, IClipboard? clipboard)
     {
-        if (clipboard is null)
-            return;
-
-        var clipboardData = await clipboard.TryGetDataAsync();
-        if (clipboardData is null)
-            return;
-
-        var singleShapeContentBytes = await clipboardData.TryGetValueAsync(_singleShapeCopy);
-        if (singleShapeContentBytes is not null)
+        try
         {
-            var contentString = Encoding.UTF8.GetString(singleShapeContentBytes);
-            var clipboardShape = JsonSerializer.Deserialize<ClipboardSingleShape>(contentString);
-            if (clipboardShape is not null)
+            if (clipboard is null)
+                return;
+
+            var clipboardData = await clipboard.TryGetDataAsync();
+            if (clipboardData is null)
+                return;
+
+            var singleShapeContentBytes = await clipboardData.TryGetValueAsync(_singleShapeCopy);
+            if (singleShapeContentBytes is not null)
             {
-                var annotationShape = clipboardShape.Shape.ToAnnotationShape();
+                var contentString = Encoding.UTF8.GetString(singleShapeContentBytes);
+                var clipboardShape = JsonSerializer.Deserialize<ClipboardSingleShape>(contentString);
+                if (clipboardShape is not null)
+                {
+                    var annotationShape = clipboardShape.Shape.ToAnnotationShape();
 
-                const double pasteOffsetX = 20;
-                const double pasteOffsetY = 20;
-                var offset = new Vector(pasteOffsetX, pasteOffsetY);
+                    const double pasteOffsetX = 20;
+                    const double pasteOffsetY = 20;
+                    var offset = new Vector(pasteOffsetX, pasteOffsetY);
 
-                annotationShape.Move(offset);
+                    annotationShape.Move(offset);
 
-                imageEditorViewModel.AddShape(annotationShape, refreshUi: true);
-                imageEditorViewModel.SelectShape(annotationShape);
+                    imageEditorViewModel.AddShape(annotationShape, refreshUi: true);
+                    imageEditorViewModel.SelectShape(annotationShape);
+                }
             }
+        }
+        catch (Exception e)
+        {
+            Logger.Fatal(e);
         }
     }
 }
