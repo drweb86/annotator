@@ -892,6 +892,24 @@ public class ImageEditorCanvas : Control
             return;
         }
 
+        if (e.Key == Key.C && e.KeyModifiers.HasFlag(KeyModifiers.Control) &&
+            this.SelectedShape is not null && this._textEditor is null && this._imageEditorViewModel is not null &&
+            TopLevel.GetTopLevel(this) is TopLevel topLevel)
+        {
+            this._imageEditorViewModel.ClipboardService.Copy(_imageEditorViewModel, topLevel.Clipboard, Services.ClipboardScope.Unknown);
+            e.Handled = true;
+            return;
+        }
+
+        if (e.Key == Key.V && e.KeyModifiers.HasFlag(KeyModifiers.Control) &&
+            this.SelectedShape is not null && this._textEditor is null && this._imageEditorViewModel is not null &&
+            TopLevel.GetTopLevel(this) is TopLevel topLevel2)
+        {
+            this._imageEditorViewModel.ClipboardService.Paste(_imageEditorViewModel, topLevel2.Clipboard);
+            e.Handled = true;
+            return;
+        }
+
         // If a callout is selected and user presses a key, open text editor
         if (_selectedShape is CalloutShape callout && !e.Handled)
         {

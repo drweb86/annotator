@@ -608,30 +608,8 @@ public partial class ImageEditorViewModel : ViewModelBase
             // Save shapes
             foreach (var shape in Shapes)
             {
-                if (shape is ArrowShape arrow)
-                {
-                    project.Shapes.Add(SerializableArrowShape.FromArrowShape(arrow));
-                }
-                else if (shape is CalloutShape callout)
-                {
-                    project.Shapes.Add(SerializableCalloutShape.FromCalloutShape(callout));
-                }
-                else if (shape is CalloutNoArrowShape calloutNoArrow)
-                {
-                    project.Shapes.Add(SerializableCalloutNoArrowShape.FromCalloutNoArrowShape(calloutNoArrow));
-                }
-                else if (shape is BorderedRectangleShape borderedRect)
-                {
-                    project.Shapes.Add(SerializableBorderedRectangleShape.FromBorderedRectangleShape(borderedRect));
-                }
-                else if (shape is BlurRectangleShape blurRect)
-                {
-                    project.Shapes.Add(SerializableBlurRectangleShape.FromBlurRectangleShape(blurRect));
-                }
-                else if (shape is HighlighterShape highlighter)
-                {
-                    project.Shapes.Add(SerializableHighlighterShape.FromHighlighterShape(highlighter));
-                }
+                var serializableShape = shape.ToSerializableShape();
+                project.Shapes.Add(serializableShape);
             }
 
             // Serialize to JSON and save
@@ -692,37 +670,16 @@ public partial class ImageEditorViewModel : ViewModelBase
             Shapes.Clear();
             foreach (var shape in project.Shapes)
             {
-                if (shape is SerializableArrowShape arrow)
+                var annotationShape = shape.ToAnnotationShape();
+                Shapes.Add(annotationShape);
+                if (annotationShape is BlurRectangleShape blurShape)
                 {
-                    Shapes.Add(arrow.ToArrowShape());
-                }
-                else if (shape is SerializableCalloutShape callout)
-                {
-                    Shapes.Add(callout.ToCalloutShape());
-                }
-                else if (shape is SerializableCalloutNoArrowShape calloutNoArrow)
-                {
-                    Shapes.Add(calloutNoArrow.ToCalloutNoArrowShape());
-                }
-                else if (shape is SerializableBorderedRectangleShape borderedRect)
-                {
-                    Shapes.Add(borderedRect.ToBorderedRectangleShape());
-                }
-                else if (shape is SerializableBlurRectangleShape blurRect)
-                {
-                    var blurShape = blurRect.ToBlurRectangleShape();
-                    Shapes.Add(blurShape);
-
                     // Set up refresh callback for loaded blur shapes
                     if (_editorCanvas != null)
                     {
                         blurShape.RefreshBlur = rect => _editorCanvas.CreateBlurredImagePublic(rect);
                         blurShape.BlurredImage = _editorCanvas.CreateBlurredImagePublic(blurShape.Rectangle);
                     }
-                }
-                else if (shape is SerializableHighlighterShape highlighter)
-                {
-                    Shapes.Add(highlighter.ToHighlighterShape());
                 }
             }
         }
@@ -991,5 +948,31 @@ public partial class ImageEditorViewModel : ViewModelBase
         {
             // Handle errors
         }
+    }
+    public void SelectShape(AnnotationShape annotationShape)
+    {
+        if (SelectedShape != null)
+        {
+            SelectedShape.IsSelected = false;
+        }
+        SelectedShape = annotationShape;
+        annotationShape.IsSelected = true;
+    }
+    public void AddShape(AnnotationShape annotationShape, bool refreshUi)
+    {
+        // If we have copied shape(s), paste them with offset
+        if (Image is null && _editorCanvas is not null)
+            return;
+
+        if (annotationShape is BlurRectangleShape blurRect)
+        {
+            blurRect.RefreshBlur = rect => _editorCanvas!.CreateBlurredImagePublic(rect);
+            blurRect.BlurredImage = _editorCanvas!.CreateBlurredImagePublic(blurRect.Rectangle);
+        }
+        
+        Shapes.Add(annotationShape);
+
+        if (refreshUi)
+            RefreshCanvas();
     }
 }
