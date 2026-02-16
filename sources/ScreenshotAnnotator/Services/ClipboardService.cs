@@ -4,7 +4,6 @@ using Avalonia.Input.Platform;
 using Avalonia.Media.Imaging;
 using NLog;
 using ScreenshotAnnotator.Models;
-using ScreenshotAnnotator.ViewModels;
 using System;
 using System.IO;
 using System.Text;
@@ -15,18 +14,18 @@ namespace ScreenshotAnnotator.Services;
 
 interface IClipboardService
 {
-    Task CopySingleShape(ImageEditorViewModel imageEditorViewModel, IClipboard? clipboard);
-    Task CopyArea(ImageEditorViewModel imageEditorViewModel, IClipboard? clipboard, Rect area);
-    Task CopyAll(ImageEditorViewModel imageEditorViewModel, IClipboard? clipboard);
-    Task Paste(ImageEditorViewModel imageEditorViewModel, IClipboard? clipboard);
+    Task CopySingleShape(IProjectUi projectUi, IClipboard? clipboard);
+    Task CopyArea(IProjectUi projectUi, IClipboard? clipboard, Rect area);
+    Task CopyAll(IProjectUi projectUi, IClipboard? clipboard);
+    Task Paste(IProjectUi projectUi, IClipboard? clipboard);
 }
 
 internal class ClipboardService: IClipboardService
 {
     private static readonly Logger Logger = LoggingService.GetLogger("ClipboardService");
-    private readonly DataFormat<byte[]> _singleShapeCopy = DataFormat.CreateBytesApplicationFormat("annotator-data");
+    private readonly DataFormat<byte[]> _singleShapeAppFormat = DataFormat.CreateBytesApplicationFormat("annotator-single-shape");
 
-    public async Task CopyAll(ImageEditorViewModel imageEditorViewModel, IClipboard? clipboard)
+    public async Task CopyAll(IProjectUi projectUi, IClipboard? clipboard)
     {
         if (clipboard == null)
             return;
@@ -34,7 +33,7 @@ internal class ClipboardService: IClipboardService
         try
         {
             // First, render the full image with all shapes using the same method as CopyToClipboard
-            var image = ProjectRenderer.Render(imageEditorViewModel.Image, imageEditorViewModel.Shapes, out var _);
+            var image = ProjectRenderer.Render(projectUi.GetBitmap(), projectUi.GetShapes(), out var _);
             if (image is null)
                 return;
 
@@ -45,7 +44,7 @@ internal class ClipboardService: IClipboardService
             Logger.Fatal(e);
         }
     }
-    public async Task CopyArea(ImageEditorViewModel imageEditorViewModel, IClipboard? clipboard, Rect area)
+    public async Task CopyArea(IProjectUi projectUi, IClipboard? clipboard, Rect area)
     {
         if (clipboard == null)
             return;
@@ -53,7 +52,7 @@ internal class ClipboardService: IClipboardService
         try
         {
             // First, render the full image with all shapes using the same method as CopyToClipboard
-            var image = ProjectRenderer.Render(imageEditorViewModel.Image, imageEditorViewModel.Shapes, area);
+            var image = ProjectRenderer.Render(projectUi.GetBitmap(), projectUi.GetShapes(), area);
             if (image is null)
                 return;
 
@@ -74,17 +73,18 @@ internal class ClipboardService: IClipboardService
         await clipboard.SetValueAsync(DataFormat.Bitmap, new Bitmap(stream));
     }
 
-    public async Task CopySingleShape(ImageEditorViewModel imageEditorViewModel, IClipboard? clipboard)
+    public async Task CopySingleShape(IProjectUi projectUi, IClipboard? clipboard)
     {
         if (clipboard is null)
             return;
 
+        var selectedShape = projectUi.GetSelectedShape();
+        if (selectedShape is null)
+            return;
+
         try
         {
-            if (ShapeIsSelected(imageEditorViewModel))
-            {
-                await CopyShapeDataForPaste(clipboard, imageEditorViewModel.SelectedShape!);
-            }
+            await CopyShapeDataForPaste(clipboard, selectedShape);
         }
         catch (Exception e)
         {
@@ -99,17 +99,12 @@ internal class ClipboardService: IClipboardService
         var dataTransfer = new DataTransfer();
         var contentString = JsonSerializer.Serialize(clipboardShape);
         var contentBytes = Encoding.UTF8.GetBytes(contentString);
-        dataTransfer.Add(DataTransferItem.Create(_singleShapeCopy, contentBytes));
+        dataTransfer.Add(DataTransferItem.Create(_singleShapeAppFormat, contentBytes));
 
         await clipboard.SetDataAsync(dataTransfer);
     }
 
-    private bool ShapeIsSelected(ImageEditorViewModel imageEditorViewModel)
-    {
-        return imageEditorViewModel.SelectedShape != null;
-    }
-
-    public async Task Paste(ImageEditorViewModel imageEditorViewModel, IClipboard? clipboard)
+    public async Task Paste(IProjectUi projectUi, IClipboard? clipboard)
     {
         try
         {
@@ -120,7 +115,7 @@ internal class ClipboardService: IClipboardService
             if (clipboardData is null)
                 return;
 
-            var singleShapeContentBytes = await clipboardData.TryGetValueAsync(_singleShapeCopy);
+            var singleShapeContentBytes = await clipboardData.TryGetValueAsync(_singleShapeAppFormat);
             if (singleShapeContentBytes is not null)
             {
                 var contentString = Encoding.UTF8.GetString(singleShapeContentBytes);
@@ -135,8 +130,8 @@ internal class ClipboardService: IClipboardService
 
                     annotationShape.Move(offset);
 
-                    imageEditorViewModel.AddShape(annotationShape, refreshUi: true);
-                    imageEditorViewModel.SelectShape(annotationShape);
+                    projectUi.AddShape(annotationShape, refreshUi: true);
+                    projectUi.SetSelectedShape(annotationShape);
                 }
             }
         }

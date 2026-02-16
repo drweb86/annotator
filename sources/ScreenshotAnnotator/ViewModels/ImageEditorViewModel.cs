@@ -31,9 +31,32 @@ public partial class ArrowColorPresetItem : ViewModelBase
     private bool _isSelected;
 }
 
-public partial class ImageEditorViewModel : ViewModelBase
+public partial class ImageEditorViewModel : ViewModelBase, IProjectUi
 {
     internal readonly IClipboardService ClipboardService = new ClipboardService();
+
+    #region IProjectUi
+
+    public Bitmap? GetBitmap()
+    {
+        return Image;
+    }
+    public IEnumerable<AnnotationShape> GetShapes()
+    {
+        return Shapes;
+    }
+
+    public AnnotationShape? GetSelectedShape()
+    {
+        return SelectedShape;
+    }
+
+    public void SetSelectedShape(AnnotationShape annotationShape)
+    {
+        SelectShape(annotationShape);
+    }
+
+    #endregion // IProjectUi
 
     [ObservableProperty]
     private Bitmap? _image;
