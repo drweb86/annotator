@@ -5,7 +5,6 @@
 - Properties of arrow.
 - Properties of markdown region.
 - Ctrl+C/Ctrl+V works for shapes.
-- Print-Screen inside program makes screenshot.
 - Drag and Drop for images into app.
 
 ## Changes
