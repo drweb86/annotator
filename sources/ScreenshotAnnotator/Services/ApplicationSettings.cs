@@ -7,6 +7,7 @@ namespace ScreenshotAnnotator.Services;
 public class ApplicationSettings
 {
     public bool IsFileBrowserVisible { get; set; } = true;
+    public uint SelectedHighlighterColorArgb { get; set; } = 0x64FFFF00; // Semi-transparent yellow default
 
     private static string GetSettingsFilePath()
     {

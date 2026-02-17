@@ -53,8 +53,6 @@ public partial class ImageEditorView : UserControl
             }
         };
 
-        // Add keyboard shortcuts
-        this.KeyDown += OnKeyDown;
     }
 
     private void OnColorPresetPressed(object? sender, PointerPressedEventArgs e)
@@ -63,6 +61,15 @@ public partial class ImageEditorView : UserControl
         if (sender is Border border && border.DataContext is ArrowColorPresetItem item)
         {
             viewModel.SetArrowColorFromPresetCommand.Execute(item.Color);
+        }
+    }
+
+    private void OnHighlighterColorPresetPressed(object? sender, PointerPressedEventArgs e)
+    {
+        if (DataContext is not ImageEditorViewModel viewModel) return;
+        if (sender is Border border && border.DataContext is HighlighterColorPresetItem item)
+        {
+            viewModel.SetHighlighterColorFromPresetCommand.Execute(item.Color);
         }
     }
 
@@ -101,54 +108,4 @@ public partial class ImageEditorView : UserControl
         await viewModel.ImportByFile((IStorageFile)file);
     }
 
-    private async void OnKeyDown(object? sender, KeyEventArgs e)
-    {
-        if (DataContext is not ImageEditorViewModel viewModel) return;
-
-        var isCtrl = e.KeyModifiers.HasFlag(KeyModifiers.Control);
-        var isShift = e.KeyModifiers.HasFlag(KeyModifiers.Shift);
-
-        // Ctrl+C - Copy to clipboard
-        if (isCtrl && !isShift && e.Key == Key.C)
-        {
-            await viewModel.CopyToClipboardCommand.ExecuteAsync(null);
-            e.Handled = true;
-        }
-        // Ctrl+V - Paste from clipboard
-        else if (isCtrl && !isShift && e.Key == Key.V)
-        {
-            await viewModel.PasteFromClipboardCommand.ExecuteAsync(null);
-            e.Handled = true;
-        }
-        // Ctrl+N - New project
-        else if (isCtrl && !isShift && e.Key == Key.N)
-        {
-            viewModel.NewProjectCommand.Execute(null);
-            e.Handled = true;
-        }
-        // Ctrl+O - Open image
-        else if (isCtrl && !isShift && e.Key == Key.O)
-        {
-            await viewModel.ImportCommand.ExecuteAsync(null);
-            e.Handled = true;
-        }
-        // Ctrl+S - Save project
-        else if (isCtrl && !isShift && e.Key == Key.S)
-        {
-            await viewModel.ExportCommand.ExecuteAsync(null);
-            e.Handled = true;
-        }
-        // F9 - Toggle file browser
-        else if (e.Key == Key.F9)
-        {
-            viewModel.ToggleFileBrowserCommand.Execute(null);
-            e.Handled = true;
-        }
-        // F12 - Take screenshot
-        else if (e.Key == Key.F12)
-        {
-            await viewModel.TakeScreenshotCommand.ExecuteAsync(null);
-            e.Handled = true;
-        }
-    }
 }

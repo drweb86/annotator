@@ -10,8 +10,8 @@ public class BorderedRectangleShape : AnnotationShape
 
     public override void Render(DrawingContext context)
     {
-        var color = IsSelected ? Colors.Blue : StrokeColor;
-        var thickness = IsSelected ? StrokeThickness + 1 : StrokeThickness;
+        var color = StrokeColor;
+        var thickness = StrokeThickness;
         // Use half the thickness for this tool
         var actualThickness = thickness / 2.0;
         var pen = new Pen(new SolidColorBrush(color), actualThickness);
@@ -37,11 +37,12 @@ public class BorderedRectangleShape : AnnotationShape
         if (IsSelected)
         {
             var handleSize = 6;
-            var handleBrush = Brushes.Blue;
-            DrawHandle(context, Rectangle.TopLeft, handleSize, handleBrush);
-            DrawHandle(context, Rectangle.TopRight, handleSize, handleBrush);
-            DrawHandle(context, Rectangle.BottomLeft, handleSize, handleBrush);
-            DrawHandle(context, Rectangle.BottomRight, handleSize, handleBrush);
+            var handleBrush = Brushes.White;
+            var handlePen = new Pen(Brushes.Black, 1);
+            DrawHandle(context, Rectangle.TopLeft, handleSize, handleBrush, handlePen);
+            DrawHandle(context, Rectangle.TopRight, handleSize, handleBrush, handlePen);
+            DrawHandle(context, Rectangle.BottomLeft, handleSize, handleBrush, handlePen);
+            DrawHandle(context, Rectangle.BottomRight, handleSize, handleBrush, handlePen);
         }
     }
 
@@ -147,9 +148,9 @@ public class BorderedRectangleShape : AnnotationShape
         );
     }
 
-    private void DrawHandle(DrawingContext context, Point center, double size, IBrush brush)
+    private void DrawHandle(DrawingContext context, Point center, double size, IBrush brush, IPen pen)
     {
         var rect = new Rect(center.X - size / 2, center.Y - size / 2, size, size);
-        context.DrawRectangle(brush, new Pen(Brushes.White, 1), rect);
+        context.DrawRectangle(brush, pen, rect);
     }
 }

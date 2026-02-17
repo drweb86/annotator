@@ -414,9 +414,39 @@
                         <Setter Property="BorderBrush" Value="#E0E0E0"/>
                       </Style>
                     </Border.Styles>
-                    <Path Data="M2,2 L18,10 L10,12 L8,20 Z M10,12 L18,18"
+                    <Path Data="M2,14 L14,14 L14,8 L22,16 L14,24 L14,18 L2,18 Z"
                           Fill="{Binding Color, Converter={StaticResource ColorToBrushConverter}}"
                           Stretch="Uniform"/>
+                  </Border>
+                </DataTemplate>
+              </ItemsControl.ItemTemplate>
+            </ItemsControl>
+          </StackPanel>
+          <!-- Highlighter properties -->
+          <StackPanel IsVisible="{Binding IsHighlighterShapeSelected}" Spacing="8">
+            <TextBlock Text="{local:Localize Props_Color}" Foreground="#CCCCCC" FontSize="12"/>
+            <ItemsControl ItemsSource="{Binding HighlighterColorPresetItems}">
+              <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                  <WrapPanel/>
+                </ItemsPanelTemplate>
+              </ItemsControl.ItemsPanel>
+              <ItemsControl.ItemTemplate>
+                <DataTemplate DataType="vm:HighlighterColorPresetItem">
+                  <Border Width="40" Height="40" Margin="3" Padding="4"
+                          Background="#2D2D30"
+                          BorderBrush="{Binding IsSelected, Converter={StaticResource SelectedToBorderBrushConverter}}"
+                          BorderThickness="{Binding IsSelected, Converter={StaticResource SelectedToThicknessConverter}}"
+                          CornerRadius="3" Cursor="Hand"
+                          PointerPressed="OnHighlighterColorPresetPressed">
+                    <Border.Styles>
+                      <Style Selector="Border:pointerover">
+                        <Setter Property="BorderThickness" Value="2"/>
+                        <Setter Property="BorderBrush" Value="#E0E0E0"/>
+                      </Style>
+                    </Border.Styles>
+                    <Border Background="{Binding Color, Converter={StaticResource ColorToBrushConverter}}"
+                            CornerRadius="2"/>
                   </Border>
                 </DataTemplate>
               </ItemsControl.ItemTemplate>

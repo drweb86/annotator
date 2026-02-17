@@ -8,13 +8,13 @@ public class HighlighterShape : AnnotationShape
 {
     public Point StartPoint { get; set; }
     public Point EndPoint { get; set; }
+    public Color FillColor { get; set; } = Color.FromArgb(100, 255, 255, 0);
 
     public override void Render(DrawingContext context)
     {
         var rect = new Rect(StartPoint, EndPoint);
 
-        // Yellow transparent fill, no border
-        var fillBrush = new SolidColorBrush(Color.FromArgb(100, 255, 255, 0)); // Semi-transparent yellow
+        var fillBrush = new SolidColorBrush(FillColor);
 
         if (IsSelected)
         {

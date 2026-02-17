@@ -1,15 +1,17 @@
-﻿# 2026.02.16
-(unpublished)
+﻿# 2026.02.17
 
 ## New Features
 - Properties of text.
 - Properties of arrow.
+- Properties of markdown region.
 - Ctrl+C/Ctrl+V works for shapes.
+- Print-Screen inside program makes screenshot.
 - Drag and Drop for images into app.
 
 ## Changes
 - During saving preview or export, any selected shape gets unselected.
 - Add export to toolbar near import to toolbar.
+- Blue selection is removed.
 
 ## Bug Fixes
 - Pasting of screenshot did not work for Windows.

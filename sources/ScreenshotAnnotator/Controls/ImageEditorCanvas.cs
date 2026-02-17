@@ -1,4 +1,4 @@
-﻿using Avalonia;
+using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Input;
 using Avalonia.Input.Platform;
@@ -486,7 +486,9 @@ public class ImageEditorCanvas : Control
                         _currentShape = new HighlighterShape
                         {
                             StartPoint = point,
-                            EndPoint = point
+                            EndPoint = point,
+                            FillColor = _imageEditorViewModel?.SelectedHighlighterColor
+                                ?? Avalonia.Media.Color.FromArgb(100, 255, 255, 0)
                         };
                         break;
 

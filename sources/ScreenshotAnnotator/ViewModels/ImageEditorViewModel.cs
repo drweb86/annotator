@@ -31,6 +31,16 @@ public partial class ArrowColorPresetItem : ViewModelBase
     private bool _isSelected;
 }
 
+/// <summary>Wrapper for highlighter color preset so we can bind IsSelected in the template.</summary>
+public partial class HighlighterColorPresetItem : ViewModelBase
+{
+    [ObservableProperty]
+    private Color _color;
+
+    [ObservableProperty]
+    private bool _isSelected;
+}
+
 public partial class ImageEditorViewModel : ViewModelBase, IProjectUi
 {
     internal readonly IClipboardService ClipboardService = new ClipboardService();
@@ -126,6 +136,10 @@ public partial class ImageEditorViewModel : ViewModelBase, IProjectUi
     [ObservableProperty]
     private ObservableCollection<ArrowColorPresetItem> _arrowColorPresetItems = new();
 
+    /// <summary>Preset colors for highlighter with selection state for the UI.</summary>
+    [ObservableProperty]
+    private ObservableCollection<HighlighterColorPresetItem> _highlighterColorPresetItems = new();
+
     private Controls.ImageEditorCanvas? _editorCanvas;
 
     private static readonly Color[] ArrowPresetColorsDefault = new[]
@@ -138,6 +152,20 @@ public partial class ImageEditorViewModel : ViewModelBase, IProjectUi
         Colors.Purple,
         Colors.Black,
     };
+
+    private static readonly Color[] HighlighterPresetColorsDefault = new[]
+    {
+        Color.FromArgb(100, 255, 255, 0),   // Yellow
+        Color.FromArgb(100, 0, 255, 0),     // Green
+        Color.FromArgb(100, 0, 255, 255),   // Cyan
+        Color.FromArgb(100, 255, 105, 180), // Pink
+        Color.FromArgb(100, 255, 165, 0),   // Orange
+        Color.FromArgb(100, 230, 230, 250), // Lavender
+        Color.FromArgb(100, 135, 206, 235), // Light Blue
+        Color.FromArgb(100, 50, 205, 50),   // Lime
+    };
+
+    private Color _currentHighlighterColor = Color.FromArgb(100, 255, 255, 0);
 
     public void SetEditorCanvas(Controls.ImageEditorCanvas canvas)
     {
@@ -153,13 +181,16 @@ public partial class ImageEditorViewModel : ViewModelBase, IProjectUi
     partial void OnSelectedShapeChanged(AnnotationShape? value)
     {
         UpdateArrowColorPresets();
+        UpdateHighlighterColorPresets();
         OnPropertyChanged(nameof(IsTextShapeSelected));
         OnPropertyChanged(nameof(IsArrowShapeSelected));
+        OnPropertyChanged(nameof(IsHighlighterShapeSelected));
         OnPropertyChanged(nameof(SelectedTextFontFamily));
         OnPropertyChanged(nameof(SelectedTextFontSize));
         OnPropertyChanged(nameof(SelectedTextFontBold));
         OnPropertyChanged(nameof(SelectedTextFontItalic));
         OnPropertyChanged(nameof(SelectedArrowColor));
+        OnPropertyChanged(nameof(SelectedHighlighterColor));
         OnPropertyChanged(nameof(FontFamilyChoices));
         RefreshCanvas();
     }
@@ -193,6 +224,68 @@ public partial class ImageEditorViewModel : ViewModelBase, IProjectUi
 
     public bool IsTextShapeSelected => SelectedShape is CalloutShape or CalloutNoArrowShape;
     public bool IsArrowShapeSelected => SelectedShape is ArrowShape;
+    public bool IsHighlighterShapeSelected => SelectedShape is HighlighterShape;
+
+    /// <summary>The current highlighter color used for new shapes and for the selected shape.</summary>
+    public Color SelectedHighlighterColor
+    {
+        get => SelectedShape is HighlighterShape h ? h.FillColor : _currentHighlighterColor;
+        set
+        {
+            if (SelectedShape is HighlighterShape h)
+            {
+                h.FillColor = value;
+                UpdateHighlighterColorPresetSelection();
+                RefreshCanvas();
+            }
+            _currentHighlighterColor = value;
+            _settings.SelectedHighlighterColorArgb = ColorToUInt(value);
+            _settings.Save();
+            OnPropertyChanged();
+        }
+    }
+
+    /// <summary>Used by the highlighter color preset buttons.</summary>
+    [RelayCommand]
+    private void SetHighlighterColorFromPreset(object? parameter)
+    {
+        if (parameter is Color color)
+            SelectedHighlighterColor = color;
+    }
+
+    private void UpdateHighlighterColorPresets()
+    {
+        HighlighterColorPresetItems.Clear();
+        if (SelectedShape is HighlighterShape highlighter)
+        {
+            var selected = highlighter.FillColor;
+            foreach (var c in HighlighterPresetColorsDefault)
+            {
+                HighlighterColorPresetItems.Add(new HighlighterColorPresetItem
+                {
+                    Color = c,
+                    IsSelected = ColorsEqual(c, selected)
+                });
+            }
+        }
+    }
+
+    private void UpdateHighlighterColorPresetSelection()
+    {
+        var selected = SelectedHighlighterColor;
+        foreach (var item in HighlighterColorPresetItems)
+            item.IsSelected = ColorsEqual(item.Color, selected);
+    }
+
+    private static uint ColorToUInt(Color color)
+        => ((uint)color.A << 24) | ((uint)color.R << 16) | ((uint)color.G << 8) | color.B;
+
+    private static Color UIntToColor(uint color)
+        => Color.FromArgb(
+            (byte)((color >> 24) & 0xFF),
+            (byte)((color >> 16) & 0xFF),
+            (byte)((color >> 8) & 0xFF),
+            (byte)(color & 0xFF));
 
     public string SelectedTextFontFamily
     {
@@ -397,6 +490,7 @@ public partial class ImageEditorViewModel : ViewModelBase, IProjectUi
     {
         _settings = ApplicationSettings.Load();
         _isFileBrowserVisible = _settings.IsFileBrowserVisible;
+        _currentHighlighterColor = UIntToColor(_settings.SelectedHighlighterColorArgb);
     }
 
     partial void OnIsFileBrowserVisibleChanged(bool value)

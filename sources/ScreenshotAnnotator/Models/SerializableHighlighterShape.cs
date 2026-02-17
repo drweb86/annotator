@@ -8,6 +8,7 @@ public class SerializableHighlighterShape : SerializableShape
     public double StartY { get; set; }
     public double EndX { get; set; }
     public double EndY { get; set; }
+    public uint FillColor { get; set; } = 0x64FFFF00; // Semi-transparent yellow default
 
     public SerializableHighlighterShape()
     {
@@ -23,7 +24,8 @@ public class SerializableHighlighterShape : SerializableShape
             EndX = highlighter.EndPoint.X,
             EndY = highlighter.EndPoint.Y,
             StrokeColor = ColorToUInt(highlighter.StrokeColor),
-            StrokeThickness = highlighter.StrokeThickness
+            StrokeThickness = highlighter.StrokeThickness,
+            FillColor = ColorToUInt(highlighter.FillColor)
         };
     }
 
@@ -34,7 +36,8 @@ public class SerializableHighlighterShape : SerializableShape
             StartPoint = new Point(StartX, StartY),
             EndPoint = new Point(EndX, EndY),
             StrokeColor = UIntToColor(StrokeColor),
-            StrokeThickness = StrokeThickness
+            StrokeThickness = StrokeThickness,
+            FillColor = UIntToColor(FillColor)
         };
     }
 }
