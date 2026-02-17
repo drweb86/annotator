@@ -1,4 +1,5 @@
 ﻿using Avalonia;
+using Avalonia.Controls.Shapes;
 using Avalonia.Input;
 using Avalonia.Input.Platform;
 using Avalonia.Media.Imaging;
@@ -115,6 +116,13 @@ internal class ClipboardService: IClipboardService
             if (clipboardData is null)
                 return;
 
+            var screenshot = await clipboard.TryGetBitmapAsync();
+            if (screenshot is not null)
+            {
+                await projectUi.CreateNewFromBitmap(screenshot);
+                return;
+            }
+
             var singleShapeContentBytes = await clipboardData.TryGetValueAsync(_singleShapeAppFormat);
             if (singleShapeContentBytes is not null)
             {
@@ -132,6 +140,7 @@ internal class ClipboardService: IClipboardService
 
                     projectUi.AddShape(annotationShape, refreshUi: true);
                     projectUi.SetSelectedShape(annotationShape);
+                    return;
                 }
             }
         }

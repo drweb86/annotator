@@ -56,6 +56,19 @@ public partial class ImageEditorViewModel : ViewModelBase, IProjectUi
         SelectShape(annotationShape);
     }
 
+    public async Task CreateNewFromBitmap(Bitmap bitmap)
+    {
+        await SaveCurrentProject();
+
+        Image = bitmap;
+        Shapes.Clear();
+        var filePath = ProjectManager.GetTimestampedFilePath();
+        _currentFilePath = filePath;
+        UpdateCurrentFileNameDisplay();
+        await SaveCurrentProject();
+        RefreshProjectFiles();
+    }
+
     #endregion // IProjectUi
 
     [ObservableProperty]
@@ -425,69 +438,11 @@ public partial class ImageEditorViewModel : ViewModelBase, IProjectUi
     [RelayCommand]
     private async Task PasteFromClipboard()
     {
-        if (_topLevel == null) return;
+        if (_topLevel is null ||
+            _editorCanvas is null)
+            return;
 
-        try
-        {
-            // Try to paste image from clipboard
-            var clipboard = _topLevel.Clipboard;
-            if (clipboard == null) return;
-
-#pragma warning disable CS0618 // Type or member is obsolete
-            var formats = await clipboard.GetFormatsAsync();
-
-            foreach (var format in GetImageClipboardFormatsToTry(formats))
-            {
-                var data = await clipboard.GetDataAsync(format);
-                if (data is byte[] bytes && bytes.Length > 0)
-                {
-                    try
-                    {
-                        using var stream = new MemoryStream(bytes);
-                        var bitmap = new Bitmap(stream);
-                        Image = bitmap;
-                        Shapes.Clear();
-                        var filePath = ProjectManager.GetTimestampedFilePath();
-                        _currentFilePath = filePath;
-                        UpdateCurrentFileNameDisplay();
-                        await SaveCurrentProject();
-                        RefreshProjectFiles();
-                        return;
-                    }
-                    catch
-                    {
-                        // Decode failed, try next format
-                    }
-                }
-                else if (data is Bitmap bmp)
-                {
-                    Image = bmp;
-                    Shapes.Clear();
-                    var filePath = ProjectManager.GetTimestampedFilePath();
-                    _currentFilePath = filePath;
-                    UpdateCurrentFileNameDisplay();
-                    await SaveCurrentProject();
-                    RefreshProjectFiles();
-                    return;
-                }
-            }
-#pragma warning restore CS0618 // Type or member is obsolete
-        }
-        catch
-        {
-            // Handle clipboard errors silently
-        }
-    }
-
-    /// <summary>Order of clipboard formats to try when pasting image (Windows screenshot often uses Bitmap/DIB).</summary>
-    private static IEnumerable<string> GetImageClipboardFormatsToTry(IEnumerable<string> available)
-    {
-        var preferred = new[] { "image/png", "PNG", "image/bmp", "Bitmap", "DeviceIndependentBitmap", "image/jpeg", "image/jpg" };
-        foreach (var fmt in preferred)
-        {
-            if (available.Contains(fmt, StringComparer.OrdinalIgnoreCase))
-                yield return fmt;
-        }
+        await ClipboardService.Paste(this, _topLevel.Clipboard);
     }
 
     [RelayCommand]

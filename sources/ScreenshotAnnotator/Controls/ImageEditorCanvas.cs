@@ -911,8 +911,7 @@ public class ImageEditorCanvas : Control
             return;
         }
 
-        if (e.Key == Key.V && e.KeyModifiers.HasFlag(KeyModifiers.Control) &&
-            this.SelectedShape is not null)
+        if (e.Key == Key.V && e.KeyModifiers.HasFlag(KeyModifiers.Control))
         {
             this._imageEditorViewModel.ClipboardService.Paste(_imageEditorViewModel, topLevel.Clipboard);
             e.Handled = true;
