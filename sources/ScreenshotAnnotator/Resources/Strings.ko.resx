@@ -324,4 +324,12 @@
   <data name="ContextMenu_Delete" xml:space="preserve">
     <value>삭제</value>
   </data>
+
+  <data name="Tool_Export" xml:space="preserve">
+    <value>내보내기</value>
+  </data>
+
+  <data name="Tooltip_Export" xml:space="preserve">
+    <value>이미지 또는 프로젝트 내보내기</value>
+  </data>
 </root>

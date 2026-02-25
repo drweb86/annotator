@@ -324,4 +324,12 @@
   <data name="ContextMenu_Delete" xml:space="preserve">
     <value>Excluir</value>
   </data>
+
+  <data name="Tool_Export" xml:space="preserve">
+    <value>Exportar</value>
+  </data>
+
+  <data name="Tooltip_Export" xml:space="preserve">
+    <value>Exportar imagem ou projeto</value>
+  </data>
 </root>

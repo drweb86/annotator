@@ -324,4 +324,12 @@
   <data name="ContextMenu_Delete" xml:space="preserve">
     <value>删除</value>
   </data>
+
+  <data name="Tool_Export" xml:space="preserve">
+    <value>导出</value>
+  </data>
+
+  <data name="Tooltip_Export" xml:space="preserve">
+    <value>导出图片或项目</value>
+  </data>
 </root>

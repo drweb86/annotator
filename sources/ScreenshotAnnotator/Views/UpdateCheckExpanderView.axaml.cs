@@ -22,7 +22,7 @@ public partial class UpdateCheckExpanderView : UserControl
         if (update.HasUpdate)
         {
             this.updateNews.Text = update.Changes;
-            this.updateNewsTitle.Text = LocalizationManager.Instance.GetString("Update_NewVersionAvailable", update.Version);
+            this.updateNewsTitle.Text = LocalizationManager.Instance.GetString("Update_NewVersionAvailable", update.Version!);
             IsVisible = true;
         }
     }

@@ -395,4 +395,12 @@
     <value>Удалить</value>
     <comment>Context menu - Delete project</comment>
   </data>
+
+  <data name="Tool_Export" xml:space="preserve">
+    <value>Экспорт</value>
+  </data>
+
+  <data name="Tooltip_Export" xml:space="preserve">
+    <value>Экспорт изображения или проекта</value>
+  </data>
 </root>
