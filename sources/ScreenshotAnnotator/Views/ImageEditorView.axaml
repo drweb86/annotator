@@ -27,7 +27,9 @@
 		  <!-- Menu Bar -->
 		  <Menu DockPanel.Dock="Left">
 			  <MenuItem x:Name="AboutMenuItem"
-	              Header="{Binding HeaderInformation}">
+	              Header="{Binding HeaderInformation}"
+			      Foreground="White"
+                  Classes="MainMenuHeader">
 				  <MenuItem.Icon>
 					  <Image Source="../Assets/App.png" />
 				  </MenuItem.Icon>
@@ -42,7 +44,10 @@
 				  </MenuItem.Items>
 			  </MenuItem>
 
-			  <MenuItem Header="{local:Localize Menu_File}">
+			  <MenuItem
+				  Header="{local:Localize Menu_File}"
+				  Foreground="White"
+				  Classes="MainMenuHeader">
 				  <MenuItem Header="{local:Localize Menu_New}" Command="{Binding NewProjectCommand}" InputGesture="Ctrl+N"/>
 				  <MenuItem Header="{local:Localize Menu_Import}" Command="{Binding ImportCommand}" InputGesture="Ctrl+O"/>
 				  <MenuItem Header="{local:Localize Menu_Export}" Command="{Binding ExportCommand}" InputGesture="Ctrl+S" />

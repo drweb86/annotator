@@ -1,4 +1,10 @@
-﻿# 2026.02.17
+﻿# 2026.02.25
+
+## Changes
+- Dark theme is enforced.
+- Installer required windows version removed for win-get support.
+
+# 2026.02.17
 
 ## New Features
 - Properties of text.

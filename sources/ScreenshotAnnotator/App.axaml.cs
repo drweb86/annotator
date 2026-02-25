@@ -34,13 +34,6 @@ public partial class App : Application
                 DataContext = new MainViewModel()
             };
         }
-        else if (ApplicationLifetime is ISingleViewApplicationLifetime singleViewPlatform)
-        {
-            singleViewPlatform.MainView = new AndroidView
-            {
-                DataContext = new MainViewModel()
-            };
-        }
 
         base.OnFrameworkInitializationCompleted();
     }
