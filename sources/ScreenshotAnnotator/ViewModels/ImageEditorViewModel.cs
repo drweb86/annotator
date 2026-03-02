@@ -712,13 +712,18 @@ public partial class ImageEditorViewModel : ViewModelBase, IProjectUi
                 project.BaseImageBase64 = Convert.ToBase64String(imageStream.ToArray());
             }
 
-            // Save preview (with annotations) as Base64
+            // Save preview (with annotations) as Base64 and as a standalone PNG file
             var renderedImage = ProjectRenderer.Render(Image, Shapes, out var _);
             if (renderedImage != null)
             {
                 using var previewStream = new MemoryStream();
                 renderedImage.Save(previewStream);
                 project.PreviewImageBase64 = Convert.ToBase64String(previewStream.ToArray());
+
+                var pngPath = Path.ChangeExtension(_currentFilePath, ".png");
+                await using var pngFileStream = File.Create(pngPath);
+                previewStream.Position = 0;
+                await previewStream.CopyToAsync(pngFileStream);
             }
 
             // Save shapes
@@ -984,6 +989,11 @@ public partial class ImageEditorViewModel : ViewModelBase, IProjectUi
             if (File.Exists(fileInfo.FilePath))
             {
                 File.Delete(fileInfo.FilePath);
+
+                var pngPath = Path.ChangeExtension(fileInfo.FilePath, ".png");
+                if (File.Exists(pngPath))
+                    File.Delete(pngPath);
+
                 RefreshProjectFiles();
             }
         }

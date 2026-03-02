@@ -353,7 +353,7 @@
                     Background="Black">
         <Grid>
           <controls:ImageEditorCanvas x:Name="EditorCanvas"
-                                      Image="{Binding Image}"
+                                      Image="{Binding Image, Mode=TwoWay}"
                                       CurrentTool="{Binding CurrentTool, Mode=TwoWay}"
                                       Shapes="{Binding Shapes}"/>
           <Canvas x:Name="OverlayCanvas" />
@@ -512,6 +512,7 @@
 
           <!-- File List -->
           <ListBox DockPanel.Dock="Top"
+                   x:Name="ProjectListBox"
                    ItemsSource="{Binding ProjectFiles}"
                    Background="#1C1C1C"
                    BorderBrush="#CCCCCC"
