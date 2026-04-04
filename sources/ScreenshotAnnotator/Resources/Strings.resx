@@ -409,4 +409,15 @@
     <value>Delete</value>
     <comment>Context menu - Delete project</comment>
   </data>
+
+  <!-- Unhandled Exception Handler -->
+  <data name="ImproveIt_Message" xml:space="preserve">
+    <value>An unexpected error occurred.
+
+Please contact the developers with information saved on your desktop in
+"{0}"
+
+Application will now close.</value>
+    <comment>Message shown when an unhandled exception occurs. {0} is replaced with the bug report file path.</comment>
+  </data>
 </root>

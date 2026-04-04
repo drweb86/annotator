@@ -196,7 +196,6 @@ public partial class ScreenshotPreviewViewModel : ViewModelBase
     {
         ShowMagnifier = show;
         MagnifierPosition = position;
-
         if (show && Screenshot != null)
         {
             // Create magnified view of the area around the cursor
