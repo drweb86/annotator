@@ -725,18 +725,15 @@ public partial class ImageEditorViewModel : ViewModelBase, IProjectUi
                 project.BaseImageBase64 = Convert.ToBase64String(imageStream.ToArray());
             }
 
-            // Save preview (with annotations) as Base64 and as a standalone PNG file
+            // Save preview thumbnail in project JSON; full-resolution PNG alongside
             var renderedImage = ProjectRenderer.Render(Image, Shapes, out var _);
             if (renderedImage != null)
             {
-                using var previewStream = new MemoryStream();
-                renderedImage.Save(previewStream);
-                project.PreviewImageBase64 = Convert.ToBase64String(previewStream.ToArray());
+                project.PreviewImageBase64 = ProjectRenderer.CreatePreviewImage(renderedImage);
 
                 var pngPath = Path.ChangeExtension(_currentFilePath, ".png");
                 await using var pngFileStream = File.Create(pngPath);
-                previewStream.Position = 0;
-                await previewStream.CopyToAsync(pngFileStream);
+                renderedImage.Save(pngFileStream);
             }
 
             // Save shapes

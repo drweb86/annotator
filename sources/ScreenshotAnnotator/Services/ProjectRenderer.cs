@@ -9,6 +9,66 @@ namespace ScreenshotAnnotator.Services;
 
 internal static class ProjectRenderer
 {
+    private const double PreviewMaxSize = 100.0;
+
+    /// <summary>
+    /// Encodes a rendered project image as PNG base64, downscaled so the longest side is at most 100px.
+    /// </summary>
+    public static string CreatePreviewImage(RenderTargetBitmap renderedImage)
+    {
+        var w = renderedImage.PixelSize.Width;
+        var h = renderedImage.PixelSize.Height;
+        var scale = Math.Min(PreviewMaxSize / w, PreviewMaxSize / h);
+
+        if (scale < 1)
+        {
+            var newWidth = (int)(w * scale);
+            var newHeight = (int)(h * scale);
+            using var scaled = new RenderTargetBitmap(new PixelSize(newWidth, newHeight), new Vector(96, 96));
+            using (var context = scaled.CreateDrawingContext())
+            {
+                var sourceRect = new Rect(0, 0, w, h);
+                var destRect = new Rect(0, 0, newWidth, newHeight);
+                context.DrawImage(renderedImage, sourceRect, destRect);
+            }
+
+            using var previewStream = new MemoryStream();
+            scaled.Save(previewStream);
+            return Convert.ToBase64String(previewStream.ToArray());
+        }
+
+        using (var previewStream = new MemoryStream())
+        {
+            renderedImage.Save(previewStream);
+            return Convert.ToBase64String(previewStream.ToArray());
+        }
+    }
+
+    /// <summary>
+    /// Decodes stored preview base64 to a bitmap. If it already fits within 100×100, returns it as-is; otherwise scales down.
+    /// </summary>
+    public static Bitmap? CreatePreviewImage(string? previewImageBase64)
+    {
+        if (string.IsNullOrEmpty(previewImageBase64))
+            return null;
+
+        var imageBytes = Convert.FromBase64String(previewImageBase64);
+        using var memoryStream = new MemoryStream(imageBytes);
+        var bitmap = new Bitmap(memoryStream);
+
+        var scale = Math.Min(PreviewMaxSize / bitmap.PixelSize.Width, PreviewMaxSize / bitmap.PixelSize.Height);
+        if (scale < 1)
+        {
+            var newWidth = (int)(bitmap.PixelSize.Width * scale);
+            var newHeight = (int)(bitmap.PixelSize.Height * scale);
+            var scaled = bitmap.CreateScaledBitmap(new PixelSize(newWidth, newHeight));
+            bitmap.Dispose();
+            return scaled;
+        }
+
+        return bitmap;
+    }
+
     public static RenderTargetBitmap? Render(Bitmap? bitmap, IEnumerable<AnnotationShape> shapes, out Vector offset)
     {
         offset = new Vector();

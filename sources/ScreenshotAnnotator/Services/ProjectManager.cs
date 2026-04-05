@@ -44,17 +44,6 @@ public class ProjectManager(IFileSystem fileSystem) : IProjectManager
         return await ImportPicture(fileStream, projectPath);
     }
 
-    private string CreatePreviewImageBase64(RenderTargetBitmap renderedImage)
-        // Bug 1. Full scale is bad!
-        // Bug 2. Use separate file.
-    {
-        using (var previewStream = new MemoryStream())
-        {
-            renderedImage.Save(previewStream);
-            return Convert.ToBase64String(previewStream.ToArray());
-        }
-    }
-
     private async Task<ProjectFileInfo> ImportPicture(Stream pictureFileStream, string projectPath)
     {
         var backgroundImageBytes = await pictureFileStream.GetBytes();
@@ -67,7 +56,7 @@ public class ProjectManager(IFileSystem fileSystem) : IProjectManager
 
         var project = new AnnotatorProject { Version = 1 };
         project.BaseImageBase64 = Convert.ToBase64String(backgroundImageBytes);
-        project.PreviewImageBase64 = CreatePreviewImageBase64(renderedImage);
+        project.PreviewImageBase64 = ProjectRenderer.CreatePreviewImage(renderedImage);
         var json = JsonSerializer.Serialize(project, new JsonSerializerOptions { WriteIndented = true });
         await File.WriteAllTextAsync(projectPath, json);
 
@@ -136,29 +125,10 @@ public class ProjectManager(IFileSystem fileSystem) : IProjectManager
         {
             var json = File.ReadAllText(filePath);
             var project = JsonSerializer.Deserialize<AnnotatorProject>(json);
-
-            if (project == null || string.IsNullOrEmpty(project.PreviewImageBase64))
-            {
+            if (project == null)
                 return null;
-            }
 
-            // Decode base64 image
-            var imageBytes = Convert.FromBase64String(project.PreviewImageBase64);
-            using var memoryStream = new MemoryStream(imageBytes);
-            var bitmap = new Bitmap(memoryStream);
-
-            // Create a thumbnail (max 100x100)
-            var maxSize = 100.0;
-            var scale = Math.Min(maxSize / bitmap.PixelSize.Width, maxSize / bitmap.PixelSize.Height);
-
-            if (scale < 1)
-            {
-                var newWidth = (int)(bitmap.PixelSize.Width * scale);
-                var newHeight = (int)(bitmap.PixelSize.Height * scale);
-                return bitmap.CreateScaledBitmap(new Avalonia.PixelSize(newWidth, newHeight));
-            }
-
-            return bitmap;
+            return ProjectRenderer.CreatePreviewImage(project.PreviewImageBase64);
         }
         catch
         {

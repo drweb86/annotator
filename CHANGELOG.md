@@ -9,6 +9,7 @@
 ## Changes
 - Update checker is collapsed by default.
 - Projects are collapsed when click on Projects.
+- Improve perfomance during adding new image.
 
 ## Bug Fixes
 - After making trims, if i select all area and copy - initial image is copied.
