@@ -5,6 +5,7 @@
 - Enable mouse wheel for scroll images in projects area.
 - During saving, png file is nearby saved, so user could use it in explorer in any app he would like, as well as do search.
 - Unhandled Exceptions handling.
+- Escape closes screenshot selection window.
 
 ## Changes
 - Update checker is collapsed by default.
