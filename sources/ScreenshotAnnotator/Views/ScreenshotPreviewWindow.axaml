@@ -8,57 +8,18 @@
         x:Class="ScreenshotAnnotator.Views.ScreenshotPreviewWindow"
         x:DataType="vm:ScreenshotPreviewViewModel"
         Title="Screenshot Preview - Select Area"
-        WindowStartupLocation="CenterScreen"
-		WindowState="Maximized"
-        Width="1000"
-        Height="700"
-        Background="Black">
+        WindowStartupLocation="Manual"
+        SystemDecorations="None"
+        CanResize="False"
+        Background="Black"
+        Focusable="True">
 
   <Design.DataContext>
     <vm:ScreenshotPreviewViewModel />
   </Design.DataContext>
 
-  <DockPanel>
-    <!-- Top toolbar -->
-    <Border DockPanel.Dock="Top"
-            Background="#2A2A2A"
-            Padding="10">
-      <Grid>
-        <Grid.ColumnDefinitions>
-          <ColumnDefinition Width="*"/>
-          <ColumnDefinition Width="Auto"/>
-        </Grid.ColumnDefinitions>
-
-        <TextBlock Grid.Column="0"
-                   Text="{local:Localize Screenshot_Instructions}"
-                   Foreground="White"
-                   VerticalAlignment="Center"
-                   FontSize="14"/>
-
-        <StackPanel Grid.Column="1" Orientation="Horizontal" Spacing="10">
-          <Button Command="{Binding ConfirmCommand}"
-                  Content="{local:Localize Button_OK}"
-                  Padding="20,8"
-                  Background="#4CAF50"
-                  Foreground="White"
-                  FontSize="14"
-                  FontWeight="Bold"
-                  CornerRadius="4"/>
-
-          <Button Command="{Binding CancelCommand}"
-                  Content="{local:Localize Button_Cancel}"
-                  Padding="20,8"
-                  Background="#F44336"
-                  Foreground="White"
-                  FontSize="14"
-                  CornerRadius="4"/>
-        </StackPanel>
-      </Grid>
-    </Border>
-
-    <!-- Main canvas area -->
-    <Grid DockPanel.Dock="Top" Background="Black">
-      <Viewbox x:Name="ImageViewbox" Stretch="Uniform" Margin="20">
+  <Grid Background="Black">
+      <Viewbox x:Name="ImageViewbox" Stretch="Uniform" Margin="0">
         <Canvas x:Name="MainCanvas"
                 Width="{Binding Screenshot.PixelSize.Width}"
                 Height="{Binding Screenshot.PixelSize.Height}"
@@ -288,6 +249,5 @@
           </Border>
         </Canvas>
       </Viewbox>
-    </Grid>
-  </DockPanel>
+  </Grid>
 </Window>

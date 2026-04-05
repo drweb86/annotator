@@ -83,6 +83,7 @@ public partial class ScreenshotPreviewViewModel : ViewModelBase
 
         SelectionRect = new Rect(0, 0, width, height);
         UpdateAnchorPoints();
+        UpdateFloatingButtons();
     }
 
     public void UpdateSelectionRect(Rect newRect)
@@ -115,33 +116,46 @@ public partial class ScreenshotPreviewViewModel : ViewModelBase
         // Show buttons if selection has a reasonable size
         ShowFloatingButtons = SelectionRect.Width > 50 && SelectionRect.Height > 50;
 
-        if (ShowFloatingButtons)
+        if (!ShowFloatingButtons)
+            return;
+
+        const double buttonWidth = 200;
+        const double buttonHeight = 60;
+        const double margin = 12;
+
+        var fullW = Screenshot.PixelSize.Width;
+        var fullH = Screenshot.PixelSize.Height;
+        var entireArea =
+            SelectionRect.Width >= fullW - 2 &&
+            SelectionRect.Height >= fullH - 2;
+
+        double buttonX = SelectionRect.Center.X - buttonWidth / 2;
+        double buttonY;
+
+        if (entireArea)
         {
-            // Position buttons below the selection rectangle, centered
-            const double buttonWidth = 200; // Approximate width of both buttons together
-            var buttonX = SelectionRect.Center.X - buttonWidth / 2;
-            var buttonY = SelectionRect.Bottom + 15;
-
-            // If buttons would go off the bottom, put them above
-            if (buttonY + 60 > Screenshot.PixelSize.Height)
-            {
-                buttonY = SelectionRect.Top - 60;
-            }
-
-            // If buttons would go off the right edge, adjust left
-            if (buttonX + buttonWidth > Screenshot.PixelSize.Width)
-            {
-                buttonX = Screenshot.PixelSize.Width - buttonWidth - 10;
-            }
-
-            // If buttons would go off the left edge, adjust right
-            if (buttonX < 10)
-            {
-                buttonX = 10;
-            }
-
-            FloatingButtonsPosition = new Point(buttonX, buttonY);
+            buttonY = SelectionRect.Bottom - buttonHeight - margin;
+            buttonX = Math.Clamp(buttonX, margin, fullW - buttonWidth - margin);
+            buttonY = Math.Clamp(buttonY, SelectionRect.Top + margin, SelectionRect.Bottom - buttonHeight - margin);
         }
+        else
+        {
+            buttonY = SelectionRect.Bottom + 15;
+
+            if (buttonY + buttonHeight > fullH)
+                buttonY = SelectionRect.Top - buttonHeight - 15;
+
+            if (buttonY < 0)
+                buttonY = Math.Max(SelectionRect.Top + margin, SelectionRect.Bottom - buttonHeight - margin);
+
+            if (buttonX + buttonWidth > fullW)
+                buttonX = fullW - buttonWidth - 10;
+
+            if (buttonX < 10)
+                buttonX = 10;
+        }
+
+        FloatingButtonsPosition = new Point(buttonX, buttonY);
     }
 
     public void UpdateAnchorPoint(string anchor, Point newPosition)

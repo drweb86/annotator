@@ -4,7 +4,6 @@ using Avalonia.Controls.Shapes;
 using Avalonia.Input;
 using ScreenshotAnnotator.ViewModels;
 using System;
-using System.Runtime.InteropServices;
 
 namespace ScreenshotAnnotator.Views;
 
@@ -19,17 +18,32 @@ public partial class ScreenshotPreviewWindow : Window
     public ScreenshotPreviewWindow()
     {
         InitializeComponent();
+    }
 
-        // Workaround with full screen not implemented by Avalonia for Ubuntu.
-        if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
-        {
-            var screen = Screens.ScreenFromVisual(this);
-            if (screen is not null)
-            {
-                this.Width = screen.Bounds.Width;
-                this.Height = screen.Bounds.Height;
-            }
-        }
+    protected override void OnOpened(EventArgs e)
+    {
+        base.OnOpened(e);
+        ApplyFullscreenToPrimaryScreen();
+        Focus();
+    }
+
+    /// <summary>
+    /// Borderless window covering the full primary monitor (including taskbar area),
+    /// sized in DIPs so the captured bitmap scales uniformly with no letterboxing.
+    /// </summary>
+    private void ApplyFullscreenToPrimaryScreen()
+    {
+        var screen = Screens.Primary;
+        if (screen is null)
+            return;
+
+        var scale = screen.Scaling;
+        if (scale <= 0)
+            scale = 1;
+
+        Position = screen.Bounds.Position;
+        Width = screen.Bounds.Width / scale;
+        Height = screen.Bounds.Height / scale;
     }
 
     private void Canvas_PointerMoved(object? sender, PointerEventArgs e)
@@ -155,5 +169,17 @@ public partial class ScreenshotPreviewWindow : Window
                 }
             };
         }
+    }
+
+    protected override void OnKeyDown(KeyEventArgs e)
+    {
+        if (e.Key == Key.Escape && ViewModel is { } vm)
+        {
+            vm.CancelCommand.Execute(null);
+            e.Handled = true;
+            return;
+        }
+
+        base.OnKeyDown(e);
     }
 }
