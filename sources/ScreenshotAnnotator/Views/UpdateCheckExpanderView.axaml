@@ -8,42 +8,40 @@
 	<UserControl.Resources>
 		<commands:LatestReleaseCommand x:Key="LatestReleaseCommand"/>
 	</UserControl.Resources>
-    <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="Auto" />
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition />
-            <RowDefinition />
-        </Grid.RowDefinitions>
-
-        <TextBlock
-            Grid.Row="0"
-            Grid.Column="0"
-            x:Name="updateNewsTitle"
-			TextWrapping="Wrap"
-			Margin="35,8,16,8"
-			VerticalAlignment="Center" 
-            FontSize="18"
-            FontWeight="SemiBold"
-            Foreground="{StaticResource TextPrimaryBrush}"/>
-        <Button
-            Grid.Row="0"
-            Grid.RowSpan="2"
-            Grid.Column="1"
-			Classes="SecondaryButton"
-			Margin="10,10,25,10"
-			VerticalAlignment="Center"
-			Command="{StaticResource LatestReleaseCommand}"
-			Content="{local:Localize Button_Download}" />
-        <TextBlock
-            Grid.Row="1"
-            Grid.Column="0"
+	<Expander IsExpanded="False"
+			  HorizontalAlignment="Stretch"
+			  ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+			  Background="Transparent">
+		<Expander.Header>
+			<Grid>
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="*" />
+					<ColumnDefinition Width="Auto" />
+				</Grid.ColumnDefinitions>
+				<TextBlock
+					Grid.Column="0"
+					x:Name="updateNewsTitle"
+					TextWrapping="Wrap"
+					Margin="35,8,16,8"
+					VerticalAlignment="Center"
+					FontSize="18"
+					FontWeight="SemiBold"
+					Foreground="{StaticResource TextPrimaryBrush}"/>
+				<Button
+					Grid.Column="1"
+					Classes="SecondaryButton"
+					Margin="10,10,25,10"
+					VerticalAlignment="Center"
+					Command="{StaticResource LatestReleaseCommand}"
+					Content="{local:Localize Button_Download}" />
+			</Grid>
+		</Expander.Header>
+		<TextBlock
 			x:Name="updateNews"
 			TextWrapping="Wrap"
 			Margin="35,8,16,8"
-            FontWeight="SemiBold" Foreground="{StaticResource TextPrimaryBrush}"
-			VerticalAlignment="Center" />
-    </Grid>
+			FontWeight="SemiBold"
+			Foreground="{StaticResource TextPrimaryBrush}"
+			VerticalAlignment="Top" />
+	</Expander>
 </UserControl>
