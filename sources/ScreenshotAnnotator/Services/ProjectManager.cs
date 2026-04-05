@@ -23,7 +23,7 @@ public interface IProjectManager
 
 public class ProjectManager(IFileSystem fileSystem) : IProjectManager
 {
-    private string GetRenderedImageFile(string projectPath)
+    private static string GetRenderedImageFile(string projectPath)
     {
         return Path.ChangeExtension(projectPath, ".png");
     }
@@ -113,6 +113,7 @@ public class ProjectManager(IFileSystem fileSystem) : IProjectManager
         return new ProjectFileInfo
         {
             FilePath = filePath,
+            RenderedImageFilePath = GetRenderedImageFile(filePath),
             FileName = Path.GetFileName(filePath),
             ModifiedDate = fileInfo.LastWriteTime,
             Thumbnail = LoadProjectThumbnail(filePath)

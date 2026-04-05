@@ -490,20 +490,17 @@ public partial class ImageEditorViewModel : ViewModelBase, IProjectUi
 
     private async Task OnOpenProject(ProjectFileInfo project)
     {
-        await OpenProjectFromRecentAsync(project);
+        await SaveCurrentProject();
+        CloseProject();
+
+        _currentFilePath = project.FilePath;
+        await LoadCurrentProject();
     }
 
     private async Task OnDeleteProject(ProjectFileInfo project)
     {
         if (project.IsCurrentFile)
-        {
-            _currentFilePath = null;
-            Image?.Dispose();
-            Image = null;
-            Shapes.Clear();
-            _editorCanvas?.ClearSelector();
-            UpdateCurrentFileNameDisplay();
-        }
+            CloseProject();
     }
 
     internal string? CurrentProjectFilePath => _currentFilePath;
@@ -554,74 +551,64 @@ public partial class ImageEditorViewModel : ViewModelBase, IProjectUi
         if (_editorCanvas == null || Image == null || _topLevel == null ||
             _currentFilePath is null) return;
         _editorCanvas.ClearSelection();
+
         await SaveCurrentProject();
-        try
+
+        var storageProvider = _topLevel.StorageProvider;
+        if (storageProvider == null) return;
+
+        var file = await storageProvider.SaveFilePickerAsync(new FilePickerSaveOptions
         {
-            var storageProvider = _topLevel.StorageProvider;
-            if (storageProvider == null) return;
+            Title = LocalizationManager.Instance["Dialog_Export_Title"],
+            FileTypeChoices = [
+                new FilePickerFileType(LocalizationManager.Instance["FileType_PNG"]) { Patterns = new[] { "*.png" } },
+                new FilePickerFileType(LocalizationManager.Instance["FileType_JPEG"]) { Patterns = new[] { "*.jpg", "*.jpeg" } },
+                new FilePickerFileType(LocalizationManager.Instance["FileType_WebP"]) { Patterns = new[] { "*.webp" } },
+                AllServices.ProjectManager.PickerFilter,
+            ],
+            SuggestedFileName = "annotated_image",
+        });
 
-            var file = await storageProvider.SaveFilePickerAsync(new FilePickerSaveOptions
-            {
-                Title = LocalizationManager.Instance["Dialog_Export_Title"],
-                FileTypeChoices = new[]
-                {
-                    new FilePickerFileType(LocalizationManager.Instance["FileType_PNG"]) { Patterns = new[] { "*.png" } },
-                    new FilePickerFileType(LocalizationManager.Instance["FileType_JPEG"]) { Patterns = new[] { "*.jpg", "*.jpeg" } },
-                    new FilePickerFileType(LocalizationManager.Instance["FileType_WebP"]) { Patterns = new[] { "*.webp" } },
+        if (file is null)
+            return;
 
-                    AllServices.ProjectManager.PickerFilter,
-                },
-                SuggestedFileName = "annotated_image",
-            });
+        var localFileName = file.TryGetLocalPath();
+        if (localFileName is null)
+            return;
 
-            if (file != null)
-            {
-                var localFileName = file.TryGetLocalPath();
-                if (localFileName is not null && localFileName.ToLowerInvariant().EndsWith(ProjectManager.Extension))
-                {
-                    await using var stream = await file.OpenWriteAsync();
-                    await FileHelper.CopyFileAsync(_currentFilePath, stream);
-
-                    return;
-                }
-
-
-                var renderedImage = ProjectRenderer.Render(Image, Shapes, out var _);
-                if (renderedImage != null && localFileName != null)
-                {
-                    var extension = Path.GetExtension(localFileName).ToLowerInvariant();
-
-                    // Convert Avalonia bitmap to SkiaSharp bitmap for encoding
-                    using var memStream = new MemoryStream();
-                    renderedImage.Save(memStream); // Save as PNG first
-                    memStream.Position = 0;
-
-                    using var skBitmap = SKBitmap.Decode(memStream);
-                    if (skBitmap != null)
-                    {
-                        await using var outputStream = await file.OpenWriteAsync();
-
-                        SKEncodedImageFormat format = extension switch
-                        {
-                            ".jpg" or ".jpeg" => SKEncodedImageFormat.Jpeg,
-                            ".webp" => SKEncodedImageFormat.Webp,
-                            ".bmp" => SKEncodedImageFormat.Bmp,
-                            _ => SKEncodedImageFormat.Png
-                        };
-
-                        int quality = (format == SKEncodedImageFormat.Jpeg || format == SKEncodedImageFormat.Webp) ? 90 : 100;
-
-                        using var image = SKImage.FromBitmap(skBitmap);
-                        using var data = image.Encode(format, quality);
-                        data.SaveTo(outputStream);
-                    }
-                }
-            }
-        }
-        catch
+        if (localFileName.ToLowerInvariant().EndsWith(ProjectManager.Extension))
         {
-            // Handle save errors
+            await using var stream = await file.OpenWriteAsync();
+            await FileHelper.CopyFileAsync(_currentFilePath, stream);
+
+            return;
         }
+
+        var renderedImageFilePath = RecentProjects.ProjectFiles
+            .First(x => x.IsCurrentFile)
+            .RenderedImageFilePath;
+
+        using var renderedImageStream = File.OpenRead(renderedImageFilePath);
+
+        using var skBitmap = SKBitmap.Decode(renderedImageStream);
+        if (skBitmap is null)
+            return;
+
+        var extension = Path.GetExtension(localFileName).ToLowerInvariant();
+        SKEncodedImageFormat format = extension switch
+        {
+            ".jpg" or ".jpeg" => SKEncodedImageFormat.Jpeg,
+            ".webp" => SKEncodedImageFormat.Webp,
+            ".bmp" => SKEncodedImageFormat.Bmp,
+            _ => SKEncodedImageFormat.Png
+        };
+
+        int quality = (format == SKEncodedImageFormat.Jpeg || format == SKEncodedImageFormat.Webp) ? 90 : 100;
+
+        using var image = SKImage.FromBitmap(skBitmap);
+        using var data = image.Encode(format, quality);
+        await using var outputStream = await file.OpenWriteAsync();
+        data.SaveTo(outputStream);
     }
 
     [RelayCommand]
@@ -681,7 +668,7 @@ public partial class ImageEditorViewModel : ViewModelBase, IProjectUi
         await FinishCreatingProject(project);
     }
 
-    private void CloseProject()
+    public void CloseProject()
     {
         _currentFilePath = null;
 
@@ -695,6 +682,7 @@ public partial class ImageEditorViewModel : ViewModelBase, IProjectUi
 
         foreach (var f in RecentProjects.ProjectFiles)
             f.IsCurrentFile = false;
+        UpdateCurrentFileNameDisplay();
     }
 
     private async Task FinishCreatingProject(ProjectFileInfo project)
@@ -705,7 +693,7 @@ public partial class ImageEditorViewModel : ViewModelBase, IProjectUi
         await AllServices.ApplicationEvents.CreatedProject(project);
     }
 
-    private async Task SaveCurrentProject()
+    public async Task SaveCurrentProject()
     {
         if (_editorCanvas == null || _editorCanvas.Image == null || _currentFilePath is null) return;
 
@@ -750,29 +738,15 @@ public partial class ImageEditorViewModel : ViewModelBase, IProjectUi
             });
 
             await File.WriteAllTextAsync(_currentFilePath, json);
+
+            var projectInfo = this.RecentProjects.ProjectFiles.First(x => x.FilePath == _currentFilePath);
+            projectInfo.Thumbnail?.Dispose();
+            projectInfo.Thumbnail = null;
+            projectInfo.Thumbnail = ProjectRenderer.CreatePreviewImage(project.PreviewImageBase64);
         }
-        catch
+        catch (Exception e)
         {
             // Handle save errors
-        }
-    }
-
-    public async Task AutoSaveCurrentProject()
-    {
-        // Only autosave if we have a current project file and there are shapes or an image
-        if (_currentFilePath != null && _editorCanvas?.Image != null)
-        {
-            try
-            {
-                await SaveCurrentProject();
-
-                // Refresh project files to show updated thumbnails
-                RecentProjects.Refresh(CurrentProjectFilePath);
-            }
-            catch
-            {
-                // Silently handle autosave errors
-            }
         }
     }
 
@@ -892,94 +866,24 @@ public partial class ImageEditorViewModel : ViewModelBase, IProjectUi
         _mainWindow.WindowState = WindowState.Normal;
     }
 
-    internal async Task OpenProjectFromRecentAsync(ProjectFileInfo fileInfo)
-    {
-        try
-        {
-            await AutoSaveCurrentProject();
-            _currentFilePath = fileInfo.FilePath;
-            UpdateCurrentFileNameDisplay();
-            await LoadCurrentProject();
-            RecentProjects.Refresh(CurrentProjectFilePath);
-        }
-        catch
-        {
-            // Handle errors
-        }
-    }
-
     [RelayCommand]
-    private void OpenProjectsFolder()
-    {
-        try
-        {
-            System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo
-            {
-                FileName = AllServices.ProjectManager.ProjectsFolder,
-                UseShellExecute = true
-            });
-        }
-        catch
-        {
-            // Handle errors
-        }
-    }
-
+    private void OpenProjectsFolder() => ProcessHelper.OpenWithShell(AllServices.ProjectManager.ProjectsFolder);
     [RelayCommand]
     private void OpenLogsFolder()
     {
-        try
+        var folder = LoggingService.GetLogDirectory();
+        if (!Directory.Exists(folder))
         {
-            var folder = LoggingService.GetLogDirectory();
-            if (!Directory.Exists(folder))
-            {
-                Directory.CreateDirectory(folder);
-            }
-            System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo
-            {
-                FileName = folder,
-                UseShellExecute = true
-            });
+            Directory.CreateDirectory(folder);
         }
-        catch
-        {
-            // Handle errors
-        }
+        ProcessHelper.OpenWithShell(folder);
     }
 
     [RelayCommand]
-    private void OpenWebsite()
-    {
-        try
-        {
-            System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo
-            {
-                FileName = ApplicationLinks.AboutUrl,
-                UseShellExecute = true
-            });
-        }
-        catch
-        {
-            // Handle errors
-        }
-    }
-
+    private void OpenWebsite() => ProcessHelper.OpenWithShell(ApplicationLinks.AboutUrl);
     [RelayCommand]
-    private void OpenLicense()
-    {
-        try
-        {
-            System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo
-            {
-                FileName = ApplicationLinks.LicenseUrl,
-                UseShellExecute = true
-            });
-        }
-        catch
-        {
-            // Handle errors
-        }
-    }
+    private void OpenLicense() => ProcessHelper.OpenWithShell(ApplicationLinks.LicenseUrl);
+
     public void SelectShape(AnnotationShape annotationShape)
     {
         if (SelectedShape != null)

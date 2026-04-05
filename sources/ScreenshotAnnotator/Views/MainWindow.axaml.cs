@@ -72,7 +72,8 @@ public partial class MainWindow : Window
             e.Cancel = true;
 
             // Perform autosave
-            await viewModel.ImageEditor.AutoSaveCurrentProject();
+            await viewModel.ImageEditor.SaveCurrentProject();
+            viewModel.ImageEditor.CloseProject();
 
             // Shutdown logging
             LoggingService.Shutdown();
