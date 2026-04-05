@@ -221,10 +221,6 @@
     <value>プロジェクトパネルを折りたたむ/展開</value>
   </data>
 
-  <data name="Tooltip_Refresh" xml:space="preserve">
-    <value>更新</value>
-  </data>
-
   <data name="Panel_Projects" xml:space="preserve">
     <value>プロジェクト</value>
   </data>

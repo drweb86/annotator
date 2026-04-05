@@ -221,10 +221,6 @@
     <value>折叠/展开项目面板</value>
   </data>
 
-  <data name="Tooltip_Refresh" xml:space="preserve">
-    <value>刷新</value>
-  </data>
-
   <data name="Panel_Projects" xml:space="preserve">
     <value>项目</value>
   </data>

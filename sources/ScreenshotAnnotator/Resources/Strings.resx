@@ -274,11 +274,6 @@
     <comment>Tooltip for panel toggle button</comment>
   </data>
 
-  <data name="Tooltip_Refresh" xml:space="preserve">
-    <value>Refresh</value>
-    <comment>Tooltip for Refresh button</comment>
-  </data>
-
   <!-- Panel Headers -->
   <data name="Panel_Projects" xml:space="preserve">
     <value>Projects</value>

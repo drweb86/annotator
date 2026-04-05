@@ -221,10 +221,6 @@
     <value>Contraer/Expandir panel de proyectos</value>
   </data>
 
-  <data name="Tooltip_Refresh" xml:space="preserve">
-    <value>Actualizar</value>
-  </data>
-
   <data name="Panel_Projects" xml:space="preserve">
     <value>Proyectos</value>
   </data>
