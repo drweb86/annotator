@@ -49,7 +49,7 @@ public partial class ImageEditorViewModel : ViewModelBase, IProjectUi
 
     #region IProjectUi
 
-    public Bitmap? GetBitmap()
+    public Bitmap? GetBitmap() // whats that about, why not expose getter?
     {
         return Image;
     }
@@ -695,6 +695,7 @@ public partial class ImageEditorViewModel : ViewModelBase, IProjectUi
 
     public async Task SaveCurrentProject()
     {
+        // TODO: move saving out!
         if (_editorCanvas == null || _editorCanvas.Image == null || _currentFilePath is null) return;
 
         try
