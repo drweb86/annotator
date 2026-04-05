@@ -16,6 +16,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text.Json;
 using System.Threading.Tasks;
 
@@ -76,7 +77,7 @@ public partial class ImageEditorViewModel : ViewModelBase, IProjectUi
         _currentFilePath = filePath;
         UpdateCurrentFileNameDisplay();
         await SaveCurrentProject();
-        RecentProjects.Refresh();
+        RecentProjects.Refresh(CurrentProjectFilePath);
     }
 
     #endregion // IProjectUi
@@ -485,8 +486,20 @@ public partial class ImageEditorViewModel : ViewModelBase, IProjectUi
     public ImageEditorViewModel()
     {
         _settings = AllServices.ApplicationSettings;
-        RecentProjects = new RecentProjectsViewModel(this, _settings);
+        RecentProjects = new RecentProjectsViewModel();
         _currentHighlighterColor = UIntToColor(_settings.Settings.SelectedHighlighterColorArgb);
+        AllServices.ApplicationEvents.OnDeleteProject += OnDeleteProject;
+        AllServices.ApplicationEvents.OnOpenProject += OnOpenProject;
+    }
+
+    private async Task OnOpenProject(ProjectFileInfo project)
+    {
+        await OpenProjectFromRecentAsync(project);
+    }
+
+    private async Task OnDeleteProject(ProjectFileInfo project)
+    {
+        DeleteProjectFromRecent(project);
     }
 
     internal string? CurrentProjectFilePath => _currentFilePath;
@@ -676,7 +689,7 @@ public partial class ImageEditorViewModel : ViewModelBase, IProjectUi
                 Image = new Bitmap(stream);
             }
             await SaveCurrentProject();
-            RecentProjects.Refresh();
+            RecentProjects.Refresh(CurrentProjectFilePath);
         }
         catch
         {
@@ -749,7 +762,7 @@ public partial class ImageEditorViewModel : ViewModelBase, IProjectUi
                 await SaveCurrentProject();
 
                 // Refresh project files to show updated thumbnails
-                RecentProjects.Refresh();
+                RecentProjects.Refresh(CurrentProjectFilePath);
             }
             catch
             {
@@ -855,7 +868,7 @@ public partial class ImageEditorViewModel : ViewModelBase, IProjectUi
         _currentFilePath = filePath;
         UpdateCurrentFileNameDisplay();
         await SaveCurrentProject();
-        RecentProjects.Refresh();
+        RecentProjects.Refresh(CurrentProjectFilePath);
     }
 
     [RelayCommand]
@@ -905,7 +918,7 @@ public partial class ImageEditorViewModel : ViewModelBase, IProjectUi
                 await SaveCurrentProject();
 
                 // Refresh file list
-                RecentProjects.Refresh();
+                RecentProjects.Refresh(CurrentProjectFilePath);
             }
         }
         catch
@@ -926,7 +939,7 @@ public partial class ImageEditorViewModel : ViewModelBase, IProjectUi
             _currentFilePath = fileInfo.FilePath;
             UpdateCurrentFileNameDisplay();
             await LoadCurrentProject();
-            RecentProjects.Refresh();
+            RecentProjects.Refresh(CurrentProjectFilePath);
         }
         catch
         {
@@ -954,8 +967,7 @@ public partial class ImageEditorViewModel : ViewModelBase, IProjectUi
                 var pngPath = Path.ChangeExtension(fileInfo.FilePath, ".png");
                 if (File.Exists(pngPath))
                     File.Delete(pngPath);
-
-                RecentProjects.Refresh();
+                RecentProjects.Refresh(CurrentProjectFilePath);
             }
         }
         catch

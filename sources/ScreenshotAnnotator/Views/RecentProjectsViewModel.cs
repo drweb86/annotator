@@ -9,14 +9,22 @@ namespace ScreenshotAnnotator.ViewModels;
 
 public partial class RecentProjectsViewModel : ViewModelBase
 {
-    private readonly ImageEditorViewModel _editor;
     private readonly IApplicationSettings _settings;
 
-    public RecentProjectsViewModel(ImageEditorViewModel editor, IApplicationSettings settings)
+    public RecentProjectsViewModel()
     {
-        _editor = editor;
-        _settings = settings;
-        _isPanelExpanded = settings.Settings.IsFileBrowserVisible;
+        _settings = AllServices.ApplicationSettings;
+        _isPanelExpanded = _settings.Settings.IsFileBrowserVisible;
+        AllServices.ApplicationEvents.OnDeleteProject += OnDeleteProject;
+        AllServices.ApplicationEvents.OnOpenProject += OnOpenProject;
+    }
+
+    private async Task OnOpenProject(ProjectFileInfo project)
+    {
+    }
+
+    private async Task OnDeleteProject(ProjectFileInfo project)
+    {
     }
 
     [ObservableProperty]
@@ -31,10 +39,12 @@ public partial class RecentProjectsViewModel : ViewModelBase
         _settings.Save();
     }
 
-    public void Refresh()
+    // TODO: eliminate.
+    [Obsolete("Never call directly")]
+    public void Refresh(string currentProjectFilePath)
     {
         ProjectFiles.Clear();
-        var current = _editor.CurrentProjectFilePath;
+        var current = currentProjectFilePath;
         foreach (var file in ProjectManager.GetProjectFiles())
         {
             file.IsCurrentFile = !string.IsNullOrEmpty(current) &&
@@ -44,20 +54,17 @@ public partial class RecentProjectsViewModel : ViewModelBase
     }
 
     [RelayCommand]
-    private void RefreshProjectFiles() => Refresh();
-
-    [RelayCommand]
     private async Task OpenProjectFile(ProjectFileInfo? fileInfo)
     {
         if (fileInfo is null) return;
-        await _editor.OpenProjectFromRecentAsync(fileInfo);
+        await AllServices.ApplicationEvents.OpenProject(fileInfo);
     }
 
     [RelayCommand]
-    private void DeleteProjectFile(ProjectFileInfo? fileInfo)
+    private async Task DeleteProjectFile(ProjectFileInfo? fileInfo)
     {
         if (fileInfo is null) return;
-        _editor.DeleteProjectFromRecent(fileInfo);
+        await AllServices.ApplicationEvents.DeleteProject(fileInfo);
     }
 
     [RelayCommand]
