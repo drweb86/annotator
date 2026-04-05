@@ -507,6 +507,7 @@ public partial class ImageEditorViewModel : ViewModelBase, IProjectUi
             Image?.Dispose();
             Image = null;
             Shapes.Clear();
+            _editorCanvas?.ClearSelector();
             UpdateCurrentFileNameDisplay();
         }
     }
@@ -691,6 +692,7 @@ public partial class ImageEditorViewModel : ViewModelBase, IProjectUi
             await using var stream = await file.OpenReadAsync();
             var project = await _projectManager.Import(file.Name, stream);
 
+            _editorCanvas?.ClearSelector();
             _currentFilePath = project.FilePath;
             UpdateCurrentFileNameDisplay();
             await LoadCurrentProject();

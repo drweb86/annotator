@@ -9,6 +9,7 @@ using ScreenshotAnnotator.Services;
 using ScreenshotAnnotator.ViewModels;
 using System;
 using System.Collections.ObjectModel;
+using System.Collections.Specialized;
 using System.IO;
 using System.Linq;
 
@@ -31,6 +32,7 @@ public class ImageEditorCanvas : Control
     private TextBox? _textEditor;
     private CalloutShape? _editingCallout;
     private CalloutNoArrowShape? _editingCalloutNoArrow;
+    private ObservableCollection<AnnotationShape>? _shapesSubscriptionTarget;
 
     public Canvas? OverlayCanvas { get; set; }
 
@@ -106,18 +108,59 @@ public class ImageEditorCanvas : Control
     {
         AffectsRender<ImageEditorCanvas>(ImageProperty, ShapesProperty);
         CurrentToolProperty.Changed.AddClassHandler<ImageEditorCanvas>((x, e) => x.OnCurrentToolChanged(e));
+        ImageProperty.Changed.AddClassHandler<ImageEditorCanvas>((x, e) => x.OnImagePropertyChanged(e));
+        ShapesProperty.Changed.AddClassHandler<ImageEditorCanvas>((x, e) => x.OnShapesPropertyChanged(e));
     }
 
     public ImageEditorCanvas()
     {
-        Shapes.CollectionChanged += (s, e) =>
-        {
-            // Clear selector when shapes change (e.g., project loaded)
-            ClearSelector();
-            InvalidateVisual();
-        };
         DoubleTapped += OnDoubleTapped;
         Focusable = true; // Allow the canvas to receive keyboard input
+    }
+
+    private void OnImagePropertyChanged(AvaloniaPropertyChangedEventArgs e)
+    {
+        // New or removed image (import, delete, screenshot): drop selector rect; it is tied to the previous bitmap.
+        ClearSelector();
+    }
+
+    private void OnShapesPropertyChanged(AvaloniaPropertyChangedEventArgs e)
+    {
+        ResubscribeShapesCollection();
+    }
+
+    private void ResubscribeShapesCollection()
+    {
+        var newCollection = Shapes;
+        if (ReferenceEquals(_shapesSubscriptionTarget, newCollection))
+            return;
+        if (_shapesSubscriptionTarget is not null)
+            _shapesSubscriptionTarget.CollectionChanged -= OnShapesCollectionChanged;
+        _shapesSubscriptionTarget = newCollection;
+        if (_shapesSubscriptionTarget is not null)
+            _shapesSubscriptionTarget.CollectionChanged += OnShapesCollectionChanged;
+    }
+
+    private void OnShapesCollectionChanged(object? sender, NotifyCollectionChangedEventArgs e)
+    {
+        // Clear selector when shapes change (e.g., project loaded). Subscribed to the bound collection, not the property default.
+        ClearSelector();
+    }
+
+    protected override void OnAttachedToVisualTree(VisualTreeAttachmentEventArgs e)
+    {
+        base.OnAttachedToVisualTree(e);
+        ResubscribeShapesCollection();
+    }
+
+    protected override void OnDetachedFromVisualTree(VisualTreeAttachmentEventArgs e)
+    {
+        if (_shapesSubscriptionTarget is not null)
+        {
+            _shapesSubscriptionTarget.CollectionChanged -= OnShapesCollectionChanged;
+            _shapesSubscriptionTarget = null;
+        }
+        base.OnDetachedFromVisualTree(e);
     }
 
     private void OnCurrentToolChanged(AvaloniaPropertyChangedEventArgs e)
@@ -135,6 +178,7 @@ public class ImageEditorCanvas : Control
     public void ClearSelector()
     {
         _currentSelectorRect = null;
+        InvalidateVisual();
     }
 
     private void OnDoubleTapped(object? sender, TappedEventArgs e)

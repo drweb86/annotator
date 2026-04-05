@@ -12,6 +12,7 @@
 
 ## Bug Fixes
 - After making trims, if i select all area and copy - initial image is copied.
+- On deletion or import of image, selection area was not cleared.
 
 # 2026.02.25
 
