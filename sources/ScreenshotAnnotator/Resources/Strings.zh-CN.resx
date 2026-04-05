@@ -328,4 +328,13 @@
   <data name="Tooltip_Export" xml:space="preserve">
     <value>导出图片或项目</value>
   </data>
+
+  <data name="ImproveIt_Message" xml:space="preserve">
+    <value>发生意外错误。
+
+请使用保存在您桌面上的信息联系开发人员，路径为
+"{0}"
+
+应用程序即将关闭。</value>
+  </data>
 </root>

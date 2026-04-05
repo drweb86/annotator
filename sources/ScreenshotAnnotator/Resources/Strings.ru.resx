@@ -398,4 +398,13 @@
   <data name="Tooltip_Export" xml:space="preserve">
     <value>Экспорт изображения или проекта</value>
   </data>
+
+  <data name="ImproveIt_Message" xml:space="preserve">
+    <value>Произошла непредвиденная ошибка.
+
+Свяжитесь с разработчиками, приложив сведения, сохранённые на рабочем столе в файле
+"{0}"
+
+Приложение будет закрыто.</value>
+  </data>
 </root>

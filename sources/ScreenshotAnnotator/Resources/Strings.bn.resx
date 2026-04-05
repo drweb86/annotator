@@ -59,282 +59,283 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
 
-  <!-- Japanese Translation -->
+  <!-- Bengali -->
 
   <data name="Window_Title" xml:space="preserve">
-    <value>スクリーンショット注釈 - 画像エディター</value>
+    <value>স্ক্রিনশট অ্যানোটেটর - ইমেজ এডিটর</value>
   </data>
 
   <data name="Header_ScreenshotAnnotator" xml:space="preserve">
-    <value>[ スクリーンショット注釈 - V{0} ]</value>
+    <value>[ স্ক্রিনশট অ্যানোটেটর - ভি{0} ]</value>
   </data>
 
   <data name="Copyright_Text" xml:space="preserve">
-    <value>注釈ツール {0} : Copyright (c) 2025-{1} Siarhei Kuchuk</value>
+    <value>Annotator {0} : কপিরাইট (c) 2025-{1} Siarhei Kuchuk</value>
   </data>
 
   <data name="Menu_File" xml:space="preserve">
-    <value>[ ファイル ]</value>
+    <value>[ ফাইল ]</value>
   </data>
 
   <data name="Menu_New" xml:space="preserve">
-    <value>新規...</value>
+    <value>নতুন...</value>
   </data>
 
   <data name="Menu_Import" xml:space="preserve">
-    <value>インポート...</value>
+    <value>আমদানি...</value>
   </data>
 
   <data name="Menu_Export" xml:space="preserve">
-    <value>エクスポート...</value>
+    <value>রপ্তানি...</value>
   </data>
 
   <data name="Menu_OpenProjectsFolder" xml:space="preserve">
-    <value>プロジェクトフォルダーを開く(_P)</value>
+    <value>প্রজেক্ট ফোল্ডার খুলুন</value>
   </data>
 
   <data name="Menu_OpenLogsFolder" xml:space="preserve">
-    <value>ログフォルダーを開く(_L)</value>
+    <value>লগ ফোল্ডার খুলুন</value>
   </data>
 
   <data name="Menu_WebSite" xml:space="preserve">
-    <value>ウェブサイト</value>
+    <value>ওয়েবসাইট</value>
   </data>
 
   <data name="Menu_License" xml:space="preserve">
-    <value>ライセンス</value>
+    <value>লাইসেন্স</value>
   </data>
 
   <data name="Tool_New" xml:space="preserve">
-    <value>新規</value>
+    <value>নতুন</value>
   </data>
 
   <data name="Tool_Import" xml:space="preserve">
-    <value>インポート</value>
-  </data>
-
-  <data name="Tool_Screenshot" xml:space="preserve">
-    <value>スクリーンショット</value>
-  </data>
-
-  <data name="Tool_Copy" xml:space="preserve">
-    <value>コピー</value>
-  </data>
-
-  <data name="Tool_Paste" xml:space="preserve">
-    <value>貼り付け</value>
-  </data>
-
-  <data name="Tool_Select" xml:space="preserve">
-    <value>選択</value>
-  </data>
-
-  <data name="Tool_Arrow" xml:space="preserve">
-    <value>矢印</value>
-  </data>
-
-  <data name="Tool_Callout" xml:space="preserve">
-    <value>吹き出し</value>
-  </data>
-
-  <data name="Tool_Note" xml:space="preserve">
-    <value>メモ</value>
-  </data>
-
-  <data name="Tool_Border" xml:space="preserve">
-    <value>枠線</value>
-  </data>
-
-  <data name="Tool_Highlight" xml:space="preserve">
-    <value>ハイライト</value>
-  </data>
-
-  <data name="Tool_Blur" xml:space="preserve">
-    <value>ぼかし</value>
-  </data>
-
-  <data name="Tool_CutVertical" xml:space="preserve">
-    <value>カット |</value>
-  </data>
-
-  <data name="Tool_CutHorizontal" xml:space="preserve">
-    <value>カット -</value>
-  </data>
-
-  <data name="Tooltip_New" xml:space="preserve">
-    <value>新しいプロジェクトを作成</value>
-  </data>
-
-  <data name="Tooltip_Import" xml:space="preserve">
-    <value>プロジェクトまたは画像をインポート</value>
-  </data>
-
-  <data name="Tooltip_Screenshot" xml:space="preserve">
-    <value>スクリーンショットを撮る</value>
-  </data>
-
-  <data name="Tooltip_Copy" xml:space="preserve">
-    <value>クリップボードにコピー</value>
-  </data>
-
-  <data name="Tooltip_Paste" xml:space="preserve">
-    <value>クリップボードから貼り付け</value>
-  </data>
-
-  <data name="Tooltip_Select" xml:space="preserve">
-    <value>注釈を選択して編集</value>
-  </data>
-
-  <data name="Tooltip_Arrow" xml:space="preserve">
-    <value>矢印を描く</value>
-  </data>
-
-  <data name="Tooltip_Callout" xml:space="preserve">
-    <value>吹き出しを追加</value>
-  </data>
-
-  <data name="Tooltip_Note" xml:space="preserve">
-    <value>テキストメモを追加</value>
-  </data>
-
-  <data name="Tooltip_Border" xml:space="preserve">
-    <value>枠線/矩形を描く</value>
-  </data>
-
-  <data name="Tooltip_Highlight" xml:space="preserve">
-    <value>領域をハイライト</value>
-  </data>
-
-  <data name="Tooltip_Blur" xml:space="preserve">
-    <value>領域をぼかす</value>
-  </data>
-
-  <data name="Tooltip_CutVertical" xml:space="preserve">
-    <value>画像を縦にカット</value>
-  </data>
-
-  <data name="Tooltip_CutHorizontal" xml:space="preserve">
-    <value>画像を横にカット</value>
-  </data>
-
-  <data name="Tooltip_CollapseExpandPanel" xml:space="preserve">
-    <value>プロジェクトパネルを折りたたむ/展開</value>
-  </data>
-
-  <data name="Panel_Projects" xml:space="preserve">
-    <value>プロジェクト</value>
-  </data>
-
-  <data name="Panel_Properties" xml:space="preserve">
-    <value>プロパティ</value>
-  </data>
-
-  <data name="Props_Font" xml:space="preserve">
-    <value>フォント</value>
-  </data>
-
-  <data name="Props_Size" xml:space="preserve">
-    <value>サイズ</value>
-  </data>
-
-  <data name="Props_Bold" xml:space="preserve">
-    <value>太字</value>
-  </data>
-
-  <data name="Props_Italic" xml:space="preserve">
-    <value>斜体</value>
-  </data>
-
-  <data name="Props_Color" xml:space="preserve">
-    <value>色</value>
-  </data>
-
-  <data name="Dialog_Export_Title" xml:space="preserve">
-    <value>エクスポート</value>
-  </data>
-
-  <data name="Dialog_Import_Title" xml:space="preserve">
-    <value>プロジェクトまたは画像をインポート</value>
-  </data>
-
-  <data name="FileType_PNG" xml:space="preserve">
-    <value>PNG 画像</value>
-  </data>
-
-  <data name="FileType_JPEG" xml:space="preserve">
-    <value>JPEG 画像</value>
-  </data>
-
-  <data name="FileType_WebP" xml:space="preserve">
-    <value>WebP 画像</value>
-  </data>
-
-  <data name="FileType_AllSupported" xml:space="preserve">
-    <value>サポートされているすべてのファイル</value>
-  </data>
-
-  <data name="FileType_Images" xml:space="preserve">
-    <value>画像ファイル</value>
-  </data>
-
-  <data name="FileType_AllFiles" xml:space="preserve">
-    <value>すべてのファイル</value>
-  </data>
-
-  <data name="FileType_AnnotatorProject" xml:space="preserve">
-    <value>注釈プロジェクト</value>
-  </data>
-
-  <data name="Screenshot_Instructions" xml:space="preserve">
-    <value>クリックしてドラッグして領域を選択するか、コーナーポイントを調整します。精度を高めるには虫眼鏡を使用します。準備ができたらOKを押します。</value>
-  </data>
-
-  <data name="Button_OK" xml:space="preserve">
-    <value>OK</value>
-  </data>
-
-  <data name="Button_Cancel" xml:space="preserve">
-    <value>キャンセル</value>
-  </data>
-
-  <data name="Button_Accept" xml:space="preserve">
-    <value>✓ 承認</value>
-  </data>
-
-  <data name="Button_CancelX" xml:space="preserve">
-    <value>✕ キャンセル</value>
-  </data>
-
-  <data name="Update_NewVersionAvailable" xml:space="preserve">
-    <value>新しいバージョン {0} が利用可能です。</value>
-  </data>
-
-  <data name="Button_Download" xml:space="preserve">
-    <value>ダウンロード</value>
-  </data>
-
-  <data name="ContextMenu_Open" xml:space="preserve">
-    <value>開く</value>
-  </data>
-
-  <data name="ContextMenu_Delete" xml:space="preserve">
-    <value>削除</value>
+    <value>আমদানি</value>
   </data>
 
   <data name="Tool_Export" xml:space="preserve">
-    <value>エクスポート</value>
+    <value>রপ্তানি</value>
+  </data>
+
+  <data name="Tool_Screenshot" xml:space="preserve">
+    <value>স্ক্রিনশট</value>
+  </data>
+
+  <data name="Tool_Copy" xml:space="preserve">
+    <value>কপি</value>
+  </data>
+
+  <data name="Tool_Paste" xml:space="preserve">
+    <value>পেস্ট</value>
+  </data>
+
+  <data name="Tool_Select" xml:space="preserve">
+    <value>নির্বাচন</value>
+  </data>
+
+  <data name="Tool_Arrow" xml:space="preserve">
+    <value>তীর</value>
+  </data>
+
+  <data name="Tool_Callout" xml:space="preserve">
+    <value>কলআউট</value>
+  </data>
+
+  <data name="Tool_Note" xml:space="preserve">
+    <value>নোট</value>
+  </data>
+
+  <data name="Tool_Border" xml:space="preserve">
+    <value>বর্ডার</value>
+  </data>
+
+  <data name="Tool_Highlight" xml:space="preserve">
+    <value>হাইলাইট</value>
+  </data>
+
+  <data name="Tool_Blur" xml:space="preserve">
+    <value>ব্লার</value>
+  </data>
+
+  <data name="Tool_CutVertical" xml:space="preserve">
+    <value>কাট |</value>
+  </data>
+
+  <data name="Tool_CutHorizontal" xml:space="preserve">
+    <value>কাট -</value>
+  </data>
+
+  <data name="Tooltip_New" xml:space="preserve">
+    <value>নতুন প্রজেক্ট তৈরি করুন</value>
+  </data>
+
+  <data name="Tooltip_Import" xml:space="preserve">
+    <value>প্রজেক্ট বা ছবি আমদানি করুন</value>
   </data>
 
   <data name="Tooltip_Export" xml:space="preserve">
-    <value>画像またはプロジェクトをエクスポート</value>
+    <value>ছবি বা প্রজেক্ট রপ্তানি করুন</value>
+  </data>
+
+  <data name="Tooltip_Screenshot" xml:space="preserve">
+    <value>স্ক্রিনশট নিন</value>
+  </data>
+
+  <data name="Tooltip_Copy" xml:space="preserve">
+    <value>ক্লিপবোর্ডে কপি করুন</value>
+  </data>
+
+  <data name="Tooltip_Paste" xml:space="preserve">
+    <value>ক্লিপবোর্ড থেকে পেস্ট করুন</value>
+  </data>
+
+  <data name="Tooltip_Select" xml:space="preserve">
+    <value>অ্যানোটেশন নির্বাচন ও সম্পাদনা করুন</value>
+  </data>
+
+  <data name="Tooltip_Arrow" xml:space="preserve">
+    <value>তীর আঁকুন</value>
+  </data>
+
+  <data name="Tooltip_Callout" xml:space="preserve">
+    <value>কলআউট যোগ করুন</value>
+  </data>
+
+  <data name="Tooltip_Note" xml:space="preserve">
+    <value>টেক্সট নোট যোগ করুন</value>
+  </data>
+
+  <data name="Tooltip_Border" xml:space="preserve">
+    <value>বর্ডার/আয়তক্ষেত্র আঁকুন</value>
+  </data>
+
+  <data name="Tooltip_Highlight" xml:space="preserve">
+    <value>একটি এলাকা হাইলাইট করুন</value>
+  </data>
+
+  <data name="Tooltip_Blur" xml:space="preserve">
+    <value>একটি এলাকা ব্লার করুন</value>
+  </data>
+
+  <data name="Tooltip_CutVertical" xml:space="preserve">
+    <value>ছবি উল্লম্বভাবে কাটুন</value>
+  </data>
+
+  <data name="Tooltip_CutHorizontal" xml:space="preserve">
+    <value>ছবি অনুভূমিকভাবে কাটুন</value>
+  </data>
+
+  <data name="Tooltip_CollapseExpandPanel" xml:space="preserve">
+    <value>প্রজেক্ট প্যানেল সংকুচিত/প্রসারিত করুন</value>
+  </data>
+
+  <data name="Panel_Projects" xml:space="preserve">
+    <value>প্রজেক্ট</value>
+  </data>
+
+  <data name="Panel_Properties" xml:space="preserve">
+    <value>বৈশিষ্ট্য</value>
+  </data>
+
+  <data name="Props_Font" xml:space="preserve">
+    <value>ফন্ট</value>
+  </data>
+
+  <data name="Props_Size" xml:space="preserve">
+    <value>আকার</value>
+  </data>
+
+  <data name="Props_Bold" xml:space="preserve">
+    <value>বোল্ড</value>
+  </data>
+
+  <data name="Props_Italic" xml:space="preserve">
+    <value>ইটালিক</value>
+  </data>
+
+  <data name="Props_Color" xml:space="preserve">
+    <value>রঙ</value>
+  </data>
+
+  <data name="Dialog_Export_Title" xml:space="preserve">
+    <value>রপ্তানি</value>
+  </data>
+
+  <data name="Dialog_Import_Title" xml:space="preserve">
+    <value>প্রজেক্ট বা ছবি আমদানি করুন</value>
+  </data>
+
+  <data name="FileType_PNG" xml:space="preserve">
+    <value>PNG ছবি</value>
+  </data>
+
+  <data name="FileType_JPEG" xml:space="preserve">
+    <value>JPEG ছবি</value>
+  </data>
+
+  <data name="FileType_WebP" xml:space="preserve">
+    <value>WebP ছবি</value>
+  </data>
+
+  <data name="FileType_AllSupported" xml:space="preserve">
+    <value>সমস্ত সমর্থিত ফাইল</value>
+  </data>
+
+  <data name="FileType_Images" xml:space="preserve">
+    <value>ছবির ফাইল</value>
+  </data>
+
+  <data name="FileType_AllFiles" xml:space="preserve">
+    <value>সমস্ত ফাইল</value>
+  </data>
+
+  <data name="FileType_AnnotatorProject" xml:space="preserve">
+    <value>Annotator প্রজেক্ট</value>
+  </data>
+
+  <data name="Screenshot_Instructions" xml:space="preserve">
+    <value>এলাকা নির্বাচন করতে ক্লিক করে টানুন, অথবা কোণ সামঞ্জস্য করুন। নির্ভুলতার জন্য ম্যাগনিফায়ার ব্যবহার করুন। প্রস্তুত হলে ঠিক আছে চাপুন।</value>
+  </data>
+
+  <data name="Button_OK" xml:space="preserve">
+    <value>ঠিক আছে</value>
+  </data>
+
+  <data name="Button_Cancel" xml:space="preserve">
+    <value>বাতিল</value>
+  </data>
+
+  <data name="Button_Accept" xml:space="preserve">
+    <value>✓ গ্রহণ</value>
+  </data>
+
+  <data name="Button_CancelX" xml:space="preserve">
+    <value>✕ বাতিল</value>
+  </data>
+
+  <data name="Update_NewVersionAvailable" xml:space="preserve">
+    <value>নতুন সংস্করণ {0} উপলব্ধ।</value>
+  </data>
+
+  <data name="Button_Download" xml:space="preserve">
+    <value>ডাউনলোড</value>
+  </data>
+
+  <data name="ContextMenu_Open" xml:space="preserve">
+    <value>খুলুন</value>
+  </data>
+
+  <data name="ContextMenu_Delete" xml:space="preserve">
+    <value>মুছুন</value>
   </data>
 
   <data name="ImproveIt_Message" xml:space="preserve">
-    <value>予期しないエラーが発生しました。
+    <value>একটি অপ্রত্যাশিত ত্রুটি ঘটেছে।
 
-デスクトップに保存された情報を添えて開発者に連絡してください。
-"{0}"
+ডেস্কটপে সংরক্ষিত তথ্য নিয়ে ডেভেলপারদের সাথে যোগাযোগ করুন
+&quot;{0}&quot;
 
-アプリケーションを終了します。</value>
+অ্যাপ্লিকেশন এখন বন্ধ হবে।</value>
   </data>
+
 </root>

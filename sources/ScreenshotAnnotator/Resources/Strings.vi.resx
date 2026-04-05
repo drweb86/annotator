@@ -59,234 +59,242 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
 
-  <!-- Japanese Translation -->
+  <!-- Vietnamese -->
 
   <data name="Window_Title" xml:space="preserve">
-    <value>スクリーンショット注釈 - 画像エディター</value>
+    <value>Trình chú thích ảnh chụp màn hình - Trình sửa ảnh</value>
   </data>
 
   <data name="Header_ScreenshotAnnotator" xml:space="preserve">
-    <value>[ スクリーンショット注釈 - V{0} ]</value>
+    <value>[ Trình chú thích ảnh chụp màn hình - V{0} ]</value>
   </data>
 
   <data name="Copyright_Text" xml:space="preserve">
-    <value>注釈ツール {0} : Copyright (c) 2025-{1} Siarhei Kuchuk</value>
+    <value>Annotator {0} : Bản quyền (c) 2025-{1} Siarhei Kuchuk</value>
   </data>
 
   <data name="Menu_File" xml:space="preserve">
-    <value>[ ファイル ]</value>
+    <value>[ Tệp ]</value>
   </data>
 
   <data name="Menu_New" xml:space="preserve">
-    <value>新規...</value>
+    <value>Mới...</value>
   </data>
 
   <data name="Menu_Import" xml:space="preserve">
-    <value>インポート...</value>
+    <value>Nhập...</value>
   </data>
 
   <data name="Menu_Export" xml:space="preserve">
-    <value>エクスポート...</value>
+    <value>Xuất...</value>
   </data>
 
   <data name="Menu_OpenProjectsFolder" xml:space="preserve">
-    <value>プロジェクトフォルダーを開く(_P)</value>
+    <value>Mở thư mục dự án</value>
   </data>
 
   <data name="Menu_OpenLogsFolder" xml:space="preserve">
-    <value>ログフォルダーを開く(_L)</value>
+    <value>Mở thư mục nhật ký</value>
   </data>
 
   <data name="Menu_WebSite" xml:space="preserve">
-    <value>ウェブサイト</value>
+    <value>Trang web</value>
   </data>
 
   <data name="Menu_License" xml:space="preserve">
-    <value>ライセンス</value>
+    <value>Giấy phép</value>
   </data>
 
   <data name="Tool_New" xml:space="preserve">
-    <value>新規</value>
+    <value>Mới</value>
   </data>
 
   <data name="Tool_Import" xml:space="preserve">
-    <value>インポート</value>
+    <value>Nhập</value>
+  </data>
+
+  <data name="Tool_Export" xml:space="preserve">
+    <value>Xuất</value>
   </data>
 
   <data name="Tool_Screenshot" xml:space="preserve">
-    <value>スクリーンショット</value>
+    <value>Ảnh chụp màn hình</value>
   </data>
 
   <data name="Tool_Copy" xml:space="preserve">
-    <value>コピー</value>
+    <value>Sao chép</value>
   </data>
 
   <data name="Tool_Paste" xml:space="preserve">
-    <value>貼り付け</value>
+    <value>Dán</value>
   </data>
 
   <data name="Tool_Select" xml:space="preserve">
-    <value>選択</value>
+    <value>Chọn</value>
   </data>
 
   <data name="Tool_Arrow" xml:space="preserve">
-    <value>矢印</value>
+    <value>Mũi tên</value>
   </data>
 
   <data name="Tool_Callout" xml:space="preserve">
-    <value>吹き出し</value>
+    <value>Chú thích</value>
   </data>
 
   <data name="Tool_Note" xml:space="preserve">
-    <value>メモ</value>
+    <value>Ghi chú</value>
   </data>
 
   <data name="Tool_Border" xml:space="preserve">
-    <value>枠線</value>
+    <value>Viền</value>
   </data>
 
   <data name="Tool_Highlight" xml:space="preserve">
-    <value>ハイライト</value>
+    <value>Tô sáng</value>
   </data>
 
   <data name="Tool_Blur" xml:space="preserve">
-    <value>ぼかし</value>
+    <value>Làm mờ</value>
   </data>
 
   <data name="Tool_CutVertical" xml:space="preserve">
-    <value>カット |</value>
+    <value>Cắt |</value>
   </data>
 
   <data name="Tool_CutHorizontal" xml:space="preserve">
-    <value>カット -</value>
+    <value>Cắt -</value>
   </data>
 
   <data name="Tooltip_New" xml:space="preserve">
-    <value>新しいプロジェクトを作成</value>
+    <value>Tạo dự án mới</value>
   </data>
 
   <data name="Tooltip_Import" xml:space="preserve">
-    <value>プロジェクトまたは画像をインポート</value>
+    <value>Nhập dự án hoặc hình ảnh</value>
+  </data>
+
+  <data name="Tooltip_Export" xml:space="preserve">
+    <value>Xuất hình ảnh hoặc dự án</value>
   </data>
 
   <data name="Tooltip_Screenshot" xml:space="preserve">
-    <value>スクリーンショットを撮る</value>
+    <value>Chụp màn hình</value>
   </data>
 
   <data name="Tooltip_Copy" xml:space="preserve">
-    <value>クリップボードにコピー</value>
+    <value>Sao chép vào bảng tạm</value>
   </data>
 
   <data name="Tooltip_Paste" xml:space="preserve">
-    <value>クリップボードから貼り付け</value>
+    <value>Dán từ bảng tạm</value>
   </data>
 
   <data name="Tooltip_Select" xml:space="preserve">
-    <value>注釈を選択して編集</value>
+    <value>Chọn và chỉnh sửa chú thích</value>
   </data>
 
   <data name="Tooltip_Arrow" xml:space="preserve">
-    <value>矢印を描く</value>
+    <value>Vẽ mũi tên</value>
   </data>
 
   <data name="Tooltip_Callout" xml:space="preserve">
-    <value>吹き出しを追加</value>
+    <value>Thêm chú thích</value>
   </data>
 
   <data name="Tooltip_Note" xml:space="preserve">
-    <value>テキストメモを追加</value>
+    <value>Thêm ghi chú văn bản</value>
   </data>
 
   <data name="Tooltip_Border" xml:space="preserve">
-    <value>枠線/矩形を描く</value>
+    <value>Vẽ viền/hình chữ nhật</value>
   </data>
 
   <data name="Tooltip_Highlight" xml:space="preserve">
-    <value>領域をハイライト</value>
+    <value>Tô sáng vùng</value>
   </data>
 
   <data name="Tooltip_Blur" xml:space="preserve">
-    <value>領域をぼかす</value>
+    <value>Làm mờ vùng</value>
   </data>
 
   <data name="Tooltip_CutVertical" xml:space="preserve">
-    <value>画像を縦にカット</value>
+    <value>Cắt ảnh theo chiều dọc</value>
   </data>
 
   <data name="Tooltip_CutHorizontal" xml:space="preserve">
-    <value>画像を横にカット</value>
+    <value>Cắt ảnh theo chiều ngang</value>
   </data>
 
   <data name="Tooltip_CollapseExpandPanel" xml:space="preserve">
-    <value>プロジェクトパネルを折りたたむ/展開</value>
+    <value>Thu gọn/Mở rộng bảng dự án</value>
   </data>
 
   <data name="Panel_Projects" xml:space="preserve">
-    <value>プロジェクト</value>
+    <value>Dự án</value>
   </data>
 
   <data name="Panel_Properties" xml:space="preserve">
-    <value>プロパティ</value>
+    <value>Thuộc tính</value>
   </data>
 
   <data name="Props_Font" xml:space="preserve">
-    <value>フォント</value>
+    <value>Phông chữ</value>
   </data>
 
   <data name="Props_Size" xml:space="preserve">
-    <value>サイズ</value>
+    <value>Cỡ chữ</value>
   </data>
 
   <data name="Props_Bold" xml:space="preserve">
-    <value>太字</value>
+    <value>Đậm</value>
   </data>
 
   <data name="Props_Italic" xml:space="preserve">
-    <value>斜体</value>
+    <value>Nghiêng</value>
   </data>
 
   <data name="Props_Color" xml:space="preserve">
-    <value>色</value>
+    <value>Màu</value>
   </data>
 
   <data name="Dialog_Export_Title" xml:space="preserve">
-    <value>エクスポート</value>
+    <value>Xuất</value>
   </data>
 
   <data name="Dialog_Import_Title" xml:space="preserve">
-    <value>プロジェクトまたは画像をインポート</value>
+    <value>Nhập dự án hoặc hình ảnh</value>
   </data>
 
   <data name="FileType_PNG" xml:space="preserve">
-    <value>PNG 画像</value>
+    <value>Ảnh PNG</value>
   </data>
 
   <data name="FileType_JPEG" xml:space="preserve">
-    <value>JPEG 画像</value>
+    <value>Ảnh JPEG</value>
   </data>
 
   <data name="FileType_WebP" xml:space="preserve">
-    <value>WebP 画像</value>
+    <value>Ảnh WebP</value>
   </data>
 
   <data name="FileType_AllSupported" xml:space="preserve">
-    <value>サポートされているすべてのファイル</value>
+    <value>Mọi tệp được hỗ trợ</value>
   </data>
 
   <data name="FileType_Images" xml:space="preserve">
-    <value>画像ファイル</value>
+    <value>Tệp hình ảnh</value>
   </data>
 
   <data name="FileType_AllFiles" xml:space="preserve">
-    <value>すべてのファイル</value>
+    <value>Mọi tệp</value>
   </data>
 
   <data name="FileType_AnnotatorProject" xml:space="preserve">
-    <value>注釈プロジェクト</value>
+    <value>Dự án Annotator</value>
   </data>
 
   <data name="Screenshot_Instructions" xml:space="preserve">
-    <value>クリックしてドラッグして領域を選択するか、コーナーポイントを調整します。精度を高めるには虫眼鏡を使用します。準備ができたらOKを押します。</value>
+    <value>Nhấp và kéo để chọn vùng, hoặc điều chỉnh các góc. Dùng kính lúp để chính xác. Nhấn OK khi sẵn sàng.</value>
   </data>
 
   <data name="Button_OK" xml:space="preserve">
@@ -294,47 +302,40 @@
   </data>
 
   <data name="Button_Cancel" xml:space="preserve">
-    <value>キャンセル</value>
+    <value>Hủy</value>
   </data>
 
   <data name="Button_Accept" xml:space="preserve">
-    <value>✓ 承認</value>
+    <value>✓ Chấp nhận</value>
   </data>
 
   <data name="Button_CancelX" xml:space="preserve">
-    <value>✕ キャンセル</value>
+    <value>✕ Hủy</value>
   </data>
 
   <data name="Update_NewVersionAvailable" xml:space="preserve">
-    <value>新しいバージョン {0} が利用可能です。</value>
+    <value>Phiên bản mới {0} đã có.</value>
   </data>
 
   <data name="Button_Download" xml:space="preserve">
-    <value>ダウンロード</value>
+    <value>Tải xuống</value>
   </data>
 
   <data name="ContextMenu_Open" xml:space="preserve">
-    <value>開く</value>
+    <value>Mở</value>
   </data>
 
   <data name="ContextMenu_Delete" xml:space="preserve">
-    <value>削除</value>
-  </data>
-
-  <data name="Tool_Export" xml:space="preserve">
-    <value>エクスポート</value>
-  </data>
-
-  <data name="Tooltip_Export" xml:space="preserve">
-    <value>画像またはプロジェクトをエクスポート</value>
+    <value>Xóa</value>
   </data>
 
   <data name="ImproveIt_Message" xml:space="preserve">
-    <value>予期しないエラーが発生しました。
+    <value>Đã xảy ra lỗi không mong muốn.
 
-デスクトップに保存された情報を添えて開発者に連絡してください。
-"{0}"
+Vui lòng liên hệ nhà phát triển với thông tin đã lưu trên màn hình nền tại
+&quot;{0}&quot;
 
-アプリケーションを終了します。</value>
+Ứng dụng sẽ đóng.</value>
   </data>
+
 </root>

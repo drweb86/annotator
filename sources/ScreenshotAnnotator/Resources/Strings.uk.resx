@@ -59,234 +59,242 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
 
-  <!-- Japanese Translation -->
+  <!-- Ukrainian -->
 
   <data name="Window_Title" xml:space="preserve">
-    <value>スクリーンショット注釈 - 画像エディター</value>
+    <value>Анотатор знімків екрана — редактор зображень</value>
   </data>
 
   <data name="Header_ScreenshotAnnotator" xml:space="preserve">
-    <value>[ スクリーンショット注釈 - V{0} ]</value>
+    <value>[ Анотатор знімків екрана — В{0} ]</value>
   </data>
 
   <data name="Copyright_Text" xml:space="preserve">
-    <value>注釈ツール {0} : Copyright (c) 2025-{1} Siarhei Kuchuk</value>
+    <value>Annotator {0} : Авторське право (c) 2025-{1} Siarhei Kuchuk</value>
   </data>
 
   <data name="Menu_File" xml:space="preserve">
-    <value>[ ファイル ]</value>
+    <value>[ Файл ]</value>
   </data>
 
   <data name="Menu_New" xml:space="preserve">
-    <value>新規...</value>
+    <value>Новий...</value>
   </data>
 
   <data name="Menu_Import" xml:space="preserve">
-    <value>インポート...</value>
+    <value>Імпорт...</value>
   </data>
 
   <data name="Menu_Export" xml:space="preserve">
-    <value>エクスポート...</value>
+    <value>Експорт...</value>
   </data>
 
   <data name="Menu_OpenProjectsFolder" xml:space="preserve">
-    <value>プロジェクトフォルダーを開く(_P)</value>
+    <value>Відкрити теку проєктів</value>
   </data>
 
   <data name="Menu_OpenLogsFolder" xml:space="preserve">
-    <value>ログフォルダーを開く(_L)</value>
+    <value>Відкрити теку журналів</value>
   </data>
 
   <data name="Menu_WebSite" xml:space="preserve">
-    <value>ウェブサイト</value>
+    <value>Вебсайт</value>
   </data>
 
   <data name="Menu_License" xml:space="preserve">
-    <value>ライセンス</value>
+    <value>Ліцензія</value>
   </data>
 
   <data name="Tool_New" xml:space="preserve">
-    <value>新規</value>
+    <value>Новий</value>
   </data>
 
   <data name="Tool_Import" xml:space="preserve">
-    <value>インポート</value>
+    <value>Імпорт</value>
+  </data>
+
+  <data name="Tool_Export" xml:space="preserve">
+    <value>Експорт</value>
   </data>
 
   <data name="Tool_Screenshot" xml:space="preserve">
-    <value>スクリーンショット</value>
+    <value>Знімок екрана</value>
   </data>
 
   <data name="Tool_Copy" xml:space="preserve">
-    <value>コピー</value>
+    <value>Копіювати</value>
   </data>
 
   <data name="Tool_Paste" xml:space="preserve">
-    <value>貼り付け</value>
+    <value>Вставити</value>
   </data>
 
   <data name="Tool_Select" xml:space="preserve">
-    <value>選択</value>
+    <value>Вибір</value>
   </data>
 
   <data name="Tool_Arrow" xml:space="preserve">
-    <value>矢印</value>
+    <value>Стрілка</value>
   </data>
 
   <data name="Tool_Callout" xml:space="preserve">
-    <value>吹き出し</value>
+    <value>Виноска</value>
   </data>
 
   <data name="Tool_Note" xml:space="preserve">
-    <value>メモ</value>
+    <value>Нотатка</value>
   </data>
 
   <data name="Tool_Border" xml:space="preserve">
-    <value>枠線</value>
+    <value>Рамка</value>
   </data>
 
   <data name="Tool_Highlight" xml:space="preserve">
-    <value>ハイライト</value>
+    <value>Підсвітка</value>
   </data>
 
   <data name="Tool_Blur" xml:space="preserve">
-    <value>ぼかし</value>
+    <value>Розмиття</value>
   </data>
 
   <data name="Tool_CutVertical" xml:space="preserve">
-    <value>カット |</value>
+    <value>Різ |</value>
   </data>
 
   <data name="Tool_CutHorizontal" xml:space="preserve">
-    <value>カット -</value>
+    <value>Різ -</value>
   </data>
 
   <data name="Tooltip_New" xml:space="preserve">
-    <value>新しいプロジェクトを作成</value>
+    <value>Створити новий проєкт</value>
   </data>
 
   <data name="Tooltip_Import" xml:space="preserve">
-    <value>プロジェクトまたは画像をインポート</value>
+    <value>Імпортувати проєкт або зображення</value>
+  </data>
+
+  <data name="Tooltip_Export" xml:space="preserve">
+    <value>Експортувати зображення або проєкт</value>
   </data>
 
   <data name="Tooltip_Screenshot" xml:space="preserve">
-    <value>スクリーンショットを撮る</value>
+    <value>Зробити знімок екрана</value>
   </data>
 
   <data name="Tooltip_Copy" xml:space="preserve">
-    <value>クリップボードにコピー</value>
+    <value>Копіювати в буфер</value>
   </data>
 
   <data name="Tooltip_Paste" xml:space="preserve">
-    <value>クリップボードから貼り付け</value>
+    <value>Вставити з буфера</value>
   </data>
 
   <data name="Tooltip_Select" xml:space="preserve">
-    <value>注釈を選択して編集</value>
+    <value>Вибирати й редагувати анотації</value>
   </data>
 
   <data name="Tooltip_Arrow" xml:space="preserve">
-    <value>矢印を描く</value>
+    <value>Намалювати стрілку</value>
   </data>
 
   <data name="Tooltip_Callout" xml:space="preserve">
-    <value>吹き出しを追加</value>
+    <value>Додати виноску</value>
   </data>
 
   <data name="Tooltip_Note" xml:space="preserve">
-    <value>テキストメモを追加</value>
+    <value>Додати текстову нотатку</value>
   </data>
 
   <data name="Tooltip_Border" xml:space="preserve">
-    <value>枠線/矩形を描く</value>
+    <value>Намалювати рамку/прямокутник</value>
   </data>
 
   <data name="Tooltip_Highlight" xml:space="preserve">
-    <value>領域をハイライト</value>
+    <value>Підсвітити область</value>
   </data>
 
   <data name="Tooltip_Blur" xml:space="preserve">
-    <value>領域をぼかす</value>
+    <value>Розмити область</value>
   </data>
 
   <data name="Tooltip_CutVertical" xml:space="preserve">
-    <value>画像を縦にカット</value>
+    <value>Різати зображення вертикально</value>
   </data>
 
   <data name="Tooltip_CutHorizontal" xml:space="preserve">
-    <value>画像を横にカット</value>
+    <value>Різати зображення горизонтально</value>
   </data>
 
   <data name="Tooltip_CollapseExpandPanel" xml:space="preserve">
-    <value>プロジェクトパネルを折りたたむ/展開</value>
+    <value>Згорнути/розгорнути панель проєктів</value>
   </data>
 
   <data name="Panel_Projects" xml:space="preserve">
-    <value>プロジェクト</value>
+    <value>Проєкти</value>
   </data>
 
   <data name="Panel_Properties" xml:space="preserve">
-    <value>プロパティ</value>
+    <value>Властивості</value>
   </data>
 
   <data name="Props_Font" xml:space="preserve">
-    <value>フォント</value>
+    <value>Шрифт</value>
   </data>
 
   <data name="Props_Size" xml:space="preserve">
-    <value>サイズ</value>
+    <value>Розмір</value>
   </data>
 
   <data name="Props_Bold" xml:space="preserve">
-    <value>太字</value>
+    <value>Жирний</value>
   </data>
 
   <data name="Props_Italic" xml:space="preserve">
-    <value>斜体</value>
+    <value>Курсив</value>
   </data>
 
   <data name="Props_Color" xml:space="preserve">
-    <value>色</value>
+    <value>Колір</value>
   </data>
 
   <data name="Dialog_Export_Title" xml:space="preserve">
-    <value>エクスポート</value>
+    <value>Експорт</value>
   </data>
 
   <data name="Dialog_Import_Title" xml:space="preserve">
-    <value>プロジェクトまたは画像をインポート</value>
+    <value>Імпорт проєкту або зображення</value>
   </data>
 
   <data name="FileType_PNG" xml:space="preserve">
-    <value>PNG 画像</value>
+    <value>Зображення PNG</value>
   </data>
 
   <data name="FileType_JPEG" xml:space="preserve">
-    <value>JPEG 画像</value>
+    <value>Зображення JPEG</value>
   </data>
 
   <data name="FileType_WebP" xml:space="preserve">
-    <value>WebP 画像</value>
+    <value>Зображення WebP</value>
   </data>
 
   <data name="FileType_AllSupported" xml:space="preserve">
-    <value>サポートされているすべてのファイル</value>
+    <value>Усі підтримувані файли</value>
   </data>
 
   <data name="FileType_Images" xml:space="preserve">
-    <value>画像ファイル</value>
+    <value>Файли зображень</value>
   </data>
 
   <data name="FileType_AllFiles" xml:space="preserve">
-    <value>すべてのファイル</value>
+    <value>Усі файли</value>
   </data>
 
   <data name="FileType_AnnotatorProject" xml:space="preserve">
-    <value>注釈プロジェクト</value>
+    <value>Проєкт Annotator</value>
   </data>
 
   <data name="Screenshot_Instructions" xml:space="preserve">
-    <value>クリックしてドラッグして領域を選択するか、コーナーポイントを調整します。精度を高めるには虫眼鏡を使用します。準備ができたらOKを押します。</value>
+    <value>Клацніть і перетягніть, щоб вибрати область, або відрегулюйте кути. Для точності використовуйте лупу. Натисніть OK, коли буде готово.</value>
   </data>
 
   <data name="Button_OK" xml:space="preserve">
@@ -294,47 +302,40 @@
   </data>
 
   <data name="Button_Cancel" xml:space="preserve">
-    <value>キャンセル</value>
+    <value>Скасувати</value>
   </data>
 
   <data name="Button_Accept" xml:space="preserve">
-    <value>✓ 承認</value>
+    <value>✓ Прийняти</value>
   </data>
 
   <data name="Button_CancelX" xml:space="preserve">
-    <value>✕ キャンセル</value>
+    <value>✕ Скасувати</value>
   </data>
 
   <data name="Update_NewVersionAvailable" xml:space="preserve">
-    <value>新しいバージョン {0} が利用可能です。</value>
+    <value>Доступна нова версія {0}.</value>
   </data>
 
   <data name="Button_Download" xml:space="preserve">
-    <value>ダウンロード</value>
+    <value>Завантажити</value>
   </data>
 
   <data name="ContextMenu_Open" xml:space="preserve">
-    <value>開く</value>
+    <value>Відкрити</value>
   </data>
 
   <data name="ContextMenu_Delete" xml:space="preserve">
-    <value>削除</value>
-  </data>
-
-  <data name="Tool_Export" xml:space="preserve">
-    <value>エクスポート</value>
-  </data>
-
-  <data name="Tooltip_Export" xml:space="preserve">
-    <value>画像またはプロジェクトをエクスポート</value>
+    <value>Видалити</value>
   </data>
 
   <data name="ImproveIt_Message" xml:space="preserve">
-    <value>予期しないエラーが発生しました。
+    <value>Сталася неочікувана помилка.
 
-デスクトップに保存された情報を添えて開発者に連絡してください。
-"{0}"
+Зверніться до розробників із інформацією, збереженою на робочому столі в
+&quot;{0}&quot;
 
-アプリケーションを終了します。</value>
+Програму буде закрито.</value>
   </data>
+
 </root>

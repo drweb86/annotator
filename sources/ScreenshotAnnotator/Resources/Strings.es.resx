@@ -328,4 +328,13 @@
   <data name="Tooltip_Export" xml:space="preserve">
     <value>Exportar imagen o proyecto</value>
   </data>
+
+  <data name="ImproveIt_Message" xml:space="preserve">
+    <value>Se produjo un error inesperado.
+
+Póngase en contacto con los desarrolladores con la información guardada en su escritorio en
+"{0}"
+
+La aplicación se cerrará ahora.</value>
+  </data>
 </root>

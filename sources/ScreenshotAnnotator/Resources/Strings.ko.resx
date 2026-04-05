@@ -328,4 +328,12 @@
   <data name="Tooltip_Export" xml:space="preserve">
     <value>이미지 또는 프로젝트 내보내기</value>
   </data>
+  <data name="ImproveIt_Message" xml:space="preserve">
+    <value>예기치 않은 오류가 발생했습니다.
+
+바탕화면에 저장된 정보와 함께 개발자에게 문의하세요.
+"{0}"
+
+애플리케이션이 종료됩니다.</value>
+  </data>
 </root>

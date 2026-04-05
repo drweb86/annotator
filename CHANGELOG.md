@@ -6,9 +6,10 @@
 - During saving, png file is nearby saved, so user could use it in explorer in any app he would like, as well as do search.
 - Unhandled Exceptions handling.
 - Escape closes screenshot selection window.
+- More languages.
 
 ## Changes
-- Update checker is collapsed by default.
+- Update checker is collapsed by default and looks beautifully.
 - Projects are collapsed when click on Projects.
 - Improve perfomance during adding new image.
 - Screenshot preview screen became of same size as screen.

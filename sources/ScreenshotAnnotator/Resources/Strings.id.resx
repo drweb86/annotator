@@ -59,234 +59,242 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
 
-  <!-- Japanese Translation -->
+  <!-- Indonesian -->
 
   <data name="Window_Title" xml:space="preserve">
-    <value>スクリーンショット注釈 - 画像エディター</value>
+    <value>Anotasi Tangkapan Layar - Editor Gambar</value>
   </data>
 
   <data name="Header_ScreenshotAnnotator" xml:space="preserve">
-    <value>[ スクリーンショット注釈 - V{0} ]</value>
+    <value>[ Anotasi Tangkapan Layar - V{0} ]</value>
   </data>
 
   <data name="Copyright_Text" xml:space="preserve">
-    <value>注釈ツール {0} : Copyright (c) 2025-{1} Siarhei Kuchuk</value>
+    <value>Annotator {0} : Hak cipta (c) 2025-{1} Siarhei Kuchuk</value>
   </data>
 
   <data name="Menu_File" xml:space="preserve">
-    <value>[ ファイル ]</value>
+    <value>[ File ]</value>
   </data>
 
   <data name="Menu_New" xml:space="preserve">
-    <value>新規...</value>
+    <value>Baru...</value>
   </data>
 
   <data name="Menu_Import" xml:space="preserve">
-    <value>インポート...</value>
+    <value>Impor...</value>
   </data>
 
   <data name="Menu_Export" xml:space="preserve">
-    <value>エクスポート...</value>
+    <value>Ekspor...</value>
   </data>
 
   <data name="Menu_OpenProjectsFolder" xml:space="preserve">
-    <value>プロジェクトフォルダーを開く(_P)</value>
+    <value>Buka Folder Proyek</value>
   </data>
 
   <data name="Menu_OpenLogsFolder" xml:space="preserve">
-    <value>ログフォルダーを開く(_L)</value>
+    <value>Buka Folder Log</value>
   </data>
 
   <data name="Menu_WebSite" xml:space="preserve">
-    <value>ウェブサイト</value>
+    <value>Situs Web</value>
   </data>
 
   <data name="Menu_License" xml:space="preserve">
-    <value>ライセンス</value>
+    <value>Lisensi</value>
   </data>
 
   <data name="Tool_New" xml:space="preserve">
-    <value>新規</value>
+    <value>Baru</value>
   </data>
 
   <data name="Tool_Import" xml:space="preserve">
-    <value>インポート</value>
+    <value>Impor</value>
+  </data>
+
+  <data name="Tool_Export" xml:space="preserve">
+    <value>Ekspor</value>
   </data>
 
   <data name="Tool_Screenshot" xml:space="preserve">
-    <value>スクリーンショット</value>
+    <value>Tangkapan Layar</value>
   </data>
 
   <data name="Tool_Copy" xml:space="preserve">
-    <value>コピー</value>
+    <value>Salin</value>
   </data>
 
   <data name="Tool_Paste" xml:space="preserve">
-    <value>貼り付け</value>
+    <value>Tempel</value>
   </data>
 
   <data name="Tool_Select" xml:space="preserve">
-    <value>選択</value>
+    <value>Pilih</value>
   </data>
 
   <data name="Tool_Arrow" xml:space="preserve">
-    <value>矢印</value>
+    <value>Panah</value>
   </data>
 
   <data name="Tool_Callout" xml:space="preserve">
-    <value>吹き出し</value>
+    <value>Kalimat</value>
   </data>
 
   <data name="Tool_Note" xml:space="preserve">
-    <value>メモ</value>
+    <value>Catatan</value>
   </data>
 
   <data name="Tool_Border" xml:space="preserve">
-    <value>枠線</value>
+    <value>Bingkai</value>
   </data>
 
   <data name="Tool_Highlight" xml:space="preserve">
-    <value>ハイライト</value>
+    <value>Sorot</value>
   </data>
 
   <data name="Tool_Blur" xml:space="preserve">
-    <value>ぼかし</value>
+    <value>Buram</value>
   </data>
 
   <data name="Tool_CutVertical" xml:space="preserve">
-    <value>カット |</value>
+    <value>Potong |</value>
   </data>
 
   <data name="Tool_CutHorizontal" xml:space="preserve">
-    <value>カット -</value>
+    <value>Potong -</value>
   </data>
 
   <data name="Tooltip_New" xml:space="preserve">
-    <value>新しいプロジェクトを作成</value>
+    <value>Buat proyek baru</value>
   </data>
 
   <data name="Tooltip_Import" xml:space="preserve">
-    <value>プロジェクトまたは画像をインポート</value>
+    <value>Impor proyek atau gambar</value>
+  </data>
+
+  <data name="Tooltip_Export" xml:space="preserve">
+    <value>Ekspor gambar atau proyek</value>
   </data>
 
   <data name="Tooltip_Screenshot" xml:space="preserve">
-    <value>スクリーンショットを撮る</value>
+    <value>Ambil tangkapan layar</value>
   </data>
 
   <data name="Tooltip_Copy" xml:space="preserve">
-    <value>クリップボードにコピー</value>
+    <value>Salin ke papan klip</value>
   </data>
 
   <data name="Tooltip_Paste" xml:space="preserve">
-    <value>クリップボードから貼り付け</value>
+    <value>Tempel dari papan klip</value>
   </data>
 
   <data name="Tooltip_Select" xml:space="preserve">
-    <value>注釈を選択して編集</value>
+    <value>Pilih dan edit anotasi</value>
   </data>
 
   <data name="Tooltip_Arrow" xml:space="preserve">
-    <value>矢印を描く</value>
+    <value>Gambar panah</value>
   </data>
 
   <data name="Tooltip_Callout" xml:space="preserve">
-    <value>吹き出しを追加</value>
+    <value>Tambahkan kalimat</value>
   </data>
 
   <data name="Tooltip_Note" xml:space="preserve">
-    <value>テキストメモを追加</value>
+    <value>Tambahkan catatan teks</value>
   </data>
 
   <data name="Tooltip_Border" xml:space="preserve">
-    <value>枠線/矩形を描く</value>
+    <value>Gambar bingkai/persegi</value>
   </data>
 
   <data name="Tooltip_Highlight" xml:space="preserve">
-    <value>領域をハイライト</value>
+    <value>Sorot area</value>
   </data>
 
   <data name="Tooltip_Blur" xml:space="preserve">
-    <value>領域をぼかす</value>
+    <value>Buramkan area</value>
   </data>
 
   <data name="Tooltip_CutVertical" xml:space="preserve">
-    <value>画像を縦にカット</value>
+    <value>Potong gambar vertikal</value>
   </data>
 
   <data name="Tooltip_CutHorizontal" xml:space="preserve">
-    <value>画像を横にカット</value>
+    <value>Potong gambar horizontal</value>
   </data>
 
   <data name="Tooltip_CollapseExpandPanel" xml:space="preserve">
-    <value>プロジェクトパネルを折りたたむ/展開</value>
+    <value>Ciutkan/bentangkan panel proyek</value>
   </data>
 
   <data name="Panel_Projects" xml:space="preserve">
-    <value>プロジェクト</value>
+    <value>Proyek</value>
   </data>
 
   <data name="Panel_Properties" xml:space="preserve">
-    <value>プロパティ</value>
+    <value>Properti</value>
   </data>
 
   <data name="Props_Font" xml:space="preserve">
-    <value>フォント</value>
+    <value>Font</value>
   </data>
 
   <data name="Props_Size" xml:space="preserve">
-    <value>サイズ</value>
+    <value>Ukuran</value>
   </data>
 
   <data name="Props_Bold" xml:space="preserve">
-    <value>太字</value>
+    <value>Tebal</value>
   </data>
 
   <data name="Props_Italic" xml:space="preserve">
-    <value>斜体</value>
+    <value>Miring</value>
   </data>
 
   <data name="Props_Color" xml:space="preserve">
-    <value>色</value>
+    <value>Warna</value>
   </data>
 
   <data name="Dialog_Export_Title" xml:space="preserve">
-    <value>エクスポート</value>
+    <value>Ekspor</value>
   </data>
 
   <data name="Dialog_Import_Title" xml:space="preserve">
-    <value>プロジェクトまたは画像をインポート</value>
+    <value>Impor Proyek atau Gambar</value>
   </data>
 
   <data name="FileType_PNG" xml:space="preserve">
-    <value>PNG 画像</value>
+    <value>Gambar PNG</value>
   </data>
 
   <data name="FileType_JPEG" xml:space="preserve">
-    <value>JPEG 画像</value>
+    <value>Gambar JPEG</value>
   </data>
 
   <data name="FileType_WebP" xml:space="preserve">
-    <value>WebP 画像</value>
+    <value>Gambar WebP</value>
   </data>
 
   <data name="FileType_AllSupported" xml:space="preserve">
-    <value>サポートされているすべてのファイル</value>
+    <value>Semua file yang didukung</value>
   </data>
 
   <data name="FileType_Images" xml:space="preserve">
-    <value>画像ファイル</value>
+    <value>File gambar</value>
   </data>
 
   <data name="FileType_AllFiles" xml:space="preserve">
-    <value>すべてのファイル</value>
+    <value>Semua file</value>
   </data>
 
   <data name="FileType_AnnotatorProject" xml:space="preserve">
-    <value>注釈プロジェクト</value>
+    <value>Proyek Annotator</value>
   </data>
 
   <data name="Screenshot_Instructions" xml:space="preserve">
-    <value>クリックしてドラッグして領域を選択するか、コーナーポイントを調整します。精度を高めるには虫眼鏡を使用します。準備ができたらOKを押します。</value>
+    <value>Klik dan seret untuk memilih area, atau sesuaikan titik sudut. Gunakan pembesar untuk presisi. Tekan OK saat siap.</value>
   </data>
 
   <data name="Button_OK" xml:space="preserve">
@@ -294,47 +302,40 @@
   </data>
 
   <data name="Button_Cancel" xml:space="preserve">
-    <value>キャンセル</value>
+    <value>Batal</value>
   </data>
 
   <data name="Button_Accept" xml:space="preserve">
-    <value>✓ 承認</value>
+    <value>✓ Terima</value>
   </data>
 
   <data name="Button_CancelX" xml:space="preserve">
-    <value>✕ キャンセル</value>
+    <value>✕ Batal</value>
   </data>
 
   <data name="Update_NewVersionAvailable" xml:space="preserve">
-    <value>新しいバージョン {0} が利用可能です。</value>
+    <value>Versi baru {0} tersedia.</value>
   </data>
 
   <data name="Button_Download" xml:space="preserve">
-    <value>ダウンロード</value>
+    <value>Unduh</value>
   </data>
 
   <data name="ContextMenu_Open" xml:space="preserve">
-    <value>開く</value>
+    <value>Buka</value>
   </data>
 
   <data name="ContextMenu_Delete" xml:space="preserve">
-    <value>削除</value>
-  </data>
-
-  <data name="Tool_Export" xml:space="preserve">
-    <value>エクスポート</value>
-  </data>
-
-  <data name="Tooltip_Export" xml:space="preserve">
-    <value>画像またはプロジェクトをエクスポート</value>
+    <value>Hapus</value>
   </data>
 
   <data name="ImproveIt_Message" xml:space="preserve">
-    <value>予期しないエラーが発生しました。
+    <value>Terjadi kesalahan tak terduga.
 
-デスクトップに保存された情報を添えて開発者に連絡してください。
-"{0}"
+Silakan hubungi pengembang dengan informasi yang disimpan di desktop Anda di
+&quot;{0}&quot;
 
-アプリケーションを終了します。</value>
+Aplikasi akan ditutup sekarang.</value>
   </data>
+
 </root>
