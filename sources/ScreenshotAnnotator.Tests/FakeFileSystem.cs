@@ -21,6 +21,8 @@ public sealed class FakeFileSystem : IFileSystem
 
     public bool FileExists(string path) => _files.ContainsKey(NormalizeFile(path));
 
+    public void FileDelete(string path) => _files.Remove(NormalizeFile(path));
+
     public string ReadAllText(string path) => _files[NormalizeFile(path)];
 
     public void WriteAllText(string path, string contents)

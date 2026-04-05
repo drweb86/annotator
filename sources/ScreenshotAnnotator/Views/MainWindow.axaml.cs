@@ -55,12 +55,6 @@ public partial class MainWindow : Window
             await viewModel.ExportCommand.ExecuteAsync(null);
             e.Handled = true;
         }
-        // F9 - Toggle file browser
-        else if (e.Key == Key.F9)
-        {
-            viewModel.RecentProjects.TogglePanelCommand.Execute(null);
-            e.Handled = true;
-        }
         // PrintScreen - Take screenshot
         else if (e.Key == Key.PrintScreen)
         {

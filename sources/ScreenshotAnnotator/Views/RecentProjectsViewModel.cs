@@ -3,18 +3,16 @@ using System.Collections.ObjectModel;
 using System.Threading.Tasks;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
+using ScreenshotAnnotator.Models;
 using ScreenshotAnnotator.Services;
 
 namespace ScreenshotAnnotator.ViewModels;
 
 public partial class RecentProjectsViewModel : ViewModelBase
 {
-    private readonly IApplicationSettings _settings;
-
     public RecentProjectsViewModel()
     {
-        _settings = AllServices.ApplicationSettings;
-        _isPanelExpanded = _settings.Settings.IsFileBrowserVisible;
+        _isPanelExpanded = AllServices.ApplicationSettings.Settings.IsFileBrowserVisible;
         AllServices.ApplicationEvents.OnDeleteProject += OnDeleteProject;
         AllServices.ApplicationEvents.OnOpenProject += OnOpenProject;
     }
@@ -25,6 +23,7 @@ public partial class RecentProjectsViewModel : ViewModelBase
 
     private async Task OnDeleteProject(ProjectFileInfo project)
     {
+        this.ProjectFiles.Remove(project);
     }
 
     [ObservableProperty]
@@ -35,8 +34,8 @@ public partial class RecentProjectsViewModel : ViewModelBase
 
     partial void OnIsPanelExpandedChanged(bool value)
     {
-        _settings.Settings.IsFileBrowserVisible = value;
-        _settings.Save();
+        AllServices.ApplicationSettings.Settings.IsFileBrowserVisible = value;
+        AllServices.ApplicationSettings.Save();
     }
 
     // TODO: eliminate.
@@ -64,12 +63,7 @@ public partial class RecentProjectsViewModel : ViewModelBase
     private async Task DeleteProjectFile(ProjectFileInfo? fileInfo)
     {
         if (fileInfo is null) return;
+        AllServices.ProjectManager.Delete(fileInfo);
         await AllServices.ApplicationEvents.DeleteProject(fileInfo);
-    }
-
-    [RelayCommand]
-    private void TogglePanel()
-    {
-        IsPanelExpanded = !IsPanelExpanded;
     }
 }

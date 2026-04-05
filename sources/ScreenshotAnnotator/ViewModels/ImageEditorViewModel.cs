@@ -480,12 +480,14 @@ public partial class ImageEditorViewModel : ViewModelBase, IProjectUi
     private string? _currentFilePath;
     private Avalonia.Controls.Window? _mainWindow;
     private IApplicationSettings _settings;
+    private readonly IProjectManager _projectManager;
 
     public RecentProjectsViewModel RecentProjects { get; }
 
     public ImageEditorViewModel()
     {
         _settings = AllServices.ApplicationSettings;
+        _projectManager = AllServices.ProjectManager;
         RecentProjects = new RecentProjectsViewModel();
         _currentHighlighterColor = UIntToColor(_settings.Settings.SelectedHighlighterColorArgb);
         AllServices.ApplicationEvents.OnDeleteProject += OnDeleteProject;
@@ -499,7 +501,14 @@ public partial class ImageEditorViewModel : ViewModelBase, IProjectUi
 
     private async Task OnDeleteProject(ProjectFileInfo project)
     {
-        DeleteProjectFromRecent(project);
+        if (project.IsCurrentFile)
+        {
+            _currentFilePath = null;
+            Image?.Dispose();
+            Image = null;
+            Shapes.Clear();
+            UpdateCurrentFileNameDisplay();
+        }
     }
 
     internal string? CurrentProjectFilePath => _currentFilePath;
@@ -940,35 +949,6 @@ public partial class ImageEditorViewModel : ViewModelBase, IProjectUi
             UpdateCurrentFileNameDisplay();
             await LoadCurrentProject();
             RecentProjects.Refresh(CurrentProjectFilePath);
-        }
-        catch
-        {
-            // Handle errors
-        }
-    }
-
-    internal void DeleteProjectFromRecent(ProjectFileInfo fileInfo)
-    {
-        try
-        {
-            if (fileInfo.IsCurrentFile)
-            {
-                _currentFilePath = null;
-                Image?.Dispose();
-                Image = null;
-                Shapes.Clear();
-                UpdateCurrentFileNameDisplay();
-            }
-
-            if (File.Exists(fileInfo.FilePath))
-            {
-                File.Delete(fileInfo.FilePath);
-
-                var pngPath = Path.ChangeExtension(fileInfo.FilePath, ".png");
-                if (File.Exists(pngPath))
-                    File.Delete(pngPath);
-                RecentProjects.Refresh(CurrentProjectFilePath);
-            }
         }
         catch
         {

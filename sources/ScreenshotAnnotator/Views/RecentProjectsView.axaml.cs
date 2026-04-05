@@ -1,7 +1,7 @@
 using Avalonia.Controls;
 using Avalonia.Input;
 using Avalonia.VisualTree;
-using ScreenshotAnnotator.Services;
+using ScreenshotAnnotator.Models;
 using ScreenshotAnnotator.ViewModels;
 
 namespace ScreenshotAnnotator.Views;

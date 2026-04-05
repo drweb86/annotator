@@ -9,19 +9,30 @@ using System.Text.Json;
 
 namespace ScreenshotAnnotator.Services;
 
-public class ProjectFileInfo
+public interface IProjectManager
 {
-    public string FilePath { get; set; } = "";
-    public string FileName { get; set; } = "";
-    public DateTime ModifiedDate { get; set; }
-    public Bitmap? Thumbnail { get; set; }
-    public bool IsCurrentFile { get; set; }
+    void Delete(ProjectFileInfo project);
 }
 
-public static class ProjectManager
+public class ProjectManager(IFileSystem fileSystem) : IProjectManager
 {
+    private string GetImageFile(string projectPath)
+    {
+        return Path.ChangeExtension(projectPath, ".png");
+    }
+
+    public void Delete(ProjectFileInfo project)
+    {
+        fileSystem.FileDelete(project.FilePath);
+
+        var image = GetImageFile(project.FilePath);
+        if (fileSystem.FileExists(image))
+            fileSystem.FileDelete(image);
+    }
+
     private static string? _projectsFolder;
     public const string Extension = ".anp";
+
     public static FilePickerFileType PickerFilter => new FilePickerFileType(LocalizationManager.Instance["FileType_AnnotatorProject"]) { Patterns = ["*" + Extension ] };
 
     public static string GetProjectsFolder()

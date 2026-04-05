@@ -1,3 +1,4 @@
+using ScreenshotAnnotator.Models;
 using System.Threading.Tasks;
 
 namespace ScreenshotAnnotator.Services;
