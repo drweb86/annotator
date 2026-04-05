@@ -682,23 +682,23 @@ public partial class ImageEditorViewModel : ViewModelBase, IProjectUi
 
         try
         {
+            Image?.Dispose();
+            Image = null;
             _currentFilePath = null;
             Shapes.Clear();
-
-            _currentFilePath = ProjectManager.GetTimestampedFilePath();
             UpdateCurrentFileNameDisplay();
-            if (file.Name.ToLowerInvariant().EndsWith(ProjectManager.Extension))
-            {
-                await FileHelper.CopyFileAsync(file.Path.LocalPath, _currentFilePath);
-                await LoadCurrentProject();
-            }
-            else
-            {
-                await using var stream = await file.OpenReadAsync();
-                Image = new Bitmap(stream);
-            }
-            await SaveCurrentProject();
-            RecentProjects.Refresh(CurrentProjectFilePath);
+
+            await using var stream = await file.OpenReadAsync();
+            var project = await _projectManager.Import(file.Name, stream);
+
+            _currentFilePath = project.FilePath;
+            UpdateCurrentFileNameDisplay();
+            await LoadCurrentProject();
+
+            foreach (var f in RecentProjects.ProjectFiles)
+                f.IsCurrentFile = false;
+            project.IsCurrentFile = true;
+            await AllServices.ApplicationEvents.CreatedProject(project);
         }
         catch
         {

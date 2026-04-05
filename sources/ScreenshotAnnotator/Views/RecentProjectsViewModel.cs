@@ -15,10 +15,17 @@ public partial class RecentProjectsViewModel : ViewModelBase
         _isPanelExpanded = AllServices.ApplicationSettings.Settings.IsFileBrowserVisible;
         AllServices.ApplicationEvents.OnDeleteProject += OnDeleteProject;
         AllServices.ApplicationEvents.OnOpenProject += OnOpenProject;
+        AllServices.ApplicationEvents.OnCreateProject += OnCreateProject;
     }
 
     private async Task OnOpenProject(ProjectFileInfo project)
     {
+    }
+
+    private async Task OnCreateProject(ProjectFileInfo project)
+    {
+        ProjectFiles.Insert(0, project);
+        await Task.CompletedTask;
     }
 
     private async Task OnDeleteProject(ProjectFileInfo project)
