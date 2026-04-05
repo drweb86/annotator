@@ -3,6 +3,7 @@ using Avalonia.Media.Imaging;
 using ScreenshotAnnotator.Models;
 using System;
 using System.Collections.Generic;
+using System.IO;
 
 namespace ScreenshotAnnotator.Services;
 

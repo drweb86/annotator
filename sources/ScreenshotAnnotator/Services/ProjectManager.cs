@@ -13,8 +13,12 @@ namespace ScreenshotAnnotator.Services;
 
 public interface IProjectManager
 {
+    FilePickerFileType PickerFilter { get; }
+    public string ProjectsFolder { get; }
+    IEnumerable <ProjectFileInfo> GetProjects();
     void Delete(ProjectFileInfo project);
     Task<ProjectFileInfo> Import(string fileNameWithoutPath, Stream fileStream);
+    Task<ProjectFileInfo> ImportImage(Stream fileStream);
 }
 
 public class ProjectManager(IFileSystem fileSystem) : IProjectManager
@@ -24,9 +28,15 @@ public class ProjectManager(IFileSystem fileSystem) : IProjectManager
         return Path.ChangeExtension(projectPath, ".png");
     }
 
+    public async Task<ProjectFileInfo> ImportImage(Stream fileStream)
+    {
+        var projectPath = GenerateProjectFileName();
+        return await ImportPicture(fileStream, projectPath);
+    }
+
     public async Task<ProjectFileInfo> Import(string fileNameWithoutPath, Stream fileStream)
     {
-        var projectPath = GetTimestampedFilePath();
+        var projectPath = GenerateProjectFileName();
 
         if (fileNameWithoutPath.EndsWith(Extension, StringComparison.OrdinalIgnoreCase))
             return await ImportProject(fileStream, projectPath);
@@ -84,48 +94,28 @@ public class ProjectManager(IFileSystem fileSystem) : IProjectManager
             fileSystem.FileDelete(image);
     }
 
-    private static string? _projectsFolder;
     public const string Extension = ".anp";
 
-    public static FilePickerFileType PickerFilter => new FilePickerFileType(LocalizationManager.Instance["FileType_AnnotatorProject"]) { Patterns = ["*" + Extension ] };
+    public FilePickerFileType PickerFilter => new FilePickerFileType(LocalizationManager.Instance["FileType_AnnotatorProject"]) { Patterns = ["*" + Extension ] };
 
-    public static string GetProjectsFolder()
+    public string ProjectsFolder 
     {
-        if (_projectsFolder != null)
-            return _projectsFolder;
-
-        var picturesFolder = Environment.GetFolderPath(Environment.SpecialFolder.MyPictures);
-        _projectsFolder = Path.Combine(picturesFolder, "ScreenshotAnnotator");
-
-        if (!Directory.Exists(_projectsFolder))
+        get
         {
-            Directory.CreateDirectory(_projectsFolder);
+            return Path.Combine(
+                Environment.GetFolderPath(Environment.SpecialFolder.MyPictures),
+                "ScreenshotAnnotator");
         }
+    } 
 
-        return _projectsFolder;
-    }
-
-    public static List<ProjectFileInfo> GetProjectFiles()
+    public IEnumerable<ProjectFileInfo> GetProjects()
     {
-        var folder = GetProjectsFolder();
-        var files = new List<ProjectFileInfo>();
+        fileSystem.EnsureDirectoryExists(ProjectsFolder);
 
-        try
-        {
-            var allFiles = Directory.GetFiles(folder, "*" + Extension);
-
-            foreach (var file in allFiles)
-                files.Add(CreateProjectFileInfo(file));
-
-            // Sort by modified date descending (newest first)
-            files = files.OrderByDescending(f => f.FileName).ToList();
-        }
-        catch
-        {
-            // Handle errors silently
-        }
-
-        return files;
+        var allFiles = Directory.GetFiles(ProjectsFolder, "*" + Extension);
+        return allFiles
+            .Select(CreateProjectFileInfo)
+            .OrderByDescending(f => f.FileName);
     }
 
     private static ProjectFileInfo CreateProjectFileInfo(string filePath)
@@ -176,16 +166,9 @@ public class ProjectManager(IFileSystem fileSystem) : IProjectManager
         }
     }
 
-    public static string GenerateTimestampedFileName()
+    private string GenerateProjectFileName()
     {
         var timestamp = DateTime.Now.ToString("yyyy-MM-dd_HH-mm-ss");
-        return $"{timestamp}{Extension}";
-    }
-
-    public static string GetTimestampedFilePath()
-    {
-        var folder = GetProjectsFolder();
-        var fileName = GenerateTimestampedFileName();
-        return Path.Combine(folder, fileName);
+        return Path.Combine(ProjectsFolder, $"{timestamp}{Extension}");
     }
 }

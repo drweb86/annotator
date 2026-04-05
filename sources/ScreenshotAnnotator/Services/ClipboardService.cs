@@ -1,5 +1,4 @@
 ﻿using Avalonia;
-using Avalonia.Controls.Shapes;
 using Avalonia.Input;
 using Avalonia.Input.Platform;
 using Avalonia.Media.Imaging;

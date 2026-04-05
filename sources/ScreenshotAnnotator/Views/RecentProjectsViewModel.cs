@@ -51,7 +51,7 @@ public partial class RecentProjectsViewModel : ViewModelBase
     {
         ProjectFiles.Clear();
         var current = currentProjectFilePath;
-        foreach (var file in ProjectManager.GetProjectFiles())
+        foreach (var file in AllServices.ProjectManager.GetProjects())
         {
             file.IsCurrentFile = !string.IsNullOrEmpty(current) &&
                                  file.FilePath.Equals(current, StringComparison.OrdinalIgnoreCase);

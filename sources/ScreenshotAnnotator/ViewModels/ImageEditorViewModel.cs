@@ -8,6 +8,7 @@ using Avalonia.Platform.Storage;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using NLog;
+using ScreenshotAnnotator.Helpers;
 using ScreenshotAnnotator.Models;
 using ScreenshotAnnotator.Services;
 using SkiaSharp;
@@ -70,14 +71,9 @@ public partial class ImageEditorViewModel : ViewModelBase, IProjectUi
     public async Task CreateNewFromBitmap(Bitmap bitmap)
     {
         await SaveCurrentProject();
-
-        Image = bitmap;
-        Shapes.Clear();
-        var filePath = ProjectManager.GetTimestampedFilePath();
-        _currentFilePath = filePath;
-        UpdateCurrentFileNameDisplay();
-        await SaveCurrentProject();
-        RecentProjects.Refresh(CurrentProjectFilePath);
+        CloseProject();
+        var project = await AllServices.ProjectManager.ImportImage(bitmap.ToStream());
+        await FinishCreatingProject(project);
     }
 
     #endregion // IProjectUi
@@ -480,14 +476,12 @@ public partial class ImageEditorViewModel : ViewModelBase, IProjectUi
     private string? _currentFilePath;
     private Avalonia.Controls.Window? _mainWindow;
     private IApplicationSettings _settings;
-    private readonly IProjectManager _projectManager;
 
     public RecentProjectsViewModel RecentProjects { get; }
 
     public ImageEditorViewModel()
     {
         _settings = AllServices.ApplicationSettings;
-        _projectManager = AllServices.ProjectManager;
         RecentProjects = new RecentProjectsViewModel();
         _currentHighlighterColor = UIntToColor(_settings.Settings.SelectedHighlighterColorArgb);
         AllServices.ApplicationEvents.OnDeleteProject += OnDeleteProject;
@@ -575,7 +569,7 @@ public partial class ImageEditorViewModel : ViewModelBase, IProjectUi
                     new FilePickerFileType(LocalizationManager.Instance["FileType_JPEG"]) { Patterns = new[] { "*.jpg", "*.jpeg" } },
                     new FilePickerFileType(LocalizationManager.Instance["FileType_WebP"]) { Patterns = new[] { "*.webp" } },
 
-                    ProjectManager.PickerFilter,
+                    AllServices.ProjectManager.PickerFilter,
                 },
                 SuggestedFileName = "annotated_image",
             });
@@ -653,7 +647,7 @@ public partial class ImageEditorViewModel : ViewModelBase, IProjectUi
                     {
                         Patterns = imageExtensions.Union(["*" + ProjectManager.Extension]).ToArray()
                     },
-                    ProjectManager.PickerFilter,
+                    AllServices.ProjectManager.PickerFilter,
                     new FilePickerFileType(LocalizationManager.Instance["FileType_Images"])
                     {
                         Patterns = imageExtensions
@@ -680,32 +674,35 @@ public partial class ImageEditorViewModel : ViewModelBase, IProjectUi
             return;
 
         await SaveCurrentProject();
+        CloseProject();
 
-        try
-        {
-            Image?.Dispose();
-            Image = null;
-            _currentFilePath = null;
-            Shapes.Clear();
-            UpdateCurrentFileNameDisplay();
+        await using var stream = await file.OpenReadAsync();
+        var project = await AllServices.ProjectManager.Import(file.Name, stream);
+        await FinishCreatingProject(project);
+    }
 
-            await using var stream = await file.OpenReadAsync();
-            var project = await _projectManager.Import(file.Name, stream);
+    private void CloseProject()
+    {
+        _currentFilePath = null;
 
-            _editorCanvas?.ClearSelector();
-            _currentFilePath = project.FilePath;
-            UpdateCurrentFileNameDisplay();
-            await LoadCurrentProject();
+        Image?.Dispose();
+        Image = null;
 
-            foreach (var f in RecentProjects.ProjectFiles)
-                f.IsCurrentFile = false;
-            project.IsCurrentFile = true;
-            await AllServices.ApplicationEvents.CreatedProject(project);
-        }
-        catch
-        {
-            // Handle load errors
-        }
+        Shapes.Clear();
+        _editorCanvas?.ClearSelector();
+        CurrentTool = ToolType.None;
+        UpdateToolSelection();
+
+        foreach (var f in RecentProjects.ProjectFiles)
+            f.IsCurrentFile = false;
+    }
+
+    private async Task FinishCreatingProject(ProjectFileInfo project)
+    {
+        _currentFilePath = project.FilePath;
+        await LoadCurrentProject();
+        project.IsCurrentFile = true;
+        await AllServices.ApplicationEvents.CreatedProject(project);
     }
 
     private async Task SaveCurrentProject()
@@ -819,6 +816,8 @@ public partial class ImageEditorViewModel : ViewModelBase, IProjectUi
                     }
                 }
             }
+
+            UpdateCurrentFileNameDisplay();
         }
         catch
         {
@@ -830,19 +829,11 @@ public partial class ImageEditorViewModel : ViewModelBase, IProjectUi
     private async Task NewProject()
     {
         await SaveCurrentProject();
-
+        CloseProject();
 
         // Create a default canvas with screen dimensions and a light background color
-        var screenWidth = 1920;
-        var screenHeight = 1080;
-
-        // Try to get actual screen dimensions
-        if (_mainWindow?.Screens?.Primary != null)
-        {
-            var primaryScreen = _mainWindow.Screens.Primary;
-            screenWidth = primaryScreen.Bounds.Width;
-            screenHeight = primaryScreen.Bounds.Height;
-        }
+        var screenWidth = 600;
+        var screenHeight = 400;
 
         // Create a bitmap with a light beige/cream background color good for annotations
         var backgroundColor = new Avalonia.Media.Color(255, 245, 245, 240); // Light beige/cream
@@ -859,27 +850,9 @@ public partial class ImageEditorViewModel : ViewModelBase, IProjectUi
                     new Avalonia.Rect(0, 0, screenWidth, screenHeight));
             }
 
-            // Convert to Bitmap
-            using (var memoryStream = new MemoryStream())
-            {
-                bitmap.Save(memoryStream);
-                memoryStream.Position = 0;
-                Image = new Bitmap(memoryStream);
-            }
+            var project = await AllServices.ProjectManager.ImportImage(bitmap.ToStream());
+            await FinishCreatingProject(project);
         }
-
-        Shapes.Clear();
-
-        // Reset tool to selector (None) to clear any active tool
-        CurrentTool = ToolType.None;
-        UpdateToolSelection();
-
-        // Auto-save the new project
-        var filePath = ProjectManager.GetTimestampedFilePath();
-        _currentFilePath = filePath;
-        UpdateCurrentFileNameDisplay();
-        await SaveCurrentProject();
-        RecentProjects.Refresh(CurrentProjectFilePath);
     }
 
     [RelayCommand]
@@ -888,58 +861,38 @@ public partial class ImageEditorViewModel : ViewModelBase, IProjectUi
         if (_mainWindow is null)
             return;
 
-        try
+        // Hide the main window
+        _mainWindow.WindowState = WindowState.Minimized;
+
+        // Wait a bit for window to hide
+        await Task.Delay(300);
+
+        // Capture screenshot
+        var screenshot = await ScreenshotService.CaptureScreenshotAsync();
+        if (screenshot is null)
+            return;
+
+        // Show preview window for area selection
+        var previewViewModel = new ScreenshotPreviewViewModel();
+        previewViewModel.SetScreenshot(screenshot);
+
+        var previewWindow = new Views.ScreenshotPreviewWindow
         {
-            // Hide the main window
-            _mainWindow.WindowState = WindowState.Minimized;
+            DataContext = previewViewModel
+        };
 
-            // Wait a bit for window to hide
-            await Task.Delay(300);
+        await previewWindow.ShowDialog(_mainWindow);
 
-            // Capture screenshot
-            var screenshot = await ScreenshotService.CaptureScreenshotAsync();
-            if (screenshot is null)
-                return;
+        // Check if user confirmed the selection
+        if (previewViewModel.CroppedImage == null)
+            return;
 
-                // Show preview window for area selection
-                var previewViewModel = new ScreenshotPreviewViewModel();
-                previewViewModel.SetScreenshot(screenshot);
-
-                var previewWindow = new Views.ScreenshotPreviewWindow
-                {
-                    DataContext = previewViewModel
-                };
-
-                await previewWindow.ShowDialog(_mainWindow);
-
-            // Check if user confirmed the selection
-            if (previewViewModel.CroppedImage != null)
-            {
-                await SaveCurrentProject();
-                _editorCanvas?.ClearSelector();
-
-                // Use the cropped image
-                Image = previewViewModel.CroppedImage;
-                Shapes.Clear();
-
-                // Auto-save to projects folder
-                var filePath = ProjectManager.GetTimestampedFilePath();
-                _currentFilePath = filePath;
-                UpdateCurrentFileNameDisplay();
-                await SaveCurrentProject();
-
-                // Refresh file list
-                RecentProjects.Refresh(CurrentProjectFilePath);
-            }
-        }
-        catch
-        {
-            // Restore window in case of error
-        }
-        finally
-        {
-            _mainWindow.WindowState = WindowState.Normal;
-        }
+        await SaveCurrentProject();
+        CloseProject();
+        var project = await AllServices.ProjectManager.ImportImage(previewViewModel.CroppedImage.ToStream());
+        await FinishCreatingProject(project);
+     
+        _mainWindow.WindowState = WindowState.Normal;
     }
 
     internal async Task OpenProjectFromRecentAsync(ProjectFileInfo fileInfo)
@@ -963,10 +916,9 @@ public partial class ImageEditorViewModel : ViewModelBase, IProjectUi
     {
         try
         {
-            var folder = ProjectManager.GetProjectsFolder();
             System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo
             {
-                FileName = folder,
+                FileName = AllServices.ProjectManager.ProjectsFolder,
                 UseShellExecute = true
             });
         }
