@@ -48,7 +48,7 @@ public partial class ImageEditorView : UserControl
                     }
 
                     // Load project files on startup
-                    viewModel.RefreshProjectFilesCommand.Execute(null);
+                    viewModel.RecentProjects.Refresh();
                 }
             }
         };

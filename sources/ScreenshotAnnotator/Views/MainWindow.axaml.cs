@@ -58,7 +58,7 @@ public partial class MainWindow : Window
         // F9 - Toggle file browser
         else if (e.Key == Key.F9)
         {
-            viewModel.ToggleFileBrowserCommand.Execute(null);
+            viewModel.RecentProjects.TogglePanelCommand.Execute(null);
             e.Handled = true;
         }
         // PrintScreen - Take screenshot

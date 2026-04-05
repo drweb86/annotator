@@ -6,9 +6,9 @@ using ScreenshotAnnotator.ViewModels;
 
 namespace ScreenshotAnnotator.Views;
 
-public partial class ProjectFileBrowserView : UserControl
+public partial class RecentProjectsView : UserControl
 {
-    public ProjectFileBrowserView()
+    public RecentProjectsView()
     {
         InitializeComponent();
 
@@ -42,7 +42,7 @@ public partial class ProjectFileBrowserView : UserControl
             if (e.Source is Button)
                 return;
 
-            if (DataContext is ImageEditorViewModel viewModel)
+            if (DataContext is RecentProjectsViewModel viewModel)
                 _ = viewModel.OpenProjectFileCommand.ExecuteAsync(fileInfo);
         }
     }

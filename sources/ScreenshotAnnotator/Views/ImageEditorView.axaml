@@ -459,7 +459,8 @@
         </StackPanel>
       </Border>
 
-      <views:ProjectFileBrowserView Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"/>
+      <views:RecentProjectsView Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"
+                                DataContext="{Binding RecentProjects}"/>
     </Grid>
   </DockPanel>
 </UserControl>

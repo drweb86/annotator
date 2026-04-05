@@ -1,58 +1,48 @@
+using ScreenshotAnnotator.Models;
 using System;
 using System.IO;
 using System.Text.Json;
 
 namespace ScreenshotAnnotator.Services;
 
-public class ApplicationSettings
+public class ApplicationSettings : IApplicationSettings
 {
-    public bool IsFileBrowserVisible { get; set; } = true;
-    public uint SelectedHighlighterColorArgb { get; set; } = 0x64FFFF00; // Semi-transparent yellow default
+    private readonly IFileSystem _fileSystem;
+    public ApplicationSettingsV1Dto Settings { get; private set; }
 
-    private static string GetSettingsFilePath()
+    public ApplicationSettings(IFileSystem fileSystem)
     {
-        var appDataPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
-        var settingsFolder = Path.Combine(appDataPath, "ScreenshotAnnotator");
-        if (!Directory.Exists(settingsFolder))
-        {
-            Directory.CreateDirectory(settingsFolder);
-        }
-        return Path.Combine(settingsFolder, "settings.json");
+        _fileSystem = fileSystem;
+        Settings = new ApplicationSettingsV1Dto();
+        Load();
     }
 
-    public static ApplicationSettings Load()
+    private static string GetSettingsFile()
     {
-        try
-        {
-            var filePath = GetSettingsFilePath();
-            if (File.Exists(filePath))
-            {
-                var json = File.ReadAllText(filePath);
-                return JsonSerializer.Deserialize<ApplicationSettings>(json) ?? new ApplicationSettings();
-            }
-        }
-        catch
-        {
-            // If loading fails, return default settings
-        }
+        var appDataPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+        return Path.Combine(appDataPath, AppInfo.ApplicationId, "settings-v1.json");
+    }
 
-        return new ApplicationSettings();
+    private void Load()
+    {
+        var file = GetSettingsFile();
+        if (!_fileSystem.FileExists(file))
+            return;
+
+        var json = _fileSystem.ReadAllText(file);
+        var dto = JsonSerializer.Deserialize<ApplicationSettingsV1Dto>(json);
+        if (dto is not null)
+            Settings = dto;
     }
 
     public void Save()
     {
-        try
-        {
-            var filePath = GetSettingsFilePath();
-            var json = JsonSerializer.Serialize(this, new JsonSerializerOptions
-            {
-                WriteIndented = true
-            });
-            File.WriteAllText(filePath, json);
-        }
-        catch
-        {
-            // Silently handle save errors
-        }
+        var file = GetSettingsFile();
+        var dir = Path.GetDirectoryName(file);
+        if (dir is not null)
+            _fileSystem.EnsureDirectoryExists(dir);
+        
+        var json = JsonSerializer.Serialize(Settings, new JsonSerializerOptions { WriteIndented = true });
+        _fileSystem.WriteAllText(file, json);
     }
 }

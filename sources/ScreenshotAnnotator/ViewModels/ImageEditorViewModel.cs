@@ -76,7 +76,7 @@ public partial class ImageEditorViewModel : ViewModelBase, IProjectUi
         _currentFilePath = filePath;
         UpdateCurrentFileNameDisplay();
         await SaveCurrentProject();
-        RefreshProjectFiles();
+        RecentProjects.Refresh();
     }
 
     #endregion // IProjectUi
@@ -239,7 +239,7 @@ public partial class ImageEditorViewModel : ViewModelBase, IProjectUi
                 RefreshCanvas();
             }
             _currentHighlighterColor = value;
-            _settings.SelectedHighlighterColorArgb = ColorToUInt(value);
+            _settings.Settings.SelectedHighlighterColorArgb = ColorToUInt(value);
             _settings.Save();
             OnPropertyChanged();
         }
@@ -478,26 +478,18 @@ public partial class ImageEditorViewModel : ViewModelBase, IProjectUi
     private Avalonia.Controls.TopLevel? _topLevel;
     private string? _currentFilePath;
     private Avalonia.Controls.Window? _mainWindow;
-    private ApplicationSettings _settings;
+    private IApplicationSettings _settings;
 
-    [ObservableProperty]
-    private ObservableCollection<ProjectFileInfo> _projectFiles = new();
-
-    [ObservableProperty]
-    private bool _isFileBrowserVisible = true;
+    public RecentProjectsViewModel RecentProjects { get; }
 
     public ImageEditorViewModel()
     {
-        _settings = ApplicationSettings.Load();
-        _isFileBrowserVisible = _settings.IsFileBrowserVisible;
-        _currentHighlighterColor = UIntToColor(_settings.SelectedHighlighterColorArgb);
+        _settings = AllServices.ApplicationSettings;
+        RecentProjects = new RecentProjectsViewModel(this, _settings);
+        _currentHighlighterColor = UIntToColor(_settings.Settings.SelectedHighlighterColorArgb);
     }
 
-    partial void OnIsFileBrowserVisibleChanged(bool value)
-    {
-        _settings.IsFileBrowserVisible = value;
-        _settings.Save();
-    }
+    internal string? CurrentProjectFilePath => _currentFilePath;
 
     public void SetTopLevel(Avalonia.Controls.TopLevel topLevel)
     {
@@ -684,7 +676,7 @@ public partial class ImageEditorViewModel : ViewModelBase, IProjectUi
                 Image = new Bitmap(stream);
             }
             await SaveCurrentProject();
-            RefreshProjectFiles();
+            RecentProjects.Refresh();
         }
         catch
         {
@@ -757,7 +749,7 @@ public partial class ImageEditorViewModel : ViewModelBase, IProjectUi
                 await SaveCurrentProject();
 
                 // Refresh project files to show updated thumbnails
-                RefreshProjectFiles();
+                RecentProjects.Refresh();
             }
             catch
             {
@@ -863,7 +855,7 @@ public partial class ImageEditorViewModel : ViewModelBase, IProjectUi
         _currentFilePath = filePath;
         UpdateCurrentFileNameDisplay();
         await SaveCurrentProject();
-        RefreshProjectFiles();
+        RecentProjects.Refresh();
     }
 
     [RelayCommand]
@@ -913,7 +905,7 @@ public partial class ImageEditorViewModel : ViewModelBase, IProjectUi
                 await SaveCurrentProject();
 
                 // Refresh file list
-                RefreshProjectFiles();
+                RecentProjects.Refresh();
             }
         }
         catch
@@ -926,35 +918,15 @@ public partial class ImageEditorViewModel : ViewModelBase, IProjectUi
         }
     }
 
-    [RelayCommand]
-    private void RefreshProjectFiles()
+    internal async Task OpenProjectFromRecentAsync(ProjectFileInfo fileInfo)
     {
-        ProjectFiles.Clear();
-        var files = ProjectManager.GetProjectFiles();
-        foreach (var file in files)
-        {
-            // Mark the current file
-            file.IsCurrentFile = !string.IsNullOrEmpty(_currentFilePath) &&
-                                 file.FilePath.Equals(_currentFilePath, StringComparison.OrdinalIgnoreCase);
-            ProjectFiles.Add(file);
-        }
-    }
-
-    [RelayCommand]
-    private async Task OpenProjectFile(ProjectFileInfo? fileInfo)
-    {
-        if (fileInfo is null) return;
-
         try
         {
-            // Autosave current project before opening a new one
             await AutoSaveCurrentProject();
-
-            // Open as project
             _currentFilePath = fileInfo.FilePath;
             UpdateCurrentFileNameDisplay();
             await LoadCurrentProject();
-            RefreshProjectFiles();
+            RecentProjects.Refresh();
         }
         catch
         {
@@ -962,23 +934,12 @@ public partial class ImageEditorViewModel : ViewModelBase, IProjectUi
         }
     }
 
-
-    [RelayCommand]
-    private void ToggleFileBrowser()
+    internal void DeleteProjectFromRecent(ProjectFileInfo fileInfo)
     {
-        IsFileBrowserVisible = !IsFileBrowserVisible;
-    }
-
-    [RelayCommand]
-    private void DeleteProjectFile(ProjectFileInfo? fileInfo)
-    {
-        if (fileInfo == null) return;
-        
         try
         {
             if (fileInfo.IsCurrentFile)
             {
-                // close
                 _currentFilePath = null;
                 Image?.Dispose();
                 Image = null;
@@ -994,7 +955,7 @@ public partial class ImageEditorViewModel : ViewModelBase, IProjectUi
                 if (File.Exists(pngPath))
                     File.Delete(pngPath);
 
-                RefreshProjectFiles();
+                RecentProjects.Refresh();
             }
         }
         catch

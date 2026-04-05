@@ -5,13 +5,13 @@
              xmlns:vm="using:ScreenshotAnnotator.ViewModels"
              xmlns:local="using:ScreenshotAnnotator.Markup"
              mc:Ignorable="d"
-             x:Class="ScreenshotAnnotator.Views.ProjectFileBrowserView"
-             x:DataType="vm:ImageEditorViewModel">
-    <Expander IsExpanded="{Binding IsFileBrowserVisible, Mode=TwoWay}"
+             x:Class="ScreenshotAnnotator.Views.RecentProjectsView"
+             x:DataType="vm:RecentProjectsViewModel">
+    <Expander IsExpanded="{Binding IsPanelExpanded, Mode=TwoWay}"
               HorizontalAlignment="Stretch"
-			  Header="{local:Localize Panel_Projects}"
+              Header="{local:Localize Panel_Projects}"
               ToolTip.Tip="{local:Localize Tooltip_CollapseExpandPanel}"
-			  Padding="0">
+              Padding="0">
       <ListBox x:Name="ProjectListBox"
                ItemsSource="{Binding ProjectFiles}"
                ScrollViewer.HorizontalScrollBarVisibility="Visible"
@@ -67,12 +67,12 @@
                        Stretch="Uniform">
                   <Image.ContextMenu>
                     <ContextMenu>
-                      <MenuItem Header="{local:Localize ContextMenu_Open}" Command="{Binding $parent[ListBox].((vm:ImageEditorViewModel)DataContext).OpenProjectFileCommand}" CommandParameter="{Binding}"/>
-                      <MenuItem Header="{local:Localize ContextMenu_Delete}" Command="{Binding $parent[ListBox].((vm:ImageEditorViewModel)DataContext).DeleteProjectFileCommand}" CommandParameter="{Binding}"/>
+                      <MenuItem Header="{local:Localize ContextMenu_Open}" Command="{Binding $parent[ListBox].((vm:RecentProjectsViewModel)DataContext).OpenProjectFileCommand}" CommandParameter="{Binding}"/>
+                      <MenuItem Header="{local:Localize ContextMenu_Delete}" Command="{Binding $parent[ListBox].((vm:RecentProjectsViewModel)DataContext).DeleteProjectFileCommand}" CommandParameter="{Binding}"/>
                     </ContextMenu>
                   </Image.ContextMenu>
                 </Image>
-                <Button Command="{Binding $parent[ListBox].((vm:ImageEditorViewModel)DataContext).DeleteProjectFileCommand}"
+                <Button Command="{Binding $parent[ListBox].((vm:RecentProjectsViewModel)DataContext).DeleteProjectFileCommand}"
                         CommandParameter="{Binding}"
                         Width="26"
                         Height="26"
