@@ -1,0 +1,103 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="using:ScreenshotAnnotator.ViewModels"
+             xmlns:local="using:ScreenshotAnnotator.Markup"
+             mc:Ignorable="d"
+             x:Class="ScreenshotAnnotator.Views.ProjectFileBrowserView"
+             x:DataType="vm:ImageEditorViewModel">
+    <Expander IsExpanded="{Binding IsFileBrowserVisible, Mode=TwoWay}"
+              HorizontalAlignment="Stretch"
+			  Header="{local:Localize Panel_Projects}"
+              ToolTip.Tip="{local:Localize Tooltip_CollapseExpandPanel}"
+			  Padding="0">
+      <ListBox x:Name="ProjectListBox"
+               ItemsSource="{Binding ProjectFiles}"
+               ScrollViewer.HorizontalScrollBarVisibility="Visible"
+               BorderThickness="0"
+               Height="160"
+               SelectionMode="Single"
+               Tapped="OnFileListTapped">
+        <ListBox.Styles>
+          <Style Selector="ScrollBar">
+            <Setter Property="AllowAutoHide" Value="False"/>
+          </Style>
+          <Style Selector="ListBoxItem">
+            <Setter Property="Padding" Value="4 4 4 8"/>
+            <Setter Property="Margin" Value="2"/>
+          </Style>
+          <Style Selector="ListBoxItem:pointerover">
+            <Setter Property="Background" Value="#E8E8E8"/>
+          </Style>
+          <Style Selector="ListBoxItem:selected">
+            <Setter Property="Background" Value="#D0D0D0"/>
+          </Style>
+        </ListBox.Styles>
+        <ListBox.ItemsPanel>
+          <ItemsPanelTemplate>
+            <StackPanel Orientation="Horizontal"/>
+          </ItemsPanelTemplate>
+        </ListBox.ItemsPanel>
+        <ListBox.ItemTemplate>
+          <DataTemplate>
+            <Border BorderThickness="3"
+                    CornerRadius="4"
+                    Padding="4"
+                    Margin="4 4 4 12">
+              <Border.Styles>
+                <Style Selector="Border">
+                  <Setter Property="BorderBrush" Value="Transparent"/>
+                  <Setter Property="Background" Value="Transparent"/>
+                </Style>
+                <Style Selector="Border[Tag=True]">
+                  <Setter Property="BorderBrush" Value="#FFA500"/>
+                  <Setter Property="Background" Value="#40FFA500"/>
+                </Style>
+              </Border.Styles>
+              <Border.Tag>
+                <Binding Path="IsCurrentFile"/>
+              </Border.Tag>
+              <Grid>
+                <Image Source="{Binding Thumbnail}"
+                       MaxWidth="100"
+                       MaxHeight="100"
+                       ToolTip.Tip="{Binding ModifiedDate, StringFormat='{}{0:yyyy-MM-dd HH:mm}'}"
+                       HorizontalAlignment="Center"
+                       Stretch="Uniform">
+                  <Image.ContextMenu>
+                    <ContextMenu>
+                      <MenuItem Header="{local:Localize ContextMenu_Open}" Command="{Binding $parent[ListBox].((vm:ImageEditorViewModel)DataContext).OpenProjectFileCommand}" CommandParameter="{Binding}"/>
+                      <MenuItem Header="{local:Localize ContextMenu_Delete}" Command="{Binding $parent[ListBox].((vm:ImageEditorViewModel)DataContext).DeleteProjectFileCommand}" CommandParameter="{Binding}"/>
+                    </ContextMenu>
+                  </Image.ContextMenu>
+                </Image>
+                <Button Command="{Binding $parent[ListBox].((vm:ImageEditorViewModel)DataContext).DeleteProjectFileCommand}"
+                        CommandParameter="{Binding}"
+                        Width="26"
+                        Height="26"
+                        Padding="2"
+                        CornerRadius="13"
+                        Background="#F44336"
+                        Foreground="White"
+                        HorizontalAlignment="Right"
+                        VerticalAlignment="Top"
+                        Margin="0,-10,-10,0"
+                        ToolTip.Tip="{local:Localize ContextMenu_Delete}"
+                        IsVisible="{Binding !!IsCurrentFile}">
+                  <Button.Effect>
+                    <DropShadowEffect Color="Black" BlurRadius="8" Opacity="0.6" OffsetX="0" OffsetY="2"/>
+                  </Button.Effect>
+                  <Path Data="M19,4H15.5L14.5,3H9.5L8.5,4H5V6H19M6,19A2,2 0 0,0 8,21H16A2,2 0 0,0 18,19V7H6V19Z"
+                        Fill="White"
+                        Stretch="Uniform"
+                        Width="14"
+                        Height="14"/>
+                </Button>
+              </Grid>
+            </Border>
+          </DataTemplate>
+        </ListBox.ItemTemplate>
+      </ListBox>
+    </Expander>
+</UserControl>

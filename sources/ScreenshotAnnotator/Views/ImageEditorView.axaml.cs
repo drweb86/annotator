@@ -1,10 +1,8 @@
 using System.Linq;
 using Avalonia.Controls;
-using Avalonia.Controls.Primitives;
 using Avalonia.Input;
 using Avalonia.Media;
 using Avalonia.Platform.Storage;
-using Avalonia.VisualTree;
 using ScreenshotAnnotator.ViewModels;
 
 namespace ScreenshotAnnotator.Views;
@@ -22,16 +20,6 @@ public partial class ImageEditorView : UserControl
             mainGrid.AddHandler(DragDrop.DragOverEvent, OnDragOver);
             mainGrid.AddHandler(DragDrop.DropEvent, OnDrop);
         }
-
-        // Wire up horizontal mouse wheel scroll for the projects panel
-        this.Loaded += (s, e) =>
-        {
-            var projectListBox = this.FindControl<ListBox>("ProjectListBox");
-            if (projectListBox != null)
-            {
-                projectListBox.AddHandler(PointerWheelChangedEvent, OnProjectListWheelChanged, handledEventsToo: false);
-            }
-        };
 
         // Connect the overlay canvas to the editor canvas
         this.Loaded += (s, e) =>
@@ -82,38 +70,6 @@ public partial class ImageEditorView : UserControl
         if (sender is Border border && border.DataContext is HighlighterColorPresetItem item)
         {
             viewModel.SetHighlighterColorFromPresetCommand.Execute(item.Color);
-        }
-    }
-
-    private void OnProjectListWheelChanged(object? sender, PointerWheelEventArgs e)
-    {
-        if (sender is not ListBox listBox) return;
-
-        var scrollViewer = listBox.FindDescendantOfType<ScrollViewer>();
-        if (scrollViewer == null) return;
-
-        const double scrollSpeed = 80;
-        var newOffset = scrollViewer.Offset.WithX(scrollViewer.Offset.X - e.Delta.Y * scrollSpeed);
-        scrollViewer.Offset = newOffset;
-        e.Handled = true;
-    }
-
-    private void OnFileListTapped(object? sender, Avalonia.Input.TappedEventArgs e)
-    {
-        // Single click to open project
-        if (sender is ListBox listBox && listBox.SelectedItem is Services.ProjectFileInfo fileInfo)
-        {
-            // Check if the tap was on the delete button by checking if it's a Button
-            if (e.Source is Button)
-            {
-                // Don't open if delete button was clicked
-                return;
-            }
-
-            if (DataContext is ImageEditorViewModel viewModel)
-            {
-                _ = viewModel.OpenProjectFileCommand.ExecuteAsync(fileInfo);
-            }
         }
     }
 

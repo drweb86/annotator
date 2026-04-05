@@ -61,8 +61,8 @@ public partial class MainWindow : Window
             viewModel.ToggleFileBrowserCommand.Execute(null);
             e.Handled = true;
         }
-        // F12 or PrintScreen - Take screenshot
-        else if (e.Key == Key.F12 || e.Key == Key.PrintScreen)
+        // PrintScreen - Take screenshot
+        else if (e.Key == Key.PrintScreen)
         {
             await viewModel.TakeScreenshotCommand.ExecuteAsync(null);
             e.Handled = true;
