@@ -350,12 +350,17 @@
                     HorizontalScrollBarVisibility="Auto"
                     VerticalScrollBarVisibility="Auto"
                     Background="Black">
-        <Grid>
+        <Grid HorizontalAlignment="Left"
+              VerticalAlignment="Top">
           <controls:ImageEditorCanvas x:Name="EditorCanvas"
+                                      HorizontalAlignment="Left"
+                                      VerticalAlignment="Top"
                                       Image="{Binding Image, Mode=TwoWay}"
                                       CurrentTool="{Binding CurrentTool, Mode=TwoWay}"
                                       Shapes="{Binding Shapes}"/>
-          <Canvas x:Name="OverlayCanvas" />
+          <Canvas x:Name="OverlayCanvas"
+                  HorizontalAlignment="Left"
+                  VerticalAlignment="Top" />
         </Grid>
       </ScrollViewer>
 

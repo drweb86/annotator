@@ -7,6 +7,7 @@
 - Unhandled Exceptions handling.
 - Escape closes screenshot selection window.
 - More languages.
+- Scrollbars for large screenshots.
 
 ## Changes
 - Update checker is collapsed by default and looks beautifully.

@@ -107,6 +107,7 @@ public class ImageEditorCanvas : Control
     static ImageEditorCanvas()
     {
         AffectsRender<ImageEditorCanvas>(ImageProperty, ShapesProperty);
+        AffectsMeasure<ImageEditorCanvas>(ImageProperty);
         CurrentToolProperty.Changed.AddClassHandler<ImageEditorCanvas>((x, e) => x.OnCurrentToolChanged(e));
         ImageProperty.Changed.AddClassHandler<ImageEditorCanvas>((x, e) => x.OnImagePropertyChanged(e));
         ShapesProperty.Changed.AddClassHandler<ImageEditorCanvas>((x, e) => x.OnShapesPropertyChanged(e));
