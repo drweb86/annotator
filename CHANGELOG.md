@@ -1,5 +1,4 @@
-﻿# 2026.04.04
-(unreleased)
+﻿# 2026.04.06
 
 ## New Features
 - Enable mouse wheel for scroll images in projects area.
@@ -14,6 +13,7 @@
 - Projects are collapsed when click on Projects.
 - Improve perfomance during adding new image.
 - Screenshot preview screen became of same size as screen.
+- Icon was updated to less ugly yet somewhat funny.
 
 ## Bug Fixes
 - After making trims, if i select all area and copy - initial image is copied.
