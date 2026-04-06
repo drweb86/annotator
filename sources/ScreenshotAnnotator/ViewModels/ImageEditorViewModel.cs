@@ -674,60 +674,26 @@ public partial class ImageEditorViewModel : ViewModelBase, IProjectUi
 
     public async Task SaveCurrentProject()
     {
-        // TODO: move saving out!
         if (_editorCanvas == null || _editorCanvas.Image == null || _currentFilePath is null) return;
 
-        try
+        _editorCanvas.ClearSelection();
+
+        byte[] baseImageBytes;
+        using (var imageStream = new MemoryStream())
         {
-            _editorCanvas.ClearSelection();
-
-            var project = new AnnotatorProject
-            {
-                Version = 1
-            };
-
-            // Save base image as Base64 - use canvas image as it may have been modified by cut operations
-            using (var imageStream = new MemoryStream())
-            {
-                _editorCanvas.Image.Save(imageStream);
-                project.BaseImageBase64 = Convert.ToBase64String(imageStream.ToArray());
-            }
-
-            // Save preview thumbnail in project JSON; full-resolution PNG alongside
-            var renderedImage = ProjectRenderer.Render(Image, Shapes, out var _);
-            if (renderedImage != null)
-            {
-                project.PreviewImageBase64 = ProjectRenderer.CreatePreviewImage(renderedImage);
-
-                var pngPath = Path.ChangeExtension(_currentFilePath, ".png");
-                await using var pngFileStream = File.Create(pngPath);
-                renderedImage.Save(pngFileStream);
-            }
-
-            // Save shapes
-            foreach (var shape in Shapes)
-            {
-                var serializableShape = shape.ToSerializableShape();
-                project.Shapes.Add(serializableShape);
-            }
-
-            // Serialize to JSON and save
-            var json = JsonSerializer.Serialize(project, new JsonSerializerOptions
-            {
-                WriteIndented = true
-            });
-
-            await File.WriteAllTextAsync(_currentFilePath, json);
-
-            var projectInfo = this.RecentProjects.ProjectFiles.First(x => x.FilePath == _currentFilePath);
-            projectInfo.Thumbnail?.Dispose();
-            projectInfo.Thumbnail = null;
-            projectInfo.Thumbnail = ProjectRenderer.CreatePreviewImage(project.PreviewImageBase64);
+            _editorCanvas.Image.Save(imageStream);
+            baseImageBytes = imageStream.ToArray();
         }
-        catch (Exception e)
-        {
-            // Handle save errors
-        }
+
+        var projectInfo = RecentProjects.ProjectFiles.First(x => x.FilePath == _currentFilePath);
+        var project = await AllServices.ProjectManager.SaveProjectAsync(
+            _currentFilePath,
+            baseImageBytes,
+            Image,
+            Shapes.ToList());
+        projectInfo.Thumbnail?.Dispose();
+        projectInfo.Thumbnail = null;
+        projectInfo.Thumbnail = ProjectRenderer.CreatePreviewImage(project.PreviewImageBase64);
     }
 
     private async Task LoadCurrentProject()

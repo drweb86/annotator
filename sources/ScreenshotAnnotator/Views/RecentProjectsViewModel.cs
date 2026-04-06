@@ -45,18 +45,10 @@ public partial class RecentProjectsViewModel : ViewModelBase
         AllServices.ApplicationSettings.Save();
     }
 
-    // TODO: eliminate.
-    [Obsolete("Never call directly")]
-    public void Refresh(string currentProjectFilePath)
+    public void Initialize()
     {
-        ProjectFiles.Clear();
-        var current = currentProjectFilePath;
         foreach (var file in AllServices.ProjectManager.GetProjects())
-        {
-            file.IsCurrentFile = !string.IsNullOrEmpty(current) &&
-                                 file.FilePath.Equals(current, StringComparison.OrdinalIgnoreCase);
             ProjectFiles.Add(file);
-        }
     }
 
     [RelayCommand]

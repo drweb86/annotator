@@ -21,6 +21,11 @@ public interface IProjectManager
     void Delete(ProjectFileInfo project);
     Task<ProjectFileInfo> Import(string fileNameWithoutPath, Stream fileStream);
     Task<ProjectFileInfo> ImportImage(Stream fileStream);
+    Task<AnnotatorProject> SaveProjectAsync(
+        string projectFilePath,
+        byte[] baseImageBytes,
+        Bitmap? compositeImage,
+        IReadOnlyList<AnnotationShape> shapes);
 }
 
 public class ProjectManager(IFileSystem fileSystem) : IProjectManager
@@ -75,6 +80,37 @@ public class ProjectManager(IFileSystem fileSystem) : IProjectManager
             await fileStream.CopyToAsync(dest);
 
         return CreateProjectFileInfo(projectPath);
+    }
+
+    public async Task<AnnotatorProject> SaveProjectAsync(
+        string projectFilePath,
+        byte[] baseImageBytes,
+        Bitmap? compositeImage,
+        IReadOnlyList<AnnotationShape> shapes)
+    {
+        ArgumentNullException.ThrowIfNull(baseImageBytes);
+
+        var project = new AnnotatorProject { Version = 1 };
+        project.BaseImageBase64 = Convert.ToBase64String(baseImageBytes);
+
+        using var renderedImage = ProjectRenderer.Render(compositeImage, shapes, out _);
+        if (renderedImage is not null)
+        {
+            project.PreviewImageBase64 = ProjectRenderer.CreatePreviewImage(renderedImage);
+
+            var pngPath = GetRenderedImageFile(projectFilePath);
+            if (fileSystem.FileExists(pngPath))
+                fileSystem.FileDelete(pngPath);
+            await using (var pngFileStream = fileSystem.CreateFile(pngPath))
+                renderedImage.Save(pngFileStream);
+        }
+
+        foreach (var shape in shapes)
+            project.Shapes.Add(shape.ToSerializableShape());
+
+        var json = JsonSerializer.Serialize(project, new JsonSerializerOptions { WriteIndented = true });
+        fileSystem.WriteAllText(projectFilePath, json);
+        return project;
     }
 
     public void Delete(ProjectFileInfo project)
