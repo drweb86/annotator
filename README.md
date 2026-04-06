@@ -2,8 +2,6 @@
 
 Screenshot annotator software for Windows and Linux.
 
-Localized to Russian, Spanish (Español), Chinese Simplified (简体中文), German (Deutsch), Japanese (日本語), Portuguese Brazilian (Português do Brasil), Korean (한국어) languages.
-
 ## Features
 
 - **Arrows** - Draw attention to specific areas with customizable arrows

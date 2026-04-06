@@ -14,6 +14,8 @@ namespace ScreenshotAnnotator.Services;
 public interface IProjectManager
 {
     FilePickerFileType PickerFilter { get; }
+    IReadOnlyList<FilePickerFileType> ImportFileTypeFilter { get; }
+    IReadOnlyList<FilePickerFileType> ExportFileTypeChoices { get; }
     public string ProjectsFolder { get; }
     IEnumerable <ProjectFileInfo> GetProjects();
     void Delete(ProjectFileInfo project);
@@ -58,17 +60,18 @@ public class ProjectManager(IFileSystem fileSystem) : IProjectManager
         project.BaseImageBase64 = Convert.ToBase64String(backgroundImageBytes);
         project.PreviewImageBase64 = ProjectRenderer.CreatePreviewImage(renderedImage);
         var json = JsonSerializer.Serialize(project, new JsonSerializerOptions { WriteIndented = true });
-        await File.WriteAllTextAsync(projectPath, json);
+        fileSystem.WriteAllText(projectPath, json);
 
         var pngRenderedImageFile = GetRenderedImageFile(projectPath);
-        renderedImage.Save(pngRenderedImageFile);
+        await using (var pngFile = fileSystem.CreateFile(pngRenderedImageFile))
+            renderedImage.Save(pngFile);
 
         return CreateProjectFileInfo(projectPath);
     }
 
-    private static async Task<ProjectFileInfo> ImportProject(Stream fileStream, string projectPath)
+    private async Task<ProjectFileInfo> ImportProject(Stream fileStream, string projectPath)
     {
-        await using (var dest = new FileStream(projectPath, FileMode.CreateNew, FileAccess.Write, FileShare.None, 4096, FileOptions.Asynchronous))
+        await using (var dest = fileSystem.CreateFile(projectPath))
             await fileStream.CopyToAsync(dest);
 
         return CreateProjectFileInfo(projectPath);
@@ -87,6 +90,35 @@ public class ProjectManager(IFileSystem fileSystem) : IProjectManager
 
     public FilePickerFileType PickerFilter => new FilePickerFileType(LocalizationManager.Instance["FileType_AnnotatorProject"]) { Patterns = ["*" + Extension ] };
 
+    public IReadOnlyList<FilePickerFileType> ImportFileTypeFilter
+    {
+        get
+        {
+            var imageExtensions = ImageFileManager.SupportedImageExtensions.Select(x => "*" + x).ToArray();
+            return
+            [
+                new FilePickerFileType(LocalizationManager.Instance["FileType_AllSupported"])
+                {
+                    Patterns = imageExtensions.Union(["*" + Extension]).ToArray()
+                },
+                PickerFilter,
+                new FilePickerFileType(LocalizationManager.Instance["FileType_Images"])
+                {
+                    Patterns = imageExtensions
+                },
+                new FilePickerFileType(LocalizationManager.Instance["FileType_AllFiles"]) { Patterns = ["*.*"] }
+            ];
+        }
+    }
+
+    public IReadOnlyList<FilePickerFileType> ExportFileTypeChoices =>
+    [
+        new FilePickerFileType(LocalizationManager.Instance["FileType_PNG"]) { Patterns = ["*.png"] },
+        new FilePickerFileType(LocalizationManager.Instance["FileType_JPEG"]) { Patterns = ["*.jpg", "*.jpeg"] },
+        new FilePickerFileType(LocalizationManager.Instance["FileType_WebP"]) { Patterns = ["*.webp"] },
+        PickerFilter
+    ];
+
     public string ProjectsFolder 
     {
         get
@@ -101,30 +133,29 @@ public class ProjectManager(IFileSystem fileSystem) : IProjectManager
     {
         fileSystem.EnsureDirectoryExists(ProjectsFolder);
 
-        var allFiles = Directory.GetFiles(ProjectsFolder, "*" + Extension);
+        var allFiles = fileSystem.GetFiles(ProjectsFolder, "*" + Extension);
         return allFiles
             .Select(CreateProjectFileInfo)
             .OrderByDescending(f => f.FileName);
     }
 
-    private static ProjectFileInfo CreateProjectFileInfo(string filePath)
+    private ProjectFileInfo CreateProjectFileInfo(string filePath)
     {
-        var fileInfo = new FileInfo(filePath);
         return new ProjectFileInfo
         {
             FilePath = filePath,
             RenderedImageFilePath = GetRenderedImageFile(filePath),
             FileName = Path.GetFileName(filePath),
-            ModifiedDate = fileInfo.LastWriteTime,
+            ModifiedDate = fileSystem.GetLastWriteTime(filePath),
             Thumbnail = LoadProjectThumbnail(filePath)
         };
     }
 
-    private static Bitmap? LoadProjectThumbnail(string filePath)
+    private Bitmap? LoadProjectThumbnail(string filePath)
     {
         try
         {
-            var json = File.ReadAllText(filePath);
+            var json = fileSystem.ReadAllText(filePath);
             var project = JsonSerializer.Deserialize<AnnotatorProject>(json);
             if (project == null)
                 return null;

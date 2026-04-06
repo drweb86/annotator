@@ -560,12 +560,7 @@ public partial class ImageEditorViewModel : ViewModelBase, IProjectUi
         var file = await storageProvider.SaveFilePickerAsync(new FilePickerSaveOptions
         {
             Title = LocalizationManager.Instance["Dialog_Export_Title"],
-            FileTypeChoices = [
-                new FilePickerFileType(LocalizationManager.Instance["FileType_PNG"]) { Patterns = new[] { "*.png" } },
-                new FilePickerFileType(LocalizationManager.Instance["FileType_JPEG"]) { Patterns = new[] { "*.jpg", "*.jpeg" } },
-                new FilePickerFileType(LocalizationManager.Instance["FileType_WebP"]) { Patterns = new[] { "*.webp" } },
-                AllServices.ProjectManager.PickerFilter,
-            ],
+            FileTypeChoices = AllServices.ProjectManager.ExportFileTypeChoices,
             SuggestedFileName = "annotated_image",
         });
 
@@ -621,26 +616,10 @@ public partial class ImageEditorViewModel : ViewModelBase, IProjectUi
             var storageProvider = _topLevel.StorageProvider;
             if (storageProvider == null) return;
 
-            var imageExtensions = ImageFileManager.SupportedImageExtensions
-                .Select(x => "*" + x)
-                .ToArray();
-
             var files = await storageProvider.OpenFilePickerAsync(new FilePickerOpenOptions
             {
                 Title = LocalizationManager.Instance["Dialog_Import_Title"],
-                FileTypeFilter = new[]
-                {
-                    new FilePickerFileType(LocalizationManager.Instance["FileType_AllSupported"])
-                    {
-                        Patterns = imageExtensions.Union(["*" + ProjectManager.Extension]).ToArray()
-                    },
-                    AllServices.ProjectManager.PickerFilter,
-                    new FilePickerFileType(LocalizationManager.Instance["FileType_Images"])
-                    {
-                        Patterns = imageExtensions
-                    },
-                    new FilePickerFileType(LocalizationManager.Instance["FileType_AllFiles"]) { Patterns = new[] { "*.*" } }
-                },
+                FileTypeFilter = AllServices.ProjectManager.ImportFileTypeFilter,
                 AllowMultiple = false
             });
 

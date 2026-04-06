@@ -1,3 +1,4 @@
+using System;
 using System.IO;
 
 namespace ScreenshotAnnotator.Services;
@@ -9,6 +10,10 @@ public sealed class LocalFileSystem : IFileSystem
         if (string.IsNullOrEmpty(path)) return;
         Directory.CreateDirectory(path);
     }
+
+    public string[] GetFiles(string path, string searchPattern) => Directory.GetFiles(path, searchPattern);
+
+    public DateTime GetLastWriteTime(string path) => File.GetLastWriteTime(path);
 
     public void FileDelete(string path) => File.Delete(path);
 
@@ -22,5 +27,13 @@ public sealed class LocalFileSystem : IFileSystem
         if (!string.IsNullOrEmpty(dir))
             EnsureDirectoryExists(dir);
         File.WriteAllText(path, contents);
+    }
+
+    public Stream CreateFile(string path)
+    {
+        var dir = Path.GetDirectoryName(path);
+        if (!string.IsNullOrEmpty(dir))
+            EnsureDirectoryExists(dir);
+        return new FileStream(path, FileMode.CreateNew, FileAccess.Write, FileShare.None, 4096, FileOptions.Asynchronous);
     }
 }
