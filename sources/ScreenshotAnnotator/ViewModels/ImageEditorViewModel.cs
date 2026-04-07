@@ -81,6 +81,9 @@ public partial class ImageEditorViewModel : ViewModelBase, IProjectUi
     [ObservableProperty]
     private Bitmap? _image;
 
+    /// <summary>True when no project is open (idle / empty state).</summary>
+    public bool IsIdle => Project is null;
+
     [ObservableProperty]
     private ToolType _currentTool = ToolType.None;
 
@@ -370,8 +373,8 @@ public partial class ImageEditorViewModel : ViewModelBase, IProjectUi
 
     private void UpdateCurrentFileNameDisplay()
     {
-        CurrentFileName = _project?.FileNameWithoutExtension;
-        CurrentFilePathTooltip = _project?.FilePath;
+        CurrentFileName = Project?.FileNameWithoutExtension;
+        CurrentFilePathTooltip = Project?.FilePath;
     }
 
     [RelayCommand]
@@ -465,7 +468,15 @@ public partial class ImageEditorViewModel : ViewModelBase, IProjectUi
     }
 
     private Avalonia.Controls.TopLevel? _topLevel;
+
+    [ObservableProperty]
     private ProjectFileInfo? _project;
+
+    partial void OnProjectChanged(ProjectFileInfo? value)
+    {
+        OnPropertyChanged(nameof(IsIdle));
+    }
+
     private Avalonia.Controls.Window? _mainWindow;
     private IApplicationSettings _settings;
 
@@ -482,12 +493,12 @@ public partial class ImageEditorViewModel : ViewModelBase, IProjectUi
 
     private async Task OnOpenProject(ProjectFileInfo project)
     {
-        if (_project == project)
+        if (Project == project)
             return;
 
         await SaveCurrentProject();
         CloseProject();
-        _project = project;
+        Project = project;
         await LoadCurrentProject();
     }
 
@@ -541,7 +552,7 @@ public partial class ImageEditorViewModel : ViewModelBase, IProjectUi
     private async Task Export()
     {
         if (_editorCanvas == null || Image == null || _topLevel == null ||
-            _project is null) return;
+            Project is null) return;
         _editorCanvas.ClearSelection();
 
         await SaveCurrentProject();
@@ -566,7 +577,7 @@ public partial class ImageEditorViewModel : ViewModelBase, IProjectUi
         if (localFileName.ToLowerInvariant().EndsWith(ProjectManager.Extension))
         {
             await using var stream = await file.OpenWriteAsync();
-            await FileHelper.CopyFileAsync(_project.FilePath, stream);
+            await FileHelper.CopyFileAsync(Project.FilePath, stream);
 
             return;
         }
@@ -641,7 +652,7 @@ public partial class ImageEditorViewModel : ViewModelBase, IProjectUi
 
     public void CloseProject()
     {
-        _project = null;
+        Project = null;
 
         Image?.Dispose();
         Image = null;
@@ -658,14 +669,14 @@ public partial class ImageEditorViewModel : ViewModelBase, IProjectUi
 
     private async Task FinishCreatingProject(ProjectFileInfo project)
     {
-        _project = project;
+        Project = project;
         await AllServices.ApplicationEvents.CreatedProject(project);
         await LoadCurrentProject();
     }
 
     public async Task SaveCurrentProject()
     {
-        if (_editorCanvas == null || _editorCanvas.Image == null || _project is null) return;
+        if (_editorCanvas == null || _editorCanvas.Image == null || Project is null) return;
 
         _editorCanvas.ClearSelection();
 
@@ -677,27 +688,27 @@ public partial class ImageEditorViewModel : ViewModelBase, IProjectUi
         }
 
         var project = await AllServices.ProjectManager.SaveProjectAsync(
-            _project.FilePath,
+            Project.FilePath,
             baseImageBytes,
             Image,
             Shapes.ToList());
-        _project.Thumbnail?.Dispose();
-        _project.Thumbnail = null;
-        _project.Thumbnail = ProjectRenderer.CreatePreviewImage(project.PreviewImageBase64);
+        Project.Thumbnail?.Dispose();
+        Project.Thumbnail = null;
+        Project.Thumbnail = ProjectRenderer.CreatePreviewImage(project.PreviewImageBase64);
     }
 
     private async Task LoadCurrentProject()
     {
-        if (_project is null)
+        if (Project is null)
             return;
 
-        _project.IsCurrentFile = true;
+        Project.IsCurrentFile = true;
         foreach (var project in RecentProjects.ProjectFiles)
-            project.IsCurrentFile = project == _project;
+            project.IsCurrentFile = project == Project;
 
         try
         {
-            var json = await File.ReadAllTextAsync(_project.FilePath);
+            var json = await File.ReadAllTextAsync(Project.FilePath);
             var project = JsonSerializer.Deserialize<AnnotatorProject>(json);
 
             if (project == null) return;

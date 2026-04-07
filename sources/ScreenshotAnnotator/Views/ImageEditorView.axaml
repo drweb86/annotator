@@ -364,6 +364,11 @@
         </Grid>
       </ScrollViewer>
 
+      <!-- Idle cat with X-ray eyes (shown when no project is open) -->
+      <controls:IdleCatControl Grid.Row="0" Grid.Column="0"
+                               IsVisible="{Binding IsIdle}"
+                               IsHitTestVisible="False" />
+
       <!-- Properties Panel (selected figure) -->
       <Border Grid.Row="0" Grid.Column="1"
               Width="220"
