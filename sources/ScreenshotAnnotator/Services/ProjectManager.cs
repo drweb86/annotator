@@ -172,7 +172,7 @@ public class ProjectManager(IFileSystem fileSystem) : IProjectManager
         var allFiles = fileSystem.GetFiles(ProjectsFolder, "*" + Extension);
         return allFiles
             .Select(CreateProjectFileInfo)
-            .OrderByDescending(f => f.FileName);
+            .OrderByDescending(f => f.ModifiedDate);
     }
 
     private ProjectFileInfo CreateProjectFileInfo(string filePath)
@@ -181,7 +181,7 @@ public class ProjectManager(IFileSystem fileSystem) : IProjectManager
         {
             FilePath = filePath,
             RenderedImageFilePath = GetRenderedImageFile(filePath),
-            FileName = Path.GetFileName(filePath),
+            FileNameWithoutExtension = Path.GetFileNameWithoutExtension(filePath),
             ModifiedDate = fileSystem.GetLastWriteTime(filePath),
             Thumbnail = LoadProjectThumbnail(filePath)
         };

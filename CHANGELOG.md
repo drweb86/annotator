@@ -1,4 +1,10 @@
-﻿# 2026.04.06
+﻿# 2026.04.07
+(unpublished)
+
+## Bug Fixes
+- Delete button is not visible.
+
+# 2026.04.06
 
 ## New Features
 - Enable mouse wheel for scroll images in projects area.

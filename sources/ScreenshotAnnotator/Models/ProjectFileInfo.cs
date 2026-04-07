@@ -8,7 +8,7 @@ public partial class ProjectFileInfo : ObservableObject
 {
     public string FilePath { get; set; } = "";
     public string RenderedImageFilePath { get; set; } = "";
-    public string FileName { get; set; } = "";
+    public string FileNameWithoutExtension { get; set; } = "";
     public DateTime ModifiedDate { get; set; }
     [ObservableProperty]
     private Bitmap? _thumbnail;
