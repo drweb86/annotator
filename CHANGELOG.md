@@ -2,7 +2,9 @@
 
 ## Bug Fixes
 - Delete button is not visible.
-- Add idle cat.
+
+## New Features
+- Add idle cat with lazer eyes, 2 variations shown randomly.
 
 # 2026.04.06
 
