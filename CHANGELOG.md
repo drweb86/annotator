@@ -1,8 +1,8 @@
-﻿# 2026.04.07
-(unpublished)
+﻿# 2026.04.08
 
 ## Bug Fixes
 - Delete button is not visible.
+- Add idle cat.
 
 # 2026.04.06
 
