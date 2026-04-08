@@ -84,6 +84,11 @@ public partial class ImageEditorViewModel : ViewModelBase, IProjectUi
     /// <summary>True when no project is open (idle / empty state).</summary>
     public bool IsIdle => Project is null;
 
+    private static readonly bool _showLaserCat = Random.Shared.Next(2) == 1;
+
+    public bool IsIdleXRayCat => IsIdle && !_showLaserCat;
+    public bool IsIdleLaserCat => IsIdle && _showLaserCat;
+
     [ObservableProperty]
     private ToolType _currentTool = ToolType.None;
 
@@ -475,6 +480,8 @@ public partial class ImageEditorViewModel : ViewModelBase, IProjectUi
     partial void OnProjectChanged(ProjectFileInfo? value)
     {
         OnPropertyChanged(nameof(IsIdle));
+        OnPropertyChanged(nameof(IsIdleXRayCat));
+        OnPropertyChanged(nameof(IsIdleLaserCat));
     }
 
     private Avalonia.Controls.Window? _mainWindow;

@@ -364,10 +364,15 @@
         </Grid>
       </ScrollViewer>
 
-      <!-- Idle cat with X-ray eyes (shown when no project is open) -->
+      <!-- Idle cat with X-ray eyes (randomly chosen per launch) -->
       <controls:IdleCatControl Grid.Row="0" Grid.Column="0"
-                               IsVisible="{Binding IsIdle}"
+                               IsVisible="{Binding IsIdleXRayCat}"
                                IsHitTestVisible="False" />
+
+      <!-- Wireframe cat with laser eyes peeking from bottom (randomly chosen per launch) -->
+      <controls:IdleCatLaserControl Grid.Row="0" Grid.Column="0"
+                                    IsVisible="{Binding IsIdleLaserCat}"
+                                    IsHitTestVisible="False" />
 
       <!-- Properties Panel (selected figure) -->
       <Border Grid.Row="0" Grid.Column="1"
