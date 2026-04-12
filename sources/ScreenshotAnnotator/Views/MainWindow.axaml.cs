@@ -13,6 +13,12 @@ public partial class MainWindow : Window
     public MainWindow()
     {
         InitializeComponent();
+
+        if (!CanExtendClientAreaToDecorationsHint)
+            Title = LocalizationManager.Instance["Window_Title"];
+        else
+            Title = string.Empty;
+
         Closing += OnClosing;
         KeyDown += OnKeyDown;
     }

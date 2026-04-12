@@ -9,7 +9,7 @@
         x:DataType="vm:ScreenshotPreviewViewModel"
         Title="Screenshot Preview - Select Area"
         WindowStartupLocation="Manual"
-        SystemDecorations="None"
+        WindowDecorations="None"
         CanResize="False"
         Background="Black"
         Focusable="True">

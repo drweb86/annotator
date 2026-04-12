@@ -1,4 +1,11 @@
-﻿# 2026.04.08
+﻿# 2026.04.12
+(not published)
+
+## Changes
+- Upgrade Avalonia to v.12.
+! Window Title and menu are broken. Revert?
+
+# 2026.04.08
 
 ## Bug Fixes
 - Delete button is not visible.
