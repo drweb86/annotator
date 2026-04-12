@@ -3,7 +3,6 @@
 
 ## Changes
 - Upgrade Avalonia to v.12.
-! Window Title and menu are broken. Revert?
 
 # 2026.04.08
 

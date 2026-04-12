@@ -24,7 +24,7 @@
   <DockPanel>
 	  <DockPanel DockPanel.Dock="Top">
 		  <!-- Menu Bar -->
-		  <Menu DockPanel.Dock="Left">
+		  <Menu DockPanel.Dock="Left" WindowDecorationProperties.ElementRole="DecorationsElement">
 			  <MenuItem x:Name="AboutMenuItem"
 	              Header="{Binding HeaderInformation}"
 			      Foreground="White"
