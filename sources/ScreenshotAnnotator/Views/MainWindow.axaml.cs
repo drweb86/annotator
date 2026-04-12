@@ -1,9 +1,10 @@
+using System.Linq;
 using Avalonia.Controls;
 using Avalonia.Input;
+using Avalonia.Media;
+using Avalonia.Platform.Storage;
 using ScreenshotAnnotator.ViewModels;
 using ScreenshotAnnotator.Services;
-using System;
-using System.ComponentModel;
 using System.Runtime.InteropServices;
 
 namespace ScreenshotAnnotator.Views;
@@ -14,54 +15,88 @@ public partial class MainWindow : Window
     {
         InitializeComponent();
 
-        if (!CanExtendClientAreaToDecorationsHint)
-            Title = LocalizationManager.Instance["Window_Title"];
-        else
+        if (CanExtendClientAreaToDecorationsHint)
+        {
+            ExtendClientAreaToDecorationsHint = true;
             Title = string.Empty;
+        }
+        else
+        {
+            Title = LocalizationManager.Instance["Window_Title"];
+        }
 
         Closing += OnClosing;
         KeyDown += OnKeyDown;
+
+        var mainGrid = this.FindControl<Grid>("MainContentGrid");
+        if (mainGrid != null)
+        {
+            DragDrop.SetAllowDrop(mainGrid, true);
+            mainGrid.AddHandler(DragDrop.DragOverEvent, OnDragOver);
+            mainGrid.AddHandler(DragDrop.DropEvent, OnDrop);
+        }
+
+        Loaded += (s, e) =>
+        {
+            var editorCanvas = this.FindControl<Controls.ImageEditorCanvas>("EditorCanvas");
+            var overlayCanvas = this.FindControl<Canvas>("OverlayCanvas");
+
+            if (editorCanvas != null && overlayCanvas != null)
+            {
+                editorCanvas.OverlayCanvas = overlayCanvas;
+
+                if (DataContext is ImageEditorViewModel viewModel)
+                {
+                    viewModel.SetEditorCanvas(editorCanvas);
+                    editorCanvas.SelectedShapeChanged += (_, _) =>
+                    {
+                        viewModel.SelectedShape = editorCanvas.SelectedShape;
+                    };
+
+                    var topLevel = TopLevel.GetTopLevel(this);
+                    if (topLevel != null)
+                    {
+                        viewModel.SetTopLevel(topLevel);
+                    }
+
+                    viewModel.RecentProjects.Initialize();
+                }
+            }
+        };
     }
 
     private async void OnKeyDown(object? sender, KeyEventArgs e)
     {
-        if (DataContext is not MainViewModel mainViewModel) return;
-        var viewModel = mainViewModel.ImageEditor;
+        if (DataContext is not ImageEditorViewModel viewModel) return;
 
         var isCtrl = e.KeyModifiers.HasFlag(KeyModifiers.Control);
         var isShift = e.KeyModifiers.HasFlag(KeyModifiers.Shift);
 
-        // Ctrl+C - Copy to clipboard
         if (isCtrl && !isShift && e.Key == Key.C)
         {
             await viewModel.CopyToClipboardCommand.ExecuteAsync(null);
             e.Handled = true;
         }
-        // Ctrl+V - Paste from clipboard
         else if (isCtrl && !isShift && e.Key == Key.V)
         {
             await viewModel.PasteFromClipboardCommand.ExecuteAsync(null);
             e.Handled = true;
         }
-        // Ctrl+N - New project
         else if (isCtrl && !isShift && e.Key == Key.N)
         {
             viewModel.NewProjectCommand.Execute(null);
             e.Handled = true;
         }
-        // Ctrl+O - Open image
         else if (isCtrl && !isShift && e.Key == Key.O)
         {
             await viewModel.ImportCommand.ExecuteAsync(null);
             e.Handled = true;
         }
-        // Ctrl+S - Save project
         else if (isCtrl && !isShift && e.Key == Key.S)
         {
             await viewModel.ExportCommand.ExecuteAsync(null);
             e.Handled = true;
         }
-        // PrintScreen - Take screenshot
         else if (e.Key == Key.PrintScreen)
         {
             await viewModel.TakeScreenshotCommand.ExecuteAsync(null);
@@ -71,23 +106,52 @@ public partial class MainWindow : Window
 
     private async void OnClosing(object? sender, WindowClosingEventArgs e)
     {
-        // Autosave before closing
-        if (DataContext is MainViewModel viewModel)
+        if (DataContext is ImageEditorViewModel viewModel)
         {
-            // Cancel the close temporarily
             e.Cancel = true;
 
-            // Perform autosave
-            await viewModel.ImageEditor.SaveCurrentProject();
-            viewModel.ImageEditor.CloseProject();
+            await viewModel.SaveCurrentProject();
+            viewModel.CloseProject();
 
-            // Shutdown logging
             LoggingService.Shutdown();
 
-            // Now actually close
-            Closing -= OnClosing; // Remove handler to prevent recursion
+            Closing -= OnClosing;
             Close();
         }
+    }
+
+    private void OnColorPresetPressed(object? sender, PointerPressedEventArgs e)
+    {
+        if (DataContext is not ImageEditorViewModel viewModel) return;
+        if (sender is Border border && border.DataContext is ArrowColorPresetItem item)
+        {
+            viewModel.SetArrowColorFromPresetCommand.Execute(item.Color);
+        }
+    }
+
+    private void OnHighlighterColorPresetPressed(object? sender, PointerPressedEventArgs e)
+    {
+        if (DataContext is not ImageEditorViewModel viewModel) return;
+        if (sender is Border border && border.DataContext is HighlighterColorPresetItem item)
+        {
+            viewModel.SetHighlighterColorFromPresetCommand.Execute(item.Color);
+        }
+    }
+
+    private void OnDragOver(object? sender, DragEventArgs e)
+    {
+        if (e.DataTransfer.TryGetFiles()?.Any() == true)
+            e.DragEffects = DragDropEffects.Copy;
+    }
+
+    private async void OnDrop(object? sender, DragEventArgs e)
+    {
+        if (DataContext is not ImageEditorViewModel viewModel) return;
+        var file = e.DataTransfer.TryGetFiles()?.First(x => x is IStorageFile);
+        if (file is null)
+            return;
+
+        await viewModel.ImportByFile((IStorageFile)file);
     }
 
     public static bool CanExtendClientAreaToDecorationsHint => RuntimeInformation.IsOSPlatform(OSPlatform.Windows);
