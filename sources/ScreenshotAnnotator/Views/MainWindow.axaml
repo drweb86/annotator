@@ -11,8 +11,14 @@
         x:Class="ScreenshotAnnotator.Views.MainWindow"
         Icon="/Assets/avalonia-logo.ico"
         x:DataType="vm:ImageEditorViewModel"
-        Width="1200" Height="800">
+        Width="1200" Height="800"
+		Title="{local:Localize Window_Title}">
 
+	<Window.Styles>
+		<Style Selector="WindowDrawnDecorations /template/ Panel#PART_TitleTextPanel > TextBlock">
+			<Setter Property="IsVisible" Value="{Binding !$parent[Window].ExtendClientAreaToDecorationsHint}" />
+		</Style>
+	</Window.Styles>
   <Window.Resources>
     <converters:ColorToBrushConverter x:Key="ColorToBrushConverter"/>
     <converters:BoolToBorderBrushConverter x:Key="SelectedToBorderBrushConverter"/>

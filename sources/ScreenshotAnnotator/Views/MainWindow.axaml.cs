@@ -18,11 +18,6 @@ public partial class MainWindow : Window
         if (CanExtendClientAreaToDecorationsHint)
         {
             ExtendClientAreaToDecorationsHint = true;
-            Title = string.Empty;
-        }
-        else
-        {
-            Title = LocalizationManager.Instance["Window_Title"];
         }
 
         Closing += OnClosing;
