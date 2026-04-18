@@ -1,8 +1,12 @@
-﻿# 2026.04.12
-(not published)
+# 2026.04.20
 
 ## Changes
-- Upgrade Avalonia to v.12.
+- Upgrade Avalonia to v12.
+
+## New Features
+- [Ubuntu] deb packages and repository are created.
+If you have it installed via script, you have now Apt-get way.
+- Increase security of supply chain. Windows Setup and binaries are created at server via Github Actions.
 
 # 2026.04.08
 
