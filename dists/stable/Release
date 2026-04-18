@@ -1,0 +1,32 @@
+Architectures: amd64 arm64
+Codename: stable
+Components: main
+Date: Sat, 18 Apr 2026 23:22:51 +0000
+Description: Screenshot Annotator APT Repository
+Label: ScreenshotAnnotator
+Origin: ScreenshotAnnotator
+Suite: stable
+MD5Sum:
+ 177471237ae2f961ae62f68784ecd819              217 Release
+ 053dc55604163f6d7f0064c6be3aded6              709 main/binary-amd64/Packages
+ a208f14e47a6be36bcf52bdcb865eae4              475 main/binary-amd64/Packages.gz
+ 8a951a36bbf8a7ae191fe457033e463c              709 main/binary-arm64/Packages
+ c93f2e6d59b8f6e40d63ccdca9659f70              471 main/binary-arm64/Packages.gz
+SHA1:
+ e9a21e64574a12e82485a70205599227e72fd7fc              217 Release
+ 07b00952d7969d6ea220ef9016895e9c220cb4f9              709 main/binary-amd64/Packages
+ 8e32663d97eacd24a4f4ab30676330abec3710cd              475 main/binary-amd64/Packages.gz
+ 61f2835605411afd8dcbabcae7b9aa4c73da13d7              709 main/binary-arm64/Packages
+ 438d842265b078af93d1d0d0231ca04a9b826863              471 main/binary-arm64/Packages.gz
+SHA256:
+ e31a5ccdda5ec29eb2e9e9193e3eeaef360ef193de75a5dbdbf5f1ead6478f9f              217 Release
+ bf2f833585c5bc1c6f2a01ba05a6bfb1a49b2f6f293eea633407704901db8f82              709 main/binary-amd64/Packages
+ 0a19f2c22ebfec81a3df170bf33b30d9b37502bca92249c181501a68a3317062              475 main/binary-amd64/Packages.gz
+ 754825e26087e8aaf7d59077da170048bbc5574527a50ae865b27042e2ddebcb              709 main/binary-arm64/Packages
+ 94a6576f1ab9fe26e6db095e1eb1e6b0f10c793e052873edb3fff1bb70374fce              471 main/binary-arm64/Packages.gz
+SHA512:
+ b848fb933708fec3ad5999c630b7f0dae182a4f5a34830d37c149ba3ef2bc14edefee80159a63b138cb7a1373b0fbd75e1c85720c151c27f29a0f17b827b5f8b              217 Release
+ 06b3e083e580c9abedeaab011d2dcb0ba00b4d815cc0451ed0c92a547a29200cfc9bc284b33b6e6377690cb813a0e3ad6630fa8f95e4881da327895fcc658316              709 main/binary-amd64/Packages
+ ba8d6d98c5efdf14ab0e19c87640bb1306b3c452e62a34a960d14636c5f2f4a95cdd305831d449cf776288471b3933213cf1837d3bf6e18947f9666947f36f35              475 main/binary-amd64/Packages.gz
+ 9e3c9015dffd867d0200e6b3c86f2ed943cac96fe41c22748eef68647d26a7ad6333c4fefa54fe852fb303cf25f1b8a56d58e9322c1f0a610d3a07a89875da9d              709 main/binary-arm64/Packages
+ 0732a546bcfa3f457c5b3cf5bc53cbc493676cf6fc3afc00ba701d976288720b32470798aee8f19d96cd8af8d4aa2007da9acf3a5c8c5d2ff68e2dd0ab267bff              471 main/binary-arm64/Packages.gz
