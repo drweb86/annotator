@@ -4,6 +4,7 @@ using Avalonia.Input;
 using Avalonia.Input.Platform;
 using Avalonia.Media;
 using Avalonia.Media.Imaging;
+using Avalonia.VisualTree;
 using ScreenshotAnnotator.Models;
 using ScreenshotAnnotator.Services;
 using ScreenshotAnnotator.ViewModels;
@@ -247,7 +248,15 @@ public class ImageEditorCanvas : Control
 
         // Add to overlay canvas
         OverlayCanvas.Children.Add(_textEditor);
+
+        // Save scroll position before focus (Focus triggers BringIntoView which resets scroll)
+        var scrollViewer = this.FindAncestorOfType<ScrollViewer>();
+        var savedOffset = scrollViewer?.Offset;
+
         _textEditor.Focus();
+
+        if (scrollViewer != null && savedOffset.HasValue)
+            scrollViewer.Offset = savedOffset.Value;
 
         // If initial text was provided (from keystroke), append it instead of selecting all
         if (!string.IsNullOrEmpty(initialText))
@@ -307,7 +316,15 @@ public class ImageEditorCanvas : Control
 
         // Add to overlay canvas
         OverlayCanvas.Children.Add(_textEditor);
+
+        // Save scroll position before focus (Focus triggers BringIntoView which resets scroll)
+        var scrollViewer = this.FindAncestorOfType<ScrollViewer>();
+        var savedOffset = scrollViewer?.Offset;
+
         _textEditor.Focus();
+
+        if (scrollViewer != null && savedOffset.HasValue)
+            scrollViewer.Offset = savedOffset.Value;
 
         // If initial text was provided (from keystroke), append it instead of selecting all
         if (!string.IsNullOrEmpty(initialText))

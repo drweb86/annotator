@@ -1,3 +1,9 @@
+# 2026.04.22
+(unpublished)
+
+## Bug Fixes
+- Scrollbar was reset during double click on figure.
+
 # 2026.04.20
 
 ## Changes
