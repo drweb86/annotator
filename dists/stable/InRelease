@@ -1,0 +1,51 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+Architectures: amd64 arm64
+Codename: stable
+Components: main
+Date: Thu, 23 Apr 2026 19:00:13 +0000
+Description: Screenshot Annotator APT Repository
+Label: ScreenshotAnnotator
+Origin: ScreenshotAnnotator
+Suite: stable
+MD5Sum:
+ 19850d55696cbb15a38dc4a529d5a7e8              217 Release
+ bc917362611a2888413efc2cf606c547              709 main/binary-amd64/Packages
+ f07ca0b4f44bab0b78dcf64700b7b141              477 main/binary-amd64/Packages.gz
+ 9e4631424d363e4a1dde087fd909dc5f              709 main/binary-arm64/Packages
+ 6622e99d12e95e1eda921b0255c63437              474 main/binary-arm64/Packages.gz
+SHA1:
+ d8514c8050b0e1d3d800c427d022831ebb04e743              217 Release
+ 34e0affa3f333625a87b607542f1f70c1e675aed              709 main/binary-amd64/Packages
+ 6b56bdcb1bcee69a8ba21cf3ceec6b6b81c6e801              477 main/binary-amd64/Packages.gz
+ 538218cbcc2adccb7c807f18a6da30bd2d782d4e              709 main/binary-arm64/Packages
+ 10ad5342814f51080e956c2a7cc09906a7d340c1              474 main/binary-arm64/Packages.gz
+SHA256:
+ 34068998c24f689ac93366a6e55d0b20184a630063d7ba5f5cba607108692894              217 Release
+ eb053bc440d5f6560d2f93feab21224a4e169424ac303268b0dbc23103624ad8              709 main/binary-amd64/Packages
+ 212095a9b3138cdad95e9da809d4c10994bd1dbcf309a68e8c67ea2bb9d75942              477 main/binary-amd64/Packages.gz
+ 5d32ca2147d87bf19540a629a847a91d4e3193b241cb94325c20bf24f1804950              709 main/binary-arm64/Packages
+ 7387bd3a209f0f6ae0b54fbc1bbf0574162b31901d89a55a264810d9bcfb7617              474 main/binary-arm64/Packages.gz
+SHA512:
+ 5528980eb5a304b74728e2fc89c18bf3ba24cea8b8d0204d58211f0803d43e262ff7be2637695e5a0c9625c20fed81ee0905da22340aee8f96752bc78fc3d992              217 Release
+ 7f7b3ef4dc2de10e453f15a282f18429b797b98063ae8fde159bf99aec518a3851febec101b6bf86072be96d1054257f69a491c23432d72a85b48d42dfe68cfc              709 main/binary-amd64/Packages
+ 69ffad5d231d11b1f044fa4e52bbd1fb05bd09a9615652f7a469001864a1724675c050be1abb1e876c98784bc3a05fe0933b286f89603b7dee3c7a05146f9bd3              477 main/binary-amd64/Packages.gz
+ 260793b9fd632f82c141d50274ad021dfaba9970cb8374e48efbd9f3d81c2085f094ab763d50d173b54a37154e55055098ce9674ffb9abf857235bebc33da9ff              709 main/binary-arm64/Packages
+ e03b2aa78399886af76333018bab326f4b0db9786ddd780d3a76f403d90d27c567dd25800793b1b6f33767feda2b46fed826d4497166c61f4e68ae402f906e4f              474 main/binary-arm64/Packages.gz
+-----BEGIN PGP SIGNATURE-----
+
+iQIzBAEBCgAdFiEE327DYqOKv7n60hK2FDKdU16DZukFAmnqbD4ACgkQFDKdU16D
+ZumgdA/+O+zXH9GpmPr5kCtgM16AqpMacaBxPSYKOUEzcwuFId1dFB/8t8tFvrII
+cSJgwNL1H8ys2VPgXBuGB+Bz4Vo0+3KIVQcn5viq07HpYCAVEdhobfXKdUhix9Y7
+U7bSWvxNeaDF7i79LZ5xKSo6gGPuAgK5Mi6828XsFnI9zX/PhkaRVJ9LrR6bBSiw
+r/3rjwLymWqRfITwpuWh3ZWwWjQzFaiGSvD5RCUT8TCc+FR/HDr/XjqxkQERaBhX
+ur1R68tT2TKD0IL7g2pdn0x9bIm8hVjekqOoAIBviJ6YCf9EfagqNsspjKSenEOS
+zLmO5RIT6wOlx+tImmxHDJ0abNExUbdBKwq4dJSf6/NAFuplhTM/hopU1TlthFDN
+R/SfU4FUL9uU1KS3Z8FrVv2E5/jIb0J2jYBDP7K06Kelio/PLvq8x1wQ26L7f12T
+insVDfgC4azG7G/X4+yhZ4ZYKvh1IobeKjEBMwem9To0YYITtPNx/JRlPrZDGbm2
+2HbXqXc4AjKbApHwHOQzc8p3oRv901siArweWsKFkKAZobIp2cTlNetk3/PCGX49
+kbigw8mOjL9T8qyVSI5dPQempnwa5SgHe2S8ixJzYMGVNZrSlc4NMbH2Ifoye+/E
+J3Jg1BwcZkwgHdBiTTwBmssIEacS9TkWcyfmBqMJwbxH7V0zLxw=
+=+tZY
+-----END PGP SIGNATURE-----

@@ -1,0 +1,18 @@
+Package: screenshot-annotator
+Version: 2026.04.23
+Architecture: amd64
+Maintainer: Siarhei Kuchuk <https://github.com/drweb86>
+Installed-Size: 139856
+Depends: libc6, libgcc-s1, libstdc++6, libx11-6, libfontconfig1, dbus-x11, gnome-screenshot
+Filename: pool/main/screenshot-annotator_2026.04.23_amd64.deb
+Size: 45514174
+MD5sum: a68f94e7b9d9806838a6ab7cabc7330f
+SHA1: 130d692f8214e24868c9d3191e58a180533399ab
+SHA256: adf9918858220836fa48e35832171d970dea649baa0c4d787266f5f84dda7c92
+Section: graphics
+Priority: optional
+Homepage: https://github.com/drweb86/annotator
+Description: Screenshot annotation tool
+ Screenshot Annotator helps to annotate screenshots with arrows,
+ callouts, blur, highlighter, and more.
+
