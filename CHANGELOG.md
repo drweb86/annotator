@@ -1,5 +1,4 @@
 # 2026.04.23
-(unpublished)
 
 ## New Features
 - [Windows, Ubuntu] Print Screen key now triggers the screenshot function globally, even when the app is in the background or minimized.
