@@ -1,5 +1,9 @@
-# 2026.04.22
+# 2026.04.23
 (unpublished)
+
+## New Features
+- [Windows, Ubuntu] Print Screen key now triggers the screenshot function globally, even when the app is in the background or minimized.
+- Options menu (under the app menu, below License) with a checkbox to enable or disable the Print Screen hotkey. Enabled by default.
 
 ## Bug Fixes
 - Scrollbar was reset during double click on figure.

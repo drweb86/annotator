@@ -55,6 +55,12 @@ public partial class MainWindow : Window
                     }
 
                     viewModel.RecentProjects.Initialize();
+
+                    var hotkeyService = AllServices.GlobalHotkeyService;
+                    hotkeyService.Enabled = viewModel.EnablePrintScreenHotkey;
+                    hotkeyService.PrintScreenPressed += async () =>
+                        await viewModel.TakeScreenshotCommand.ExecuteAsync(null);
+                    hotkeyService.Start();
                 }
             }
         };
@@ -92,10 +98,13 @@ public partial class MainWindow : Window
             await viewModel.ExportCommand.ExecuteAsync(null);
             e.Handled = true;
         }
-        else if (e.Key == Key.PrintScreen)
+        else if (e.Key == Key.PrintScreen && !AllServices.GlobalHotkeyService.IsRunning)
         {
-            await viewModel.TakeScreenshotCommand.ExecuteAsync(null);
-            e.Handled = true;
+            if (viewModel.EnablePrintScreenHotkey)
+            {
+                await viewModel.TakeScreenshotCommand.ExecuteAsync(null);
+                e.Handled = true;
+            }
         }
     }
 

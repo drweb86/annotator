@@ -48,6 +48,12 @@
 						  </MenuItem.Icon>
 					  </MenuItem>
 					  <MenuItem Header="{local:Localize Menu_License}" Command="{Binding OpenLicenseCommand}" />
+					  <Separator />
+					  <MenuItem Header="{local:Localize Menu_Options}">
+						  <MenuItem Header="{local:Localize Menu_EnablePrintScreenHotkey}"
+									IsChecked="{Binding EnablePrintScreenHotkey, Mode=TwoWay}"
+									ToggleType="CheckBox" />
+					  </MenuItem>
 				  </MenuItem.Items>
 			  </MenuItem>
 

@@ -36,6 +36,7 @@
       <PrivateAssets Condition="'$(Configuration)' != 'Debug'">All</PrivateAssets>
     </PackageReference>
     <PackageReference Include="CommunityToolkit.Mvvm" />
+    <PackageReference Include="SharpHook" />
     <PackageReference Include="NLog" />
 	<PackageReference Include="SkiaSharp" />
 	<PackageReference Include="SkiaSharp.NativeAssets.Linux" />

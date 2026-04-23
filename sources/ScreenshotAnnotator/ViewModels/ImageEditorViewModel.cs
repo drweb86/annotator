@@ -842,6 +842,18 @@ public partial class ImageEditorViewModel : ViewModelBase, IProjectUi
     [RelayCommand]
     private void OpenLicense() => ProcessHelper.OpenWithShell(ApplicationLinks.LicenseUrl);
 
+    public bool EnablePrintScreenHotkey
+    {
+        get => _settings.Settings.EnablePrintScreenHotkey;
+        set
+        {
+            _settings.Settings.EnablePrintScreenHotkey = value;
+            _settings.Save();
+            AllServices.GlobalHotkeyService.Enabled = value;
+            OnPropertyChanged();
+        }
+    }
+
     public void SelectShape(AnnotationShape annotationShape)
     {
         if (SelectedShape != null)
