@@ -58,291 +58,285 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-
   <!-- Arabic -->
-
-  <data name="Window_Title" xml:space="preserve">
-    <value>منشئ تعليقات لقطات الشاشة - محرر الصور</value>
+  <data name="_Technical_NsisLanguage" xml:space="preserve">
+    <value>Arabic</value>
   </data>
-
-  <data name="Header_ScreenshotAnnotator" xml:space="preserve">
-    <value>[ منشئ تعليقات لقطات الشاشة - الإصدار {0} ]</value>
+  <data name="_Technical_WingetLocale" xml:space="preserve">
+    <value>ar-SA</value>
   </data>
-
-  <data name="Copyright_Text" xml:space="preserve">
-    <value>Annotator {0} : حقوق النشر (c) 2025-{1} Siarhei Kuchuk</value>
-  </data>
-
-  <data name="Menu_File" xml:space="preserve">
-    <value>[ ملف ]</value>
-  </data>
-
-  <data name="Menu_New" xml:space="preserve">
-    <value>جديد...</value>
-  </data>
-
-  <data name="Menu_Import" xml:space="preserve">
-    <value>استيراد...</value>
-  </data>
-
-  <data name="Menu_Export" xml:space="preserve">
-    <value>تصدير...</value>
-  </data>
-
-  <data name="Menu_OpenProjectsFolder" xml:space="preserve">
-    <value>فتح مجلد المشاريع</value>
-  </data>
-
-  <data name="Menu_OpenLogsFolder" xml:space="preserve">
-    <value>فتح مجلد السجلات</value>
-  </data>
-
-  <data name="Menu_WebSite" xml:space="preserve">
-    <value>الموقع</value>
-  </data>
-
-  <data name="Menu_License" xml:space="preserve">
-    <value>الترخيص</value>
-  </data>
-  <data name="Menu_Options" xml:space="preserve">
-    <value>خيارات</value>
-  </data>
-
-  <data name="Menu_EnablePrintScreenHotkey" xml:space="preserve">
-    <value>تفعيل اختصار Print Screen</value>
-  </data>
-
-  <data name="Tool_New" xml:space="preserve">
-    <value>جديد</value>
-  </data>
-
-  <data name="Tool_Import" xml:space="preserve">
-    <value>استيراد</value>
-  </data>
-
-  <data name="Tool_Export" xml:space="preserve">
-    <value>تصدير</value>
-  </data>
-
-  <data name="Tool_Screenshot" xml:space="preserve">
-    <value>لقطة شاشة</value>
-  </data>
-
-  <data name="Tool_Copy" xml:space="preserve">
-    <value>نسخ</value>
-  </data>
-
-  <data name="Tool_Paste" xml:space="preserve">
-    <value>لصق</value>
-  </data>
-
-  <data name="Tool_Select" xml:space="preserve">
-    <value>تحديد</value>
-  </data>
-
-  <data name="Tool_Arrow" xml:space="preserve">
-    <value>سهم</value>
-  </data>
-
-  <data name="Tool_Callout" xml:space="preserve">
-    <value>تعليق</value>
-  </data>
-
-  <data name="Tool_Note" xml:space="preserve">
-    <value>ملاحظة</value>
-  </data>
-
-  <data name="Tool_Border" xml:space="preserve">
-    <value>إطار</value>
-  </data>
-
-  <data name="Tool_Highlight" xml:space="preserve">
-    <value>تمييز</value>
-  </data>
-
-  <data name="Tool_Blur" xml:space="preserve">
-    <value>ضبابي</value>
-  </data>
-
-  <data name="Tool_CutVertical" xml:space="preserve">
-    <value>قص |</value>
-  </data>
-
-  <data name="Tool_CutHorizontal" xml:space="preserve">
-    <value>قص -</value>
-  </data>
-
-  <data name="Tooltip_New" xml:space="preserve">
-    <value>إنشاء مشروع جديد</value>
-  </data>
-
-  <data name="Tooltip_Import" xml:space="preserve">
-    <value>استيراد مشروع أو صورة</value>
-  </data>
-
-  <data name="Tooltip_Export" xml:space="preserve">
-    <value>تصدير صورة أو مشروع</value>
-  </data>
-
-  <data name="Tooltip_Screenshot" xml:space="preserve">
-    <value>التقاط لقطة شاشة</value>
-  </data>
-
-  <data name="Tooltip_Copy" xml:space="preserve">
-    <value>نسخ إلى الحافظة</value>
-  </data>
-
-  <data name="Tooltip_Paste" xml:space="preserve">
-    <value>لصق من الحافظة</value>
-  </data>
-
-  <data name="Tooltip_Select" xml:space="preserve">
-    <value>تحديد وتعديل التعليقات</value>
-  </data>
-
-  <data name="Tooltip_Arrow" xml:space="preserve">
-    <value>رسم سهم</value>
-  </data>
-
-  <data name="Tooltip_Callout" xml:space="preserve">
-    <value>إضافة تعليق</value>
-  </data>
-
-  <data name="Tooltip_Note" xml:space="preserve">
-    <value>إضافة ملاحظة نصية</value>
-  </data>
-
-  <data name="Tooltip_Border" xml:space="preserve">
-    <value>رسم إطار/مستطيل</value>
-  </data>
-
-  <data name="Tooltip_Highlight" xml:space="preserve">
-    <value>تمييز منطقة</value>
-  </data>
-
-  <data name="Tooltip_Blur" xml:space="preserve">
-    <value>طمس منطقة</value>
-  </data>
-
-  <data name="Tooltip_CutVertical" xml:space="preserve">
-    <value>قص الصورة عمودياً</value>
-  </data>
-
-  <data name="Tooltip_CutHorizontal" xml:space="preserve">
-    <value>قص الصورة أفقياً</value>
-  </data>
-
-  <data name="Tooltip_CollapseExpandPanel" xml:space="preserve">
-    <value>طي/توسيع لوحة المشاريع</value>
-  </data>
-
-  <data name="Panel_Projects" xml:space="preserve">
-    <value>المشاريع</value>
-  </data>
-
-  <data name="Panel_Properties" xml:space="preserve">
-    <value>الخصائص</value>
-  </data>
-
-  <data name="Props_Font" xml:space="preserve">
-    <value>الخط</value>
-  </data>
-
-  <data name="Props_Size" xml:space="preserve">
-    <value>الحجم</value>
-  </data>
-
-  <data name="Props_Bold" xml:space="preserve">
-    <value>عريض</value>
-  </data>
-
-  <data name="Props_Italic" xml:space="preserve">
-    <value>مائل</value>
-  </data>
-
-  <data name="Props_Color" xml:space="preserve">
-    <value>اللون</value>
-  </data>
-
-  <data name="Dialog_Export_Title" xml:space="preserve">
-    <value>تصدير</value>
-  </data>
-
-  <data name="Dialog_Import_Title" xml:space="preserve">
-    <value>استيراد مشروع أو صورة</value>
-  </data>
-
-  <data name="FileType_PNG" xml:space="preserve">
-    <value>صورة PNG</value>
-  </data>
-
-  <data name="FileType_JPEG" xml:space="preserve">
-    <value>صورة JPEG</value>
-  </data>
-
-  <data name="FileType_WebP" xml:space="preserve">
-    <value>صورة WebP</value>
-  </data>
-
-  <data name="FileType_AllSupported" xml:space="preserve">
-    <value>كل الملفات المدعومة</value>
-  </data>
-
-  <data name="FileType_Images" xml:space="preserve">
-    <value>ملفات الصور</value>
-  </data>
-
-  <data name="FileType_AllFiles" xml:space="preserve">
-    <value>كل الملفات</value>
-  </data>
-
-  <data name="FileType_AnnotatorProject" xml:space="preserve">
-    <value>مشروع Annotator</value>
-  </data>
-
-  <data name="Screenshot_Instructions" xml:space="preserve">
-    <value>انقر واسحب لتحديد المنطقة، أو اضبط الزوايا. استخدم العدسة للدقة. اضغط موافق عند الانتهاء.</value>
-  </data>
-
-  <data name="Button_OK" xml:space="preserve">
-    <value>موافق</value>
-  </data>
-
-  <data name="Button_Cancel" xml:space="preserve">
-    <value>إلغاء</value>
-  </data>
-
   <data name="Button_Accept" xml:space="preserve">
     <value>✓ قبول</value>
   </data>
-
+  <data name="Button_Cancel" xml:space="preserve">
+    <value>إلغاء</value>
+  </data>
   <data name="Button_CancelX" xml:space="preserve">
     <value>✕ إلغاء</value>
   </data>
-
-  <data name="Update_NewVersionAvailable" xml:space="preserve">
-    <value>يتوفر إصدار جديد {0}.</value>
-  </data>
-
   <data name="Button_Download" xml:space="preserve">
     <value>تنزيل</value>
   </data>
-
-  <data name="ContextMenu_Open" xml:space="preserve">
-    <value>فتح</value>
+  <data name="Button_OK" xml:space="preserve">
+    <value>موافق</value>
   </data>
-
   <data name="ContextMenu_Delete" xml:space="preserve">
     <value>حذف</value>
   </data>
-
+  <data name="ContextMenu_Open" xml:space="preserve">
+    <value>فتح</value>
+  </data>
+  <data name="Copyright_Text" xml:space="preserve">
+    <value>Annotator {0} : حقوق النشر (c) 2025-{1} Siarhei Kuchuk</value>
+  </data>
+  <data name="Dialog_Export_Title" xml:space="preserve">
+    <value>تصدير</value>
+  </data>
+  <data name="Dialog_Import_Title" xml:space="preserve">
+    <value>استيراد مشروع أو صورة</value>
+  </data>
+  <data name="FileType_AllFiles" xml:space="preserve">
+    <value>كل الملفات</value>
+  </data>
+  <data name="FileType_AllSupported" xml:space="preserve">
+    <value>كل الملفات المدعومة</value>
+  </data>
+  <data name="FileType_AnnotatorProject" xml:space="preserve">
+    <value>مشروع Annotator</value>
+  </data>
+  <data name="FileType_Images" xml:space="preserve">
+    <value>ملفات الصور</value>
+  </data>
+  <data name="FileType_JPEG" xml:space="preserve">
+    <value>صورة JPEG</value>
+  </data>
+  <data name="FileType_PNG" xml:space="preserve">
+    <value>صورة PNG</value>
+  </data>
+  <data name="FileType_WebP" xml:space="preserve">
+    <value>صورة WebP</value>
+  </data>
+  <data name="Header_ScreenshotAnnotator" xml:space="preserve">
+    <value>[ منشئ تعليقات لقطات الشاشة - الإصدار {0} ]</value>
+  </data>
   <data name="ImproveIt_Message" xml:space="preserve">
     <value>حدث خطأ غير متوقع.
 
 يرجى التواصل مع المطورين مع المعلومات المحفوظة على سطح المكتب في
-&quot;{0}&quot;
+"{0}"
 
 سيتم إغلاق التطبيق الآن.</value>
   </data>
+  <data name="Installer_AdminRequired" xml:space="preserve">
+    <value>يلزم وجود صلاحيات المسؤول للتثبيت لجميع المستخدمين.
+يرجى تشغيل المثبت كمسؤول أو استخدام /CURRENTUSER.</value>
+  </data>
+  <data name="Installer_AdminRequiredDetailed" xml:space="preserve">
+    <value>يلزم وجود صلاحيات المسؤول للتثبيت لجميع المستخدمين.
 
+يرجى إما:
+- اختيار 'التثبيت للمستخدم الحالي فقط'، أو
+- تشغيل هذا المثبت كمسؤول</value>
+  </data>
+  <data name="Installer_AllUsersDescription" xml:space="preserve">
+    <value>سيكون التطبيق متاحاً لجميع المستخدمين على هذا الكمبيوتر.</value>
+  </data>
+  <data name="Installer_AllUsersOption" xml:space="preserve">
+    <value>التثبيت ل&amp;جميع المستخدمين (يتطلب صلاحيات المسؤول)</value>
+  </data>
+  <data name="Installer_ArchRequired" xml:space="preserve">
+    <value>يتطلب هذا المثبت إصداراً من Windows بمعمارية x64 أو arm64.</value>
+  </data>
+  <data name="Installer_CurrentUserDescription" xml:space="preserve">
+    <value>مستحسن. سيكون التطبيق متاحاً لحساب المستخدم الخاص بك فقط.</value>
+  </data>
+  <data name="Installer_CurrentUserOption" xml:space="preserve">
+    <value>التثبيت للمستخدم ال&amp;حالي فقط</value>
+  </data>
+  <data name="Installer_InstallingFor" xml:space="preserve">
+    <value>جارٍ التثبيت لـ:</value>
+  </data>
+  <data name="Installer_InstallModeDescription" xml:space="preserve">
+    <value>يرجى اختيار ما إذا كنت تريد تثبيت Screenshot Annotator لنفسك فقط أو لجميع مستخدمي هذا الكمبيوتر.</value>
+  </data>
+  <data name="Installer_InstallModeSubtitle" xml:space="preserve">
+    <value>حدد من يمكنه استخدام هذا التطبيق</value>
+  </data>
+  <data name="Installer_InstallModeTitle" xml:space="preserve">
+    <value>اختيار نوع التثبيت</value>
+  </data>
+  <data name="Installer_LaunchApp" xml:space="preserve">
+    <value>تشغيل التطبيق</value>
+  </data>
+  <data name="Menu_EnablePrintScreenHotkey" xml:space="preserve">
+    <value>تفعيل اختصار Print Screen</value>
+  </data>
+  <data name="Menu_Export" xml:space="preserve">
+    <value>تصدير...</value>
+  </data>
+  <data name="Menu_File" xml:space="preserve">
+    <value>[ ملف ]</value>
+  </data>
+  <data name="Menu_Import" xml:space="preserve">
+    <value>استيراد...</value>
+  </data>
+  <data name="Menu_License" xml:space="preserve">
+    <value>الترخيص</value>
+  </data>
+  <data name="Menu_New" xml:space="preserve">
+    <value>جديد...</value>
+  </data>
+  <data name="Menu_OpenLogsFolder" xml:space="preserve">
+    <value>فتح مجلد السجلات</value>
+  </data>
+  <data name="Menu_OpenProjectsFolder" xml:space="preserve">
+    <value>فتح مجلد المشاريع</value>
+  </data>
+  <data name="Menu_Options" xml:space="preserve">
+    <value>خيارات</value>
+  </data>
+  <data name="Menu_WebSite" xml:space="preserve">
+    <value>الموقع</value>
+  </data>
+  <data name="Panel_Projects" xml:space="preserve">
+    <value>المشاريع</value>
+  </data>
+  <data name="Panel_Properties" xml:space="preserve">
+    <value>الخصائص</value>
+  </data>
+  <data name="Props_Bold" xml:space="preserve">
+    <value>عريض</value>
+  </data>
+  <data name="Props_Color" xml:space="preserve">
+    <value>اللون</value>
+  </data>
+  <data name="Props_Font" xml:space="preserve">
+    <value>الخط</value>
+  </data>
+  <data name="Props_Italic" xml:space="preserve">
+    <value>مائل</value>
+  </data>
+  <data name="Props_Size" xml:space="preserve">
+    <value>الحجم</value>
+  </data>
+  <data name="Screenshot_Instructions" xml:space="preserve">
+    <value>انقر واسحب لتحديد المنطقة، أو اضبط الزوايا. استخدم العدسة للدقة. اضغط موافق عند الانتهاء.</value>
+  </data>
+  <data name="Tool_Arrow" xml:space="preserve">
+    <value>سهم</value>
+  </data>
+  <data name="Tool_Blur" xml:space="preserve">
+    <value>ضبابي</value>
+  </data>
+  <data name="Tool_Border" xml:space="preserve">
+    <value>إطار</value>
+  </data>
+  <data name="Tool_Callout" xml:space="preserve">
+    <value>تعليق</value>
+  </data>
+  <data name="Tool_Copy" xml:space="preserve">
+    <value>نسخ</value>
+  </data>
+  <data name="Tool_CutHorizontal" xml:space="preserve">
+    <value>قص -</value>
+  </data>
+  <data name="Tool_CutVertical" xml:space="preserve">
+    <value>قص |</value>
+  </data>
+  <data name="Tool_Export" xml:space="preserve">
+    <value>تصدير</value>
+  </data>
+  <data name="Tool_Highlight" xml:space="preserve">
+    <value>تمييز</value>
+  </data>
+  <data name="Tool_Import" xml:space="preserve">
+    <value>استيراد</value>
+  </data>
+  <data name="Tool_New" xml:space="preserve">
+    <value>جديد</value>
+  </data>
+  <data name="Tool_Note" xml:space="preserve">
+    <value>ملاحظة</value>
+  </data>
+  <data name="Tool_Paste" xml:space="preserve">
+    <value>لصق</value>
+  </data>
+  <data name="Tool_Screenshot" xml:space="preserve">
+    <value>لقطة شاشة</value>
+  </data>
+  <data name="Tool_Select" xml:space="preserve">
+    <value>تحديد</value>
+  </data>
+  <data name="Tooltip_Arrow" xml:space="preserve">
+    <value>رسم سهم</value>
+  </data>
+  <data name="Tooltip_Blur" xml:space="preserve">
+    <value>طمس منطقة</value>
+  </data>
+  <data name="Tooltip_Border" xml:space="preserve">
+    <value>رسم إطار/مستطيل</value>
+  </data>
+  <data name="Tooltip_Callout" xml:space="preserve">
+    <value>إضافة تعليق</value>
+  </data>
+  <data name="Tooltip_CollapseExpandPanel" xml:space="preserve">
+    <value>طي/توسيع لوحة المشاريع</value>
+  </data>
+  <data name="Tooltip_Copy" xml:space="preserve">
+    <value>نسخ إلى الحافظة</value>
+  </data>
+  <data name="Tooltip_CutHorizontal" xml:space="preserve">
+    <value>قص الصورة أفقياً</value>
+  </data>
+  <data name="Tooltip_CutVertical" xml:space="preserve">
+    <value>قص الصورة عمودياً</value>
+  </data>
+  <data name="Tooltip_Export" xml:space="preserve">
+    <value>تصدير صورة أو مشروع</value>
+  </data>
+  <data name="Tooltip_Highlight" xml:space="preserve">
+    <value>تمييز منطقة</value>
+  </data>
+  <data name="Tooltip_Import" xml:space="preserve">
+    <value>استيراد مشروع أو صورة</value>
+  </data>
+  <data name="Tooltip_New" xml:space="preserve">
+    <value>إنشاء مشروع جديد</value>
+  </data>
+  <data name="Tooltip_Note" xml:space="preserve">
+    <value>إضافة ملاحظة نصية</value>
+  </data>
+  <data name="Tooltip_Paste" xml:space="preserve">
+    <value>لصق من الحافظة</value>
+  </data>
+  <data name="Tooltip_Screenshot" xml:space="preserve">
+    <value>التقاط لقطة شاشة</value>
+  </data>
+  <data name="Tooltip_Select" xml:space="preserve">
+    <value>تحديد وتعديل التعليقات</value>
+  </data>
+  <data name="Update_NewVersionAvailable" xml:space="preserve">
+    <value>يتوفر إصدار جديد {0}.</value>
+  </data>
+  <data name="Window_Title" xml:space="preserve">
+    <value>منشئ تعليقات لقطات الشاشة - محرر الصور</value>
+  </data>
+  <data name="Winget_Description" xml:space="preserve">
+    <value>برنامج لتعليق لقطات الشاشة على Windows وLinux.
+
+الميزات:
+- **أسهم** - لفت الانتباه إلى مناطق محددة بأسهم قابلة للتخصيص
+- **تعليقات** - إضافة فقاعات حوار مع نص قابل للتحرير
+- **ملاحظات** - مربعات نص لمعلومات إضافية
+- **تحديد بإطار** - تظليل مناطق بمستطيلات محددة
+- **ضبابية** - إخفاء المعلومات الحساسة
+- **أداة التحديد** - تحديد أجزاء للنسخ (Ctrl+C) أو الحذف (Delete)
+- **قص شرائح عمودية وأفقية** - قص أجزاء عمودية أو أفقية من الصورة
+- **تمييز** - تمييز مناطق الاهتمام
+- **إدارة المشاريع** - حفظ تلقائي ومعاينات مصغرة
+- **متعدد المنصات** - يعمل على Windows وLinux</value>
+  </data>
+  <data name="Winget_ShortDescription" xml:space="preserve">
+    <value>برنامج لتعليق لقطات الشاشة على Windows وLinux.</value>
+  </data>
 </root>

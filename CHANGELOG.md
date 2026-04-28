@@ -1,3 +1,9 @@
+# 2026.04.28
+(unpublished)
+
+## New Features
+- Setup is multilanguage.
+
 # 2026.04.23
 
 ## New Features

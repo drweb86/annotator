@@ -58,291 +58,282 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-
   <!-- Marathi -->
-
-  <data name="Window_Title" xml:space="preserve">
-    <value>स्क्रीनशॉट अॅनोटेटर - प्रतिमा संपादक</value>
+  <data name="_Technical_WingetLocale" xml:space="preserve">
+    <value>mr-IN</value>
   </data>
-
-  <data name="Header_ScreenshotAnnotator" xml:space="preserve">
-    <value>[ स्क्रीनशॉट अॅनोटेटर - व्ही{0} ]</value>
-  </data>
-
-  <data name="Copyright_Text" xml:space="preserve">
-    <value>Annotator {0} : कॉपीराइट (c) 2025-{1} Siarhei Kuchuk</value>
-  </data>
-
-  <data name="Menu_File" xml:space="preserve">
-    <value>[ फाइल ]</value>
-  </data>
-
-  <data name="Menu_New" xml:space="preserve">
-    <value>नवीन...</value>
-  </data>
-
-  <data name="Menu_Import" xml:space="preserve">
-    <value>आयात...</value>
-  </data>
-
-  <data name="Menu_Export" xml:space="preserve">
-    <value>निर्यात...</value>
-  </data>
-
-  <data name="Menu_OpenProjectsFolder" xml:space="preserve">
-    <value>प्रकल्प फोल्डर उघडा</value>
-  </data>
-
-  <data name="Menu_OpenLogsFolder" xml:space="preserve">
-    <value>लॉग फोल्डर उघडा</value>
-  </data>
-
-  <data name="Menu_WebSite" xml:space="preserve">
-    <value>वेबसाइट</value>
-  </data>
-
-  <data name="Menu_License" xml:space="preserve">
-    <value>परवाना</value>
-  </data>
-  <data name="Menu_Options" xml:space="preserve">
-    <value>पर्याय</value>
-  </data>
-
-  <data name="Menu_EnablePrintScreenHotkey" xml:space="preserve">
-    <value>प्रिंट स्क्रीन हॉटकी सक्षम करा</value>
-  </data>
-
-  <data name="Tool_New" xml:space="preserve">
-    <value>नवीन</value>
-  </data>
-
-  <data name="Tool_Import" xml:space="preserve">
-    <value>आयात</value>
-  </data>
-
-  <data name="Tool_Export" xml:space="preserve">
-    <value>निर्यात</value>
-  </data>
-
-  <data name="Tool_Screenshot" xml:space="preserve">
-    <value>स्क्रीनशॉट</value>
-  </data>
-
-  <data name="Tool_Copy" xml:space="preserve">
-    <value>कॉपी</value>
-  </data>
-
-  <data name="Tool_Paste" xml:space="preserve">
-    <value>पेस्ट</value>
-  </data>
-
-  <data name="Tool_Select" xml:space="preserve">
-    <value>निवडा</value>
-  </data>
-
-  <data name="Tool_Arrow" xml:space="preserve">
-    <value>बाण</value>
-  </data>
-
-  <data name="Tool_Callout" xml:space="preserve">
-    <value>कॉलआउट</value>
-  </data>
-
-  <data name="Tool_Note" xml:space="preserve">
-    <value>नोट</value>
-  </data>
-
-  <data name="Tool_Border" xml:space="preserve">
-    <value>सीमा</value>
-  </data>
-
-  <data name="Tool_Highlight" xml:space="preserve">
-    <value>हाइलाइट</value>
-  </data>
-
-  <data name="Tool_Blur" xml:space="preserve">
-    <value>ब्लर</value>
-  </data>
-
-  <data name="Tool_CutVertical" xml:space="preserve">
-    <value>कट |</value>
-  </data>
-
-  <data name="Tool_CutHorizontal" xml:space="preserve">
-    <value>कट -</value>
-  </data>
-
-  <data name="Tooltip_New" xml:space="preserve">
-    <value>नवीन प्रकल्प तयार करा</value>
-  </data>
-
-  <data name="Tooltip_Import" xml:space="preserve">
-    <value>प्रकल्प किंवा प्रतिमा आयात करा</value>
-  </data>
-
-  <data name="Tooltip_Export" xml:space="preserve">
-    <value>प्रतिमा किंवा प्रकल्प निर्यात करा</value>
-  </data>
-
-  <data name="Tooltip_Screenshot" xml:space="preserve">
-    <value>स्क्रीनशॉट घ्या</value>
-  </data>
-
-  <data name="Tooltip_Copy" xml:space="preserve">
-    <value>क्लिपबोर्डवर कॉपी करा</value>
-  </data>
-
-  <data name="Tooltip_Paste" xml:space="preserve">
-    <value>क्लिपबोर्डवरून पेस्ट करा</value>
-  </data>
-
-  <data name="Tooltip_Select" xml:space="preserve">
-    <value>अॅनोटेशन निवडा आणि संपादित करा</value>
-  </data>
-
-  <data name="Tooltip_Arrow" xml:space="preserve">
-    <value>बाण काढा</value>
-  </data>
-
-  <data name="Tooltip_Callout" xml:space="preserve">
-    <value>कॉलआउट जोडा</value>
-  </data>
-
-  <data name="Tooltip_Note" xml:space="preserve">
-    <value>मजकूर नोट जोडा</value>
-  </data>
-
-  <data name="Tooltip_Border" xml:space="preserve">
-    <value>सीमा/आयत काढा</value>
-  </data>
-
-  <data name="Tooltip_Highlight" xml:space="preserve">
-    <value>क्षेत्र हाइलाइट करा</value>
-  </data>
-
-  <data name="Tooltip_Blur" xml:space="preserve">
-    <value>क्षेत्र ब्लर करा</value>
-  </data>
-
-  <data name="Tooltip_CutVertical" xml:space="preserve">
-    <value>प्रतिमा उभी कापा</value>
-  </data>
-
-  <data name="Tooltip_CutHorizontal" xml:space="preserve">
-    <value>प्रतिमा आडवी कापा</value>
-  </data>
-
-  <data name="Tooltip_CollapseExpandPanel" xml:space="preserve">
-    <value>प्रकल्प पॅनेल कोलॅप्स/एक्सपांड करा</value>
-  </data>
-
-  <data name="Panel_Projects" xml:space="preserve">
-    <value>प्रकल्प</value>
-  </data>
-
-  <data name="Panel_Properties" xml:space="preserve">
-    <value>गुणधर्म</value>
-  </data>
-
-  <data name="Props_Font" xml:space="preserve">
-    <value>फॉन्ट</value>
-  </data>
-
-  <data name="Props_Size" xml:space="preserve">
-    <value>आकार</value>
-  </data>
-
-  <data name="Props_Bold" xml:space="preserve">
-    <value>ठळक</value>
-  </data>
-
-  <data name="Props_Italic" xml:space="preserve">
-    <value>तिरका</value>
-  </data>
-
-  <data name="Props_Color" xml:space="preserve">
-    <value>रंग</value>
-  </data>
-
-  <data name="Dialog_Export_Title" xml:space="preserve">
-    <value>निर्यात</value>
-  </data>
-
-  <data name="Dialog_Import_Title" xml:space="preserve">
-    <value>प्रकल्प किंवा प्रतिमा आयात करा</value>
-  </data>
-
-  <data name="FileType_PNG" xml:space="preserve">
-    <value>PNG प्रतिमा</value>
-  </data>
-
-  <data name="FileType_JPEG" xml:space="preserve">
-    <value>JPEG प्रतिमा</value>
-  </data>
-
-  <data name="FileType_WebP" xml:space="preserve">
-    <value>WebP प्रतिमा</value>
-  </data>
-
-  <data name="FileType_AllSupported" xml:space="preserve">
-    <value>सर्व समर्थित फाइल्स</value>
-  </data>
-
-  <data name="FileType_Images" xml:space="preserve">
-    <value>प्रतिमा फाइल्स</value>
-  </data>
-
-  <data name="FileType_AllFiles" xml:space="preserve">
-    <value>सर्व फाइल्स</value>
-  </data>
-
-  <data name="FileType_AnnotatorProject" xml:space="preserve">
-    <value>Annotator प्रकल्प</value>
-  </data>
-
-  <data name="Screenshot_Instructions" xml:space="preserve">
-    <value>क्षेत्र निवडण्यासाठी क्लिक करून ड्रॅग करा किंवा कोपरे समायोजित करा. अचूकतेसाठी मॅग्निफायर वापरा. तयार असल्यावर ठीक दाबा.</value>
-  </data>
-
-  <data name="Button_OK" xml:space="preserve">
-    <value>ठीक आहे</value>
-  </data>
-
-  <data name="Button_Cancel" xml:space="preserve">
-    <value>रद्द करा</value>
-  </data>
-
   <data name="Button_Accept" xml:space="preserve">
     <value>✓ स्वीकारा</value>
   </data>
-
+  <data name="Button_Cancel" xml:space="preserve">
+    <value>रद्द करा</value>
+  </data>
   <data name="Button_CancelX" xml:space="preserve">
     <value>✕ रद्द करा</value>
   </data>
-
-  <data name="Update_NewVersionAvailable" xml:space="preserve">
-    <value>नवीन आवृत्ती {0} उपलब्ध आहे.</value>
-  </data>
-
   <data name="Button_Download" xml:space="preserve">
     <value>डाउनलोड</value>
   </data>
-
-  <data name="ContextMenu_Open" xml:space="preserve">
-    <value>उघडा</value>
+  <data name="Button_OK" xml:space="preserve">
+    <value>ठीक आहे</value>
   </data>
-
   <data name="ContextMenu_Delete" xml:space="preserve">
     <value>हटवा</value>
   </data>
-
+  <data name="ContextMenu_Open" xml:space="preserve">
+    <value>उघडा</value>
+  </data>
+  <data name="Copyright_Text" xml:space="preserve">
+    <value>Annotator {0} : कॉपीराइट (c) 2025-{1} Siarhei Kuchuk</value>
+  </data>
+  <data name="Dialog_Export_Title" xml:space="preserve">
+    <value>निर्यात</value>
+  </data>
+  <data name="Dialog_Import_Title" xml:space="preserve">
+    <value>प्रकल्प किंवा प्रतिमा आयात करा</value>
+  </data>
+  <data name="FileType_AllFiles" xml:space="preserve">
+    <value>सर्व फाइल्स</value>
+  </data>
+  <data name="FileType_AllSupported" xml:space="preserve">
+    <value>सर्व समर्थित फाइल्स</value>
+  </data>
+  <data name="FileType_AnnotatorProject" xml:space="preserve">
+    <value>Annotator प्रकल्प</value>
+  </data>
+  <data name="FileType_Images" xml:space="preserve">
+    <value>प्रतिमा फाइल्स</value>
+  </data>
+  <data name="FileType_JPEG" xml:space="preserve">
+    <value>JPEG प्रतिमा</value>
+  </data>
+  <data name="FileType_PNG" xml:space="preserve">
+    <value>PNG प्रतिमा</value>
+  </data>
+  <data name="FileType_WebP" xml:space="preserve">
+    <value>WebP प्रतिमा</value>
+  </data>
+  <data name="Header_ScreenshotAnnotator" xml:space="preserve">
+    <value>[ स्क्रीनशॉट अॅनोटेटर - व्ही{0} ]</value>
+  </data>
   <data name="ImproveIt_Message" xml:space="preserve">
     <value>अनपेक्षित त्रुटी आली.
 
 डेस्कटॉपवर जतन केलेल्या माहितीसह विकासकांशी संपर्क साधा
-&quot;{0}&quot;
+"{0}"
 
 अनुप्रयोग आता बंद होईल.</value>
   </data>
+  <data name="Installer_AdminRequired" xml:space="preserve">
+    <value>सर्व वापरकर्त्यांसाठी स्थापित करण्यासाठी प्रशासक विशेषाधिकार आवश्यक आहेत.
+कृपया स्थापक प्रशासक म्हणून चालवा किंवा /CURRENTUSER वापरा.</value>
+  </data>
+  <data name="Installer_AdminRequiredDetailed" xml:space="preserve">
+    <value>सर्व वापरकर्त्यांसाठी स्थापित करण्यासाठी प्रशासक विशेषाधिकार आवश्यक आहेत.
 
+कृपया यापैकी एक निवडा:
+- 'फक्त सध्याच्या वापरकर्त्यासाठी स्थापित करा' निवडा, किंवा
+- हा स्थापक प्रशासक म्हणून चालवा</value>
+  </data>
+  <data name="Installer_AllUsersDescription" xml:space="preserve">
+    <value>अनुप्रयोग या संगणकावरील सर्व वापरकर्त्यांसाठी उपलब्ध असेल.</value>
+  </data>
+  <data name="Installer_AllUsersOption" xml:space="preserve">
+    <value>&amp;सर्व वापरकर्त्यांसाठी स्थापित करा (प्रशासक विशेषाधिकार आवश्यक)</value>
+  </data>
+  <data name="Installer_ArchRequired" xml:space="preserve">
+    <value>या स्थापकासाठी Windows ची x64 किंवा arm64 आवृत्ती आवश्यक आहे.</value>
+  </data>
+  <data name="Installer_CurrentUserDescription" xml:space="preserve">
+    <value>शिफारस केलेले. अनुप्रयोग फक्त तुमच्या वापरकर्ता खात्यासाठी उपलब्ध असेल.</value>
+  </data>
+  <data name="Installer_CurrentUserOption" xml:space="preserve">
+    <value>फक्त &amp;सध्याच्या वापरकर्त्यासाठी स्थापित करा</value>
+  </data>
+  <data name="Installer_InstallingFor" xml:space="preserve">
+    <value>यासाठी स्थापित करत आहे:</value>
+  </data>
+  <data name="Installer_InstallModeDescription" xml:space="preserve">
+    <value>कृपया Screenshot Annotator फक्त स्वतःसाठी स्थापित करायचे की या संगणकाच्या सर्व वापरकर्त्यांसाठी ते निवडा.</value>
+  </data>
+  <data name="Installer_InstallModeSubtitle" xml:space="preserve">
+    <value>हा अनुप्रयोग कोण वापरू शकतो ते निवडा</value>
+  </data>
+  <data name="Installer_InstallModeTitle" xml:space="preserve">
+    <value>स्थापनेचा प्रकार निवडा</value>
+  </data>
+  <data name="Installer_LaunchApp" xml:space="preserve">
+    <value>अनुप्रयोग सुरू करा</value>
+  </data>
+  <data name="Menu_EnablePrintScreenHotkey" xml:space="preserve">
+    <value>प्रिंट स्क्रीन हॉटकी सक्षम करा</value>
+  </data>
+  <data name="Menu_Export" xml:space="preserve">
+    <value>निर्यात...</value>
+  </data>
+  <data name="Menu_File" xml:space="preserve">
+    <value>[ फाइल ]</value>
+  </data>
+  <data name="Menu_Import" xml:space="preserve">
+    <value>आयात...</value>
+  </data>
+  <data name="Menu_License" xml:space="preserve">
+    <value>परवाना</value>
+  </data>
+  <data name="Menu_New" xml:space="preserve">
+    <value>नवीन...</value>
+  </data>
+  <data name="Menu_OpenLogsFolder" xml:space="preserve">
+    <value>लॉग फोल्डर उघडा</value>
+  </data>
+  <data name="Menu_OpenProjectsFolder" xml:space="preserve">
+    <value>प्रकल्प फोल्डर उघडा</value>
+  </data>
+  <data name="Menu_Options" xml:space="preserve">
+    <value>पर्याय</value>
+  </data>
+  <data name="Menu_WebSite" xml:space="preserve">
+    <value>वेबसाइट</value>
+  </data>
+  <data name="Panel_Projects" xml:space="preserve">
+    <value>प्रकल्प</value>
+  </data>
+  <data name="Panel_Properties" xml:space="preserve">
+    <value>गुणधर्म</value>
+  </data>
+  <data name="Props_Bold" xml:space="preserve">
+    <value>ठळक</value>
+  </data>
+  <data name="Props_Color" xml:space="preserve">
+    <value>रंग</value>
+  </data>
+  <data name="Props_Font" xml:space="preserve">
+    <value>फॉन्ट</value>
+  </data>
+  <data name="Props_Italic" xml:space="preserve">
+    <value>तिरका</value>
+  </data>
+  <data name="Props_Size" xml:space="preserve">
+    <value>आकार</value>
+  </data>
+  <data name="Screenshot_Instructions" xml:space="preserve">
+    <value>क्षेत्र निवडण्यासाठी क्लिक करून ड्रॅग करा किंवा कोपरे समायोजित करा. अचूकतेसाठी मॅग्निफायर वापरा. तयार असल्यावर ठीक दाबा.</value>
+  </data>
+  <data name="Tool_Arrow" xml:space="preserve">
+    <value>बाण</value>
+  </data>
+  <data name="Tool_Blur" xml:space="preserve">
+    <value>ब्लर</value>
+  </data>
+  <data name="Tool_Border" xml:space="preserve">
+    <value>सीमा</value>
+  </data>
+  <data name="Tool_Callout" xml:space="preserve">
+    <value>कॉलआउट</value>
+  </data>
+  <data name="Tool_Copy" xml:space="preserve">
+    <value>कॉपी</value>
+  </data>
+  <data name="Tool_CutHorizontal" xml:space="preserve">
+    <value>कट -</value>
+  </data>
+  <data name="Tool_CutVertical" xml:space="preserve">
+    <value>कट |</value>
+  </data>
+  <data name="Tool_Export" xml:space="preserve">
+    <value>निर्यात</value>
+  </data>
+  <data name="Tool_Highlight" xml:space="preserve">
+    <value>हाइलाइट</value>
+  </data>
+  <data name="Tool_Import" xml:space="preserve">
+    <value>आयात</value>
+  </data>
+  <data name="Tool_New" xml:space="preserve">
+    <value>नवीन</value>
+  </data>
+  <data name="Tool_Note" xml:space="preserve">
+    <value>नोट</value>
+  </data>
+  <data name="Tool_Paste" xml:space="preserve">
+    <value>पेस्ट</value>
+  </data>
+  <data name="Tool_Screenshot" xml:space="preserve">
+    <value>स्क्रीनशॉट</value>
+  </data>
+  <data name="Tool_Select" xml:space="preserve">
+    <value>निवडा</value>
+  </data>
+  <data name="Tooltip_Arrow" xml:space="preserve">
+    <value>बाण काढा</value>
+  </data>
+  <data name="Tooltip_Blur" xml:space="preserve">
+    <value>क्षेत्र ब्लर करा</value>
+  </data>
+  <data name="Tooltip_Border" xml:space="preserve">
+    <value>सीमा/आयत काढा</value>
+  </data>
+  <data name="Tooltip_Callout" xml:space="preserve">
+    <value>कॉलआउट जोडा</value>
+  </data>
+  <data name="Tooltip_CollapseExpandPanel" xml:space="preserve">
+    <value>प्रकल्प पॅनेल कोलॅप्स/एक्सपांड करा</value>
+  </data>
+  <data name="Tooltip_Copy" xml:space="preserve">
+    <value>क्लिपबोर्डवर कॉपी करा</value>
+  </data>
+  <data name="Tooltip_CutHorizontal" xml:space="preserve">
+    <value>प्रतिमा आडवी कापा</value>
+  </data>
+  <data name="Tooltip_CutVertical" xml:space="preserve">
+    <value>प्रतिमा उभी कापा</value>
+  </data>
+  <data name="Tooltip_Export" xml:space="preserve">
+    <value>प्रतिमा किंवा प्रकल्प निर्यात करा</value>
+  </data>
+  <data name="Tooltip_Highlight" xml:space="preserve">
+    <value>क्षेत्र हाइलाइट करा</value>
+  </data>
+  <data name="Tooltip_Import" xml:space="preserve">
+    <value>प्रकल्प किंवा प्रतिमा आयात करा</value>
+  </data>
+  <data name="Tooltip_New" xml:space="preserve">
+    <value>नवीन प्रकल्प तयार करा</value>
+  </data>
+  <data name="Tooltip_Note" xml:space="preserve">
+    <value>मजकूर नोट जोडा</value>
+  </data>
+  <data name="Tooltip_Paste" xml:space="preserve">
+    <value>क्लिपबोर्डवरून पेस्ट करा</value>
+  </data>
+  <data name="Tooltip_Screenshot" xml:space="preserve">
+    <value>स्क्रीनशॉट घ्या</value>
+  </data>
+  <data name="Tooltip_Select" xml:space="preserve">
+    <value>अॅनोटेशन निवडा आणि संपादित करा</value>
+  </data>
+  <data name="Update_NewVersionAvailable" xml:space="preserve">
+    <value>नवीन आवृत्ती {0} उपलब्ध आहे.</value>
+  </data>
+  <data name="Window_Title" xml:space="preserve">
+    <value>स्क्रीनशॉट अॅनोटेटर - प्रतिमा संपादक</value>
+  </data>
+  <data name="Winget_Description" xml:space="preserve">
+    <value>Windows आणि Linux साठी स्क्रीनशॉट अॅनोटेशन सॉफ्टवेअर.
+
+वैशिष्ट्ये:
+- **बाण** - सानुकूलित बाणांसह विशिष्ट क्षेत्रांकडे लक्ष वेधा
+- **कॉलआउट** - संपादनयोग्य मजकूरासह संवाद बुडबुडे जोडा
+- **नोट** - अतिरिक्त माहितीसाठी मजकूर बॉक्स तयार करा
+- **बॉर्डर निवड** - बॉर्डर असलेल्या आयतांसह क्षेत्रे हाइलाइट करा
+- **ब्लर** - संवेदनशील माहिती लपवा
+- **निवड साधन** - प्रतिमेचे भाग कॉपी (Ctrl+C) किंवा हटवण्यासाठी (Delete) निवडा
+- **अनुलंब आणि आडवे स्लाइस कापा** - प्रतिमेचे अनुलंब किंवा आडवे क्षेत्र कापा
+- **हाइलाइटर** - रुचीची क्षेत्रे हाइलाइट करा
+- **प्रकल्प व्यवस्थापन** - आपोआप जतन आणि थंबनेल पूर्वावलोकने
+- **क्रॉस-प्लॅटफॉर्म** - Windows आणि Linux वर चालते</value>
+  </data>
+  <data name="Winget_ShortDescription" xml:space="preserve">
+    <value>Windows आणि Linux साठी स्क्रीनशॉट अॅनोटेशन सॉफ्टवेअर.</value>
+  </data>
 </root>

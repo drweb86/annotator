@@ -58,291 +58,282 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-
   <!-- Telugu -->
-
-  <data name="Window_Title" xml:space="preserve">
-    <value>స్క్రీన్‌షాట్ యానోటేటర్ - చిత్ర సంపాదకం</value>
+  <data name="_Technical_WingetLocale" xml:space="preserve">
+    <value>te-IN</value>
   </data>
-
-  <data name="Header_ScreenshotAnnotator" xml:space="preserve">
-    <value>[ స్క్రీన్‌షాట్ యానోటేటర్ - V{0} ]</value>
-  </data>
-
-  <data name="Copyright_Text" xml:space="preserve">
-    <value>Annotator {0} : కాపీరైట్ (c) 2025-{1} Siarhei Kuchuk</value>
-  </data>
-
-  <data name="Menu_File" xml:space="preserve">
-    <value>[ ఫైల్ ]</value>
-  </data>
-
-  <data name="Menu_New" xml:space="preserve">
-    <value>కొత్తది...</value>
-  </data>
-
-  <data name="Menu_Import" xml:space="preserve">
-    <value>దిగుమతి...</value>
-  </data>
-
-  <data name="Menu_Export" xml:space="preserve">
-    <value>ఎగుమతి...</value>
-  </data>
-
-  <data name="Menu_OpenProjectsFolder" xml:space="preserve">
-    <value>ప్రాజెక్ట్ ఫోల్డర్ తెరువు</value>
-  </data>
-
-  <data name="Menu_OpenLogsFolder" xml:space="preserve">
-    <value>లాగ్ ఫోల్డర్ తెరువు</value>
-  </data>
-
-  <data name="Menu_WebSite" xml:space="preserve">
-    <value>వెబ్‌సైట్</value>
-  </data>
-
-  <data name="Menu_License" xml:space="preserve">
-    <value>లైసెన్స్</value>
-  </data>
-  <data name="Menu_Options" xml:space="preserve">
-    <value>ఎంపికలు</value>
-  </data>
-
-  <data name="Menu_EnablePrintScreenHotkey" xml:space="preserve">
-    <value>Print Screen హాట్‌కీని ప్రారంభించు</value>
-  </data>
-
-  <data name="Tool_New" xml:space="preserve">
-    <value>కొత్తది</value>
-  </data>
-
-  <data name="Tool_Import" xml:space="preserve">
-    <value>దిగుమతి</value>
-  </data>
-
-  <data name="Tool_Export" xml:space="preserve">
-    <value>ఎగుమతి</value>
-  </data>
-
-  <data name="Tool_Screenshot" xml:space="preserve">
-    <value>స్క్రీన్‌షాట్</value>
-  </data>
-
-  <data name="Tool_Copy" xml:space="preserve">
-    <value>కాపీ</value>
-  </data>
-
-  <data name="Tool_Paste" xml:space="preserve">
-    <value>పేస్ట్</value>
-  </data>
-
-  <data name="Tool_Select" xml:space="preserve">
-    <value>ఎంచుకోండి</value>
-  </data>
-
-  <data name="Tool_Arrow" xml:space="preserve">
-    <value>బాణం</value>
-  </data>
-
-  <data name="Tool_Callout" xml:space="preserve">
-    <value>కాల్‌అవుట్</value>
-  </data>
-
-  <data name="Tool_Note" xml:space="preserve">
-    <value>గమనిక</value>
-  </data>
-
-  <data name="Tool_Border" xml:space="preserve">
-    <value>బోర్డర్</value>
-  </data>
-
-  <data name="Tool_Highlight" xml:space="preserve">
-    <value>హైలైట్</value>
-  </data>
-
-  <data name="Tool_Blur" xml:space="preserve">
-    <value>బ్లర్</value>
-  </data>
-
-  <data name="Tool_CutVertical" xml:space="preserve">
-    <value>కట్ |</value>
-  </data>
-
-  <data name="Tool_CutHorizontal" xml:space="preserve">
-    <value>కట్ -</value>
-  </data>
-
-  <data name="Tooltip_New" xml:space="preserve">
-    <value>కొత్త ప్రాజెక్ట్ సృష్టించండి</value>
-  </data>
-
-  <data name="Tooltip_Import" xml:space="preserve">
-    <value>ప్రాజెక్ట్ లేదా చిత్రాన్ని దిగుమతి చేయండి</value>
-  </data>
-
-  <data name="Tooltip_Export" xml:space="preserve">
-    <value>చిత్రం లేదా ప్రాజెక్ట్‌ను ఎగుమతి చేయండి</value>
-  </data>
-
-  <data name="Tooltip_Screenshot" xml:space="preserve">
-    <value>స్క్రీన్‌షాట్ తీయండి</value>
-  </data>
-
-  <data name="Tooltip_Copy" xml:space="preserve">
-    <value>క్లిప్‌బోర్డ్‌కు కాపీ చేయండి</value>
-  </data>
-
-  <data name="Tooltip_Paste" xml:space="preserve">
-    <value>క్లిప్‌బోర్డ్ నుండి పేస్ట్ చేయండి</value>
-  </data>
-
-  <data name="Tooltip_Select" xml:space="preserve">
-    <value>అనోటేషన్‌లను ఎంచుకుని సవరించండి</value>
-  </data>
-
-  <data name="Tooltip_Arrow" xml:space="preserve">
-    <value>బాణం గీయండి</value>
-  </data>
-
-  <data name="Tooltip_Callout" xml:space="preserve">
-    <value>కాల్‌అవుట్ జోడించండి</value>
-  </data>
-
-  <data name="Tooltip_Note" xml:space="preserve">
-    <value>వచన గమనిక జోడించండి</value>
-  </data>
-
-  <data name="Tooltip_Border" xml:space="preserve">
-    <value>బోర్డర్/దీర్ఘచతురస్రం గీయండి</value>
-  </data>
-
-  <data name="Tooltip_Highlight" xml:space="preserve">
-    <value>ప్రాంతాన్ని హైలైట్ చేయండి</value>
-  </data>
-
-  <data name="Tooltip_Blur" xml:space="preserve">
-    <value>ప్రాంతాన్ని బ్లర్ చేయండి</value>
-  </data>
-
-  <data name="Tooltip_CutVertical" xml:space="preserve">
-    <value>చిత్రాన్ని నిలువుగా కత్తిరించండి</value>
-  </data>
-
-  <data name="Tooltip_CutHorizontal" xml:space="preserve">
-    <value>చిత్రాన్ని అడ్డంగా కత్తిరించండి</value>
-  </data>
-
-  <data name="Tooltip_CollapseExpandPanel" xml:space="preserve">
-    <value>ప్రాజెక్ట్ ప్యానెల్ కుదించు/విస్తరించు</value>
-  </data>
-
-  <data name="Panel_Projects" xml:space="preserve">
-    <value>ప్రాజెక్ట్‌లు</value>
-  </data>
-
-  <data name="Panel_Properties" xml:space="preserve">
-    <value>లక్షణాలు</value>
-  </data>
-
-  <data name="Props_Font" xml:space="preserve">
-    <value>ఫాంట్</value>
-  </data>
-
-  <data name="Props_Size" xml:space="preserve">
-    <value>పరిమాణం</value>
-  </data>
-
-  <data name="Props_Bold" xml:space="preserve">
-    <value>బోల్డ్</value>
-  </data>
-
-  <data name="Props_Italic" xml:space="preserve">
-    <value>ఇటాలిక్</value>
-  </data>
-
-  <data name="Props_Color" xml:space="preserve">
-    <value>రంగు</value>
-  </data>
-
-  <data name="Dialog_Export_Title" xml:space="preserve">
-    <value>ఎగుమతి</value>
-  </data>
-
-  <data name="Dialog_Import_Title" xml:space="preserve">
-    <value>ప్రాజెక్ట్ లేదా చిత్రాన్ని దిగుమతి చేయండి</value>
-  </data>
-
-  <data name="FileType_PNG" xml:space="preserve">
-    <value>PNG చిత్రం</value>
-  </data>
-
-  <data name="FileType_JPEG" xml:space="preserve">
-    <value>JPEG చిత్రం</value>
-  </data>
-
-  <data name="FileType_WebP" xml:space="preserve">
-    <value>WebP చిత్రం</value>
-  </data>
-
-  <data name="FileType_AllSupported" xml:space="preserve">
-    <value>అన్ని మద్దతు ఫైల్‌లు</value>
-  </data>
-
-  <data name="FileType_Images" xml:space="preserve">
-    <value>చిత్ర ఫైల్‌లు</value>
-  </data>
-
-  <data name="FileType_AllFiles" xml:space="preserve">
-    <value>అన్ని ఫైల్‌లు</value>
-  </data>
-
-  <data name="FileType_AnnotatorProject" xml:space="preserve">
-    <value>Annotator ప్రాజెక్ట్</value>
-  </data>
-
-  <data name="Screenshot_Instructions" xml:space="preserve">
-    <value>ప్రాంతాన్ని ఎంచుకోవడానికి క్లిక్ చేసి లాగండి లేదా మూల బిందువులను సర్దుబాటు చేయండి. ఖచ్చితత్వానికి గ్లాసును ఉపయోగించండి. సిద్ధంగా ఉన్నప్పుడు సరే నొక్కండి.</value>
-  </data>
-
-  <data name="Button_OK" xml:space="preserve">
-    <value>సరే</value>
-  </data>
-
-  <data name="Button_Cancel" xml:space="preserve">
-    <value>రద్దు</value>
-  </data>
-
   <data name="Button_Accept" xml:space="preserve">
     <value>✓ అంగీకరించు</value>
   </data>
-
+  <data name="Button_Cancel" xml:space="preserve">
+    <value>రద్దు</value>
+  </data>
   <data name="Button_CancelX" xml:space="preserve">
     <value>✕ రద్దు</value>
   </data>
-
-  <data name="Update_NewVersionAvailable" xml:space="preserve">
-    <value>కొత్త సంస్కరణ {0} అందుబాటులో ఉంది.</value>
-  </data>
-
   <data name="Button_Download" xml:space="preserve">
     <value>డౌన్‌లోడ్</value>
   </data>
-
-  <data name="ContextMenu_Open" xml:space="preserve">
-    <value>తెరువు</value>
+  <data name="Button_OK" xml:space="preserve">
+    <value>సరే</value>
   </data>
-
   <data name="ContextMenu_Delete" xml:space="preserve">
     <value>తొలగించు</value>
   </data>
-
+  <data name="ContextMenu_Open" xml:space="preserve">
+    <value>తెరువు</value>
+  </data>
+  <data name="Copyright_Text" xml:space="preserve">
+    <value>Annotator {0} : కాపీరైట్ (c) 2025-{1} Siarhei Kuchuk</value>
+  </data>
+  <data name="Dialog_Export_Title" xml:space="preserve">
+    <value>ఎగుమతి</value>
+  </data>
+  <data name="Dialog_Import_Title" xml:space="preserve">
+    <value>ప్రాజెక్ట్ లేదా చిత్రాన్ని దిగుమతి చేయండి</value>
+  </data>
+  <data name="FileType_AllFiles" xml:space="preserve">
+    <value>అన్ని ఫైల్‌లు</value>
+  </data>
+  <data name="FileType_AllSupported" xml:space="preserve">
+    <value>అన్ని మద్దతు ఫైల్‌లు</value>
+  </data>
+  <data name="FileType_AnnotatorProject" xml:space="preserve">
+    <value>Annotator ప్రాజెక్ట్</value>
+  </data>
+  <data name="FileType_Images" xml:space="preserve">
+    <value>చిత్ర ఫైల్‌లు</value>
+  </data>
+  <data name="FileType_JPEG" xml:space="preserve">
+    <value>JPEG చిత్రం</value>
+  </data>
+  <data name="FileType_PNG" xml:space="preserve">
+    <value>PNG చిత్రం</value>
+  </data>
+  <data name="FileType_WebP" xml:space="preserve">
+    <value>WebP చిత్రం</value>
+  </data>
+  <data name="Header_ScreenshotAnnotator" xml:space="preserve">
+    <value>[ స్క్రీన్‌షాట్ యానోటేటర్ - V{0} ]</value>
+  </data>
   <data name="ImproveIt_Message" xml:space="preserve">
     <value>అనుకోని లోపం సంభవించింది.
 
 డెస్క్‌టాప్‌లో సేవ్ చేసిన సమాచారంతో డెవలపర్లను సంప్రదించండి
-&quot;{0}&quot;
+"{0}"
 
 అప్లికేషన్ ఇప్పుడు మూసివేయబడుతుంది.</value>
   </data>
+  <data name="Installer_AdminRequired" xml:space="preserve">
+    <value>అన్ని వినియోగదారులకు ఇన్‌స్టాల్ చేయడానికి అడ్మినిస్ట్రేటర్ అధికారాలు అవసరం.
+దయచేసి ఇన్‌స్టాలర్‌ను అడ్మినిస్ట్రేటర్‌గా రన్ చేయండి లేదా /CURRENTUSER ఉపయోగించండి.</value>
+  </data>
+  <data name="Installer_AdminRequiredDetailed" xml:space="preserve">
+    <value>అన్ని వినియోగదారులకు ఇన్‌స్టాల్ చేయడానికి అడ్మినిస్ట్రేటర్ అధికారాలు అవసరం.
 
+దయచేసి:
+- 'ప్రస్తుత వినియోగదారుకు మాత్రమే ఇన్‌స్టాల్ చేయండి' ఎంచుకోండి, లేదా
+- ఈ ఇన్‌స్టాలర్‌ను అడ్మినిస్ట్రేటర్‌గా రన్ చేయండి</value>
+  </data>
+  <data name="Installer_AllUsersDescription" xml:space="preserve">
+    <value>ఈ కంప్యూటర్‌లోని అన్ని వినియోగదారులకు అప్లికేషన్ అందుబాటులో ఉంటుంది.</value>
+  </data>
+  <data name="Installer_AllUsersOption" xml:space="preserve">
+    <value>&amp;అన్ని వినియోగదారులకు ఇన్‌స్టాల్ చేయండి (అడ్మినిస్ట్రేటర్ అధికారాలు అవసరం)</value>
+  </data>
+  <data name="Installer_ArchRequired" xml:space="preserve">
+    <value>ఈ ఇన్‌స్టాలర్‌కు Windows యొక్క x64 లేదా arm64 వెర్షన్ అవసరం.</value>
+  </data>
+  <data name="Installer_CurrentUserDescription" xml:space="preserve">
+    <value>సిఫార్సు చేయబడింది. అప్లికేషన్ మీ వినియోగదారు ఖాతాకు మాత్రమే అందుబాటులో ఉంటుంది.</value>
+  </data>
+  <data name="Installer_CurrentUserOption" xml:space="preserve">
+    <value>&amp;ప్రస్తుత వినియోగదారుకు మాత్రమే ఇన్‌స్టాల్ చేయండి</value>
+  </data>
+  <data name="Installer_InstallingFor" xml:space="preserve">
+    <value>ఇన్‌స్టాల్ చేస్తోంది:</value>
+  </data>
+  <data name="Installer_InstallModeDescription" xml:space="preserve">
+    <value>Screenshot Annotator ను మీ కోసం మాత్రమే ఇన్‌స్టాల్ చేయాలా లేదా ఈ కంప్యూటర్ యొక్క అన్ని వినియోగదారులకు ఇన్‌స్టాల్ చేయాలా అనేది ఎంచుకోండి.</value>
+  </data>
+  <data name="Installer_InstallModeSubtitle" xml:space="preserve">
+    <value>ఈ అప్లికేషన్‌ను ఎవరు ఉపయోగించగలరో ఎంచుకోండి</value>
+  </data>
+  <data name="Installer_InstallModeTitle" xml:space="preserve">
+    <value>ఇన్‌స్టాలేషన్ రకాన్ని ఎంచుకోండి</value>
+  </data>
+  <data name="Installer_LaunchApp" xml:space="preserve">
+    <value>యాప్‌ను ప్రారంభించు</value>
+  </data>
+  <data name="Menu_EnablePrintScreenHotkey" xml:space="preserve">
+    <value>Print Screen హాట్‌కీని ప్రారంభించు</value>
+  </data>
+  <data name="Menu_Export" xml:space="preserve">
+    <value>ఎగుమతి...</value>
+  </data>
+  <data name="Menu_File" xml:space="preserve">
+    <value>[ ఫైల్ ]</value>
+  </data>
+  <data name="Menu_Import" xml:space="preserve">
+    <value>దిగుమతి...</value>
+  </data>
+  <data name="Menu_License" xml:space="preserve">
+    <value>లైసెన్స్</value>
+  </data>
+  <data name="Menu_New" xml:space="preserve">
+    <value>కొత్తది...</value>
+  </data>
+  <data name="Menu_OpenLogsFolder" xml:space="preserve">
+    <value>లాగ్ ఫోల్డర్ తెరువు</value>
+  </data>
+  <data name="Menu_OpenProjectsFolder" xml:space="preserve">
+    <value>ప్రాజెక్ట్ ఫోల్డర్ తెరువు</value>
+  </data>
+  <data name="Menu_Options" xml:space="preserve">
+    <value>ఎంపికలు</value>
+  </data>
+  <data name="Menu_WebSite" xml:space="preserve">
+    <value>వెబ్‌సైట్</value>
+  </data>
+  <data name="Panel_Projects" xml:space="preserve">
+    <value>ప్రాజెక్ట్‌లు</value>
+  </data>
+  <data name="Panel_Properties" xml:space="preserve">
+    <value>లక్షణాలు</value>
+  </data>
+  <data name="Props_Bold" xml:space="preserve">
+    <value>బోల్డ్</value>
+  </data>
+  <data name="Props_Color" xml:space="preserve">
+    <value>రంగు</value>
+  </data>
+  <data name="Props_Font" xml:space="preserve">
+    <value>ఫాంట్</value>
+  </data>
+  <data name="Props_Italic" xml:space="preserve">
+    <value>ఇటాలిక్</value>
+  </data>
+  <data name="Props_Size" xml:space="preserve">
+    <value>పరిమాణం</value>
+  </data>
+  <data name="Screenshot_Instructions" xml:space="preserve">
+    <value>ప్రాంతాన్ని ఎంచుకోవడానికి క్లిక్ చేసి లాగండి లేదా మూల బిందువులను సర్దుబాటు చేయండి. ఖచ్చితత్వానికి గ్లాసును ఉపయోగించండి. సిద్ధంగా ఉన్నప్పుడు సరే నొక్కండి.</value>
+  </data>
+  <data name="Tool_Arrow" xml:space="preserve">
+    <value>బాణం</value>
+  </data>
+  <data name="Tool_Blur" xml:space="preserve">
+    <value>బ్లర్</value>
+  </data>
+  <data name="Tool_Border" xml:space="preserve">
+    <value>బోర్డర్</value>
+  </data>
+  <data name="Tool_Callout" xml:space="preserve">
+    <value>కాల్‌అవుట్</value>
+  </data>
+  <data name="Tool_Copy" xml:space="preserve">
+    <value>కాపీ</value>
+  </data>
+  <data name="Tool_CutHorizontal" xml:space="preserve">
+    <value>కట్ -</value>
+  </data>
+  <data name="Tool_CutVertical" xml:space="preserve">
+    <value>కట్ |</value>
+  </data>
+  <data name="Tool_Export" xml:space="preserve">
+    <value>ఎగుమతి</value>
+  </data>
+  <data name="Tool_Highlight" xml:space="preserve">
+    <value>హైలైట్</value>
+  </data>
+  <data name="Tool_Import" xml:space="preserve">
+    <value>దిగుమతి</value>
+  </data>
+  <data name="Tool_New" xml:space="preserve">
+    <value>కొత్తది</value>
+  </data>
+  <data name="Tool_Note" xml:space="preserve">
+    <value>గమనిక</value>
+  </data>
+  <data name="Tool_Paste" xml:space="preserve">
+    <value>పేస్ట్</value>
+  </data>
+  <data name="Tool_Screenshot" xml:space="preserve">
+    <value>స్క్రీన్‌షాట్</value>
+  </data>
+  <data name="Tool_Select" xml:space="preserve">
+    <value>ఎంచుకోండి</value>
+  </data>
+  <data name="Tooltip_Arrow" xml:space="preserve">
+    <value>బాణం గీయండి</value>
+  </data>
+  <data name="Tooltip_Blur" xml:space="preserve">
+    <value>ప్రాంతాన్ని బ్లర్ చేయండి</value>
+  </data>
+  <data name="Tooltip_Border" xml:space="preserve">
+    <value>బోర్డర్/దీర్ఘచతురస్రం గీయండి</value>
+  </data>
+  <data name="Tooltip_Callout" xml:space="preserve">
+    <value>కాల్‌అవుట్ జోడించండి</value>
+  </data>
+  <data name="Tooltip_CollapseExpandPanel" xml:space="preserve">
+    <value>ప్రాజెక్ట్ ప్యానెల్ కుదించు/విస్తరించు</value>
+  </data>
+  <data name="Tooltip_Copy" xml:space="preserve">
+    <value>క్లిప్‌బోర్డ్‌కు కాపీ చేయండి</value>
+  </data>
+  <data name="Tooltip_CutHorizontal" xml:space="preserve">
+    <value>చిత్రాన్ని అడ్డంగా కత్తిరించండి</value>
+  </data>
+  <data name="Tooltip_CutVertical" xml:space="preserve">
+    <value>చిత్రాన్ని నిలువుగా కత్తిరించండి</value>
+  </data>
+  <data name="Tooltip_Export" xml:space="preserve">
+    <value>చిత్రం లేదా ప్రాజెక్ట్‌ను ఎగుమతి చేయండి</value>
+  </data>
+  <data name="Tooltip_Highlight" xml:space="preserve">
+    <value>ప్రాంతాన్ని హైలైట్ చేయండి</value>
+  </data>
+  <data name="Tooltip_Import" xml:space="preserve">
+    <value>ప్రాజెక్ట్ లేదా చిత్రాన్ని దిగుమతి చేయండి</value>
+  </data>
+  <data name="Tooltip_New" xml:space="preserve">
+    <value>కొత్త ప్రాజెక్ట్ సృష్టించండి</value>
+  </data>
+  <data name="Tooltip_Note" xml:space="preserve">
+    <value>వచన గమనిక జోడించండి</value>
+  </data>
+  <data name="Tooltip_Paste" xml:space="preserve">
+    <value>క్లిప్‌బోర్డ్ నుండి పేస్ట్ చేయండి</value>
+  </data>
+  <data name="Tooltip_Screenshot" xml:space="preserve">
+    <value>స్క్రీన్‌షాట్ తీయండి</value>
+  </data>
+  <data name="Tooltip_Select" xml:space="preserve">
+    <value>అనోటేషన్‌లను ఎంచుకుని సవరించండి</value>
+  </data>
+  <data name="Update_NewVersionAvailable" xml:space="preserve">
+    <value>కొత్త సంస్కరణ {0} అందుబాటులో ఉంది.</value>
+  </data>
+  <data name="Window_Title" xml:space="preserve">
+    <value>స్క్రీన్‌షాట్ యానోటేటర్ - చిత్ర సంపాదకం</value>
+  </data>
+  <data name="Winget_Description" xml:space="preserve">
+    <value>Windows మరియు Linux కోసం స్క్రీన్‌షాట్ యానోటేషన్ సాఫ్ట్‌వేర్.
+
+లక్షణాలు:
+- **బాణాలు** - అనుకూలీకరించదగిన బాణాలతో నిర్దిష్ట ప్రాంతాలకు శ్రద్ధ ఆకర్షించండి
+- **కాల్‌అవుట్‌లు** - సవరించదగిన వచనంతో మాటబుడగల యానోటేషన్‌లను జోడించండి
+- **గమనికలు** - అదనపు సమాచారానికి వచన పెట్టెలను సృష్టించండి
+- **బోర్డర్ ఎంపిక** - బోర్డర్ ఉన్న దీర్ఘచతురస్రాలతో ప్రాంతాలను హైలైట్ చేయండి
+- **బ్లర్** - సున్నితమైన సమాచారాన్ని దాచండి
+- **ఎంపిక సాధనం** - కాపీ (Ctrl+C) లేదా తొలగించడానికి (Delete) చిత్ర భాగాలను ఎంచుకోండి
+- **నిలువు మరియు అడ్డం స్లైస్‌లు కత్తిరించండి** - చిత్రం యొక్క నిలువు లేదా అడ్డం ప్రాంతాలను కత్తిరించండి
+- **హైలైటర్** - ఆసక్తి ప్రాంతాలను హైలైట్ చేయండి
+- **ప్రాజెక్ట్ నిర్వహణ** - స్వయంచాలక సేవ్ మరియు థంబ్‌నెయిల్ ప్రివ్యూలు
+- **క్రాస్-ప్లాట్‌ఫారమ్** - Windows మరియు Linux లో పనిచేస్తుంది</value>
+  </data>
+  <data name="Winget_ShortDescription" xml:space="preserve">
+    <value>Windows మరియు Linux కోసం స్క్రీన్‌షాట్ యానోటేషన్ సాఫ్ట్‌వేర్.</value>
+  </data>
 </root>

@@ -58,282 +58,66 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-
   <!-- Korean Translation -->
-
-  <data name="Window_Title" xml:space="preserve">
-    <value>스크린샷 주석기 - 이미지 편집기</value>
+  <data name="_Technical_NsisLanguage" xml:space="preserve">
+    <value>Korean</value>
   </data>
-
-  <data name="Header_ScreenshotAnnotator" xml:space="preserve">
-    <value>[ 스크린샷 주석기 - V{0} ]</value>
+  <data name="_Technical_WingetLocale" xml:space="preserve">
+    <value>ko-KR</value>
   </data>
-
-  <data name="Copyright_Text" xml:space="preserve">
-    <value>주석기 {0} : Copyright (c) 2025-{1} Siarhei Kuchuk</value>
-  </data>
-
-  <data name="Menu_File" xml:space="preserve">
-    <value>[ 파일 ]</value>
-  </data>
-
-  <data name="Menu_New" xml:space="preserve">
-    <value>새로 만들기...</value>
-  </data>
-
-  <data name="Menu_Import" xml:space="preserve">
-    <value>가져오기...</value>
-  </data>
-
-  <data name="Menu_Export" xml:space="preserve">
-    <value>내보내기...</value>
-  </data>
-
-  <data name="Menu_OpenProjectsFolder" xml:space="preserve">
-    <value>프로젝트 폴더 열기(_P)</value>
-  </data>
-
-  <data name="Menu_OpenLogsFolder" xml:space="preserve">
-    <value>로그 폴더 열기(_L)</value>
-  </data>
-
-  <data name="Menu_WebSite" xml:space="preserve">
-    <value>웹사이트</value>
-  </data>
-
-  <data name="Menu_License" xml:space="preserve">
-    <value>라이선스</value>
-  </data>
-  <data name="Menu_Options" xml:space="preserve">
-    <value>옵션</value>
-  </data>
-
-  <data name="Menu_EnablePrintScreenHotkey" xml:space="preserve">
-    <value>Print Screen 단축키 활성화</value>
-  </data>
-
-  <data name="Tool_New" xml:space="preserve">
-    <value>새로 만들기</value>
-  </data>
-
-  <data name="Tool_Import" xml:space="preserve">
-    <value>가져오기</value>
-  </data>
-
-  <data name="Tool_Screenshot" xml:space="preserve">
-    <value>스크린샷</value>
-  </data>
-
-  <data name="Tool_Copy" xml:space="preserve">
-    <value>복사</value>
-  </data>
-
-  <data name="Tool_Paste" xml:space="preserve">
-    <value>붙여넣기</value>
-  </data>
-
-  <data name="Tool_Select" xml:space="preserve">
-    <value>선택</value>
-  </data>
-
-  <data name="Tool_Arrow" xml:space="preserve">
-    <value>화살표</value>
-  </data>
-
-  <data name="Tool_Callout" xml:space="preserve">
-    <value>콜아웃</value>
-  </data>
-
-  <data name="Tool_Note" xml:space="preserve">
-    <value>메모</value>
-  </data>
-
-  <data name="Tool_Border" xml:space="preserve">
-    <value>테두리</value>
-  </data>
-
-  <data name="Tool_Highlight" xml:space="preserve">
-    <value>하이라이트</value>
-  </data>
-
-  <data name="Tool_Blur" xml:space="preserve">
-    <value>흐림</value>
-  </data>
-
-  <data name="Tool_CutVertical" xml:space="preserve">
-    <value>자르기 |</value>
-  </data>
-
-  <data name="Tool_CutHorizontal" xml:space="preserve">
-    <value>자르기 -</value>
-  </data>
-
-  <data name="Tooltip_New" xml:space="preserve">
-    <value>새 프로젝트 만들기</value>
-  </data>
-
-  <data name="Tooltip_Import" xml:space="preserve">
-    <value>프로젝트 또는 이미지 가져오기</value>
-  </data>
-
-  <data name="Tooltip_Screenshot" xml:space="preserve">
-    <value>스크린샷 캡처</value>
-  </data>
-
-  <data name="Tooltip_Copy" xml:space="preserve">
-    <value>클립보드에 복사</value>
-  </data>
-
-  <data name="Tooltip_Paste" xml:space="preserve">
-    <value>클립보드에서 붙여넣기</value>
-  </data>
-
-  <data name="Tooltip_Select" xml:space="preserve">
-    <value>주석 선택 및 편집</value>
-  </data>
-
-  <data name="Tooltip_Arrow" xml:space="preserve">
-    <value>화살표 그리기</value>
-  </data>
-
-  <data name="Tooltip_Callout" xml:space="preserve">
-    <value>콜아웃 추가</value>
-  </data>
-
-  <data name="Tooltip_Note" xml:space="preserve">
-    <value>텍스트 메모 추가</value>
-  </data>
-
-  <data name="Tooltip_Border" xml:space="preserve">
-    <value>테두리/사각형 그리기</value>
-  </data>
-
-  <data name="Tooltip_Highlight" xml:space="preserve">
-    <value>영역 하이라이트</value>
-  </data>
-
-  <data name="Tooltip_Blur" xml:space="preserve">
-    <value>영역 흐리게</value>
-  </data>
-
-  <data name="Tooltip_CutVertical" xml:space="preserve">
-    <value>이미지를 세로로 자르기</value>
-  </data>
-
-  <data name="Tooltip_CutHorizontal" xml:space="preserve">
-    <value>이미지를 가로로 자르기</value>
-  </data>
-
-  <data name="Tooltip_CollapseExpandPanel" xml:space="preserve">
-    <value>프로젝트 패널 접기/펼치기</value>
-  </data>
-
-  <data name="Panel_Projects" xml:space="preserve">
-    <value>프로젝트</value>
-  </data>
-
-  <data name="Panel_Properties" xml:space="preserve">
-    <value>속성</value>
-  </data>
-
-  <data name="Props_Font" xml:space="preserve">
-    <value>글꼴</value>
-  </data>
-
-  <data name="Props_Size" xml:space="preserve">
-    <value>크기</value>
-  </data>
-
-  <data name="Props_Bold" xml:space="preserve">
-    <value>굵게</value>
-  </data>
-
-  <data name="Props_Italic" xml:space="preserve">
-    <value>기울임</value>
-  </data>
-
-  <data name="Props_Color" xml:space="preserve">
-    <value>색상</value>
-  </data>
-
-  <data name="Dialog_Export_Title" xml:space="preserve">
-    <value>내보내기</value>
-  </data>
-
-  <data name="Dialog_Import_Title" xml:space="preserve">
-    <value>프로젝트 또는 이미지 가져오기</value>
-  </data>
-
-  <data name="FileType_PNG" xml:space="preserve">
-    <value>PNG 이미지</value>
-  </data>
-
-  <data name="FileType_JPEG" xml:space="preserve">
-    <value>JPEG 이미지</value>
-  </data>
-
-  <data name="FileType_WebP" xml:space="preserve">
-    <value>WebP 이미지</value>
-  </data>
-
-  <data name="FileType_AllSupported" xml:space="preserve">
-    <value>지원되는 모든 파일</value>
-  </data>
-
-  <data name="FileType_Images" xml:space="preserve">
-    <value>이미지 파일</value>
-  </data>
-
-  <data name="FileType_AllFiles" xml:space="preserve">
-    <value>모든 파일</value>
-  </data>
-
-  <data name="FileType_AnnotatorProject" xml:space="preserve">
-    <value>주석기 프로젝트</value>
-  </data>
-
-  <data name="Screenshot_Instructions" xml:space="preserve">
-    <value>클릭하고 드래그하여 영역을 선택하거나 모서리 포인트를 조정합니다. 정밀도를 높이려면 돋보기를 사용하세요. 준비가 되면 확인을 누르세요.</value>
-  </data>
-
-  <data name="Button_OK" xml:space="preserve">
-    <value>확인</value>
-  </data>
-
-  <data name="Button_Cancel" xml:space="preserve">
-    <value>취소</value>
-  </data>
-
   <data name="Button_Accept" xml:space="preserve">
     <value>✓ 수락</value>
   </data>
-
+  <data name="Button_Cancel" xml:space="preserve">
+    <value>취소</value>
+  </data>
   <data name="Button_CancelX" xml:space="preserve">
     <value>✕ 취소</value>
   </data>
-
-  <data name="Update_NewVersionAvailable" xml:space="preserve">
-    <value>새 버전 {0}을(를) 사용할 수 있습니다.</value>
-  </data>
-
   <data name="Button_Download" xml:space="preserve">
     <value>다운로드</value>
   </data>
-
-  <data name="ContextMenu_Open" xml:space="preserve">
-    <value>열기</value>
+  <data name="Button_OK" xml:space="preserve">
+    <value>확인</value>
   </data>
-
   <data name="ContextMenu_Delete" xml:space="preserve">
     <value>삭제</value>
   </data>
-
-  <data name="Tool_Export" xml:space="preserve">
+  <data name="ContextMenu_Open" xml:space="preserve">
+    <value>열기</value>
+  </data>
+  <data name="Copyright_Text" xml:space="preserve">
+    <value>주석기 {0} : Copyright (c) 2025-{1} Siarhei Kuchuk</value>
+  </data>
+  <data name="Dialog_Export_Title" xml:space="preserve">
     <value>내보내기</value>
   </data>
-
-  <data name="Tooltip_Export" xml:space="preserve">
-    <value>이미지 또는 프로젝트 내보내기</value>
+  <data name="Dialog_Import_Title" xml:space="preserve">
+    <value>프로젝트 또는 이미지 가져오기</value>
+  </data>
+  <data name="FileType_AllFiles" xml:space="preserve">
+    <value>모든 파일</value>
+  </data>
+  <data name="FileType_AllSupported" xml:space="preserve">
+    <value>지원되는 모든 파일</value>
+  </data>
+  <data name="FileType_AnnotatorProject" xml:space="preserve">
+    <value>주석기 프로젝트</value>
+  </data>
+  <data name="FileType_Images" xml:space="preserve">
+    <value>이미지 파일</value>
+  </data>
+  <data name="FileType_JPEG" xml:space="preserve">
+    <value>JPEG 이미지</value>
+  </data>
+  <data name="FileType_PNG" xml:space="preserve">
+    <value>PNG 이미지</value>
+  </data>
+  <data name="FileType_WebP" xml:space="preserve">
+    <value>WebP 이미지</value>
+  </data>
+  <data name="Header_ScreenshotAnnotator" xml:space="preserve">
+    <value>[ 스크린샷 주석기 - V{0} ]</value>
   </data>
   <data name="ImproveIt_Message" xml:space="preserve">
     <value>예기치 않은 오류가 발생했습니다.
@@ -342,5 +126,217 @@
 "{0}"
 
 애플리케이션이 종료됩니다.</value>
+  </data>
+  <data name="Installer_AdminRequired" xml:space="preserve">
+    <value>모든 사용자를 위해 설치하려면 관리자 권한이 필요합니다.
+설치 프로그램을 관리자로 실행하거나 /CURRENTUSER를 사용하세요.</value>
+  </data>
+  <data name="Installer_AdminRequiredDetailed" xml:space="preserve">
+    <value>모든 사용자를 위해 설치하려면 관리자 권한이 필요합니다.
+
+다음 중 하나를 선택하세요:
+- '현재 사용자만 설치'를 선택하거나
+- 이 설치 프로그램을 관리자로 실행하세요</value>
+  </data>
+  <data name="Installer_AllUsersDescription" xml:space="preserve">
+    <value>이 컴퓨터의 모든 사용자가 응용 프로그램을 사용할 수 있습니다.</value>
+  </data>
+  <data name="Installer_AllUsersOption" xml:space="preserve">
+    <value>&amp;모든 사용자용 설치 (관리자 권한 필요)</value>
+  </data>
+  <data name="Installer_ArchRequired" xml:space="preserve">
+    <value>이 설치 프로그램은 x64 또는 arm64 버전의 Windows가 필요합니다.</value>
+  </data>
+  <data name="Installer_CurrentUserDescription" xml:space="preserve">
+    <value>권장됨. 응용 프로그램은 현재 사용자 계정에서만 사용할 수 있습니다.</value>
+  </data>
+  <data name="Installer_CurrentUserOption" xml:space="preserve">
+    <value>&amp;현재 사용자만 설치</value>
+  </data>
+  <data name="Installer_InstallingFor" xml:space="preserve">
+    <value>설치 대상:</value>
+  </data>
+  <data name="Installer_InstallModeDescription" xml:space="preserve">
+    <value>Screenshot Annotator을 자신만을 위해 설치할지 또는 이 컴퓨터의 모든 사용자를 위해 설치할지 선택하세요.</value>
+  </data>
+  <data name="Installer_InstallModeSubtitle" xml:space="preserve">
+    <value>이 응용 프로그램을 사용할 수 있는 대상 선택</value>
+  </data>
+  <data name="Installer_InstallModeTitle" xml:space="preserve">
+    <value>설치 유형 선택</value>
+  </data>
+  <data name="Installer_LaunchApp" xml:space="preserve">
+    <value>앱 실행</value>
+  </data>
+  <data name="Menu_EnablePrintScreenHotkey" xml:space="preserve">
+    <value>Print Screen 단축키 활성화</value>
+  </data>
+  <data name="Menu_Export" xml:space="preserve">
+    <value>내보내기...</value>
+  </data>
+  <data name="Menu_File" xml:space="preserve">
+    <value>[ 파일 ]</value>
+  </data>
+  <data name="Menu_Import" xml:space="preserve">
+    <value>가져오기...</value>
+  </data>
+  <data name="Menu_License" xml:space="preserve">
+    <value>라이선스</value>
+  </data>
+  <data name="Menu_New" xml:space="preserve">
+    <value>새로 만들기...</value>
+  </data>
+  <data name="Menu_OpenLogsFolder" xml:space="preserve">
+    <value>로그 폴더 열기(_L)</value>
+  </data>
+  <data name="Menu_OpenProjectsFolder" xml:space="preserve">
+    <value>프로젝트 폴더 열기(_P)</value>
+  </data>
+  <data name="Menu_Options" xml:space="preserve">
+    <value>옵션</value>
+  </data>
+  <data name="Menu_WebSite" xml:space="preserve">
+    <value>웹사이트</value>
+  </data>
+  <data name="Panel_Projects" xml:space="preserve">
+    <value>프로젝트</value>
+  </data>
+  <data name="Panel_Properties" xml:space="preserve">
+    <value>속성</value>
+  </data>
+  <data name="Props_Bold" xml:space="preserve">
+    <value>굵게</value>
+  </data>
+  <data name="Props_Color" xml:space="preserve">
+    <value>색상</value>
+  </data>
+  <data name="Props_Font" xml:space="preserve">
+    <value>글꼴</value>
+  </data>
+  <data name="Props_Italic" xml:space="preserve">
+    <value>기울임</value>
+  </data>
+  <data name="Props_Size" xml:space="preserve">
+    <value>크기</value>
+  </data>
+  <data name="Screenshot_Instructions" xml:space="preserve">
+    <value>클릭하고 드래그하여 영역을 선택하거나 모서리 포인트를 조정합니다. 정밀도를 높이려면 돋보기를 사용하세요. 준비가 되면 확인을 누르세요.</value>
+  </data>
+  <data name="Tool_Arrow" xml:space="preserve">
+    <value>화살표</value>
+  </data>
+  <data name="Tool_Blur" xml:space="preserve">
+    <value>흐림</value>
+  </data>
+  <data name="Tool_Border" xml:space="preserve">
+    <value>테두리</value>
+  </data>
+  <data name="Tool_Callout" xml:space="preserve">
+    <value>콜아웃</value>
+  </data>
+  <data name="Tool_Copy" xml:space="preserve">
+    <value>복사</value>
+  </data>
+  <data name="Tool_CutHorizontal" xml:space="preserve">
+    <value>자르기 -</value>
+  </data>
+  <data name="Tool_CutVertical" xml:space="preserve">
+    <value>자르기 |</value>
+  </data>
+  <data name="Tool_Export" xml:space="preserve">
+    <value>내보내기</value>
+  </data>
+  <data name="Tool_Highlight" xml:space="preserve">
+    <value>하이라이트</value>
+  </data>
+  <data name="Tool_Import" xml:space="preserve">
+    <value>가져오기</value>
+  </data>
+  <data name="Tool_New" xml:space="preserve">
+    <value>새로 만들기</value>
+  </data>
+  <data name="Tool_Note" xml:space="preserve">
+    <value>메모</value>
+  </data>
+  <data name="Tool_Paste" xml:space="preserve">
+    <value>붙여넣기</value>
+  </data>
+  <data name="Tool_Screenshot" xml:space="preserve">
+    <value>스크린샷</value>
+  </data>
+  <data name="Tool_Select" xml:space="preserve">
+    <value>선택</value>
+  </data>
+  <data name="Tooltip_Arrow" xml:space="preserve">
+    <value>화살표 그리기</value>
+  </data>
+  <data name="Tooltip_Blur" xml:space="preserve">
+    <value>영역 흐리게</value>
+  </data>
+  <data name="Tooltip_Border" xml:space="preserve">
+    <value>테두리/사각형 그리기</value>
+  </data>
+  <data name="Tooltip_Callout" xml:space="preserve">
+    <value>콜아웃 추가</value>
+  </data>
+  <data name="Tooltip_CollapseExpandPanel" xml:space="preserve">
+    <value>프로젝트 패널 접기/펼치기</value>
+  </data>
+  <data name="Tooltip_Copy" xml:space="preserve">
+    <value>클립보드에 복사</value>
+  </data>
+  <data name="Tooltip_CutHorizontal" xml:space="preserve">
+    <value>이미지를 가로로 자르기</value>
+  </data>
+  <data name="Tooltip_CutVertical" xml:space="preserve">
+    <value>이미지를 세로로 자르기</value>
+  </data>
+  <data name="Tooltip_Export" xml:space="preserve">
+    <value>이미지 또는 프로젝트 내보내기</value>
+  </data>
+  <data name="Tooltip_Highlight" xml:space="preserve">
+    <value>영역 하이라이트</value>
+  </data>
+  <data name="Tooltip_Import" xml:space="preserve">
+    <value>프로젝트 또는 이미지 가져오기</value>
+  </data>
+  <data name="Tooltip_New" xml:space="preserve">
+    <value>새 프로젝트 만들기</value>
+  </data>
+  <data name="Tooltip_Note" xml:space="preserve">
+    <value>텍스트 메모 추가</value>
+  </data>
+  <data name="Tooltip_Paste" xml:space="preserve">
+    <value>클립보드에서 붙여넣기</value>
+  </data>
+  <data name="Tooltip_Screenshot" xml:space="preserve">
+    <value>스크린샷 캡처</value>
+  </data>
+  <data name="Tooltip_Select" xml:space="preserve">
+    <value>주석 선택 및 편집</value>
+  </data>
+  <data name="Update_NewVersionAvailable" xml:space="preserve">
+    <value>새 버전 {0}을(를) 사용할 수 있습니다.</value>
+  </data>
+  <data name="Window_Title" xml:space="preserve">
+    <value>스크린샷 주석기 - 이미지 편집기</value>
+  </data>
+  <data name="Winget_Description" xml:space="preserve">
+    <value>Windows 및 Linux용 스크린샷 주석 소프트웨어.
+
+기능:
+- **화살표** - 사용자 지정 가능한 화살표로 특정 영역에 주의를 끌기
+- **말풍선** - 편집 가능한 텍스트가 있는 말풍선 주석 추가
+- **노트** - 추가 정보를 위한 텍스트 상자 생성
+- **테두리 선택** - 테두리가 있는 사각형으로 영역 강조
+- **흐림** - 흐림 효과로 민감한 정보 가리기
+- **선택 도구** - 이미지의 일부를 선택하여 복사(Ctrl+C) 또는 삭제(Delete 키)
+- **수직 및 수평 슬라이스 잘라내기** - 이미지의 수직 또는 수평 영역 잘라내기
+- **형광펜** - 관심 영역 강조 표시
+- **프로젝트 관리** - 자동 프로젝트 저장 및 미리보기 썸네일
+- **크로스 플랫폼** - Windows와 Linux 모두에서 작동</value>
+  </data>
+  <data name="Winget_ShortDescription" xml:space="preserve">
+    <value>Windows 및 Linux용 스크린샷 주석 소프트웨어.</value>
   </data>
 </root>

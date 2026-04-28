@@ -58,291 +58,282 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-
   <!-- Nigerian Pidgin -->
-
-  <data name="Window_Title" xml:space="preserve">
-    <value>Screenshot Annotator - Image Editor</value>
+  <data name="_Technical_WingetLocale" xml:space="preserve">
+    <value>pcm-NG</value>
   </data>
-
-  <data name="Header_ScreenshotAnnotator" xml:space="preserve">
-    <value>[ Screenshot Annotator - V{0} ]</value>
-  </data>
-
-  <data name="Copyright_Text" xml:space="preserve">
-    <value>Annotator {0} : Copyright (c) 2025-{1} Siarhei Kuchuk</value>
-  </data>
-
-  <data name="Menu_File" xml:space="preserve">
-    <value>[ File ]</value>
-  </data>
-
-  <data name="Menu_New" xml:space="preserve">
-    <value>New...</value>
-  </data>
-
-  <data name="Menu_Import" xml:space="preserve">
-    <value>Import...</value>
-  </data>
-
-  <data name="Menu_Export" xml:space="preserve">
-    <value>Export...</value>
-  </data>
-
-  <data name="Menu_OpenProjectsFolder" xml:space="preserve">
-    <value>Open Projects _Folder</value>
-  </data>
-
-  <data name="Menu_OpenLogsFolder" xml:space="preserve">
-    <value>Open _Logs Folder</value>
-  </data>
-
-  <data name="Menu_WebSite" xml:space="preserve">
-    <value>Web-Site</value>
-  </data>
-
-  <data name="Menu_License" xml:space="preserve">
-    <value>License</value>
-  </data>
-  <data name="Menu_Options" xml:space="preserve">
-    <value>Options</value>
-  </data>
-
-  <data name="Menu_EnablePrintScreenHotkey" xml:space="preserve">
-    <value>Make Print Screen hotkey dey work</value>
-  </data>
-
-  <data name="Tool_New" xml:space="preserve">
-    <value>New</value>
-  </data>
-
-  <data name="Tool_Import" xml:space="preserve">
-    <value>Import</value>
-  </data>
-
-  <data name="Tool_Export" xml:space="preserve">
-    <value>Export</value>
-  </data>
-
-  <data name="Tool_Screenshot" xml:space="preserve">
-    <value>Screenshot</value>
-  </data>
-
-  <data name="Tool_Copy" xml:space="preserve">
-    <value>Copy</value>
-  </data>
-
-  <data name="Tool_Paste" xml:space="preserve">
-    <value>Paste</value>
-  </data>
-
-  <data name="Tool_Select" xml:space="preserve">
-    <value>Select</value>
-  </data>
-
-  <data name="Tool_Arrow" xml:space="preserve">
-    <value>Arrow</value>
-  </data>
-
-  <data name="Tool_Callout" xml:space="preserve">
-    <value>Callout</value>
-  </data>
-
-  <data name="Tool_Note" xml:space="preserve">
-    <value>Note</value>
-  </data>
-
-  <data name="Tool_Border" xml:space="preserve">
-    <value>Border</value>
-  </data>
-
-  <data name="Tool_Highlight" xml:space="preserve">
-    <value>Highlight</value>
-  </data>
-
-  <data name="Tool_Blur" xml:space="preserve">
-    <value>Blur</value>
-  </data>
-
-  <data name="Tool_CutVertical" xml:space="preserve">
-    <value>Cut |</value>
-  </data>
-
-  <data name="Tool_CutHorizontal" xml:space="preserve">
-    <value>Cut -</value>
-  </data>
-
-  <data name="Tooltip_New" xml:space="preserve">
-    <value>Create new project</value>
-  </data>
-
-  <data name="Tooltip_Import" xml:space="preserve">
-    <value>Import project or image</value>
-  </data>
-
-  <data name="Tooltip_Export" xml:space="preserve">
-    <value>Export image or project</value>
-  </data>
-
-  <data name="Tooltip_Screenshot" xml:space="preserve">
-    <value>Take screenshot</value>
-  </data>
-
-  <data name="Tooltip_Copy" xml:space="preserve">
-    <value>Copy to clipboard</value>
-  </data>
-
-  <data name="Tooltip_Paste" xml:space="preserve">
-    <value>Paste from clipboard</value>
-  </data>
-
-  <data name="Tooltip_Select" xml:space="preserve">
-    <value>Select and edit annotations</value>
-  </data>
-
-  <data name="Tooltip_Arrow" xml:space="preserve">
-    <value>Draw arrow</value>
-  </data>
-
-  <data name="Tooltip_Callout" xml:space="preserve">
-    <value>Add callout</value>
-  </data>
-
-  <data name="Tooltip_Note" xml:space="preserve">
-    <value>Add text note</value>
-  </data>
-
-  <data name="Tooltip_Border" xml:space="preserve">
-    <value>Draw border/rectangle</value>
-  </data>
-
-  <data name="Tooltip_Highlight" xml:space="preserve">
-    <value>Highlight area</value>
-  </data>
-
-  <data name="Tooltip_Blur" xml:space="preserve">
-    <value>Blur area</value>
-  </data>
-
-  <data name="Tooltip_CutVertical" xml:space="preserve">
-    <value>Cut image vertically</value>
-  </data>
-
-  <data name="Tooltip_CutHorizontal" xml:space="preserve">
-    <value>Cut image horizontally</value>
-  </data>
-
-  <data name="Tooltip_CollapseExpandPanel" xml:space="preserve">
-    <value>Collapse/Expand Projects Panel</value>
-  </data>
-
-  <data name="Panel_Projects" xml:space="preserve">
-    <value>Projects</value>
-  </data>
-
-  <data name="Panel_Properties" xml:space="preserve">
-    <value>Properties</value>
-  </data>
-
-  <data name="Props_Font" xml:space="preserve">
-    <value>Font</value>
-  </data>
-
-  <data name="Props_Size" xml:space="preserve">
-    <value>Size</value>
-  </data>
-
-  <data name="Props_Bold" xml:space="preserve">
-    <value>Bold</value>
-  </data>
-
-  <data name="Props_Italic" xml:space="preserve">
-    <value>Italic</value>
-  </data>
-
-  <data name="Props_Color" xml:space="preserve">
-    <value>Color</value>
-  </data>
-
-  <data name="Dialog_Export_Title" xml:space="preserve">
-    <value>Export</value>
-  </data>
-
-  <data name="Dialog_Import_Title" xml:space="preserve">
-    <value>Import Project or Image</value>
-  </data>
-
-  <data name="FileType_PNG" xml:space="preserve">
-    <value>PNG Image</value>
-  </data>
-
-  <data name="FileType_JPEG" xml:space="preserve">
-    <value>JPEG Image</value>
-  </data>
-
-  <data name="FileType_WebP" xml:space="preserve">
-    <value>WebP Image</value>
-  </data>
-
-  <data name="FileType_AllSupported" xml:space="preserve">
-    <value>All supported files</value>
-  </data>
-
-  <data name="FileType_Images" xml:space="preserve">
-    <value>Image Files</value>
-  </data>
-
-  <data name="FileType_AllFiles" xml:space="preserve">
-    <value>All Files</value>
-  </data>
-
-  <data name="FileType_AnnotatorProject" xml:space="preserve">
-    <value>Annotator Project</value>
-  </data>
-
-  <data name="Screenshot_Instructions" xml:space="preserve">
-    <value>Click and drag to select area, or adjust corner points. Use magnifier for precision. Press OK when ready.</value>
-  </data>
-
-  <data name="Button_OK" xml:space="preserve">
-    <value>OK</value>
-  </data>
-
-  <data name="Button_Cancel" xml:space="preserve">
-    <value>Cancel</value>
-  </data>
-
   <data name="Button_Accept" xml:space="preserve">
     <value>✓ Accept</value>
   </data>
-
+  <data name="Button_Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
   <data name="Button_CancelX" xml:space="preserve">
     <value>✕ Cancel</value>
   </data>
-
-  <data name="Update_NewVersionAvailable" xml:space="preserve">
-    <value>New {0} version dey available.</value>
-  </data>
-
   <data name="Button_Download" xml:space="preserve">
     <value>Download</value>
   </data>
-
-  <data name="ContextMenu_Open" xml:space="preserve">
-    <value>Open</value>
+  <data name="Button_OK" xml:space="preserve">
+    <value>OK</value>
   </data>
-
   <data name="ContextMenu_Delete" xml:space="preserve">
     <value>Delete</value>
   </data>
-
+  <data name="ContextMenu_Open" xml:space="preserve">
+    <value>Open</value>
+  </data>
+  <data name="Copyright_Text" xml:space="preserve">
+    <value>Annotator {0} : Copyright (c) 2025-{1} Siarhei Kuchuk</value>
+  </data>
+  <data name="Dialog_Export_Title" xml:space="preserve">
+    <value>Export</value>
+  </data>
+  <data name="Dialog_Import_Title" xml:space="preserve">
+    <value>Import Project or Image</value>
+  </data>
+  <data name="FileType_AllFiles" xml:space="preserve">
+    <value>All Files</value>
+  </data>
+  <data name="FileType_AllSupported" xml:space="preserve">
+    <value>All supported files</value>
+  </data>
+  <data name="FileType_AnnotatorProject" xml:space="preserve">
+    <value>Annotator Project</value>
+  </data>
+  <data name="FileType_Images" xml:space="preserve">
+    <value>Image Files</value>
+  </data>
+  <data name="FileType_JPEG" xml:space="preserve">
+    <value>JPEG Image</value>
+  </data>
+  <data name="FileType_PNG" xml:space="preserve">
+    <value>PNG Image</value>
+  </data>
+  <data name="FileType_WebP" xml:space="preserve">
+    <value>WebP Image</value>
+  </data>
+  <data name="Header_ScreenshotAnnotator" xml:space="preserve">
+    <value>[ Screenshot Annotator - V{0} ]</value>
+  </data>
   <data name="ImproveIt_Message" xml:space="preserve">
     <value>Something we no expect happen.
 
 Abeg contact the developers with the informate wey dey your desktop for
-&quot;{0}&quot;
+"{0}"
 
 The application go close now.</value>
   </data>
+  <data name="Installer_AdminRequired" xml:space="preserve">
+    <value>You need administrator power to install for all users.
+Abeg run di installer as administrator or use /CURRENTUSER.</value>
+  </data>
+  <data name="Installer_AdminRequiredDetailed" xml:space="preserve">
+    <value>You need administrator power to install for all users.
 
+Abeg do one of dese:
+- Choose 'Install for only di current user', or
+- Run dis installer as administrator</value>
+  </data>
+  <data name="Installer_AllUsersDescription" xml:space="preserve">
+    <value>Di application go dey available for all users wey dey dis computer.</value>
+  </data>
+  <data name="Installer_AllUsersOption" xml:space="preserve">
+    <value>Install for &amp;all users (e need administrator power)</value>
+  </data>
+  <data name="Installer_ArchRequired" xml:space="preserve">
+    <value>Dis installer need x64 or arm64 version of Windows.</value>
+  </data>
+  <data name="Installer_CurrentUserDescription" xml:space="preserve">
+    <value>We recommend dis one. Di application go only dey available for your user account.</value>
+  </data>
+  <data name="Installer_CurrentUserOption" xml:space="preserve">
+    <value>Install for &amp;current user only</value>
+  </data>
+  <data name="Installer_InstallingFor" xml:space="preserve">
+    <value>Dey install for:</value>
+  </data>
+  <data name="Installer_InstallModeDescription" xml:space="preserve">
+    <value>Abeg choose whether you wan install Screenshot Annotator for only yourself or for all users wey dey dis computer.</value>
+  </data>
+  <data name="Installer_InstallModeSubtitle" xml:space="preserve">
+    <value>Choose who fit use dis application</value>
+  </data>
+  <data name="Installer_InstallModeTitle" xml:space="preserve">
+    <value>Choose Installation Type</value>
+  </data>
+  <data name="Installer_LaunchApp" xml:space="preserve">
+    <value>Open App</value>
+  </data>
+  <data name="Menu_EnablePrintScreenHotkey" xml:space="preserve">
+    <value>Make Print Screen hotkey dey work</value>
+  </data>
+  <data name="Menu_Export" xml:space="preserve">
+    <value>Export...</value>
+  </data>
+  <data name="Menu_File" xml:space="preserve">
+    <value>[ File ]</value>
+  </data>
+  <data name="Menu_Import" xml:space="preserve">
+    <value>Import...</value>
+  </data>
+  <data name="Menu_License" xml:space="preserve">
+    <value>License</value>
+  </data>
+  <data name="Menu_New" xml:space="preserve">
+    <value>New...</value>
+  </data>
+  <data name="Menu_OpenLogsFolder" xml:space="preserve">
+    <value>Open _Logs Folder</value>
+  </data>
+  <data name="Menu_OpenProjectsFolder" xml:space="preserve">
+    <value>Open Projects _Folder</value>
+  </data>
+  <data name="Menu_Options" xml:space="preserve">
+    <value>Options</value>
+  </data>
+  <data name="Menu_WebSite" xml:space="preserve">
+    <value>Web-Site</value>
+  </data>
+  <data name="Panel_Projects" xml:space="preserve">
+    <value>Projects</value>
+  </data>
+  <data name="Panel_Properties" xml:space="preserve">
+    <value>Properties</value>
+  </data>
+  <data name="Props_Bold" xml:space="preserve">
+    <value>Bold</value>
+  </data>
+  <data name="Props_Color" xml:space="preserve">
+    <value>Color</value>
+  </data>
+  <data name="Props_Font" xml:space="preserve">
+    <value>Font</value>
+  </data>
+  <data name="Props_Italic" xml:space="preserve">
+    <value>Italic</value>
+  </data>
+  <data name="Props_Size" xml:space="preserve">
+    <value>Size</value>
+  </data>
+  <data name="Screenshot_Instructions" xml:space="preserve">
+    <value>Click and drag to select area, or adjust corner points. Use magnifier for precision. Press OK when ready.</value>
+  </data>
+  <data name="Tool_Arrow" xml:space="preserve">
+    <value>Arrow</value>
+  </data>
+  <data name="Tool_Blur" xml:space="preserve">
+    <value>Blur</value>
+  </data>
+  <data name="Tool_Border" xml:space="preserve">
+    <value>Border</value>
+  </data>
+  <data name="Tool_Callout" xml:space="preserve">
+    <value>Callout</value>
+  </data>
+  <data name="Tool_Copy" xml:space="preserve">
+    <value>Copy</value>
+  </data>
+  <data name="Tool_CutHorizontal" xml:space="preserve">
+    <value>Cut -</value>
+  </data>
+  <data name="Tool_CutVertical" xml:space="preserve">
+    <value>Cut |</value>
+  </data>
+  <data name="Tool_Export" xml:space="preserve">
+    <value>Export</value>
+  </data>
+  <data name="Tool_Highlight" xml:space="preserve">
+    <value>Highlight</value>
+  </data>
+  <data name="Tool_Import" xml:space="preserve">
+    <value>Import</value>
+  </data>
+  <data name="Tool_New" xml:space="preserve">
+    <value>New</value>
+  </data>
+  <data name="Tool_Note" xml:space="preserve">
+    <value>Note</value>
+  </data>
+  <data name="Tool_Paste" xml:space="preserve">
+    <value>Paste</value>
+  </data>
+  <data name="Tool_Screenshot" xml:space="preserve">
+    <value>Screenshot</value>
+  </data>
+  <data name="Tool_Select" xml:space="preserve">
+    <value>Select</value>
+  </data>
+  <data name="Tooltip_Arrow" xml:space="preserve">
+    <value>Draw arrow</value>
+  </data>
+  <data name="Tooltip_Blur" xml:space="preserve">
+    <value>Blur area</value>
+  </data>
+  <data name="Tooltip_Border" xml:space="preserve">
+    <value>Draw border/rectangle</value>
+  </data>
+  <data name="Tooltip_Callout" xml:space="preserve">
+    <value>Add callout</value>
+  </data>
+  <data name="Tooltip_CollapseExpandPanel" xml:space="preserve">
+    <value>Collapse/Expand Projects Panel</value>
+  </data>
+  <data name="Tooltip_Copy" xml:space="preserve">
+    <value>Copy to clipboard</value>
+  </data>
+  <data name="Tooltip_CutHorizontal" xml:space="preserve">
+    <value>Cut image horizontally</value>
+  </data>
+  <data name="Tooltip_CutVertical" xml:space="preserve">
+    <value>Cut image vertically</value>
+  </data>
+  <data name="Tooltip_Export" xml:space="preserve">
+    <value>Export image or project</value>
+  </data>
+  <data name="Tooltip_Highlight" xml:space="preserve">
+    <value>Highlight area</value>
+  </data>
+  <data name="Tooltip_Import" xml:space="preserve">
+    <value>Import project or image</value>
+  </data>
+  <data name="Tooltip_New" xml:space="preserve">
+    <value>Create new project</value>
+  </data>
+  <data name="Tooltip_Note" xml:space="preserve">
+    <value>Add text note</value>
+  </data>
+  <data name="Tooltip_Paste" xml:space="preserve">
+    <value>Paste from clipboard</value>
+  </data>
+  <data name="Tooltip_Screenshot" xml:space="preserve">
+    <value>Take screenshot</value>
+  </data>
+  <data name="Tooltip_Select" xml:space="preserve">
+    <value>Select and edit annotations</value>
+  </data>
+  <data name="Update_NewVersionAvailable" xml:space="preserve">
+    <value>New {0} version dey available.</value>
+  </data>
+  <data name="Window_Title" xml:space="preserve">
+    <value>Screenshot Annotator - Image Editor</value>
+  </data>
+  <data name="Winget_Description" xml:space="preserve">
+    <value>Software to annotate screenshot for Windows and Linux.
+
+Features:
+- **Arrows** - Draw attention to specific areas with customizable arrows
+- **Callouts** - Add speech bubble annotations with editable text
+- **Notes** - Create text boxes for extra information
+- **Border selection** - Highlight areas with bordered rectangles
+- **Blur** - Hide sensitive information with blur
+- **Selection tool** - Select parts of image to copy (Ctrl+C) or delete (Delete key)
+- **Cut vertical and horizontal slices** - Cut vertical or horizontal areas of image
+- **Highlighter** - Highlight areas of interest
+- **Project management** - Automatic project saving and preview thumbnails
+- **Cross-platform** - E dey work for Windows and Linux</value>
+  </data>
+  <data name="Winget_ShortDescription" xml:space="preserve">
+    <value>Software to annotate screenshot for Windows and Linux.</value>
+  </data>
 </root>

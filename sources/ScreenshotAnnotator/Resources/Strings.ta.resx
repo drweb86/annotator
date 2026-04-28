@@ -58,291 +58,282 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-
   <!-- Tamil -->
-
-  <data name="Window_Title" xml:space="preserve">
-    <value>திரைக்காட்சி குறிப்பிடுநர் - பட திருத்தி</value>
+  <data name="_Technical_WingetLocale" xml:space="preserve">
+    <value>ta-IN</value>
   </data>
-
-  <data name="Header_ScreenshotAnnotator" xml:space="preserve">
-    <value>[ திரைக்காட்சி குறிப்பிடுநர் - V{0} ]</value>
-  </data>
-
-  <data name="Copyright_Text" xml:space="preserve">
-    <value>Annotator {0} : பதிப்புரிமை (c) 2025-{1} Siarhei Kuchuk</value>
-  </data>
-
-  <data name="Menu_File" xml:space="preserve">
-    <value>[ கோப்பு ]</value>
-  </data>
-
-  <data name="Menu_New" xml:space="preserve">
-    <value>புதியது...</value>
-  </data>
-
-  <data name="Menu_Import" xml:space="preserve">
-    <value>இறக்குமதி...</value>
-  </data>
-
-  <data name="Menu_Export" xml:space="preserve">
-    <value>ஏற்றுமதி...</value>
-  </data>
-
-  <data name="Menu_OpenProjectsFolder" xml:space="preserve">
-    <value>திட்டக் கோப்புறையைத் திற</value>
-  </data>
-
-  <data name="Menu_OpenLogsFolder" xml:space="preserve">
-    <value>பதிவுக் கோப்புறையைத் திற</value>
-  </data>
-
-  <data name="Menu_WebSite" xml:space="preserve">
-    <value>வலைத்தளம்</value>
-  </data>
-
-  <data name="Menu_License" xml:space="preserve">
-    <value>உரிமம்</value>
-  </data>
-  <data name="Menu_Options" xml:space="preserve">
-    <value>விருப்பங்கள்</value>
-  </data>
-
-  <data name="Menu_EnablePrintScreenHotkey" xml:space="preserve">
-    <value>Print Screen ஹாட்கீயை இயக்கு</value>
-  </data>
-
-  <data name="Tool_New" xml:space="preserve">
-    <value>புதியது</value>
-  </data>
-
-  <data name="Tool_Import" xml:space="preserve">
-    <value>இறக்குமதி</value>
-  </data>
-
-  <data name="Tool_Export" xml:space="preserve">
-    <value>ஏற்றுமதி</value>
-  </data>
-
-  <data name="Tool_Screenshot" xml:space="preserve">
-    <value>திரைக்காட்சி</value>
-  </data>
-
-  <data name="Tool_Copy" xml:space="preserve">
-    <value>நகலெடு</value>
-  </data>
-
-  <data name="Tool_Paste" xml:space="preserve">
-    <value>ஒட்டு</value>
-  </data>
-
-  <data name="Tool_Select" xml:space="preserve">
-    <value>தேர்ந்தெடு</value>
-  </data>
-
-  <data name="Tool_Arrow" xml:space="preserve">
-    <value>அம்பு</value>
-  </data>
-
-  <data name="Tool_Callout" xml:space="preserve">
-    <value>குறிப்பு</value>
-  </data>
-
-  <data name="Tool_Note" xml:space="preserve">
-    <value>குறிப்புரை</value>
-  </data>
-
-  <data name="Tool_Border" xml:space="preserve">
-    <value>விளிம்பு</value>
-  </data>
-
-  <data name="Tool_Highlight" xml:space="preserve">
-    <value>ஒளிர்வு</value>
-  </data>
-
-  <data name="Tool_Blur" xml:space="preserve">
-    <value>மங்கல்</value>
-  </data>
-
-  <data name="Tool_CutVertical" xml:space="preserve">
-    <value>வெட்டு |</value>
-  </data>
-
-  <data name="Tool_CutHorizontal" xml:space="preserve">
-    <value>வெட்டு -</value>
-  </data>
-
-  <data name="Tooltip_New" xml:space="preserve">
-    <value>புதிய திட்டத்தை உருவாக்கு</value>
-  </data>
-
-  <data name="Tooltip_Import" xml:space="preserve">
-    <value>திட்டம் அல்லது படத்தை இறக்குமதி செய்</value>
-  </data>
-
-  <data name="Tooltip_Export" xml:space="preserve">
-    <value>படம் அல்லது திட்டத்தை ஏற்றுமதி செய்</value>
-  </data>
-
-  <data name="Tooltip_Screenshot" xml:space="preserve">
-    <value>திரைக்காட்சி எடு</value>
-  </data>
-
-  <data name="Tooltip_Copy" xml:space="preserve">
-    <value>இடைநிலைப் பலகைக்கு நகலெடு</value>
-  </data>
-
-  <data name="Tooltip_Paste" xml:space="preserve">
-    <value>இடைநிலைப் பலகையிலிருந்து ஒட்டு</value>
-  </data>
-
-  <data name="Tooltip_Select" xml:space="preserve">
-    <value>குறிப்பீடுகளைத் தேர்ந்தெடுத்துத் திருத்து</value>
-  </data>
-
-  <data name="Tooltip_Arrow" xml:space="preserve">
-    <value>அம்பு வரை</value>
-  </data>
-
-  <data name="Tooltip_Callout" xml:space="preserve">
-    <value>குறிப்பைச் சேர்</value>
-  </data>
-
-  <data name="Tooltip_Note" xml:space="preserve">
-    <value>உரைக் குறிப்பைச் சேர்</value>
-  </data>
-
-  <data name="Tooltip_Border" xml:space="preserve">
-    <value>விளிம்பு/செவ்வகம் வரை</value>
-  </data>
-
-  <data name="Tooltip_Highlight" xml:space="preserve">
-    <value>பகுதியை ஒளிர்வூட்டு</value>
-  </data>
-
-  <data name="Tooltip_Blur" xml:space="preserve">
-    <value>பகுதியை மங்கலாக்கு</value>
-  </data>
-
-  <data name="Tooltip_CutVertical" xml:space="preserve">
-    <value>படத்தை செங்குத்தாக வெட்டு</value>
-  </data>
-
-  <data name="Tooltip_CutHorizontal" xml:space="preserve">
-    <value>படத்தை கிடைமட்டமாக வெட்டு</value>
-  </data>
-
-  <data name="Tooltip_CollapseExpandPanel" xml:space="preserve">
-    <value>திட்டப் பலகை சுருக்கு/விரி</value>
-  </data>
-
-  <data name="Panel_Projects" xml:space="preserve">
-    <value>திட்டங்கள்</value>
-  </data>
-
-  <data name="Panel_Properties" xml:space="preserve">
-    <value>பண்புகள்</value>
-  </data>
-
-  <data name="Props_Font" xml:space="preserve">
-    <value>எழுத்துரு</value>
-  </data>
-
-  <data name="Props_Size" xml:space="preserve">
-    <value>அளவு</value>
-  </data>
-
-  <data name="Props_Bold" xml:space="preserve">
-    <value>தடித்த</value>
-  </data>
-
-  <data name="Props_Italic" xml:space="preserve">
-    <value>சாய்வு</value>
-  </data>
-
-  <data name="Props_Color" xml:space="preserve">
-    <value>நிறம்</value>
-  </data>
-
-  <data name="Dialog_Export_Title" xml:space="preserve">
-    <value>ஏற்றுமதி</value>
-  </data>
-
-  <data name="Dialog_Import_Title" xml:space="preserve">
-    <value>திட்டம் அல்லது படத்தை இறக்குமதி செய்</value>
-  </data>
-
-  <data name="FileType_PNG" xml:space="preserve">
-    <value>PNG படம்</value>
-  </data>
-
-  <data name="FileType_JPEG" xml:space="preserve">
-    <value>JPEG படம்</value>
-  </data>
-
-  <data name="FileType_WebP" xml:space="preserve">
-    <value>WebP படம்</value>
-  </data>
-
-  <data name="FileType_AllSupported" xml:space="preserve">
-    <value>அனைத்து ஆதரவு கோப்புகள்</value>
-  </data>
-
-  <data name="FileType_Images" xml:space="preserve">
-    <value>படக் கோப்புகள்</value>
-  </data>
-
-  <data name="FileType_AllFiles" xml:space="preserve">
-    <value>அனைத்துக் கோப்புகள்</value>
-  </data>
-
-  <data name="FileType_AnnotatorProject" xml:space="preserve">
-    <value>Annotator திட்டம்</value>
-  </data>
-
-  <data name="Screenshot_Instructions" xml:space="preserve">
-    <value>பகுதியைத் தேர்ந்தெடுக்க கிளிக் செய்து இழுக்கவும், அல்லது மூலைப் புள்ளிகளைச் சரிசெய்யவும். துல்லியத்திற்கு பூதக்கண்ணாடியைப் பயன்படுத்தவும். தயாரானதும் சரி என்பதை அழுத்தவும்.</value>
-  </data>
-
-  <data name="Button_OK" xml:space="preserve">
-    <value>சரி</value>
-  </data>
-
-  <data name="Button_Cancel" xml:space="preserve">
-    <value>ரத்துசெய்</value>
-  </data>
-
   <data name="Button_Accept" xml:space="preserve">
     <value>✓ ஏற்க</value>
   </data>
-
+  <data name="Button_Cancel" xml:space="preserve">
+    <value>ரத்துசெய்</value>
+  </data>
   <data name="Button_CancelX" xml:space="preserve">
     <value>✕ ரத்துசெய்</value>
   </data>
-
-  <data name="Update_NewVersionAvailable" xml:space="preserve">
-    <value>புதிய பதிப்பு {0} கிடைக்கிறது.</value>
-  </data>
-
   <data name="Button_Download" xml:space="preserve">
     <value>பதிவிறக்கு</value>
   </data>
-
-  <data name="ContextMenu_Open" xml:space="preserve">
-    <value>திற</value>
+  <data name="Button_OK" xml:space="preserve">
+    <value>சரி</value>
   </data>
-
   <data name="ContextMenu_Delete" xml:space="preserve">
     <value>நீக்கு</value>
   </data>
-
+  <data name="ContextMenu_Open" xml:space="preserve">
+    <value>திற</value>
+  </data>
+  <data name="Copyright_Text" xml:space="preserve">
+    <value>Annotator {0} : பதிப்புரிமை (c) 2025-{1} Siarhei Kuchuk</value>
+  </data>
+  <data name="Dialog_Export_Title" xml:space="preserve">
+    <value>ஏற்றுமதி</value>
+  </data>
+  <data name="Dialog_Import_Title" xml:space="preserve">
+    <value>திட்டம் அல்லது படத்தை இறக்குமதி செய்</value>
+  </data>
+  <data name="FileType_AllFiles" xml:space="preserve">
+    <value>அனைத்துக் கோப்புகள்</value>
+  </data>
+  <data name="FileType_AllSupported" xml:space="preserve">
+    <value>அனைத்து ஆதரவு கோப்புகள்</value>
+  </data>
+  <data name="FileType_AnnotatorProject" xml:space="preserve">
+    <value>Annotator திட்டம்</value>
+  </data>
+  <data name="FileType_Images" xml:space="preserve">
+    <value>படக் கோப்புகள்</value>
+  </data>
+  <data name="FileType_JPEG" xml:space="preserve">
+    <value>JPEG படம்</value>
+  </data>
+  <data name="FileType_PNG" xml:space="preserve">
+    <value>PNG படம்</value>
+  </data>
+  <data name="FileType_WebP" xml:space="preserve">
+    <value>WebP படம்</value>
+  </data>
+  <data name="Header_ScreenshotAnnotator" xml:space="preserve">
+    <value>[ திரைக்காட்சி குறிப்பிடுநர் - V{0} ]</value>
+  </data>
   <data name="ImproveIt_Message" xml:space="preserve">
     <value>எதிர்பாராத பிழை ஏற்பட்டது.
 
 டெஸ்க்டாப்பில் சேமிக்கப்பட்ட தகவலுடன் உருவாக்குநர்களைத் தொடர்பு கொள்ளவும்
-&quot;{0}&quot;
+"{0}"
 
 பயன்பாடு இப்போது மூடப்படும்.</value>
   </data>
+  <data name="Installer_AdminRequired" xml:space="preserve">
+    <value>அனைத்து பயனர்களுக்கும் நிறுவ நிர்வாகி அதிகாரங்கள் தேவை.
+தயவுசெய்து நிறுவியை நிர்வாகியாக இயக்கவும் அல்லது /CURRENTUSER பயன்படுத்தவும்.</value>
+  </data>
+  <data name="Installer_AdminRequiredDetailed" xml:space="preserve">
+    <value>அனைத்து பயனர்களுக்கும் நிறுவ நிர்வாகி அதிகாரங்கள் தேவை.
 
+தயவுசெய்து:
+- 'தற்போதைய பயனருக்கு மட்டும் நிறுவு' என்பதைத் தேர்ந்தெடுக்கவும், அல்லது
+- இந்த நிறுவியை நிர்வாகியாக இயக்கவும்</value>
+  </data>
+  <data name="Installer_AllUsersDescription" xml:space="preserve">
+    <value>இந்த கணினியில் உள்ள அனைத்து பயனர்களுக்கும் பயன்பாடு கிடைக்கும்.</value>
+  </data>
+  <data name="Installer_AllUsersOption" xml:space="preserve">
+    <value>&amp;அனைத்து பயனர்களுக்கும் நிறுவு (நிர்வாகி அதிகாரங்கள் தேவை)</value>
+  </data>
+  <data name="Installer_ArchRequired" xml:space="preserve">
+    <value>இந்த நிறுவிக்கு Windows இன் x64 அல்லது arm64 பதிப்பு தேவை.</value>
+  </data>
+  <data name="Installer_CurrentUserDescription" xml:space="preserve">
+    <value>பரிந்துரைக்கப்படுகிறது. பயன்பாடு உங்கள் பயனர் கணக்கிற்கு மட்டும் கிடைக்கும்.</value>
+  </data>
+  <data name="Installer_CurrentUserOption" xml:space="preserve">
+    <value>&amp;தற்போதைய பயனருக்கு மட்டும் நிறுவு</value>
+  </data>
+  <data name="Installer_InstallingFor" xml:space="preserve">
+    <value>நிறுவுவது:</value>
+  </data>
+  <data name="Installer_InstallModeDescription" xml:space="preserve">
+    <value>Screenshot Annotator ஐ உங்களுக்கு மட்டும் நிறுவ வேண்டுமா அல்லது இந்த கணினியின் அனைத்து பயனர்களுக்கும் நிறுவ வேண்டுமா என்பதைத் தேர்ந்தெடுக்கவும்.</value>
+  </data>
+  <data name="Installer_InstallModeSubtitle" xml:space="preserve">
+    <value>இந்த பயன்பாட்டை யார் பயன்படுத்தலாம் என்பதைத் தேர்ந்தெடுக்கவும்</value>
+  </data>
+  <data name="Installer_InstallModeTitle" xml:space="preserve">
+    <value>நிறுவல் வகையைத் தேர்ந்தெடுக்கவும்</value>
+  </data>
+  <data name="Installer_LaunchApp" xml:space="preserve">
+    <value>பயன்பாட்டைத் தொடங்கு</value>
+  </data>
+  <data name="Menu_EnablePrintScreenHotkey" xml:space="preserve">
+    <value>Print Screen ஹாட்கீயை இயக்கு</value>
+  </data>
+  <data name="Menu_Export" xml:space="preserve">
+    <value>ஏற்றுமதி...</value>
+  </data>
+  <data name="Menu_File" xml:space="preserve">
+    <value>[ கோப்பு ]</value>
+  </data>
+  <data name="Menu_Import" xml:space="preserve">
+    <value>இறக்குமதி...</value>
+  </data>
+  <data name="Menu_License" xml:space="preserve">
+    <value>உரிமம்</value>
+  </data>
+  <data name="Menu_New" xml:space="preserve">
+    <value>புதியது...</value>
+  </data>
+  <data name="Menu_OpenLogsFolder" xml:space="preserve">
+    <value>பதிவுக் கோப்புறையைத் திற</value>
+  </data>
+  <data name="Menu_OpenProjectsFolder" xml:space="preserve">
+    <value>திட்டக் கோப்புறையைத் திற</value>
+  </data>
+  <data name="Menu_Options" xml:space="preserve">
+    <value>விருப்பங்கள்</value>
+  </data>
+  <data name="Menu_WebSite" xml:space="preserve">
+    <value>வலைத்தளம்</value>
+  </data>
+  <data name="Panel_Projects" xml:space="preserve">
+    <value>திட்டங்கள்</value>
+  </data>
+  <data name="Panel_Properties" xml:space="preserve">
+    <value>பண்புகள்</value>
+  </data>
+  <data name="Props_Bold" xml:space="preserve">
+    <value>தடித்த</value>
+  </data>
+  <data name="Props_Color" xml:space="preserve">
+    <value>நிறம்</value>
+  </data>
+  <data name="Props_Font" xml:space="preserve">
+    <value>எழுத்துரு</value>
+  </data>
+  <data name="Props_Italic" xml:space="preserve">
+    <value>சாய்வு</value>
+  </data>
+  <data name="Props_Size" xml:space="preserve">
+    <value>அளவு</value>
+  </data>
+  <data name="Screenshot_Instructions" xml:space="preserve">
+    <value>பகுதியைத் தேர்ந்தெடுக்க கிளிக் செய்து இழுக்கவும், அல்லது மூலைப் புள்ளிகளைச் சரிசெய்யவும். துல்லியத்திற்கு பூதக்கண்ணாடியைப் பயன்படுத்தவும். தயாரானதும் சரி என்பதை அழுத்தவும்.</value>
+  </data>
+  <data name="Tool_Arrow" xml:space="preserve">
+    <value>அம்பு</value>
+  </data>
+  <data name="Tool_Blur" xml:space="preserve">
+    <value>மங்கல்</value>
+  </data>
+  <data name="Tool_Border" xml:space="preserve">
+    <value>விளிம்பு</value>
+  </data>
+  <data name="Tool_Callout" xml:space="preserve">
+    <value>குறிப்பு</value>
+  </data>
+  <data name="Tool_Copy" xml:space="preserve">
+    <value>நகலெடு</value>
+  </data>
+  <data name="Tool_CutHorizontal" xml:space="preserve">
+    <value>வெட்டு -</value>
+  </data>
+  <data name="Tool_CutVertical" xml:space="preserve">
+    <value>வெட்டு |</value>
+  </data>
+  <data name="Tool_Export" xml:space="preserve">
+    <value>ஏற்றுமதி</value>
+  </data>
+  <data name="Tool_Highlight" xml:space="preserve">
+    <value>ஒளிர்வு</value>
+  </data>
+  <data name="Tool_Import" xml:space="preserve">
+    <value>இறக்குமதி</value>
+  </data>
+  <data name="Tool_New" xml:space="preserve">
+    <value>புதியது</value>
+  </data>
+  <data name="Tool_Note" xml:space="preserve">
+    <value>குறிப்புரை</value>
+  </data>
+  <data name="Tool_Paste" xml:space="preserve">
+    <value>ஒட்டு</value>
+  </data>
+  <data name="Tool_Screenshot" xml:space="preserve">
+    <value>திரைக்காட்சி</value>
+  </data>
+  <data name="Tool_Select" xml:space="preserve">
+    <value>தேர்ந்தெடு</value>
+  </data>
+  <data name="Tooltip_Arrow" xml:space="preserve">
+    <value>அம்பு வரை</value>
+  </data>
+  <data name="Tooltip_Blur" xml:space="preserve">
+    <value>பகுதியை மங்கலாக்கு</value>
+  </data>
+  <data name="Tooltip_Border" xml:space="preserve">
+    <value>விளிம்பு/செவ்வகம் வரை</value>
+  </data>
+  <data name="Tooltip_Callout" xml:space="preserve">
+    <value>குறிப்பைச் சேர்</value>
+  </data>
+  <data name="Tooltip_CollapseExpandPanel" xml:space="preserve">
+    <value>திட்டப் பலகை சுருக்கு/விரி</value>
+  </data>
+  <data name="Tooltip_Copy" xml:space="preserve">
+    <value>இடைநிலைப் பலகைக்கு நகலெடு</value>
+  </data>
+  <data name="Tooltip_CutHorizontal" xml:space="preserve">
+    <value>படத்தை கிடைமட்டமாக வெட்டு</value>
+  </data>
+  <data name="Tooltip_CutVertical" xml:space="preserve">
+    <value>படத்தை செங்குத்தாக வெட்டு</value>
+  </data>
+  <data name="Tooltip_Export" xml:space="preserve">
+    <value>படம் அல்லது திட்டத்தை ஏற்றுமதி செய்</value>
+  </data>
+  <data name="Tooltip_Highlight" xml:space="preserve">
+    <value>பகுதியை ஒளிர்வூட்டு</value>
+  </data>
+  <data name="Tooltip_Import" xml:space="preserve">
+    <value>திட்டம் அல்லது படத்தை இறக்குமதி செய்</value>
+  </data>
+  <data name="Tooltip_New" xml:space="preserve">
+    <value>புதிய திட்டத்தை உருவாக்கு</value>
+  </data>
+  <data name="Tooltip_Note" xml:space="preserve">
+    <value>உரைக் குறிப்பைச் சேர்</value>
+  </data>
+  <data name="Tooltip_Paste" xml:space="preserve">
+    <value>இடைநிலைப் பலகையிலிருந்து ஒட்டு</value>
+  </data>
+  <data name="Tooltip_Screenshot" xml:space="preserve">
+    <value>திரைக்காட்சி எடு</value>
+  </data>
+  <data name="Tooltip_Select" xml:space="preserve">
+    <value>குறிப்பீடுகளைத் தேர்ந்தெடுத்துத் திருத்து</value>
+  </data>
+  <data name="Update_NewVersionAvailable" xml:space="preserve">
+    <value>புதிய பதிப்பு {0} கிடைக்கிறது.</value>
+  </data>
+  <data name="Window_Title" xml:space="preserve">
+    <value>திரைக்காட்சி குறிப்பிடுநர் - பட திருத்தி</value>
+  </data>
+  <data name="Winget_Description" xml:space="preserve">
+    <value>Windows மற்றும் Linux க்கான திரைக்காட்சி குறிப்பீட்டு மென்பொருள்.
+
+அம்சங்கள்:
+- **அம்புகள்** - தனிப்பயன் அம்புகளுடன் குறிப்பிட்ட பகுதிகளுக்கு கவனம் ஈர்க்கவும்
+- **குறிப்புகள்** - திருத்தக்கூடிய உரையுடன் உரையாடல் குமிழிகளைச் சேர்க்கவும்
+- **குறிப்புரைகள்** - கூடுதல் தகவலுக்கு உரைப் பெட்டிகளை உருவாக்கவும்
+- **விளிம்பு தேர்வு** - விளிம்புள்ள செவ்வகங்களுடன் பகுதிகளை ஒளிர்வூட்டவும்
+- **மங்கல்** - உணர்திறன் தகவலை மறைக்கவும்
+- **தேர்வுக் கருவி** - நகலெடுக்க (Ctrl+C) அல்லது நீக்க (Delete) படத்தின் பகுதிகளைத் தேர்ந்தெடுக்கவும்
+- **செங்குத்து மற்றும் கிடைமட்ட வெட்டுக்கள்** - படத்தின் செங்குத்து அல்லது கிடைமட்ட பகுதிகளை வெட்டவும்
+- **ஒளிர்வூட்டி** - ஆர்வமுள்ள பகுதிகளை ஒளிர்வூட்டவும்
+- **திட்ட மேலாண்மை** - தானியங்கி சேமிப்பு மற்றும் சிறுஉருவ முன்னோட்டங்கள்
+- **குறுக்கு-தளம்** - Windows மற்றும் Linux இல் இயங்குகிறது</value>
+  </data>
+  <data name="Winget_ShortDescription" xml:space="preserve">
+    <value>Windows மற்றும் Linux க்கான திரைக்காட்சி குறிப்பீட்டு மென்பொருள்.</value>
+  </data>
 </root>

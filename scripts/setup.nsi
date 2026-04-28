@@ -2,15 +2,17 @@
 SetCompressor /FINAL /SOLID lzma
 SetCompressorDictSize 64
 
+Unicode true
+
 ; Defines
 !define PRODUCT_NAME "Screenshot Annotator"
 !ifndef PRODUCT_VERSION
-!define PRODUCT_VERSION "0.0.0"
+  !define PRODUCT_VERSION "0.0.0"
 !endif
 !define PRODUCT_PUBLISHER "Siarhei Kuchuk"
 !define PRODUCT_WEB_SITE "https://github.com/drweb86/annotator"
 !define START_YEAR "2025"
-!define CURRENT_YEAR "$%DATE:~-4%" ; Will be replaced at compile time
+!define CURRENT_YEAR "$%DATE:~-4%"
 
 ; MUI Settings
 !include "MUI2.nsh"
@@ -27,6 +29,12 @@ SetCompressorDictSize 64
 !define MUI_ABORTWARNING
 !define MUI_ICON ".\App.ico"
 !define MUI_UNICON "${NSISDIR}\Contrib\Graphics\Icons\modern-uninstall.ico"
+
+; Language selection dialog settings
+!define MUI_LANGDLL_ALLLANGUAGES
+!define MUI_LANGDLL_REGISTRY_ROOT "HKCU"
+!define MUI_LANGDLL_REGISTRY_KEY "Software\${PRODUCT_NAME}"
+!define MUI_LANGDLL_REGISTRY_VALUENAME "Installer Language"
 
 ; Welcome page
 !define MUI_WELCOMEPAGE_TITLE_3LINES
@@ -53,15 +61,15 @@ Var StartMenuFolder
 
 ; Finish page
 !define MUI_FINISHPAGE_RUN "$INSTDIR\bin\ScreenshotAnnotator.Desktop.exe"
-!define MUI_FINISHPAGE_RUN_TEXT "Launch App"
+!define MUI_FINISHPAGE_RUN_TEXT "$(Installer_LaunchApp)"
 !define MUI_PAGE_CUSTOMFUNCTION_SHOW FinishPageShow
 !insertmacro MUI_PAGE_FINISH
 
 ; Uninstaller pages
 !insertmacro MUI_UNPAGE_INSTFILES
 
-; Language files
-!insertmacro MUI_LANGUAGE "English"
+; Language files (auto-generated from .resx resources by ResxSorter)
+!include "setup-languages.nsh"
 
 ; Installer attributes
 Name "${PRODUCT_NAME} ${PRODUCT_VERSION}"
@@ -90,6 +98,8 @@ Var InstallModeLabel
 Var CmdLineMode
 
 Function .onInit
+  !insertmacro MUI_LANGDLL_DISPLAY
+
   ; Initialize default to current user
   StrCpy $InstallMode "CurrentUser"
   StrCpy $MultiUser "0"
@@ -105,39 +115,39 @@ Function .onInit
     StrCpy $MultiUser "1"
     StrCpy $CmdLineMode "1"
   ${EndIf}
-  
+
   ${GetOptions} $0 "/AllUsers" $1
   ${IfNot} ${Errors}
     StrCpy $InstallMode "AllUsers"
     StrCpy $MultiUser "1"
     StrCpy $CmdLineMode "1"
   ${EndIf}
-  
+
   ${GetOptions} $0 "/CURRENTUSER" $1
   ${IfNot} ${Errors}
     StrCpy $InstallMode "CurrentUser"
     StrCpy $MultiUser "0"
     StrCpy $CmdLineMode "1"
   ${EndIf}
-  
+
   ${GetOptions} $0 "/CurrentUser" $1
   ${IfNot} ${Errors}
     StrCpy $InstallMode "CurrentUser"
     StrCpy $MultiUser "0"
     StrCpy $CmdLineMode "1"
   ${EndIf}
-  
+
   ; Check if admin rights are available when installing for all users
   ${If} $MultiUser == "1"
     UserInfo::GetAccountType
     Pop $0
     ${If} $0 != "admin"
-      MessageBox MB_OK|MB_ICONSTOP "Administrator privileges required to install for all users.$\nPlease run the installer as administrator or use /CURRENTUSER."
+      MessageBox MB_OK|MB_ICONSTOP "$(Installer_AdminRequired)"
       Abort
     ${EndIf}
   ${EndIf}
 
-  ; Check architecture if needed
+  ; Check architecture
   ${If} ${RunningX64}
     SetRegView 64
     ${If} $MultiUser == "1"
@@ -146,7 +156,7 @@ Function .onInit
       StrCpy $INSTDIR "$LOCALAPPDATA\Programs\${PRODUCT_NAME}"
     ${EndIf}
   ${Else}
-    MessageBox MB_OK|MB_ICONSTOP "This installer requires a x64 or arm64 version of Windows."
+    MessageBox MB_OK|MB_ICONSTOP "$(Installer_ArchRequired)"
     Abort
   ${EndIf}
 
@@ -159,45 +169,45 @@ Function InstallModePageCreate
   ${If} $CmdLineMode == "1"
     Abort
   ${EndIf}
-  
-  !insertmacro MUI_HEADER_TEXT "Choose Installation Type" "Select who can use this application"
-  
+
+  !insertmacro MUI_HEADER_TEXT "$(Installer_InstallModeTitle)" "$(Installer_InstallModeSubtitle)"
+
   nsDialogs::Create 1018
   Pop $InstallModeDialog
-  
+
   ${If} $InstallModeDialog == error
     Abort
   ${EndIf}
-  
+
   ; Add label with description
-  ${NSD_CreateLabel} 0 0 100% 24u "Please choose whether you want to install ${PRODUCT_NAME} for yourself only or for all users of this computer."
+  ${NSD_CreateLabel} 0 0 100% 24u "$(Installer_InstallModeDescription)"
   Pop $InstallModeLabel
-  
+
   ; Add radio button for current user (default)
-  ${NSD_CreateRadioButton} 10u 30u 100% 12u "Install for &current user only"
+  ${NSD_CreateRadioButton} 10u 30u 100% 12u "$(Installer_CurrentUserOption)"
   Pop $InstallModeRadio1
   ${NSD_OnClick} $InstallModeRadio1 InstallModeRadio1Click
-  
+
   ; Add description for current user option
-  ${NSD_CreateLabel} 20u 45u 95% 16u "Recommended. The application will only be available for your user account."
+  ${NSD_CreateLabel} 20u 45u 95% 16u "$(Installer_CurrentUserDescription)"
   Pop $0
-  
+
   ; Add radio button for all users
-  ${NSD_CreateRadioButton} 10u 65u 100% 12u "Install for &all users (requires administrator privileges)"
+  ${NSD_CreateRadioButton} 10u 65u 100% 12u "$(Installer_AllUsersOption)"
   Pop $InstallModeRadio2
   ${NSD_OnClick} $InstallModeRadio2 InstallModeRadio2Click
-  
+
   ; Add description for all users option
-  ${NSD_CreateLabel} 20u 80u 95% 16u "The application will be available for all users on this computer."
+  ${NSD_CreateLabel} 20u 80u 95% 16u "$(Installer_AllUsersDescription)"
   Pop $0
-  
+
   ; Set default selection based on current mode
   ${If} $MultiUser == "1"
     ${NSD_Check} $InstallModeRadio2
   ${Else}
     ${NSD_Check} $InstallModeRadio1
   ${EndIf}
-  
+
   nsDialogs::Show
 FunctionEnd
 
@@ -219,44 +229,42 @@ Function InstallModePageLeave
     UserInfo::GetAccountType
     Pop $0
     ${If} $0 != "admin"
-      MessageBox MB_OK|MB_ICONSTOP "Administrator privileges are required to install for all users.$\n$\nPlease either:$\n- Choose 'Install for current user only', or$\n- Run this installer as administrator"
+      MessageBox MB_OK|MB_ICONSTOP "$(Installer_AdminRequiredDetailed)"
       Abort
     ${EndIf}
   ${EndIf}
-  
+
   ; Set installation directory based on mode
   ${If} $MultiUser == "1"
     StrCpy $INSTDIR "$PROGRAMFILES64\${PRODUCT_NAME}"
   ${Else}
     StrCpy $INSTDIR "$LOCALAPPDATA\Programs\${PRODUCT_NAME}"
   ${EndIf}
-  
-  DetailPrint "Installing for: $InstallMode"
+
+  DetailPrint "$(Installer_InstallingFor) $InstallMode"
 FunctionEnd
 
-; Custom function to skip directory page (emulating DisableDirPage=yes)
+; Custom function to skip directory page
 Function SkipDirectoryPage
   Abort
 FunctionEnd
 
-; Custom function to skip start menu page (emulating DisableProgramGroupPage=yes)
+; Custom function to skip start menu page
 Function SkipStartMenuPage
   Abort
 FunctionEnd
 
-; Custom function to show finish page immediately (emulating DisableReadyPage and auto-proceed)
 Function FinishPageShow
-  ; The finish page will show normally, but installation starts immediately
 FunctionEnd
 
 Section "MainSection" SEC01
   SetOutPath "$INSTDIR\bin"
   SetOverwrite on
-  
+
   ${If} $MultiUser == "1"
-    SetShellVarContext all  ; All Users
+    SetShellVarContext all
   ${Else}
-    SetShellVarContext current  ; Current User only
+    SetShellVarContext current
   ${EndIf}
 
   ${If} ${IsNativeARM64}
@@ -265,11 +273,9 @@ Section "MainSection" SEC01
   File /r "..\output\publish\x64\*.*"
   ${EndIf}
 
-  ; Store installation folder
-  
   ; Create uninstaller
   WriteUninstaller "$INSTDIR\uninst.exe"
-  
+
   ; Add uninstall information to Add/Remove Programs
   ${If} $MultiUser == "1"
     WriteRegStr HKLM "Software\${PRODUCT_NAME}" "" $INSTDIR
@@ -298,29 +304,33 @@ Section "MainSection" SEC01
     CreateDirectory "$SMPROGRAMS\$StartMenuFolder"
     CreateShortcut "$SMPROGRAMS\$StartMenuFolder\${PRODUCT_NAME}.lnk" "$INSTDIR\bin\ScreenshotAnnotator.Desktop.exe"
   !insertmacro MUI_STARTMENU_WRITE_END
-  
+
   ; Create desktop shortcut
   CreateShortcut "$DESKTOP\${PRODUCT_NAME}.lnk" "$INSTDIR\bin\ScreenshotAnnotator.Desktop.exe"
 SectionEnd
 
+Function un.onInit
+  !insertmacro MUI_UNGETLANGUAGE
+FunctionEnd
+
 Section Uninstall
   ; Remove shortcuts
   !insertmacro MUI_STARTMENU_GETFOLDER Application $StartMenuFolder
-  
+
   Delete "$SMPROGRAMS\$StartMenuFolder\${PRODUCT_NAME}.lnk"
   RMDir "$SMPROGRAMS\$StartMenuFolder"
   Delete "$DESKTOP\${PRODUCT_NAME}.lnk"
-  
+
   ; Remove files and directories
   RMDir /r "$INSTDIR\bin"
   Delete "$INSTDIR\uninst.exe"
   RMDir "$INSTDIR"
-  
+
   ; Remove registry keys
   DeleteRegKey HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\${PRODUCT_NAME}"
   DeleteRegKey HKLM "Software\${PRODUCT_NAME}"
   DeleteRegKey HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\${PRODUCT_NAME}"
   DeleteRegKey HKCU "Software\${PRODUCT_NAME}"
-  
+
   SetAutoClose true
 SectionEnd

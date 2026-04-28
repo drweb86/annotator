@@ -58,291 +58,285 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-
   <!-- Vietnamese -->
-
-  <data name="Window_Title" xml:space="preserve">
-    <value>Trình chú thích ảnh chụp màn hình - Trình sửa ảnh</value>
+  <data name="_Technical_NsisLanguage" xml:space="preserve">
+    <value>Vietnamese</value>
   </data>
-
-  <data name="Header_ScreenshotAnnotator" xml:space="preserve">
-    <value>[ Trình chú thích ảnh chụp màn hình - V{0} ]</value>
+  <data name="_Technical_WingetLocale" xml:space="preserve">
+    <value>vi-VN</value>
   </data>
-
-  <data name="Copyright_Text" xml:space="preserve">
-    <value>Annotator {0} : Bản quyền (c) 2025-{1} Siarhei Kuchuk</value>
-  </data>
-
-  <data name="Menu_File" xml:space="preserve">
-    <value>[ Tệp ]</value>
-  </data>
-
-  <data name="Menu_New" xml:space="preserve">
-    <value>Mới...</value>
-  </data>
-
-  <data name="Menu_Import" xml:space="preserve">
-    <value>Nhập...</value>
-  </data>
-
-  <data name="Menu_Export" xml:space="preserve">
-    <value>Xuất...</value>
-  </data>
-
-  <data name="Menu_OpenProjectsFolder" xml:space="preserve">
-    <value>Mở thư mục dự án</value>
-  </data>
-
-  <data name="Menu_OpenLogsFolder" xml:space="preserve">
-    <value>Mở thư mục nhật ký</value>
-  </data>
-
-  <data name="Menu_WebSite" xml:space="preserve">
-    <value>Trang web</value>
-  </data>
-
-  <data name="Menu_License" xml:space="preserve">
-    <value>Giấy phép</value>
-  </data>
-  <data name="Menu_Options" xml:space="preserve">
-    <value>Tùy chọn</value>
-  </data>
-
-  <data name="Menu_EnablePrintScreenHotkey" xml:space="preserve">
-    <value>Bật phím tắt Print Screen</value>
-  </data>
-
-  <data name="Tool_New" xml:space="preserve">
-    <value>Mới</value>
-  </data>
-
-  <data name="Tool_Import" xml:space="preserve">
-    <value>Nhập</value>
-  </data>
-
-  <data name="Tool_Export" xml:space="preserve">
-    <value>Xuất</value>
-  </data>
-
-  <data name="Tool_Screenshot" xml:space="preserve">
-    <value>Ảnh chụp màn hình</value>
-  </data>
-
-  <data name="Tool_Copy" xml:space="preserve">
-    <value>Sao chép</value>
-  </data>
-
-  <data name="Tool_Paste" xml:space="preserve">
-    <value>Dán</value>
-  </data>
-
-  <data name="Tool_Select" xml:space="preserve">
-    <value>Chọn</value>
-  </data>
-
-  <data name="Tool_Arrow" xml:space="preserve">
-    <value>Mũi tên</value>
-  </data>
-
-  <data name="Tool_Callout" xml:space="preserve">
-    <value>Chú thích</value>
-  </data>
-
-  <data name="Tool_Note" xml:space="preserve">
-    <value>Ghi chú</value>
-  </data>
-
-  <data name="Tool_Border" xml:space="preserve">
-    <value>Viền</value>
-  </data>
-
-  <data name="Tool_Highlight" xml:space="preserve">
-    <value>Tô sáng</value>
-  </data>
-
-  <data name="Tool_Blur" xml:space="preserve">
-    <value>Làm mờ</value>
-  </data>
-
-  <data name="Tool_CutVertical" xml:space="preserve">
-    <value>Cắt |</value>
-  </data>
-
-  <data name="Tool_CutHorizontal" xml:space="preserve">
-    <value>Cắt -</value>
-  </data>
-
-  <data name="Tooltip_New" xml:space="preserve">
-    <value>Tạo dự án mới</value>
-  </data>
-
-  <data name="Tooltip_Import" xml:space="preserve">
-    <value>Nhập dự án hoặc hình ảnh</value>
-  </data>
-
-  <data name="Tooltip_Export" xml:space="preserve">
-    <value>Xuất hình ảnh hoặc dự án</value>
-  </data>
-
-  <data name="Tooltip_Screenshot" xml:space="preserve">
-    <value>Chụp màn hình</value>
-  </data>
-
-  <data name="Tooltip_Copy" xml:space="preserve">
-    <value>Sao chép vào bảng tạm</value>
-  </data>
-
-  <data name="Tooltip_Paste" xml:space="preserve">
-    <value>Dán từ bảng tạm</value>
-  </data>
-
-  <data name="Tooltip_Select" xml:space="preserve">
-    <value>Chọn và chỉnh sửa chú thích</value>
-  </data>
-
-  <data name="Tooltip_Arrow" xml:space="preserve">
-    <value>Vẽ mũi tên</value>
-  </data>
-
-  <data name="Tooltip_Callout" xml:space="preserve">
-    <value>Thêm chú thích</value>
-  </data>
-
-  <data name="Tooltip_Note" xml:space="preserve">
-    <value>Thêm ghi chú văn bản</value>
-  </data>
-
-  <data name="Tooltip_Border" xml:space="preserve">
-    <value>Vẽ viền/hình chữ nhật</value>
-  </data>
-
-  <data name="Tooltip_Highlight" xml:space="preserve">
-    <value>Tô sáng vùng</value>
-  </data>
-
-  <data name="Tooltip_Blur" xml:space="preserve">
-    <value>Làm mờ vùng</value>
-  </data>
-
-  <data name="Tooltip_CutVertical" xml:space="preserve">
-    <value>Cắt ảnh theo chiều dọc</value>
-  </data>
-
-  <data name="Tooltip_CutHorizontal" xml:space="preserve">
-    <value>Cắt ảnh theo chiều ngang</value>
-  </data>
-
-  <data name="Tooltip_CollapseExpandPanel" xml:space="preserve">
-    <value>Thu gọn/Mở rộng bảng dự án</value>
-  </data>
-
-  <data name="Panel_Projects" xml:space="preserve">
-    <value>Dự án</value>
-  </data>
-
-  <data name="Panel_Properties" xml:space="preserve">
-    <value>Thuộc tính</value>
-  </data>
-
-  <data name="Props_Font" xml:space="preserve">
-    <value>Phông chữ</value>
-  </data>
-
-  <data name="Props_Size" xml:space="preserve">
-    <value>Cỡ chữ</value>
-  </data>
-
-  <data name="Props_Bold" xml:space="preserve">
-    <value>Đậm</value>
-  </data>
-
-  <data name="Props_Italic" xml:space="preserve">
-    <value>Nghiêng</value>
-  </data>
-
-  <data name="Props_Color" xml:space="preserve">
-    <value>Màu</value>
-  </data>
-
-  <data name="Dialog_Export_Title" xml:space="preserve">
-    <value>Xuất</value>
-  </data>
-
-  <data name="Dialog_Import_Title" xml:space="preserve">
-    <value>Nhập dự án hoặc hình ảnh</value>
-  </data>
-
-  <data name="FileType_PNG" xml:space="preserve">
-    <value>Ảnh PNG</value>
-  </data>
-
-  <data name="FileType_JPEG" xml:space="preserve">
-    <value>Ảnh JPEG</value>
-  </data>
-
-  <data name="FileType_WebP" xml:space="preserve">
-    <value>Ảnh WebP</value>
-  </data>
-
-  <data name="FileType_AllSupported" xml:space="preserve">
-    <value>Mọi tệp được hỗ trợ</value>
-  </data>
-
-  <data name="FileType_Images" xml:space="preserve">
-    <value>Tệp hình ảnh</value>
-  </data>
-
-  <data name="FileType_AllFiles" xml:space="preserve">
-    <value>Mọi tệp</value>
-  </data>
-
-  <data name="FileType_AnnotatorProject" xml:space="preserve">
-    <value>Dự án Annotator</value>
-  </data>
-
-  <data name="Screenshot_Instructions" xml:space="preserve">
-    <value>Nhấp và kéo để chọn vùng, hoặc điều chỉnh các góc. Dùng kính lúp để chính xác. Nhấn OK khi sẵn sàng.</value>
-  </data>
-
-  <data name="Button_OK" xml:space="preserve">
-    <value>OK</value>
-  </data>
-
-  <data name="Button_Cancel" xml:space="preserve">
-    <value>Hủy</value>
-  </data>
-
   <data name="Button_Accept" xml:space="preserve">
     <value>✓ Chấp nhận</value>
   </data>
-
+  <data name="Button_Cancel" xml:space="preserve">
+    <value>Hủy</value>
+  </data>
   <data name="Button_CancelX" xml:space="preserve">
     <value>✕ Hủy</value>
   </data>
-
-  <data name="Update_NewVersionAvailable" xml:space="preserve">
-    <value>Phiên bản mới {0} đã có.</value>
-  </data>
-
   <data name="Button_Download" xml:space="preserve">
     <value>Tải xuống</value>
   </data>
-
-  <data name="ContextMenu_Open" xml:space="preserve">
-    <value>Mở</value>
+  <data name="Button_OK" xml:space="preserve">
+    <value>OK</value>
   </data>
-
   <data name="ContextMenu_Delete" xml:space="preserve">
     <value>Xóa</value>
   </data>
-
+  <data name="ContextMenu_Open" xml:space="preserve">
+    <value>Mở</value>
+  </data>
+  <data name="Copyright_Text" xml:space="preserve">
+    <value>Annotator {0} : Bản quyền (c) 2025-{1} Siarhei Kuchuk</value>
+  </data>
+  <data name="Dialog_Export_Title" xml:space="preserve">
+    <value>Xuất</value>
+  </data>
+  <data name="Dialog_Import_Title" xml:space="preserve">
+    <value>Nhập dự án hoặc hình ảnh</value>
+  </data>
+  <data name="FileType_AllFiles" xml:space="preserve">
+    <value>Mọi tệp</value>
+  </data>
+  <data name="FileType_AllSupported" xml:space="preserve">
+    <value>Mọi tệp được hỗ trợ</value>
+  </data>
+  <data name="FileType_AnnotatorProject" xml:space="preserve">
+    <value>Dự án Annotator</value>
+  </data>
+  <data name="FileType_Images" xml:space="preserve">
+    <value>Tệp hình ảnh</value>
+  </data>
+  <data name="FileType_JPEG" xml:space="preserve">
+    <value>Ảnh JPEG</value>
+  </data>
+  <data name="FileType_PNG" xml:space="preserve">
+    <value>Ảnh PNG</value>
+  </data>
+  <data name="FileType_WebP" xml:space="preserve">
+    <value>Ảnh WebP</value>
+  </data>
+  <data name="Header_ScreenshotAnnotator" xml:space="preserve">
+    <value>[ Trình chú thích ảnh chụp màn hình - V{0} ]</value>
+  </data>
   <data name="ImproveIt_Message" xml:space="preserve">
     <value>Đã xảy ra lỗi không mong muốn.
 
 Vui lòng liên hệ nhà phát triển với thông tin đã lưu trên màn hình nền tại
-&quot;{0}&quot;
+"{0}"
 
 Ứng dụng sẽ đóng.</value>
   </data>
+  <data name="Installer_AdminRequired" xml:space="preserve">
+    <value>Cần quyền quản trị viên để cài đặt cho tất cả người dùng.
+Vui lòng chạy trình cài đặt với quyền quản trị viên hoặc sử dụng /CURRENTUSER.</value>
+  </data>
+  <data name="Installer_AdminRequiredDetailed" xml:space="preserve">
+    <value>Cần quyền quản trị viên để cài đặt cho tất cả người dùng.
 
+Vui lòng:
+- Chọn 'Chỉ cài đặt cho người dùng hiện tại', hoặc
+- Chạy trình cài đặt này với quyền quản trị viên</value>
+  </data>
+  <data name="Installer_AllUsersDescription" xml:space="preserve">
+    <value>Ứng dụng sẽ khả dụng cho tất cả người dùng trên máy tính này.</value>
+  </data>
+  <data name="Installer_AllUsersOption" xml:space="preserve">
+    <value>Cài đặt cho &amp;tất cả người dùng (yêu cầu quyền quản trị viên)</value>
+  </data>
+  <data name="Installer_ArchRequired" xml:space="preserve">
+    <value>Trình cài đặt này yêu cầu phiên bản Windows x64 hoặc arm64.</value>
+  </data>
+  <data name="Installer_CurrentUserDescription" xml:space="preserve">
+    <value>Được khuyến nghị. Ứng dụng sẽ chỉ khả dụng cho tài khoản người dùng của bạn.</value>
+  </data>
+  <data name="Installer_CurrentUserOption" xml:space="preserve">
+    <value>Chỉ cài đặt cho người dùng &amp;hiện tại</value>
+  </data>
+  <data name="Installer_InstallingFor" xml:space="preserve">
+    <value>Đang cài đặt cho:</value>
+  </data>
+  <data name="Installer_InstallModeDescription" xml:space="preserve">
+    <value>Vui lòng chọn bạn muốn cài đặt Screenshot Annotator chỉ cho mình hay cho tất cả người dùng của máy tính này.</value>
+  </data>
+  <data name="Installer_InstallModeSubtitle" xml:space="preserve">
+    <value>Chọn ai có thể sử dụng ứng dụng này</value>
+  </data>
+  <data name="Installer_InstallModeTitle" xml:space="preserve">
+    <value>Chọn kiểu cài đặt</value>
+  </data>
+  <data name="Installer_LaunchApp" xml:space="preserve">
+    <value>Khởi chạy ứng dụng</value>
+  </data>
+  <data name="Menu_EnablePrintScreenHotkey" xml:space="preserve">
+    <value>Bật phím tắt Print Screen</value>
+  </data>
+  <data name="Menu_Export" xml:space="preserve">
+    <value>Xuất...</value>
+  </data>
+  <data name="Menu_File" xml:space="preserve">
+    <value>[ Tệp ]</value>
+  </data>
+  <data name="Menu_Import" xml:space="preserve">
+    <value>Nhập...</value>
+  </data>
+  <data name="Menu_License" xml:space="preserve">
+    <value>Giấy phép</value>
+  </data>
+  <data name="Menu_New" xml:space="preserve">
+    <value>Mới...</value>
+  </data>
+  <data name="Menu_OpenLogsFolder" xml:space="preserve">
+    <value>Mở thư mục nhật ký</value>
+  </data>
+  <data name="Menu_OpenProjectsFolder" xml:space="preserve">
+    <value>Mở thư mục dự án</value>
+  </data>
+  <data name="Menu_Options" xml:space="preserve">
+    <value>Tùy chọn</value>
+  </data>
+  <data name="Menu_WebSite" xml:space="preserve">
+    <value>Trang web</value>
+  </data>
+  <data name="Panel_Projects" xml:space="preserve">
+    <value>Dự án</value>
+  </data>
+  <data name="Panel_Properties" xml:space="preserve">
+    <value>Thuộc tính</value>
+  </data>
+  <data name="Props_Bold" xml:space="preserve">
+    <value>Đậm</value>
+  </data>
+  <data name="Props_Color" xml:space="preserve">
+    <value>Màu</value>
+  </data>
+  <data name="Props_Font" xml:space="preserve">
+    <value>Phông chữ</value>
+  </data>
+  <data name="Props_Italic" xml:space="preserve">
+    <value>Nghiêng</value>
+  </data>
+  <data name="Props_Size" xml:space="preserve">
+    <value>Cỡ chữ</value>
+  </data>
+  <data name="Screenshot_Instructions" xml:space="preserve">
+    <value>Nhấp và kéo để chọn vùng, hoặc điều chỉnh các góc. Dùng kính lúp để chính xác. Nhấn OK khi sẵn sàng.</value>
+  </data>
+  <data name="Tool_Arrow" xml:space="preserve">
+    <value>Mũi tên</value>
+  </data>
+  <data name="Tool_Blur" xml:space="preserve">
+    <value>Làm mờ</value>
+  </data>
+  <data name="Tool_Border" xml:space="preserve">
+    <value>Viền</value>
+  </data>
+  <data name="Tool_Callout" xml:space="preserve">
+    <value>Chú thích</value>
+  </data>
+  <data name="Tool_Copy" xml:space="preserve">
+    <value>Sao chép</value>
+  </data>
+  <data name="Tool_CutHorizontal" xml:space="preserve">
+    <value>Cắt -</value>
+  </data>
+  <data name="Tool_CutVertical" xml:space="preserve">
+    <value>Cắt |</value>
+  </data>
+  <data name="Tool_Export" xml:space="preserve">
+    <value>Xuất</value>
+  </data>
+  <data name="Tool_Highlight" xml:space="preserve">
+    <value>Tô sáng</value>
+  </data>
+  <data name="Tool_Import" xml:space="preserve">
+    <value>Nhập</value>
+  </data>
+  <data name="Tool_New" xml:space="preserve">
+    <value>Mới</value>
+  </data>
+  <data name="Tool_Note" xml:space="preserve">
+    <value>Ghi chú</value>
+  </data>
+  <data name="Tool_Paste" xml:space="preserve">
+    <value>Dán</value>
+  </data>
+  <data name="Tool_Screenshot" xml:space="preserve">
+    <value>Ảnh chụp màn hình</value>
+  </data>
+  <data name="Tool_Select" xml:space="preserve">
+    <value>Chọn</value>
+  </data>
+  <data name="Tooltip_Arrow" xml:space="preserve">
+    <value>Vẽ mũi tên</value>
+  </data>
+  <data name="Tooltip_Blur" xml:space="preserve">
+    <value>Làm mờ vùng</value>
+  </data>
+  <data name="Tooltip_Border" xml:space="preserve">
+    <value>Vẽ viền/hình chữ nhật</value>
+  </data>
+  <data name="Tooltip_Callout" xml:space="preserve">
+    <value>Thêm chú thích</value>
+  </data>
+  <data name="Tooltip_CollapseExpandPanel" xml:space="preserve">
+    <value>Thu gọn/Mở rộng bảng dự án</value>
+  </data>
+  <data name="Tooltip_Copy" xml:space="preserve">
+    <value>Sao chép vào bảng tạm</value>
+  </data>
+  <data name="Tooltip_CutHorizontal" xml:space="preserve">
+    <value>Cắt ảnh theo chiều ngang</value>
+  </data>
+  <data name="Tooltip_CutVertical" xml:space="preserve">
+    <value>Cắt ảnh theo chiều dọc</value>
+  </data>
+  <data name="Tooltip_Export" xml:space="preserve">
+    <value>Xuất hình ảnh hoặc dự án</value>
+  </data>
+  <data name="Tooltip_Highlight" xml:space="preserve">
+    <value>Tô sáng vùng</value>
+  </data>
+  <data name="Tooltip_Import" xml:space="preserve">
+    <value>Nhập dự án hoặc hình ảnh</value>
+  </data>
+  <data name="Tooltip_New" xml:space="preserve">
+    <value>Tạo dự án mới</value>
+  </data>
+  <data name="Tooltip_Note" xml:space="preserve">
+    <value>Thêm ghi chú văn bản</value>
+  </data>
+  <data name="Tooltip_Paste" xml:space="preserve">
+    <value>Dán từ bảng tạm</value>
+  </data>
+  <data name="Tooltip_Screenshot" xml:space="preserve">
+    <value>Chụp màn hình</value>
+  </data>
+  <data name="Tooltip_Select" xml:space="preserve">
+    <value>Chọn và chỉnh sửa chú thích</value>
+  </data>
+  <data name="Update_NewVersionAvailable" xml:space="preserve">
+    <value>Phiên bản mới {0} đã có.</value>
+  </data>
+  <data name="Window_Title" xml:space="preserve">
+    <value>Trình chú thích ảnh chụp màn hình - Trình sửa ảnh</value>
+  </data>
+  <data name="Winget_Description" xml:space="preserve">
+    <value>Phần mềm chú thích ảnh chụp màn hình cho Windows và Linux.
+
+Tính năng:
+- **Mũi tên** - Thu hút sự chú ý bằng mũi tên tùy chỉnh
+- **Chú thích** - Thêm bong bóng thoại có thể chỉnh sửa
+- **Ghi chú** - Tạo hộp văn bản cho thông tin bổ sung
+- **Chọn viền** - Làm nổi bật vùng bằng hình chữ nhật có viền
+- **Làm mờ** - Che thông tin nhạy cảm
+- **Công cụ chọn** - Chọn phần ảnh để sao chép (Ctrl+C) hoặc xóa (Delete)
+- **Cắt dải dọc và ngang** - Cắt vùng dọc hoặc ngang của ảnh
+- **Bút tô sáng** - Tô sáng vùng quan tâm
+- **Quản lý dự án** - Lưu tự động và ảnh thu nhỏ xem trước
+- **Đa nền tảng** - Chạy trên Windows và Linux</value>
+  </data>
+  <data name="Winget_ShortDescription" xml:space="preserve">
+    <value>Phần mềm chú thích ảnh chụp màn hình cho Windows và Linux.</value>
+  </data>
 </root>

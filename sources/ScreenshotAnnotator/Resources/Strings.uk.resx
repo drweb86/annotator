@@ -58,291 +58,285 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-
   <!-- Ukrainian -->
-
-  <data name="Window_Title" xml:space="preserve">
-    <value>Анотатор знімків екрана — редактор зображень</value>
+  <data name="_Technical_NsisLanguage" xml:space="preserve">
+    <value>Ukrainian</value>
   </data>
-
-  <data name="Header_ScreenshotAnnotator" xml:space="preserve">
-    <value>[ Анотатор знімків екрана — В{0} ]</value>
+  <data name="_Technical_WingetLocale" xml:space="preserve">
+    <value>uk-UA</value>
   </data>
-
-  <data name="Copyright_Text" xml:space="preserve">
-    <value>Annotator {0} : Авторське право (c) 2025-{1} Siarhei Kuchuk</value>
-  </data>
-
-  <data name="Menu_File" xml:space="preserve">
-    <value>[ Файл ]</value>
-  </data>
-
-  <data name="Menu_New" xml:space="preserve">
-    <value>Новий...</value>
-  </data>
-
-  <data name="Menu_Import" xml:space="preserve">
-    <value>Імпорт...</value>
-  </data>
-
-  <data name="Menu_Export" xml:space="preserve">
-    <value>Експорт...</value>
-  </data>
-
-  <data name="Menu_OpenProjectsFolder" xml:space="preserve">
-    <value>Відкрити теку проєктів</value>
-  </data>
-
-  <data name="Menu_OpenLogsFolder" xml:space="preserve">
-    <value>Відкрити теку журналів</value>
-  </data>
-
-  <data name="Menu_WebSite" xml:space="preserve">
-    <value>Вебсайт</value>
-  </data>
-
-  <data name="Menu_License" xml:space="preserve">
-    <value>Ліцензія</value>
-  </data>
-  <data name="Menu_Options" xml:space="preserve">
-    <value>Параметри</value>
-  </data>
-
-  <data name="Menu_EnablePrintScreenHotkey" xml:space="preserve">
-    <value>Увімкнути гарячу клавішу Print Screen</value>
-  </data>
-
-  <data name="Tool_New" xml:space="preserve">
-    <value>Новий</value>
-  </data>
-
-  <data name="Tool_Import" xml:space="preserve">
-    <value>Імпорт</value>
-  </data>
-
-  <data name="Tool_Export" xml:space="preserve">
-    <value>Експорт</value>
-  </data>
-
-  <data name="Tool_Screenshot" xml:space="preserve">
-    <value>Знімок екрана</value>
-  </data>
-
-  <data name="Tool_Copy" xml:space="preserve">
-    <value>Копіювати</value>
-  </data>
-
-  <data name="Tool_Paste" xml:space="preserve">
-    <value>Вставити</value>
-  </data>
-
-  <data name="Tool_Select" xml:space="preserve">
-    <value>Вибір</value>
-  </data>
-
-  <data name="Tool_Arrow" xml:space="preserve">
-    <value>Стрілка</value>
-  </data>
-
-  <data name="Tool_Callout" xml:space="preserve">
-    <value>Виноска</value>
-  </data>
-
-  <data name="Tool_Note" xml:space="preserve">
-    <value>Нотатка</value>
-  </data>
-
-  <data name="Tool_Border" xml:space="preserve">
-    <value>Рамка</value>
-  </data>
-
-  <data name="Tool_Highlight" xml:space="preserve">
-    <value>Підсвітка</value>
-  </data>
-
-  <data name="Tool_Blur" xml:space="preserve">
-    <value>Розмиття</value>
-  </data>
-
-  <data name="Tool_CutVertical" xml:space="preserve">
-    <value>Різ |</value>
-  </data>
-
-  <data name="Tool_CutHorizontal" xml:space="preserve">
-    <value>Різ -</value>
-  </data>
-
-  <data name="Tooltip_New" xml:space="preserve">
-    <value>Створити новий проєкт</value>
-  </data>
-
-  <data name="Tooltip_Import" xml:space="preserve">
-    <value>Імпортувати проєкт або зображення</value>
-  </data>
-
-  <data name="Tooltip_Export" xml:space="preserve">
-    <value>Експортувати зображення або проєкт</value>
-  </data>
-
-  <data name="Tooltip_Screenshot" xml:space="preserve">
-    <value>Зробити знімок екрана</value>
-  </data>
-
-  <data name="Tooltip_Copy" xml:space="preserve">
-    <value>Копіювати в буфер</value>
-  </data>
-
-  <data name="Tooltip_Paste" xml:space="preserve">
-    <value>Вставити з буфера</value>
-  </data>
-
-  <data name="Tooltip_Select" xml:space="preserve">
-    <value>Вибирати й редагувати анотації</value>
-  </data>
-
-  <data name="Tooltip_Arrow" xml:space="preserve">
-    <value>Намалювати стрілку</value>
-  </data>
-
-  <data name="Tooltip_Callout" xml:space="preserve">
-    <value>Додати виноску</value>
-  </data>
-
-  <data name="Tooltip_Note" xml:space="preserve">
-    <value>Додати текстову нотатку</value>
-  </data>
-
-  <data name="Tooltip_Border" xml:space="preserve">
-    <value>Намалювати рамку/прямокутник</value>
-  </data>
-
-  <data name="Tooltip_Highlight" xml:space="preserve">
-    <value>Підсвітити область</value>
-  </data>
-
-  <data name="Tooltip_Blur" xml:space="preserve">
-    <value>Розмити область</value>
-  </data>
-
-  <data name="Tooltip_CutVertical" xml:space="preserve">
-    <value>Різати зображення вертикально</value>
-  </data>
-
-  <data name="Tooltip_CutHorizontal" xml:space="preserve">
-    <value>Різати зображення горизонтально</value>
-  </data>
-
-  <data name="Tooltip_CollapseExpandPanel" xml:space="preserve">
-    <value>Згорнути/розгорнути панель проєктів</value>
-  </data>
-
-  <data name="Panel_Projects" xml:space="preserve">
-    <value>Проєкти</value>
-  </data>
-
-  <data name="Panel_Properties" xml:space="preserve">
-    <value>Властивості</value>
-  </data>
-
-  <data name="Props_Font" xml:space="preserve">
-    <value>Шрифт</value>
-  </data>
-
-  <data name="Props_Size" xml:space="preserve">
-    <value>Розмір</value>
-  </data>
-
-  <data name="Props_Bold" xml:space="preserve">
-    <value>Жирний</value>
-  </data>
-
-  <data name="Props_Italic" xml:space="preserve">
-    <value>Курсив</value>
-  </data>
-
-  <data name="Props_Color" xml:space="preserve">
-    <value>Колір</value>
-  </data>
-
-  <data name="Dialog_Export_Title" xml:space="preserve">
-    <value>Експорт</value>
-  </data>
-
-  <data name="Dialog_Import_Title" xml:space="preserve">
-    <value>Імпорт проєкту або зображення</value>
-  </data>
-
-  <data name="FileType_PNG" xml:space="preserve">
-    <value>Зображення PNG</value>
-  </data>
-
-  <data name="FileType_JPEG" xml:space="preserve">
-    <value>Зображення JPEG</value>
-  </data>
-
-  <data name="FileType_WebP" xml:space="preserve">
-    <value>Зображення WebP</value>
-  </data>
-
-  <data name="FileType_AllSupported" xml:space="preserve">
-    <value>Усі підтримувані файли</value>
-  </data>
-
-  <data name="FileType_Images" xml:space="preserve">
-    <value>Файли зображень</value>
-  </data>
-
-  <data name="FileType_AllFiles" xml:space="preserve">
-    <value>Усі файли</value>
-  </data>
-
-  <data name="FileType_AnnotatorProject" xml:space="preserve">
-    <value>Проєкт Annotator</value>
-  </data>
-
-  <data name="Screenshot_Instructions" xml:space="preserve">
-    <value>Клацніть і перетягніть, щоб вибрати область, або відрегулюйте кути. Для точності використовуйте лупу. Натисніть OK, коли буде готово.</value>
-  </data>
-
-  <data name="Button_OK" xml:space="preserve">
-    <value>OK</value>
-  </data>
-
-  <data name="Button_Cancel" xml:space="preserve">
-    <value>Скасувати</value>
-  </data>
-
   <data name="Button_Accept" xml:space="preserve">
     <value>✓ Прийняти</value>
   </data>
-
+  <data name="Button_Cancel" xml:space="preserve">
+    <value>Скасувати</value>
+  </data>
   <data name="Button_CancelX" xml:space="preserve">
     <value>✕ Скасувати</value>
   </data>
-
-  <data name="Update_NewVersionAvailable" xml:space="preserve">
-    <value>Доступна нова версія {0}.</value>
-  </data>
-
   <data name="Button_Download" xml:space="preserve">
     <value>Завантажити</value>
   </data>
-
-  <data name="ContextMenu_Open" xml:space="preserve">
-    <value>Відкрити</value>
+  <data name="Button_OK" xml:space="preserve">
+    <value>OK</value>
   </data>
-
   <data name="ContextMenu_Delete" xml:space="preserve">
     <value>Видалити</value>
   </data>
-
+  <data name="ContextMenu_Open" xml:space="preserve">
+    <value>Відкрити</value>
+  </data>
+  <data name="Copyright_Text" xml:space="preserve">
+    <value>Annotator {0} : Авторське право (c) 2025-{1} Siarhei Kuchuk</value>
+  </data>
+  <data name="Dialog_Export_Title" xml:space="preserve">
+    <value>Експорт</value>
+  </data>
+  <data name="Dialog_Import_Title" xml:space="preserve">
+    <value>Імпорт проєкту або зображення</value>
+  </data>
+  <data name="FileType_AllFiles" xml:space="preserve">
+    <value>Усі файли</value>
+  </data>
+  <data name="FileType_AllSupported" xml:space="preserve">
+    <value>Усі підтримувані файли</value>
+  </data>
+  <data name="FileType_AnnotatorProject" xml:space="preserve">
+    <value>Проєкт Annotator</value>
+  </data>
+  <data name="FileType_Images" xml:space="preserve">
+    <value>Файли зображень</value>
+  </data>
+  <data name="FileType_JPEG" xml:space="preserve">
+    <value>Зображення JPEG</value>
+  </data>
+  <data name="FileType_PNG" xml:space="preserve">
+    <value>Зображення PNG</value>
+  </data>
+  <data name="FileType_WebP" xml:space="preserve">
+    <value>Зображення WebP</value>
+  </data>
+  <data name="Header_ScreenshotAnnotator" xml:space="preserve">
+    <value>[ Анотатор знімків екрана — В{0} ]</value>
+  </data>
   <data name="ImproveIt_Message" xml:space="preserve">
     <value>Сталася неочікувана помилка.
 
 Зверніться до розробників із інформацією, збереженою на робочому столі в
-&quot;{0}&quot;
+"{0}"
 
 Програму буде закрито.</value>
   </data>
+  <data name="Installer_AdminRequired" xml:space="preserve">
+    <value>Для встановлення для всіх користувачів потрібні права адміністратора.
+Будь ласка, запустіть інсталятор від імені адміністратора або використовуйте /CURRENTUSER.</value>
+  </data>
+  <data name="Installer_AdminRequiredDetailed" xml:space="preserve">
+    <value>Для встановлення для всіх користувачів потрібні права адміністратора.
 
+Будь ласка:
+- Виберіть «Встановити лише для поточного користувача», або
+- Запустіть цей інсталятор від імені адміністратора</value>
+  </data>
+  <data name="Installer_AllUsersDescription" xml:space="preserve">
+    <value>Програма буде доступна для всіх користувачів цього комп'ютера.</value>
+  </data>
+  <data name="Installer_AllUsersOption" xml:space="preserve">
+    <value>Встановити для &amp;всіх користувачів (потрібні права адміністратора)</value>
+  </data>
+  <data name="Installer_ArchRequired" xml:space="preserve">
+    <value>Цей інсталятор потребує x64 або arm64 версії Windows.</value>
+  </data>
+  <data name="Installer_CurrentUserDescription" xml:space="preserve">
+    <value>Рекомендовано. Програма буде доступна лише для вашого облікового запису.</value>
+  </data>
+  <data name="Installer_CurrentUserOption" xml:space="preserve">
+    <value>Встановити лише для &amp;поточного користувача</value>
+  </data>
+  <data name="Installer_InstallingFor" xml:space="preserve">
+    <value>Встановлення для:</value>
+  </data>
+  <data name="Installer_InstallModeDescription" xml:space="preserve">
+    <value>Виберіть, чи хочете ви встановити Screenshot Annotator лише для себе або для всіх користувачів цього комп'ютера.</value>
+  </data>
+  <data name="Installer_InstallModeSubtitle" xml:space="preserve">
+    <value>Виберіть, хто зможе використовувати цю програму</value>
+  </data>
+  <data name="Installer_InstallModeTitle" xml:space="preserve">
+    <value>Виберіть тип встановлення</value>
+  </data>
+  <data name="Installer_LaunchApp" xml:space="preserve">
+    <value>Запустити програму</value>
+  </data>
+  <data name="Menu_EnablePrintScreenHotkey" xml:space="preserve">
+    <value>Увімкнути гарячу клавішу Print Screen</value>
+  </data>
+  <data name="Menu_Export" xml:space="preserve">
+    <value>Експорт...</value>
+  </data>
+  <data name="Menu_File" xml:space="preserve">
+    <value>[ Файл ]</value>
+  </data>
+  <data name="Menu_Import" xml:space="preserve">
+    <value>Імпорт...</value>
+  </data>
+  <data name="Menu_License" xml:space="preserve">
+    <value>Ліцензія</value>
+  </data>
+  <data name="Menu_New" xml:space="preserve">
+    <value>Новий...</value>
+  </data>
+  <data name="Menu_OpenLogsFolder" xml:space="preserve">
+    <value>Відкрити теку журналів</value>
+  </data>
+  <data name="Menu_OpenProjectsFolder" xml:space="preserve">
+    <value>Відкрити теку проєктів</value>
+  </data>
+  <data name="Menu_Options" xml:space="preserve">
+    <value>Параметри</value>
+  </data>
+  <data name="Menu_WebSite" xml:space="preserve">
+    <value>Вебсайт</value>
+  </data>
+  <data name="Panel_Projects" xml:space="preserve">
+    <value>Проєкти</value>
+  </data>
+  <data name="Panel_Properties" xml:space="preserve">
+    <value>Властивості</value>
+  </data>
+  <data name="Props_Bold" xml:space="preserve">
+    <value>Жирний</value>
+  </data>
+  <data name="Props_Color" xml:space="preserve">
+    <value>Колір</value>
+  </data>
+  <data name="Props_Font" xml:space="preserve">
+    <value>Шрифт</value>
+  </data>
+  <data name="Props_Italic" xml:space="preserve">
+    <value>Курсив</value>
+  </data>
+  <data name="Props_Size" xml:space="preserve">
+    <value>Розмір</value>
+  </data>
+  <data name="Screenshot_Instructions" xml:space="preserve">
+    <value>Клацніть і перетягніть, щоб вибрати область, або відрегулюйте кути. Для точності використовуйте лупу. Натисніть OK, коли буде готово.</value>
+  </data>
+  <data name="Tool_Arrow" xml:space="preserve">
+    <value>Стрілка</value>
+  </data>
+  <data name="Tool_Blur" xml:space="preserve">
+    <value>Розмиття</value>
+  </data>
+  <data name="Tool_Border" xml:space="preserve">
+    <value>Рамка</value>
+  </data>
+  <data name="Tool_Callout" xml:space="preserve">
+    <value>Виноска</value>
+  </data>
+  <data name="Tool_Copy" xml:space="preserve">
+    <value>Копіювати</value>
+  </data>
+  <data name="Tool_CutHorizontal" xml:space="preserve">
+    <value>Різ -</value>
+  </data>
+  <data name="Tool_CutVertical" xml:space="preserve">
+    <value>Різ |</value>
+  </data>
+  <data name="Tool_Export" xml:space="preserve">
+    <value>Експорт</value>
+  </data>
+  <data name="Tool_Highlight" xml:space="preserve">
+    <value>Підсвітка</value>
+  </data>
+  <data name="Tool_Import" xml:space="preserve">
+    <value>Імпорт</value>
+  </data>
+  <data name="Tool_New" xml:space="preserve">
+    <value>Новий</value>
+  </data>
+  <data name="Tool_Note" xml:space="preserve">
+    <value>Нотатка</value>
+  </data>
+  <data name="Tool_Paste" xml:space="preserve">
+    <value>Вставити</value>
+  </data>
+  <data name="Tool_Screenshot" xml:space="preserve">
+    <value>Знімок екрана</value>
+  </data>
+  <data name="Tool_Select" xml:space="preserve">
+    <value>Вибір</value>
+  </data>
+  <data name="Tooltip_Arrow" xml:space="preserve">
+    <value>Намалювати стрілку</value>
+  </data>
+  <data name="Tooltip_Blur" xml:space="preserve">
+    <value>Розмити область</value>
+  </data>
+  <data name="Tooltip_Border" xml:space="preserve">
+    <value>Намалювати рамку/прямокутник</value>
+  </data>
+  <data name="Tooltip_Callout" xml:space="preserve">
+    <value>Додати виноску</value>
+  </data>
+  <data name="Tooltip_CollapseExpandPanel" xml:space="preserve">
+    <value>Згорнути/розгорнути панель проєктів</value>
+  </data>
+  <data name="Tooltip_Copy" xml:space="preserve">
+    <value>Копіювати в буфер</value>
+  </data>
+  <data name="Tooltip_CutHorizontal" xml:space="preserve">
+    <value>Різати зображення горизонтально</value>
+  </data>
+  <data name="Tooltip_CutVertical" xml:space="preserve">
+    <value>Різати зображення вертикально</value>
+  </data>
+  <data name="Tooltip_Export" xml:space="preserve">
+    <value>Експортувати зображення або проєкт</value>
+  </data>
+  <data name="Tooltip_Highlight" xml:space="preserve">
+    <value>Підсвітити область</value>
+  </data>
+  <data name="Tooltip_Import" xml:space="preserve">
+    <value>Імпортувати проєкт або зображення</value>
+  </data>
+  <data name="Tooltip_New" xml:space="preserve">
+    <value>Створити новий проєкт</value>
+  </data>
+  <data name="Tooltip_Note" xml:space="preserve">
+    <value>Додати текстову нотатку</value>
+  </data>
+  <data name="Tooltip_Paste" xml:space="preserve">
+    <value>Вставити з буфера</value>
+  </data>
+  <data name="Tooltip_Screenshot" xml:space="preserve">
+    <value>Зробити знімок екрана</value>
+  </data>
+  <data name="Tooltip_Select" xml:space="preserve">
+    <value>Вибирати й редагувати анотації</value>
+  </data>
+  <data name="Update_NewVersionAvailable" xml:space="preserve">
+    <value>Доступна нова версія {0}.</value>
+  </data>
+  <data name="Window_Title" xml:space="preserve">
+    <value>Анотатор знімків екрана — редактор зображень</value>
+  </data>
+  <data name="Winget_Description" xml:space="preserve">
+    <value>Програма для анотації знімків екрана для Windows і Linux.
+
+Можливості:
+- **Стрілки** - Привертайте увагу до ділянок за допомогою налаштовуваних стрілок
+- **Виноски** - Додавайте «хмаринки» з текстом, який можна редагувати
+- **Нотатки** - Створюйте текстові поля для додаткової інформації
+- **Виділення рамкою** - Підсвічуйте області прямокутниками з контуром
+- **Розмиття** - Приховуйте чутливу інформацію
+- **Інструмент виділення** - Виділяйте частини зображення для копіювання (Ctrl+C) або видалення (Delete)
+- **Вирізання вертикальних і горизонтальних смуг** - Вирізайте вертикальні або горизонтальні ділянки зображення
+- **Маркер** - Підсвічуйте цікаві області
+- **Керування проєктами** - Автозбереження та мініатюри попереднього перегляду
+- **Кросплатформність** - Працює на Windows і Linux</value>
+  </data>
+  <data name="Winget_ShortDescription" xml:space="preserve">
+    <value>Програма для анотації знімків екрана для Windows і Linux.</value>
+  </data>
 </root>

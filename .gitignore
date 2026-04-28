@@ -1,1 +1,3 @@
 Output/
+scripts/setup-languages.nsh
+sources/tools/winget-pkgs/SiarheiKuchuk.ScreenshotAnnotator.locale.*.yaml

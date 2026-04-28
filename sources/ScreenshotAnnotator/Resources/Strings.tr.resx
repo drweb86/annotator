@@ -58,291 +58,285 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-
   <!-- Turkish -->
-
-  <data name="Window_Title" xml:space="preserve">
-    <value>Ekran Görüntüsü İşaretleyici - Görüntü Düzenleyici</value>
+  <data name="_Technical_NsisLanguage" xml:space="preserve">
+    <value>Turkish</value>
   </data>
-
-  <data name="Header_ScreenshotAnnotator" xml:space="preserve">
-    <value>[ Ekran Görüntüsü İşaretleyici - V{0} ]</value>
+  <data name="_Technical_WingetLocale" xml:space="preserve">
+    <value>tr-TR</value>
   </data>
-
-  <data name="Copyright_Text" xml:space="preserve">
-    <value>Annotator {0} : Telif Hakkı (c) 2025-{1} Siarhei Kuchuk</value>
-  </data>
-
-  <data name="Menu_File" xml:space="preserve">
-    <value>[ Dosya ]</value>
-  </data>
-
-  <data name="Menu_New" xml:space="preserve">
-    <value>Yeni...</value>
-  </data>
-
-  <data name="Menu_Import" xml:space="preserve">
-    <value>İçe Aktar...</value>
-  </data>
-
-  <data name="Menu_Export" xml:space="preserve">
-    <value>Dışa Aktar...</value>
-  </data>
-
-  <data name="Menu_OpenProjectsFolder" xml:space="preserve">
-    <value>Proje Klasörünü Aç</value>
-  </data>
-
-  <data name="Menu_OpenLogsFolder" xml:space="preserve">
-    <value>Günlük Klasörünü Aç</value>
-  </data>
-
-  <data name="Menu_WebSite" xml:space="preserve">
-    <value>Web Sitesi</value>
-  </data>
-
-  <data name="Menu_License" xml:space="preserve">
-    <value>Lisans</value>
-  </data>
-  <data name="Menu_Options" xml:space="preserve">
-    <value>Seçenekler</value>
-  </data>
-
-  <data name="Menu_EnablePrintScreenHotkey" xml:space="preserve">
-    <value>Print Screen kısayolunu etkinleştir</value>
-  </data>
-
-  <data name="Tool_New" xml:space="preserve">
-    <value>Yeni</value>
-  </data>
-
-  <data name="Tool_Import" xml:space="preserve">
-    <value>İçe Aktar</value>
-  </data>
-
-  <data name="Tool_Export" xml:space="preserve">
-    <value>Dışa Aktar</value>
-  </data>
-
-  <data name="Tool_Screenshot" xml:space="preserve">
-    <value>Ekran Görüntüsü</value>
-  </data>
-
-  <data name="Tool_Copy" xml:space="preserve">
-    <value>Kopyala</value>
-  </data>
-
-  <data name="Tool_Paste" xml:space="preserve">
-    <value>Yapıştır</value>
-  </data>
-
-  <data name="Tool_Select" xml:space="preserve">
-    <value>Seç</value>
-  </data>
-
-  <data name="Tool_Arrow" xml:space="preserve">
-    <value>Ok</value>
-  </data>
-
-  <data name="Tool_Callout" xml:space="preserve">
-    <value>Balon</value>
-  </data>
-
-  <data name="Tool_Note" xml:space="preserve">
-    <value>Not</value>
-  </data>
-
-  <data name="Tool_Border" xml:space="preserve">
-    <value>Kenarlık</value>
-  </data>
-
-  <data name="Tool_Highlight" xml:space="preserve">
-    <value>Vurgula</value>
-  </data>
-
-  <data name="Tool_Blur" xml:space="preserve">
-    <value>Bulanıklaştır</value>
-  </data>
-
-  <data name="Tool_CutVertical" xml:space="preserve">
-    <value>Kes |</value>
-  </data>
-
-  <data name="Tool_CutHorizontal" xml:space="preserve">
-    <value>Kes -</value>
-  </data>
-
-  <data name="Tooltip_New" xml:space="preserve">
-    <value>Yeni proje oluştur</value>
-  </data>
-
-  <data name="Tooltip_Import" xml:space="preserve">
-    <value>Proje veya görüntü içe aktar</value>
-  </data>
-
-  <data name="Tooltip_Export" xml:space="preserve">
-    <value>Görüntü veya projeyi dışa aktar</value>
-  </data>
-
-  <data name="Tooltip_Screenshot" xml:space="preserve">
-    <value>Ekran görüntüsü al</value>
-  </data>
-
-  <data name="Tooltip_Copy" xml:space="preserve">
-    <value>Panoya kopyala</value>
-  </data>
-
-  <data name="Tooltip_Paste" xml:space="preserve">
-    <value>Panodan yapıştır</value>
-  </data>
-
-  <data name="Tooltip_Select" xml:space="preserve">
-    <value>Ek açıklamaları seç ve düzenle</value>
-  </data>
-
-  <data name="Tooltip_Arrow" xml:space="preserve">
-    <value>Ok çiz</value>
-  </data>
-
-  <data name="Tooltip_Callout" xml:space="preserve">
-    <value>Balon ekle</value>
-  </data>
-
-  <data name="Tooltip_Note" xml:space="preserve">
-    <value>Metin notu ekle</value>
-  </data>
-
-  <data name="Tooltip_Border" xml:space="preserve">
-    <value>Kenarlık/dikdörtgen çiz</value>
-  </data>
-
-  <data name="Tooltip_Highlight" xml:space="preserve">
-    <value>Alanı vurgula</value>
-  </data>
-
-  <data name="Tooltip_Blur" xml:space="preserve">
-    <value>Alanı bulanıklaştır</value>
-  </data>
-
-  <data name="Tooltip_CutVertical" xml:space="preserve">
-    <value>Görüntüyü dikey kes</value>
-  </data>
-
-  <data name="Tooltip_CutHorizontal" xml:space="preserve">
-    <value>Görüntüyü yatay kes</value>
-  </data>
-
-  <data name="Tooltip_CollapseExpandPanel" xml:space="preserve">
-    <value>Proje panelini daralt/genişlet</value>
-  </data>
-
-  <data name="Panel_Projects" xml:space="preserve">
-    <value>Projeler</value>
-  </data>
-
-  <data name="Panel_Properties" xml:space="preserve">
-    <value>Özellikler</value>
-  </data>
-
-  <data name="Props_Font" xml:space="preserve">
-    <value>Yazı Tipi</value>
-  </data>
-
-  <data name="Props_Size" xml:space="preserve">
-    <value>Boyut</value>
-  </data>
-
-  <data name="Props_Bold" xml:space="preserve">
-    <value>Kalın</value>
-  </data>
-
-  <data name="Props_Italic" xml:space="preserve">
-    <value>İtalik</value>
-  </data>
-
-  <data name="Props_Color" xml:space="preserve">
-    <value>Renk</value>
-  </data>
-
-  <data name="Dialog_Export_Title" xml:space="preserve">
-    <value>Dışa Aktar</value>
-  </data>
-
-  <data name="Dialog_Import_Title" xml:space="preserve">
-    <value>Proje veya Görüntü İçe Aktar</value>
-  </data>
-
-  <data name="FileType_PNG" xml:space="preserve">
-    <value>PNG Görüntüsü</value>
-  </data>
-
-  <data name="FileType_JPEG" xml:space="preserve">
-    <value>JPEG Görüntüsü</value>
-  </data>
-
-  <data name="FileType_WebP" xml:space="preserve">
-    <value>WebP Görüntüsü</value>
-  </data>
-
-  <data name="FileType_AllSupported" xml:space="preserve">
-    <value>Tüm desteklenen dosyalar</value>
-  </data>
-
-  <data name="FileType_Images" xml:space="preserve">
-    <value>Görüntü Dosyaları</value>
-  </data>
-
-  <data name="FileType_AllFiles" xml:space="preserve">
-    <value>Tüm Dosyalar</value>
-  </data>
-
-  <data name="FileType_AnnotatorProject" xml:space="preserve">
-    <value>Annotator Projesi</value>
-  </data>
-
-  <data name="Screenshot_Instructions" xml:space="preserve">
-    <value>Alan seçmek için tıklayıp sürükleyin veya köşe noktalarını ayarlayın. Hassasiyet için büyüteç kullanın. Hazır olduğunuzda Tamam&apos;a basın.</value>
-  </data>
-
-  <data name="Button_OK" xml:space="preserve">
-    <value>Tamam</value>
-  </data>
-
-  <data name="Button_Cancel" xml:space="preserve">
-    <value>İptal</value>
-  </data>
-
   <data name="Button_Accept" xml:space="preserve">
     <value>✓ Kabul</value>
   </data>
-
+  <data name="Button_Cancel" xml:space="preserve">
+    <value>İptal</value>
+  </data>
   <data name="Button_CancelX" xml:space="preserve">
     <value>✕ İptal</value>
   </data>
-
-  <data name="Update_NewVersionAvailable" xml:space="preserve">
-    <value>Yeni {0} sürümü mevcut.</value>
-  </data>
-
   <data name="Button_Download" xml:space="preserve">
     <value>İndir</value>
   </data>
-
-  <data name="ContextMenu_Open" xml:space="preserve">
-    <value>Aç</value>
+  <data name="Button_OK" xml:space="preserve">
+    <value>Tamam</value>
   </data>
-
   <data name="ContextMenu_Delete" xml:space="preserve">
     <value>Sil</value>
   </data>
-
+  <data name="ContextMenu_Open" xml:space="preserve">
+    <value>Aç</value>
+  </data>
+  <data name="Copyright_Text" xml:space="preserve">
+    <value>Annotator {0} : Telif Hakkı (c) 2025-{1} Siarhei Kuchuk</value>
+  </data>
+  <data name="Dialog_Export_Title" xml:space="preserve">
+    <value>Dışa Aktar</value>
+  </data>
+  <data name="Dialog_Import_Title" xml:space="preserve">
+    <value>Proje veya Görüntü İçe Aktar</value>
+  </data>
+  <data name="FileType_AllFiles" xml:space="preserve">
+    <value>Tüm Dosyalar</value>
+  </data>
+  <data name="FileType_AllSupported" xml:space="preserve">
+    <value>Tüm desteklenen dosyalar</value>
+  </data>
+  <data name="FileType_AnnotatorProject" xml:space="preserve">
+    <value>Annotator Projesi</value>
+  </data>
+  <data name="FileType_Images" xml:space="preserve">
+    <value>Görüntü Dosyaları</value>
+  </data>
+  <data name="FileType_JPEG" xml:space="preserve">
+    <value>JPEG Görüntüsü</value>
+  </data>
+  <data name="FileType_PNG" xml:space="preserve">
+    <value>PNG Görüntüsü</value>
+  </data>
+  <data name="FileType_WebP" xml:space="preserve">
+    <value>WebP Görüntüsü</value>
+  </data>
+  <data name="Header_ScreenshotAnnotator" xml:space="preserve">
+    <value>[ Ekran Görüntüsü İşaretleyici - V{0} ]</value>
+  </data>
   <data name="ImproveIt_Message" xml:space="preserve">
     <value>Beklenmeyen bir hata oluştu.
 
 Masaüstünüzde kaydedilen bilgilerle geliştiricilerle iletişime geçin
-&quot;{0}&quot;
+"{0}"
 
 Uygulama kapanacaktır.</value>
   </data>
+  <data name="Installer_AdminRequired" xml:space="preserve">
+    <value>Tüm kullanıcılar için yüklemek için yönetici ayrıcalıkları gereklidir.
+Lütfen yükleyiciyi yönetici olarak çalıştırın veya /CURRENTUSER kullanın.</value>
+  </data>
+  <data name="Installer_AdminRequiredDetailed" xml:space="preserve">
+    <value>Tüm kullanıcılar için yüklemek için yönetici ayrıcalıkları gereklidir.
 
+Lütfen şunlardan birini yapın:
+- 'Yalnızca geçerli kullanıcı için yükle' seçeneğini seçin veya
+- Bu yükleyiciyi yönetici olarak çalıştırın</value>
+  </data>
+  <data name="Installer_AllUsersDescription" xml:space="preserve">
+    <value>Uygulama bu bilgisayardaki tüm kullanıcılar için kullanılabilir olacaktır.</value>
+  </data>
+  <data name="Installer_AllUsersOption" xml:space="preserve">
+    <value>&amp;Tüm kullanıcılar için yükle (yönetici ayrıcalıkları gerektirir)</value>
+  </data>
+  <data name="Installer_ArchRequired" xml:space="preserve">
+    <value>Bu yükleyici, Windows'un x64 veya arm64 sürümünü gerektirir.</value>
+  </data>
+  <data name="Installer_CurrentUserDescription" xml:space="preserve">
+    <value>Önerilir. Uygulama yalnızca sizin kullanıcı hesabınız için kullanılabilir olacaktır.</value>
+  </data>
+  <data name="Installer_CurrentUserOption" xml:space="preserve">
+    <value>Yalnızca &amp;geçerli kullanıcı için yükle</value>
+  </data>
+  <data name="Installer_InstallingFor" xml:space="preserve">
+    <value>Şunun için yükleniyor:</value>
+  </data>
+  <data name="Installer_InstallModeDescription" xml:space="preserve">
+    <value>Screenshot Annotator'i yalnızca kendiniz için mi yoksa bu bilgisayarın tüm kullanıcıları için mi yüklemek istediğinizi seçin.</value>
+  </data>
+  <data name="Installer_InstallModeSubtitle" xml:space="preserve">
+    <value>Bu uygulamayı kimin kullanabileceğini seçin</value>
+  </data>
+  <data name="Installer_InstallModeTitle" xml:space="preserve">
+    <value>Yükleme Türünü Seçin</value>
+  </data>
+  <data name="Installer_LaunchApp" xml:space="preserve">
+    <value>Uygulamayı Başlat</value>
+  </data>
+  <data name="Menu_EnablePrintScreenHotkey" xml:space="preserve">
+    <value>Print Screen kısayolunu etkinleştir</value>
+  </data>
+  <data name="Menu_Export" xml:space="preserve">
+    <value>Dışa Aktar...</value>
+  </data>
+  <data name="Menu_File" xml:space="preserve">
+    <value>[ Dosya ]</value>
+  </data>
+  <data name="Menu_Import" xml:space="preserve">
+    <value>İçe Aktar...</value>
+  </data>
+  <data name="Menu_License" xml:space="preserve">
+    <value>Lisans</value>
+  </data>
+  <data name="Menu_New" xml:space="preserve">
+    <value>Yeni...</value>
+  </data>
+  <data name="Menu_OpenLogsFolder" xml:space="preserve">
+    <value>Günlük Klasörünü Aç</value>
+  </data>
+  <data name="Menu_OpenProjectsFolder" xml:space="preserve">
+    <value>Proje Klasörünü Aç</value>
+  </data>
+  <data name="Menu_Options" xml:space="preserve">
+    <value>Seçenekler</value>
+  </data>
+  <data name="Menu_WebSite" xml:space="preserve">
+    <value>Web Sitesi</value>
+  </data>
+  <data name="Panel_Projects" xml:space="preserve">
+    <value>Projeler</value>
+  </data>
+  <data name="Panel_Properties" xml:space="preserve">
+    <value>Özellikler</value>
+  </data>
+  <data name="Props_Bold" xml:space="preserve">
+    <value>Kalın</value>
+  </data>
+  <data name="Props_Color" xml:space="preserve">
+    <value>Renk</value>
+  </data>
+  <data name="Props_Font" xml:space="preserve">
+    <value>Yazı Tipi</value>
+  </data>
+  <data name="Props_Italic" xml:space="preserve">
+    <value>İtalik</value>
+  </data>
+  <data name="Props_Size" xml:space="preserve">
+    <value>Boyut</value>
+  </data>
+  <data name="Screenshot_Instructions" xml:space="preserve">
+    <value>Alan seçmek için tıklayıp sürükleyin veya köşe noktalarını ayarlayın. Hassasiyet için büyüteç kullanın. Hazır olduğunuzda Tamam'a basın.</value>
+  </data>
+  <data name="Tool_Arrow" xml:space="preserve">
+    <value>Ok</value>
+  </data>
+  <data name="Tool_Blur" xml:space="preserve">
+    <value>Bulanıklaştır</value>
+  </data>
+  <data name="Tool_Border" xml:space="preserve">
+    <value>Kenarlık</value>
+  </data>
+  <data name="Tool_Callout" xml:space="preserve">
+    <value>Balon</value>
+  </data>
+  <data name="Tool_Copy" xml:space="preserve">
+    <value>Kopyala</value>
+  </data>
+  <data name="Tool_CutHorizontal" xml:space="preserve">
+    <value>Kes -</value>
+  </data>
+  <data name="Tool_CutVertical" xml:space="preserve">
+    <value>Kes |</value>
+  </data>
+  <data name="Tool_Export" xml:space="preserve">
+    <value>Dışa Aktar</value>
+  </data>
+  <data name="Tool_Highlight" xml:space="preserve">
+    <value>Vurgula</value>
+  </data>
+  <data name="Tool_Import" xml:space="preserve">
+    <value>İçe Aktar</value>
+  </data>
+  <data name="Tool_New" xml:space="preserve">
+    <value>Yeni</value>
+  </data>
+  <data name="Tool_Note" xml:space="preserve">
+    <value>Not</value>
+  </data>
+  <data name="Tool_Paste" xml:space="preserve">
+    <value>Yapıştır</value>
+  </data>
+  <data name="Tool_Screenshot" xml:space="preserve">
+    <value>Ekran Görüntüsü</value>
+  </data>
+  <data name="Tool_Select" xml:space="preserve">
+    <value>Seç</value>
+  </data>
+  <data name="Tooltip_Arrow" xml:space="preserve">
+    <value>Ok çiz</value>
+  </data>
+  <data name="Tooltip_Blur" xml:space="preserve">
+    <value>Alanı bulanıklaştır</value>
+  </data>
+  <data name="Tooltip_Border" xml:space="preserve">
+    <value>Kenarlık/dikdörtgen çiz</value>
+  </data>
+  <data name="Tooltip_Callout" xml:space="preserve">
+    <value>Balon ekle</value>
+  </data>
+  <data name="Tooltip_CollapseExpandPanel" xml:space="preserve">
+    <value>Proje panelini daralt/genişlet</value>
+  </data>
+  <data name="Tooltip_Copy" xml:space="preserve">
+    <value>Panoya kopyala</value>
+  </data>
+  <data name="Tooltip_CutHorizontal" xml:space="preserve">
+    <value>Görüntüyü yatay kes</value>
+  </data>
+  <data name="Tooltip_CutVertical" xml:space="preserve">
+    <value>Görüntüyü dikey kes</value>
+  </data>
+  <data name="Tooltip_Export" xml:space="preserve">
+    <value>Görüntü veya projeyi dışa aktar</value>
+  </data>
+  <data name="Tooltip_Highlight" xml:space="preserve">
+    <value>Alanı vurgula</value>
+  </data>
+  <data name="Tooltip_Import" xml:space="preserve">
+    <value>Proje veya görüntü içe aktar</value>
+  </data>
+  <data name="Tooltip_New" xml:space="preserve">
+    <value>Yeni proje oluştur</value>
+  </data>
+  <data name="Tooltip_Note" xml:space="preserve">
+    <value>Metin notu ekle</value>
+  </data>
+  <data name="Tooltip_Paste" xml:space="preserve">
+    <value>Panodan yapıştır</value>
+  </data>
+  <data name="Tooltip_Screenshot" xml:space="preserve">
+    <value>Ekran görüntüsü al</value>
+  </data>
+  <data name="Tooltip_Select" xml:space="preserve">
+    <value>Ek açıklamaları seç ve düzenle</value>
+  </data>
+  <data name="Update_NewVersionAvailable" xml:space="preserve">
+    <value>Yeni {0} sürümü mevcut.</value>
+  </data>
+  <data name="Window_Title" xml:space="preserve">
+    <value>Ekran Görüntüsü İşaretleyici - Görüntü Düzenleyici</value>
+  </data>
+  <data name="Winget_Description" xml:space="preserve">
+    <value>Windows ve Linux için ekran görüntüsü notlandırma yazılımı.
+
+Özellikler:
+- **Oklar** - Özelleştirilebilir oklarla belirli alanlara dikkat çekin
+- **Balonlar** - Düzenlenebilir metinli konuşma balonu ek açıklamaları ekleyin
+- **Notlar** - Ek bilgi için metin kutuları oluşturun
+- **Kenarlık seçimi** - Kenarlıklı dikdörtgenlerle alanları vurgulayın
+- **Bulanıklık** - Hassas bilgileri gizleyin
+- **Seçim aracı** - Kopyalamak (Ctrl+C) veya silmek (Delete) için görüntü parçalarını seçin
+- **Dikey ve yatay dilimler** - Görüntünün dikey veya yatay alanlarını kesin
+- **Vurgulayıcı** - İlgi çekici alanları vurgulayın
+- **Proje yönetimi** - Otomatik kayıt ve önizleme küçük resimleri
+- **Çapraz platform** - Windows ve Linux'ta çalışır</value>
+  </data>
+  <data name="Winget_ShortDescription" xml:space="preserve">
+    <value>Windows ve Linux için ekran görüntüsü notlandırma yazılımı.</value>
+  </data>
 </root>

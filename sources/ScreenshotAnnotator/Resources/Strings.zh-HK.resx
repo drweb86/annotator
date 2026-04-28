@@ -58,291 +58,285 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-
   <!-- Cantonese (Hong Kong) -->
-
-  <data name="Window_Title" xml:space="preserve">
-    <value>截圖標註工具 - 圖像編輯器</value>
+  <data name="_Technical_NsisLanguage" xml:space="preserve">
+    <value>TradChinese</value>
   </data>
-
-  <data name="Header_ScreenshotAnnotator" xml:space="preserve">
-    <value>[ 截圖標註工具 - V{0} ]</value>
+  <data name="_Technical_WingetLocale" xml:space="preserve">
+    <value>zh-HK</value>
   </data>
-
-  <data name="Copyright_Text" xml:space="preserve">
-    <value>Annotator {0} : 版權所有 (c) 2025-{1} Siarhei Kuchuk</value>
-  </data>
-
-  <data name="Menu_File" xml:space="preserve">
-    <value>[ 檔案 ]</value>
-  </data>
-
-  <data name="Menu_New" xml:space="preserve">
-    <value>新增...</value>
-  </data>
-
-  <data name="Menu_Import" xml:space="preserve">
-    <value>匯入...</value>
-  </data>
-
-  <data name="Menu_Export" xml:space="preserve">
-    <value>匯出...</value>
-  </data>
-
-  <data name="Menu_OpenProjectsFolder" xml:space="preserve">
-    <value>開啟專案資料夾</value>
-  </data>
-
-  <data name="Menu_OpenLogsFolder" xml:space="preserve">
-    <value>開啟記錄資料夾</value>
-  </data>
-
-  <data name="Menu_WebSite" xml:space="preserve">
-    <value>網站</value>
-  </data>
-
-  <data name="Menu_License" xml:space="preserve">
-    <value>授權</value>
-  </data>
-  <data name="Menu_Options" xml:space="preserve">
-    <value>選項</value>
-  </data>
-
-  <data name="Menu_EnablePrintScreenHotkey" xml:space="preserve">
-    <value>啟用截圖熱鍵</value>
-  </data>
-
-  <data name="Tool_New" xml:space="preserve">
-    <value>新增</value>
-  </data>
-
-  <data name="Tool_Import" xml:space="preserve">
-    <value>匯入</value>
-  </data>
-
-  <data name="Tool_Export" xml:space="preserve">
-    <value>匯出</value>
-  </data>
-
-  <data name="Tool_Screenshot" xml:space="preserve">
-    <value>截圖</value>
-  </data>
-
-  <data name="Tool_Copy" xml:space="preserve">
-    <value>複製</value>
-  </data>
-
-  <data name="Tool_Paste" xml:space="preserve">
-    <value>貼上</value>
-  </data>
-
-  <data name="Tool_Select" xml:space="preserve">
-    <value>選取</value>
-  </data>
-
-  <data name="Tool_Arrow" xml:space="preserve">
-    <value>箭嘴</value>
-  </data>
-
-  <data name="Tool_Callout" xml:space="preserve">
-    <value>標註框</value>
-  </data>
-
-  <data name="Tool_Note" xml:space="preserve">
-    <value>備註</value>
-  </data>
-
-  <data name="Tool_Border" xml:space="preserve">
-    <value>邊框</value>
-  </data>
-
-  <data name="Tool_Highlight" xml:space="preserve">
-    <value>醒目提示</value>
-  </data>
-
-  <data name="Tool_Blur" xml:space="preserve">
-    <value>模糊</value>
-  </data>
-
-  <data name="Tool_CutVertical" xml:space="preserve">
-    <value>剪直 |</value>
-  </data>
-
-  <data name="Tool_CutHorizontal" xml:space="preserve">
-    <value>剪橫 -</value>
-  </data>
-
-  <data name="Tooltip_New" xml:space="preserve">
-    <value>建立新專案</value>
-  </data>
-
-  <data name="Tooltip_Import" xml:space="preserve">
-    <value>匯入專案或圖像</value>
-  </data>
-
-  <data name="Tooltip_Export" xml:space="preserve">
-    <value>匯出圖像或專案</value>
-  </data>
-
-  <data name="Tooltip_Screenshot" xml:space="preserve">
-    <value>擷取螢幕畫面</value>
-  </data>
-
-  <data name="Tooltip_Copy" xml:space="preserve">
-    <value>複製到剪貼簿</value>
-  </data>
-
-  <data name="Tooltip_Paste" xml:space="preserve">
-    <value>從剪貼簿貼上</value>
-  </data>
-
-  <data name="Tooltip_Select" xml:space="preserve">
-    <value>選取同編輯標註</value>
-  </data>
-
-  <data name="Tooltip_Arrow" xml:space="preserve">
-    <value>畫箭嘴</value>
-  </data>
-
-  <data name="Tooltip_Callout" xml:space="preserve">
-    <value>加入標註框</value>
-  </data>
-
-  <data name="Tooltip_Note" xml:space="preserve">
-    <value>加入文字備註</value>
-  </data>
-
-  <data name="Tooltip_Border" xml:space="preserve">
-    <value>畫邊框／長方形</value>
-  </data>
-
-  <data name="Tooltip_Highlight" xml:space="preserve">
-    <value>醒目提示範圍</value>
-  </data>
-
-  <data name="Tooltip_Blur" xml:space="preserve">
-    <value>模糊範圍</value>
-  </data>
-
-  <data name="Tooltip_CutVertical" xml:space="preserve">
-    <value>垂直裁剪圖像</value>
-  </data>
-
-  <data name="Tooltip_CutHorizontal" xml:space="preserve">
-    <value>水平裁剪圖像</value>
-  </data>
-
-  <data name="Tooltip_CollapseExpandPanel" xml:space="preserve">
-    <value>收合／展開專案面板</value>
-  </data>
-
-  <data name="Panel_Projects" xml:space="preserve">
-    <value>專案</value>
-  </data>
-
-  <data name="Panel_Properties" xml:space="preserve">
-    <value>屬性</value>
-  </data>
-
-  <data name="Props_Font" xml:space="preserve">
-    <value>字型</value>
-  </data>
-
-  <data name="Props_Size" xml:space="preserve">
-    <value>大小</value>
-  </data>
-
-  <data name="Props_Bold" xml:space="preserve">
-    <value>粗體</value>
-  </data>
-
-  <data name="Props_Italic" xml:space="preserve">
-    <value>斜體</value>
-  </data>
-
-  <data name="Props_Color" xml:space="preserve">
-    <value>顏色</value>
-  </data>
-
-  <data name="Dialog_Export_Title" xml:space="preserve">
-    <value>匯出</value>
-  </data>
-
-  <data name="Dialog_Import_Title" xml:space="preserve">
-    <value>匯入專案或圖像</value>
-  </data>
-
-  <data name="FileType_PNG" xml:space="preserve">
-    <value>PNG 圖像</value>
-  </data>
-
-  <data name="FileType_JPEG" xml:space="preserve">
-    <value>JPEG 圖像</value>
-  </data>
-
-  <data name="FileType_WebP" xml:space="preserve">
-    <value>WebP 圖像</value>
-  </data>
-
-  <data name="FileType_AllSupported" xml:space="preserve">
-    <value>所有支援嘅檔案</value>
-  </data>
-
-  <data name="FileType_Images" xml:space="preserve">
-    <value>圖像檔案</value>
-  </data>
-
-  <data name="FileType_AllFiles" xml:space="preserve">
-    <value>所有檔案</value>
-  </data>
-
-  <data name="FileType_AnnotatorProject" xml:space="preserve">
-    <value>Annotator 專案</value>
-  </data>
-
-  <data name="Screenshot_Instructions" xml:space="preserve">
-    <value>撳住拖曳揀範圍，或者調整角位。用放大鏡方便對準。搞掂就撳確定。</value>
-  </data>
-
-  <data name="Button_OK" xml:space="preserve">
-    <value>確定</value>
-  </data>
-
-  <data name="Button_Cancel" xml:space="preserve">
-    <value>取消</value>
-  </data>
-
   <data name="Button_Accept" xml:space="preserve">
     <value>✓ 接受</value>
   </data>
-
+  <data name="Button_Cancel" xml:space="preserve">
+    <value>取消</value>
+  </data>
   <data name="Button_CancelX" xml:space="preserve">
     <value>✕ 取消</value>
   </data>
-
-  <data name="Update_NewVersionAvailable" xml:space="preserve">
-    <value>有新版本 {0} 可用。</value>
-  </data>
-
   <data name="Button_Download" xml:space="preserve">
     <value>下載</value>
   </data>
-
-  <data name="ContextMenu_Open" xml:space="preserve">
-    <value>開啟</value>
+  <data name="Button_OK" xml:space="preserve">
+    <value>確定</value>
   </data>
-
   <data name="ContextMenu_Delete" xml:space="preserve">
     <value>刪除</value>
   </data>
-
+  <data name="ContextMenu_Open" xml:space="preserve">
+    <value>開啟</value>
+  </data>
+  <data name="Copyright_Text" xml:space="preserve">
+    <value>Annotator {0} : 版權所有 (c) 2025-{1} Siarhei Kuchuk</value>
+  </data>
+  <data name="Dialog_Export_Title" xml:space="preserve">
+    <value>匯出</value>
+  </data>
+  <data name="Dialog_Import_Title" xml:space="preserve">
+    <value>匯入專案或圖像</value>
+  </data>
+  <data name="FileType_AllFiles" xml:space="preserve">
+    <value>所有檔案</value>
+  </data>
+  <data name="FileType_AllSupported" xml:space="preserve">
+    <value>所有支援嘅檔案</value>
+  </data>
+  <data name="FileType_AnnotatorProject" xml:space="preserve">
+    <value>Annotator 專案</value>
+  </data>
+  <data name="FileType_Images" xml:space="preserve">
+    <value>圖像檔案</value>
+  </data>
+  <data name="FileType_JPEG" xml:space="preserve">
+    <value>JPEG 圖像</value>
+  </data>
+  <data name="FileType_PNG" xml:space="preserve">
+    <value>PNG 圖像</value>
+  </data>
+  <data name="FileType_WebP" xml:space="preserve">
+    <value>WebP 圖像</value>
+  </data>
+  <data name="Header_ScreenshotAnnotator" xml:space="preserve">
+    <value>[ 截圖標註工具 - V{0} ]</value>
+  </data>
   <data name="ImproveIt_Message" xml:space="preserve">
     <value>發生咗未預期嘅錯誤。
 
 請用桌面度儲低嘅資料聯絡開發者，檔案路徑：
-&quot;{0}&quot;
+"{0}"
 
 應用程式而家會關閉。</value>
   </data>
+  <data name="Installer_AdminRequired" xml:space="preserve">
+    <value>安裝給所有使用者需要系統管理員權限。
+請以系統管理員身分執行安裝程式或使用 /CURRENTUSER。</value>
+  </data>
+  <data name="Installer_AdminRequiredDetailed" xml:space="preserve">
+    <value>安裝給所有使用者需要系統管理員權限。
 
+請選擇：
+- 選擇「僅為目前使用者安裝」，或
+- 以系統管理員身分執行此安裝程式</value>
+  </data>
+  <data name="Installer_AllUsersDescription" xml:space="preserve">
+    <value>此應用程式將可供此電腦上的所有使用者使用。</value>
+  </data>
+  <data name="Installer_AllUsersOption" xml:space="preserve">
+    <value>為所有使用者安裝（需要系統管理員權限）(&amp;A)</value>
+  </data>
+  <data name="Installer_ArchRequired" xml:space="preserve">
+    <value>此安裝程式需要 x64 或 arm64 版本的 Windows。</value>
+  </data>
+  <data name="Installer_CurrentUserDescription" xml:space="preserve">
+    <value>建議。此應用程式僅供您的使用者帳戶使用。</value>
+  </data>
+  <data name="Installer_CurrentUserOption" xml:space="preserve">
+    <value>僅為目前使用者安裝 (&amp;C)</value>
+  </data>
+  <data name="Installer_InstallingFor" xml:space="preserve">
+    <value>正在安裝給：</value>
+  </data>
+  <data name="Installer_InstallModeDescription" xml:space="preserve">
+    <value>請選擇您要僅為自己安裝 Screenshot Annotator，還是為此電腦上的所有使用者安裝。</value>
+  </data>
+  <data name="Installer_InstallModeSubtitle" xml:space="preserve">
+    <value>選擇誰可以使用此應用程式</value>
+  </data>
+  <data name="Installer_InstallModeTitle" xml:space="preserve">
+    <value>選擇安裝類型</value>
+  </data>
+  <data name="Installer_LaunchApp" xml:space="preserve">
+    <value>啟動應用程式</value>
+  </data>
+  <data name="Menu_EnablePrintScreenHotkey" xml:space="preserve">
+    <value>啟用截圖熱鍵</value>
+  </data>
+  <data name="Menu_Export" xml:space="preserve">
+    <value>匯出...</value>
+  </data>
+  <data name="Menu_File" xml:space="preserve">
+    <value>[ 檔案 ]</value>
+  </data>
+  <data name="Menu_Import" xml:space="preserve">
+    <value>匯入...</value>
+  </data>
+  <data name="Menu_License" xml:space="preserve">
+    <value>授權</value>
+  </data>
+  <data name="Menu_New" xml:space="preserve">
+    <value>新增...</value>
+  </data>
+  <data name="Menu_OpenLogsFolder" xml:space="preserve">
+    <value>開啟記錄資料夾</value>
+  </data>
+  <data name="Menu_OpenProjectsFolder" xml:space="preserve">
+    <value>開啟專案資料夾</value>
+  </data>
+  <data name="Menu_Options" xml:space="preserve">
+    <value>選項</value>
+  </data>
+  <data name="Menu_WebSite" xml:space="preserve">
+    <value>網站</value>
+  </data>
+  <data name="Panel_Projects" xml:space="preserve">
+    <value>專案</value>
+  </data>
+  <data name="Panel_Properties" xml:space="preserve">
+    <value>屬性</value>
+  </data>
+  <data name="Props_Bold" xml:space="preserve">
+    <value>粗體</value>
+  </data>
+  <data name="Props_Color" xml:space="preserve">
+    <value>顏色</value>
+  </data>
+  <data name="Props_Font" xml:space="preserve">
+    <value>字型</value>
+  </data>
+  <data name="Props_Italic" xml:space="preserve">
+    <value>斜體</value>
+  </data>
+  <data name="Props_Size" xml:space="preserve">
+    <value>大小</value>
+  </data>
+  <data name="Screenshot_Instructions" xml:space="preserve">
+    <value>撳住拖曳揀範圍，或者調整角位。用放大鏡方便對準。搞掂就撳確定。</value>
+  </data>
+  <data name="Tool_Arrow" xml:space="preserve">
+    <value>箭嘴</value>
+  </data>
+  <data name="Tool_Blur" xml:space="preserve">
+    <value>模糊</value>
+  </data>
+  <data name="Tool_Border" xml:space="preserve">
+    <value>邊框</value>
+  </data>
+  <data name="Tool_Callout" xml:space="preserve">
+    <value>標註框</value>
+  </data>
+  <data name="Tool_Copy" xml:space="preserve">
+    <value>複製</value>
+  </data>
+  <data name="Tool_CutHorizontal" xml:space="preserve">
+    <value>剪橫 -</value>
+  </data>
+  <data name="Tool_CutVertical" xml:space="preserve">
+    <value>剪直 |</value>
+  </data>
+  <data name="Tool_Export" xml:space="preserve">
+    <value>匯出</value>
+  </data>
+  <data name="Tool_Highlight" xml:space="preserve">
+    <value>醒目提示</value>
+  </data>
+  <data name="Tool_Import" xml:space="preserve">
+    <value>匯入</value>
+  </data>
+  <data name="Tool_New" xml:space="preserve">
+    <value>新增</value>
+  </data>
+  <data name="Tool_Note" xml:space="preserve">
+    <value>備註</value>
+  </data>
+  <data name="Tool_Paste" xml:space="preserve">
+    <value>貼上</value>
+  </data>
+  <data name="Tool_Screenshot" xml:space="preserve">
+    <value>截圖</value>
+  </data>
+  <data name="Tool_Select" xml:space="preserve">
+    <value>選取</value>
+  </data>
+  <data name="Tooltip_Arrow" xml:space="preserve">
+    <value>畫箭嘴</value>
+  </data>
+  <data name="Tooltip_Blur" xml:space="preserve">
+    <value>模糊範圍</value>
+  </data>
+  <data name="Tooltip_Border" xml:space="preserve">
+    <value>畫邊框／長方形</value>
+  </data>
+  <data name="Tooltip_Callout" xml:space="preserve">
+    <value>加入標註框</value>
+  </data>
+  <data name="Tooltip_CollapseExpandPanel" xml:space="preserve">
+    <value>收合／展開專案面板</value>
+  </data>
+  <data name="Tooltip_Copy" xml:space="preserve">
+    <value>複製到剪貼簿</value>
+  </data>
+  <data name="Tooltip_CutHorizontal" xml:space="preserve">
+    <value>水平裁剪圖像</value>
+  </data>
+  <data name="Tooltip_CutVertical" xml:space="preserve">
+    <value>垂直裁剪圖像</value>
+  </data>
+  <data name="Tooltip_Export" xml:space="preserve">
+    <value>匯出圖像或專案</value>
+  </data>
+  <data name="Tooltip_Highlight" xml:space="preserve">
+    <value>醒目提示範圍</value>
+  </data>
+  <data name="Tooltip_Import" xml:space="preserve">
+    <value>匯入專案或圖像</value>
+  </data>
+  <data name="Tooltip_New" xml:space="preserve">
+    <value>建立新專案</value>
+  </data>
+  <data name="Tooltip_Note" xml:space="preserve">
+    <value>加入文字備註</value>
+  </data>
+  <data name="Tooltip_Paste" xml:space="preserve">
+    <value>從剪貼簿貼上</value>
+  </data>
+  <data name="Tooltip_Screenshot" xml:space="preserve">
+    <value>擷取螢幕畫面</value>
+  </data>
+  <data name="Tooltip_Select" xml:space="preserve">
+    <value>選取同編輯標註</value>
+  </data>
+  <data name="Update_NewVersionAvailable" xml:space="preserve">
+    <value>有新版本 {0} 可用。</value>
+  </data>
+  <data name="Window_Title" xml:space="preserve">
+    <value>截圖標註工具 - 圖像編輯器</value>
+  </data>
+  <data name="Winget_Description" xml:space="preserve">
+    <value>適用於 Windows 同 Linux 嘅截圖標註軟件。
+
+功能：
+- **箭嘴** - 用可自訂箭嘴引導注意特定區域
+- **標註框** - 加入可編輯文字嘅對話氣泡標註
+- **備註** - 建立文字框添加額外資訊
+- **邊框選擇** - 用有邊框嘅長方形突顯範圍
+- **模糊** - 用模糊效果遮掩敏感資料
+- **選取工具** - 揀選圖像部分以複製（Ctrl+C）或刪除（Delete）
+- **裁剪直向同橫向區域** - 裁剪圖像嘅直向或橫向範圍
+- **醒目提示筆** - 標示重點範圍
+- **專案管理** - 自動儲存專案同預覽縮圖
+- **跨平台** - 支援 Windows 同 Linux</value>
+  </data>
+  <data name="Winget_ShortDescription" xml:space="preserve">
+    <value>適用於 Windows 同 Linux 嘅截圖標註軟件。</value>
+  </data>
 </root>
