@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <!-- Uzbek Translation -->
+  <data name="_Technical_NsisLanguage" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="_Technical_WingetLocale" xml:space="preserve">
+    <value>uz-UZ</value>
+  </data>
+  <data name="Button_Accept" xml:space="preserve">
+    <value>✓ Qabul qilish</value>
+  </data>
+  <data name="Button_Cancel" xml:space="preserve">
+    <value>Bekor qilish</value>
+  </data>
+  <data name="Button_CancelX" xml:space="preserve">
+    <value>✕ Bekor qilish</value>
+  </data>
+  <data name="Button_Download" xml:space="preserve">
+    <value>Yuklab olish</value>
+  </data>
+  <data name="Button_OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="ContextMenu_Delete" xml:space="preserve">
+    <value>O'chirish</value>
+  </data>
+  <data name="ContextMenu_Open" xml:space="preserve">
+    <value>Ochish</value>
+  </data>
+  <data name="Copyright_Text" xml:space="preserve">
+    <value>Annotator {0} : Mualliflik huquqi (c) 2025-{1} Siarhei Kuchuk</value>
+  </data>
+  <data name="Dialog_Export_Title" xml:space="preserve">
+    <value>Eksport qilish</value>
+  </data>
+  <data name="Dialog_Import_Title" xml:space="preserve">
+    <value>Loyiha yoki rasmni import qilish</value>
+  </data>
+  <data name="FileType_AllFiles" xml:space="preserve">
+    <value>Barcha fayllar</value>
+  </data>
+  <data name="FileType_AllSupported" xml:space="preserve">
+    <value>Qo'llab-quvvatlanadigan barcha fayllar</value>
+  </data>
+  <data name="FileType_AnnotatorProject" xml:space="preserve">
+    <value>Annotator loyihasi</value>
+  </data>
+  <data name="FileType_Images" xml:space="preserve">
+    <value>Rasm fayllari</value>
+  </data>
+  <data name="FileType_JPEG" xml:space="preserve">
+    <value>JPEG rasmi</value>
+  </data>
+  <data name="FileType_PNG" xml:space="preserve">
+    <value>PNG rasmi</value>
+  </data>
+  <data name="FileType_WebP" xml:space="preserve">
+    <value>WebP rasmi</value>
+  </data>
+  <data name="Header_ScreenshotAnnotator" xml:space="preserve">
+    <value>[ Ekran tasviri izohlash - V{0} ]</value>
+  </data>
+  <data name="ImproveIt_Message" xml:space="preserve">
+    <value>Kutilmagan xatolik yuz berdi.
+
+Ish stolingizda saqlangan ma'lumotlar bilan ishlab chiquvchilarga murojaat qiling
+"{0}"
+
+Ilova hozir yopiladi.</value>
+  </data>
+  <data name="Installer_AdminRequired" xml:space="preserve">
+    <value>Barcha foydalanuvchilar uchun o'rnatish uchun administrator ruxsati kerak.
+Iltimos, o'rnatuvchini administrator sifatida ishga tushiring yoki /CURRENTUSER dan foydalaning.</value>
+  </data>
+  <data name="Installer_AdminRequiredDetailed" xml:space="preserve">
+    <value>Barcha foydalanuvchilar uchun o'rnatish uchun administrator ruxsati kerak.
+
+Iltimos, quyidagilardan birini bajaring:
+- 'Faqat joriy foydalanuvchi uchun o'rnatish' ni tanlang, yoki
+- Bu o'rnatuvchini administrator sifatida ishga tushiring</value>
+  </data>
+  <data name="Installer_AllUsersDescription" xml:space="preserve">
+    <value>Ilova ushbu kompyuterdagi barcha foydalanuvchilar uchun mavjud bo'ladi.</value>
+  </data>
+  <data name="Installer_AllUsersOption" xml:space="preserve">
+    <value>Barcha foydalanuvchilar uchun o'rnatish (&amp;A) (administrator ruxsati kerak)</value>
+  </data>
+  <data name="Installer_ArchRequired" xml:space="preserve">
+    <value>Bu o'rnatuvchi Windows ning x64 yoki arm64 versiyasini talab qiladi.</value>
+  </data>
+  <data name="Installer_CurrentUserDescription" xml:space="preserve">
+    <value>Tavsiya etiladi. Ilova faqat sizning foydalanuvchi hisobingiz uchun mavjud bo'ladi.</value>
+  </data>
+  <data name="Installer_CurrentUserOption" xml:space="preserve">
+    <value>Faqat joriy foydalanuvchi uchun o'rnatish (&amp;C)</value>
+  </data>
+  <data name="Installer_InstallingFor" xml:space="preserve">
+    <value>Quyidagi uchun o'rnatilmoqda:</value>
+  </data>
+  <data name="Installer_InstallModeDescription" xml:space="preserve">
+    <value>Iltimos, Screenshot Annotator ni faqat o'zingiz uchun yoki ushbu kompyuterdagi barcha foydalanuvchilar uchun o'rnatishni xohlayotganingizni tanlang.</value>
+  </data>
+  <data name="Installer_InstallModeSubtitle" xml:space="preserve">
+    <value>Ushbu ilovadan kim foydalanishi mumkinligini tanlang</value>
+  </data>
+  <data name="Installer_InstallModeTitle" xml:space="preserve">
+    <value>O'rnatish turini tanlang</value>
+  </data>
+  <data name="Installer_LaunchApp" xml:space="preserve">
+    <value>Ilovani ishga tushirish</value>
+  </data>
+  <data name="Menu_EnablePrintScreenHotkey" xml:space="preserve">
+    <value>Print Screen tezkor tugmasini yoqish</value>
+  </data>
+  <data name="Menu_Export" xml:space="preserve">
+    <value>Eksport...</value>
+  </data>
+  <data name="Menu_File" xml:space="preserve">
+    <value>[ Fayl ]</value>
+  </data>
+  <data name="Menu_Import" xml:space="preserve">
+    <value>Import...</value>
+  </data>
+  <data name="Menu_License" xml:space="preserve">
+    <value>Litsenziya</value>
+  </data>
+  <data name="Menu_New" xml:space="preserve">
+    <value>Yangi...</value>
+  </data>
+  <data name="Menu_OpenLogsFolder" xml:space="preserve">
+    <value>_Jurnal papkasini ochish</value>
+  </data>
+  <data name="Menu_OpenProjectsFolder" xml:space="preserve">
+    <value>_Loyihalar papkasini ochish</value>
+  </data>
+  <data name="Menu_Options" xml:space="preserve">
+    <value>Sozlamalar</value>
+  </data>
+  <data name="Menu_WebSite" xml:space="preserve">
+    <value>Veb-sayt</value>
+  </data>
+  <data name="Panel_Projects" xml:space="preserve">
+    <value>Loyihalar</value>
+  </data>
+  <data name="Panel_Properties" xml:space="preserve">
+    <value>Xususiyatlar</value>
+  </data>
+  <data name="Props_Bold" xml:space="preserve">
+    <value>Qalin</value>
+  </data>
+  <data name="Props_Color" xml:space="preserve">
+    <value>Rang</value>
+  </data>
+  <data name="Props_Font" xml:space="preserve">
+    <value>Shrift</value>
+  </data>
+  <data name="Props_Italic" xml:space="preserve">
+    <value>Kursiv</value>
+  </data>
+  <data name="Props_Size" xml:space="preserve">
+    <value>O'lcham</value>
+  </data>
+  <data name="Screenshot_Instructions" xml:space="preserve">
+    <value>Maydonni tanlash uchun bosing va torting yoki burchak nuqtalarini sozlang. Aniqlik uchun lupadan foydalaning. Tayyor bo'lganda OK ni bosing.</value>
+  </data>
+  <data name="Tool_Arrow" xml:space="preserve">
+    <value>O'q</value>
+  </data>
+  <data name="Tool_Blur" xml:space="preserve">
+    <value>Xiralash</value>
+  </data>
+  <data name="Tool_Border" xml:space="preserve">
+    <value>Chegara</value>
+  </data>
+  <data name="Tool_Callout" xml:space="preserve">
+    <value>Izoh</value>
+  </data>
+  <data name="Tool_Copy" xml:space="preserve">
+    <value>Nusxalash</value>
+  </data>
+  <data name="Tool_CutHorizontal" xml:space="preserve">
+    <value>Gorizontal kesish -</value>
+  </data>
+  <data name="Tool_CutVertical" xml:space="preserve">
+    <value>Vertikal kesish |</value>
+  </data>
+  <data name="Tool_Export" xml:space="preserve">
+    <value>Eksport</value>
+  </data>
+  <data name="Tool_Highlight" xml:space="preserve">
+    <value>Ajratib ko'rsatish</value>
+  </data>
+  <data name="Tool_Import" xml:space="preserve">
+    <value>Import</value>
+  </data>
+  <data name="Tool_New" xml:space="preserve">
+    <value>Yangi</value>
+  </data>
+  <data name="Tool_Note" xml:space="preserve">
+    <value>Eslatma</value>
+  </data>
+  <data name="Tool_Paste" xml:space="preserve">
+    <value>Joylash</value>
+  </data>
+  <data name="Tool_Screenshot" xml:space="preserve">
+    <value>Ekran tasviri</value>
+  </data>
+  <data name="Tool_Select" xml:space="preserve">
+    <value>Tanlash</value>
+  </data>
+  <data name="Tooltip_Arrow" xml:space="preserve">
+    <value>O'q chizish</value>
+  </data>
+  <data name="Tooltip_Blur" xml:space="preserve">
+    <value>Maydonni xiralash</value>
+  </data>
+  <data name="Tooltip_Border" xml:space="preserve">
+    <value>Chegara/to'rtburchak chizish</value>
+  </data>
+  <data name="Tooltip_Callout" xml:space="preserve">
+    <value>Izoh qo'shish</value>
+  </data>
+  <data name="Tooltip_CollapseExpandPanel" xml:space="preserve">
+    <value>Loyihalar panelini yig'ish/kengaytirish</value>
+  </data>
+  <data name="Tooltip_Copy" xml:space="preserve">
+    <value>Buferga nusxalash</value>
+  </data>
+  <data name="Tooltip_CutHorizontal" xml:space="preserve">
+    <value>Rasmni gorizontal kesish</value>
+  </data>
+  <data name="Tooltip_CutVertical" xml:space="preserve">
+    <value>Rasmni vertikal kesish</value>
+  </data>
+  <data name="Tooltip_Export" xml:space="preserve">
+    <value>Rasm yoki loyihani eksport qilish</value>
+  </data>
+  <data name="Tooltip_Highlight" xml:space="preserve">
+    <value>Maydonni ajratib ko'rsatish</value>
+  </data>
+  <data name="Tooltip_Import" xml:space="preserve">
+    <value>Loyiha yoki rasmni import qilish</value>
+  </data>
+  <data name="Tooltip_New" xml:space="preserve">
+    <value>Yangi loyiha yaratish</value>
+  </data>
+  <data name="Tooltip_Note" xml:space="preserve">
+    <value>Matn eslatmasi qo'shish</value>
+  </data>
+  <data name="Tooltip_Paste" xml:space="preserve">
+    <value>Buferdan joylashtirish</value>
+  </data>
+  <data name="Tooltip_Screenshot" xml:space="preserve">
+    <value>Ekran tasvirini olish</value>
+  </data>
+  <data name="Tooltip_Select" xml:space="preserve">
+    <value>Izohlarni tanlash va tahrirlash</value>
+  </data>
+  <data name="Update_NewVersionAvailable" xml:space="preserve">
+    <value>Yangi {0} versiyasi mavjud.</value>
+  </data>
+  <data name="Window_Title" xml:space="preserve">
+    <value>Screenshot Annotator - Rasm muharriri</value>
+  </data>
+  <data name="Winget_Description" xml:space="preserve">
+    <value>Windows va Linux uchun ekran tasviri izohlash dasturi.
+
+Xususiyatlar:
+- **O'qlar** - Moslashtirilgan o'qlar bilan muayyan joylarga e'tiborni jalb qilish
+- **Izohlar** - Tahrir qilinadigan matn bilan pufakcha izohlar qo'shish
+- **Eslatmalar** - Qo'shimcha ma'lumot bilan matn qutilari yaratish
+- **Chegara ajratib ko'rsatish** - Chegarali to'rtburchaklar bilan joylarni ajratib ko'rsatish
+- **Xiralash** - Xiralash effektlari bilan maxfiy ma'lumotlarni yashirish
+- **Tanlash vositasi** - Nusxalash (Ctrl+C) yoki o'chirish (Delete) uchun rasm qismlarini tanlash
+- **Vertikal va gorizontal kesish** - Rasmning vertikal yoki gorizontal qismlarini kesish
+- **Ajratib ko'rsatish** - Qiziqarli joylarni ajratib ko'rsatish
+- **Loyihalarni boshqarish** - Loyihalarni avtomatik saqlash va oldindan ko'rish rasmlari
+- **Platformalararo** - Ham Windows, ham Linux da ishlaydi</value>
+  </data>
+  <data name="Winget_ShortDescription" xml:space="preserve">
+    <value>Windows va Linux uchun ekran tasviri izohlash dasturi.</value>
+  </data>
+</root>

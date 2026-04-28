@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <!-- Somali Translation -->
+  <data name="_Technical_NsisLanguage" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="_Technical_WingetLocale" xml:space="preserve">
+    <value>so-SO</value>
+  </data>
+  <data name="Button_Accept" xml:space="preserve">
+    <value>✓ Aqbal</value>
+  </data>
+  <data name="Button_Cancel" xml:space="preserve">
+    <value>Jooji</value>
+  </data>
+  <data name="Button_CancelX" xml:space="preserve">
+    <value>✕ Jooji</value>
+  </data>
+  <data name="Button_Download" xml:space="preserve">
+    <value>Soo deji</value>
+  </data>
+  <data name="Button_OK" xml:space="preserve">
+    <value>Okay</value>
+  </data>
+  <data name="ContextMenu_Delete" xml:space="preserve">
+    <value>Tirtir</value>
+  </data>
+  <data name="ContextMenu_Open" xml:space="preserve">
+    <value>Fur</value>
+  </data>
+  <data name="Copyright_Text" xml:space="preserve">
+    <value>Annotator {0} : Xuquuqda daabacaadda (c) 2025-{1} Siarhei Kuchuk</value>
+  </data>
+  <data name="Dialog_Export_Title" xml:space="preserve">
+    <value>Dhofi</value>
+  </data>
+  <data name="Dialog_Import_Title" xml:space="preserve">
+    <value>Keeni mashruuc ama sawir</value>
+  </data>
+  <data name="FileType_AllFiles" xml:space="preserve">
+    <value>Dhammaan faylalka</value>
+  </data>
+  <data name="FileType_AllSupported" xml:space="preserve">
+    <value>Dhammaan faylalka la taageerayo</value>
+  </data>
+  <data name="FileType_AnnotatorProject" xml:space="preserve">
+    <value>Mashruuca Annotator</value>
+  </data>
+  <data name="FileType_Images" xml:space="preserve">
+    <value>Faylalka sawirka</value>
+  </data>
+  <data name="FileType_JPEG" xml:space="preserve">
+    <value>Sawirka JPEG</value>
+  </data>
+  <data name="FileType_PNG" xml:space="preserve">
+    <value>Sawirka PNG</value>
+  </data>
+  <data name="FileType_WebP" xml:space="preserve">
+    <value>Sawirka WebP</value>
+  </data>
+  <data name="Header_ScreenshotAnnotator" xml:space="preserve">
+    <value>[ Sharaxaadda Sawirka Shaashada - V{0} ]</value>
+  </data>
+  <data name="ImproveIt_Message" xml:space="preserve">
+    <value>Khalad aan la filanayn ayaa dhacay.
+
+Fadlan la xiriir horumariyayaasha isticmaalaya macluumaadka lagu keydsaday desktopkaaga
+"{0}"
+
+Codsiga ayaa hadda xidmi doona.</value>
+  </data>
+  <data name="Installer_AdminRequired" xml:space="preserve">
+    <value>Ogolaanshaha maamulaha ayaa loo baahan yahay si loo rakibo dhammaan isticmaalayaasha.
+Fadlan ku shid rakibaha sida maamule ama isticmaal /CURRENTUSER.</value>
+  </data>
+  <data name="Installer_AdminRequiredDetailed" xml:space="preserve">
+    <value>Ogolaanshaha maamulaha ayaa loo baahan yahay si loo rakibo dhammaan isticmaalayaasha.
+
+Fadlan mid ka mid ah kuwan samee:
+- Dooro 'U rakib isticmaalaha hadda kaliya', ama
+- Ku shid rakibahan sida maamule</value>
+  </data>
+  <data name="Installer_AllUsersDescription" xml:space="preserve">
+    <value>Codsiga ayaa diyaar u noqon doona dhammaan isticmaalayaasha kombiyuutarkan.</value>
+  </data>
+  <data name="Installer_AllUsersOption" xml:space="preserve">
+    <value>U rakib dhammaan isticmaalayaasha (&amp;A) (ogolaanshaha maamulaha ayaa loo baahan yahay)</value>
+  </data>
+  <data name="Installer_ArchRequired" xml:space="preserve">
+    <value>Rakibahan wuxuu u baahan yahay nooca x64 ama arm64 ee Windows.</value>
+  </data>
+  <data name="Installer_CurrentUserDescription" xml:space="preserve">
+    <value>La talinayaa. Codsiga ayaa diyaar u noqon doona xisaabkaaga isticmaalaha kaliya.</value>
+  </data>
+  <data name="Installer_CurrentUserOption" xml:space="preserve">
+    <value>U rakib isticmaalaha hadda kaliya (&amp;C)</value>
+  </data>
+  <data name="Installer_InstallingFor" xml:space="preserve">
+    <value>Waxaa loo rakibayaa:</value>
+  </data>
+  <data name="Installer_InstallModeDescription" xml:space="preserve">
+    <value>Fadlan dooro haddaad rabto inaad ku rakibto Screenshot Annotator adiga kaliya ama dhammaan isticmaalayaasha kombiyuutarkan.</value>
+  </data>
+  <data name="Installer_InstallModeSubtitle" xml:space="preserve">
+    <value>Dooro cidda isticmaali karta codsigan</value>
+  </data>
+  <data name="Installer_InstallModeTitle" xml:space="preserve">
+    <value>Dooro nooca rakibista</value>
+  </data>
+  <data name="Installer_LaunchApp" xml:space="preserve">
+    <value>Bilow codsiga</value>
+  </data>
+  <data name="Menu_EnablePrintScreenHotkey" xml:space="preserve">
+    <value>Fur fure degdegga Print Screen</value>
+  </data>
+  <data name="Menu_Export" xml:space="preserve">
+    <value>Dhofi...</value>
+  </data>
+  <data name="Menu_File" xml:space="preserve">
+    <value>[ Fayl ]</value>
+  </data>
+  <data name="Menu_Import" xml:space="preserve">
+    <value>Keeni...</value>
+  </data>
+  <data name="Menu_License" xml:space="preserve">
+    <value>Shatiga</value>
+  </data>
+  <data name="Menu_New" xml:space="preserve">
+    <value>Cusub...</value>
+  </data>
+  <data name="Menu_OpenLogsFolder" xml:space="preserve">
+    <value>Fur _gala-dhigga folder</value>
+  </data>
+  <data name="Menu_OpenProjectsFolder" xml:space="preserve">
+    <value>Fur _mashruuca folder</value>
+  </data>
+  <data name="Menu_Options" xml:space="preserve">
+    <value>Xulashooyin</value>
+  </data>
+  <data name="Menu_WebSite" xml:space="preserve">
+    <value>Websaydka</value>
+  </data>
+  <data name="Panel_Projects" xml:space="preserve">
+    <value>Mashruucyada</value>
+  </data>
+  <data name="Panel_Properties" xml:space="preserve">
+    <value>Sifooyinka</value>
+  </data>
+  <data name="Props_Bold" xml:space="preserve">
+    <value>Xooggan</value>
+  </data>
+  <data name="Props_Color" xml:space="preserve">
+    <value>Midab</value>
+  </data>
+  <data name="Props_Font" xml:space="preserve">
+    <value>Farta</value>
+  </data>
+  <data name="Props_Italic" xml:space="preserve">
+    <value>Dhinac</value>
+  </data>
+  <data name="Props_Size" xml:space="preserve">
+    <value>Cabbirka</value>
+  </data>
+  <data name="Screenshot_Instructions" xml:space="preserve">
+    <value>Guji oo jiid si aad u doorato aag, ama hagaaji dhibcaha goshaha. Isticmaal korontada si saxsan. Riix OK marka aad diyaar tahay.</value>
+  </data>
+  <data name="Tool_Arrow" xml:space="preserve">
+    <value>Fallaar</value>
+  </data>
+  <data name="Tool_Blur" xml:space="preserve">
+    <value>Dhiirran</value>
+  </data>
+  <data name="Tool_Border" xml:space="preserve">
+    <value>Xad</value>
+  </data>
+  <data name="Tool_Callout" xml:space="preserve">
+    <value>Sharaxaad</value>
+  </data>
+  <data name="Tool_Copy" xml:space="preserve">
+    <value>Koobiyee</value>
+  </data>
+  <data name="Tool_CutHorizontal" xml:space="preserve">
+    <value>Gooyn -</value>
+  </data>
+  <data name="Tool_CutVertical" xml:space="preserve">
+    <value>Gooyn |</value>
+  </data>
+  <data name="Tool_Export" xml:space="preserve">
+    <value>Dhofi</value>
+  </data>
+  <data name="Tool_Highlight" xml:space="preserve">
+    <value>Muuji</value>
+  </data>
+  <data name="Tool_Import" xml:space="preserve">
+    <value>Keeni</value>
+  </data>
+  <data name="Tool_New" xml:space="preserve">
+    <value>Cusub</value>
+  </data>
+  <data name="Tool_Note" xml:space="preserve">
+    <value>Xusuusin</value>
+  </data>
+  <data name="Tool_Paste" xml:space="preserve">
+    <value>Dheji</value>
+  </data>
+  <data name="Tool_Screenshot" xml:space="preserve">
+    <value>Sawir shaashad</value>
+  </data>
+  <data name="Tool_Select" xml:space="preserve">
+    <value>Dooro</value>
+  </data>
+  <data name="Tooltip_Arrow" xml:space="preserve">
+    <value>Sawir fallaar</value>
+  </data>
+  <data name="Tooltip_Blur" xml:space="preserve">
+    <value>Aagga dhiirri</value>
+  </data>
+  <data name="Tooltip_Border" xml:space="preserve">
+    <value>Sawir xad/mustatil</value>
+  </data>
+  <data name="Tooltip_Callout" xml:space="preserve">
+    <value>Ku dar sharaxaad</value>
+  </data>
+  <data name="Tooltip_CollapseExpandPanel" xml:space="preserve">
+    <value>Ururi/Fiddi panel mashruuca</value>
+  </data>
+  <data name="Tooltip_Copy" xml:space="preserve">
+    <value>Koobiyee xasuusta</value>
+  </data>
+  <data name="Tooltip_CutHorizontal" xml:space="preserve">
+    <value>Sawirka gooyn si dhererka</value>
+  </data>
+  <data name="Tooltip_CutVertical" xml:space="preserve">
+    <value>Sawirka gooyn si toosan</value>
+  </data>
+  <data name="Tooltip_Export" xml:space="preserve">
+    <value>Dhofi sawir ama mashruuc</value>
+  </data>
+  <data name="Tooltip_Highlight" xml:space="preserve">
+    <value>Muuji aagga</value>
+  </data>
+  <data name="Tooltip_Import" xml:space="preserve">
+    <value>Keeni mashruuc ama sawir</value>
+  </data>
+  <data name="Tooltip_New" xml:space="preserve">
+    <value>Samee mashruuc cusub</value>
+  </data>
+  <data name="Tooltip_Note" xml:space="preserve">
+    <value>Ku dar xusuusin qoraal</value>
+  </data>
+  <data name="Tooltip_Paste" xml:space="preserve">
+    <value>Dheji xasuusta</value>
+  </data>
+  <data name="Tooltip_Screenshot" xml:space="preserve">
+    <value>Qaado sawir shaashad</value>
+  </data>
+  <data name="Tooltip_Select" xml:space="preserve">
+    <value>Dooro oo wax ka beddel sharaxaadaha</value>
+  </data>
+  <data name="Update_NewVersionAvailable" xml:space="preserve">
+    <value>Nooca cusub {0} ayaa la heli karaa.</value>
+  </data>
+  <data name="Window_Title" xml:space="preserve">
+    <value>Screenshot Annotator - Tifatiraha Sawirka</value>
+  </data>
+  <data name="Winget_Description" xml:space="preserve">
+    <value>Software sharaxaadda sawirka shaashada ee Windows iyo Linux.
+
+Sifooyinka:
+- **Fallaarooyinka** - Si xoogga ugu jiid meelaha gaarka ah oo leh fallaarooyinka la hagaajin karo
+- **Sharaxaadaha** - Ku dar sharaxaadaha qaabka xaanshida oo leh qoraalka la tifatiri karo
+- **Xusuusimaha** - Samee sanduuqyada qoraalka oo leh macluumaad dheeraad ah
+- **Muujeynta xadka** - Muuji meelaha oo leh mustatilyo xad leh
+- **Dhiirinta** - Qari macluumaadka xasaasiga ah oo leh saameynta dhiirrinta
+- **Qalab doorashada** - Dooro qaybo sawirka si aad u koobiyayso (Ctrl+C) ama tirtirayso (furaha Delete)
+- **Goynta toosan iyo dhererka** - Goyn meelaha toosan ama dhererka ee sawirka
+- **Muujinta** - Muuji meelaha xiisaha leh
+- **Maareynta mashruuca** - Keydsiga tooska ah ee mashruuca iyo muuqaalka yar-yar
+- **Wadaagida barnaamijka** - Ku shaqeeya Windows iyo Linux labadaba</value>
+  </data>
+  <data name="Winget_ShortDescription" xml:space="preserve">
+    <value>Software sharaxaadda sawirka shaashada ee Windows iyo Linux.</value>
+  </data>
+</root>

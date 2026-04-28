@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <!-- Azerbaijani Translation -->
+  <data name="_Technical_NsisLanguage" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="_Technical_WingetLocale" xml:space="preserve">
+    <value>az-Latn-AZ</value>
+  </data>
+  <data name="Button_Accept" xml:space="preserve">
+    <value>✓ Qəbul et</value>
+  </data>
+  <data name="Button_Cancel" xml:space="preserve">
+    <value>Ləğv et</value>
+  </data>
+  <data name="Button_CancelX" xml:space="preserve">
+    <value>✕ Ləğv et</value>
+  </data>
+  <data name="Button_Download" xml:space="preserve">
+    <value>Yüklə</value>
+  </data>
+  <data name="Button_OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="ContextMenu_Delete" xml:space="preserve">
+    <value>Sil</value>
+  </data>
+  <data name="ContextMenu_Open" xml:space="preserve">
+    <value>Aç</value>
+  </data>
+  <data name="Copyright_Text" xml:space="preserve">
+    <value>Annotator {0} : Müəllif hüququ (c) 2025-{1} Siarhei Kuchuk</value>
+  </data>
+  <data name="Dialog_Export_Title" xml:space="preserve">
+    <value>İxrac et</value>
+  </data>
+  <data name="Dialog_Import_Title" xml:space="preserve">
+    <value>Layihə və ya şəkil idxal et</value>
+  </data>
+  <data name="FileType_AllFiles" xml:space="preserve">
+    <value>Bütün fayllar</value>
+  </data>
+  <data name="FileType_AllSupported" xml:space="preserve">
+    <value>Bütün dəstəklənən fayllar</value>
+  </data>
+  <data name="FileType_AnnotatorProject" xml:space="preserve">
+    <value>Annotator layihəsi</value>
+  </data>
+  <data name="FileType_Images" xml:space="preserve">
+    <value>Şəkil faylları</value>
+  </data>
+  <data name="FileType_JPEG" xml:space="preserve">
+    <value>JPEG şəkli</value>
+  </data>
+  <data name="FileType_PNG" xml:space="preserve">
+    <value>PNG şəkli</value>
+  </data>
+  <data name="FileType_WebP" xml:space="preserve">
+    <value>WebP şəkli</value>
+  </data>
+  <data name="Header_ScreenshotAnnotator" xml:space="preserve">
+    <value>[ Ekran şəkli annotator - V{0} ]</value>
+  </data>
+  <data name="ImproveIt_Message" xml:space="preserve">
+    <value>Gözlənilməz xəta baş verdi.
+
+Zəhmət olmasa masaüstünüzdə saxlanılan məlumatlarla tərtibatçılarla əlaqə saxlayın
+"{0}"
+
+Tətbiq indi bağlanacaq.</value>
+  </data>
+  <data name="Installer_AdminRequired" xml:space="preserve">
+    <value>Bütün istifadəçilər üçün quraşdırmaq üçün administrator icazəsi tələb olunur.
+Zəhmət olmasa quraşdırıcını administrator kimi işə salın və ya /CURRENTUSER istifadə edin.</value>
+  </data>
+  <data name="Installer_AdminRequiredDetailed" xml:space="preserve">
+    <value>Bütün istifadəçilər üçün quraşdırmaq üçün administrator icazəsi tələb olunur.
+
+Zəhmət olmasa aşağıdakılardan birini edin:
+- 'Yalnız cari istifadəçi üçün quraşdır' seçin, və ya
+- Bu quraşdırıcını administrator kimi işə salın</value>
+  </data>
+  <data name="Installer_AllUsersDescription" xml:space="preserve">
+    <value>Tətbiq bu kompüterdəki bütün istifadəçilər üçün əlçatan olacaq.</value>
+  </data>
+  <data name="Installer_AllUsersOption" xml:space="preserve">
+    <value>Bütün istifadəçilər üçün quraşdır (&amp;A) (administrator icazəsi tələb olunur)</value>
+  </data>
+  <data name="Installer_ArchRequired" xml:space="preserve">
+    <value>Bu quraşdırıcı Windows-un x64 və ya arm64 versiyasını tələb edir.</value>
+  </data>
+  <data name="Installer_CurrentUserDescription" xml:space="preserve">
+    <value>Tövsiyə edilir. Tətbiq yalnız sizin istifadəçi hesabınız üçün əlçatan olacaq.</value>
+  </data>
+  <data name="Installer_CurrentUserOption" xml:space="preserve">
+    <value>Yalnız cari istifadəçi üçün quraşdır (&amp;C)</value>
+  </data>
+  <data name="Installer_InstallingFor" xml:space="preserve">
+    <value>Üçün quraşdırılır:</value>
+  </data>
+  <data name="Installer_InstallModeDescription" xml:space="preserve">
+    <value>Zəhmət olmasa Screenshot Annotator-u yalnız özünüz üçün, yoxsa bu kompüterdəki bütün istifadəçilər üçün quraşdırmaq istədiyinizi seçin.</value>
+  </data>
+  <data name="Installer_InstallModeSubtitle" xml:space="preserve">
+    <value>Bu tətbiqdən kimin istifadə edə biləcəyini seçin</value>
+  </data>
+  <data name="Installer_InstallModeTitle" xml:space="preserve">
+    <value>Quraşdırma növünü seçin</value>
+  </data>
+  <data name="Installer_LaunchApp" xml:space="preserve">
+    <value>Tətbiqi işə sal</value>
+  </data>
+  <data name="Menu_EnablePrintScreenHotkey" xml:space="preserve">
+    <value>Print Screen qısa yolunu aktiv et</value>
+  </data>
+  <data name="Menu_Export" xml:space="preserve">
+    <value>İxrac et...</value>
+  </data>
+  <data name="Menu_File" xml:space="preserve">
+    <value>[ Fayl ]</value>
+  </data>
+  <data name="Menu_Import" xml:space="preserve">
+    <value>İdxal et...</value>
+  </data>
+  <data name="Menu_License" xml:space="preserve">
+    <value>Lisenziya</value>
+  </data>
+  <data name="Menu_New" xml:space="preserve">
+    <value>Yeni...</value>
+  </data>
+  <data name="Menu_OpenLogsFolder" xml:space="preserve">
+    <value>_Jurnal qovluğunu aç</value>
+  </data>
+  <data name="Menu_OpenProjectsFolder" xml:space="preserve">
+    <value>_Layihələr qovluğunu aç</value>
+  </data>
+  <data name="Menu_Options" xml:space="preserve">
+    <value>Seçimlər</value>
+  </data>
+  <data name="Menu_WebSite" xml:space="preserve">
+    <value>Veb sayt</value>
+  </data>
+  <data name="Panel_Projects" xml:space="preserve">
+    <value>Layihələr</value>
+  </data>
+  <data name="Panel_Properties" xml:space="preserve">
+    <value>Xüsusiyyətlər</value>
+  </data>
+  <data name="Props_Bold" xml:space="preserve">
+    <value>Qalın</value>
+  </data>
+  <data name="Props_Color" xml:space="preserve">
+    <value>Rəng</value>
+  </data>
+  <data name="Props_Font" xml:space="preserve">
+    <value>Şrift</value>
+  </data>
+  <data name="Props_Italic" xml:space="preserve">
+    <value>Kursiv</value>
+  </data>
+  <data name="Props_Size" xml:space="preserve">
+    <value>Ölçü</value>
+  </data>
+  <data name="Screenshot_Instructions" xml:space="preserve">
+    <value>Sahə seçmək üçün klikləyin və sürükləyin, ya da künc nöqtələrini tənzimləyin. Dəqiqlik üçün böyüdücüdən istifadə edin. Hazır olduqda OK düyməsini basın.</value>
+  </data>
+  <data name="Tool_Arrow" xml:space="preserve">
+    <value>Ok</value>
+  </data>
+  <data name="Tool_Blur" xml:space="preserve">
+    <value>Bulanıq</value>
+  </data>
+  <data name="Tool_Border" xml:space="preserve">
+    <value>Kənar</value>
+  </data>
+  <data name="Tool_Callout" xml:space="preserve">
+    <value>Çağırış</value>
+  </data>
+  <data name="Tool_Copy" xml:space="preserve">
+    <value>Kopyala</value>
+  </data>
+  <data name="Tool_CutHorizontal" xml:space="preserve">
+    <value>Kəs -</value>
+  </data>
+  <data name="Tool_CutVertical" xml:space="preserve">
+    <value>Kəs |</value>
+  </data>
+  <data name="Tool_Export" xml:space="preserve">
+    <value>İxrac</value>
+  </data>
+  <data name="Tool_Highlight" xml:space="preserve">
+    <value>Vurğula</value>
+  </data>
+  <data name="Tool_Import" xml:space="preserve">
+    <value>İdxal</value>
+  </data>
+  <data name="Tool_New" xml:space="preserve">
+    <value>Yeni</value>
+  </data>
+  <data name="Tool_Note" xml:space="preserve">
+    <value>Qeyd</value>
+  </data>
+  <data name="Tool_Paste" xml:space="preserve">
+    <value>Yapışdır</value>
+  </data>
+  <data name="Tool_Screenshot" xml:space="preserve">
+    <value>Ekran şəkli</value>
+  </data>
+  <data name="Tool_Select" xml:space="preserve">
+    <value>Seç</value>
+  </data>
+  <data name="Tooltip_Arrow" xml:space="preserve">
+    <value>Ok çək</value>
+  </data>
+  <data name="Tooltip_Blur" xml:space="preserve">
+    <value>Sahəni bulanıqlaşdır</value>
+  </data>
+  <data name="Tooltip_Border" xml:space="preserve">
+    <value>Kənar/düzbucaqlı çək</value>
+  </data>
+  <data name="Tooltip_Callout" xml:space="preserve">
+    <value>Çağırış əlavə et</value>
+  </data>
+  <data name="Tooltip_CollapseExpandPanel" xml:space="preserve">
+    <value>Layihələr panelini yığ/aç</value>
+  </data>
+  <data name="Tooltip_Copy" xml:space="preserve">
+    <value>Buferə kopyala</value>
+  </data>
+  <data name="Tooltip_CutHorizontal" xml:space="preserve">
+    <value>Şəkli üfüqi kəs</value>
+  </data>
+  <data name="Tooltip_CutVertical" xml:space="preserve">
+    <value>Şəkli şaquli kəs</value>
+  </data>
+  <data name="Tooltip_Export" xml:space="preserve">
+    <value>Şəkil və ya layihəni ixrac et</value>
+  </data>
+  <data name="Tooltip_Highlight" xml:space="preserve">
+    <value>Sahəni vurğula</value>
+  </data>
+  <data name="Tooltip_Import" xml:space="preserve">
+    <value>Layihə və ya şəkil idxal et</value>
+  </data>
+  <data name="Tooltip_New" xml:space="preserve">
+    <value>Yeni layihə yarat</value>
+  </data>
+  <data name="Tooltip_Note" xml:space="preserve">
+    <value>Mətn qeydi əlavə et</value>
+  </data>
+  <data name="Tooltip_Paste" xml:space="preserve">
+    <value>Buferdən yapışdır</value>
+  </data>
+  <data name="Tooltip_Screenshot" xml:space="preserve">
+    <value>Ekran şəkli çək</value>
+  </data>
+  <data name="Tooltip_Select" xml:space="preserve">
+    <value>Annotasiyaları seç və redaktə et</value>
+  </data>
+  <data name="Update_NewVersionAvailable" xml:space="preserve">
+    <value>Yeni {0} versiyası mövcuddur.</value>
+  </data>
+  <data name="Window_Title" xml:space="preserve">
+    <value>Screenshot Annotator - Şəkil redaktoru</value>
+  </data>
+  <data name="Winget_Description" xml:space="preserve">
+    <value>Windows və Linux üçün ekran şəkli annotasiya proqramı.
+
+Xüsusiyyətlər:
+- **Oxlar** - Fərdiləşdirilə bilən oxlarla xüsusi sahələrə diqqəti cəlb edin
+- **Çağırışlar** - Redaktə edilə bilən mətnlə baloncuk annotasiyaları əlavə edin
+- **Qeydlər** - Əlavə məlumatla mətn qutuları yaradın
+- **Kənar vurğulaması** - Kənarlı düzbucaqlılarla sahələri vurğulayın
+- **Bulanıqlaşdırma** - Bulanıqlaşdırma effektləri ilə həssas məlumatları gizlədin
+- **Seçim aləti** - Kopyalamaq (Ctrl+C) və ya silmək (Delete düyməsi) üçün şəkil hissələrini seçin
+- **Şaquli və üfüqi kəsmə** - Şəklin şaquli və ya üfüqi sahələrini kəsin
+- **Vurğulama** - Maraqlı sahələri vurğulayın
+- **Layihə idarəetməsi** - Layihənin avtomatik saxlanması və önizləmə kiçik şəkilləri
+- **Platformalararası** - Həm Windows, həm də Linux-da işləyir</value>
+  </data>
+  <data name="Winget_ShortDescription" xml:space="preserve">
+    <value>Windows və Linux üçün ekran şəkli annotasiya proqramı.</value>
+  </data>
+</root>

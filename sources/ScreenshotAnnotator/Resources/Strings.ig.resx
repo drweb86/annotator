@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <!-- Igbo Translation -->
+  <data name="_Technical_NsisLanguage" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="_Technical_WingetLocale" xml:space="preserve">
+    <value>ig-NG</value>
+  </data>
+  <data name="Button_Accept" xml:space="preserve">
+    <value>✓ Anabata</value>
+  </data>
+  <data name="Button_Cancel" xml:space="preserve">
+    <value>Kagbuo</value>
+  </data>
+  <data name="Button_CancelX" xml:space="preserve">
+    <value>✕ Kagbuo</value>
+  </data>
+  <data name="Button_Download" xml:space="preserve">
+    <value>Budata</value>
+  </data>
+  <data name="Button_OK" xml:space="preserve">
+    <value>Ọ dị mma</value>
+  </data>
+  <data name="ContextMenu_Delete" xml:space="preserve">
+    <value>Hichapụ</value>
+  </data>
+  <data name="ContextMenu_Open" xml:space="preserve">
+    <value>Mepee</value>
+  </data>
+  <data name="Copyright_Text" xml:space="preserve">
+    <value>Annotator {0} : Ikike ndebi (c) 2025-{1} Siarhei Kuchuk</value>
+  </data>
+  <data name="Dialog_Export_Title" xml:space="preserve">
+    <value>Zipu</value>
+  </data>
+  <data name="Dialog_Import_Title" xml:space="preserve">
+    <value>Bubata ọrụ ma ọ bụ onyonyo</value>
+  </data>
+  <data name="FileType_AllFiles" xml:space="preserve">
+    <value>Faịlụ niile</value>
+  </data>
+  <data name="FileType_AllSupported" xml:space="preserve">
+    <value>Faịlụ niile ndị akwadoro</value>
+  </data>
+  <data name="FileType_AnnotatorProject" xml:space="preserve">
+    <value>Ọrụ Annotator</value>
+  </data>
+  <data name="FileType_Images" xml:space="preserve">
+    <value>Faịlụ onyonyo</value>
+  </data>
+  <data name="FileType_JPEG" xml:space="preserve">
+    <value>Onyonyo JPEG</value>
+  </data>
+  <data name="FileType_PNG" xml:space="preserve">
+    <value>Onyonyo PNG</value>
+  </data>
+  <data name="FileType_WebP" xml:space="preserve">
+    <value>Onyonyo WebP</value>
+  </data>
+  <data name="Header_ScreenshotAnnotator" xml:space="preserve">
+    <value>[ Ihe Nkọwa Foto Ihuenyo - V{0} ]</value>
+  </data>
+  <data name="ImproveIt_Message" xml:space="preserve">
+    <value>Mperi na-atọ anya emeela.
+
+Biko kpọtụrụ ndị mmepụta site na ozi echekwara na desktọp gị na
+"{0}"
+
+Ngwa ga-ezụ ọrụ ugbu a.</value>
+  </data>
+  <data name="Installer_AdminRequired" xml:space="preserve">
+    <value>Ikike onye nchịkwa dị mkpa iji wụnye maka ndị ọrụ niile.
+Biko gbaa mgba onye nchịkwa ma ọ bụ jiri /CURRENTUSER.</value>
+  </data>
+  <data name="Installer_AdminRequiredDetailed" xml:space="preserve">
+    <value>Ikike onye nchịkwa dị mkpa iji wụnye maka ndị ọrụ niile.
+
+Biko mee otu n'ime ndị a:
+- Họrọ 'Wụnye maka onye ọrụ ugbu a naanị', ma ọ bụ
+- Gbaa mgba a dị ka onye nchịkwa</value>
+  </data>
+  <data name="Installer_AllUsersDescription" xml:space="preserve">
+    <value>Ngwa ga-adị maka ndị ọrụ niile n'ime kọmputa a.</value>
+  </data>
+  <data name="Installer_AllUsersOption" xml:space="preserve">
+    <value>Wụnye maka ndị ọrụ niile (&amp;A) (chọrọ ikike onye nchịkwa)</value>
+  </data>
+  <data name="Installer_ArchRequired" xml:space="preserve">
+    <value>Mgba a chọrọ Windows x64 ma ọ bụ arm64.</value>
+  </data>
+  <data name="Installer_CurrentUserDescription" xml:space="preserve">
+    <value>A na-atụ aro. Ngwa ga-adị naanị maka akaụntụ onye ọrụ gị.</value>
+  </data>
+  <data name="Installer_CurrentUserOption" xml:space="preserve">
+    <value>Wụnye maka onye ọrụ ugbu a naanị (&amp;C)</value>
+  </data>
+  <data name="Installer_InstallingFor" xml:space="preserve">
+    <value>Na-awụnye maka:</value>
+  </data>
+  <data name="Installer_InstallModeDescription" xml:space="preserve">
+    <value>Biko họrọ ma ọ bụ ịchọ iwụnye Screenshot Annotator maka gị naanị ma ọ bụ maka ndị ọrụ niile n'ime kọmputa a.</value>
+  </data>
+  <data name="Installer_InstallModeSubtitle" xml:space="preserve">
+    <value>Họrọ onye nwere ike iji ngwa a</value>
+  </data>
+  <data name="Installer_InstallModeTitle" xml:space="preserve">
+    <value>Họrọ ụdị wụnye</value>
+  </data>
+  <data name="Installer_LaunchApp" xml:space="preserve">
+    <value>Malite ngwa</value>
+  </data>
+  <data name="Menu_EnablePrintScreenHotkey" xml:space="preserve">
+    <value>Kwado igodo ngwa ọsọ Print Screen</value>
+  </data>
+  <data name="Menu_Export" xml:space="preserve">
+    <value>Zipu...</value>
+  </data>
+  <data name="Menu_File" xml:space="preserve">
+    <value>[ Faịlụ ]</value>
+  </data>
+  <data name="Menu_Import" xml:space="preserve">
+    <value>Bubata...</value>
+  </data>
+  <data name="Menu_License" xml:space="preserve">
+    <value>Laịsensị</value>
+  </data>
+  <data name="Menu_New" xml:space="preserve">
+    <value>Ọhụrụ...</value>
+  </data>
+  <data name="Menu_OpenLogsFolder" xml:space="preserve">
+    <value>Mepee folda _ndekọ</value>
+  </data>
+  <data name="Menu_OpenProjectsFolder" xml:space="preserve">
+    <value>Mepee folda _ọrụ</value>
+  </data>
+  <data name="Menu_Options" xml:space="preserve">
+    <value>Nhọrọ</value>
+  </data>
+  <data name="Menu_WebSite" xml:space="preserve">
+    <value>Weebụsaịtị</value>
+  </data>
+  <data name="Panel_Projects" xml:space="preserve">
+    <value>Ọrụ</value>
+  </data>
+  <data name="Panel_Properties" xml:space="preserve">
+    <value>Njirimara</value>
+  </data>
+  <data name="Props_Bold" xml:space="preserve">
+    <value>Ike</value>
+  </data>
+  <data name="Props_Color" xml:space="preserve">
+    <value>Agba</value>
+  </data>
+  <data name="Props_Font" xml:space="preserve">
+    <value>Akwụkwọ odee</value>
+  </data>
+  <data name="Props_Italic" xml:space="preserve">
+    <value>Ntụ</value>
+  </data>
+  <data name="Props_Size" xml:space="preserve">
+    <value>Nha</value>
+  </data>
+  <data name="Screenshot_Instructions" xml:space="preserve">
+    <value>Pịa ma dọkọ iji họrọ mpaghara, ma ọ bụ hazie ihe nchekwa narị. Jiri ihe nlekọta maka ìgwè. Pịa OK mgbe ị dị njikere.</value>
+  </data>
+  <data name="Tool_Arrow" xml:space="preserve">
+    <value>Ube</value>
+  </data>
+  <data name="Tool_Blur" xml:space="preserve">
+    <value>Ọchịchọ</value>
+  </data>
+  <data name="Tool_Border" xml:space="preserve">
+    <value>Ókè</value>
+  </data>
+  <data name="Tool_Callout" xml:space="preserve">
+    <value>Okwu igwe</value>
+  </data>
+  <data name="Tool_Copy" xml:space="preserve">
+    <value>Detuo</value>
+  </data>
+  <data name="Tool_CutHorizontal" xml:space="preserve">
+    <value>Belata -</value>
+  </data>
+  <data name="Tool_CutVertical" xml:space="preserve">
+    <value>Belata |</value>
+  </data>
+  <data name="Tool_Export" xml:space="preserve">
+    <value>Zipu</value>
+  </data>
+  <data name="Tool_Highlight" xml:space="preserve">
+    <value>Kọwapụta</value>
+  </data>
+  <data name="Tool_Import" xml:space="preserve">
+    <value>Bubata</value>
+  </data>
+  <data name="Tool_New" xml:space="preserve">
+    <value>Ọhụrụ</value>
+  </data>
+  <data name="Tool_Note" xml:space="preserve">
+    <value>Ndekọ</value>
+  </data>
+  <data name="Tool_Paste" xml:space="preserve">
+    <value>Mado</value>
+  </data>
+  <data name="Tool_Screenshot" xml:space="preserve">
+    <value>Foto ihuenyo</value>
+  </data>
+  <data name="Tool_Select" xml:space="preserve">
+    <value>Họrọ</value>
+  </data>
+  <data name="Tooltip_Arrow" xml:space="preserve">
+    <value>Dere ube</value>
+  </data>
+  <data name="Tooltip_Blur" xml:space="preserve">
+    <value>Mee mpaghara ka ọ bụrụ ọchịchọ</value>
+  </data>
+  <data name="Tooltip_Border" xml:space="preserve">
+    <value>Dere ókè/ọnụ ọgụgụ</value>
+  </data>
+  <data name="Tooltip_Callout" xml:space="preserve">
+    <value>Tinye okwu igwe</value>
+  </data>
+  <data name="Tooltip_CollapseExpandPanel" xml:space="preserve">
+    <value>Mechie/meghee panel ọrụ</value>
+  </data>
+  <data name="Tooltip_Copy" xml:space="preserve">
+    <value>Detuo na clipboard</value>
+  </data>
+  <data name="Tooltip_CutHorizontal" xml:space="preserve">
+    <value>Belata onyonyo n'akụkụ</value>
+  </data>
+  <data name="Tooltip_CutVertical" xml:space="preserve">
+    <value>Belata onyonyo n'elu n'ala</value>
+  </data>
+  <data name="Tooltip_Export" xml:space="preserve">
+    <value>Zipu onyonyo ma ọ bụ ọrụ</value>
+  </data>
+  <data name="Tooltip_Highlight" xml:space="preserve">
+    <value>Kọwapụta mpaghara</value>
+  </data>
+  <data name="Tooltip_Import" xml:space="preserve">
+    <value>Bubata ọrụ ma ọ bụ onyonyo</value>
+  </data>
+  <data name="Tooltip_New" xml:space="preserve">
+    <value>Mepụta ọrụ ọhụrụ</value>
+  </data>
+  <data name="Tooltip_Note" xml:space="preserve">
+    <value>Tinye ndekọ ederede</value>
+  </data>
+  <data name="Tooltip_Paste" xml:space="preserve">
+    <value>Mado site na clipboard</value>
+  </data>
+  <data name="Tooltip_Screenshot" xml:space="preserve">
+    <value>Were foto ihuenyo</value>
+  </data>
+  <data name="Tooltip_Select" xml:space="preserve">
+    <value>Họrọ ma dezie nkọwa</value>
+  </data>
+  <data name="Update_NewVersionAvailable" xml:space="preserve">
+    <value>Ụdị ọhụrụ {0} dị ugbu a.</value>
+  </data>
+  <data name="Window_Title" xml:space="preserve">
+    <value>Screenshot Annotator - Onye dezie onyonyo</value>
+  </data>
+  <data name="Winget_Description" xml:space="preserve">
+    <value>Ngwa nkọwa foto ihuenyo maka Windows na Linux.
+
+Atụmatụ:
+- **Ube** - Dọkọ uche gaa n'ókè mpaghara site n'ube ndị enwere ike hazie
+- **Okwu igwe** - Tinye nkọwa ụdị igwe nke nwere ederede enwere ike dezie
+- **Ndekọ** - Mepụta igbe ederede nke nwere ozi ọzọ
+- **Kọwapụta ókè** - Kọwapụta mpaghara site n'ókè ọnụ ọgụgụ
+- **Ọchịchọ** - Zochie ozi nzuzo site n'ihe nchụpụ ọchịchọ
+- **Ngwa nhọrọ** - Họrọ akụkụ onyonyo iji detuo (Ctrl+C) ma ọ bụ hichapụ (igodo Delete)
+- **Ibelata n'elu n'ala na n'akụkụ** - Belata akụkụ n'elu n'ala ma ọ bụ n'akụkụ nke onyonyo
+- **Kọwapụta** - Kọwapụta mpaghara ndị na-atọ mmasị
+- **Njikwa ọrụ** - Echekwa ọrụ na-akpaliwanye na foto ntụle obere
+- **Ọrụ n'elu ikpo okwu dị iche iche** - Na-arụ ọrụ na Windows na Linux</value>
+  </data>
+  <data name="Winget_ShortDescription" xml:space="preserve">
+    <value>Ngwa nkọwa foto ihuenyo maka Windows na Linux.</value>
+  </data>
+</root>

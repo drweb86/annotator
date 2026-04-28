@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <!-- Serbian Translation -->
+  <data name="_Technical_NsisLanguage" xml:space="preserve">
+    <value>Serbian</value>
+  </data>
+  <data name="_Technical_WingetLocale" xml:space="preserve">
+    <value>sr-Latn-RS</value>
+  </data>
+  <data name="Button_Accept" xml:space="preserve">
+    <value>✓ Prihvati</value>
+  </data>
+  <data name="Button_Cancel" xml:space="preserve">
+    <value>Otkaži</value>
+  </data>
+  <data name="Button_CancelX" xml:space="preserve">
+    <value>✕ Otkaži</value>
+  </data>
+  <data name="Button_Download" xml:space="preserve">
+    <value>Preuzmi</value>
+  </data>
+  <data name="Button_OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="ContextMenu_Delete" xml:space="preserve">
+    <value>Obriši</value>
+  </data>
+  <data name="ContextMenu_Open" xml:space="preserve">
+    <value>Otvori</value>
+  </data>
+  <data name="Copyright_Text" xml:space="preserve">
+    <value>Annotator {0} : Autorska prava (c) 2025-{1} Siarhei Kuchuk</value>
+  </data>
+  <data name="Dialog_Export_Title" xml:space="preserve">
+    <value>Izvezi</value>
+  </data>
+  <data name="Dialog_Import_Title" xml:space="preserve">
+    <value>Uvezi projekat ili sliku</value>
+  </data>
+  <data name="FileType_AllFiles" xml:space="preserve">
+    <value>Sve datoteke</value>
+  </data>
+  <data name="FileType_AllSupported" xml:space="preserve">
+    <value>Sve podržane datoteke</value>
+  </data>
+  <data name="FileType_AnnotatorProject" xml:space="preserve">
+    <value>Annotator projekat</value>
+  </data>
+  <data name="FileType_Images" xml:space="preserve">
+    <value>Datoteke slika</value>
+  </data>
+  <data name="FileType_JPEG" xml:space="preserve">
+    <value>JPEG slika</value>
+  </data>
+  <data name="FileType_PNG" xml:space="preserve">
+    <value>PNG slika</value>
+  </data>
+  <data name="FileType_WebP" xml:space="preserve">
+    <value>WebP slika</value>
+  </data>
+  <data name="Header_ScreenshotAnnotator" xml:space="preserve">
+    <value>[ Anotator snimaka ekrana - V{0} ]</value>
+  </data>
+  <data name="ImproveIt_Message" xml:space="preserve">
+    <value>Došlo je do neočekivane greške.
+
+Molimo kontaktirajte programere koristeći informacije sačuvane na radnoj površini u
+"{0}"
+
+Aplikacija će se sada zatvoriti.</value>
+  </data>
+  <data name="Installer_AdminRequired" xml:space="preserve">
+    <value>Potrebna su administratorska prava za instalaciju za sve korisnike.
+Pokrenite instalater kao administrator ili koristite /CURRENTUSER.</value>
+  </data>
+  <data name="Installer_AdminRequiredDetailed" xml:space="preserve">
+    <value>Potrebna su administratorska prava za instalaciju za sve korisnike.
+
+Molimo uradite jedno od sledećeg:
+- Izaberite „Instaliraj samo za trenutnog korisnika", ili
+- Pokrenite ovaj instalater kao administrator</value>
+  </data>
+  <data name="Installer_AllUsersDescription" xml:space="preserve">
+    <value>Aplikacija će biti dostupna svim korisnicima na ovom računaru.</value>
+  </data>
+  <data name="Installer_AllUsersOption" xml:space="preserve">
+    <value>Instaliraj za sve korisnike (&amp;A) (potrebna su administratorska prava)</value>
+  </data>
+  <data name="Installer_ArchRequired" xml:space="preserve">
+    <value>Ovaj instalater zahteva x64 ili arm64 verziju Windows-a.</value>
+  </data>
+  <data name="Installer_CurrentUserDescription" xml:space="preserve">
+    <value>Preporučeno. Aplikacija će biti dostupna samo za vaš korisnički nalog.</value>
+  </data>
+  <data name="Installer_CurrentUserOption" xml:space="preserve">
+    <value>Instaliraj samo za trenutnog korisnika (&amp;C)</value>
+  </data>
+  <data name="Installer_InstallingFor" xml:space="preserve">
+    <value>Instaliranje za:</value>
+  </data>
+  <data name="Installer_InstallModeDescription" xml:space="preserve">
+    <value>Molimo izaberite da li želite da instalirate Screenshot Annotator samo za sebe ili za sve korisnike na ovom računaru.</value>
+  </data>
+  <data name="Installer_InstallModeSubtitle" xml:space="preserve">
+    <value>Izaberite ko može da koristi ovu aplikaciju</value>
+  </data>
+  <data name="Installer_InstallModeTitle" xml:space="preserve">
+    <value>Izaberite tip instalacije</value>
+  </data>
+  <data name="Installer_LaunchApp" xml:space="preserve">
+    <value>Pokrenite aplikaciju</value>
+  </data>
+  <data name="Menu_EnablePrintScreenHotkey" xml:space="preserve">
+    <value>Omogući prečicu Print Screen</value>
+  </data>
+  <data name="Menu_Export" xml:space="preserve">
+    <value>Izvezi...</value>
+  </data>
+  <data name="Menu_File" xml:space="preserve">
+    <value>[ Datoteka ]</value>
+  </data>
+  <data name="Menu_Import" xml:space="preserve">
+    <value>Uvezi...</value>
+  </data>
+  <data name="Menu_License" xml:space="preserve">
+    <value>Licenca</value>
+  </data>
+  <data name="Menu_New" xml:space="preserve">
+    <value>Novo...</value>
+  </data>
+  <data name="Menu_OpenLogsFolder" xml:space="preserve">
+    <value>Otvori folder _dnevnika</value>
+  </data>
+  <data name="Menu_OpenProjectsFolder" xml:space="preserve">
+    <value>Otvori folder _projekata</value>
+  </data>
+  <data name="Menu_Options" xml:space="preserve">
+    <value>Opcije</value>
+  </data>
+  <data name="Menu_WebSite" xml:space="preserve">
+    <value>Veb sajt</value>
+  </data>
+  <data name="Panel_Projects" xml:space="preserve">
+    <value>Projekti</value>
+  </data>
+  <data name="Panel_Properties" xml:space="preserve">
+    <value>Svojstva</value>
+  </data>
+  <data name="Props_Bold" xml:space="preserve">
+    <value>Podebljano</value>
+  </data>
+  <data name="Props_Color" xml:space="preserve">
+    <value>Boja</value>
+  </data>
+  <data name="Props_Font" xml:space="preserve">
+    <value>Font</value>
+  </data>
+  <data name="Props_Italic" xml:space="preserve">
+    <value>Kurziv</value>
+  </data>
+  <data name="Props_Size" xml:space="preserve">
+    <value>Veličina</value>
+  </data>
+  <data name="Screenshot_Instructions" xml:space="preserve">
+    <value>Kliknite i prevucite da biste izabrali oblast ili podesite tačke uglova. Koristite lupu za preciznost. Pritisnite OK kada ste spremni.</value>
+  </data>
+  <data name="Tool_Arrow" xml:space="preserve">
+    <value>Strelica</value>
+  </data>
+  <data name="Tool_Blur" xml:space="preserve">
+    <value>Zamućenje</value>
+  </data>
+  <data name="Tool_Border" xml:space="preserve">
+    <value>Ivica</value>
+  </data>
+  <data name="Tool_Callout" xml:space="preserve">
+    <value>Oblačić</value>
+  </data>
+  <data name="Tool_Copy" xml:space="preserve">
+    <value>Kopiraj</value>
+  </data>
+  <data name="Tool_CutHorizontal" xml:space="preserve">
+    <value>Iseci -</value>
+  </data>
+  <data name="Tool_CutVertical" xml:space="preserve">
+    <value>Iseci |</value>
+  </data>
+  <data name="Tool_Export" xml:space="preserve">
+    <value>Izvezi</value>
+  </data>
+  <data name="Tool_Highlight" xml:space="preserve">
+    <value>Istakni</value>
+  </data>
+  <data name="Tool_Import" xml:space="preserve">
+    <value>Uvezi</value>
+  </data>
+  <data name="Tool_New" xml:space="preserve">
+    <value>Novo</value>
+  </data>
+  <data name="Tool_Note" xml:space="preserve">
+    <value>Beleška</value>
+  </data>
+  <data name="Tool_Paste" xml:space="preserve">
+    <value>Nalepi</value>
+  </data>
+  <data name="Tool_Screenshot" xml:space="preserve">
+    <value>Snimak ekrana</value>
+  </data>
+  <data name="Tool_Select" xml:space="preserve">
+    <value>Izaberi</value>
+  </data>
+  <data name="Tooltip_Arrow" xml:space="preserve">
+    <value>Nacrtaj strelicu</value>
+  </data>
+  <data name="Tooltip_Blur" xml:space="preserve">
+    <value>Zamuć oblast</value>
+  </data>
+  <data name="Tooltip_Border" xml:space="preserve">
+    <value>Nacrtaj ivicu/pravougaonik</value>
+  </data>
+  <data name="Tooltip_Callout" xml:space="preserve">
+    <value>Dodaj oblačić</value>
+  </data>
+  <data name="Tooltip_CollapseExpandPanel" xml:space="preserve">
+    <value>Skupi/proširi panel projekata</value>
+  </data>
+  <data name="Tooltip_Copy" xml:space="preserve">
+    <value>Kopiraj u ostavu</value>
+  </data>
+  <data name="Tooltip_CutHorizontal" xml:space="preserve">
+    <value>Iseci sliku horizontalno</value>
+  </data>
+  <data name="Tooltip_CutVertical" xml:space="preserve">
+    <value>Iseci sliku vertikalno</value>
+  </data>
+  <data name="Tooltip_Export" xml:space="preserve">
+    <value>Izvezi sliku ili projekat</value>
+  </data>
+  <data name="Tooltip_Highlight" xml:space="preserve">
+    <value>Istakni oblast</value>
+  </data>
+  <data name="Tooltip_Import" xml:space="preserve">
+    <value>Uvezi projekat ili sliku</value>
+  </data>
+  <data name="Tooltip_New" xml:space="preserve">
+    <value>Napravi novi projekat</value>
+  </data>
+  <data name="Tooltip_Note" xml:space="preserve">
+    <value>Dodaj tekstualnu belešku</value>
+  </data>
+  <data name="Tooltip_Paste" xml:space="preserve">
+    <value>Nalepi iz ostave</value>
+  </data>
+  <data name="Tooltip_Screenshot" xml:space="preserve">
+    <value>Napravi snimak ekrana</value>
+  </data>
+  <data name="Tooltip_Select" xml:space="preserve">
+    <value>Izaberi i uredi anotacije</value>
+  </data>
+  <data name="Update_NewVersionAvailable" xml:space="preserve">
+    <value>Nova verzija {0} je dostupna.</value>
+  </data>
+  <data name="Window_Title" xml:space="preserve">
+    <value>Screenshot Annotator - Uređivač slika</value>
+  </data>
+  <data name="Winget_Description" xml:space="preserve">
+    <value>Softver za anotaciju snimaka ekrana za Windows i Linux.
+
+Funkcije:
+- **Strelice** - Skrenite pažnju na određene oblasti prilagodljivim strelicama
+- **Oblačići** - Dodajte anotacije u stilu oblačića sa izmenjivim tekstom
+- **Beleške** - Napravite tekstualna polja sa dodatnim informacijama
+- **Isticanje ivicom** - Istaknite oblasti pravougaonicima sa ivicom
+- **Zamućenje** - Sakrijte osetljive informacije efektima zamućenja
+- **Alat za izbor** - Izaberite delove slike za kopiranje (Ctrl+C) ili brisanje (taster Delete)
+- **Vertikalno i horizontalno isecanje** - Isecite vertikalne ili horizontalne oblasti slike
+- **Isticanje** - Istaknite oblasti od interesa
+- **Upravljanje projektima** - Automatsko čuvanje projekata i sličice pregleda
+- **Višeplatformski** - Radi i na Windows-u i na Linux-u</value>
+  </data>
+  <data name="Winget_ShortDescription" xml:space="preserve">
+    <value>Softver za anotaciju snimaka ekrana za Windows i Linux.</value>
+  </data>
+</root>

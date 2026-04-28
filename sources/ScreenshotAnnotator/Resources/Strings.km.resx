@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <!-- Khmer Translation -->
+  <data name="_Technical_NsisLanguage" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="_Technical_WingetLocale" xml:space="preserve">
+    <value>km-KH</value>
+  </data>
+  <data name="Button_Accept" xml:space="preserve">
+    <value>✓ ទទួលយក</value>
+  </data>
+  <data name="Button_Cancel" xml:space="preserve">
+    <value>បោះបង់</value>
+  </data>
+  <data name="Button_CancelX" xml:space="preserve">
+    <value>✕ បោះបង់</value>
+  </data>
+  <data name="Button_Download" xml:space="preserve">
+    <value>ទាញយក</value>
+  </data>
+  <data name="Button_OK" xml:space="preserve">
+    <value>យល់ព្រម</value>
+  </data>
+  <data name="ContextMenu_Delete" xml:space="preserve">
+    <value>លុប</value>
+  </data>
+  <data name="ContextMenu_Open" xml:space="preserve">
+    <value>បើក</value>
+  </data>
+  <data name="Copyright_Text" xml:space="preserve">
+    <value>Annotator {0} : រក្សាសិទ្ធិ (c) 2025-{1} Siarhei Kuchuk</value>
+  </data>
+  <data name="Dialog_Export_Title" xml:space="preserve">
+    <value>នាំចេញ</value>
+  </data>
+  <data name="Dialog_Import_Title" xml:space="preserve">
+    <value>នាំចូលគម្រោង ឬរូបភាព</value>
+  </data>
+  <data name="FileType_AllFiles" xml:space="preserve">
+    <value>ឯកសារទាំងអស់</value>
+  </data>
+  <data name="FileType_AllSupported" xml:space="preserve">
+    <value>ឯកសារដែលគាំទ្រទាំងអស់</value>
+  </data>
+  <data name="FileType_AnnotatorProject" xml:space="preserve">
+    <value>គម្រោង Annotator</value>
+  </data>
+  <data name="FileType_Images" xml:space="preserve">
+    <value>ឯកសាររូបភាព</value>
+  </data>
+  <data name="FileType_JPEG" xml:space="preserve">
+    <value>រូបភាព JPEG</value>
+  </data>
+  <data name="FileType_PNG" xml:space="preserve">
+    <value>រូបភាព PNG</value>
+  </data>
+  <data name="FileType_WebP" xml:space="preserve">
+    <value>រូបភាព WebP</value>
+  </data>
+  <data name="Header_ScreenshotAnnotator" xml:space="preserve">
+    <value>[ កម្មវិធីសរសេរចំណាំរូបថតអេក្រង់ - V{0} ]</value>
+  </data>
+  <data name="ImproveIt_Message" xml:space="preserve">
+    <value>មានបញ្ហាដែលមិនបានរំពឹងទុក។
+
+សូមទាក់ទងអ្នកអភិវឌ្ឍន៍ដោយប្រើព័ត៌មានដែលបានរក្សាទុកនៅលើ desktop របស់អ្នកនៅក្នុង
+"{0}"
+
+កម្មវិធីនឹងបិទឥឡូវនេះ។</value>
+  </data>
+  <data name="Installer_AdminRequired" xml:space="preserve">
+    <value>ត្រូវការសិទ្ធិអ្នកគ្រប់គ្រងដើម្បីដំឡើងសម្រាប់អ្នកប្រើប្រាស់ទាំងអស់។
+សូមដំណើរការកម្មវិធីដំឡើងជាអ្នកគ្រប់គ្រង ឬប្រើ /CURRENTUSER។</value>
+  </data>
+  <data name="Installer_AdminRequiredDetailed" xml:space="preserve">
+    <value>ត្រូវការសិទ្ធិអ្នកគ្រប់គ្រងដើម្បីដំឡើងសម្រាប់អ្នកប្រើប្រាស់ទាំងអស់។
+
+សូមធ្វើមួយក្នុងចំណោមនេះ:
+- ជ្រើសរើស 'ដំឡើងសម្រាប់អ្នកប្រើប្រាស់បច្ចុប្បន្នតែប៉ុណ្ណោះ' ឬ
+- ដំណើរការកម្មវិធីដំឡើងនេះជាអ្នកគ្រប់គ្រង</value>
+  </data>
+  <data name="Installer_AllUsersDescription" xml:space="preserve">
+    <value>កម្មវិធីនឹងមានសម្រាប់អ្នកប្រើប្រាស់ទាំងអស់នៅលើកុំព្យូទ័រនេះ។</value>
+  </data>
+  <data name="Installer_AllUsersOption" xml:space="preserve">
+    <value>ដំឡើងសម្រាប់អ្នកប្រើប្រាស់ទាំងអស់ (&amp;A) (ត្រូវការសិទ្ធិអ្នកគ្រប់គ្រង)</value>
+  </data>
+  <data name="Installer_ArchRequired" xml:space="preserve">
+    <value>កម្មវិធីដំឡើងនេះត្រូវការ Windows x64 ឬ arm64។</value>
+  </data>
+  <data name="Installer_CurrentUserDescription" xml:space="preserve">
+    <value>បានណែនាំ។ កម្មវិធីនឹងមានតែសម្រាប់គណនីអ្នកប្រើប្រាស់របស់អ្នក។</value>
+  </data>
+  <data name="Installer_CurrentUserOption" xml:space="preserve">
+    <value>ដំឡើងសម្រាប់អ្នកប្រើប្រាស់បច្ចុប្បន្នតែប៉ុណ្ណោះ (&amp;C)</value>
+  </data>
+  <data name="Installer_InstallingFor" xml:space="preserve">
+    <value>កំពុងដំឡើងសម្រាប់:</value>
+  </data>
+  <data name="Installer_InstallModeDescription" xml:space="preserve">
+    <value>សូមជ្រើសរើសថាតើអ្នកចង់ដំឡើង Screenshot Annotator សម្រាប់ខ្លួនឯងតែប៉ុណ្ណោះ ឬសម្រាប់អ្នកប្រើប្រាស់ទាំងអស់នៅលើកុំព្យូទ័រនេះ។</value>
+  </data>
+  <data name="Installer_InstallModeSubtitle" xml:space="preserve">
+    <value>ជ្រើសរើសអ្នកណាអាចប្រើកម្មវិធីនេះ</value>
+  </data>
+  <data name="Installer_InstallModeTitle" xml:space="preserve">
+    <value>ជ្រើសរើសប្រភេទការដំឡើង</value>
+  </data>
+  <data name="Installer_LaunchApp" xml:space="preserve">
+    <value>បើកកម្មវិធី</value>
+  </data>
+  <data name="Menu_EnablePrintScreenHotkey" xml:space="preserve">
+    <value>បើក Print Screen Hotkey</value>
+  </data>
+  <data name="Menu_Export" xml:space="preserve">
+    <value>នាំចេញ...</value>
+  </data>
+  <data name="Menu_File" xml:space="preserve">
+    <value>[ ឯកសារ ]</value>
+  </data>
+  <data name="Menu_Import" xml:space="preserve">
+    <value>នាំចូល...</value>
+  </data>
+  <data name="Menu_License" xml:space="preserve">
+    <value>អាជ្ញាបណ្ណ</value>
+  </data>
+  <data name="Menu_New" xml:space="preserve">
+    <value>ថ្មី...</value>
+  </data>
+  <data name="Menu_OpenLogsFolder" xml:space="preserve">
+    <value>បើកថតឯកសារ _Log</value>
+  </data>
+  <data name="Menu_OpenProjectsFolder" xml:space="preserve">
+    <value>បើកថតឯកសារ _គម្រោង</value>
+  </data>
+  <data name="Menu_Options" xml:space="preserve">
+    <value>ជម្រើស</value>
+  </data>
+  <data name="Menu_WebSite" xml:space="preserve">
+    <value>គេហទំព័រ</value>
+  </data>
+  <data name="Panel_Projects" xml:space="preserve">
+    <value>គម្រោង</value>
+  </data>
+  <data name="Panel_Properties" xml:space="preserve">
+    <value>លក្ខណៈ</value>
+  </data>
+  <data name="Props_Bold" xml:space="preserve">
+    <value>ដិត</value>
+  </data>
+  <data name="Props_Color" xml:space="preserve">
+    <value>ពណ៌</value>
+  </data>
+  <data name="Props_Font" xml:space="preserve">
+    <value>ពុម្ពអក្សរ</value>
+  </data>
+  <data name="Props_Italic" xml:space="preserve">
+    <value>ទ្រេត</value>
+  </data>
+  <data name="Props_Size" xml:space="preserve">
+    <value>ទំហំ</value>
+  </data>
+  <data name="Screenshot_Instructions" xml:space="preserve">
+    <value>ចុចហើយអូសដើម្បីជ្រើសរើសតំបន់ ឬកែសម្រួលចំណុចជ្រុង។ ប្រើកែវពង្រីករសម្រាប់ភាពត្រឹមត្រូវ។ ចុច OK នៅពេលរួចរាល់។</value>
+  </data>
+  <data name="Tool_Arrow" xml:space="preserve">
+    <value>ព្រួញ</value>
+  </data>
+  <data name="Tool_Blur" xml:space="preserve">
+    <value>ព្រិល</value>
+  </data>
+  <data name="Tool_Border" xml:space="preserve">
+    <value>បន្ទាត់ព័ទ្ធ</value>
+  </data>
+  <data name="Tool_Callout" xml:space="preserve">
+    <value>ចំណាំ</value>
+  </data>
+  <data name="Tool_Copy" xml:space="preserve">
+    <value>ចម្លង</value>
+  </data>
+  <data name="Tool_CutHorizontal" xml:space="preserve">
+    <value>កាត់ -</value>
+  </data>
+  <data name="Tool_CutVertical" xml:space="preserve">
+    <value>កាត់ |</value>
+  </data>
+  <data name="Tool_Export" xml:space="preserve">
+    <value>នាំចេញ</value>
+  </data>
+  <data name="Tool_Highlight" xml:space="preserve">
+    <value>គូសបញ្ជាក់</value>
+  </data>
+  <data name="Tool_Import" xml:space="preserve">
+    <value>នាំចូល</value>
+  </data>
+  <data name="Tool_New" xml:space="preserve">
+    <value>ថ្មី</value>
+  </data>
+  <data name="Tool_Note" xml:space="preserve">
+    <value>កំណត់ចំណាំ</value>
+  </data>
+  <data name="Tool_Paste" xml:space="preserve">
+    <value>បិទភ្ជាប់</value>
+  </data>
+  <data name="Tool_Screenshot" xml:space="preserve">
+    <value>រូបថតអេក្រង់</value>
+  </data>
+  <data name="Tool_Select" xml:space="preserve">
+    <value>ជ្រើសរើស</value>
+  </data>
+  <data name="Tooltip_Arrow" xml:space="preserve">
+    <value>គូរព្រួញ</value>
+  </data>
+  <data name="Tooltip_Blur" xml:space="preserve">
+    <value>ធ្វើឱ្យតំបន់ព្រិល</value>
+  </data>
+  <data name="Tooltip_Border" xml:space="preserve">
+    <value>គូរបន្ទាត់ព័ទ្ធ/ចតុកោណ</value>
+  </data>
+  <data name="Tooltip_Callout" xml:space="preserve">
+    <value>បន្ថែមចំណាំ</value>
+  </data>
+  <data name="Tooltip_CollapseExpandPanel" xml:space="preserve">
+    <value>បង្រួម/ពង្រីកបន្ទះគម្រោង</value>
+  </data>
+  <data name="Tooltip_Copy" xml:space="preserve">
+    <value>ចម្លងទៅ clipboard</value>
+  </data>
+  <data name="Tooltip_CutHorizontal" xml:space="preserve">
+    <value>កាត់រូបភាពផ្តេក</value>
+  </data>
+  <data name="Tooltip_CutVertical" xml:space="preserve">
+    <value>កាត់រូបភាពឈរ</value>
+  </data>
+  <data name="Tooltip_Export" xml:space="preserve">
+    <value>នាំចេញរូបភាព ឬគម្រោង</value>
+  </data>
+  <data name="Tooltip_Highlight" xml:space="preserve">
+    <value>គូសបញ្ជាក់តំបន់</value>
+  </data>
+  <data name="Tooltip_Import" xml:space="preserve">
+    <value>នាំចូលគម្រោង ឬរូបភាព</value>
+  </data>
+  <data name="Tooltip_New" xml:space="preserve">
+    <value>បង្កើតគម្រោងថ្មី</value>
+  </data>
+  <data name="Tooltip_Note" xml:space="preserve">
+    <value>បន្ថែមកំណត់ចំណាំអត្ថបទ</value>
+  </data>
+  <data name="Tooltip_Paste" xml:space="preserve">
+    <value>បិទភ្ជាប់ពី clipboard</value>
+  </data>
+  <data name="Tooltip_Screenshot" xml:space="preserve">
+    <value>ថតរូបអេក្រង់</value>
+  </data>
+  <data name="Tooltip_Select" xml:space="preserve">
+    <value>ជ្រើសរើស និងកែសម្រួលចំណាំ</value>
+  </data>
+  <data name="Update_NewVersionAvailable" xml:space="preserve">
+    <value>កំណែថ្មី {0} មានហើយ។</value>
+  </data>
+  <data name="Window_Title" xml:space="preserve">
+    <value>Screenshot Annotator - កម្មវិធីកែរូបភាព</value>
+  </data>
+  <data name="Winget_Description" xml:space="preserve">
+    <value>កម្មវិធីសរសេរចំណាំរូបថតអេក្រង់សម្រាប់ Windows និង Linux។
+
+លក្ខណៈពិសេស:
+- **ព្រួញ** - ទាក់ទាញការយកចិត្តទុកដាក់ទៅតំបន់ជាក់លាក់ដោយប្រើព្រួញដែលអាចប្ដូរតាមបំណង
+- **ចំណាំ** - បន្ថែមចំណាំស្ទីល bubble ដែលមានអត្ថបទដែលអាចកែបាន
+- **កំណត់ចំណាំ** - បង្កើតប្រអប់អត្ថបទជាមួយព័ត៌មានបន្ថែម
+- **គូសបញ្ជាក់បន្ទាត់ព័ទ្ធ** - គូសបញ្ជាក់តំបន់ជាមួយចតុកោណព័ទ្ធ
+- **ព្រិល** - លាក់ព័ត៌មានរសើបជាមួយឥទ្ធិពលព្រិល
+- **ឧបករណ៍ជ្រើសរើស** - ជ្រើសរើសផ្នែករូបភាពសម្រាប់ចម្លង (Ctrl+C) ឬលុប (គ្រាប់ Delete)
+- **កាត់ឈរ និងផ្តេក** - កាត់តំបន់ឈរ ឬផ្តេករូបភាព
+- **គូសបញ្ជាក់** - គូសបញ្ជាក់តំបន់ដែលចាប់អារម្មណ៍
+- **ការគ្រប់គ្រងគម្រោង** - រក្សាទុកគម្រោងដោយស្វ័យប្រវត្តិ និងរូបភាពបង្ហាញតូច
+- **ឆ្លងប្រព័ន្ធ** - ដំណើរការនៅលើ Windows និង Linux ទាំងពីរ</value>
+  </data>
+  <data name="Winget_ShortDescription" xml:space="preserve">
+    <value>កម្មវិធីសរសេរចំណាំរូបថតអេក្រង់សម្រាប់ Windows និង Linux។</value>
+  </data>
+</root>

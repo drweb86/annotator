@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <!-- Zulu Translation -->
+  <data name="_Technical_NsisLanguage" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="_Technical_WingetLocale" xml:space="preserve">
+    <value>zu-ZA</value>
+  </data>
+  <data name="Button_Accept" xml:space="preserve">
+    <value>✓ Yamukela</value>
+  </data>
+  <data name="Button_Cancel" xml:space="preserve">
+    <value>Khansela</value>
+  </data>
+  <data name="Button_CancelX" xml:space="preserve">
+    <value>✕ Khansela</value>
+  </data>
+  <data name="Button_Download" xml:space="preserve">
+    <value>Landa</value>
+  </data>
+  <data name="Button_OK" xml:space="preserve">
+    <value>Kulungile</value>
+  </data>
+  <data name="ContextMenu_Delete" xml:space="preserve">
+    <value>Susa</value>
+  </data>
+  <data name="ContextMenu_Open" xml:space="preserve">
+    <value>Vula</value>
+  </data>
+  <data name="Copyright_Text" xml:space="preserve">
+    <value>Annotator {0} : Ilungelo lomdali (c) 2025-{1} Siarhei Kuchuk</value>
+  </data>
+  <data name="Dialog_Export_Title" xml:space="preserve">
+    <value>Thumela ngaphandle</value>
+  </data>
+  <data name="Dialog_Import_Title" xml:space="preserve">
+    <value>Ngenisa iphrojekthi noma isithombe</value>
+  </data>
+  <data name="FileType_AllFiles" xml:space="preserve">
+    <value>Amafayela wonke</value>
+  </data>
+  <data name="FileType_AllSupported" xml:space="preserve">
+    <value>Amafayela wonke axhaswa</value>
+  </data>
+  <data name="FileType_AnnotatorProject" xml:space="preserve">
+    <value>Iphrojekthi ye-Annotator</value>
+  </data>
+  <data name="FileType_Images" xml:space="preserve">
+    <value>Amafayela ezithombe</value>
+  </data>
+  <data name="FileType_JPEG" xml:space="preserve">
+    <value>Isithombe se-JPEG</value>
+  </data>
+  <data name="FileType_PNG" xml:space="preserve">
+    <value>Isithombe se-PNG</value>
+  </data>
+  <data name="FileType_WebP" xml:space="preserve">
+    <value>Isithombe se-WebP</value>
+  </data>
+  <data name="Header_ScreenshotAnnotator" xml:space="preserve">
+    <value>[ Isichazelo Sesithombe Sesikrini - V{0} ]</value>
+  </data>
+  <data name="ImproveIt_Message" xml:space="preserve">
+    <value>Kwenzeke iphutha elingalindelekile.
+
+Sicela uxhumane nabathuthukisi usebenzisa ulwazi olugciniwe ku-desktop yakho ku
+"{0}"
+
+Uhlelo lokusebenza luzovalwa manje.</value>
+  </data>
+  <data name="Installer_AdminRequired" xml:space="preserve">
+    <value>Izimvume zomsebenzisi oyinhloko ziyadingeka ukufaka kubasebenzisi bonke.
+Sicela usebenzise uhlelo lokufaka njengomsebenzisi oyinhloko noma usebenzise /CURRENTUSER.</value>
+  </data>
+  <data name="Installer_AdminRequiredDetailed" xml:space="preserve">
+    <value>Izimvume zomsebenzisi oyinhloko ziyadingeka ukufaka kubasebenzisi bonke.
+
+Sicela wenze esinye salezi:
+- Khetha 'Faka kumsebenzisi wamanje kuphela', noma
+- Sebenzisa lolu hlelo lokufaka njengomsebenzisi oyinhloko</value>
+  </data>
+  <data name="Installer_AllUsersDescription" xml:space="preserve">
+    <value>Uhlelo lokusebenza luzotholakala kubasebenzisi bonke kule khompyutha.</value>
+  </data>
+  <data name="Installer_AllUsersOption" xml:space="preserve">
+    <value>Faka kubasebenzisi bonke (&amp;A) (izimvume zomsebenzisi oyinhloko ziyadingeka)</value>
+  </data>
+  <data name="Installer_ArchRequired" xml:space="preserve">
+    <value>Lolu hlelo lokufaka ludinga inguqulo ye-x64 noma ye-arm64 ye-Windows.</value>
+  </data>
+  <data name="Installer_CurrentUserDescription" xml:space="preserve">
+    <value>Kunconywa. Uhlelo lokusebenza luzotholakala kukhawunti yakho yomsebenzisi kuphela.</value>
+  </data>
+  <data name="Installer_CurrentUserOption" xml:space="preserve">
+    <value>Faka kumsebenzisi wamanje kuphela (&amp;C)</value>
+  </data>
+  <data name="Installer_InstallingFor" xml:space="preserve">
+    <value>Kuyafakwa ngenxa ya:</value>
+  </data>
+  <data name="Installer_InstallModeDescription" xml:space="preserve">
+    <value>Sicela ukhethe ukuthi ufuna ukufaka i-Screenshot Annotator kuwe kuphela noma kubasebenzisi bonke kule khompyutha.</value>
+  </data>
+  <data name="Installer_InstallModeSubtitle" xml:space="preserve">
+    <value>Khetha ukuthi ubani angasebenzisa lolu hlelo lokusebenza</value>
+  </data>
+  <data name="Installer_InstallModeTitle" xml:space="preserve">
+    <value>Khetha uhlobo lokufaka</value>
+  </data>
+  <data name="Installer_LaunchApp" xml:space="preserve">
+    <value>Qalisa Uhlelo</value>
+  </data>
+  <data name="Menu_EnablePrintScreenHotkey" xml:space="preserve">
+    <value>Nika amandla ukhiye omfutho we-Print Screen</value>
+  </data>
+  <data name="Menu_Export" xml:space="preserve">
+    <value>Thumela ngaphandle...</value>
+  </data>
+  <data name="Menu_File" xml:space="preserve">
+    <value>[ Ifayela ]</value>
+  </data>
+  <data name="Menu_Import" xml:space="preserve">
+    <value>Ngenisa...</value>
+  </data>
+  <data name="Menu_License" xml:space="preserve">
+    <value>Ilayisensi</value>
+  </data>
+  <data name="Menu_New" xml:space="preserve">
+    <value>Okusha...</value>
+  </data>
+  <data name="Menu_OpenLogsFolder" xml:space="preserve">
+    <value>Vula ifolda _ye-log</value>
+  </data>
+  <data name="Menu_OpenProjectsFolder" xml:space="preserve">
+    <value>Vula ifolda _yamaphrojekthi</value>
+  </data>
+  <data name="Menu_Options" xml:space="preserve">
+    <value>Izinketho</value>
+  </data>
+  <data name="Menu_WebSite" xml:space="preserve">
+    <value>Iwebhusayithi</value>
+  </data>
+  <data name="Panel_Projects" xml:space="preserve">
+    <value>Amaphrojekthi</value>
+  </data>
+  <data name="Panel_Properties" xml:space="preserve">
+    <value>Izakhiwo</value>
+  </data>
+  <data name="Props_Bold" xml:space="preserve">
+    <value>Okumnyama</value>
+  </data>
+  <data name="Props_Color" xml:space="preserve">
+    <value>Umbala</value>
+  </data>
+  <data name="Props_Font" xml:space="preserve">
+    <value>Uhlobo lombhalo</value>
+  </data>
+  <data name="Props_Italic" xml:space="preserve">
+    <value>Okukhonjisayo</value>
+  </data>
+  <data name="Props_Size" xml:space="preserve">
+    <value>Ubukhulu</value>
+  </data>
+  <data name="Screenshot_Instructions" xml:space="preserve">
+    <value>Chofoza uphinde udonse ukuze ukhethe indawo, noma ulungise amaphuzu amagumbi. Sebenzisa i-magnifier yokunemba. Chofoza OK lapho ulungile.</value>
+  </data>
+  <data name="Tool_Arrow" xml:space="preserve">
+    <value>Umcibisholo</value>
+  </data>
+  <data name="Tool_Blur" xml:space="preserve">
+    <value>Fingqa</value>
+  </data>
+  <data name="Tool_Border" xml:space="preserve">
+    <value>Umngcele</value>
+  </data>
+  <data name="Tool_Callout" xml:space="preserve">
+    <value>Isithangami</value>
+  </data>
+  <data name="Tool_Copy" xml:space="preserve">
+    <value>Kopisha</value>
+  </data>
+  <data name="Tool_CutHorizontal" xml:space="preserve">
+    <value>Sika -</value>
+  </data>
+  <data name="Tool_CutVertical" xml:space="preserve">
+    <value>Sika |</value>
+  </data>
+  <data name="Tool_Export" xml:space="preserve">
+    <value>Thumela ngaphandle</value>
+  </data>
+  <data name="Tool_Highlight" xml:space="preserve">
+    <value>Gqamisa</value>
+  </data>
+  <data name="Tool_Import" xml:space="preserve">
+    <value>Ngenisa</value>
+  </data>
+  <data name="Tool_New" xml:space="preserve">
+    <value>Okusha</value>
+  </data>
+  <data name="Tool_Note" xml:space="preserve">
+    <value>Inothi</value>
+  </data>
+  <data name="Tool_Paste" xml:space="preserve">
+    <value>Namathisela</value>
+  </data>
+  <data name="Tool_Screenshot" xml:space="preserve">
+    <value>Isithombe Sesikrini</value>
+  </data>
+  <data name="Tool_Select" xml:space="preserve">
+    <value>Khetha</value>
+  </data>
+  <data name="Tooltip_Arrow" xml:space="preserve">
+    <value>Dweba umcibisholo</value>
+  </data>
+  <data name="Tooltip_Blur" xml:space="preserve">
+    <value>Fingqa indawo</value>
+  </data>
+  <data name="Tooltip_Border" xml:space="preserve">
+    <value>Dweba umngcele/isikhwama</value>
+  </data>
+  <data name="Tooltip_Callout" xml:space="preserve">
+    <value>Engeza isithangami</value>
+  </data>
+  <data name="Tooltip_CollapseExpandPanel" xml:space="preserve">
+    <value>Goqa/Nweba iphaneli yamaphrojekthi</value>
+  </data>
+  <data name="Tooltip_Copy" xml:space="preserve">
+    <value>Kopisha ku-clipboard</value>
+  </data>
+  <data name="Tooltip_CutHorizontal" xml:space="preserve">
+    <value>Sika isithombe ngokuvundlile</value>
+  </data>
+  <data name="Tooltip_CutVertical" xml:space="preserve">
+    <value>Sika isithombe ngokuma</value>
+  </data>
+  <data name="Tooltip_Export" xml:space="preserve">
+    <value>Thumela isithombe noma iphrojekthi ngaphandle</value>
+  </data>
+  <data name="Tooltip_Highlight" xml:space="preserve">
+    <value>Gqamisa indawo</value>
+  </data>
+  <data name="Tooltip_Import" xml:space="preserve">
+    <value>Ngenisa iphrojekthi noma isithombe</value>
+  </data>
+  <data name="Tooltip_New" xml:space="preserve">
+    <value>Dala iphrojekthi entsha</value>
+  </data>
+  <data name="Tooltip_Note" xml:space="preserve">
+    <value>Engeza inothi lombhalo</value>
+  </data>
+  <data name="Tooltip_Paste" xml:space="preserve">
+    <value>Namathisela ku-clipboard</value>
+  </data>
+  <data name="Tooltip_Screenshot" xml:space="preserve">
+    <value>Thatha isithombe sesikrini</value>
+  </data>
+  <data name="Tooltip_Select" xml:space="preserve">
+    <value>Khetha uphinde ulungise izichazelo</value>
+  </data>
+  <data name="Update_NewVersionAvailable" xml:space="preserve">
+    <value>Inguqulo entsha {0} iyatholakala.</value>
+  </data>
+  <data name="Window_Title" xml:space="preserve">
+    <value>Screenshot Annotator - Umhleli Wezithombe</value>
+  </data>
+  <data name="Winget_Description" xml:space="preserve">
+    <value>Isoftware yokuchaza izithombe zesikrini ye-Windows ne-Linux.
+
+Izici:
+- **Imicibisholo** - Nxenxa ukunakwa ezindaweni ezithile ngemicibisholo enguqukayo
+- **Izithangami** - Engeza izichazelo ze-bubble enekheli elingashintshwa
+- **Amanothi** - Dala izibhokisi zombhalo ezinolwazi olwengeziwe
+- **Ukugqamisa umngcele** - Gqamisa izindawo ngezibhokisi ezinemingcele
+- **Ukufingqa** - Fihla ulwazi oluyimfihlo ngezinto zokufingqa
+- **Ithuluzi lokukhethwa** - Khetha izingxenye zesithombe ukuze ukopisha (Ctrl+C) noma ususe (ukhiye we-Delete)
+- **Ukusika ngokuphezulu nangezansi** - Sika izindawo ezisuka ngokuphezulu noma ngezansi zesithombe
+- **Ukugqamisa** - Gqamisa izindawo ezinomdlandla
+- **Ukuphathwa kwamaphrojekthi** - Ukulondoloza iphrojekthi ngokuzenzakalelayo nezithombe ezincane zokuphana
+- **Izinhlelo** - Isebenza ku-Windows naku-Linux</value>
+  </data>
+  <data name="Winget_ShortDescription" xml:space="preserve">
+    <value>Isoftware yokuchaza izithombe zesikrini ye-Windows ne-Linux.</value>
+  </data>
+</root>

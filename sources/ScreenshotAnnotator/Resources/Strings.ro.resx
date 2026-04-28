@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <!-- Romanian Translation -->
+  <data name="_Technical_NsisLanguage" xml:space="preserve">
+    <value>Romanian</value>
+  </data>
+  <data name="_Technical_WingetLocale" xml:space="preserve">
+    <value>ro-RO</value>
+  </data>
+  <data name="Button_Accept" xml:space="preserve">
+    <value>✓ Acceptă</value>
+  </data>
+  <data name="Button_Cancel" xml:space="preserve">
+    <value>Anulează</value>
+  </data>
+  <data name="Button_CancelX" xml:space="preserve">
+    <value>✕ Anulează</value>
+  </data>
+  <data name="Button_Download" xml:space="preserve">
+    <value>Descarcă</value>
+  </data>
+  <data name="Button_OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="ContextMenu_Delete" xml:space="preserve">
+    <value>Șterge</value>
+  </data>
+  <data name="ContextMenu_Open" xml:space="preserve">
+    <value>Deschide</value>
+  </data>
+  <data name="Copyright_Text" xml:space="preserve">
+    <value>Annotator {0} : Copyright (c) 2025-{1} Siarhei Kuchuk</value>
+  </data>
+  <data name="Dialog_Export_Title" xml:space="preserve">
+    <value>Exportă</value>
+  </data>
+  <data name="Dialog_Import_Title" xml:space="preserve">
+    <value>Importă proiect sau imagine</value>
+  </data>
+  <data name="FileType_AllFiles" xml:space="preserve">
+    <value>Toate fișierele</value>
+  </data>
+  <data name="FileType_AllSupported" xml:space="preserve">
+    <value>Toate fișierele acceptate</value>
+  </data>
+  <data name="FileType_AnnotatorProject" xml:space="preserve">
+    <value>Proiect Annotator</value>
+  </data>
+  <data name="FileType_Images" xml:space="preserve">
+    <value>Fișiere imagine</value>
+  </data>
+  <data name="FileType_JPEG" xml:space="preserve">
+    <value>Imagine JPEG</value>
+  </data>
+  <data name="FileType_PNG" xml:space="preserve">
+    <value>Imagine PNG</value>
+  </data>
+  <data name="FileType_WebP" xml:space="preserve">
+    <value>Imagine WebP</value>
+  </data>
+  <data name="Header_ScreenshotAnnotator" xml:space="preserve">
+    <value>[ Adnotator capturi de ecran - V{0} ]</value>
+  </data>
+  <data name="ImproveIt_Message" xml:space="preserve">
+    <value>A apărut o eroare neașteptată.
+
+Vă rugăm să contactați dezvoltatorii folosind informațiile salvate pe desktop în
+"{0}"
+
+Aplicația se va închide acum.</value>
+  </data>
+  <data name="Installer_AdminRequired" xml:space="preserve">
+    <value>Sunt necesare drepturi de administrator pentru instalarea pentru toți utilizatorii.
+Vă rugăm să rulați programul de instalare ca administrator sau să utilizați /CURRENTUSER.</value>
+  </data>
+  <data name="Installer_AdminRequiredDetailed" xml:space="preserve">
+    <value>Sunt necesare drepturi de administrator pentru instalarea pentru toți utilizatorii.
+
+Vă rugăm să efectuați una dintre următoarele:
+- Selectați „Instalare numai pentru utilizatorul curent", sau
+- Rulați acest program de instalare ca administrator</value>
+  </data>
+  <data name="Installer_AllUsersDescription" xml:space="preserve">
+    <value>Aplicația va fi disponibilă pentru toți utilizatorii de pe acest computer.</value>
+  </data>
+  <data name="Installer_AllUsersOption" xml:space="preserve">
+    <value>Instalare pentru toți utilizatorii (&amp;A) (necesită drepturi de administrator)</value>
+  </data>
+  <data name="Installer_ArchRequired" xml:space="preserve">
+    <value>Acest program de instalare necesită versiunea x64 sau arm64 a Windows.</value>
+  </data>
+  <data name="Installer_CurrentUserDescription" xml:space="preserve">
+    <value>Recomandat. Aplicația va fi disponibilă numai pentru contul dvs. de utilizator.</value>
+  </data>
+  <data name="Installer_CurrentUserOption" xml:space="preserve">
+    <value>Instalare numai pentru utilizatorul curent (&amp;C)</value>
+  </data>
+  <data name="Installer_InstallingFor" xml:space="preserve">
+    <value>Se instalează pentru:</value>
+  </data>
+  <data name="Installer_InstallModeDescription" xml:space="preserve">
+    <value>Vă rugăm să alegeți dacă doriți să instalați Screenshot Annotator numai pentru dvs. sau pentru toți utilizatorii de pe acest computer.</value>
+  </data>
+  <data name="Installer_InstallModeSubtitle" xml:space="preserve">
+    <value>Alegeți cine poate utiliza această aplicație</value>
+  </data>
+  <data name="Installer_InstallModeTitle" xml:space="preserve">
+    <value>Alegeți tipul de instalare</value>
+  </data>
+  <data name="Installer_LaunchApp" xml:space="preserve">
+    <value>Lansați aplicația</value>
+  </data>
+  <data name="Menu_EnablePrintScreenHotkey" xml:space="preserve">
+    <value>Activați tasta rapidă Print Screen</value>
+  </data>
+  <data name="Menu_Export" xml:space="preserve">
+    <value>Exportă...</value>
+  </data>
+  <data name="Menu_File" xml:space="preserve">
+    <value>[ Fișier ]</value>
+  </data>
+  <data name="Menu_Import" xml:space="preserve">
+    <value>Importă...</value>
+  </data>
+  <data name="Menu_License" xml:space="preserve">
+    <value>Licență</value>
+  </data>
+  <data name="Menu_New" xml:space="preserve">
+    <value>Nou...</value>
+  </data>
+  <data name="Menu_OpenLogsFolder" xml:space="preserve">
+    <value>Deschide folderul _jurnalelor</value>
+  </data>
+  <data name="Menu_OpenProjectsFolder" xml:space="preserve">
+    <value>Deschide folderul _proiectelor</value>
+  </data>
+  <data name="Menu_Options" xml:space="preserve">
+    <value>Opțiuni</value>
+  </data>
+  <data name="Menu_WebSite" xml:space="preserve">
+    <value>Site web</value>
+  </data>
+  <data name="Panel_Projects" xml:space="preserve">
+    <value>Proiecte</value>
+  </data>
+  <data name="Panel_Properties" xml:space="preserve">
+    <value>Proprietăți</value>
+  </data>
+  <data name="Props_Bold" xml:space="preserve">
+    <value>Îngroșat</value>
+  </data>
+  <data name="Props_Color" xml:space="preserve">
+    <value>Culoare</value>
+  </data>
+  <data name="Props_Font" xml:space="preserve">
+    <value>Font</value>
+  </data>
+  <data name="Props_Italic" xml:space="preserve">
+    <value>Cursiv</value>
+  </data>
+  <data name="Props_Size" xml:space="preserve">
+    <value>Dimensiune</value>
+  </data>
+  <data name="Screenshot_Instructions" xml:space="preserve">
+    <value>Faceți clic și trageți pentru a selecta o zonă sau ajustați punctele de colț. Folosiți lupa pentru precizie. Apăsați OK când sunteți gata.</value>
+  </data>
+  <data name="Tool_Arrow" xml:space="preserve">
+    <value>Săgeată</value>
+  </data>
+  <data name="Tool_Blur" xml:space="preserve">
+    <value>Estompare</value>
+  </data>
+  <data name="Tool_Border" xml:space="preserve">
+    <value>Chenar</value>
+  </data>
+  <data name="Tool_Callout" xml:space="preserve">
+    <value>Balonul de text</value>
+  </data>
+  <data name="Tool_Copy" xml:space="preserve">
+    <value>Copiază</value>
+  </data>
+  <data name="Tool_CutHorizontal" xml:space="preserve">
+    <value>Decupează -</value>
+  </data>
+  <data name="Tool_CutVertical" xml:space="preserve">
+    <value>Decupează |</value>
+  </data>
+  <data name="Tool_Export" xml:space="preserve">
+    <value>Exportă</value>
+  </data>
+  <data name="Tool_Highlight" xml:space="preserve">
+    <value>Evidențiere</value>
+  </data>
+  <data name="Tool_Import" xml:space="preserve">
+    <value>Importă</value>
+  </data>
+  <data name="Tool_New" xml:space="preserve">
+    <value>Nou</value>
+  </data>
+  <data name="Tool_Note" xml:space="preserve">
+    <value>Notă</value>
+  </data>
+  <data name="Tool_Paste" xml:space="preserve">
+    <value>Lipește</value>
+  </data>
+  <data name="Tool_Screenshot" xml:space="preserve">
+    <value>Captură de ecran</value>
+  </data>
+  <data name="Tool_Select" xml:space="preserve">
+    <value>Selectează</value>
+  </data>
+  <data name="Tooltip_Arrow" xml:space="preserve">
+    <value>Desenați o săgeată</value>
+  </data>
+  <data name="Tooltip_Blur" xml:space="preserve">
+    <value>Estompați o zonă</value>
+  </data>
+  <data name="Tooltip_Border" xml:space="preserve">
+    <value>Desenați chenar/dreptunghi</value>
+  </data>
+  <data name="Tooltip_Callout" xml:space="preserve">
+    <value>Adăugați un balon de text</value>
+  </data>
+  <data name="Tooltip_CollapseExpandPanel" xml:space="preserve">
+    <value>Restrângeți/extindeți panoul proiectelor</value>
+  </data>
+  <data name="Tooltip_Copy" xml:space="preserve">
+    <value>Copiați în clipboard</value>
+  </data>
+  <data name="Tooltip_CutHorizontal" xml:space="preserve">
+    <value>Decupați imaginea orizontal</value>
+  </data>
+  <data name="Tooltip_CutVertical" xml:space="preserve">
+    <value>Decupați imaginea vertical</value>
+  </data>
+  <data name="Tooltip_Export" xml:space="preserve">
+    <value>Exportați imaginea sau proiectul</value>
+  </data>
+  <data name="Tooltip_Highlight" xml:space="preserve">
+    <value>Evidențiați o zonă</value>
+  </data>
+  <data name="Tooltip_Import" xml:space="preserve">
+    <value>Importați proiect sau imagine</value>
+  </data>
+  <data name="Tooltip_New" xml:space="preserve">
+    <value>Creați un proiect nou</value>
+  </data>
+  <data name="Tooltip_Note" xml:space="preserve">
+    <value>Adăugați o notă text</value>
+  </data>
+  <data name="Tooltip_Paste" xml:space="preserve">
+    <value>Lipiți din clipboard</value>
+  </data>
+  <data name="Tooltip_Screenshot" xml:space="preserve">
+    <value>Faceți o captură de ecran</value>
+  </data>
+  <data name="Tooltip_Select" xml:space="preserve">
+    <value>Selectați și editați adnotări</value>
+  </data>
+  <data name="Update_NewVersionAvailable" xml:space="preserve">
+    <value>Noua versiune {0} este disponibilă.</value>
+  </data>
+  <data name="Window_Title" xml:space="preserve">
+    <value>Screenshot Annotator - Editor de imagini</value>
+  </data>
+  <data name="Winget_Description" xml:space="preserve">
+    <value>Software de adnotare capturi de ecran pentru Windows și Linux.
+
+Funcții:
+- **Săgeți** - Atrageți atenția asupra zonelor specifice cu săgeți personalizabile
+- **Baloane de text** - Adăugați adnotări în stil balon cu text editabil
+- **Note** - Creați casete de text cu informații suplimentare
+- **Evidențiere chenar** - Evidențiați zonele cu dreptunghiuri cu chenar
+- **Estompare** - Ascundeți informații sensibile cu efecte de estompare
+- **Instrument de selecție** - Selectați porțiuni din imagine pentru a copia (Ctrl+C) sau șterge (tasta Delete)
+- **Decupare verticală și orizontală** - Decupați zone verticale sau orizontale ale imaginii
+- **Evidențiere** - Evidențiați zonele de interes
+- **Gestionarea proiectelor** - Salvare automată a proiectelor și miniaturi de previzualizare
+- **Multiplatformă** - Funcționează atât pe Windows, cât și pe Linux</value>
+  </data>
+  <data name="Winget_ShortDescription" xml:space="preserve">
+    <value>Software de adnotare capturi de ecran pentru Windows și Linux.</value>
+  </data>
+</root>

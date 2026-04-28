@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <!-- Malay Translation -->
+  <data name="_Technical_NsisLanguage" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="_Technical_WingetLocale" xml:space="preserve">
+    <value>ms-MY</value>
+  </data>
+  <data name="Button_Accept" xml:space="preserve">
+    <value>✓ Terima</value>
+  </data>
+  <data name="Button_Cancel" xml:space="preserve">
+    <value>Batal</value>
+  </data>
+  <data name="Button_CancelX" xml:space="preserve">
+    <value>✕ Batal</value>
+  </data>
+  <data name="Button_Download" xml:space="preserve">
+    <value>Muat turun</value>
+  </data>
+  <data name="Button_OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="ContextMenu_Delete" xml:space="preserve">
+    <value>Padam</value>
+  </data>
+  <data name="ContextMenu_Open" xml:space="preserve">
+    <value>Buka</value>
+  </data>
+  <data name="Copyright_Text" xml:space="preserve">
+    <value>Annotator {0} : Hak cipta (c) 2025-{1} Siarhei Kuchuk</value>
+  </data>
+  <data name="Dialog_Export_Title" xml:space="preserve">
+    <value>Eksport</value>
+  </data>
+  <data name="Dialog_Import_Title" xml:space="preserve">
+    <value>Import projek atau imej</value>
+  </data>
+  <data name="FileType_AllFiles" xml:space="preserve">
+    <value>Semua fail</value>
+  </data>
+  <data name="FileType_AllSupported" xml:space="preserve">
+    <value>Semua fail yang disokong</value>
+  </data>
+  <data name="FileType_AnnotatorProject" xml:space="preserve">
+    <value>Projek Annotator</value>
+  </data>
+  <data name="FileType_Images" xml:space="preserve">
+    <value>Fail imej</value>
+  </data>
+  <data name="FileType_JPEG" xml:space="preserve">
+    <value>Imej JPEG</value>
+  </data>
+  <data name="FileType_PNG" xml:space="preserve">
+    <value>Imej PNG</value>
+  </data>
+  <data name="FileType_WebP" xml:space="preserve">
+    <value>Imej WebP</value>
+  </data>
+  <data name="Header_ScreenshotAnnotator" xml:space="preserve">
+    <value>[ Anotator Tangkapan Skrin - V{0} ]</value>
+  </data>
+  <data name="ImproveIt_Message" xml:space="preserve">
+    <value>Ralat yang tidak dijangka telah berlaku.
+
+Sila hubungi pembangun menggunakan maklumat yang disimpan di desktop anda dalam
+"{0}"
+
+Aplikasi akan ditutup sekarang.</value>
+  </data>
+  <data name="Installer_AdminRequired" xml:space="preserve">
+    <value>Keistimewaan pentadbir diperlukan untuk memasang bagi semua pengguna.
+Sila jalankan pemasang sebagai pentadbir atau gunakan /CURRENTUSER.</value>
+  </data>
+  <data name="Installer_AdminRequiredDetailed" xml:space="preserve">
+    <value>Keistimewaan pentadbir diperlukan untuk memasang bagi semua pengguna.
+
+Sila lakukan salah satu daripada berikut:
+- Pilih 'Pasang untuk pengguna semasa sahaja', atau
+- Jalankan pemasang ini sebagai pentadbir</value>
+  </data>
+  <data name="Installer_AllUsersDescription" xml:space="preserve">
+    <value>Aplikasi akan tersedia untuk semua pengguna pada komputer ini.</value>
+  </data>
+  <data name="Installer_AllUsersOption" xml:space="preserve">
+    <value>Pasang untuk semua pengguna (&amp;A) (memerlukan keistimewaan pentadbir)</value>
+  </data>
+  <data name="Installer_ArchRequired" xml:space="preserve">
+    <value>Pemasang ini memerlukan versi x64 atau arm64 Windows.</value>
+  </data>
+  <data name="Installer_CurrentUserDescription" xml:space="preserve">
+    <value>Disyorkan. Aplikasi akan tersedia untuk akaun pengguna anda sahaja.</value>
+  </data>
+  <data name="Installer_CurrentUserOption" xml:space="preserve">
+    <value>Pasang untuk pengguna semasa sahaja (&amp;C)</value>
+  </data>
+  <data name="Installer_InstallingFor" xml:space="preserve">
+    <value>Memasang untuk:</value>
+  </data>
+  <data name="Installer_InstallModeDescription" xml:space="preserve">
+    <value>Sila pilih sama ada anda mahu memasang Screenshot Annotator untuk diri sendiri sahaja atau untuk semua pengguna pada komputer ini.</value>
+  </data>
+  <data name="Installer_InstallModeSubtitle" xml:space="preserve">
+    <value>Pilih siapa yang boleh menggunakan aplikasi ini</value>
+  </data>
+  <data name="Installer_InstallModeTitle" xml:space="preserve">
+    <value>Pilih jenis pemasangan</value>
+  </data>
+  <data name="Installer_LaunchApp" xml:space="preserve">
+    <value>Lancarkan Apl</value>
+  </data>
+  <data name="Menu_EnablePrintScreenHotkey" xml:space="preserve">
+    <value>Aktifkan kekunci pintasan Print Screen</value>
+  </data>
+  <data name="Menu_Export" xml:space="preserve">
+    <value>Eksport...</value>
+  </data>
+  <data name="Menu_File" xml:space="preserve">
+    <value>[ Fail ]</value>
+  </data>
+  <data name="Menu_Import" xml:space="preserve">
+    <value>Import...</value>
+  </data>
+  <data name="Menu_License" xml:space="preserve">
+    <value>Lesen</value>
+  </data>
+  <data name="Menu_New" xml:space="preserve">
+    <value>Baharu...</value>
+  </data>
+  <data name="Menu_OpenLogsFolder" xml:space="preserve">
+    <value>Buka folder _log</value>
+  </data>
+  <data name="Menu_OpenProjectsFolder" xml:space="preserve">
+    <value>Buka folder _projek</value>
+  </data>
+  <data name="Menu_Options" xml:space="preserve">
+    <value>Pilihan</value>
+  </data>
+  <data name="Menu_WebSite" xml:space="preserve">
+    <value>Laman web</value>
+  </data>
+  <data name="Panel_Projects" xml:space="preserve">
+    <value>Projek</value>
+  </data>
+  <data name="Panel_Properties" xml:space="preserve">
+    <value>Sifat</value>
+  </data>
+  <data name="Props_Bold" xml:space="preserve">
+    <value>Tebal</value>
+  </data>
+  <data name="Props_Color" xml:space="preserve">
+    <value>Warna</value>
+  </data>
+  <data name="Props_Font" xml:space="preserve">
+    <value>Fon</value>
+  </data>
+  <data name="Props_Italic" xml:space="preserve">
+    <value>Condong</value>
+  </data>
+  <data name="Props_Size" xml:space="preserve">
+    <value>Saiz</value>
+  </data>
+  <data name="Screenshot_Instructions" xml:space="preserve">
+    <value>Klik dan seret untuk memilih kawasan, atau laraskan titik sudut. Gunakan kanta pembesar untuk ketepatan. Tekan OK apabila bersedia.</value>
+  </data>
+  <data name="Tool_Arrow" xml:space="preserve">
+    <value>Anak panah</value>
+  </data>
+  <data name="Tool_Blur" xml:space="preserve">
+    <value>Kabur</value>
+  </data>
+  <data name="Tool_Border" xml:space="preserve">
+    <value>Sempadan</value>
+  </data>
+  <data name="Tool_Callout" xml:space="preserve">
+    <value>Belon ucapan</value>
+  </data>
+  <data name="Tool_Copy" xml:space="preserve">
+    <value>Salin</value>
+  </data>
+  <data name="Tool_CutHorizontal" xml:space="preserve">
+    <value>Potong -</value>
+  </data>
+  <data name="Tool_CutVertical" xml:space="preserve">
+    <value>Potong |</value>
+  </data>
+  <data name="Tool_Export" xml:space="preserve">
+    <value>Eksport</value>
+  </data>
+  <data name="Tool_Highlight" xml:space="preserve">
+    <value>Serlah</value>
+  </data>
+  <data name="Tool_Import" xml:space="preserve">
+    <value>Import</value>
+  </data>
+  <data name="Tool_New" xml:space="preserve">
+    <value>Baharu</value>
+  </data>
+  <data name="Tool_Note" xml:space="preserve">
+    <value>Nota</value>
+  </data>
+  <data name="Tool_Paste" xml:space="preserve">
+    <value>Tampal</value>
+  </data>
+  <data name="Tool_Screenshot" xml:space="preserve">
+    <value>Tangkapan skrin</value>
+  </data>
+  <data name="Tool_Select" xml:space="preserve">
+    <value>Pilih</value>
+  </data>
+  <data name="Tooltip_Arrow" xml:space="preserve">
+    <value>Lukis anak panah</value>
+  </data>
+  <data name="Tooltip_Blur" xml:space="preserve">
+    <value>Kaburkan kawasan</value>
+  </data>
+  <data name="Tooltip_Border" xml:space="preserve">
+    <value>Lukis sempadan/segi empat</value>
+  </data>
+  <data name="Tooltip_Callout" xml:space="preserve">
+    <value>Tambah belon ucapan</value>
+  </data>
+  <data name="Tooltip_CollapseExpandPanel" xml:space="preserve">
+    <value>Runtuh/kembang panel projek</value>
+  </data>
+  <data name="Tooltip_Copy" xml:space="preserve">
+    <value>Salin ke papan klip</value>
+  </data>
+  <data name="Tooltip_CutHorizontal" xml:space="preserve">
+    <value>Potong imej mendatar</value>
+  </data>
+  <data name="Tooltip_CutVertical" xml:space="preserve">
+    <value>Potong imej menegak</value>
+  </data>
+  <data name="Tooltip_Export" xml:space="preserve">
+    <value>Eksport imej atau projek</value>
+  </data>
+  <data name="Tooltip_Highlight" xml:space="preserve">
+    <value>Serlahkan kawasan</value>
+  </data>
+  <data name="Tooltip_Import" xml:space="preserve">
+    <value>Import projek atau imej</value>
+  </data>
+  <data name="Tooltip_New" xml:space="preserve">
+    <value>Cipta projek baharu</value>
+  </data>
+  <data name="Tooltip_Note" xml:space="preserve">
+    <value>Tambah nota teks</value>
+  </data>
+  <data name="Tooltip_Paste" xml:space="preserve">
+    <value>Tampal dari papan klip</value>
+  </data>
+  <data name="Tooltip_Screenshot" xml:space="preserve">
+    <value>Ambil tangkapan skrin</value>
+  </data>
+  <data name="Tooltip_Select" xml:space="preserve">
+    <value>Pilih dan edit anotasi</value>
+  </data>
+  <data name="Update_NewVersionAvailable" xml:space="preserve">
+    <value>Versi baharu {0} tersedia.</value>
+  </data>
+  <data name="Window_Title" xml:space="preserve">
+    <value>Screenshot Annotator - Editor Imej</value>
+  </data>
+  <data name="Winget_Description" xml:space="preserve">
+    <value>Perisian anotasi tangkapan skrin untuk Windows dan Linux.
+
+Ciri-ciri:
+- **Anak panah** - Tarik perhatian ke kawasan tertentu dengan anak panah yang boleh disesuaikan
+- **Belon ucapan** - Tambah anotasi gaya belon dengan teks yang boleh diedit
+- **Nota** - Cipta kotak teks dengan maklumat tambahan
+- **Sorotan sempadan** - Serlahkan kawasan dengan segi empat bersempadan
+- **Kabur** - Sembunyikan maklumat sensitif dengan kesan pengaburan
+- **Alat pilih** - Pilih bahagian imej untuk disalin (Ctrl+C) atau dipadam (kekunci Delete)
+- **Pemotongan menegak dan mendatar** - Potong kawasan menegak atau mendatar imej
+- **Sorotan** - Serlahkan kawasan yang menarik
+- **Pengurusan projek** - Simpanan projek automatik dan lakaran kecil pratonton
+- **Merentas platform** - Berfungsi pada Windows dan Linux</value>
+  </data>
+  <data name="Winget_ShortDescription" xml:space="preserve">
+    <value>Perisian anotasi tangkapan skrin untuk Windows dan Linux.</value>
+  </data>
+</root>

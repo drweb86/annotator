@@ -2,7 +2,14 @@
 (unpublished)
 
 ## New Features
-- Setup is multilanguage.
+- Added 18 new languages: Amharic, Burmese, Dutch, Filipino, Gujarati,
+  Hausa, Kannada, Khmer, Nepali, Odia, Pashto, Persian, Polish,
+  Punjabi, Sinhala, Swahili, Thai, Yoruba.
+- Added 16 more languages: Azerbaijani, Cebuano, Czech, Greek, Hebrew,
+  Hungarian, Igbo, Kazakh, Malay, Romanian, Serbian, Sindhi, Somali,
+  Swedish, Uzbek, Zulu.
+- Setup is multilanguage (Polish, Dutch, Thai, Persian, Czech, Greek, Hungarian,
+  Romanian, Serbian, Swedish; others fall back to English).
 
 # 2026.04.23
 

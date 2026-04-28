@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <!-- Cebuano Translation -->
+  <data name="_Technical_NsisLanguage" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="_Technical_WingetLocale" xml:space="preserve">
+    <value>ceb-PH</value>
+  </data>
+  <data name="Button_Accept" xml:space="preserve">
+    <value>✓ Dawaton</value>
+  </data>
+  <data name="Button_Cancel" xml:space="preserve">
+    <value>Kanselahon</value>
+  </data>
+  <data name="Button_CancelX" xml:space="preserve">
+    <value>✕ Kanselahon</value>
+  </data>
+  <data name="Button_Download" xml:space="preserve">
+    <value>I-download</value>
+  </data>
+  <data name="Button_OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="ContextMenu_Delete" xml:space="preserve">
+    <value>Papason</value>
+  </data>
+  <data name="ContextMenu_Open" xml:space="preserve">
+    <value>Ablihan</value>
+  </data>
+  <data name="Copyright_Text" xml:space="preserve">
+    <value>Annotator {0} : Copyright (c) 2025-{1} Siarhei Kuchuk</value>
+  </data>
+  <data name="Dialog_Export_Title" xml:space="preserve">
+    <value>I-export</value>
+  </data>
+  <data name="Dialog_Import_Title" xml:space="preserve">
+    <value>I-import ang proyekto o imahe</value>
+  </data>
+  <data name="FileType_AllFiles" xml:space="preserve">
+    <value>Tanang mga file</value>
+  </data>
+  <data name="FileType_AllSupported" xml:space="preserve">
+    <value>Tanang gisuportahan nga mga file</value>
+  </data>
+  <data name="FileType_AnnotatorProject" xml:space="preserve">
+    <value>Proyekto sa Annotator</value>
+  </data>
+  <data name="FileType_Images" xml:space="preserve">
+    <value>Mga file sa imahe</value>
+  </data>
+  <data name="FileType_JPEG" xml:space="preserve">
+    <value>JPEG nga imahe</value>
+  </data>
+  <data name="FileType_PNG" xml:space="preserve">
+    <value>PNG nga imahe</value>
+  </data>
+  <data name="FileType_WebP" xml:space="preserve">
+    <value>WebP nga imahe</value>
+  </data>
+  <data name="Header_ScreenshotAnnotator" xml:space="preserve">
+    <value>[ Screenshot Annotator - V{0} ]</value>
+  </data>
+  <data name="ImproveIt_Message" xml:space="preserve">
+    <value>Adunay dili gipaabut nga sayop nga nahitabo.
+
+Palihug kontaka ang mga developer gamit ang impormasyon nga gitipigan sa imong desktop sa
+"{0}"
+
+Ang aplikasyon magsira na karon.</value>
+  </data>
+  <data name="Installer_AdminRequired" xml:space="preserve">
+    <value>Gikinahanglan ang mga pribilehiyo sa administrador aron ma-install para sa tanang mga tiggamit.
+Palihug padagana ang installer isip administrador o gamiton ang /CURRENTUSER.</value>
+  </data>
+  <data name="Installer_AdminRequiredDetailed" xml:space="preserve">
+    <value>Gikinahanglan ang mga pribilehiyo sa administrador aron ma-install para sa tanang mga tiggamit.
+
+Palihug buhata ang usa sa mosunod:
+- Pilia ang 'I-install para sa kasamtangang tiggamit lamang', o
+- Padagana kini nga installer isip administrador</value>
+  </data>
+  <data name="Installer_AllUsersDescription" xml:space="preserve">
+    <value>Ang aplikasyon mahimong magamit alang sa tanang mga tiggamit niini nga kompyuter.</value>
+  </data>
+  <data name="Installer_AllUsersOption" xml:space="preserve">
+    <value>I-install para sa tanang mga tiggamit (&amp;A) (gikinahanglan ang mga pribilehiyo sa administrador)</value>
+  </data>
+  <data name="Installer_ArchRequired" xml:space="preserve">
+    <value>Kining installer nagkinahanglan og x64 o arm64 nga bersyon sa Windows.</value>
+  </data>
+  <data name="Installer_CurrentUserDescription" xml:space="preserve">
+    <value>Girekomendar. Ang aplikasyon mahimong magamit lamang alang sa imong account sa tiggamit.</value>
+  </data>
+  <data name="Installer_CurrentUserOption" xml:space="preserve">
+    <value>I-install para sa kasamtangang tiggamit lamang (&amp;C)</value>
+  </data>
+  <data name="Installer_InstallingFor" xml:space="preserve">
+    <value>Gi-install para sa:</value>
+  </data>
+  <data name="Installer_InstallModeDescription" xml:space="preserve">
+    <value>Palihug pilia kung gusto nimong i-install ang Screenshot Annotator para sa imong kaugalingon lamang o para sa tanang mga tiggamit niini nga kompyuter.</value>
+  </data>
+  <data name="Installer_InstallModeSubtitle" xml:space="preserve">
+    <value>Pilia kung kinsa ang makagamit niini nga aplikasyon</value>
+  </data>
+  <data name="Installer_InstallModeTitle" xml:space="preserve">
+    <value>Pilia ang uri sa pag-install</value>
+  </data>
+  <data name="Installer_LaunchApp" xml:space="preserve">
+    <value>Sugdan ang App</value>
+  </data>
+  <data name="Menu_EnablePrintScreenHotkey" xml:space="preserve">
+    <value>Iaktibo ang Print Screen hotkey</value>
+  </data>
+  <data name="Menu_Export" xml:space="preserve">
+    <value>I-export...</value>
+  </data>
+  <data name="Menu_File" xml:space="preserve">
+    <value>[ File ]</value>
+  </data>
+  <data name="Menu_Import" xml:space="preserve">
+    <value>I-import...</value>
+  </data>
+  <data name="Menu_License" xml:space="preserve">
+    <value>Lisensya</value>
+  </data>
+  <data name="Menu_New" xml:space="preserve">
+    <value>Bag-o...</value>
+  </data>
+  <data name="Menu_OpenLogsFolder" xml:space="preserve">
+    <value>Ablihan ang _logs folder</value>
+  </data>
+  <data name="Menu_OpenProjectsFolder" xml:space="preserve">
+    <value>Ablihan ang _proyekto folder</value>
+  </data>
+  <data name="Menu_Options" xml:space="preserve">
+    <value>Mga opsyon</value>
+  </data>
+  <data name="Menu_WebSite" xml:space="preserve">
+    <value>Website</value>
+  </data>
+  <data name="Panel_Projects" xml:space="preserve">
+    <value>Mga Proyekto</value>
+  </data>
+  <data name="Panel_Properties" xml:space="preserve">
+    <value>Mga Kabtangan</value>
+  </data>
+  <data name="Props_Bold" xml:space="preserve">
+    <value>Bold</value>
+  </data>
+  <data name="Props_Color" xml:space="preserve">
+    <value>Kolor</value>
+  </data>
+  <data name="Props_Font" xml:space="preserve">
+    <value>Font</value>
+  </data>
+  <data name="Props_Italic" xml:space="preserve">
+    <value>Italic</value>
+  </data>
+  <data name="Props_Size" xml:space="preserve">
+    <value>Gidak-on</value>
+  </data>
+  <data name="Screenshot_Instructions" xml:space="preserve">
+    <value>I-klik ug i-drag aron mapili ang usa ka lugar, o i-adjust ang mga punto sa sulok. Gamiton ang magnifying glass para sa katukma. Pindota ang OK kung andam na.</value>
+  </data>
+  <data name="Tool_Arrow" xml:space="preserve">
+    <value>Pana</value>
+  </data>
+  <data name="Tool_Blur" xml:space="preserve">
+    <value>Blur</value>
+  </data>
+  <data name="Tool_Border" xml:space="preserve">
+    <value>Border</value>
+  </data>
+  <data name="Tool_Callout" xml:space="preserve">
+    <value>Callout</value>
+  </data>
+  <data name="Tool_Copy" xml:space="preserve">
+    <value>Kopya</value>
+  </data>
+  <data name="Tool_CutHorizontal" xml:space="preserve">
+    <value>Putlon -</value>
+  </data>
+  <data name="Tool_CutVertical" xml:space="preserve">
+    <value>Putlon |</value>
+  </data>
+  <data name="Tool_Export" xml:space="preserve">
+    <value>I-export</value>
+  </data>
+  <data name="Tool_Highlight" xml:space="preserve">
+    <value>I-highlight</value>
+  </data>
+  <data name="Tool_Import" xml:space="preserve">
+    <value>I-import</value>
+  </data>
+  <data name="Tool_New" xml:space="preserve">
+    <value>Bag-o</value>
+  </data>
+  <data name="Tool_Note" xml:space="preserve">
+    <value>Nota</value>
+  </data>
+  <data name="Tool_Paste" xml:space="preserve">
+    <value>I-paste</value>
+  </data>
+  <data name="Tool_Screenshot" xml:space="preserve">
+    <value>Screenshot</value>
+  </data>
+  <data name="Tool_Select" xml:space="preserve">
+    <value>Pilion</value>
+  </data>
+  <data name="Tooltip_Arrow" xml:space="preserve">
+    <value>Guhita ang usa ka pana</value>
+  </data>
+  <data name="Tooltip_Blur" xml:space="preserve">
+    <value>I-blur ang usa ka lugar</value>
+  </data>
+  <data name="Tooltip_Border" xml:space="preserve">
+    <value>Guhita ang border/rektanggulo</value>
+  </data>
+  <data name="Tooltip_Callout" xml:space="preserve">
+    <value>Idugang ang callout</value>
+  </data>
+  <data name="Tooltip_CollapseExpandPanel" xml:space="preserve">
+    <value>I-collapse/expand ang proyekto panel</value>
+  </data>
+  <data name="Tooltip_Copy" xml:space="preserve">
+    <value>Kopya sa clipboard</value>
+  </data>
+  <data name="Tooltip_CutHorizontal" xml:space="preserve">
+    <value>Putlon ang imahe og pahigda</value>
+  </data>
+  <data name="Tooltip_CutVertical" xml:space="preserve">
+    <value>Putlon ang imahe og patindog</value>
+  </data>
+  <data name="Tooltip_Export" xml:space="preserve">
+    <value>I-export ang imahe o proyekto</value>
+  </data>
+  <data name="Tooltip_Highlight" xml:space="preserve">
+    <value>I-highlight ang usa ka lugar</value>
+  </data>
+  <data name="Tooltip_Import" xml:space="preserve">
+    <value>I-import ang proyekto o imahe</value>
+  </data>
+  <data name="Tooltip_New" xml:space="preserve">
+    <value>Paghimog bag-ong proyekto</value>
+  </data>
+  <data name="Tooltip_Note" xml:space="preserve">
+    <value>Idugang ang nota sa teksto</value>
+  </data>
+  <data name="Tooltip_Paste" xml:space="preserve">
+    <value>I-paste gikan sa clipboard</value>
+  </data>
+  <data name="Tooltip_Screenshot" xml:space="preserve">
+    <value>Kuha og screenshot</value>
+  </data>
+  <data name="Tooltip_Select" xml:space="preserve">
+    <value>Pilia ug i-edit ang mga anotasyon</value>
+  </data>
+  <data name="Update_NewVersionAvailable" xml:space="preserve">
+    <value>Ang bag-ong bersyon {0} anaa na.</value>
+  </data>
+  <data name="Window_Title" xml:space="preserve">
+    <value>Screenshot Annotator - Editor sa Imahe</value>
+  </data>
+  <data name="Winget_Description" xml:space="preserve">
+    <value>Software sa pag-annotate sa screenshot para sa Windows ug Linux.
+
+Mga Feature:
+- **Mga Pana** - Pagdani og atensyon sa piho nga mga lugar gamit ang mga pana nga mapasibo
+- **Mga Callout** - Idugang ang mga anotasyon nga estilo sa bula nga may mausab nga teksto
+- **Mga Nota** - Paghimog mga kahon sa teksto nga may dugang nga impormasyon
+- **Border Highlight** - I-highlight ang mga lugar gamit ang mga rektanggulo nga may border
+- **Blur** - Itago ang sensitibong impormasyon gamit ang mga epekto sa blur
+- **Tool sa Pagpili** - Pilia ang mga bahin sa imahe aron kopyahon (Ctrl+C) o papason (Delete key)
+- **Vertical ug Horizontal na Pagputol** - Putlon ang mga vertical o horizontal nga lugar sa imahe
+- **Highlight** - I-highlight ang mga lugar nga may interes
+- **Pamamahala sa Proyekto** - Awtomatikong pagtipig sa proyekto ug preview thumbnails
+- **Cross-Platform** - Nagtrabaho sa Windows ug Linux</value>
+  </data>
+  <data name="Winget_ShortDescription" xml:space="preserve">
+    <value>Software sa pag-annotate sa screenshot para sa Windows ug Linux.</value>
+  </data>
+</root>

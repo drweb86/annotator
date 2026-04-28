@@ -21,11 +21,14 @@ Screenshot annotator software for Windows and Linux.
 
 
 <details>
-<summary>🌐 Supported languages (22)</summary>
+<summary>🌐 Supported languages (57)</summary>
 
-Arabic, Bengali, Chinese, French, German, Hindi, Indonesian, Italian,
-Japanese, Marathi, Nigerian Pidgin, Portuguese, Russian, Spanish,
-Tamil, Telugu, Turkish, Ukrainian, Urdu, Vietnamese, Yue Chinese,
+Amharic, Arabic, Azerbaijani, Bengali, Burmese, Cebuano, Chinese Simplified, Czech,
+Dutch, Filipino, French, German, Greek, Gujarati, Hausa, Hebrew, Hindi, Hungarian,
+Igbo, Indonesian, Italian, Japanese, Kannada, Kazakh, Khmer, Korean, Malay, Marathi,
+Nepali, Nigerian Pidgin, Odia, Pashto, Persian, Polish, Portuguese, Punjabi, Romanian,
+Russian, Serbian, Sindhi, Sinhala, Somali, Spanish, Swahili, Swedish, Tamil, Telugu,
+Thai, Turkish, Ukrainian, Urdu, Uzbek, Vietnamese, Yoruba, Yue Chinese, Zulu,
 **English** *(default)*
 
 </details>
