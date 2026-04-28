@@ -19,6 +19,7 @@ Screenshot annotator software for Windows and Linux.
 
 <img width="1262" height="1069" alt="image" src="https://github.com/user-attachments/assets/5c73a83f-a3ca-4081-8e30-cafee1a4ee42" />
 
+
 <details>
 <summary>🌐 Supported languages (22)</summary>
 
