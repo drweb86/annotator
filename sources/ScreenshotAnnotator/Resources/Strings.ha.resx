@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <!-- Hausa Translation -->
+  <data name="_Technical_NsisLanguage" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="_Technical_WingetLocale" xml:space="preserve">
+    <value>ha-NG</value>
+  </data>
+  <data name="Button_Accept" xml:space="preserve">
+    <value>✓ Karɓa</value>
+  </data>
+  <data name="Button_Cancel" xml:space="preserve">
+    <value>Soke</value>
+  </data>
+  <data name="Button_CancelX" xml:space="preserve">
+    <value>✕ Soke</value>
+  </data>
+  <data name="Button_Download" xml:space="preserve">
+    <value>Sauke</value>
+  </data>
+  <data name="Button_OK" xml:space="preserve">
+    <value>Tabbas</value>
+  </data>
+  <data name="ContextMenu_Delete" xml:space="preserve">
+    <value>Goge</value>
+  </data>
+  <data name="ContextMenu_Open" xml:space="preserve">
+    <value>Buɗe</value>
+  </data>
+  <data name="Copyright_Text" xml:space="preserve">
+    <value>Annotator {0} : Hakkin mallaka (c) 2025-{1} Siarhei Kuchuk</value>
+  </data>
+  <data name="Dialog_Export_Title" xml:space="preserve">
+    <value>Fitarwa</value>
+  </data>
+  <data name="Dialog_Import_Title" xml:space="preserve">
+    <value>Shigar da Aiki ko Hoto</value>
+  </data>
+  <data name="FileType_AllFiles" xml:space="preserve">
+    <value>Duk Fayiloli</value>
+  </data>
+  <data name="FileType_AllSupported" xml:space="preserve">
+    <value>Duk fayilolin da ake tallafawa</value>
+  </data>
+  <data name="FileType_AnnotatorProject" xml:space="preserve">
+    <value>Aikin Annotator</value>
+  </data>
+  <data name="FileType_Images" xml:space="preserve">
+    <value>Fayilolin Hoto</value>
+  </data>
+  <data name="FileType_JPEG" xml:space="preserve">
+    <value>Hoto na JPEG</value>
+  </data>
+  <data name="FileType_PNG" xml:space="preserve">
+    <value>Hoto na PNG</value>
+  </data>
+  <data name="FileType_WebP" xml:space="preserve">
+    <value>Hoto na WebP</value>
+  </data>
+  <data name="Header_ScreenshotAnnotator" xml:space="preserve">
+    <value>[ Mai Rubutu kan Hoton Allo - V{0} ]</value>
+  </data>
+  <data name="ImproveIt_Message" xml:space="preserve">
+    <value>An sami kuskure da ba a zata ba.
+
+Don Allah tuntuɓi masu haɓakawa tare da bayanin da aka adana a teburinku a
+"{0}"
+
+Aikace-aikacen zai rufe yanzu.</value>
+  </data>
+  <data name="Installer_AdminRequired" xml:space="preserve">
+    <value>Ana buƙatar izinin mai kula don shigarwa ga duk masu amfani.
+Don Allah gudanar da mai shigarwa a matsayin mai kula ko amfani da /CURRENTUSER.</value>
+  </data>
+  <data name="Installer_AdminRequiredDetailed" xml:space="preserve">
+    <value>Ana buƙatar izinin mai kula don shigarwa ga duk masu amfani.
+
+Don Allah yi ɗaya daga cikin waɗannan:
+- Zaɓi 'Shigar don mai amfani na yanzu kawai', ko
+- Gudanar da wannan mai shigarwa a matsayin mai kula</value>
+  </data>
+  <data name="Installer_AllUsersDescription" xml:space="preserve">
+    <value>Aikace-aikacen zai kasance don duk masu amfani a wannan kwamfuta.</value>
+  </data>
+  <data name="Installer_AllUsersOption" xml:space="preserve">
+    <value>Shigar don duk masu amfani (&amp;A) (yana buƙatar izinin mai kula)</value>
+  </data>
+  <data name="Installer_ArchRequired" xml:space="preserve">
+    <value>Wannan mai shigarwa yana buƙatar sigar x64 ko arm64 na Windows.</value>
+  </data>
+  <data name="Installer_CurrentUserDescription" xml:space="preserve">
+    <value>Ana ba da shawarar. Aikace-aikacen zai kasance don asusun mai amfani ɗinku kawai.</value>
+  </data>
+  <data name="Installer_CurrentUserOption" xml:space="preserve">
+    <value>Shigar don mai amfani na yanzu kawai (&amp;C)</value>
+  </data>
+  <data name="Installer_InstallingFor" xml:space="preserve">
+    <value>Ana shigarwa don:</value>
+  </data>
+  <data name="Installer_InstallModeDescription" xml:space="preserve">
+    <value>Don Allah zaɓi ko kuna son shigar da Screenshot Annotator don kanku kawai ko don duk masu amfani a wannan kwamfuta.</value>
+  </data>
+  <data name="Installer_InstallModeSubtitle" xml:space="preserve">
+    <value>Zaɓi wanda zai iya amfani da wannan aikace-aikace</value>
+  </data>
+  <data name="Installer_InstallModeTitle" xml:space="preserve">
+    <value>Zaɓi Nau'in Shigarwa</value>
+  </data>
+  <data name="Installer_LaunchApp" xml:space="preserve">
+    <value>Fara App</value>
+  </data>
+  <data name="Menu_EnablePrintScreenHotkey" xml:space="preserve">
+    <value>Kunna maɓallin gajeriyar hanya na Print Screen</value>
+  </data>
+  <data name="Menu_Export" xml:space="preserve">
+    <value>Fitarwa...</value>
+  </data>
+  <data name="Menu_File" xml:space="preserve">
+    <value>[ Fayil ]</value>
+  </data>
+  <data name="Menu_Import" xml:space="preserve">
+    <value>Shigarwa...</value>
+  </data>
+  <data name="Menu_License" xml:space="preserve">
+    <value>Lasisi</value>
+  </data>
+  <data name="Menu_New" xml:space="preserve">
+    <value>Sabon...</value>
+  </data>
+  <data name="Menu_OpenLogsFolder" xml:space="preserve">
+    <value>Buɗe Fayilin _Rikodin</value>
+  </data>
+  <data name="Menu_OpenProjectsFolder" xml:space="preserve">
+    <value>Buɗe Fayilin _Ayyuka</value>
+  </data>
+  <data name="Menu_Options" xml:space="preserve">
+    <value>Zaɓuɓɓuka</value>
+  </data>
+  <data name="Menu_WebSite" xml:space="preserve">
+    <value>Yanar Gizo</value>
+  </data>
+  <data name="Panel_Projects" xml:space="preserve">
+    <value>Ayyuka</value>
+  </data>
+  <data name="Panel_Properties" xml:space="preserve">
+    <value>Kaddarorin</value>
+  </data>
+  <data name="Props_Bold" xml:space="preserve">
+    <value>Mai kauri</value>
+  </data>
+  <data name="Props_Color" xml:space="preserve">
+    <value>Launi</value>
+  </data>
+  <data name="Props_Font" xml:space="preserve">
+    <value>Rubutu</value>
+  </data>
+  <data name="Props_Italic" xml:space="preserve">
+    <value>Ƙetare</value>
+  </data>
+  <data name="Props_Size" xml:space="preserve">
+    <value>Girma</value>
+  </data>
+  <data name="Screenshot_Instructions" xml:space="preserve">
+    <value>Danna kuma ja don zaɓar yanki, ko daidaita wuraren kusurwa. Yi amfani da ƙara girma don daidaito. Danna Tabbas idan kun shirya.</value>
+  </data>
+  <data name="Tool_Arrow" xml:space="preserve">
+    <value>Kibiya</value>
+  </data>
+  <data name="Tool_Blur" xml:space="preserve">
+    <value>Ruɓa</value>
+  </data>
+  <data name="Tool_Border" xml:space="preserve">
+    <value>Iyaka</value>
+  </data>
+  <data name="Tool_Callout" xml:space="preserve">
+    <value>Bayani</value>
+  </data>
+  <data name="Tool_Copy" xml:space="preserve">
+    <value>Kwafi</value>
+  </data>
+  <data name="Tool_CutHorizontal" xml:space="preserve">
+    <value>Yanke -</value>
+  </data>
+  <data name="Tool_CutVertical" xml:space="preserve">
+    <value>Yanke |</value>
+  </data>
+  <data name="Tool_Export" xml:space="preserve">
+    <value>Fitarwa</value>
+  </data>
+  <data name="Tool_Highlight" xml:space="preserve">
+    <value>Haskaka</value>
+  </data>
+  <data name="Tool_Import" xml:space="preserve">
+    <value>Shigarwa</value>
+  </data>
+  <data name="Tool_New" xml:space="preserve">
+    <value>Sabon</value>
+  </data>
+  <data name="Tool_Note" xml:space="preserve">
+    <value>Rubutu</value>
+  </data>
+  <data name="Tool_Paste" xml:space="preserve">
+    <value>Liƙa</value>
+  </data>
+  <data name="Tool_Screenshot" xml:space="preserve">
+    <value>Hoton Allo</value>
+  </data>
+  <data name="Tool_Select" xml:space="preserve">
+    <value>Zaɓi</value>
+  </data>
+  <data name="Tooltip_Arrow" xml:space="preserve">
+    <value>Zana kibiya</value>
+  </data>
+  <data name="Tooltip_Blur" xml:space="preserve">
+    <value>Ruɓa yanki</value>
+  </data>
+  <data name="Tooltip_Border" xml:space="preserve">
+    <value>Zana iyaka/murabba'i</value>
+  </data>
+  <data name="Tooltip_Callout" xml:space="preserve">
+    <value>Ƙara bayani</value>
+  </data>
+  <data name="Tooltip_CollapseExpandPanel" xml:space="preserve">
+    <value>Rushe/Faɗaɗa Feniyan Ayyuka</value>
+  </data>
+  <data name="Tooltip_Copy" xml:space="preserve">
+    <value>Kwafi zuwa allo</value>
+  </data>
+  <data name="Tooltip_CutHorizontal" xml:space="preserve">
+    <value>Yanke hoto a kwance</value>
+  </data>
+  <data name="Tooltip_CutVertical" xml:space="preserve">
+    <value>Yanke hoto a tsaye</value>
+  </data>
+  <data name="Tooltip_Export" xml:space="preserve">
+    <value>Fitar da hoto ko aiki</value>
+  </data>
+  <data name="Tooltip_Highlight" xml:space="preserve">
+    <value>Haskaka yanki</value>
+  </data>
+  <data name="Tooltip_Import" xml:space="preserve">
+    <value>Shigar da aiki ko hoto</value>
+  </data>
+  <data name="Tooltip_New" xml:space="preserve">
+    <value>Ƙirƙiri sabon aiki</value>
+  </data>
+  <data name="Tooltip_Note" xml:space="preserve">
+    <value>Ƙara rubutun bayani</value>
+  </data>
+  <data name="Tooltip_Paste" xml:space="preserve">
+    <value>Liƙa daga allo</value>
+  </data>
+  <data name="Tooltip_Screenshot" xml:space="preserve">
+    <value>Ɗauki hoton allo</value>
+  </data>
+  <data name="Tooltip_Select" xml:space="preserve">
+    <value>Zaɓi kuma gyara bayanan</value>
+  </data>
+  <data name="Update_NewVersionAvailable" xml:space="preserve">
+    <value>Sabon sigar {0} yana samuwa.</value>
+  </data>
+  <data name="Window_Title" xml:space="preserve">
+    <value>Screenshot Annotator - Mai Gyara Hoto</value>
+  </data>
+  <data name="Winget_Description" xml:space="preserve">
+    <value>Software na rubutu kan hoton allo don Windows da Linux.
+
+Fasaloli:
+- **Kibiyoyi** - Jan hankali zuwa wurare na musamman da kibiyoyi masu saukaka
+- **Bayani** - Ƙara bayanin kumfa mai iya gyarawa
+- **Rubutu** - Ƙirƙiri akwatunan rubutu don ƙarin bayani
+- **Zaɓin Iyaka** - Nuna wurare tare da murabba'i masu iyaka
+- **Ruɓa** - Ɓoye bayani mai mahimmanci da tasirin ruɓa
+- **Kayan aikin Zaɓi** - Zaɓi sassa na hoto don kwafi (Ctrl+C) ko gogewa (maɓallin Delete)
+- **Yanke sassan tsaye da kwance** - Yanke sassan tsaye ko kwance na hoto
+- **Haskaka** - Haskaka wurare masu sha'awa
+- **Sarrafa Ayyuka** - Adana aiki ta atomatik da ƙananan hoto na duba
+- **Ƙetare dandali** - Yana aiki a Windows da Linux duka</value>
+  </data>
+  <data name="Winget_ShortDescription" xml:space="preserve">
+    <value>Software na rubutu kan hoton allo don Windows da Linux.</value>
+  </data>
+</root>

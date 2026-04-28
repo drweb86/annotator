@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <!-- Kannada Translation -->
+  <data name="_Technical_NsisLanguage" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="_Technical_WingetLocale" xml:space="preserve">
+    <value>kn-IN</value>
+  </data>
+  <data name="Button_Accept" xml:space="preserve">
+    <value>✓ ಒಪ್ಪಿಕೊಳ್ಳಿ</value>
+  </data>
+  <data name="Button_Cancel" xml:space="preserve">
+    <value>ರದ್ದು ಮಾಡಿ</value>
+  </data>
+  <data name="Button_CancelX" xml:space="preserve">
+    <value>✕ ರದ್ದು ಮಾಡಿ</value>
+  </data>
+  <data name="Button_Download" xml:space="preserve">
+    <value>ಡೌನ್‌ಲೋಡ್</value>
+  </data>
+  <data name="Button_OK" xml:space="preserve">
+    <value>ಸರಿ</value>
+  </data>
+  <data name="ContextMenu_Delete" xml:space="preserve">
+    <value>ಅಳಿಸಿ</value>
+  </data>
+  <data name="ContextMenu_Open" xml:space="preserve">
+    <value>ತೆರೆಯಿರಿ</value>
+  </data>
+  <data name="Copyright_Text" xml:space="preserve">
+    <value>Annotator {0} : ಕೃತಿಸ್ವಾಮ್ಯ (c) 2025-{1} Siarhei Kuchuk</value>
+  </data>
+  <data name="Dialog_Export_Title" xml:space="preserve">
+    <value>ರಫ್ತು</value>
+  </data>
+  <data name="Dialog_Import_Title" xml:space="preserve">
+    <value>ಯೋಜನೆ ಅಥವಾ ಚಿತ್ರ ಆಮದು ಮಾಡಿ</value>
+  </data>
+  <data name="FileType_AllFiles" xml:space="preserve">
+    <value>ಎಲ್ಲಾ ಫೈಲ್‌ಗಳು</value>
+  </data>
+  <data name="FileType_AllSupported" xml:space="preserve">
+    <value>ಎಲ್ಲಾ ಬೆಂಬಲಿತ ಫೈಲ್‌ಗಳು</value>
+  </data>
+  <data name="FileType_AnnotatorProject" xml:space="preserve">
+    <value>Annotator ಯೋಜನೆ</value>
+  </data>
+  <data name="FileType_Images" xml:space="preserve">
+    <value>ಚಿತ್ರ ಫೈಲ್‌ಗಳು</value>
+  </data>
+  <data name="FileType_JPEG" xml:space="preserve">
+    <value>JPEG ಚಿತ್ರ</value>
+  </data>
+  <data name="FileType_PNG" xml:space="preserve">
+    <value>PNG ಚಿತ್ರ</value>
+  </data>
+  <data name="FileType_WebP" xml:space="preserve">
+    <value>WebP ಚಿತ್ರ</value>
+  </data>
+  <data name="Header_ScreenshotAnnotator" xml:space="preserve">
+    <value>[ ಸ್ಕ್ರೀನ್‌ಶಾಟ್ ಟಿಪ್ಪಣಿಕಾರ - V{0} ]</value>
+  </data>
+  <data name="ImproveIt_Message" xml:space="preserve">
+    <value>ಅನಿರೀಕ್ಷಿತ ದೋಷ ಸಂಭವಿಸಿದೆ.
+
+ನಿಮ್ಮ ಡೆಸ್ಕ್‌ಟಾಪ್‌ನಲ್ಲಿ ಉಳಿಸಲಾದ ಮಾಹಿತಿಯೊಂದಿಗೆ ಡೆವಲಪರ್‌ಗಳನ್ನು ಸಂಪರ್ಕಿಸಿ
+"{0}"
+
+ಅಪ್ಲಿಕೇಶನ್ ಈಗ ಮುಚ್ಚಲಾಗುತ್ತದೆ.</value>
+  </data>
+  <data name="Installer_AdminRequired" xml:space="preserve">
+    <value>ಎಲ್ಲಾ ಬಳಕೆದಾರರಿಗೆ ಸ್ಥಾಪಿಸಲು ನಿರ್ವಾಹಕ ಸವಲತ್ತುಗಳು ಅಗತ್ಯ.
+ದಯವಿಟ್ಟು ಸ್ಥಾಪಕವನ್ನು ನಿರ್ವಾಹಕರಾಗಿ ಚಲಾಯಿಸಿ ಅಥವಾ /CURRENTUSER ಬಳಸಿ.</value>
+  </data>
+  <data name="Installer_AdminRequiredDetailed" xml:space="preserve">
+    <value>ಎಲ್ಲಾ ಬಳಕೆದಾರರಿಗೆ ಸ್ಥಾಪಿಸಲು ನಿರ್ವಾಹಕ ಸವಲತ್ತುಗಳು ಅಗತ್ಯ.
+
+ದಯವಿಟ್ಟು ಈ ಕೆಳಗಿನದನ್ನು ಮಾಡಿ:
+- 'ಪ್ರಸ್ತುತ ಬಳಕೆದಾರರಿಗೆ ಮಾತ್ರ ಸ್ಥಾಪಿಸಿ' ಆರಿಸಿ, ಅಥವಾ
+- ಈ ಸ್ಥಾಪಕವನ್ನು ನಿರ್ವಾಹಕರಾಗಿ ಚಲಾಯಿಸಿ</value>
+  </data>
+  <data name="Installer_AllUsersDescription" xml:space="preserve">
+    <value>ಅಪ್ಲಿಕೇಶನ್ ಈ ಕಂಪ್ಯೂಟರ್‌ನ ಎಲ್ಲಾ ಬಳಕೆದಾರರಿಗೆ ಲಭ್ಯವಿರುತ್ತದೆ.</value>
+  </data>
+  <data name="Installer_AllUsersOption" xml:space="preserve">
+    <value>ಎಲ್ಲಾ ಬಳಕೆದಾರರಿಗೆ ಸ್ಥಾಪಿಸಿ (&amp;A) (ನಿರ್ವಾಹಕ ಸವಲತ್ತುಗಳು ಬೇಕಾಗುತ್ತವೆ)</value>
+  </data>
+  <data name="Installer_ArchRequired" xml:space="preserve">
+    <value>ಈ ಸ್ಥಾಪಕಕ್ಕೆ Windows ನ x64 ಅಥವಾ arm64 ಆವೃತ್ತಿ ಅಗತ್ಯವಿದೆ.</value>
+  </data>
+  <data name="Installer_CurrentUserDescription" xml:space="preserve">
+    <value>ಶಿಫಾರಸು. ಅಪ್ಲಿಕೇಶನ್ ನಿಮ್ಮ ಬಳಕೆದಾರ ಖಾತೆಗೆ ಮಾತ್ರ ಲಭ್ಯವಿರುತ್ತದೆ.</value>
+  </data>
+  <data name="Installer_CurrentUserOption" xml:space="preserve">
+    <value>ಪ್ರಸ್ತುತ ಬಳಕೆದಾರರಿಗೆ ಮಾತ್ರ ಸ್ಥಾಪಿಸಿ (&amp;C)</value>
+  </data>
+  <data name="Installer_InstallingFor" xml:space="preserve">
+    <value>ಇವರಿಗಾಗಿ ಸ್ಥಾಪಿಸಲಾಗುತ್ತಿದೆ:</value>
+  </data>
+  <data name="Installer_InstallModeDescription" xml:space="preserve">
+    <value>Screenshot Annotator ಅನ್ನು ನಿಮಗೆ ಮಾತ್ರ ಅಥವಾ ಈ ಕಂಪ್ಯೂಟರ್‌ನ ಎಲ್ಲಾ ಬಳಕೆದಾರರಿಗೆ ಸ್ಥಾಪಿಸಲು ಬಯಸುತ್ತೀರಾ ಎಂದು ದಯವಿಟ್ಟು ಆರಿಸಿ.</value>
+  </data>
+  <data name="Installer_InstallModeSubtitle" xml:space="preserve">
+    <value>ಈ ಅಪ್ಲಿಕೇಶನ್ ಅನ್ನು ಯಾರು ಬಳಸಬಹುದು ಎಂದು ಆರಿಸಿ</value>
+  </data>
+  <data name="Installer_InstallModeTitle" xml:space="preserve">
+    <value>ಸ್ಥಾಪನಾ ಪ್ರಕಾರ ಆರಿಸಿ</value>
+  </data>
+  <data name="Installer_LaunchApp" xml:space="preserve">
+    <value>ಅಪ್ ಪ್ರಾರಂಭಿಸಿ</value>
+  </data>
+  <data name="Menu_EnablePrintScreenHotkey" xml:space="preserve">
+    <value>Print Screen ಶಾರ್ಟ್‌ಕಟ್ ಸಕ್ರಿಯಗೊಳಿಸಿ</value>
+  </data>
+  <data name="Menu_Export" xml:space="preserve">
+    <value>ರಫ್ತು...</value>
+  </data>
+  <data name="Menu_File" xml:space="preserve">
+    <value>[ ಫೈಲ್ ]</value>
+  </data>
+  <data name="Menu_Import" xml:space="preserve">
+    <value>ಆಮದು...</value>
+  </data>
+  <data name="Menu_License" xml:space="preserve">
+    <value>ಪರವಾನಗಿ</value>
+  </data>
+  <data name="Menu_New" xml:space="preserve">
+    <value>ಹೊಸದು...</value>
+  </data>
+  <data name="Menu_OpenLogsFolder" xml:space="preserve">
+    <value>_ಲಾಗ್ ಫೋಲ್ಡರ್ ತೆರೆಯಿರಿ</value>
+  </data>
+  <data name="Menu_OpenProjectsFolder" xml:space="preserve">
+    <value>_ಯೋಜನೆಗಳ ಫೋಲ್ಡರ್ ತೆರೆಯಿರಿ</value>
+  </data>
+  <data name="Menu_Options" xml:space="preserve">
+    <value>ಆಯ್ಕೆಗಳು</value>
+  </data>
+  <data name="Menu_WebSite" xml:space="preserve">
+    <value>ವೆಬ್-ಸೈಟ್</value>
+  </data>
+  <data name="Panel_Projects" xml:space="preserve">
+    <value>ಯೋಜನೆಗಳು</value>
+  </data>
+  <data name="Panel_Properties" xml:space="preserve">
+    <value>ಗುಣಲಕ್ಷಣಗಳು</value>
+  </data>
+  <data name="Props_Bold" xml:space="preserve">
+    <value>ದಪ್ಪ</value>
+  </data>
+  <data name="Props_Color" xml:space="preserve">
+    <value>ಬಣ್ಣ</value>
+  </data>
+  <data name="Props_Font" xml:space="preserve">
+    <value>ಫಾಂಟ್</value>
+  </data>
+  <data name="Props_Italic" xml:space="preserve">
+    <value>ಓರೆ</value>
+  </data>
+  <data name="Props_Size" xml:space="preserve">
+    <value>ಗಾತ್ರ</value>
+  </data>
+  <data name="Screenshot_Instructions" xml:space="preserve">
+    <value>ಪ್ರದೇಶ ಆರಿಸಲು ಕ್ಲಿಕ್ ಮಾಡಿ ಮತ್ತು ಎಳೆಯಿರಿ, ಅಥವಾ ಮೂಲೆ ಬಿಂದುಗಳನ್ನು ಸರಿಪಡಿಸಿ. ನಿಖರತೆಗಾಗಿ ಮ್ಯಾಗ್ನಿಫೈಯರ್ ಬಳಸಿ. ಸಿದ್ಧವಾದಾಗ ಸರಿ ಒತ್ತಿ.</value>
+  </data>
+  <data name="Tool_Arrow" xml:space="preserve">
+    <value>ಬಾಣ</value>
+  </data>
+  <data name="Tool_Blur" xml:space="preserve">
+    <value>ಮಸುಕು</value>
+  </data>
+  <data name="Tool_Border" xml:space="preserve">
+    <value>ಗಡಿ</value>
+  </data>
+  <data name="Tool_Callout" xml:space="preserve">
+    <value>ಕಾಲ್‌ಔಟ್</value>
+  </data>
+  <data name="Tool_Copy" xml:space="preserve">
+    <value>ನಕಲಿಸಿ</value>
+  </data>
+  <data name="Tool_CutHorizontal" xml:space="preserve">
+    <value>ಕತ್ತರಿಸಿ -</value>
+  </data>
+  <data name="Tool_CutVertical" xml:space="preserve">
+    <value>ಕತ್ತರಿಸಿ |</value>
+  </data>
+  <data name="Tool_Export" xml:space="preserve">
+    <value>ರಫ್ತು</value>
+  </data>
+  <data name="Tool_Highlight" xml:space="preserve">
+    <value>ಹೈಲೈಟ್</value>
+  </data>
+  <data name="Tool_Import" xml:space="preserve">
+    <value>ಆಮದು</value>
+  </data>
+  <data name="Tool_New" xml:space="preserve">
+    <value>ಹೊಸದು</value>
+  </data>
+  <data name="Tool_Note" xml:space="preserve">
+    <value>ಟಿಪ್ಪಣಿ</value>
+  </data>
+  <data name="Tool_Paste" xml:space="preserve">
+    <value>ಅಂಟಿಸಿ</value>
+  </data>
+  <data name="Tool_Screenshot" xml:space="preserve">
+    <value>ಸ್ಕ್ರೀನ್‌ಶಾಟ್</value>
+  </data>
+  <data name="Tool_Select" xml:space="preserve">
+    <value>ಆರಿಸಿ</value>
+  </data>
+  <data name="Tooltip_Arrow" xml:space="preserve">
+    <value>ಬಾಣ ಚಿತ್ರಿಸಿ</value>
+  </data>
+  <data name="Tooltip_Blur" xml:space="preserve">
+    <value>ಪ್ರದೇಶ ಮಸುಕಾಗಿಸಿ</value>
+  </data>
+  <data name="Tooltip_Border" xml:space="preserve">
+    <value>ಗಡಿ/ಆಯತ ಚಿತ್ರಿಸಿ</value>
+  </data>
+  <data name="Tooltip_Callout" xml:space="preserve">
+    <value>ಕಾಲ್‌ಔಟ್ ಸೇರಿಸಿ</value>
+  </data>
+  <data name="Tooltip_CollapseExpandPanel" xml:space="preserve">
+    <value>ಯೋಜನೆಗಳ ಪ್ಯಾನಲ್ ಮುಚ್ಚಿ/ತೆರೆಯಿರಿ</value>
+  </data>
+  <data name="Tooltip_Copy" xml:space="preserve">
+    <value>ಕ್ಲಿಪ್‌ಬೋರ್ಡ್‌ಗೆ ನಕಲಿಸಿ</value>
+  </data>
+  <data name="Tooltip_CutHorizontal" xml:space="preserve">
+    <value>ಚಿತ್ರವನ್ನು ಅಡ್ಡಲಾಗಿ ಕತ್ತರಿಸಿ</value>
+  </data>
+  <data name="Tooltip_CutVertical" xml:space="preserve">
+    <value>ಚಿತ್ರವನ್ನು ಲಂಬವಾಗಿ ಕತ್ತರಿಸಿ</value>
+  </data>
+  <data name="Tooltip_Export" xml:space="preserve">
+    <value>ಚಿತ್ರ ಅಥವಾ ಯೋಜನೆ ರಫ್ತು ಮಾಡಿ</value>
+  </data>
+  <data name="Tooltip_Highlight" xml:space="preserve">
+    <value>ಪ್ರದೇಶ ಹೈಲೈಟ್ ಮಾಡಿ</value>
+  </data>
+  <data name="Tooltip_Import" xml:space="preserve">
+    <value>ಯೋಜನೆ ಅಥವಾ ಚಿತ್ರ ಆಮದು ಮಾಡಿ</value>
+  </data>
+  <data name="Tooltip_New" xml:space="preserve">
+    <value>ಹೊಸ ಯೋಜನೆ ರಚಿಸಿ</value>
+  </data>
+  <data name="Tooltip_Note" xml:space="preserve">
+    <value>ಪಠ್ಯ ಟಿಪ್ಪಣಿ ಸೇರಿಸಿ</value>
+  </data>
+  <data name="Tooltip_Paste" xml:space="preserve">
+    <value>ಕ್ಲಿಪ್‌ಬೋರ್ಡ್‌ನಿಂದ ಅಂಟಿಸಿ</value>
+  </data>
+  <data name="Tooltip_Screenshot" xml:space="preserve">
+    <value>ಸ್ಕ್ರೀನ್‌ಶಾಟ್ ತೆಗೆಯಿರಿ</value>
+  </data>
+  <data name="Tooltip_Select" xml:space="preserve">
+    <value>ಟಿಪ್ಪಣಿಗಳನ್ನು ಆರಿಸಿ ಮತ್ತು ಸಂಪಾದಿಸಿ</value>
+  </data>
+  <data name="Update_NewVersionAvailable" xml:space="preserve">
+    <value>ಹೊಸ {0} ಆವೃತ್ತಿ ಲಭ್ಯವಿದೆ.</value>
+  </data>
+  <data name="Window_Title" xml:space="preserve">
+    <value>Screenshot Annotator - ಚಿತ್ರ ಸಂಪಾದಕ</value>
+  </data>
+  <data name="Winget_Description" xml:space="preserve">
+    <value>Windows ಮತ್ತು Linux ಗಾಗಿ ಸ್ಕ್ರೀನ್‌ಶಾಟ್ ಟಿಪ್ಪಣಿ ಸಾಫ್ಟ್‌ವೇರ್.
+
+ವೈಶಿಷ್ಟ್ಯಗಳು:
+- **ಬಾಣಗಳು** - ಕಸ್ಟಮೈಸ್ ಮಾಡಬಹುದಾದ ಬಾಣಗಳೊಂದಿಗೆ ನಿರ್ದಿಷ್ಟ ಪ್ರದೇಶಗಳಿಗೆ ಗಮನ ಸೆಳೆಯಿರಿ
+- **ಕಾಲ್‌ಔಟ್‌ಗಳು** - ಸಂಪಾದಿಸಬಹುದಾದ ಪಠ್ಯದೊಂದಿಗೆ ಸ್ಪೀಚ್ ಬಬಲ್ ಟಿಪ್ಪಣಿಗಳನ್ನು ಸೇರಿಸಿ
+- **ಟಿಪ್ಪಣಿಗಳು** - ಹೆಚ್ಚಿನ ಮಾಹಿತಿಗಾಗಿ ಪಠ್ಯ ಪೆಟ್ಟಿಗೆಗಳನ್ನು ರಚಿಸಿ
+- **ಗಡಿ ಆಯ್ಕೆ** - ಗಡಿಯುಳ್ಳ ಆಯತಗಳೊಂದಿಗೆ ಪ್ರದೇಶಗಳನ್ನು ಎತ್ತಿ ತೋರಿಸಿ
+- **ಮಸುಕು** - ಮಸುಕು ಪರಿಣಾಮಗಳೊಂದಿಗೆ ಸೂಕ್ಷ್ಮ ಮಾಹಿತಿಯನ್ನು ಮರೆಮಾಡಿ
+- **ಆಯ್ಕೆ ಸಾಧನ** - ನಕಲು (Ctrl+C) ಅಥವಾ ಅಳಿಸಲು (Delete ಕೀ) ಚಿತ್ರದ ಭಾಗಗಳನ್ನು ಆರಿಸಿ
+- **ಲಂಬ ಮತ್ತು ಅಡ್ಡ ತುಂಡುಗಳನ್ನು ಕತ್ತರಿಸಿ** - ಚಿತ್ರದ ಲಂಬ ಅಥವಾ ಅಡ್ಡ ಪ್ರದೇಶಗಳನ್ನು ಕತ್ತರಿಸಿ
+- **ಹೈಲೈಟರ್** - ಆಸಕ್ತಿಯ ಪ್ರದೇಶಗಳನ್ನು ಎತ್ತಿ ತೋರಿಸಿ
+- **ಯೋಜನೆ ನಿರ್ವಹಣೆ** - ಸ್ವಯಂಚಾಲಿತ ಯೋಜನೆ ಉಳಿತಾಯ ಮತ್ತು ಪೂರ್ವವೀಕ್ಷಣೆ ಚಿಕ್ಕ ಚಿತ್ರಗಳು
+- **ಅಡ್ಡ-ವೇದಿಕೆ** - Windows ಮತ್ತು Linux ಎರಡರಲ್ಲೂ ಕಾರ್ಯನಿರ್ವಹಿಸುತ್ತದೆ</value>
+  </data>
+  <data name="Winget_ShortDescription" xml:space="preserve">
+    <value>Windows ಮತ್ತು Linux ಗಾಗಿ ಸ್ಕ್ರೀನ್‌ಶಾಟ್ ಟಿಪ್ಪಣಿ ಸಾಫ್ಟ್‌ವೇರ್.</value>
+  </data>
+</root>

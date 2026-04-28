@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <!-- Burmese Translation -->
+  <data name="_Technical_NsisLanguage" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="_Technical_WingetLocale" xml:space="preserve">
+    <value>my-MM</value>
+  </data>
+  <data name="Button_Accept" xml:space="preserve">
+    <value>✓ လက်ခံ</value>
+  </data>
+  <data name="Button_Cancel" xml:space="preserve">
+    <value>ပယ်ဖျက်</value>
+  </data>
+  <data name="Button_CancelX" xml:space="preserve">
+    <value>✕ ပယ်ဖျက်</value>
+  </data>
+  <data name="Button_Download" xml:space="preserve">
+    <value>ဒေါင်းလုဒ်</value>
+  </data>
+  <data name="Button_OK" xml:space="preserve">
+    <value>အိုကေ</value>
+  </data>
+  <data name="ContextMenu_Delete" xml:space="preserve">
+    <value>ဖျက်</value>
+  </data>
+  <data name="ContextMenu_Open" xml:space="preserve">
+    <value>ဖွင့်</value>
+  </data>
+  <data name="Copyright_Text" xml:space="preserve">
+    <value>Annotator {0} : မူပိုင်ခွင့် (c) 2025-{1} Siarhei Kuchuk</value>
+  </data>
+  <data name="Dialog_Export_Title" xml:space="preserve">
+    <value>ပို့ကုန်</value>
+  </data>
+  <data name="Dialog_Import_Title" xml:space="preserve">
+    <value>ပရောဂျက် သို့မဟုတ် ပုံ တင်သွင်း</value>
+  </data>
+  <data name="FileType_AllFiles" xml:space="preserve">
+    <value>ဖိုင်အားလုံး</value>
+  </data>
+  <data name="FileType_AllSupported" xml:space="preserve">
+    <value>ပံ့ပိုးထားသောဖိုင်အားလုံး</value>
+  </data>
+  <data name="FileType_AnnotatorProject" xml:space="preserve">
+    <value>Annotator ပရောဂျက်</value>
+  </data>
+  <data name="FileType_Images" xml:space="preserve">
+    <value>ပုံဖိုင်များ</value>
+  </data>
+  <data name="FileType_JPEG" xml:space="preserve">
+    <value>JPEG ပုံ</value>
+  </data>
+  <data name="FileType_PNG" xml:space="preserve">
+    <value>PNG ပုံ</value>
+  </data>
+  <data name="FileType_WebP" xml:space="preserve">
+    <value>WebP ပုံ</value>
+  </data>
+  <data name="Header_ScreenshotAnnotator" xml:space="preserve">
+    <value>[ ဖန်သားပြင် မှတ်ချက် - V{0} ]</value>
+  </data>
+  <data name="ImproveIt_Message" xml:space="preserve">
+    <value>မမျှော်လင့်ဘဲ အမှားတစ်ခု ဖြစ်ပေါ်ခဲ့သည်။
+
+ဒက်စ်တော့ပေါ်တွင် သိမ်းဆည်းထားသော အချက်အလက်ဖြင့် ဆော့ဖ်ဝဲရေးသားသူများကို ဆက်သွယ်ပါ
+"{0}"
+
+အပ်ပလီကေးရှင်း ယခု ပိတ်သွားမည်။</value>
+  </data>
+  <data name="Installer_AdminRequired" xml:space="preserve">
+    <value>အသုံးပြုသူအားလုံးအတွက် ထည့်သွင်းရန် စီမံခန့်ခွဲသူ ခွင့်ပြုချက် လိုအပ်သည်။
+စီမံခန့်ခွဲသူအဖြစ် installer ကို run ပါ သို့မဟုတ် /CURRENTUSER ကို သုံးပါ။</value>
+  </data>
+  <data name="Installer_AdminRequiredDetailed" xml:space="preserve">
+    <value>အသုံးပြုသူအားလုံးအတွက် ထည့်သွင်းရန် စီမံခန့်ခွဲသူ ခွင့်ပြုချက် လိုအပ်သည်။
+
+အောက်ပါတစ်ခုကို ရွေးချယ်ပါ-
+- 'လက်ရှိအသုံးပြုသူအတွက်သာ ထည့်သွင်း' ကို ရွေးချယ်ပါ သို့မဟုတ်
+- ဤ installer ကို စီမံခန့်ခွဲသူအဖြစ် run ပါ</value>
+  </data>
+  <data name="Installer_AllUsersDescription" xml:space="preserve">
+    <value>ဤကွန်ပျူတာရှိ အသုံးပြုသူအားလုံးအတွက် အပ်ပလီကေးရှင်း ရနိုင်မည်ဖြစ်သည်။</value>
+  </data>
+  <data name="Installer_AllUsersOption" xml:space="preserve">
+    <value>အသုံးပြုသူအားလုံးအတွက် ထည့်သွင်း (&amp;A) (စီမံခန့်ခွဲသူ ခွင့်ပြုချက် လိုအပ်သည်)</value>
+  </data>
+  <data name="Installer_ArchRequired" xml:space="preserve">
+    <value>ဤ installer တွင် Windows ၏ x64 သို့မဟုတ် arm64 ဗားရှင်း လိုအပ်သည်။</value>
+  </data>
+  <data name="Installer_CurrentUserDescription" xml:space="preserve">
+    <value>အကြံပြုထားသည်။ အပ်ပလီကေးရှင်းသည် သင်၏ အသုံးပြုသူအကောင့်အတွက်သာ ရနိုင်မည်ဖြစ်သည်။</value>
+  </data>
+  <data name="Installer_CurrentUserOption" xml:space="preserve">
+    <value>လက်ရှိအသုံးပြုသူအတွက်သာ ထည့်သွင်း (&amp;C)</value>
+  </data>
+  <data name="Installer_InstallingFor" xml:space="preserve">
+    <value>ထည့်သွင်းနေသည်-</value>
+  </data>
+  <data name="Installer_InstallModeDescription" xml:space="preserve">
+    <value>Screenshot Annotator ကို သင်တစ်ဦးတည်းအတွက်သာ သို့မဟုတ် ဤကွန်ပျူတာရှိ အသုံးပြုသူအားလုံးအတွက် ထည့်သွင်းလိုသလား ရွေးချယ်ပါ။</value>
+  </data>
+  <data name="Installer_InstallModeSubtitle" xml:space="preserve">
+    <value>ဤအပ်ပလီကေးရှင်းကို အသုံးပြုနိုင်မည့်သူ ရွေးချယ်ပါ</value>
+  </data>
+  <data name="Installer_InstallModeTitle" xml:space="preserve">
+    <value>ထည့်သွင်းမှုအမျိုးအစား ရွေးချယ်ပါ</value>
+  </data>
+  <data name="Installer_LaunchApp" xml:space="preserve">
+    <value>အပ်ပလီကေးရှင်း ဖွင့်</value>
+  </data>
+  <data name="Menu_EnablePrintScreenHotkey" xml:space="preserve">
+    <value>Print Screen ဟော့ကီ ဖွင့်</value>
+  </data>
+  <data name="Menu_Export" xml:space="preserve">
+    <value>ပို့ကုန်...</value>
+  </data>
+  <data name="Menu_File" xml:space="preserve">
+    <value>[ ဖိုင် ]</value>
+  </data>
+  <data name="Menu_Import" xml:space="preserve">
+    <value>တင်သွင်း...</value>
+  </data>
+  <data name="Menu_License" xml:space="preserve">
+    <value>လိုင်စင်</value>
+  </data>
+  <data name="Menu_New" xml:space="preserve">
+    <value>အသစ်...</value>
+  </data>
+  <data name="Menu_OpenLogsFolder" xml:space="preserve">
+    <value>_မှတ်တမ်း ဖိုဒါ ဖွင့်</value>
+  </data>
+  <data name="Menu_OpenProjectsFolder" xml:space="preserve">
+    <value>_ပရောဂျက် ဖိုဒါ ဖွင့်</value>
+  </data>
+  <data name="Menu_Options" xml:space="preserve">
+    <value>ရွေးချယ်စရာများ</value>
+  </data>
+  <data name="Menu_WebSite" xml:space="preserve">
+    <value>ဝဘ်ဆိုဒ်</value>
+  </data>
+  <data name="Panel_Projects" xml:space="preserve">
+    <value>ပရောဂျက်များ</value>
+  </data>
+  <data name="Panel_Properties" xml:space="preserve">
+    <value>ဂုဏ်သတ္တိများ</value>
+  </data>
+  <data name="Props_Bold" xml:space="preserve">
+    <value>စာလုံးမဲ</value>
+  </data>
+  <data name="Props_Color" xml:space="preserve">
+    <value>အရောင်</value>
+  </data>
+  <data name="Props_Font" xml:space="preserve">
+    <value>ဖောင့်</value>
+  </data>
+  <data name="Props_Italic" xml:space="preserve">
+    <value>စာလုံးစောင်း</value>
+  </data>
+  <data name="Props_Size" xml:space="preserve">
+    <value>အရွယ်အစား</value>
+  </data>
+  <data name="Screenshot_Instructions" xml:space="preserve">
+    <value>နေရာတစ်ခု ရွေးချယ်ရန် နှိပ်ပြီး ဆွဲချပါ သို့မဟုတ် ထောင့်အမှတ်များ ချိန်ညှိပါ။ တိကျမှုအတွက် မှန်ကြည့်မှန် သုံးပါ။ အဆင်သင့်ဖြစ်သောအခါ OK နှိပ်ပါ။</value>
+  </data>
+  <data name="Tool_Arrow" xml:space="preserve">
+    <value>မြား</value>
+  </data>
+  <data name="Tool_Blur" xml:space="preserve">
+    <value>ဝါးမှိုင်း</value>
+  </data>
+  <data name="Tool_Border" xml:space="preserve">
+    <value>နယ်နိမိတ်</value>
+  </data>
+  <data name="Tool_Callout" xml:space="preserve">
+    <value>ကာတွန်းဘူဘယ်</value>
+  </data>
+  <data name="Tool_Copy" xml:space="preserve">
+    <value>ကူး</value>
+  </data>
+  <data name="Tool_CutHorizontal" xml:space="preserve">
+    <value>ဖြတ် -</value>
+  </data>
+  <data name="Tool_CutVertical" xml:space="preserve">
+    <value>ဖြတ် |</value>
+  </data>
+  <data name="Tool_Export" xml:space="preserve">
+    <value>ပို့ကုန်</value>
+  </data>
+  <data name="Tool_Highlight" xml:space="preserve">
+    <value>မီးမောင်း</value>
+  </data>
+  <data name="Tool_Import" xml:space="preserve">
+    <value>တင်သွင်း</value>
+  </data>
+  <data name="Tool_New" xml:space="preserve">
+    <value>အသစ်</value>
+  </data>
+  <data name="Tool_Note" xml:space="preserve">
+    <value>မှတ်စု</value>
+  </data>
+  <data name="Tool_Paste" xml:space="preserve">
+    <value>ကပ်</value>
+  </data>
+  <data name="Tool_Screenshot" xml:space="preserve">
+    <value>ဖန်သားပြင်</value>
+  </data>
+  <data name="Tool_Select" xml:space="preserve">
+    <value>ရွေးချယ်</value>
+  </data>
+  <data name="Tooltip_Arrow" xml:space="preserve">
+    <value>မြားဆွဲ</value>
+  </data>
+  <data name="Tooltip_Blur" xml:space="preserve">
+    <value>နေရာဝါးမှိုင်း</value>
+  </data>
+  <data name="Tooltip_Border" xml:space="preserve">
+    <value>နယ်နိမိတ်/ထောင့်မှန်စတုဂံ ဆွဲ</value>
+  </data>
+  <data name="Tooltip_Callout" xml:space="preserve">
+    <value>ကာတွန်းဘူဘယ် ထည့်</value>
+  </data>
+  <data name="Tooltip_CollapseExpandPanel" xml:space="preserve">
+    <value>ပရောဂျက် panel ချုံ့/ချဲ့</value>
+  </data>
+  <data name="Tooltip_Copy" xml:space="preserve">
+    <value>ကလစ်ဘုတ်သို့ ကူး</value>
+  </data>
+  <data name="Tooltip_CutHorizontal" xml:space="preserve">
+    <value>ပုံကို အလျားလိုက် ဖြတ်</value>
+  </data>
+  <data name="Tooltip_CutVertical" xml:space="preserve">
+    <value>ပုံကို ဒေါင်လိုက် ဖြတ်</value>
+  </data>
+  <data name="Tooltip_Export" xml:space="preserve">
+    <value>ပုံ သို့မဟုတ် ပရောဂျက် ပို့</value>
+  </data>
+  <data name="Tooltip_Highlight" xml:space="preserve">
+    <value>နေရာ မီးမောင်း</value>
+  </data>
+  <data name="Tooltip_Import" xml:space="preserve">
+    <value>ပရောဂျက် သို့မဟုတ် ပုံ တင်သွင်း</value>
+  </data>
+  <data name="Tooltip_New" xml:space="preserve">
+    <value>ပရောဂျက်အသစ် ဖန်တီး</value>
+  </data>
+  <data name="Tooltip_Note" xml:space="preserve">
+    <value>စာသားမှတ်စု ထည့်</value>
+  </data>
+  <data name="Tooltip_Paste" xml:space="preserve">
+    <value>ကလစ်ဘုတ်မှ ကပ်</value>
+  </data>
+  <data name="Tooltip_Screenshot" xml:space="preserve">
+    <value>ဖန်သားပြင် ဓာတ်ပုံ ရိုက်</value>
+  </data>
+  <data name="Tooltip_Select" xml:space="preserve">
+    <value>မှတ်ချက်များ ရွေးချယ်ပြင်ဆင်</value>
+  </data>
+  <data name="Update_NewVersionAvailable" xml:space="preserve">
+    <value>ဗားရှင်းအသစ် {0} ရနိုင်ပြီ။</value>
+  </data>
+  <data name="Window_Title" xml:space="preserve">
+    <value>Screenshot Annotator - ပုံတည်းဖြတ်သူ</value>
+  </data>
+  <data name="Winget_Description" xml:space="preserve">
+    <value>Windows နှင့် Linux အတွက် ဖန်သားပြင် မှတ်ချက် ဆော့ဖ်ဝဲ။
+
+အင်္ဂါရပ်များ-
+- **မြားများ** - စိတ်ကြိုက်ပြင်ဆင်နိုင်သော မြားများဖြင့် တိကျသောနေရာများကို အာရုံစိုက်ပါ
+- **ကာတွန်းဘူဘယ်များ** - တည်းဖြတ်နိုင်သော စာသားပါ ဘူဘယ်ပုံစံ မှတ်ချက်များ ထည့်ပါ
+- **မှတ်စုများ** - နောက်ထပ်အချက်အလက်နှင့် စာသားဘောက်များ ဖန်တီးပါ
+- **နယ်နိမိတ် မီးမောင်း** - နယ်နိမိတ်ထောင့်မှန်စတုဂံဖြင့် နေရာများ မီးမောင်းပါ
+- **ဝါးမှိုင်း** - ဝါးမှိုင်းအကျိုးသက်ရောက်မှုဖြင့် အရေးကြီးသောအချက်အလက် ဝှက်ပါ
+- **ရွေးချယ်မှုကိရိယာ** - ကူးယူရန် (Ctrl+C) သို့မဟုတ် ဖျက်ရန် (Delete ခလုတ်) ပုံအပိုင်းများ ရွေးချယ်ပါ
+- **ဒေါင်လိုက်နှင့် အလျားလိုက် ဖြတ်တောက်မှု** - ပုံ၏ ဒေါင်လိုက် သို့မဟုတ် အလျားလိုက် နေရာများ ဖြတ်တောက်ပါ
+- **မီးမောင်း** - စိတ်ဝင်စားဖွယ် နေရာများ မီးမောင်းပါ
+- **ပရောဂျက် စီမံခန့်ခွဲမှု** - အလိုအလျောက် ပရောဂျက် သိမ်းဆည်းမှုနှင့် ကြိုတင်ကြည့်ရှုနိုင်သော ပုံသေး
+- **ဆော့ဖ်ဝဲ ခြားနားချက်** - Windows နှင့် Linux နှစ်ခုစလုံးတွင် အလုပ်လုပ်သည်</value>
+  </data>
+  <data name="Winget_ShortDescription" xml:space="preserve">
+    <value>Windows နှင့် Linux အတွက် ဖန်သားပြင် မှတ်ချက် ဆော့ဖ်ဝဲ။</value>
+  </data>
+</root>

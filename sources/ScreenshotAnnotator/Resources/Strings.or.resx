@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <!-- Odia Translation -->
+  <data name="_Technical_NsisLanguage" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="_Technical_WingetLocale" xml:space="preserve">
+    <value>or-IN</value>
+  </data>
+  <data name="Button_Accept" xml:space="preserve">
+    <value>✓ ଗ୍ରହଣ</value>
+  </data>
+  <data name="Button_Cancel" xml:space="preserve">
+    <value>ବାତିଲ</value>
+  </data>
+  <data name="Button_CancelX" xml:space="preserve">
+    <value>✕ ବାତିଲ</value>
+  </data>
+  <data name="Button_Download" xml:space="preserve">
+    <value>ଡାଉନଲୋଡ</value>
+  </data>
+  <data name="Button_OK" xml:space="preserve">
+    <value>ଠିକ ଅଛି</value>
+  </data>
+  <data name="ContextMenu_Delete" xml:space="preserve">
+    <value>ଡିଲିଟ</value>
+  </data>
+  <data name="ContextMenu_Open" xml:space="preserve">
+    <value>ଖୋଲ</value>
+  </data>
+  <data name="Copyright_Text" xml:space="preserve">
+    <value>Annotator {0} : କପିରାଇଟ (c) 2025-{1} Siarhei Kuchuk</value>
+  </data>
+  <data name="Dialog_Export_Title" xml:space="preserve">
+    <value>ରପ୍ତାନି</value>
+  </data>
+  <data name="Dialog_Import_Title" xml:space="preserve">
+    <value>ପ୍ରୋଜେକ୍ଟ ବା ଛବି ଆମଦାନି</value>
+  </data>
+  <data name="FileType_AllFiles" xml:space="preserve">
+    <value>ସମସ୍ତ ଫାଇଲ</value>
+  </data>
+  <data name="FileType_AllSupported" xml:space="preserve">
+    <value>ସମସ୍ତ ସମର୍ଥିତ ଫାଇଲ</value>
+  </data>
+  <data name="FileType_AnnotatorProject" xml:space="preserve">
+    <value>Annotator ପ୍ରୋଜେକ୍ଟ</value>
+  </data>
+  <data name="FileType_Images" xml:space="preserve">
+    <value>ଛବି ଫାଇଲ</value>
+  </data>
+  <data name="FileType_JPEG" xml:space="preserve">
+    <value>JPEG ଛବି</value>
+  </data>
+  <data name="FileType_PNG" xml:space="preserve">
+    <value>PNG ଛବି</value>
+  </data>
+  <data name="FileType_WebP" xml:space="preserve">
+    <value>WebP ଛବି</value>
+  </data>
+  <data name="Header_ScreenshotAnnotator" xml:space="preserve">
+    <value>[ ସ୍କ୍ରିନଶଟ ଆନୋଟେଟର - V{0} ]</value>
+  </data>
+  <data name="ImproveIt_Message" xml:space="preserve">
+    <value>ଏକ ଅପ୍ରତ୍ୟାଶିତ ତ୍ରୁଟି ଘଟିଛି।
+
+ଡେସ୍କଟପରେ ସଂରକ୍ଷିତ ସୂଚନା ସହ ଡେଭଲପର୍ମାନଙ୍କ ସହ ଯୋଗାଯୋଗ କରନ୍ତୁ
+"{0}"
+
+ଆପ୍ଲିକେସନ ବର୍ତ୍ତମାନ ବନ୍ଦ ହେବ।</value>
+  </data>
+  <data name="Installer_AdminRequired" xml:space="preserve">
+    <value>ସମସ୍ତ ଉପଯୋଗକର୍ତ୍ତାଙ୍କ ପାଇଁ ସ୍ଥାପନ ପାଇଁ ଆଡ୍ମିନ ଅନୁମତି ଆବଶ୍ୟକ।
+ଦୟାକରି ଆଡ୍ମିନ ଭାବେ ଇନ୍ସଟଲର ଚଲାନ୍ତୁ ବା /CURRENTUSER ବ୍ୟବହାର କରନ୍ତୁ।</value>
+  </data>
+  <data name="Installer_AdminRequiredDetailed" xml:space="preserve">
+    <value>ସମସ୍ତ ଉପଯୋଗକର୍ତ୍ତାଙ୍କ ପାଇଁ ସ୍ଥାପନ ପାଇଁ ଆଡ୍ମିନ ଅନୁମତି ଆବଶ୍ୟକ।
+
+ଦୟାକରି ନିମ୍ନଲିଖିତ ମଧ୍ୟରୁ ଗୋଟିଏ କରନ୍ତୁ:
+- 'କେବଳ ବର୍ତ୍ତମାନ ଉପଯୋଗକର୍ତ୍ତା ପାଇଁ ସ୍ଥାପନ' ଚୟନ କରନ୍ତୁ, ବା
+- ଏହି ଇନ୍ସଟଲରକୁ ଆଡ୍ମିନ ଭାବେ ଚଲାନ୍ତୁ</value>
+  </data>
+  <data name="Installer_AllUsersDescription" xml:space="preserve">
+    <value>ଏହି କମ୍ପ୍ୟୁଟରରେ ସମସ୍ତ ଉପଯୋଗକର୍ତ୍ତାଙ୍କ ପାଇଁ ଆପ୍ଲିକେସନ ଉପଲବ୍ଧ ହେବ।</value>
+  </data>
+  <data name="Installer_AllUsersOption" xml:space="preserve">
+    <value>ସମସ୍ତ ଉପଯୋଗକର୍ତ୍ତାଙ୍କ ପାଇଁ ସ୍ଥାପନ (&amp;A) (ଆଡ୍ମିନ ଅନୁମତି ଆବଶ୍ୟକ)</value>
+  </data>
+  <data name="Installer_ArchRequired" xml:space="preserve">
+    <value>ଏହି ଇନ୍ସଟଲର x64 ବା arm64 ସଂସ୍କରଣ Windows ଆବଶ୍ୟକ କରେ।</value>
+  </data>
+  <data name="Installer_CurrentUserDescription" xml:space="preserve">
+    <value>ଅନୁଶଂସିତ। ଆପ୍ଲିକେସନ କେବଳ ଆପଣଙ୍କ ଉପଯୋଗକର୍ତ୍ତା ଆକାଉଣ୍ଟ ପାଇଁ ଉପଲବ୍ଧ ହେବ।</value>
+  </data>
+  <data name="Installer_CurrentUserOption" xml:space="preserve">
+    <value>କେବଳ ବର୍ତ୍ତମାନ ଉପଯୋଗକର୍ତ୍ତା ପାଇଁ ସ୍ଥାପନ (&amp;C)</value>
+  </data>
+  <data name="Installer_InstallingFor" xml:space="preserve">
+    <value>ପାଇଁ ସ୍ଥାପନ ହେଉଛି:</value>
+  </data>
+  <data name="Installer_InstallModeDescription" xml:space="preserve">
+    <value>ଦୟାକରି ବାଛନ୍ତୁ ଆପଣ Screenshot Annotator କେବଳ ନିଜ ପାଇଁ ନା ଏହି କମ୍ପ୍ୟୁଟରରେ ସମସ୍ତ ଉପଯୋଗକର୍ତ୍ତାଙ୍କ ପାଇଁ ସ୍ଥାପନ କରିବାକୁ ଚାହୁଁଛନ୍ତି।</value>
+  </data>
+  <data name="Installer_InstallModeSubtitle" xml:space="preserve">
+    <value>ଏହି ଆପ୍ଲିକେସନ ବ୍ୟବହାର କରିପାରିବ କିଏ ବାଛନ୍ତୁ</value>
+  </data>
+  <data name="Installer_InstallModeTitle" xml:space="preserve">
+    <value>ସ୍ଥାପନ ପ୍ରକାର ବାଛନ୍ତୁ</value>
+  </data>
+  <data name="Installer_LaunchApp" xml:space="preserve">
+    <value>ଆପ ଆରମ୍ଭ କରନ୍ତୁ</value>
+  </data>
+  <data name="Menu_EnablePrintScreenHotkey" xml:space="preserve">
+    <value>Print Screen ହଟ୍‌କି ସକ୍ଷମ</value>
+  </data>
+  <data name="Menu_Export" xml:space="preserve">
+    <value>ରପ୍ତାନି...</value>
+  </data>
+  <data name="Menu_File" xml:space="preserve">
+    <value>[ ଫାଇଲ ]</value>
+  </data>
+  <data name="Menu_Import" xml:space="preserve">
+    <value>ଆମଦାନି...</value>
+  </data>
+  <data name="Menu_License" xml:space="preserve">
+    <value>ଲାଇସେନ୍ସ</value>
+  </data>
+  <data name="Menu_New" xml:space="preserve">
+    <value>ନୂଆ...</value>
+  </data>
+  <data name="Menu_OpenLogsFolder" xml:space="preserve">
+    <value>_ଲଗ ଫୋଲ୍ଡର ଖୋଲ</value>
+  </data>
+  <data name="Menu_OpenProjectsFolder" xml:space="preserve">
+    <value>_ପ୍ରୋଜେକ୍ଟ ଫୋଲ୍ଡର ଖୋଲ</value>
+  </data>
+  <data name="Menu_Options" xml:space="preserve">
+    <value>ବିକଳ୍ପ</value>
+  </data>
+  <data name="Menu_WebSite" xml:space="preserve">
+    <value>ୱେବ ସାଇଟ</value>
+  </data>
+  <data name="Panel_Projects" xml:space="preserve">
+    <value>ପ୍ରୋଜେକ୍ଟ</value>
+  </data>
+  <data name="Panel_Properties" xml:space="preserve">
+    <value>ଗୁଣ</value>
+  </data>
+  <data name="Props_Bold" xml:space="preserve">
+    <value>ମୋଟା</value>
+  </data>
+  <data name="Props_Color" xml:space="preserve">
+    <value>ରଙ୍ଗ</value>
+  </data>
+  <data name="Props_Font" xml:space="preserve">
+    <value>ଫଣ୍ଟ</value>
+  </data>
+  <data name="Props_Italic" xml:space="preserve">
+    <value>ତେର୍ଛା</value>
+  </data>
+  <data name="Props_Size" xml:space="preserve">
+    <value>ଆକାର</value>
+  </data>
+  <data name="Screenshot_Instructions" xml:space="preserve">
+    <value>ଏକ ଅଞ୍ଚଳ ବାଛିବା ପାଇଁ କ୍ଲିକ ଏବଂ ଟାଣନ୍ତୁ, ବା କୋଣ ବିନ୍ଦୁ ସଜ୍ଞା କରନ୍ତୁ। ଯଥାର୍ଥତା ପାଇଁ ଲୁପ ବ୍ୟବହାର କରନ୍ତୁ। ପ୍ରସ୍ତୁତ ହେଲେ OK ଦବାନ୍ତୁ।</value>
+  </data>
+  <data name="Tool_Arrow" xml:space="preserve">
+    <value>ତୀର</value>
+  </data>
+  <data name="Tool_Blur" xml:space="preserve">
+    <value>ଧୁନ୍ଦ</value>
+  </data>
+  <data name="Tool_Border" xml:space="preserve">
+    <value>ସୀମା</value>
+  </data>
+  <data name="Tool_Callout" xml:space="preserve">
+    <value>କଲଆଉଟ</value>
+  </data>
+  <data name="Tool_Copy" xml:space="preserve">
+    <value>କପି</value>
+  </data>
+  <data name="Tool_CutHorizontal" xml:space="preserve">
+    <value>କଟ -</value>
+  </data>
+  <data name="Tool_CutVertical" xml:space="preserve">
+    <value>କଟ |</value>
+  </data>
+  <data name="Tool_Export" xml:space="preserve">
+    <value>ରପ୍ତାନି</value>
+  </data>
+  <data name="Tool_Highlight" xml:space="preserve">
+    <value>ହାଇଲାଇଟ</value>
+  </data>
+  <data name="Tool_Import" xml:space="preserve">
+    <value>ଆମଦାନି</value>
+  </data>
+  <data name="Tool_New" xml:space="preserve">
+    <value>ନୂଆ</value>
+  </data>
+  <data name="Tool_Note" xml:space="preserve">
+    <value>ନୋଟ</value>
+  </data>
+  <data name="Tool_Paste" xml:space="preserve">
+    <value>ପେଷ୍ଟ</value>
+  </data>
+  <data name="Tool_Screenshot" xml:space="preserve">
+    <value>ସ୍କ୍ରିନଶଟ</value>
+  </data>
+  <data name="Tool_Select" xml:space="preserve">
+    <value>ବାଛ</value>
+  </data>
+  <data name="Tooltip_Arrow" xml:space="preserve">
+    <value>ତୀର ଆଙ୍କ</value>
+  </data>
+  <data name="Tooltip_Blur" xml:space="preserve">
+    <value>ଅଞ୍ଚଳ ଧୁଙ୍କୁ</value>
+  </data>
+  <data name="Tooltip_Border" xml:space="preserve">
+    <value>ସୀମା/ଆୟତ ଆଙ୍କ</value>
+  </data>
+  <data name="Tooltip_Callout" xml:space="preserve">
+    <value>କଲଆଉଟ ଯୋଗ କର</value>
+  </data>
+  <data name="Tooltip_CollapseExpandPanel" xml:space="preserve">
+    <value>ପ୍ରୋଜେକ୍ଟ ପ୍ୟାନେଲ ଭାଁଜ/ଖୋଲ</value>
+  </data>
+  <data name="Tooltip_Copy" xml:space="preserve">
+    <value>କ୍ଲିପ୍‌ବୋର୍ଡରେ କପି</value>
+  </data>
+  <data name="Tooltip_CutHorizontal" xml:space="preserve">
+    <value>ଛବିକୁ ଅନୁଭୂମିକ ଭାବେ କଟ</value>
+  </data>
+  <data name="Tooltip_CutVertical" xml:space="preserve">
+    <value>ଛବିକୁ ଲମ୍ବ ଭାବେ କଟ</value>
+  </data>
+  <data name="Tooltip_Export" xml:space="preserve">
+    <value>ଛବି ବା ପ୍ରୋଜେକ୍ଟ ରପ୍ତାନି</value>
+  </data>
+  <data name="Tooltip_Highlight" xml:space="preserve">
+    <value>ଅଞ୍ଚଳ ହାଇଲାଇଟ</value>
+  </data>
+  <data name="Tooltip_Import" xml:space="preserve">
+    <value>ପ୍ରୋଜେକ୍ଟ ବା ଛବି ଆମଦାନି</value>
+  </data>
+  <data name="Tooltip_New" xml:space="preserve">
+    <value>ନୂଆ ପ୍ରୋଜେକ୍ଟ ତିଆରି</value>
+  </data>
+  <data name="Tooltip_Note" xml:space="preserve">
+    <value>ପାଠ୍ୟ ନୋଟ ଯୋଗ</value>
+  </data>
+  <data name="Tooltip_Paste" xml:space="preserve">
+    <value>କ୍ଲିପ୍‌ବୋର୍ଡରୁ ପେଷ୍ଟ</value>
+  </data>
+  <data name="Tooltip_Screenshot" xml:space="preserve">
+    <value>ସ୍କ୍ରିନଶଟ ନିଅ</value>
+  </data>
+  <data name="Tooltip_Select" xml:space="preserve">
+    <value>ଆନୋଟେସନ ବାଛ ଏବଂ ସଂଶୋଧନ</value>
+  </data>
+  <data name="Update_NewVersionAvailable" xml:space="preserve">
+    <value>ନୂଆ ସଂସ୍କରଣ {0} ଉପଲବ୍ଧ।</value>
+  </data>
+  <data name="Window_Title" xml:space="preserve">
+    <value>Screenshot Annotator - ଛବି ସଂପାଦକ</value>
+  </data>
+  <data name="Winget_Description" xml:space="preserve">
+    <value>Windows ଏବଂ Linux ପାଇଁ ସ୍କ୍ରିନଶଟ ଆନୋଟେସନ ସଫ୍ଟୱେର।
+
+ବୈଶିଷ୍ଟ୍ୟ:
+- **ତୀର** - କଷ୍ଟମାଇଜ ତୀର ଦ୍ୱାରା ନିର୍ଦ୍ଦିଷ୍ଟ ଅଞ୍ଚଳ ପ୍ରତି ଧ୍ୟାନ ଦିଅ
+- **କଲଆଉଟ** - ସଂପାଦ୍ୟ ଲେଖା ସହ ବୁଦ୍‌ବୁଦ ଆନୋଟେସନ ଯୋଗ
+- **ନୋଟ** - ଅତିରିକ୍ତ ସୂଚନା ସହ ଲେଖା ବାକ୍ସ ତିଆରି
+- **ସୀମା ହାଇଲାଇଟ** - ସୀମା ଆୟତ ଦ୍ୱାରା ଅଞ୍ଚଳ ହାଇଲାଇଟ
+- **ଧୁନ୍ଦ** - ଧୁନ୍ଦ ପ୍ରଭାବ ଦ୍ୱାରା ସଂବେଦନଶୀଳ ସୂଚନା ଲୁକାଅ
+- **ଚୟନ ଉପକରଣ** - କପି (Ctrl+C) ବା ଡିଲିଟ (Delete) ପାଇଁ ଛବି ଅଂଶ ବାଛ
+- **ଲମ୍ବ ଏବଂ ଅନୁଭୂମିକ କଟ** - ଛବିର ଲମ୍ବ ବା ଅନୁଭୂମିକ ଅଂଶ କଟ
+- **ହାଇଲାଇଟ** - ଆଗ୍ରହ ଅଞ୍ଚଳ ହାଇଲାଇଟ
+- **ପ୍ରୋଜେକ୍ଟ ପରିଚାଳନା** - ଆଟୋ ସଂରକ୍ଷଣ ଏବଂ ପ୍ରିଭ୍ୟୁ ଥଙ୍ବନେଲ
+- **କ୍ରସ-ପ୍ଲାଟଫର୍ମ** - Windows ଏବଂ Linux ଉଭୟରେ ଚାଲେ</value>
+  </data>
+  <data name="Winget_ShortDescription" xml:space="preserve">
+    <value>Windows ଏବଂ Linux ପାଇଁ ସ୍କ୍ରିନଶଟ ଆନୋଟେସନ ସଫ୍ଟୱେର।</value>
+  </data>
+</root>

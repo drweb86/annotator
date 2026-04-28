@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <!-- Pashto Translation -->
+  <data name="_Technical_NsisLanguage" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="_Technical_WingetLocale" xml:space="preserve">
+    <value>ps-AF</value>
+  </data>
+  <data name="Button_Accept" xml:space="preserve">
+    <value>✓ منل</value>
+  </data>
+  <data name="Button_Cancel" xml:space="preserve">
+    <value>لغوه کول</value>
+  </data>
+  <data name="Button_CancelX" xml:space="preserve">
+    <value>✕ لغوه کول</value>
+  </data>
+  <data name="Button_Download" xml:space="preserve">
+    <value>ډاونلوډ</value>
+  </data>
+  <data name="Button_OK" xml:space="preserve">
+    <value>سمه ده</value>
+  </data>
+  <data name="ContextMenu_Delete" xml:space="preserve">
+    <value>ړکول</value>
+  </data>
+  <data name="ContextMenu_Open" xml:space="preserve">
+    <value>خلاصول</value>
+  </data>
+  <data name="Copyright_Text" xml:space="preserve">
+    <value>Annotator {0} : د کاپي حق (c) 2025-{1} Siarhei Kuchuk</value>
+  </data>
+  <data name="Dialog_Export_Title" xml:space="preserve">
+    <value>صادرول</value>
+  </data>
+  <data name="Dialog_Import_Title" xml:space="preserve">
+    <value>پروژه یا انځور واردول</value>
+  </data>
+  <data name="FileType_AllFiles" xml:space="preserve">
+    <value>ټول فایلونه</value>
+  </data>
+  <data name="FileType_AllSupported" xml:space="preserve">
+    <value>ټول ملاتړل شوي فایلونه</value>
+  </data>
+  <data name="FileType_AnnotatorProject" xml:space="preserve">
+    <value>د Annotator پروژه</value>
+  </data>
+  <data name="FileType_Images" xml:space="preserve">
+    <value>د انځور فایلونه</value>
+  </data>
+  <data name="FileType_JPEG" xml:space="preserve">
+    <value>JPEG انځور</value>
+  </data>
+  <data name="FileType_PNG" xml:space="preserve">
+    <value>PNG انځور</value>
+  </data>
+  <data name="FileType_WebP" xml:space="preserve">
+    <value>WebP انځور</value>
+  </data>
+  <data name="Header_ScreenshotAnnotator" xml:space="preserve">
+    <value>[ د سکرین شاټ حاشیه نویس - V{0} ]</value>
+  </data>
+  <data name="ImproveIt_Message" xml:space="preserve">
+    <value>یو غیر متوقع تېروتنه رامنځته شوه.
+
+مهرباني وکړئ د ډیسکټاپ کې خوندي شوي معلوماتو سره پراختیا کونکو سره اړیکه ونیسئ
+"{0}"
+
+اپلیکیشن اوس بندیږي.</value>
+  </data>
+  <data name="Installer_AdminRequired" xml:space="preserve">
+    <value>د ټولو کاروونکو لپاره د نصبولو لپاره د مدیر اجازه اړینه ده.
+مهرباني وکړئ د مدیر په توګه نصب کونکی چل کړئ یا /CURRENTUSER وکاروئ.</value>
+  </data>
+  <data name="Installer_AdminRequiredDetailed" xml:space="preserve">
+    <value>د ټولو کاروونکو لپاره د نصبولو لپاره د مدیر اجازه اړینه ده.
+
+مهرباني وکړئ لاندې یو کار وکړئ:
+- 'یوازې د اوسني کاروونکي لپاره نصب کړئ' غوره کړئ، یا
+- دا نصب کونکی د مدیر په توګه چل کړئ</value>
+  </data>
+  <data name="Installer_AllUsersDescription" xml:space="preserve">
+    <value>اپلیکیشن به پدې کمپیوټر کې ټولو کاروونکو لپاره شتون ولري.</value>
+  </data>
+  <data name="Installer_AllUsersOption" xml:space="preserve">
+    <value>د ټولو کاروونکو لپاره نصب کړئ (&amp;A) (د مدیر اجازه اړینه ده)</value>
+  </data>
+  <data name="Installer_ArchRequired" xml:space="preserve">
+    <value>دا نصب کونکی د وینډوز x64 یا arm64 نسخه ته اړتیا لري.</value>
+  </data>
+  <data name="Installer_CurrentUserDescription" xml:space="preserve">
+    <value>وړاندیز شوی. اپلیکیشن به یوازې ستاسو د کاروونکي حساب لپاره شتون ولري.</value>
+  </data>
+  <data name="Installer_CurrentUserOption" xml:space="preserve">
+    <value>یوازې د اوسني کاروونکي لپاره نصب کړئ (&amp;C)</value>
+  </data>
+  <data name="Installer_InstallingFor" xml:space="preserve">
+    <value>نصبول د لپاره:</value>
+  </data>
+  <data name="Installer_InstallModeDescription" xml:space="preserve">
+    <value>مهرباني وکړئ غوره کړئ چې آیا غواړئ Screenshot Annotator یوازې د ځان لپاره یا پدې کمپیوټر کې د ټولو کاروونکو لپاره نصب کړئ.</value>
+  </data>
+  <data name="Installer_InstallModeSubtitle" xml:space="preserve">
+    <value>هغه کسان غوره کړئ چې کولی شي دا اپلیکیشن وکاروي</value>
+  </data>
+  <data name="Installer_InstallModeTitle" xml:space="preserve">
+    <value>د نصب ډول غوره کړئ</value>
+  </data>
+  <data name="Installer_LaunchApp" xml:space="preserve">
+    <value>اپلیکیشن پیل کړئ</value>
+  </data>
+  <data name="Menu_EnablePrintScreenHotkey" xml:space="preserve">
+    <value>د Print Screen شارټکټ فعالول</value>
+  </data>
+  <data name="Menu_Export" xml:space="preserve">
+    <value>صادرول...</value>
+  </data>
+  <data name="Menu_File" xml:space="preserve">
+    <value>[ فایل ]</value>
+  </data>
+  <data name="Menu_Import" xml:space="preserve">
+    <value>واردول...</value>
+  </data>
+  <data name="Menu_License" xml:space="preserve">
+    <value>جواز</value>
+  </data>
+  <data name="Menu_New" xml:space="preserve">
+    <value>نوی...</value>
+  </data>
+  <data name="Menu_OpenLogsFolder" xml:space="preserve">
+    <value>د _لاګونو فولډر خلاصول</value>
+  </data>
+  <data name="Menu_OpenProjectsFolder" xml:space="preserve">
+    <value>د _پروژو فولډر خلاصول</value>
+  </data>
+  <data name="Menu_Options" xml:space="preserve">
+    <value>اختیارونه</value>
+  </data>
+  <data name="Menu_WebSite" xml:space="preserve">
+    <value>ویب پاڼه</value>
+  </data>
+  <data name="Panel_Projects" xml:space="preserve">
+    <value>پروژې</value>
+  </data>
+  <data name="Panel_Properties" xml:space="preserve">
+    <value>ځانتیاوې</value>
+  </data>
+  <data name="Props_Bold" xml:space="preserve">
+    <value>ډبل</value>
+  </data>
+  <data name="Props_Color" xml:space="preserve">
+    <value>رنګ</value>
+  </data>
+  <data name="Props_Font" xml:space="preserve">
+    <value>فونټ</value>
+  </data>
+  <data name="Props_Italic" xml:space="preserve">
+    <value>ترچه</value>
+  </data>
+  <data name="Props_Size" xml:space="preserve">
+    <value>اندازه</value>
+  </data>
+  <data name="Screenshot_Instructions" xml:space="preserve">
+    <value>د ساحه غوره کولو لپاره کلیک وکړئ او کش کړئ، یا د کونج ټکي تنظیم کړئ. د دقت لپاره لوپ وکاروئ. کله چې چمتو یاست OK فشار ورکړئ.</value>
+  </data>
+  <data name="Tool_Arrow" xml:space="preserve">
+    <value>تیر</value>
+  </data>
+  <data name="Tool_Blur" xml:space="preserve">
+    <value>دهلول</value>
+  </data>
+  <data name="Tool_Border" xml:space="preserve">
+    <value>سرحد</value>
+  </data>
+  <data name="Tool_Callout" xml:space="preserve">
+    <value>کالاوټ</value>
+  </data>
+  <data name="Tool_Copy" xml:space="preserve">
+    <value>کاپي</value>
+  </data>
+  <data name="Tool_CutHorizontal" xml:space="preserve">
+    <value>پرې کول -</value>
+  </data>
+  <data name="Tool_CutVertical" xml:space="preserve">
+    <value>پرې کول |</value>
+  </data>
+  <data name="Tool_Export" xml:space="preserve">
+    <value>صادرول</value>
+  </data>
+  <data name="Tool_Highlight" xml:space="preserve">
+    <value>روښانه کول</value>
+  </data>
+  <data name="Tool_Import" xml:space="preserve">
+    <value>واردول</value>
+  </data>
+  <data name="Tool_New" xml:space="preserve">
+    <value>نوی</value>
+  </data>
+  <data name="Tool_Note" xml:space="preserve">
+    <value>یادداشت</value>
+  </data>
+  <data name="Tool_Paste" xml:space="preserve">
+    <value>پیسټ</value>
+  </data>
+  <data name="Tool_Screenshot" xml:space="preserve">
+    <value>سکرین شاټ</value>
+  </data>
+  <data name="Tool_Select" xml:space="preserve">
+    <value>غوره کول</value>
+  </data>
+  <data name="Tooltip_Arrow" xml:space="preserve">
+    <value>تیر رسم کړئ</value>
+  </data>
+  <data name="Tooltip_Blur" xml:space="preserve">
+    <value>ساحه دهله کړئ</value>
+  </data>
+  <data name="Tooltip_Border" xml:space="preserve">
+    <value>سرحد/مستطیل رسم کړئ</value>
+  </data>
+  <data name="Tooltip_Callout" xml:space="preserve">
+    <value>کالاوټ اضافه کړئ</value>
+  </data>
+  <data name="Tooltip_CollapseExpandPanel" xml:space="preserve">
+    <value>د پروژو پینل جمع/غزول</value>
+  </data>
+  <data name="Tooltip_Copy" xml:space="preserve">
+    <value>کلیپبورډ ته کاپي کړئ</value>
+  </data>
+  <data name="Tooltip_CutHorizontal" xml:space="preserve">
+    <value>انځور افقي پرې کړئ</value>
+  </data>
+  <data name="Tooltip_CutVertical" xml:space="preserve">
+    <value>انځور عمودي پرې کړئ</value>
+  </data>
+  <data name="Tooltip_Export" xml:space="preserve">
+    <value>انځور یا پروژه صادره کړئ</value>
+  </data>
+  <data name="Tooltip_Highlight" xml:space="preserve">
+    <value>ساحه روښانه کړئ</value>
+  </data>
+  <data name="Tooltip_Import" xml:space="preserve">
+    <value>پروژه یا انځور وارد کړئ</value>
+  </data>
+  <data name="Tooltip_New" xml:space="preserve">
+    <value>نوې پروژه جوړه کړئ</value>
+  </data>
+  <data name="Tooltip_Note" xml:space="preserve">
+    <value>د متن یادداشت اضافه کړئ</value>
+  </data>
+  <data name="Tooltip_Paste" xml:space="preserve">
+    <value>د کلیپبورډ نه پیسټ کړئ</value>
+  </data>
+  <data name="Tooltip_Screenshot" xml:space="preserve">
+    <value>سکرین شاټ واخلئ</value>
+  </data>
+  <data name="Tooltip_Select" xml:space="preserve">
+    <value>حاشیه نویسي غوره او سمه کړئ</value>
+  </data>
+  <data name="Update_NewVersionAvailable" xml:space="preserve">
+    <value>نوې نسخه {0} شتون لري.</value>
+  </data>
+  <data name="Window_Title" xml:space="preserve">
+    <value>Screenshot Annotator - د انځور سمونکی</value>
+  </data>
+  <data name="Winget_Description" xml:space="preserve">
+    <value>د وینډوز او لینکس لپاره د سکرین شاټ حاشیه نویسي سافټویر.
+
+ځانتیاوې:
+- **تیرونه** - د دودیزو تیرونو سره ځانګړو ساحو ته توجه ورکړئ
+- **کالاوټونه** - د سمولو وړ متن سره د بلبل حاشیه نویسي اضافه کړئ
+- **یادداشتونه** - د اضافي معلوماتو سره د متن بکسونه جوړ کړئ
+- **د سرحد روښانه کول** - د سرحد مستطیلونو سره ساحې روښانه کړئ
+- **دهلول** - د دهلولو اغیزو سره حساس معلومات پټ کړئ
+- **د غوره کولو وسیله** - د کاپي (Ctrl+C) یا حذفولو (Delete کیلي) لپاره د انځور برخې غوره کړئ
+- **عمودي او افقي پرې کول** - د انځور عمودي یا افقي برخې پرې کړئ
+- **روښانه کول** - د علاقې ساحې روښانه کړئ
+- **د پروژې مدیریت** - اتوماتیک د پروژې خوندي کول او د لیدو مختصر انځورونه
+- **د پلیټ فارم نه پورته** - هم پر وینډوز او هم پر لینکس کار کوي</value>
+  </data>
+  <data name="Winget_ShortDescription" xml:space="preserve">
+    <value>د وینډوز او لینکس لپاره د سکرین شاټ حاشیه نویسي سافټویر.</value>
+  </data>
+</root>

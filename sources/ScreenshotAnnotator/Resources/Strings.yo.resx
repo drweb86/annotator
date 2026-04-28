@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <!-- Yoruba Translation -->
+  <data name="_Technical_NsisLanguage" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="_Technical_WingetLocale" xml:space="preserve">
+    <value>yo-NG</value>
+  </data>
+  <data name="Button_Accept" xml:space="preserve">
+    <value>✓ Gba</value>
+  </data>
+  <data name="Button_Cancel" xml:space="preserve">
+    <value>Fagilee</value>
+  </data>
+  <data name="Button_CancelX" xml:space="preserve">
+    <value>✕ Fagilee</value>
+  </data>
+  <data name="Button_Download" xml:space="preserve">
+    <value>Gba lori</value>
+  </data>
+  <data name="Button_OK" xml:space="preserve">
+    <value>O dara</value>
+  </data>
+  <data name="ContextMenu_Delete" xml:space="preserve">
+    <value>Paarẹ</value>
+  </data>
+  <data name="ContextMenu_Open" xml:space="preserve">
+    <value>Ṣii</value>
+  </data>
+  <data name="Copyright_Text" xml:space="preserve">
+    <value>Annotator {0} : Ẹtọ onkọwe (c) 2025-{1} Siarhei Kuchuk</value>
+  </data>
+  <data name="Dialog_Export_Title" xml:space="preserve">
+    <value>Ṣe ìpèsè</value>
+  </data>
+  <data name="Dialog_Import_Title" xml:space="preserve">
+    <value>Gbe iṣẹ akanṣe tabi aworan wọle</value>
+  </data>
+  <data name="FileType_AllFiles" xml:space="preserve">
+    <value>Gbogbo awọn faili</value>
+  </data>
+  <data name="FileType_AllSupported" xml:space="preserve">
+    <value>Gbogbo awọn faili ti a ṣe atilẹyin</value>
+  </data>
+  <data name="FileType_AnnotatorProject" xml:space="preserve">
+    <value>Iṣẹ akanṣe Annotator</value>
+  </data>
+  <data name="FileType_Images" xml:space="preserve">
+    <value>Awọn faili aworan</value>
+  </data>
+  <data name="FileType_JPEG" xml:space="preserve">
+    <value>Aworan JPEG</value>
+  </data>
+  <data name="FileType_PNG" xml:space="preserve">
+    <value>Aworan PNG</value>
+  </data>
+  <data name="FileType_WebP" xml:space="preserve">
+    <value>Aworan WebP</value>
+  </data>
+  <data name="Header_ScreenshotAnnotator" xml:space="preserve">
+    <value>[ Olufọwọsi Aworan Iboju - V{0} ]</value>
+  </data>
+  <data name="ImproveIt_Message" xml:space="preserve">
+    <value>Aṣiṣe ti a ko retí ti ṣẹlẹ.
+
+Jọwọ kan si awọn olùgbéejáde pẹlu alaye ti a fipamọ si deskitọpu rẹ ni
+"{0}"
+
+Ohun elo náà yóò pa ni bayi.</value>
+  </data>
+  <data name="Installer_AdminRequired" xml:space="preserve">
+    <value>Awọn ẹtọ alakoso nilo lati fi sori ẹrọ fun gbogbo awọn olumulo.
+Jọwọ ṣiṣe ifilọlẹ gẹgẹ bi alakoso tabi lo /CURRENTUSER.</value>
+  </data>
+  <data name="Installer_AdminRequiredDetailed" xml:space="preserve">
+    <value>Awọn ẹtọ alakoso nilo lati fi sori ẹrọ fun gbogbo awọn olumulo.
+
+Jọwọ ṣe ọkan ninu iwọnyi:
+- Yan 'Fi sori ẹrọ fun olumulo lọwọlọwọ nikan', tabi
+- Ṣiṣe ifilọlẹ yii gẹgẹ bi alakoso</value>
+  </data>
+  <data name="Installer_AllUsersDescription" xml:space="preserve">
+    <value>Ohun elo yóò wà fun gbogbo awọn olumulo lori kọnputa yii.</value>
+  </data>
+  <data name="Installer_AllUsersOption" xml:space="preserve">
+    <value>Fi sori ẹrọ fun gbogbo awọn &amp;olumulo (nilo awọn ẹtọ alakoso)</value>
+  </data>
+  <data name="Installer_ArchRequired" xml:space="preserve">
+    <value>Ifilọlẹ yii nilo ẹya x64 tabi arm64 ti Windows.</value>
+  </data>
+  <data name="Installer_CurrentUserDescription" xml:space="preserve">
+    <value>A ṣe iṣeduro. Ohun elo yóò wà fun akọọlẹ olumulo rẹ nikan.</value>
+  </data>
+  <data name="Installer_CurrentUserOption" xml:space="preserve">
+    <value>Fi sori ẹrọ fun &amp;olumulo lọwọlọwọ nikan</value>
+  </data>
+  <data name="Installer_InstallingFor" xml:space="preserve">
+    <value>Fifi sori ẹrọ fun:</value>
+  </data>
+  <data name="Installer_InstallModeDescription" xml:space="preserve">
+    <value>Jọwọ yan boya o fẹ fi Screenshot Annotator sori ẹrọ fun ara rẹ nikan tabi fun gbogbo awọn olumulo kọnputa yii.</value>
+  </data>
+  <data name="Installer_InstallModeSubtitle" xml:space="preserve">
+    <value>Yan tani o le lo ohun elo yii</value>
+  </data>
+  <data name="Installer_InstallModeTitle" xml:space="preserve">
+    <value>Yan Iru Fifi sori Ẹrọ</value>
+  </data>
+  <data name="Installer_LaunchApp" xml:space="preserve">
+    <value>Bẹrẹ App</value>
+  </data>
+  <data name="Menu_EnablePrintScreenHotkey" xml:space="preserve">
+    <value>Mu Print Screen hotkey ṣiṣẹ</value>
+  </data>
+  <data name="Menu_Export" xml:space="preserve">
+    <value>Ṣe ìpèsè...</value>
+  </data>
+  <data name="Menu_File" xml:space="preserve">
+    <value>[ Faili ]</value>
+  </data>
+  <data name="Menu_Import" xml:space="preserve">
+    <value>Gbe wọle...</value>
+  </data>
+  <data name="Menu_License" xml:space="preserve">
+    <value>Iwe-aṣẹ</value>
+  </data>
+  <data name="Menu_New" xml:space="preserve">
+    <value>Tuntun...</value>
+  </data>
+  <data name="Menu_OpenLogsFolder" xml:space="preserve">
+    <value>Ṣii Fódà _Àkọsílẹ̀</value>
+  </data>
+  <data name="Menu_OpenProjectsFolder" xml:space="preserve">
+    <value>Ṣii Fódà _Àwọn Iṣẹ Akanṣe</value>
+  </data>
+  <data name="Menu_Options" xml:space="preserve">
+    <value>Awọn aṣayan</value>
+  </data>
+  <data name="Menu_WebSite" xml:space="preserve">
+    <value>Oju-opo wẹẹbu</value>
+  </data>
+  <data name="Panel_Projects" xml:space="preserve">
+    <value>Awọn iṣẹ akanṣe</value>
+  </data>
+  <data name="Panel_Properties" xml:space="preserve">
+    <value>Awọn ohun-ini</value>
+  </data>
+  <data name="Props_Bold" xml:space="preserve">
+    <value>Nipọn</value>
+  </data>
+  <data name="Props_Color" xml:space="preserve">
+    <value>Awọ</value>
+  </data>
+  <data name="Props_Font" xml:space="preserve">
+    <value>Fonti</value>
+  </data>
+  <data name="Props_Italic" xml:space="preserve">
+    <value>Ẹgbẹ</value>
+  </data>
+  <data name="Props_Size" xml:space="preserve">
+    <value>Iwọn</value>
+  </data>
+  <data name="Screenshot_Instructions" xml:space="preserve">
+    <value>Tẹ ki o fa lati yan agbegbe, tabi ṣatunṣe awọn aaye igun. Lo ẹrọ ìmúgbòòrò fun deede. Tẹ O dara nigbati o ti ṣetan.</value>
+  </data>
+  <data name="Tool_Arrow" xml:space="preserve">
+    <value>Ọfa</value>
+  </data>
+  <data name="Tool_Blur" xml:space="preserve">
+    <value>Daru</value>
+  </data>
+  <data name="Tool_Border" xml:space="preserve">
+    <value>Aala</value>
+  </data>
+  <data name="Tool_Callout" xml:space="preserve">
+    <value>Alaye</value>
+  </data>
+  <data name="Tool_Copy" xml:space="preserve">
+    <value>Daakọ</value>
+  </data>
+  <data name="Tool_CutHorizontal" xml:space="preserve">
+    <value>Ge -</value>
+  </data>
+  <data name="Tool_CutVertical" xml:space="preserve">
+    <value>Ge |</value>
+  </data>
+  <data name="Tool_Export" xml:space="preserve">
+    <value>Ṣe ìpèsè</value>
+  </data>
+  <data name="Tool_Highlight" xml:space="preserve">
+    <value>Ṣe afihan</value>
+  </data>
+  <data name="Tool_Import" xml:space="preserve">
+    <value>Gbe wọle</value>
+  </data>
+  <data name="Tool_New" xml:space="preserve">
+    <value>Tuntun</value>
+  </data>
+  <data name="Tool_Note" xml:space="preserve">
+    <value>Akọsilẹ</value>
+  </data>
+  <data name="Tool_Paste" xml:space="preserve">
+    <value>Fi si</value>
+  </data>
+  <data name="Tool_Screenshot" xml:space="preserve">
+    <value>Aworan iboju</value>
+  </data>
+  <data name="Tool_Select" xml:space="preserve">
+    <value>Yan</value>
+  </data>
+  <data name="Tooltip_Arrow" xml:space="preserve">
+    <value>Fa ọfa</value>
+  </data>
+  <data name="Tooltip_Blur" xml:space="preserve">
+    <value>Daru agbegbe</value>
+  </data>
+  <data name="Tooltip_Border" xml:space="preserve">
+    <value>Fa aala/onigun merin</value>
+  </data>
+  <data name="Tooltip_Callout" xml:space="preserve">
+    <value>Fi alaye kun</value>
+  </data>
+  <data name="Tooltip_CollapseExpandPanel" xml:space="preserve">
+    <value>Dín/Gbòòrò Ẹka Àwọn Iṣẹ Akanṣe</value>
+  </data>
+  <data name="Tooltip_Copy" xml:space="preserve">
+    <value>Daakọ si clipboard</value>
+  </data>
+  <data name="Tooltip_CutHorizontal" xml:space="preserve">
+    <value>Ge aworan petele</value>
+  </data>
+  <data name="Tooltip_CutVertical" xml:space="preserve">
+    <value>Ge aworan inaro</value>
+  </data>
+  <data name="Tooltip_Export" xml:space="preserve">
+    <value>Ṣe ìpèsè aworan tabi iṣẹ akanṣe</value>
+  </data>
+  <data name="Tooltip_Highlight" xml:space="preserve">
+    <value>Ṣe afihan agbegbe</value>
+  </data>
+  <data name="Tooltip_Import" xml:space="preserve">
+    <value>Gbe iṣẹ akanṣe tabi aworan wọle</value>
+  </data>
+  <data name="Tooltip_New" xml:space="preserve">
+    <value>Ṣẹda iṣẹ akanṣe tuntun</value>
+  </data>
+  <data name="Tooltip_Note" xml:space="preserve">
+    <value>Fi akọsilẹ ọrọ kun</value>
+  </data>
+  <data name="Tooltip_Paste" xml:space="preserve">
+    <value>Fi si lati clipboard</value>
+  </data>
+  <data name="Tooltip_Screenshot" xml:space="preserve">
+    <value>Ya aworan iboju</value>
+  </data>
+  <data name="Tooltip_Select" xml:space="preserve">
+    <value>Yan ki o ṣatunṣe awọn akọsilẹ</value>
+  </data>
+  <data name="Update_NewVersionAvailable" xml:space="preserve">
+    <value>Ẹya tuntun {0} wa.</value>
+  </data>
+  <data name="Window_Title" xml:space="preserve">
+    <value>Screenshot Annotator - Olootu aworan</value>
+  </data>
+  <data name="Winget_Description" xml:space="preserve">
+    <value>Sọfitiwia fun fifọwọsi awọn aworan iboju fun Windows ati Linux.
+
+Awọn ẹya:
+- **Awọn ọfa** - Fa ifojusi si awọn agbegbe pato pẹlu awọn ọfa ti a le ṣatunṣe
+- **Awọn alaye** - Fi awọn akọsilẹ ìṣòro ọrọ pẹlu ọrọ ti a le ṣatunṣe kun
+- **Awọn akọsilẹ** - Ṣẹda awọn apoti ọrọ fun alaye afikun
+- **Yiyan Aala** - Ṣe afihan awọn agbegbe pẹlu awọn onigun merin ti o ni aala
+- **Daru** - Fi alaye ifura pamọ pẹlu awọn ipa daru
+- **Irinṣẹ Yiyan** - Yan awọn apakan ti aworan lati daakọ (Ctrl+C) tabi paarẹ (bọtini Delete)
+- **Ge awọn ege inaro ati petele** - Ge awọn agbegbe inaro tabi petele ti aworan
+- **Ẹrọ afihan** - Ṣe afihan awọn agbegbe ti o nifẹ
+- **Iṣakoso Iṣẹ Akanṣe** - Fifipamọ iṣẹ akanṣe aifọwọyi ati awọn aworan kekere iwoye
+- **Ọpọ-pẹpẹ** - Ṣiṣẹ lori Windows ati Linux mejeeji</value>
+  </data>
+  <data name="Winget_ShortDescription" xml:space="preserve">
+    <value>Sọfitiwia fun fifọwọsi awọn aworan iboju fun Windows ati Linux.</value>
+  </data>
+</root>
