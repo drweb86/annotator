@@ -88,6 +88,11 @@ jobs:
             /p:PublishReadyToRun=false /p:RunAnalyzersDuringBuild=False --self-contained true --property WarningLevel=0
           if ($LASTEXITCODE -ne 0) { exit 1 }
 
+      - name: Generate NSIS language file
+        shell: pwsh
+        working-directory: sources/tools/ResxSorter
+        run: dotnet run
+
       - name: Install NSIS
         shell: pwsh
         run: choco install nsis -y
@@ -211,7 +216,19 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          sparse-checkout: scripts/winget-pkgs
+          sparse-checkout: |
+            sources/tools/winget-pkgs
+            sources/tools/ResxSorter
+            sources/ScreenshotAnnotator/Resources
+
+      - name: Setup .NET 10
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
+
+      - name: Generate winget locale files
+        working-directory: sources/tools/ResxSorter
+        run: dotnet run
 
       - name: Create winget-pkgs branch
         run: |
@@ -236,14 +253,14 @@ jobs:
           sed -e "s/APP_VERSION_STRING/$version/g" \
               -e "s/2001-01-01/$release_date/g" \
               -e "s/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/$hash/g" \
-              ../scripts/winget-pkgs/SiarheiKuchuk.ScreenshotAnnotator.installer.yaml \
+              ../sources/tools/winget-pkgs/SiarheiKuchuk.ScreenshotAnnotator.installer.yaml \
               > "$manifest_dir/SiarheiKuchuk.ScreenshotAnnotator.installer.yaml"
 
           sed -e "s/APP_VERSION_STRING/$version/g" \
-              ../scripts/winget-pkgs/SiarheiKuchuk.ScreenshotAnnotator.yaml \
+              ../sources/tools/winget-pkgs/SiarheiKuchuk.ScreenshotAnnotator.yaml \
               > "$manifest_dir/SiarheiKuchuk.ScreenshotAnnotator.yaml"
 
-          for locale_file in ../scripts/winget-pkgs/SiarheiKuchuk.ScreenshotAnnotator.locale.*.yaml; do
+          for locale_file in ../sources/tools/winget-pkgs/SiarheiKuchuk.ScreenshotAnnotator.locale.*.yaml; do
             filename=$(basename "$locale_file")
             sed -e "s/APP_VERSION_STRING/$version/g" \
                 -e "s/CURRENT_YEAR/$current_year/g" \
