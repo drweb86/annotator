@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <!-- Swahili Translation -->
+  <data name="_Technical_NsisLanguage" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="_Technical_WingetLocale" xml:space="preserve">
+    <value>sw-KE</value>
+  </data>
+  <data name="Button_Accept" xml:space="preserve">
+    <value>✓ Kubali</value>
+  </data>
+  <data name="Button_Cancel" xml:space="preserve">
+    <value>Ghairi</value>
+  </data>
+  <data name="Button_CancelX" xml:space="preserve">
+    <value>✕ Ghairi</value>
+  </data>
+  <data name="Button_Download" xml:space="preserve">
+    <value>Pakua</value>
+  </data>
+  <data name="Button_OK" xml:space="preserve">
+    <value>Sawa</value>
+  </data>
+  <data name="ContextMenu_Delete" xml:space="preserve">
+    <value>Futa</value>
+  </data>
+  <data name="ContextMenu_Open" xml:space="preserve">
+    <value>Fungua</value>
+  </data>
+  <data name="Copyright_Text" xml:space="preserve">
+    <value>Annotator {0} : Hakimiliki (c) 2025-{1} Siarhei Kuchuk</value>
+  </data>
+  <data name="Dialog_Export_Title" xml:space="preserve">
+    <value>Hamisha</value>
+  </data>
+  <data name="Dialog_Import_Title" xml:space="preserve">
+    <value>Ingiza Mradi au Picha</value>
+  </data>
+  <data name="FileType_AllFiles" xml:space="preserve">
+    <value>Faili Zote</value>
+  </data>
+  <data name="FileType_AllSupported" xml:space="preserve">
+    <value>Faili zote zinazoungwa mkono</value>
+  </data>
+  <data name="FileType_AnnotatorProject" xml:space="preserve">
+    <value>Mradi wa Annotator</value>
+  </data>
+  <data name="FileType_Images" xml:space="preserve">
+    <value>Faili za Picha</value>
+  </data>
+  <data name="FileType_JPEG" xml:space="preserve">
+    <value>Picha ya JPEG</value>
+  </data>
+  <data name="FileType_PNG" xml:space="preserve">
+    <value>Picha ya PNG</value>
+  </data>
+  <data name="FileType_WebP" xml:space="preserve">
+    <value>Picha ya WebP</value>
+  </data>
+  <data name="Header_ScreenshotAnnotator" xml:space="preserve">
+    <value>[ Kiandishi cha Picha - V{0} ]</value>
+  </data>
+  <data name="ImproveIt_Message" xml:space="preserve">
+    <value>Hitilafu isiyotarajiwa imetokea.
+
+Tafadhali wasiliana na wasanidi programu na habari zilizohifadhiwa kwenye kompyuta yako kwa njia ya
+"{0}"
+
+Programu itafungwa sasa.</value>
+  </data>
+  <data name="Installer_AdminRequired" xml:space="preserve">
+    <value>Mamlaka ya msimamizi yanahitajika kusakinisha kwa watumiaji wote.
+Tafadhali endesha kisakinishi kama msimamizi au tumia /CURRENTUSER.</value>
+  </data>
+  <data name="Installer_AdminRequiredDetailed" xml:space="preserve">
+    <value>Mamlaka ya msimamizi yanahitajika kusakinisha kwa watumiaji wote.
+
+Tafadhali fanya moja ya yafuatayo:
+- Chagua 'Sakinisha kwa mtumiaji wa sasa peke yake', au
+- Endesha kisakinishi hiki kama msimamizi</value>
+  </data>
+  <data name="Installer_AllUsersDescription" xml:space="preserve">
+    <value>Programu itapatikana kwa watumiaji wote kwenye kompyuta hii.</value>
+  </data>
+  <data name="Installer_AllUsersOption" xml:space="preserve">
+    <value>Sakinisha kwa watumiaji w&amp;ote (inahitaji mamlaka ya msimamizi)</value>
+  </data>
+  <data name="Installer_ArchRequired" xml:space="preserve">
+    <value>Kisakinishi hiki kinahitaji toleo la x64 au arm64 la Windows.</value>
+  </data>
+  <data name="Installer_CurrentUserDescription" xml:space="preserve">
+    <value>Inapendekezwa. Programu itapatikana kwa akaunti yako ya mtumiaji peke yake.</value>
+  </data>
+  <data name="Installer_CurrentUserOption" xml:space="preserve">
+    <value>Sakinisha kwa mtumiaji wa &amp;sasa peke yake</value>
+  </data>
+  <data name="Installer_InstallingFor" xml:space="preserve">
+    <value>Kusakinisha kwa:</value>
+  </data>
+  <data name="Installer_InstallModeDescription" xml:space="preserve">
+    <value>Tafadhali chagua kama unataka kusakinisha Screenshot Annotator kwako peke yako au kwa watumiaji wote wa kompyuta hii.</value>
+  </data>
+  <data name="Installer_InstallModeSubtitle" xml:space="preserve">
+    <value>Chagua nani anaweza kutumia programu hii</value>
+  </data>
+  <data name="Installer_InstallModeTitle" xml:space="preserve">
+    <value>Chagua Aina ya Usakinishaji</value>
+  </data>
+  <data name="Installer_LaunchApp" xml:space="preserve">
+    <value>Zindua Programu</value>
+  </data>
+  <data name="Menu_EnablePrintScreenHotkey" xml:space="preserve">
+    <value>Wezesha kitufe cha Print Screen</value>
+  </data>
+  <data name="Menu_Export" xml:space="preserve">
+    <value>Hamisha...</value>
+  </data>
+  <data name="Menu_File" xml:space="preserve">
+    <value>[ Faili ]</value>
+  </data>
+  <data name="Menu_Import" xml:space="preserve">
+    <value>Ingiza...</value>
+  </data>
+  <data name="Menu_License" xml:space="preserve">
+    <value>Leseni</value>
+  </data>
+  <data name="Menu_New" xml:space="preserve">
+    <value>Mpya...</value>
+  </data>
+  <data name="Menu_OpenLogsFolder" xml:space="preserve">
+    <value>Fungua Folda ya _Kumbukumbu</value>
+  </data>
+  <data name="Menu_OpenProjectsFolder" xml:space="preserve">
+    <value>Fungua Folda ya _Miradi</value>
+  </data>
+  <data name="Menu_Options" xml:space="preserve">
+    <value>Mipangilio</value>
+  </data>
+  <data name="Menu_WebSite" xml:space="preserve">
+    <value>Tovuti</value>
+  </data>
+  <data name="Panel_Projects" xml:space="preserve">
+    <value>Miradi</value>
+  </data>
+  <data name="Panel_Properties" xml:space="preserve">
+    <value>Sifa</value>
+  </data>
+  <data name="Props_Bold" xml:space="preserve">
+    <value>Nzito</value>
+  </data>
+  <data name="Props_Color" xml:space="preserve">
+    <value>Rangi</value>
+  </data>
+  <data name="Props_Font" xml:space="preserve">
+    <value>Fonti</value>
+  </data>
+  <data name="Props_Italic" xml:space="preserve">
+    <value>Mlazo</value>
+  </data>
+  <data name="Props_Size" xml:space="preserve">
+    <value>Ukubwa</value>
+  </data>
+  <data name="Screenshot_Instructions" xml:space="preserve">
+    <value>Bonyeza na buruta kuchagua eneo, au rekebisha pembe. Tumia kioo cha kukuza kwa usahihi. Bonyeza Sawa unapokuwa tayari.</value>
+  </data>
+  <data name="Tool_Arrow" xml:space="preserve">
+    <value>Mshale</value>
+  </data>
+  <data name="Tool_Blur" xml:space="preserve">
+    <value>Ukungu</value>
+  </data>
+  <data name="Tool_Border" xml:space="preserve">
+    <value>Mpaka</value>
+  </data>
+  <data name="Tool_Callout" xml:space="preserve">
+    <value>Maelezo</value>
+  </data>
+  <data name="Tool_Copy" xml:space="preserve">
+    <value>Nakili</value>
+  </data>
+  <data name="Tool_CutHorizontal" xml:space="preserve">
+    <value>Kata -</value>
+  </data>
+  <data name="Tool_CutVertical" xml:space="preserve">
+    <value>Kata |</value>
+  </data>
+  <data name="Tool_Export" xml:space="preserve">
+    <value>Hamisha</value>
+  </data>
+  <data name="Tool_Highlight" xml:space="preserve">
+    <value>Angazia</value>
+  </data>
+  <data name="Tool_Import" xml:space="preserve">
+    <value>Ingiza</value>
+  </data>
+  <data name="Tool_New" xml:space="preserve">
+    <value>Mpya</value>
+  </data>
+  <data name="Tool_Note" xml:space="preserve">
+    <value>Kumbukumbu</value>
+  </data>
+  <data name="Tool_Paste" xml:space="preserve">
+    <value>Bandika</value>
+  </data>
+  <data name="Tool_Screenshot" xml:space="preserve">
+    <value>Picha ya Skrini</value>
+  </data>
+  <data name="Tool_Select" xml:space="preserve">
+    <value>Chagua</value>
+  </data>
+  <data name="Tooltip_Arrow" xml:space="preserve">
+    <value>Chora mshale</value>
+  </data>
+  <data name="Tooltip_Blur" xml:space="preserve">
+    <value>Ficha eneo kwa ukungu</value>
+  </data>
+  <data name="Tooltip_Border" xml:space="preserve">
+    <value>Chora mpaka/mstatili</value>
+  </data>
+  <data name="Tooltip_Callout" xml:space="preserve">
+    <value>Ongeza maelezo</value>
+  </data>
+  <data name="Tooltip_CollapseExpandPanel" xml:space="preserve">
+    <value>Ficha/Onyesha Paneli ya Miradi</value>
+  </data>
+  <data name="Tooltip_Copy" xml:space="preserve">
+    <value>Nakili kwenye ubao wa kunakili</value>
+  </data>
+  <data name="Tooltip_CutHorizontal" xml:space="preserve">
+    <value>Kata picha usawa</value>
+  </data>
+  <data name="Tooltip_CutVertical" xml:space="preserve">
+    <value>Kata picha wima</value>
+  </data>
+  <data name="Tooltip_Export" xml:space="preserve">
+    <value>Hamisha picha au mradi</value>
+  </data>
+  <data name="Tooltip_Highlight" xml:space="preserve">
+    <value>Angazia eneo</value>
+  </data>
+  <data name="Tooltip_Import" xml:space="preserve">
+    <value>Ingiza mradi au picha</value>
+  </data>
+  <data name="Tooltip_New" xml:space="preserve">
+    <value>Unda mradi mpya</value>
+  </data>
+  <data name="Tooltip_Note" xml:space="preserve">
+    <value>Ongeza kumbukumbu ya maandishi</value>
+  </data>
+  <data name="Tooltip_Paste" xml:space="preserve">
+    <value>Bandika kutoka kwenye ubao wa kunakili</value>
+  </data>
+  <data name="Tooltip_Screenshot" xml:space="preserve">
+    <value>Chukua picha ya skrini</value>
+  </data>
+  <data name="Tooltip_Select" xml:space="preserve">
+    <value>Chagua na hariri maelezo</value>
+  </data>
+  <data name="Update_NewVersionAvailable" xml:space="preserve">
+    <value>Toleo jipya {0} linapatikana.</value>
+  </data>
+  <data name="Window_Title" xml:space="preserve">
+    <value>Screenshot Annotator - Mhariri wa Picha</value>
+  </data>
+  <data name="Winget_Description" xml:space="preserve">
+    <value>Programu ya kuandika maelezo kwenye picha za skrini kwa Windows na Linux.
+
+Vipengele:
+- **Mishale** - Vuta umakini kwa mishale inayoweza kubadilishwa
+- **Maelezo** - Ongeza maelezo ya kiputo na maandishi yanayoweza kuhaririwa
+- **Kumbukumbu** - Unda masanduku ya maandishi kwa habari zaidi
+- **Uteuzi wa Mpaka** - Angazia maeneo na mstatili wenye mpaka
+- **Ukungu** - Ficha habari nyeti kwa athari za ukungu
+- **Zana ya Uteuzi** - Chagua sehemu za picha kunakili (Ctrl+C) au kufuta (kitufe cha Delete)
+- **Kata vipande vya wima na usawa** - Kata maeneo ya wima au usawa ya picha
+- **Kiangalizi** - Angazia maeneo ya kuvutia
+- **Usimamizi wa Miradi** - Uhifadhi wa mradi otomatiki na picha ndogo za hakikisho
+- **Mseto wa Mfumo** - Inafanya kazi kwenye Windows na Linux</value>
+  </data>
+  <data name="Winget_ShortDescription" xml:space="preserve">
+    <value>Programu ya kuandika maelezo kwenye picha za skrini kwa Windows na Linux.</value>
+  </data>
+</root>

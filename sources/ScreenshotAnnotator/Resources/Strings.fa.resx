@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <!-- Persian (Farsi) Translation -->
+  <data name="_Technical_NsisLanguage" xml:space="preserve">
+    <value>Farsi</value>
+  </data>
+  <data name="_Technical_WingetLocale" xml:space="preserve">
+    <value>fa-IR</value>
+  </data>
+  <data name="Button_Accept" xml:space="preserve">
+    <value>✓ قبول</value>
+  </data>
+  <data name="Button_Cancel" xml:space="preserve">
+    <value>لغو</value>
+  </data>
+  <data name="Button_CancelX" xml:space="preserve">
+    <value>✕ لغو</value>
+  </data>
+  <data name="Button_Download" xml:space="preserve">
+    <value>دانلود</value>
+  </data>
+  <data name="Button_OK" xml:space="preserve">
+    <value>تأیید</value>
+  </data>
+  <data name="ContextMenu_Delete" xml:space="preserve">
+    <value>حذف</value>
+  </data>
+  <data name="ContextMenu_Open" xml:space="preserve">
+    <value>باز کردن</value>
+  </data>
+  <data name="Copyright_Text" xml:space="preserve">
+    <value>Annotator {0} : حق مؤلف (c) 2025-{1} Siarhei Kuchuk</value>
+  </data>
+  <data name="Dialog_Export_Title" xml:space="preserve">
+    <value>خروجی</value>
+  </data>
+  <data name="Dialog_Import_Title" xml:space="preserve">
+    <value>وارد کردن پروژه یا تصویر</value>
+  </data>
+  <data name="FileType_AllFiles" xml:space="preserve">
+    <value>همه فایل‌ها</value>
+  </data>
+  <data name="FileType_AllSupported" xml:space="preserve">
+    <value>همه فایل‌های پشتیبانی‌شده</value>
+  </data>
+  <data name="FileType_AnnotatorProject" xml:space="preserve">
+    <value>پروژه Annotator</value>
+  </data>
+  <data name="FileType_Images" xml:space="preserve">
+    <value>فایل‌های تصویری</value>
+  </data>
+  <data name="FileType_JPEG" xml:space="preserve">
+    <value>تصویر JPEG</value>
+  </data>
+  <data name="FileType_PNG" xml:space="preserve">
+    <value>تصویر PNG</value>
+  </data>
+  <data name="FileType_WebP" xml:space="preserve">
+    <value>تصویر WebP</value>
+  </data>
+  <data name="Header_ScreenshotAnnotator" xml:space="preserve">
+    <value>[ حاشیه‌نویس اسکرین‌شات - V{0} ]</value>
+  </data>
+  <data name="ImproveIt_Message" xml:space="preserve">
+    <value>یک خطای غیرمنتظره رخ داد.
+
+لطفاً با اطلاعات ذخیره‌شده روی دسکتاپ خود با توسعه‌دهندگان تماس بگیرید
+"{0}"
+
+برنامه اکنون بسته می‌شود.</value>
+  </data>
+  <data name="Installer_AdminRequired" xml:space="preserve">
+    <value>برای نصب برای همه کاربران، مجوز مدیر لازم است.
+لطفاً نصب‌کننده را به عنوان مدیر اجرا کنید یا از /CURRENTUSER استفاده کنید.</value>
+  </data>
+  <data name="Installer_AdminRequiredDetailed" xml:space="preserve">
+    <value>برای نصب برای همه کاربران، مجوز مدیر لازم است.
+
+لطفاً یکی از موارد زیر را انجام دهید:
+- «نصب فقط برای کاربر فعلی» را انتخاب کنید، یا
+- این نصب‌کننده را به عنوان مدیر اجرا کنید</value>
+  </data>
+  <data name="Installer_AllUsersDescription" xml:space="preserve">
+    <value>این برنامه برای همه کاربران این رایانه در دسترس خواهد بود.</value>
+  </data>
+  <data name="Installer_AllUsersOption" xml:space="preserve">
+    <value>نصب برای همه کاربران (&amp;A) (نیاز به مجوز مدیر)</value>
+  </data>
+  <data name="Installer_ArchRequired" xml:space="preserve">
+    <value>این نصب‌کننده به نسخه x64 یا arm64 ویندوز نیاز دارد.</value>
+  </data>
+  <data name="Installer_CurrentUserDescription" xml:space="preserve">
+    <value>توصیه‌شده. برنامه فقط برای حساب کاربری شما در دسترس خواهد بود.</value>
+  </data>
+  <data name="Installer_CurrentUserOption" xml:space="preserve">
+    <value>نصب فقط برای کاربر فعلی (&amp;C)</value>
+  </data>
+  <data name="Installer_InstallingFor" xml:space="preserve">
+    <value>در حال نصب برای:</value>
+  </data>
+  <data name="Installer_InstallModeDescription" xml:space="preserve">
+    <value>لطفاً انتخاب کنید که آیا می‌خواهید Screenshot Annotator را فقط برای خودتان یا برای همه کاربران این رایانه نصب کنید.</value>
+  </data>
+  <data name="Installer_InstallModeSubtitle" xml:space="preserve">
+    <value>انتخاب کنید چه کسی می‌تواند از این برنامه استفاده کند</value>
+  </data>
+  <data name="Installer_InstallModeTitle" xml:space="preserve">
+    <value>انتخاب نوع نصب</value>
+  </data>
+  <data name="Installer_LaunchApp" xml:space="preserve">
+    <value>راه‌اندازی برنامه</value>
+  </data>
+  <data name="Menu_EnablePrintScreenHotkey" xml:space="preserve">
+    <value>فعال‌سازی کلید میانبر Print Screen</value>
+  </data>
+  <data name="Menu_Export" xml:space="preserve">
+    <value>خروجی...</value>
+  </data>
+  <data name="Menu_File" xml:space="preserve">
+    <value>[ فایل ]</value>
+  </data>
+  <data name="Menu_Import" xml:space="preserve">
+    <value>ورودی...</value>
+  </data>
+  <data name="Menu_License" xml:space="preserve">
+    <value>مجوز</value>
+  </data>
+  <data name="Menu_New" xml:space="preserve">
+    <value>جدید...</value>
+  </data>
+  <data name="Menu_OpenLogsFolder" xml:space="preserve">
+    <value>باز کردن پوشه _گزارش‌ها</value>
+  </data>
+  <data name="Menu_OpenProjectsFolder" xml:space="preserve">
+    <value>باز کردن پوشه _پروژه‌ها</value>
+  </data>
+  <data name="Menu_Options" xml:space="preserve">
+    <value>گزینه‌ها</value>
+  </data>
+  <data name="Menu_WebSite" xml:space="preserve">
+    <value>وب‌سایت</value>
+  </data>
+  <data name="Panel_Projects" xml:space="preserve">
+    <value>پروژه‌ها</value>
+  </data>
+  <data name="Panel_Properties" xml:space="preserve">
+    <value>ویژگی‌ها</value>
+  </data>
+  <data name="Props_Bold" xml:space="preserve">
+    <value>ضخیم</value>
+  </data>
+  <data name="Props_Color" xml:space="preserve">
+    <value>رنگ</value>
+  </data>
+  <data name="Props_Font" xml:space="preserve">
+    <value>قلم</value>
+  </data>
+  <data name="Props_Italic" xml:space="preserve">
+    <value>کج</value>
+  </data>
+  <data name="Props_Size" xml:space="preserve">
+    <value>اندازه</value>
+  </data>
+  <data name="Screenshot_Instructions" xml:space="preserve">
+    <value>برای انتخاب ناحیه کلیک و بکشید، یا نقاط گوشه را تنظیم کنید. برای دقت از ذره‌بین استفاده کنید. وقتی آماده شدید تأیید را فشار دهید.</value>
+  </data>
+  <data name="Tool_Arrow" xml:space="preserve">
+    <value>پیکان</value>
+  </data>
+  <data name="Tool_Blur" xml:space="preserve">
+    <value>تار</value>
+  </data>
+  <data name="Tool_Border" xml:space="preserve">
+    <value>حاشیه</value>
+  </data>
+  <data name="Tool_Callout" xml:space="preserve">
+    <value>توضیح</value>
+  </data>
+  <data name="Tool_Copy" xml:space="preserve">
+    <value>کپی</value>
+  </data>
+  <data name="Tool_CutHorizontal" xml:space="preserve">
+    <value>برش -</value>
+  </data>
+  <data name="Tool_CutVertical" xml:space="preserve">
+    <value>برش |</value>
+  </data>
+  <data name="Tool_Export" xml:space="preserve">
+    <value>خروجی</value>
+  </data>
+  <data name="Tool_Highlight" xml:space="preserve">
+    <value>برجسته‌سازی</value>
+  </data>
+  <data name="Tool_Import" xml:space="preserve">
+    <value>ورودی</value>
+  </data>
+  <data name="Tool_New" xml:space="preserve">
+    <value>جدید</value>
+  </data>
+  <data name="Tool_Note" xml:space="preserve">
+    <value>یادداشت</value>
+  </data>
+  <data name="Tool_Paste" xml:space="preserve">
+    <value>چسباندن</value>
+  </data>
+  <data name="Tool_Screenshot" xml:space="preserve">
+    <value>اسکرین‌شات</value>
+  </data>
+  <data name="Tool_Select" xml:space="preserve">
+    <value>انتخاب</value>
+  </data>
+  <data name="Tooltip_Arrow" xml:space="preserve">
+    <value>رسم پیکان</value>
+  </data>
+  <data name="Tooltip_Blur" xml:space="preserve">
+    <value>تار کردن ناحیه</value>
+  </data>
+  <data name="Tooltip_Border" xml:space="preserve">
+    <value>رسم حاشیه/مستطیل</value>
+  </data>
+  <data name="Tooltip_Callout" xml:space="preserve">
+    <value>افزودن توضیح</value>
+  </data>
+  <data name="Tooltip_CollapseExpandPanel" xml:space="preserve">
+    <value>بستن/بازکردن پنل پروژه‌ها</value>
+  </data>
+  <data name="Tooltip_Copy" xml:space="preserve">
+    <value>کپی در کلیپ‌بورد</value>
+  </data>
+  <data name="Tooltip_CutHorizontal" xml:space="preserve">
+    <value>برش افقی تصویر</value>
+  </data>
+  <data name="Tooltip_CutVertical" xml:space="preserve">
+    <value>برش عمودی تصویر</value>
+  </data>
+  <data name="Tooltip_Export" xml:space="preserve">
+    <value>خروجی تصویر یا پروژه</value>
+  </data>
+  <data name="Tooltip_Highlight" xml:space="preserve">
+    <value>برجسته‌سازی ناحیه</value>
+  </data>
+  <data name="Tooltip_Import" xml:space="preserve">
+    <value>وارد کردن پروژه یا تصویر</value>
+  </data>
+  <data name="Tooltip_New" xml:space="preserve">
+    <value>ایجاد پروژه جدید</value>
+  </data>
+  <data name="Tooltip_Note" xml:space="preserve">
+    <value>افزودن یادداشت متنی</value>
+  </data>
+  <data name="Tooltip_Paste" xml:space="preserve">
+    <value>چسباندن از کلیپ‌بورد</value>
+  </data>
+  <data name="Tooltip_Screenshot" xml:space="preserve">
+    <value>گرفتن اسکرین‌شات</value>
+  </data>
+  <data name="Tooltip_Select" xml:space="preserve">
+    <value>انتخاب و ویرایش حاشیه‌نویسی‌ها</value>
+  </data>
+  <data name="Update_NewVersionAvailable" xml:space="preserve">
+    <value>نسخه جدید {0} در دسترس است.</value>
+  </data>
+  <data name="Window_Title" xml:space="preserve">
+    <value>Screenshot Annotator - ویرایشگر تصویر</value>
+  </data>
+  <data name="Winget_Description" xml:space="preserve">
+    <value>نرم‌افزار حاشیه‌نویسی اسکرین‌شات برای ویندوز و لینوکس.
+
+ویژگی‌ها:
+- **پیکان‌ها** - با پیکان‌های قابل تنظیم توجه را به مناطق خاص جلب کنید
+- **توضیحات** - حاشیه‌نویسی‌های حباب گفتار با متن قابل ویرایش اضافه کنید
+- **یادداشت‌ها** - کادرهای متنی برای اطلاعات اضافی ایجاد کنید
+- **انتخاب حاشیه** - مناطق را با مستطیل‌های دارای حاشیه برجسته کنید
+- **تار** - اطلاعات حساس را با افکت‌های تار مخفی کنید
+- **ابزار انتخاب** - بخش‌هایی از تصویر را برای کپی (Ctrl+C) یا حذف (کلید Delete) انتخاب کنید
+- **برش برش‌های عمودی و افقی** - مناطق عمودی یا افقی تصویر را ببرید
+- **برجسته‌کننده** - مناطق مورد علاقه را برجسته کنید
+- **مدیریت پروژه** - ذخیره خودکار پروژه و تصاویر کوچک پیش‌نمایش
+- **چند پلتفرمی** - روی هر دو ویندوز و لینوکس کار می‌کند</value>
+  </data>
+  <data name="Winget_ShortDescription" xml:space="preserve">
+    <value>نرم‌افزار حاشیه‌نویسی اسکرین‌شات برای ویندوز و لینوکس.</value>
+  </data>
+</root>

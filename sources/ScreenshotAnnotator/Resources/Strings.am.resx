@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <!-- Amharic Translation -->
+  <data name="_Technical_NsisLanguage" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="_Technical_WingetLocale" xml:space="preserve">
+    <value>am-ET</value>
+  </data>
+  <data name="Button_Accept" xml:space="preserve">
+    <value>✓ ተቀበል</value>
+  </data>
+  <data name="Button_Cancel" xml:space="preserve">
+    <value>ሰርዝ</value>
+  </data>
+  <data name="Button_CancelX" xml:space="preserve">
+    <value>✕ ሰርዝ</value>
+  </data>
+  <data name="Button_Download" xml:space="preserve">
+    <value>አውርድ</value>
+  </data>
+  <data name="Button_OK" xml:space="preserve">
+    <value>እሺ</value>
+  </data>
+  <data name="ContextMenu_Delete" xml:space="preserve">
+    <value>ሰርዝ</value>
+  </data>
+  <data name="ContextMenu_Open" xml:space="preserve">
+    <value>ክፈት</value>
+  </data>
+  <data name="Copyright_Text" xml:space="preserve">
+    <value>Annotator {0} : የቅጂ መብት (c) 2025-{1} Siarhei Kuchuk</value>
+  </data>
+  <data name="Dialog_Export_Title" xml:space="preserve">
+    <value>ወደ ውጭ ላክ</value>
+  </data>
+  <data name="Dialog_Import_Title" xml:space="preserve">
+    <value>ፕሮጀክት ወይም ምስል አስገባ</value>
+  </data>
+  <data name="FileType_AllFiles" xml:space="preserve">
+    <value>ሁሉም ፋይሎች</value>
+  </data>
+  <data name="FileType_AllSupported" xml:space="preserve">
+    <value>ሁሉም የሚደገፉ ፋይሎች</value>
+  </data>
+  <data name="FileType_AnnotatorProject" xml:space="preserve">
+    <value>የ Annotator ፕሮጀክት</value>
+  </data>
+  <data name="FileType_Images" xml:space="preserve">
+    <value>የምስል ፋይሎች</value>
+  </data>
+  <data name="FileType_JPEG" xml:space="preserve">
+    <value>JPEG ምስል</value>
+  </data>
+  <data name="FileType_PNG" xml:space="preserve">
+    <value>PNG ምስል</value>
+  </data>
+  <data name="FileType_WebP" xml:space="preserve">
+    <value>WebP ምስል</value>
+  </data>
+  <data name="Header_ScreenshotAnnotator" xml:space="preserve">
+    <value>[ ስክሪንሾት አናቶቴተር - V{0} ]</value>
+  </data>
+  <data name="ImproveIt_Message" xml:space="preserve">
+    <value>ያልተጠበቀ ስህተት ተከስቷል።
+
+እባክዎ በደስክቶፕዎ ላይ በተቀመጠ መረጃ ገንቢዎችን ያነጋግሩ
+"{0}"
+
+አፕሊኬሽኑ አሁን ይዘጋል።</value>
+  </data>
+  <data name="Installer_AdminRequired" xml:space="preserve">
+    <value>ለሁሉም ተጠቃሚዎች ለመጫን የአስተዳዳሪ መብቶች ያስፈልጋሉ።
+እባክዎ ጫኙን እንደ አስተዳዳሪ ያሂዱ ወይም /CURRENTUSER ይጠቀሙ።</value>
+  </data>
+  <data name="Installer_AdminRequiredDetailed" xml:space="preserve">
+    <value>ለሁሉም ተጠቃሚዎች ለመጫን የአስተዳዳሪ መብቶች ያስፈልጋሉ።
+
+እባክዎ ከሚከተሉት አንዱን ያድርጉ:
+- 'ለአሁኑ ተጠቃሚ ብቻ ጫን' ይምረጡ፣ ወይም
+- ይህን ጫኝ እንደ አስተዳዳሪ ያሂዱ</value>
+  </data>
+  <data name="Installer_AllUsersDescription" xml:space="preserve">
+    <value>አፕሊኬሽኑ በዚህ ኮምፒውተር ላሉ ሁሉም ተጠቃሚዎች ይገኛል።</value>
+  </data>
+  <data name="Installer_AllUsersOption" xml:space="preserve">
+    <value>ለሁሉም ተጠቃሚዎች ጫን (&amp;A) (የአስተዳዳሪ መብቶች ያስፈልጋሉ)</value>
+  </data>
+  <data name="Installer_ArchRequired" xml:space="preserve">
+    <value>ይህ ጫኝ የ Windows x64 ወይም arm64 ስሪት ያስፈልገዋል።</value>
+  </data>
+  <data name="Installer_CurrentUserDescription" xml:space="preserve">
+    <value>የሚመከር። አፕሊኬሽኑ ለእርስዎ የተጠቃሚ መለያ ብቻ ይገኛል።</value>
+  </data>
+  <data name="Installer_CurrentUserOption" xml:space="preserve">
+    <value>ለአሁኑ ተጠቃሚ ብቻ ጫን (&amp;C)</value>
+  </data>
+  <data name="Installer_InstallingFor" xml:space="preserve">
+    <value>እየተጫነ ያለው ለ:</value>
+  </data>
+  <data name="Installer_InstallModeDescription" xml:space="preserve">
+    <value>Screenshot Annotator ለእርስዎ ብቻ ወይም ለዚህ ኮምፒውተር ሁሉም ተጠቃሚዎች መጫን እንደሚፈልጉ እባክዎ ይምረጡ።</value>
+  </data>
+  <data name="Installer_InstallModeSubtitle" xml:space="preserve">
+    <value>ይህ አፕሊኬሽን ማን መጠቀም እንደሚችሉ ይምረጡ</value>
+  </data>
+  <data name="Installer_InstallModeTitle" xml:space="preserve">
+    <value>የጭነት ዓይነት ይምረጡ</value>
+  </data>
+  <data name="Installer_LaunchApp" xml:space="preserve">
+    <value>አፕ ጀምር</value>
+  </data>
+  <data name="Menu_EnablePrintScreenHotkey" xml:space="preserve">
+    <value>የ Print Screen አቋራጭ ያንቁ</value>
+  </data>
+  <data name="Menu_Export" xml:space="preserve">
+    <value>ወደ ውጭ ላክ...</value>
+  </data>
+  <data name="Menu_File" xml:space="preserve">
+    <value>[ ፋይል ]</value>
+  </data>
+  <data name="Menu_Import" xml:space="preserve">
+    <value>አስገባ...</value>
+  </data>
+  <data name="Menu_License" xml:space="preserve">
+    <value>ፈቃድ</value>
+  </data>
+  <data name="Menu_New" xml:space="preserve">
+    <value>አዲስ...</value>
+  </data>
+  <data name="Menu_OpenLogsFolder" xml:space="preserve">
+    <value>የ_ምዝግብ ማስታወሻ አቃፊ ክፈት</value>
+  </data>
+  <data name="Menu_OpenProjectsFolder" xml:space="preserve">
+    <value>የ_ፕሮጀክቶች አቃፊ ክፈት</value>
+  </data>
+  <data name="Menu_Options" xml:space="preserve">
+    <value>አማራጮች</value>
+  </data>
+  <data name="Menu_WebSite" xml:space="preserve">
+    <value>ድረ-ገጽ</value>
+  </data>
+  <data name="Panel_Projects" xml:space="preserve">
+    <value>ፕሮጀክቶች</value>
+  </data>
+  <data name="Panel_Properties" xml:space="preserve">
+    <value>ባህሪያት</value>
+  </data>
+  <data name="Props_Bold" xml:space="preserve">
+    <value>ደፋር</value>
+  </data>
+  <data name="Props_Color" xml:space="preserve">
+    <value>ቀለም</value>
+  </data>
+  <data name="Props_Font" xml:space="preserve">
+    <value>ቅርጸ-ቁምፊ</value>
+  </data>
+  <data name="Props_Italic" xml:space="preserve">
+    <value>ዘርዘር</value>
+  </data>
+  <data name="Props_Size" xml:space="preserve">
+    <value>መጠን</value>
+  </data>
+  <data name="Screenshot_Instructions" xml:space="preserve">
+    <value>ቦታ ለመምረጥ ጠቅ ያድርጉ እና ይጎትቱ፣ ወይም የማዕዘን ነጥቦችን ያስተካክሉ። ለትክክለኛነት ማጉያ ይጠቀሙ። ዝግጁ ሲሆኑ እሺ ይጫኑ።</value>
+  </data>
+  <data name="Tool_Arrow" xml:space="preserve">
+    <value>ቀስት</value>
+  </data>
+  <data name="Tool_Blur" xml:space="preserve">
+    <value>ደብዝዝ</value>
+  </data>
+  <data name="Tool_Border" xml:space="preserve">
+    <value>ድንበር</value>
+  </data>
+  <data name="Tool_Callout" xml:space="preserve">
+    <value>ማብራሪያ</value>
+  </data>
+  <data name="Tool_Copy" xml:space="preserve">
+    <value>ቅዳ</value>
+  </data>
+  <data name="Tool_CutHorizontal" xml:space="preserve">
+    <value>ቁረጥ -</value>
+  </data>
+  <data name="Tool_CutVertical" xml:space="preserve">
+    <value>ቁረጥ |</value>
+  </data>
+  <data name="Tool_Export" xml:space="preserve">
+    <value>ወደ ውጭ ላክ</value>
+  </data>
+  <data name="Tool_Highlight" xml:space="preserve">
+    <value>አብሪ</value>
+  </data>
+  <data name="Tool_Import" xml:space="preserve">
+    <value>አስገባ</value>
+  </data>
+  <data name="Tool_New" xml:space="preserve">
+    <value>አዲስ</value>
+  </data>
+  <data name="Tool_Note" xml:space="preserve">
+    <value>ማስታወሻ</value>
+  </data>
+  <data name="Tool_Paste" xml:space="preserve">
+    <value>ለጥፍ</value>
+  </data>
+  <data name="Tool_Screenshot" xml:space="preserve">
+    <value>ስክሪንሾት</value>
+  </data>
+  <data name="Tool_Select" xml:space="preserve">
+    <value>ምረጥ</value>
+  </data>
+  <data name="Tooltip_Arrow" xml:space="preserve">
+    <value>ቀስት ይሳሉ</value>
+  </data>
+  <data name="Tooltip_Blur" xml:space="preserve">
+    <value>ቦታ ያደበዝዙ</value>
+  </data>
+  <data name="Tooltip_Border" xml:space="preserve">
+    <value>ድንበር/አራት ማዕዘን ይሳሉ</value>
+  </data>
+  <data name="Tooltip_Callout" xml:space="preserve">
+    <value>ማብራሪያ ያክሉ</value>
+  </data>
+  <data name="Tooltip_CollapseExpandPanel" xml:space="preserve">
+    <value>የፕሮጀክቶች ፓናልን ሰብስቡ/ዘርጉ</value>
+  </data>
+  <data name="Tooltip_Copy" xml:space="preserve">
+    <value>ወደ ክሊፕቦርድ ቅዱ</value>
+  </data>
+  <data name="Tooltip_CutHorizontal" xml:space="preserve">
+    <value>ምስሉን አግዳሚ ቁረጡ</value>
+  </data>
+  <data name="Tooltip_CutVertical" xml:space="preserve">
+    <value>ምስሉን ቀጥ ቁረጡ</value>
+  </data>
+  <data name="Tooltip_Export" xml:space="preserve">
+    <value>ምስል ወይም ፕሮጀክት ወደ ውጭ ላኩ</value>
+  </data>
+  <data name="Tooltip_Highlight" xml:space="preserve">
+    <value>ቦታ አብሩ</value>
+  </data>
+  <data name="Tooltip_Import" xml:space="preserve">
+    <value>ፕሮጀክት ወይም ምስል አስገቡ</value>
+  </data>
+  <data name="Tooltip_New" xml:space="preserve">
+    <value>አዲስ ፕሮጀክት ፍጠሩ</value>
+  </data>
+  <data name="Tooltip_Note" xml:space="preserve">
+    <value>የጽሑፍ ማስታወሻ ያክሉ</value>
+  </data>
+  <data name="Tooltip_Paste" xml:space="preserve">
+    <value>ከክሊፕቦርድ ለጥፉ</value>
+  </data>
+  <data name="Tooltip_Screenshot" xml:space="preserve">
+    <value>ስክሪንሾት ያንሱ</value>
+  </data>
+  <data name="Tooltip_Select" xml:space="preserve">
+    <value>ማብራሪያዎችን ምረጡ እና ያርትዑ</value>
+  </data>
+  <data name="Update_NewVersionAvailable" xml:space="preserve">
+    <value>አዲስ {0} ስሪት ይገኛል።</value>
+  </data>
+  <data name="Window_Title" xml:space="preserve">
+    <value>Screenshot Annotator - የምስል አርታዒ</value>
+  </data>
+  <data name="Winget_Description" xml:space="preserve">
+    <value>ለ Windows እና Linux የስክሪንሾት ማብራሪያ ሶፍትዌር።
+
+ባህሪያት:
+- **ቀስቶች** - ሊበጁ በሚችሉ ቀስቶች ወደ ተወሰኑ ቦታዎች ትኩረት ይሳቡ
+- **ማብራሪያዎች** - ሊስተካከሉ በሚችሉ ጽሑፍ ያላቸው የንግግር አረፋ ማብራሪያዎችን ያክሉ
+- **ማስታወሻዎች** - ለተጨማሪ መረጃ የጽሑፍ ሳጥኖችን ይፍጠሩ
+- **ድንበር ምርጫ** - ባሉት ድንበሮች አካባቢዎችን ያጉሉ
+- **ደብዝዝ** - በደብዝዝ ውጤቶች ሚስጥራዊ መረጃን ይደብቁ
+- **ምርጫ መሳሪያ** - ለመቅዳት (Ctrl+C) ወይም ለመሰረዝ (Delete ቁልፍ) የምስሉን ክፍሎች ይምረጡ
+- **ቁመታዊ እና አግዳሚ ቁርጠቶችን ቁረጡ** - ቁመታዊ ወይም አግዳሚ የምስሉ ቦታዎችን ቁረጡ
+- **ሃይላይተር** - የሚፈለጉ ቦታዎችን ያብሩ
+- **የፕሮጀክት አስተዳደር** - ራስ-ሰር የፕሮጀክት ማስቀመጥ እና ቅድመ-ዕይታ ትናንሽ ምስሎች
+- **ብዙ-መድረክ** - በ Windows እና Linux ሁለቱም ላይ ይሰራል</value>
+  </data>
+  <data name="Winget_ShortDescription" xml:space="preserve">
+    <value>ለ Windows እና Linux የስክሪንሾት ማብራሪያ ሶፍትዌር።</value>
+  </data>
+</root>
