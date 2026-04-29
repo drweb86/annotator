@@ -21,11 +21,8 @@ public class CutAnimationOverlay : Control
     private double _cutEnd;
     private Action? _onComplete;
 
-    // 25 ticks @ 30 fps ≈ 833 ms total
-    private const int TotalFrames  = 25;
-    private const double SnipStartT = 0.68;  // cats start closing scissors
-    private const double SnipEndT   = 0.88;  // scissors fully closed
-    private const double FlashStartT = 0.80; // cut-zone flash begins
+    // 40 ticks @ 30 fps ≈ 1.33 s total
+    private const int TotalFrames = 200;
 
     // -----------------------------------------------------------------------
     // Public API
@@ -80,80 +77,92 @@ public class CutAnimationOverlay : Control
         double catScale = Math.Clamp(Math.Min(bounds.Width, bounds.Height) * 0.06, 26, 65) / 40.0;
         double catOffset = catScale * 58; // how far off-screen they start
 
-        // Movement progress: smooth-step over first SnipStartT fraction
-        double moveRaw = Math.Min(t / SnipStartT, 1.0);
-        double easedT  = moveRaw * moveRaw * (3 - 2 * moveRaw);
+        // Smooth-step easing for the full traversal (0 → 1 over the whole animation)
+        double easedT = t * t * (3 - 2 * t);
 
-        // Scissors opening angle (radians): open during approach, snap shut at snip
-        double maxAngle = 28.0 * Math.PI / 180.0;
-        double scissorAngle;
-        if (t < SnipStartT)
-            scissorAngle = maxAngle;
-        else if (t < SnipEndT)
-            scissorAngle = maxAngle * (1 - (t - SnipStartT) / (SnipEndT - SnipStartT));
-        else
-            scissorAngle = 0;
+        // Scissors + legs share the same phase so movement is synchronised
+        double maxAngle     = 28.0 * Math.PI / 180.0;
+        const int snipCount = 15;
+        double rawPhase     = t * Math.PI * snipCount;
+        double scissorAngle = maxAngle * Math.Abs(Math.Cos(rawPhase));
 
-        // Flash rectangle over cut zone when scissors close
-        if (t > FlashStartT)
-        {
-            double flashT  = (t - FlashStartT) / (1.0 - FlashStartT);
-            byte flashAlpha = (byte)(Math.Sin(flashT * Math.PI) * 155);
-            var flashBrush = new SolidColorBrush(Color.FromArgb(flashAlpha, 255, 75, 75));
-            var flashRect = _isVertical
-                ? new Rect(_cutStart, 0, _cutEnd - _cutStart, bounds.Height)
-                : new Rect(0, _cutStart, bounds.Width, _cutEnd - _cutStart);
-            context.FillRectangle(flashBrush, flashRect);
-        }
+        // Red zone: fade in quickly, hold while cats traverse, fade out at the end
+        byte redAlpha;
+        if      (t < 0.10) redAlpha = (byte)(t / 0.10 * 140);
+        else if (t < 0.90) redAlpha = 140;
+        else               redAlpha = (byte)((1.0 - t) / 0.10 * 140);
+
+        var redBrush = new SolidColorBrush(Color.FromArgb(redAlpha, 255, 65, 65));
+        var redRect  = _isVertical
+            ? new Rect(_cutStart, 0, _cutEnd - _cutStart, bounds.Height)
+            : new Rect(0, _cutStart, bounds.Width, _cutEnd - _cutStart);
+        context.FillRectangle(redBrush, redRect);
+
+        // Scissors tip is 48 local units ahead of origin; use it as the visibility boundary.
+        // A cat is drawn only while its scissors tip is inside the image bounds —
+        // this prevents any part of the cat appearing outside the cut area.
+        double fwd = 48.0 * catScale;
 
         if (_isVertical)
         {
-            // Cat 1: at left edge of strip, comes from above, faces DOWN
+            // Cat 1: left edge of strip, enters from top, exits at bottom
             double c1x = _cutStart;
-            double c1y = Lerp(-catOffset, bounds.Height * 0.5, easedT);
-
-            // Cat 2: at right edge of strip, comes from below, faces UP
-            double c2x = _cutEnd;
-            double c2y = Lerp(bounds.Height + catOffset, bounds.Height * 0.5, easedT);
-
-            using (context.PushTransform(
-                Matrix.CreateScale(catScale, catScale) *
-                Matrix.CreateRotation(Math.PI / 2) *
-                Matrix.CreateTranslation(c1x, c1y)))
+            double c1y = Lerp(-catOffset, bounds.Height + catOffset, easedT);
+            // scissors tip (screen y) = c1y + fwd  (local +X → screen +Y after 90° rotation)
+            if (c1y + fwd > 0 && c1y + fwd < bounds.Height)
             {
-                DrawCatWithScissors(context, scissorAngle);
+                using (context.PushTransform(
+                    Matrix.CreateScale(catScale, catScale) *
+                    Matrix.CreateRotation(Math.PI / 2) *
+                    Matrix.CreateTranslation(c1x, c1y)))
+                {
+                    DrawCatWithScissors(context, scissorAngle, rawPhase);
+                }
             }
 
-            using (context.PushTransform(
-                Matrix.CreateScale(catScale, catScale) *
-                Matrix.CreateRotation(-Math.PI / 2) *
-                Matrix.CreateTranslation(c2x, c2y)))
+            // Cat 2: right edge of strip, enters from bottom, exits at top
+            double c2x = _cutEnd;
+            double c2y = Lerp(bounds.Height + catOffset, -catOffset, easedT);
+            // scissors tip (screen y) = c2y - fwd  (local +X → screen -Y after -90° rotation)
+            if (c2y - fwd > 0 && c2y - fwd < bounds.Height)
             {
-                DrawCatWithScissors(context, scissorAngle);
+                using (context.PushTransform(
+                    Matrix.CreateScale(catScale, catScale) *
+                    Matrix.CreateRotation(-Math.PI / 2) *
+                    Matrix.CreateTranslation(c2x, c2y)))
+                {
+                    DrawCatWithScissors(context, scissorAngle, rawPhase);
+                }
             }
         }
         else
         {
-            // Cat 1: at top edge of strip, comes from left, faces RIGHT
-            double c1x = Lerp(-catOffset, bounds.Width * 0.5, easedT);
+            // Cat 1: top edge of strip, enters from left, exits at right
+            double c1x = Lerp(-catOffset, bounds.Width + catOffset, easedT);
             double c1y = _cutStart;
-
-            // Cat 2: at bottom edge of strip, comes from right, faces LEFT (mirrored)
-            double c2x = Lerp(bounds.Width + catOffset, bounds.Width * 0.5, easedT);
-            double c2y = _cutEnd;
-
-            using (context.PushTransform(
-                Matrix.CreateScale(catScale, catScale) *
-                Matrix.CreateTranslation(c1x, c1y)))
+            // scissors tip (screen x) = c1x + fwd  (no rotation, faces right)
+            if (c1x + fwd > 0 && c1x + fwd < bounds.Width)
             {
-                DrawCatWithScissors(context, scissorAngle);
+                using (context.PushTransform(
+                    Matrix.CreateScale(catScale, catScale) *
+                    Matrix.CreateTranslation(c1x, c1y)))
+                {
+                    DrawCatWithScissors(context, scissorAngle, rawPhase);
+                }
             }
 
-            using (context.PushTransform(
-                Matrix.CreateScale(-catScale, catScale) *
-                Matrix.CreateTranslation(c2x, c2y)))
+            // Cat 2: bottom edge of strip, enters from right, exits at left
+            double c2x = Lerp(bounds.Width + catOffset, -catOffset, easedT);
+            double c2y = _cutEnd;
+            // scissors tip (screen x) = c2x - fwd  (local +X → screen -X after horizontal flip)
+            if (c2x - fwd > 0 && c2x - fwd < bounds.Width)
             {
-                DrawCatWithScissors(context, scissorAngle);
+                using (context.PushTransform(
+                    Matrix.CreateScale(-catScale, catScale) *
+                    Matrix.CreateTranslation(c2x, c2y)))
+                {
+                    DrawCatWithScissors(context, scissorAngle, rawPhase);
+                }
             }
         }
     }
@@ -172,8 +181,10 @@ public class CutAnimationOverlay : Control
     private static readonly Pen             CatOutline  = new(new SolidColorBrush(Color.FromArgb(130, 20, 20, 20)), 1.2);
 
     // Halo behind cat for readability against any background
-    private static readonly SolidColorBrush HaloShadow  = new(Color.FromArgb(70,  0,  0,  0));
-    private static readonly SolidColorBrush HaloLight   = new(Color.FromArgb(130, 255, 255, 255));
+    private static readonly SolidColorBrush HaloLight = new(Color.FromArgb(55, 255, 255, 255));
+
+    // Leg colours
+    private static readonly Pen LegPen = new(new SolidColorBrush(Color.FromRgb(155, 145, 132)), 2.0);
 
     // Scissors colours
     private static readonly SolidColorBrush ScissorsBlade   = new(Color.FromRgb(185, 192, 208));
@@ -182,11 +193,17 @@ public class CutAnimationOverlay : Control
     private static readonly Pen             ScissorsPen     = new(ScissorsBlade, 2.2);
     private static readonly Pen             ScissorsEdge    = new(new SolidColorBrush(Color.FromArgb(90, 0, 0, 0)), 0.8);
 
-    private static void DrawCatWithScissors(DrawingContext ctx, double scissorAngle)
+    private static void DrawCatWithScissors(DrawingContext ctx, double scissorAngle, double legPhase)
     {
+        // Legs drawn first so the body overlaps their roots naturally
+        double swing = Math.Sin(legPhase) * 4.0; // forward/back swing in local X
+        ctx.DrawLine(LegPen, new Point( 9, 8), new Point( 9 + swing, 17));
+        ctx.DrawLine(LegPen, new Point( 4, 8), new Point( 4 - swing, 17));
+        ctx.DrawLine(LegPen, new Point(-4, 8), new Point(-4 + swing, 17));
+        ctx.DrawLine(LegPen, new Point(-9, 8), new Point(-9 - swing, 17));
+
         // Soft halo so cat is readable on any image
-        ctx.DrawEllipse(HaloShadow, null, new Point(2, 2),  32, 20);
-        ctx.DrawEllipse(HaloLight,  null, new Point(0, 0),  32, 20);
+        ctx.DrawEllipse(HaloLight, null, new Point(0, 0), 32, 20);
 
         // Body
         ctx.DrawEllipse(CatFur,     CatOutline, new Point(0,  0), 14, 9);
