@@ -18,6 +18,27 @@ namespace ScreenshotAnnotator.Controls;
 
 public class ImageEditorCanvas : Control
 {
+    // Raised when the user finishes a cut drag; the cut is NOT performed yet.
+    // Subscribers should play an animation then call ExecutePendingCut().
+    // If nobody subscribes the cut is executed immediately (fallback).
+    public event EventHandler<CutRequestedEventArgs>? CutRequested;
+
+    private bool _pendingCutIsVertical;
+    private double _pendingCutStart;
+    private double _pendingCutEnd;
+    private bool _cutPending;
+
+    public void ExecutePendingCut()
+    {
+        if (!_cutPending) return;
+        _cutPending = false;
+        if (_pendingCutIsVertical)
+            PerformVerticalCutOut(_pendingCutStart, _pendingCutEnd);
+        else
+            PerformHorizontalCutOut(_pendingCutStart, _pendingCutEnd);
+        InvalidateVisual();
+    }
+
     private Point _startPoint;
     private bool _isDrawing;
     private AnnotationShape? _currentShape;
@@ -770,19 +791,39 @@ public class ImageEditorCanvas : Control
         var point = e.GetPosition(this);
         if (CurrentTool == ToolType.VerticalCutOut)
         {
-            // Clamp to image boundaries
-            var clampedStartX = ClampX(_startPoint.X);
-            var clampedEndX = ClampX(point.X);
-            PerformVerticalCutOut(clampedStartX, clampedEndX);
+            var start = ClampX(_startPoint.X);
+            var end   = ClampX(point.X);
+            if (Math.Abs(end - start) >= 5)
+            {
+                _pendingCutIsVertical = true;
+                _pendingCutStart = start;
+                _pendingCutEnd   = end;
+                _cutPending = true;
+                var args = new CutRequestedEventArgs(true, start, end);
+                if (CutRequested != null)
+                    CutRequested(this, args);
+                else
+                    ExecutePendingCut();
+            }
             InvalidateVisual();
             return;
         }
         else if (CurrentTool == ToolType.HorizontalCutOut)
         {
-            // Clamp to image boundaries
-            var clampedStartY = ClampY(_startPoint.Y);
-            var clampedEndY = ClampY(point.Y);
-            PerformHorizontalCutOut(clampedStartY, clampedEndY);
+            var start = ClampY(_startPoint.Y);
+            var end   = ClampY(point.Y);
+            if (Math.Abs(end - start) >= 5)
+            {
+                _pendingCutIsVertical = false;
+                _pendingCutStart = start;
+                _pendingCutEnd   = end;
+                _cutPending = true;
+                var args = new CutRequestedEventArgs(false, start, end);
+                if (CutRequested != null)
+                    CutRequested(this, args);
+                else
+                    ExecutePendingCut();
+            }
             InvalidateVisual();
             return;
         }
@@ -1451,4 +1492,11 @@ public class ImageEditorCanvas : Control
         if (Image == null) return y;
         return Math.Max(0, Math.Min(y, Image.PixelSize.Height));
     }
+}
+
+public sealed class CutRequestedEventArgs(bool isVertical, double start, double end) : EventArgs
+{
+    public bool   IsVertical { get; } = isVertical;
+    public double Start      { get; } = start;
+    public double End        { get; } = end;
 }

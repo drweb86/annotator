@@ -375,6 +375,14 @@
           <Canvas x:Name="OverlayCanvas"
                   HorizontalAlignment="Left"
                   VerticalAlignment="Top" />
+          <!-- Cat-scissors cut animation; shares the canvas coordinate space -->
+          <controls:CutAnimationOverlay x:Name="CutOverlay"
+                                        Width="{Binding #EditorCanvas.Bounds.Width}"
+                                        Height="{Binding #EditorCanvas.Bounds.Height}"
+                                        HorizontalAlignment="Left"
+                                        VerticalAlignment="Top"
+                                        IsVisible="False"
+                                        IsHitTestVisible="False" />
         </Grid>
       </ScrollViewer>
 

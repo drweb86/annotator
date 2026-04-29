@@ -35,10 +35,18 @@ public partial class MainWindow : Window
         {
             var editorCanvas = this.FindControl<Controls.ImageEditorCanvas>("EditorCanvas");
             var overlayCanvas = this.FindControl<Canvas>("OverlayCanvas");
+            var cutOverlay = this.FindControl<Controls.CutAnimationOverlay>("CutOverlay");
 
             if (editorCanvas != null && overlayCanvas != null)
             {
                 editorCanvas.OverlayCanvas = overlayCanvas;
+
+                if (cutOverlay != null)
+                {
+                    editorCanvas.CutRequested += (_, args) =>
+                        cutOverlay.Play(args.IsVertical, args.Start, args.End,
+                            editorCanvas.ExecutePendingCut);
+                }
 
                 if (DataContext is ImageEditorViewModel viewModel)
                 {
