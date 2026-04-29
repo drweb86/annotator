@@ -12,6 +12,10 @@
   Romanian, Serbian, Swedish; others fall back to English).
 - Cat watching under mouse idle.
 
+## Bug Fixes
+- High CPU usage on close. Global hot key service was not disposed, that triggered app not being properly shutdown and causing 100% CPU usage.
+You need to restart the Windows before installing the update.
+
 # 2026.04.23
 
 ## New Features

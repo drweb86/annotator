@@ -116,7 +116,7 @@ public partial class MainWindow : Window
 
             await viewModel.SaveCurrentProject();
             viewModel.CloseProject();
-
+            AllServices.GlobalHotkeyService.Dispose();
             LoggingService.Shutdown();
 
             Closing -= OnClosing;
