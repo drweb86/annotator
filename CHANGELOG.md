@@ -10,6 +10,7 @@
   Swedish, Uzbek, Zulu.
 - Setup is multilanguage (Polish, Dutch, Thai, Persian, Czech, Greek, Hungarian,
   Romanian, Serbian, Swedish; others fall back to English).
+- Cat watching under mouse idle.
 
 # 2026.04.23
 
