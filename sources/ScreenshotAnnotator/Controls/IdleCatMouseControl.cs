@@ -215,7 +215,7 @@ public class IdleCatMouseControl : Control
     private static readonly SolidColorBrush RodentEyeDot   = new(Color.FromRgb(20, 20, 20));
     private static readonly SolidColorBrush RodentNose     = new(Color.FromRgb(195, 110, 115));
     private static readonly Pen RodentTailPen    = new(new SolidColorBrush(Color.FromRgb(90, 82, 74)), 2.5);
-    private static readonly Pen RodentWhiskerPen = new(new SolidColorBrush(Color.FromArgb(140, 215, 210, 205)), 1.0);
+    //private static readonly Pen RodentWhiskerPen = new(new SolidColorBrush(Color.FromArgb(140, 215, 210, 205)), 0.5);
     private static readonly Pen LegPen          = new(RodentFurDark, 2.5);
 
     private static void DrawRodent(DrawingContext ctx, double cx, double cy, double dir, int legPhase)
@@ -252,8 +252,8 @@ public class IdleCatMouseControl : Control
         ctx.DrawEllipse(RodentNose, null, new Point(headX + dir * 9, headY + 1), 2, 2);
 
         // Whiskers
-        ctx.DrawLine(RodentWhiskerPen, new Point(headX + dir * 6, headY - 1), new Point(headX + dir * 16, headY - 4));
-        ctx.DrawLine(RodentWhiskerPen, new Point(headX + dir * 6, headY + 2), new Point(headX + dir * 16, headY + 4));
+        //ctx.DrawLine(RodentWhiskerPen, new Point(headX + dir * 6, headY - 1), new Point(headX + dir * 16, headY - 4));
+        //ctx.DrawLine(RodentWhiskerPen, new Point(headX + dir * 6, headY + 2), new Point(headX + dir * 16, headY + 4));
 
         // Tail
         double tailX = cx - dir * 16;
