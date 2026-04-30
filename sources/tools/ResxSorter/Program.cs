@@ -191,7 +191,7 @@ namespace Codice.SortResX
                     }
                 }
 
-                if (nsisLanguage == null)
+                if (string.IsNullOrEmpty(nsisLanguage))
                     continue;
 
                 var culture = ExtractCulture(resxPath);
