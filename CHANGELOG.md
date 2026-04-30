@@ -1,5 +1,4 @@
-# 2026.04.28
-(unpublished)
+# 2026.04.30
 
 ## New Features
 - Added 18 new languages: Amharic, Burmese, Dutch, Filipino, Gujarati,
@@ -12,6 +11,7 @@
   Romanian, Serbian, Swedish; others fall back to English).
 - Cat watching under mouse idle. Cats with scissors for cuts.
 - Cut out area became catified.
+- Stabilization for Ubuntu.
 
 ## Bug Fixes
 - High CPU usage on close. Global hot key service was not disposed, that triggered app not being properly shutdown and causing 100% CPU usage.

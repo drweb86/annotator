@@ -1,11 +1,12 @@
-﻿using System;
-using System.Threading.Tasks;
-using Avalonia;
+﻿using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Layout;
 using Avalonia.Media;
 using Avalonia.Threading;
 using ScreenshotAnnotator.Services;
+using System;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace ScreenshotAnnotator.Desktop;
 
@@ -84,7 +85,19 @@ sealed class Program
 
     private static void TaskScheduler_UnobservedTaskException(object? sender, UnobservedTaskExceptionEventArgs e)
     {
-        ImproveIt.ProcessUnhandledException(e.Exception);
+        var exception = e.Exception;
+
+        // Avalonia crashes at Ubuntu.
+        if ((exception.Message is not null &&
+            exception.Message.Contains("org.freedesktop.DBus.Error.ServiceUnknown")) ||
+
+            exception.InnerExceptions.Any(x => x.Message is not null && x.Message.Contains("org.freedesktop.DBus.Error.ServiceUnknown")))
+        {
+            e.SetObserved();
+            return;
+        }
+
+        ImproveIt.ProcessUnhandledException(exception);
     }
 
     // Avalonia configuration, don't remove; also used by visual designer.
