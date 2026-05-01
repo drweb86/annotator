@@ -307,7 +307,7 @@ namespace Codice.SortResX
                 var outputPath = Path.Combine(wingetPkgsDir, outputFileName);
 
                 using var writer = new StreamWriter(outputPath, false, new UTF8Encoding(false));
-                writer.WriteLine($"# yaml-language-server: $schema=https://aka.ms/winget-manifest.{schemaType}.1.10.0.schema.json");
+                writer.WriteLine($"# yaml-language-server: $schema=https://aka.ms/winget-manifest.{schemaType}.1.12.0.schema.json");
                 writer.WriteLine();
                 writer.WriteLine("PackageIdentifier: SiarheiKuchuk.ScreenshotAnnotator");
                 writer.WriteLine("PackageVersion: APP_VERSION_STRING");
@@ -337,7 +337,7 @@ namespace Codice.SortResX
                 writer.WriteLine("- annotate");
                 writer.WriteLine("ReleaseNotesUrl: https://raw.githubusercontent.com/drweb86/annotator/refs/heads/main/CHANGELOG.md");
                 writer.WriteLine($"ManifestType: {manifestType}");
-                writer.WriteLine("ManifestVersion: 1.10.0");
+                writer.WriteLine("ManifestVersion: 1.12.0");
 
                 Console.WriteLine($"Generated {outputPath}");
             }
