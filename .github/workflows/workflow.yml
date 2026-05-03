@@ -68,6 +68,11 @@ jobs:
           echo "version=$version" >> $env:GITHUB_OUTPUT
           echo "Version: $version"
 
+      - name: Select cat icon and generate NSIS language file
+        shell: pwsh
+        working-directory: sources/tools/ResxSorter
+        run: dotnet run
+
       - name: Publish win-x64
         shell: pwsh
         working-directory: sources
@@ -87,11 +92,6 @@ jobs:
             "--runtime=win-arm64" -c Release "/p:PublishDir=../../Output/publish/arm64" `
             /p:PublishReadyToRun=false /p:RunAnalyzersDuringBuild=False --self-contained true --property WarningLevel=0
           if ($LASTEXITCODE -ne 0) { exit 1 }
-
-      - name: Generate NSIS language file
-        shell: pwsh
-        working-directory: sources/tools/ResxSorter
-        run: dotnet run
 
       - name: Install NSIS
         shell: pwsh
