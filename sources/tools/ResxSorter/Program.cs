@@ -44,6 +44,9 @@ namespace Codice.SortResX
             while (Path.GetFileName(sourceDir) != "sources")
                 sourceDir = Directory.GetParent(sourceDir)!.FullName;
             var repoRoot = Directory.GetParent(sourceDir)!.FullName;
+
+            AppIconUpdater.Update(repoRoot);
+
             var localizationDir = Path.Combine(sourceDir, "ScreenshotAnnotator", "Resources");
 
             var dictionary = new Dictionary<string, int>();
@@ -257,6 +260,75 @@ namespace Codice.SortResX
                 }
             }
             return sb.ToString();
+        }
+    }
+
+    public static class AppIconUpdater
+    {
+        public static void Update(string repoRoot)
+        {
+            var scriptsDir = Path.Combine(repoRoot, "scripts");
+            if (!Directory.Exists(scriptsDir))
+                return;
+
+            var catFiles = Directory.GetFiles(scriptsDir, "Cat-*.png");
+            if (catFiles.Length == 0)
+                return;
+
+            var selected = catFiles[new Random().Next(catFiles.Length)];
+            Console.WriteLine($"Selected cat icon: {Path.GetFileName(selected)}");
+
+            string[] pngTargets =
+            [
+                Path.Combine(scriptsDir, "App.png"),
+                Path.Combine(repoRoot, "sources", "ScreenshotAnnotator", "Assets", "App.png"),
+            ];
+
+            foreach (var target in pngTargets)
+            {
+                File.Copy(selected, target, overwrite: true);
+                Console.WriteLine($"Updated {target}");
+            }
+
+            string[] icoTargets =
+            [
+                Path.Combine(scriptsDir, "App.ico"),
+                Path.Combine(repoRoot, "sources", "ScreenshotAnnotator.Desktop", "App.ico"),
+            ];
+
+            foreach (var target in icoTargets)
+            {
+                WritePngAsIco(selected, target);
+                Console.WriteLine($"Updated {target}");
+            }
+        }
+
+        static void WritePngAsIco(string pngPath, string icoPath)
+        {
+            var pngData = File.ReadAllBytes(pngPath);
+            // PNG IHDR chunk starts at byte 16: 4-byte width, 4-byte height (big-endian)
+            int width  = (pngData[16] << 24) | (pngData[17] << 16) | (pngData[18] << 8) | pngData[19];
+            int height = (pngData[20] << 24) | (pngData[21] << 16) | (pngData[22] << 8) | pngData[23];
+
+            using var stream = new FileStream(icoPath, FileMode.Create, FileAccess.Write);
+            using var writer = new BinaryWriter(stream);
+
+            // ICONDIR (6 bytes)
+            writer.Write((short)0);  // reserved
+            writer.Write((short)1);  // type: ICO
+            writer.Write((short)1);  // image count
+
+            // ICONDIRENTRY (16 bytes) — offset 22 = 6 + 16
+            writer.Write((byte)(width  >= 256 ? 0 : width));
+            writer.Write((byte)(height >= 256 ? 0 : height));
+            writer.Write((byte)0);   // color count (0 = true color)
+            writer.Write((byte)0);   // reserved
+            writer.Write((short)1);  // planes
+            writer.Write((short)32); // bit count
+            writer.Write(pngData.Length);
+            writer.Write(22);        // image data offset
+
+            writer.Write(pngData);
         }
     }
 

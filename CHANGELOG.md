@@ -1,3 +1,8 @@
+# 2026.05.03
+
+## New Features
+- Each release might have different cat icon.
+
 # 2026.04.30.2
 
 ## New Features
