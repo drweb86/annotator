@@ -50,7 +50,7 @@ Page custom InstallModePageCreate InstallModePageLeave
 ; Start menu page
 Var StartMenuFolder
 !define MUI_PAGE_CUSTOMFUNCTION_PRE SkipStartMenuPage
-!define MUI_STARTMENUPAGE_DEFAULTFOLDER "${PRODUCT_NAME}"
+!define MUI_STARTMENUPAGE_DEFAULTFOLDER "$(App_DisplayName)"
 !define MUI_STARTMENUPAGE_REGISTRY_ROOT "HKCU"
 !define MUI_STARTMENUPAGE_REGISTRY_KEY "Software\${PRODUCT_NAME}"
 !define MUI_STARTMENUPAGE_REGISTRY_VALUENAME "Start Menu Folder"
@@ -72,7 +72,7 @@ Var StartMenuFolder
 !include "setup-languages.nsh"
 
 ; Installer attributes
-Name "${PRODUCT_NAME} ${PRODUCT_VERSION}"
+Name "$(App_DisplayName) ${PRODUCT_VERSION}"
 OutFile "..\Output\ScreenshotAnnotator_v${PRODUCT_VERSION}.exe"
 InstallDir "$PROGRAMFILES\${PRODUCT_NAME}"
 ShowInstDetails show
@@ -279,7 +279,7 @@ Section "MainSection" SEC01
   ; Add uninstall information to Add/Remove Programs
   ${If} $MultiUser == "1"
     WriteRegStr HKLM "Software\${PRODUCT_NAME}" "" $INSTDIR
-    WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\${PRODUCT_NAME}" "DisplayName" "${PRODUCT_NAME}"
+    WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\${PRODUCT_NAME}" "DisplayName" "$(App_DisplayName)"
     WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\${PRODUCT_NAME}" "UninstallString" "$INSTDIR\uninst.exe"
     WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\${PRODUCT_NAME}" "DisplayIcon" "$INSTDIR\bin\ScreenshotAnnotator.Desktop.exe"
     WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\${PRODUCT_NAME}" "DisplayVersion" "${PRODUCT_VERSION}"
@@ -289,7 +289,7 @@ Section "MainSection" SEC01
     WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\${PRODUCT_NAME}" "URLUpdateInfo" "${PRODUCT_WEB_SITE}"
   ${Else}
     WriteRegStr HKCU "Software\${PRODUCT_NAME}" "" $INSTDIR
-    WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\${PRODUCT_NAME}" "DisplayName" "${PRODUCT_NAME}"
+    WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\${PRODUCT_NAME}" "DisplayName" "$(App_DisplayName)"
     WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\${PRODUCT_NAME}" "UninstallString" "$INSTDIR\uninst.exe"
     WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\${PRODUCT_NAME}" "DisplayIcon" "$INSTDIR\bin\ScreenshotAnnotator.Desktop.exe"
     WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\${PRODUCT_NAME}" "DisplayVersion" "${PRODUCT_VERSION}"
@@ -302,11 +302,11 @@ Section "MainSection" SEC01
   ; Create shortcuts
   !insertmacro MUI_STARTMENU_WRITE_BEGIN Application
     CreateDirectory "$SMPROGRAMS\$StartMenuFolder"
-    CreateShortcut "$SMPROGRAMS\$StartMenuFolder\${PRODUCT_NAME}.lnk" "$INSTDIR\bin\ScreenshotAnnotator.Desktop.exe"
+    CreateShortcut "$SMPROGRAMS\$StartMenuFolder\$(App_DisplayName).lnk" "$INSTDIR\bin\ScreenshotAnnotator.Desktop.exe"
   !insertmacro MUI_STARTMENU_WRITE_END
 
   ; Create desktop shortcut
-  CreateShortcut "$DESKTOP\${PRODUCT_NAME}.lnk" "$INSTDIR\bin\ScreenshotAnnotator.Desktop.exe"
+  CreateShortcut "$DESKTOP\$(App_DisplayName).lnk" "$INSTDIR\bin\ScreenshotAnnotator.Desktop.exe"
 SectionEnd
 
 Function un.onInit
@@ -317,9 +317,9 @@ Section Uninstall
   ; Remove shortcuts
   !insertmacro MUI_STARTMENU_GETFOLDER Application $StartMenuFolder
 
-  Delete "$SMPROGRAMS\$StartMenuFolder\${PRODUCT_NAME}.lnk"
+  Delete "$SMPROGRAMS\$StartMenuFolder\$(App_DisplayName).lnk"
   RMDir "$SMPROGRAMS\$StartMenuFolder"
-  Delete "$DESKTOP\${PRODUCT_NAME}.lnk"
+  Delete "$DESKTOP\$(App_DisplayName).lnk"
 
   ; Remove files and directories
   RMDir /r "$INSTDIR\bin"

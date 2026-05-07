@@ -187,7 +187,7 @@ namespace Codice.SortResX
                     var name = node.Attributes?["name"]?.Value;
                     if (name == "_Technical_NsisLanguage")
                         nsisLanguage = node.SelectSingleNode("value")?.InnerText;
-                    else if (name != null && name.StartsWith("Installer_"))
+                    else if (name != null && (name.StartsWith("Installer_") || name == "App_DisplayName"))
                     {
                         var value = node.SelectSingleNode("value")?.InnerText ?? "";
                         entries[name] = value;
@@ -206,6 +206,9 @@ namespace Codice.SortResX
                 Console.WriteLine("No Installer_ keys found in main resources, skipping NSH generation.");
                 return;
             }
+
+            if (!mainData.Entries.ContainsKey("App_DisplayName"))
+                throw new Exception("App_DisplayName is required in main resources for NSIS generation.");
 
             Directory.CreateDirectory(Path.GetDirectoryName(outputPath)!);
             using var writer = new StreamWriter(outputPath, false, new UTF8Encoding(false));
@@ -226,6 +229,8 @@ namespace Codice.SortResX
                     string? value = null;
                     kvp.Value.Entries.TryGetValue(key, out value);
                     value ??= mainData.Entries[key];
+                    if (key == "App_DisplayName")
+                        ValidateShortcutDisplayName(value, kvp.Key == "" ? "default" : kvp.Key);
 
                     var escapedValue = EscapeForNsis(value);
                     writer.WriteLine($"LangString {key} ${{LANG_{kvp.Value.NsisLanguage.ToUpperInvariant()}}} \"{escapedValue}\"");
@@ -260,6 +265,15 @@ namespace Codice.SortResX
                 }
             }
             return sb.ToString();
+        }
+
+        private static void ValidateShortcutDisplayName(string value, string culture)
+        {
+            if (string.IsNullOrWhiteSpace(value))
+                throw new Exception($"App_DisplayName is empty for culture '{culture}'.");
+
+            if (value.IndexOfAny(Path.GetInvalidFileNameChars()) >= 0)
+                throw new Exception($"App_DisplayName contains invalid file name characters for culture '{culture}'.");
         }
     }
 

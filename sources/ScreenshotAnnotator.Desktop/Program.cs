@@ -46,7 +46,7 @@ sealed class Program
                 };
                 var window = new Window
                 {
-                    Title = "Screenshot Annotator",
+                    Title = LocalizationManager.Instance["App_DisplayName"],
                     Width = 500,
                     SizeToContent = SizeToContent.Height,
                     CanResize = false,

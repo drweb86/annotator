@@ -1,7 +1,11 @@
 # 2026.05.03
+(unpublished)
 
 ## New Features
 - Each release might have different cat icon.
+
+## Bug Fixes
+- Localize the Desktop/Menu icons.
 
 # 2026.04.30.2
 

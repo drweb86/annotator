@@ -65,6 +65,10 @@
   <data name="_Technical_WingetLocale" xml:space="preserve">
     <value>sv-SE</value>
   </data>
+  <data name="App_DisplayName" xml:space="preserve">
+    <value>Screenshot Annotator</value>
+    <comment>Short app display name for installer, shortcuts and error dialogs</comment>
+  </data>
   <data name="Button_Accept" xml:space="preserve">
     <value>✓ Acceptera</value>
   </data>

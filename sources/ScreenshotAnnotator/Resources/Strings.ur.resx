@@ -62,6 +62,10 @@
   <data name="_Technical_WingetLocale" xml:space="preserve">
     <value>ur-PK</value>
   </data>
+  <data name="App_DisplayName" xml:space="preserve">
+    <value>اسکرین شاٹ نوٹساز</value>
+    <comment>Short app display name for installer, shortcuts and error dialogs</comment>
+  </data>
   <data name="Button_Accept" xml:space="preserve">
     <value>✓ قبول کریں</value>
   </data>

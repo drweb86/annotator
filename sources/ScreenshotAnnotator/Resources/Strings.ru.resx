@@ -76,6 +76,10 @@
   <data name="_Technical_WingetLocale" xml:space="preserve">
     <value>ru-RU</value>
   </data>
+  <data name="App_DisplayName" xml:space="preserve">
+    <value>Аннотатор скриншотов</value>
+    <comment>Short app display name for installer, shortcuts and error dialogs</comment>
+  </data>
   <data name="Button_Accept" xml:space="preserve">
     <value>✓ Принять</value>
     <comment>Accept button text</comment>

@@ -62,6 +62,10 @@
   <data name="_Technical_WingetLocale" xml:space="preserve">
     <value>bn-IN</value>
   </data>
+  <data name="App_DisplayName" xml:space="preserve">
+    <value>স্ক্রিনশট অ্যানোটেটর</value>
+    <comment>Short app display name for installer, shortcuts and error dialogs</comment>
+  </data>
   <data name="Button_Accept" xml:space="preserve">
     <value>✓ গ্রহণ</value>
   </data>
