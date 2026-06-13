@@ -71,6 +71,7 @@ internal class ClipboardService: IClipboardService
         stream.Position = 0;
 
         await clipboard.SetValueAsync(DataFormat.Bitmap, new Bitmap(stream));
+        await clipboard.FlushAsync();
     }
 
     public async Task CopySingleShape(IProjectUi projectUi, IClipboard? clipboard)

@@ -73,7 +73,7 @@ Var StartMenuFolder
 
 ; Installer attributes
 Name "$(App_DisplayName) ${PRODUCT_VERSION}"
-OutFile "..\Output\ScreenshotAnnotator_v${PRODUCT_VERSION}.exe"
+OutFile "..\Output\screenshot-annotator_${PRODUCT_VERSION}_windows_setup.exe"
 InstallDir "$PROGRAMFILES\${PRODUCT_NAME}"
 ShowInstDetails show
 ShowUnInstDetails show

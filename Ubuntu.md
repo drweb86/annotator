@@ -39,14 +39,14 @@ sudo rm /etc/apt/sources.list.d/screenshot-annotator.list /usr/share/keyrings/sc
 Download the `.deb` file for your architecture from the [latest release](https://github.com/drweb86/annotator/releases/latest) and install:
 
 ```
-sudo dpkg -i screenshot-annotator_*_amd64.deb
+sudo dpkg -i screenshot-annotator_*_linux_amd64.deb
 sudo apt-get install -f
 ```
 
 For ARM64:
 
 ```
-sudo dpkg -i screenshot-annotator_*_arm64.deb
+sudo dpkg -i screenshot-annotator_*_linux_arm64.deb
 sudo apt-get install -f
 ```
 

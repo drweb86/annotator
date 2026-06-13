@@ -1,4 +1,4 @@
-# 2026.05.03
+# 2026.06.13
 (unpublished)
 
 ## New Features
@@ -6,6 +6,10 @@
 
 ## Bug Fixes
 - Localize the Desktop/Menu icons.
+
+## Changes
+- Update some libraries.
+- Artifact names became better.
 
 # 2026.04.30.2
 
