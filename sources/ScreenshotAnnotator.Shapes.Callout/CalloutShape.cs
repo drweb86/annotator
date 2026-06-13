@@ -1,0 +1,294 @@
+using Avalonia;
+using Avalonia.Media;
+using ScreenshotAnnotator.Interop.Shapes.Common;
+using ScreenshotAnnotator.Interop.Shapes;
+using ScreenshotAnnotator.Models;
+using System;
+using System.Globalization;
+
+namespace ScreenshotAnnotator.Shapes.Callout;
+
+public sealed class CalloutShape : AnnotationShape, ICornerResizableShape, ITextEditableShape,
+    IVerticalCutAdjustable, IHorizontalCutAdjustable
+{
+    public Rect Rectangle { get; set; }
+    public Point BeakPoint { get; set; }
+    public string Text { get; set; } = "";
+    public string FontFamily { get; set; } = "Arial";
+    public double FontSize { get; set; } = 24;
+    public bool FontBold { get; set; }
+    public bool FontItalic { get; set; }
+    public Rect TextBounds => Rectangle;
+
+    public override void Render(DrawingContext context)
+    {
+        var color = StrokeColor;
+        var thickness = StrokeThickness;
+        var pen = new Pen(new SolidColorBrush(color), thickness);
+        var fillBrush = new SolidColorBrush(color);
+
+        var shadowOffset = new Vector(3, 3);
+        var shadowColor = Color.FromArgb(100, 0, 0, 0);
+        var shadowBrush = new SolidColorBrush(shadowColor);
+
+        const double cornerRadius = 10.0;
+
+        var rectCenter = Rectangle.Center;
+        var arrowStart = GetEdgePoint(rectCenter, BeakPoint);
+        var arrowEnd = BeakPoint;
+
+        var angle = Math.Atan2(arrowEnd.Y - arrowStart.Y, arrowEnd.X - arrowStart.X);
+        const int arrowLength = 40;
+        const int arrowWidth = 30;
+
+        var perpAngle = angle + Math.PI / 2;
+        var halfWidth = arrowWidth / 2.0;
+
+        var baseLeft = new Point(
+            arrowEnd.X - arrowLength * Math.Cos(angle) - halfWidth * Math.Cos(perpAngle),
+            arrowEnd.Y - arrowLength * Math.Sin(angle) - halfWidth * Math.Sin(perpAngle));
+
+        var baseRight = new Point(
+            arrowEnd.X - arrowLength * Math.Cos(angle) + halfWidth * Math.Cos(perpAngle),
+            arrowEnd.Y - arrowLength * Math.Sin(angle) + halfWidth * Math.Sin(perpAngle));
+
+        var baseCenter = new Point(
+            arrowEnd.X - arrowLength * Math.Cos(angle),
+            arrowEnd.Y - arrowLength * Math.Sin(angle));
+
+        var shadowRect = new Rect(
+            Rectangle.X + shadowOffset.X,
+            Rectangle.Y + shadowOffset.Y,
+            Rectangle.Width,
+            Rectangle.Height);
+        context.DrawRectangle(shadowBrush, null, shadowRect, cornerRadius, cornerRadius);
+
+        var shadowPen = new Pen(shadowBrush, thickness) { LineCap = PenLineCap.Round };
+        var shadowArrowStart = new Point(arrowStart.X + shadowOffset.X, arrowStart.Y + shadowOffset.Y);
+        var shadowArrowBaseCenter = new Point(baseCenter.X + shadowOffset.X, baseCenter.Y + shadowOffset.Y);
+
+        if (!Rectangle.Contains(shadowArrowStart) || !Rectangle.Contains(shadowArrowBaseCenter))
+            context.DrawLine(shadowPen, shadowArrowStart, shadowArrowBaseCenter);
+
+        var shadowArrowGeometry = new StreamGeometry();
+        using (var ctx = shadowArrowGeometry.Open())
+        {
+            ctx.BeginFigure(new Point(baseLeft.X + shadowOffset.X, baseLeft.Y + shadowOffset.Y), true);
+            ctx.LineTo(new Point(arrowEnd.X + shadowOffset.X, arrowEnd.Y + shadowOffset.Y));
+            ctx.LineTo(new Point(baseRight.X + shadowOffset.X, baseRight.Y + shadowOffset.Y));
+            ctx.EndFigure(true);
+        }
+        context.DrawGeometry(shadowBrush, null, shadowArrowGeometry);
+
+        context.DrawRectangle(fillBrush, pen, Rectangle, cornerRadius, cornerRadius);
+
+        var arrowPen = new Pen(fillBrush, thickness) { LineCap = PenLineCap.Round };
+        context.DrawLine(arrowPen, arrowStart, baseCenter);
+
+        var arrowGeometry = new StreamGeometry();
+        using (var ctx = arrowGeometry.Open())
+        {
+            ctx.BeginFigure(baseLeft, true);
+            ctx.LineTo(arrowEnd);
+            ctx.LineTo(baseRight);
+            ctx.EndFigure(true);
+        }
+        context.DrawGeometry(fillBrush, null, arrowGeometry);
+
+        if (!string.IsNullOrWhiteSpace(Text))
+        {
+            const double padding = 20.0;
+            var maxWidth = Math.Max(50, Rectangle.Width - padding * 2);
+
+            var typeface = new Typeface(
+                FontFamily,
+                FontItalic ? FontStyle.Italic : FontStyle.Normal,
+                FontBold ? FontWeight.Bold : FontWeight.Normal);
+            var formattedText = new FormattedText(
+                Text,
+                CultureInfo.CurrentCulture,
+                FlowDirection.LeftToRight,
+                typeface,
+                FontSize,
+                Brushes.White)
+            {
+                TextAlignment = TextAlignment.Center,
+                MaxTextWidth = maxWidth,
+                MaxTextHeight = Math.Max(30, Rectangle.Height - padding * 2)
+            };
+
+            var textPoint = new Point(
+                Rectangle.Left + padding,
+                Rectangle.Top + (Rectangle.Height - formattedText.Height) / 2);
+
+            context.DrawText(formattedText, textPoint);
+        }
+
+        if (IsSelected)
+        {
+            const double handleSize = 6;
+            var handleBrush = Brushes.White;
+            var handlePen = new Pen(Brushes.Black, 1);
+            DrawHandle(context, Rectangle.TopLeft, handleSize, handleBrush, handlePen);
+            DrawHandle(context, Rectangle.TopRight, handleSize, handleBrush, handlePen);
+            DrawHandle(context, Rectangle.BottomLeft, handleSize, handleBrush, handlePen);
+            DrawHandle(context, Rectangle.BottomRight, handleSize, handleBrush, handlePen);
+
+            const double arrowHandleSize = 8;
+            var arrowHandlePen = new Pen(Brushes.Black, 1);
+            DrawHandle(context, BeakPoint, arrowHandleSize, Brushes.Orange, arrowHandlePen);
+        }
+    }
+
+    private Point GetEdgePoint(Point center, Point target)
+    {
+        var dx = target.X - center.X;
+        var dy = target.Y - center.Y;
+
+        if (dx == 0 && dy == 0)
+            return center;
+
+        var t = double.MaxValue;
+
+        if (dy < 0)
+        {
+            var tTop = (Rectangle.Top - center.Y) / dy;
+            if (tTop > 0) t = Math.Min(t, tTop);
+        }
+
+        if (dy > 0)
+        {
+            var tBottom = (Rectangle.Bottom - center.Y) / dy;
+            if (tBottom > 0) t = Math.Min(t, tBottom);
+        }
+
+        if (dx < 0)
+        {
+            var tLeft = (Rectangle.Left - center.X) / dx;
+            if (tLeft > 0) t = Math.Min(t, tLeft);
+        }
+
+        if (dx > 0)
+        {
+            var tRight = (Rectangle.Right - center.X) / dx;
+            if (tRight > 0) t = Math.Min(t, tRight);
+        }
+
+        return new Point(center.X + t * dx, center.Y + t * dy);
+    }
+
+    public bool IsPointOnBeak(Point point) => Distance(point, BeakPoint) < 10;
+
+    public override bool HitTest(Point point) => Rectangle.Contains(point);
+
+    public override void Move(Vector offset)
+    {
+        Rectangle = new Rect(
+            Rectangle.X + offset.X,
+            Rectangle.Y + offset.Y,
+            Rectangle.Width,
+            Rectangle.Height);
+        BeakPoint = new Point(BeakPoint.X + offset.X, BeakPoint.Y + offset.Y);
+    }
+
+    public override Rect GetBounds()
+    {
+        var r = Rectangle;
+        var minX = Math.Min(r.Left, BeakPoint.X);
+        var minY = Math.Min(r.Top, BeakPoint.Y);
+        var maxX = Math.Max(r.Right, BeakPoint.X);
+        var maxY = Math.Max(r.Bottom, BeakPoint.Y);
+        return new Rect(minX, minY, maxX - minX, maxY - minY);
+    }
+
+    public void MoveBeak(Point newPosition) => BeakPoint = newPosition;
+
+    public bool IsPointOnCornerHandle(Point point, out RectCorner corner)
+    {
+        corner = RectCorner.None;
+        const double handleSize = 8;
+
+        if (IsPointNearHandle(point, Rectangle.TopLeft, handleSize))
+        {
+            corner = RectCorner.TopLeft;
+            return true;
+        }
+
+        if (IsPointNearHandle(point, Rectangle.TopRight, handleSize))
+        {
+            corner = RectCorner.TopRight;
+            return true;
+        }
+
+        if (IsPointNearHandle(point, Rectangle.BottomLeft, handleSize))
+        {
+            corner = RectCorner.BottomLeft;
+            return true;
+        }
+
+        if (IsPointNearHandle(point, Rectangle.BottomRight, handleSize))
+        {
+            corner = RectCorner.BottomRight;
+            return true;
+        }
+
+        return false;
+    }
+
+    public void ResizeFromCorner(RectCorner corner, Point newPosition)
+    {
+        var left = Rectangle.Left;
+        var top = Rectangle.Top;
+        var right = Rectangle.Right;
+        var bottom = Rectangle.Bottom;
+
+        switch (corner)
+        {
+            case RectCorner.TopLeft:
+                left = newPosition.X;
+                top = newPosition.Y;
+                break;
+            case RectCorner.TopRight:
+                right = newPosition.X;
+                top = newPosition.Y;
+                break;
+            case RectCorner.BottomLeft:
+                left = newPosition.X;
+                bottom = newPosition.Y;
+                break;
+            case RectCorner.BottomRight:
+                right = newPosition.X;
+                bottom = newPosition.Y;
+                break;
+        }
+
+        if (right - left < 20 || bottom - top < 20)
+            return;
+
+        Rectangle = new Rect(new Point(left, top), new Point(right, bottom));
+    }
+
+    public void AdjustForVerticalCut(double cutX, double cutWidth)
+    {
+        Rectangle = ShapeCutHelpers.AdjustRectForVerticalCut(Rectangle, cutX, cutWidth);
+        BeakPoint = ShapeCutHelpers.AdjustPointForVerticalCut(BeakPoint, cutX, cutWidth);
+    }
+
+    public void AdjustForHorizontalCut(double cutY, double cutHeight)
+    {
+        Rectangle = ShapeCutHelpers.AdjustRectForHorizontalCut(Rectangle, cutY, cutHeight);
+        BeakPoint = ShapeCutHelpers.AdjustPointForHorizontalCut(BeakPoint, cutY, cutHeight);
+    }
+
+    private static bool IsPointNearHandle(Point point, Point handleCenter, double handleSize) =>
+        Distance(point, handleCenter) < handleSize;
+
+    private static double Distance(Point a, Point b) =>
+        Math.Sqrt(Math.Pow(a.X - b.X, 2) + Math.Pow(a.Y - b.Y, 2));
+
+    private static void DrawHandle(DrawingContext context, Point center, double size, IBrush brush, IPen pen)
+    {
+        var rect = new Rect(center.X - size / 2, center.Y - size / 2, size, size);
+        context.DrawRectangle(brush, pen, rect);
+    }
+}

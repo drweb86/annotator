@@ -12,35 +12,29 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="Resources\Strings.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>Strings.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Compile Update="Resources\Strings.Designer.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Strings.resx</DependentUpon>
-    </Compile>
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="Avalonia" />
     <PackageReference Include="Avalonia.Themes.Fluent" />
     <PackageReference Include="Avalonia.Fonts.Inter" />
-    <!--Condition below is needed to remove Avalonia.Diagnostics package from build output in Release configuration.-->
     <PackageReference Include="Avalonia.Diagnostics">
       <IncludeAssets Condition="'$(Configuration)' != 'Debug'">None</IncludeAssets>
       <PrivateAssets Condition="'$(Configuration)' != 'Debug'">All</PrivateAssets>
     </PackageReference>
     <PackageReference Include="CommunityToolkit.Mvvm" />
     <PackageReference Include="SharpHook" />
-    <PackageReference Include="NLog" />
-	<PackageReference Include="SkiaSharp" />
-	<PackageReference Include="SkiaSharp.NativeAssets.Linux" />
-	<PackageReference Include="SkiaSharp.NativeAssets.macOS" />
+    <PackageReference Include="SkiaSharp" />
+    <PackageReference Include="SkiaSharp.NativeAssets.Linux" />
+    <PackageReference Include="SkiaSharp.NativeAssets.macOS" />
     <PackageReference Include="SkiaSharp.NativeAssets.Win32" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ScreenshotAnnotator.Interop\ScreenshotAnnotator.Interop.csproj" />
+    <ProjectReference Include="..\ScreenshotAnnotator.Common\ScreenshotAnnotator.Common.csproj" />
+    <ProjectReference Include="..\ScreenshotAnnotator.Shapes.Arrow\ScreenshotAnnotator.Shapes.Arrow.csproj" />
+    <ProjectReference Include="..\ScreenshotAnnotator.Shapes.Callout\ScreenshotAnnotator.Shapes.Callout.csproj" />
+    <ProjectReference Include="..\ScreenshotAnnotator.Shapes.CalloutNoArrow\ScreenshotAnnotator.Shapes.CalloutNoArrow.csproj" />
+    <ProjectReference Include="..\ScreenshotAnnotator.Shapes.BorderedRectangle\ScreenshotAnnotator.Shapes.BorderedRectangle.csproj" />
+    <ProjectReference Include="..\ScreenshotAnnotator.Shapes.BlurRectangle\ScreenshotAnnotator.Shapes.BlurRectangle.csproj" />
+    <ProjectReference Include="..\ScreenshotAnnotator.Shapes.Highlighter\ScreenshotAnnotator.Shapes.Highlighter.csproj" />
   </ItemGroup>
 </Project>

@@ -1,3 +1,4 @@
+using ScreenshotAnnotator.Resources;
 using System;
 using System.Globalization;
 using System.IO;
@@ -55,7 +56,7 @@ public static class ImproveIt
 
             try
             {
-                HandleUiError?.Invoke(LocalizationManager.Instance.GetString("ImproveIt_Message", BugReportFile));
+                HandleUiError?.Invoke(Strings.Format("ImproveIt_Message", BugReportFile));
             }
             catch { }
         }

@@ -1,5 +1,7 @@
 using Avalonia.Media.Imaging;
 using Avalonia.Platform.Storage;
+using ScreenshotAnnotator.Interop.Serialization;
+using ScreenshotAnnotator.Interop.Shapes;
 using ScreenshotAnnotator.Models;
 using System;
 using System.Collections.Generic;
@@ -8,6 +10,7 @@ using System.Linq;
 using System.Text.Json;
 using System.Threading.Tasks;
 using ScreenshotAnnotator.Helpers;
+using ScreenshotAnnotator.Resources;
 
 namespace ScreenshotAnnotator.Services;
 
@@ -64,7 +67,7 @@ public class ProjectManager(IFileSystem fileSystem) : IProjectManager
         var project = new AnnotatorProject { Version = 1 };
         project.BaseImageBase64 = Convert.ToBase64String(backgroundImageBytes);
         project.PreviewImageBase64 = ProjectRenderer.CreatePreviewImage(renderedImage);
-        var json = JsonSerializer.Serialize(project, new JsonSerializerOptions { WriteIndented = true });
+        var json = JsonSerializer.Serialize(project, ShapeJson.CreateOptions());
         fileSystem.WriteAllText(projectPath, json);
 
         var pngRenderedImageFile = GetRenderedImageFile(projectPath);
@@ -108,7 +111,7 @@ public class ProjectManager(IFileSystem fileSystem) : IProjectManager
         foreach (var shape in shapes)
             project.Shapes.Add(shape.ToSerializableShape());
 
-        var json = JsonSerializer.Serialize(project, new JsonSerializerOptions { WriteIndented = true });
+        var json = JsonSerializer.Serialize(project, ShapeJson.CreateOptions());
         fileSystem.WriteAllText(projectFilePath, json);
         return project;
     }
@@ -124,7 +127,7 @@ public class ProjectManager(IFileSystem fileSystem) : IProjectManager
 
     public const string Extension = ".anp";
 
-    public FilePickerFileType PickerFilter => new FilePickerFileType(LocalizationManager.Instance["FileType_AnnotatorProject"]) { Patterns = ["*" + Extension ] };
+    public FilePickerFileType PickerFilter => new FilePickerFileType(Strings.FileType_AnnotatorProject) { Patterns = ["*" + Extension ] };
 
     public IReadOnlyList<FilePickerFileType> ImportFileTypeFilter
     {
@@ -133,25 +136,25 @@ public class ProjectManager(IFileSystem fileSystem) : IProjectManager
             var imageExtensions = ImageFileManager.SupportedImageExtensions.Select(x => "*" + x).ToArray();
             return
             [
-                new FilePickerFileType(LocalizationManager.Instance["FileType_AllSupported"])
+                new FilePickerFileType(Strings.FileType_AllSupported)
                 {
                     Patterns = imageExtensions.Union(["*" + Extension]).ToArray()
                 },
                 PickerFilter,
-                new FilePickerFileType(LocalizationManager.Instance["FileType_Images"])
+                new FilePickerFileType(Strings.FileType_Images)
                 {
                     Patterns = imageExtensions
                 },
-                new FilePickerFileType(LocalizationManager.Instance["FileType_AllFiles"]) { Patterns = ["*.*"] }
+                new FilePickerFileType(Strings.FileType_AllFiles) { Patterns = ["*.*"] }
             ];
         }
     }
 
     public IReadOnlyList<FilePickerFileType> ExportFileTypeChoices =>
     [
-        new FilePickerFileType(LocalizationManager.Instance["FileType_PNG"]) { Patterns = ["*.png"] },
-        new FilePickerFileType(LocalizationManager.Instance["FileType_JPEG"]) { Patterns = ["*.jpg", "*.jpeg"] },
-        new FilePickerFileType(LocalizationManager.Instance["FileType_WebP"]) { Patterns = ["*.webp"] },
+        new FilePickerFileType(Strings.FileType_PNG) { Patterns = ["*.png"] },
+        new FilePickerFileType(Strings.FileType_JPEG) { Patterns = ["*.jpg", "*.jpeg"] },
+        new FilePickerFileType(Strings.FileType_WebP) { Patterns = ["*.webp"] },
         PickerFilter
     ];
 
@@ -192,7 +195,7 @@ public class ProjectManager(IFileSystem fileSystem) : IProjectManager
         try
         {
             var json = fileSystem.ReadAllText(filePath);
-            var project = JsonSerializer.Deserialize<AnnotatorProject>(json);
+            var project = JsonSerializer.Deserialize<AnnotatorProject>(json, ShapeJson.CreateOptions());
             if (project == null)
                 return null;
 

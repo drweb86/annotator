@@ -20,6 +20,17 @@ public sealed class FakeFileSystem : IFileSystem
         _directories.Add(NormalizeDirectory(path));
     }
 
+    public bool DirectoryExists(string path) => _directories.Contains(NormalizeDirectory(path));
+
+    public string[] GetDirectories(string path)
+    {
+        var normalizedDir = NormalizeDirectory(path);
+        return _directories
+            .Where(dir => dir.StartsWith(normalizedDir + Path.DirectorySeparatorChar, StringComparison.OrdinalIgnoreCase)
+                || string.Equals(dir, normalizedDir, StringComparison.OrdinalIgnoreCase))
+            .ToArray();
+    }
+
     public string[] GetFiles(string path, string searchPattern)
     {
         var normalizedDir = NormalizeDirectory(path);

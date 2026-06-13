@@ -9,7 +9,10 @@ using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using NLog;
 using ScreenshotAnnotator.Helpers;
+using ScreenshotAnnotator.Interop.Serialization;
+using ScreenshotAnnotator.Interop.Shapes;
 using ScreenshotAnnotator.Models;
+using ScreenshotAnnotator.Resources;
 using ScreenshotAnnotator.Services;
 using SkiaSharp;
 using System;
@@ -92,28 +95,19 @@ public partial class ImageEditorViewModel : ViewModelBase, IProjectUi
     public bool IsIdleMouseCat => IsIdle && _idleCatVariant == IdleCatVariant.Mouse;
 
     [ObservableProperty]
-    private ToolType _currentTool = ToolType.None;
+    private AppToolKind _appTool = AppToolKind.Select;
+
+    [ObservableProperty]
+    private string? _activeShapeToolId;
+
+    [ObservableProperty]
+    private ObservableCollection<ShapeToolItemViewModel> _shapeTools = new();
 
     [ObservableProperty]
     private ObservableCollection<AnnotationShape> _shapes = new();
 
     [ObservableProperty]
     private bool _isSelectToolSelected;
-
-    [ObservableProperty]
-    private bool _isArrowToolSelected;
-
-    [ObservableProperty]
-    private bool _isCalloutToolSelected;
-
-    [ObservableProperty]
-    private bool _isCalloutNoArrowToolSelected;
-
-    [ObservableProperty]
-    private bool _isBorderedRectangleToolSelected;
-
-    [ObservableProperty]
-    private bool _isBlurRectangleToolSelected;
 
     [ObservableProperty]
     private bool _isSelectorToolSelected;
@@ -125,10 +119,7 @@ public partial class ImageEditorViewModel : ViewModelBase, IProjectUi
     private bool _isHorizontalCutOutToolSelected;
 
     [ObservableProperty]
-    private bool _isHighlighterToolSelected;
-
-    [ObservableProperty]
-    private string _headerInformation = LocalizationManager.Instance.GetString("Header_ScreenshotAnnotator", CopyrightInfo.Version.ToString(3));
+    private string _headerInformation = Strings.Format("Header_ScreenshotAnnotator", CopyrightInfo.Version.ToString(3));
 
     [ObservableProperty]
     private string? _currentFileName;
@@ -178,6 +169,7 @@ public partial class ImageEditorViewModel : ViewModelBase, IProjectUi
     {
         _editorCanvas = canvas;
         canvas.SetViewModel(this);
+        SyncCanvasTools();
     }
 
     private void RefreshCanvas()
@@ -192,6 +184,7 @@ public partial class ImageEditorViewModel : ViewModelBase, IProjectUi
         OnPropertyChanged(nameof(IsTextShapeSelected));
         OnPropertyChanged(nameof(IsArrowShapeSelected));
         OnPropertyChanged(nameof(IsHighlighterShapeSelected));
+        OnPropertyChanged(nameof(SelectedShapePropertyPanelKind));
         OnPropertyChanged(nameof(SelectedTextFontFamily));
         OnPropertyChanged(nameof(SelectedTextFontSize));
         OnPropertyChanged(nameof(SelectedTextFontBold));
@@ -205,9 +198,9 @@ public partial class ImageEditorViewModel : ViewModelBase, IProjectUi
     private void UpdateArrowColorPresets()
     {
         ArrowColorPresetItems.Clear();
-        if (SelectedShape is ArrowShape arrow)
+        if (SelectedShape is not null)
         {
-            var selected = arrow.StrokeColor;
+            var selected = SelectedShape.StrokeColor;
             foreach (var c in ArrowPresetColorsDefault)
             {
                 ArrowColorPresetItems.Add(new ArrowColorPresetItem
@@ -229,19 +222,27 @@ public partial class ImageEditorViewModel : ViewModelBase, IProjectUi
             item.IsSelected = ColorsEqual(item.Color, selected);
     }
 
-    public bool IsTextShapeSelected => SelectedShape is CalloutShape or CalloutNoArrowShape;
-    public bool IsArrowShapeSelected => SelectedShape is ArrowShape;
-    public bool IsHighlighterShapeSelected => SelectedShape is HighlighterShape;
+    private ITextEditableShape? SelectedTextShape => SelectedShape as ITextEditableShape;
+    private IFillColorShape? SelectedFillColorShape => SelectedShape as IFillColorShape;
+
+    public ShapePropertyPanelKind SelectedShapePropertyPanelKind =>
+        SelectedShape is null
+            ? ShapePropertyPanelKind.None
+            : ShapeRegistry.GetForAnnotationShape(SelectedShape)?.PropertyPanelKind ?? ShapePropertyPanelKind.None;
+
+    public bool IsTextShapeSelected => SelectedShapePropertyPanelKind == ShapePropertyPanelKind.Text;
+    public bool IsArrowShapeSelected => SelectedShapePropertyPanelKind == ShapePropertyPanelKind.ArrowColor;
+    public bool IsHighlighterShapeSelected => SelectedShapePropertyPanelKind == ShapePropertyPanelKind.HighlighterColor;
 
     /// <summary>The current highlighter color used for new shapes and for the selected shape.</summary>
     public Color SelectedHighlighterColor
     {
-        get => SelectedShape is HighlighterShape h ? h.FillColor : _currentHighlighterColor;
+        get => SelectedFillColorShape?.FillColor ?? _currentHighlighterColor;
         set
         {
-            if (SelectedShape is HighlighterShape h)
+            if (SelectedFillColorShape is not null)
             {
-                h.FillColor = value;
+                SelectedFillColorShape.FillColor = value;
                 UpdateHighlighterColorPresetSelection();
                 RefreshCanvas();
             }
@@ -263,9 +264,9 @@ public partial class ImageEditorViewModel : ViewModelBase, IProjectUi
     private void UpdateHighlighterColorPresets()
     {
         HighlighterColorPresetItems.Clear();
-        if (SelectedShape is HighlighterShape highlighter)
+        if (SelectedFillColorShape is not null)
         {
-            var selected = highlighter.FillColor;
+            var selected = SelectedFillColorShape.FillColor;
             foreach (var c in HighlighterPresetColorsDefault)
             {
                 HighlighterColorPresetItems.Add(new HighlighterColorPresetItem
@@ -296,56 +297,52 @@ public partial class ImageEditorViewModel : ViewModelBase, IProjectUi
 
     public string SelectedTextFontFamily
     {
-        get => SelectedShape is CalloutShape c ? c.FontFamily : SelectedShape is CalloutNoArrowShape n ? n.FontFamily : "Arial";
+        get => SelectedTextShape?.FontFamily ?? "Arial";
         set
         {
-            if (SelectedShape is CalloutShape cs) { cs.FontFamily = value; RefreshCanvas(); }
-            if (SelectedShape is CalloutNoArrowShape cn) { cn.FontFamily = value; RefreshCanvas(); }
+            if (SelectedTextShape is not null) { SelectedTextShape.FontFamily = value; RefreshCanvas(); }
             OnPropertyChanged();
         }
     }
 
     public double SelectedTextFontSize
     {
-        get => SelectedShape is CalloutShape c ? c.FontSize : SelectedShape is CalloutNoArrowShape n ? n.FontSize : 24;
+        get => SelectedTextShape?.FontSize ?? 24;
         set
         {
-            if (SelectedShape is CalloutShape cs) { cs.FontSize = value; RefreshCanvas(); }
-            if (SelectedShape is CalloutNoArrowShape cn) { cn.FontSize = value; RefreshCanvas(); }
+            if (SelectedTextShape is not null) { SelectedTextShape.FontSize = value; RefreshCanvas(); }
             OnPropertyChanged();
         }
     }
 
     public bool SelectedTextFontBold
     {
-        get => SelectedShape is CalloutShape c ? c.FontBold : SelectedShape is CalloutNoArrowShape n ? n.FontBold : false;
+        get => SelectedTextShape?.FontBold ?? false;
         set
         {
-            if (SelectedShape is CalloutShape cs) { cs.FontBold = value; RefreshCanvas(); }
-            if (SelectedShape is CalloutNoArrowShape cn) { cn.FontBold = value; RefreshCanvas(); }
+            if (SelectedTextShape is not null) { SelectedTextShape.FontBold = value; RefreshCanvas(); }
             OnPropertyChanged();
         }
     }
 
     public bool SelectedTextFontItalic
     {
-        get => SelectedShape is CalloutShape c ? c.FontItalic : SelectedShape is CalloutNoArrowShape n ? n.FontItalic : false;
+        get => SelectedTextShape?.FontItalic ?? false;
         set
         {
-            if (SelectedShape is CalloutShape cs) { cs.FontItalic = value; RefreshCanvas(); }
-            if (SelectedShape is CalloutNoArrowShape cn) { cn.FontItalic = value; RefreshCanvas(); }
+            if (SelectedTextShape is not null) { SelectedTextShape.FontItalic = value; RefreshCanvas(); }
             OnPropertyChanged();
         }
     }
 
     public Color SelectedArrowColor
     {
-        get => SelectedShape is ArrowShape a ? a.StrokeColor : Colors.Red;
+        get => SelectedShape?.StrokeColor ?? Colors.Red;
         set
         {
-            if (SelectedShape is ArrowShape a)
+            if (SelectedShape is not null)
             {
-                a.StrokeColor = value;
+                SelectedShape.StrokeColor = value;
                 UpdateArrowColorPresetSelection();
                 RefreshCanvas();
             }
@@ -385,94 +382,56 @@ public partial class ImageEditorViewModel : ViewModelBase, IProjectUi
     }
 
     [RelayCommand]
-    private void SelectSelectTool()
+    private void SelectSelectTool() => SelectAppTool(AppToolKind.Select);
+
+    [RelayCommand]
+    private void SelectSelectorTool() => SelectAppTool(AppToolKind.Selector);
+
+    [RelayCommand]
+    private void SelectVerticalCutOutTool() => SelectAppTool(AppToolKind.VerticalCutOut);
+
+    [RelayCommand]
+    private void SelectHorizontalCutOutTool() => SelectAppTool(AppToolKind.HorizontalCutOut);
+
+    public void SelectShapeTool(string typeId)
     {
-        CurrentTool = ToolType.None;
+        AppTool = AppToolKind.Select;
+        ActiveShapeToolId = typeId;
         UpdateToolSelection();
     }
 
-    [RelayCommand]
-    private void SelectArrowTool()
+    private void SelectAppTool(AppToolKind tool)
     {
-        CurrentTool = ToolType.Arrow;
-        UpdateToolSelection();
-    }
-
-    [RelayCommand]
-    private void SelectCalloutTool()
-    {
-        CurrentTool = ToolType.Callout;
-        UpdateToolSelection();
-    }
-
-    [RelayCommand]
-    private void SelectCalloutNoArrowTool()
-    {
-        CurrentTool = ToolType.CalloutNoArrow;
-        UpdateToolSelection();
-    }
-
-    [RelayCommand]
-    private void SelectBorderedRectangleTool()
-    {
-        CurrentTool = ToolType.BorderedRectangle;
-        UpdateToolSelection();
-    }
-
-    [RelayCommand]
-    private void SelectBlurRectangleTool()
-    {
-        CurrentTool = ToolType.BlurRectangle;
-        UpdateToolSelection();
-    }
-
-    [RelayCommand]
-    private void SelectSelectorTool()
-    {
-        CurrentTool = ToolType.Selector;
-        UpdateToolSelection();
-    }
-
-    [RelayCommand]
-    private void SelectVerticalCutOutTool()
-    {
-        CurrentTool = ToolType.VerticalCutOut;
-        UpdateToolSelection();
-    }
-
-    [RelayCommand]
-    private void SelectHorizontalCutOutTool()
-    {
-        CurrentTool = ToolType.HorizontalCutOut;
-        UpdateToolSelection();
-    }
-
-    [RelayCommand]
-    private void SelectHighlighterTool()
-    {
-        CurrentTool = ToolType.Highlighter;
+        AppTool = tool;
+        ActiveShapeToolId = null;
         UpdateToolSelection();
     }
 
     private void UpdateToolSelection()
     {
-        IsSelectToolSelected = CurrentTool == ToolType.None;
-        IsArrowToolSelected = CurrentTool == ToolType.Arrow;
-        IsCalloutToolSelected = CurrentTool == ToolType.Callout;
-        IsCalloutNoArrowToolSelected = CurrentTool == ToolType.CalloutNoArrow;
-        IsBorderedRectangleToolSelected = CurrentTool == ToolType.BorderedRectangle;
-        IsBlurRectangleToolSelected = CurrentTool == ToolType.BlurRectangle;
-        IsSelectorToolSelected = CurrentTool == ToolType.Selector;
-        IsVerticalCutOutToolSelected = CurrentTool == ToolType.VerticalCutOut;
-        IsHorizontalCutOutToolSelected = CurrentTool == ToolType.HorizontalCutOut;
-        IsHighlighterToolSelected = CurrentTool == ToolType.Highlighter;
+        IsSelectToolSelected = AppTool == AppToolKind.Select && ActiveShapeToolId is null;
+        IsSelectorToolSelected = AppTool == AppToolKind.Selector;
+        IsVerticalCutOutToolSelected = AppTool == AppToolKind.VerticalCutOut;
+        IsHorizontalCutOutToolSelected = AppTool == AppToolKind.HorizontalCutOut;
+
+        foreach (var shapeTool in ShapeTools)
+            shapeTool.IsSelected = ActiveShapeToolId == shapeTool.TypeId;
+
+        SyncCanvasTools();
         _editorCanvas?.Focus();
     }
 
-    partial void OnCurrentToolChanged(ToolType value)
+    private void SyncCanvasTools()
     {
-        UpdateToolSelection();
+        if (_editorCanvas is null)
+            return;
+
+        _editorCanvas.AppTool = AppTool;
+        _editorCanvas.ActiveShapeToolId = ActiveShapeToolId;
     }
+
+    partial void OnAppToolChanged(AppToolKind value) => UpdateToolSelection();
+    partial void OnActiveShapeToolIdChanged(string? value) => UpdateToolSelection();
 
     private Avalonia.Controls.TopLevel? _topLevel;
 
@@ -501,6 +460,18 @@ public partial class ImageEditorViewModel : ViewModelBase, IProjectUi
         _currentHighlighterColor = UIntToColor(_settings.Settings.SelectedHighlighterColorArgb);
         AllServices.ApplicationEvents.OnDeleteProject += OnDeleteProject;
         AllServices.ApplicationEvents.OnOpenProject += OnOpenProject;
+        InitializeShapeTools();
+    }
+
+    private void InitializeShapeTools()
+    {
+        ShapeTools.Clear();
+        foreach (var plugin in ShapeRegistry.All.OrderBy(p => p.ToolbarOrder))
+        {
+            var tool = ShapeToolItemViewModel.FromPlugin(plugin);
+            tool.Owner = this;
+            ShapeTools.Add(tool);
+        }
     }
 
     private async Task OnOpenProject(ProjectFileInfo project)
@@ -574,7 +545,7 @@ public partial class ImageEditorViewModel : ViewModelBase, IProjectUi
 
         var file = await storageProvider.SaveFilePickerAsync(new FilePickerSaveOptions
         {
-            Title = LocalizationManager.Instance["Dialog_Export_Title"],
+            Title = Strings.Dialog_Export_Title,
             FileTypeChoices = AllServices.ProjectManager.ExportFileTypeChoices,
             SuggestedFileName = "annotated_image",
         });
@@ -633,7 +604,7 @@ public partial class ImageEditorViewModel : ViewModelBase, IProjectUi
 
             var files = await storageProvider.OpenFilePickerAsync(new FilePickerOpenOptions
             {
-                Title = LocalizationManager.Instance["Dialog_Import_Title"],
+                Title = Strings.Dialog_Import_Title,
                 FileTypeFilter = AllServices.ProjectManager.ImportFileTypeFilter,
                 AllowMultiple = false
             });
@@ -671,7 +642,8 @@ public partial class ImageEditorViewModel : ViewModelBase, IProjectUi
 
         Shapes.Clear();
         _editorCanvas?.ClearSelector();
-        CurrentTool = ToolType.None;
+        AppTool = AppToolKind.Select;
+        ActiveShapeToolId = null;
         UpdateToolSelection();
 
         foreach (var f in RecentProjects.ProjectFiles)
@@ -721,7 +693,7 @@ public partial class ImageEditorViewModel : ViewModelBase, IProjectUi
         try
         {
             var json = await File.ReadAllTextAsync(Project.FilePath);
-            var project = JsonSerializer.Deserialize<AnnotatorProject>(json);
+            var project = JsonSerializer.Deserialize<AnnotatorProject>(json, ShapeJson.CreateOptions());
 
             if (project == null) return;
 
@@ -740,15 +712,8 @@ public partial class ImageEditorViewModel : ViewModelBase, IProjectUi
             {
                 var annotationShape = shape.ToAnnotationShape();
                 Shapes.Add(annotationShape);
-                if (annotationShape is BlurRectangleShape blurShape)
-                {
-                    // Set up refresh callback for loaded blur shapes
-                    if (_editorCanvas != null)
-                    {
-                        blurShape.RefreshBlur = rect => _editorCanvas.CreateBlurredImagePublic(rect);
-                        blurShape.BlurredImage = _editorCanvas.CreateBlurredImagePublic(blurShape.Rectangle);
-                    }
-                }
+                var plugin = ShapeRegistry.GetForAnnotationShape(annotationShape);
+                plugin?.AfterShapeLoaded(annotationShape, CreateShapeHostContext());
             }
 
             UpdateCurrentFileNameDisplay();
@@ -870,19 +835,20 @@ public partial class ImageEditorViewModel : ViewModelBase, IProjectUi
     }
     public void AddShape(AnnotationShape annotationShape, bool refreshUi)
     {
-        // If we have copied shape(s), paste them with offset
         if (Image is null && _editorCanvas is not null)
             return;
 
-        if (annotationShape is BlurRectangleShape blurRect)
-        {
-            blurRect.RefreshBlur = rect => _editorCanvas!.CreateBlurredImagePublic(rect);
-            blurRect.BlurredImage = _editorCanvas!.CreateBlurredImagePublic(blurRect.Rectangle);
-        }
-        
+        var plugin = ShapeRegistry.GetForAnnotationShape(annotationShape);
+        plugin?.AfterShapeAdded(annotationShape, CreateShapeHostContext());
+
         Shapes.Add(annotationShape);
 
         if (refreshUi)
             RefreshCanvas();
     }
+
+    private ShapeHostContext CreateShapeHostContext() => new()
+    {
+        CreateBlurredImage = _editorCanvas is null ? null : rect => _editorCanvas.CreateBlurredImagePublic(rect)
+    };
 }

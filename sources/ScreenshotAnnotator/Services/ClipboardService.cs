@@ -3,6 +3,7 @@ using Avalonia.Input;
 using Avalonia.Input.Platform;
 using Avalonia.Media.Imaging;
 using NLog;
+using ScreenshotAnnotator.Interop.Serialization;
 using ScreenshotAnnotator.Models;
 using System;
 using System.IO;
@@ -98,7 +99,7 @@ internal class ClipboardService: IClipboardService
         var clipboardShape = new ClipboardSingleShape { Shape = annotationShape.ToSerializableShape() };
 
         var dataTransfer = new DataTransfer();
-        var contentString = JsonSerializer.Serialize(clipboardShape);
+        var contentString = JsonSerializer.Serialize(clipboardShape, ShapeJson.CreateOptions());
         var contentBytes = Encoding.UTF8.GetBytes(contentString);
         dataTransfer.Add(DataTransferItem.Create(_singleShapeAppFormat, contentBytes));
 
@@ -127,7 +128,7 @@ internal class ClipboardService: IClipboardService
             if (singleShapeContentBytes is not null)
             {
                 var contentString = Encoding.UTF8.GetString(singleShapeContentBytes);
-                var clipboardShape = JsonSerializer.Deserialize<ClipboardSingleShape>(contentString);
+                var clipboardShape = JsonSerializer.Deserialize<ClipboardSingleShape>(contentString, ShapeJson.CreateOptions());
                 if (clipboardShape is not null)
                 {
                     var annotationShape = clipboardShape.Shape.ToAnnotationShape();

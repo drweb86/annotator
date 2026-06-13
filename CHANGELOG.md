@@ -3,6 +3,7 @@
 
 ## New Features
 - Each release might have different cat icon.
+- Shape extensibility model (preview). It is possible to define own shapes, and have them separately under application or user special folders.
 
 ## Bug Fixes
 - Localize the Desktop/Menu icons.

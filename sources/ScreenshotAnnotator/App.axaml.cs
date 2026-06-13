@@ -4,6 +4,7 @@ using Avalonia.Markup.Xaml;
 using ScreenshotAnnotator.ViewModels;
 using ScreenshotAnnotator.Views;
 using ScreenshotAnnotator.Services;
+using ScreenshotAnnotator.Services.Shapes;
 
 namespace ScreenshotAnnotator;
 
@@ -12,9 +13,7 @@ public partial class App : Application
     public override void Initialize()
     {
         LoggingService.Initialize();
-
-        // Initialize localization manager
-        _ = LocalizationManager.Instance;
+        ShapePluginLoader.Initialize();
 
         AvaloniaXamlLoader.Load(this);
     }

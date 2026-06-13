@@ -47,7 +47,7 @@ namespace Codice.SortResX
 
             AppIconUpdater.Update(repoRoot);
 
-            var localizationDir = Path.Combine(sourceDir, "ScreenshotAnnotator", "Resources");
+            var localizationDir = Path.Combine(sourceDir, "ScreenshotAnnotator.Common", "Resources");
 
             var dictionary = new Dictionary<string, int>();
             var allResx = Directory
@@ -166,7 +166,7 @@ namespace Codice.SortResX
     {
         public static void Generate(string sourceDir, string repoRoot)
         {
-            var localizationDir = Path.Combine(sourceDir, "ScreenshotAnnotator", "Resources");
+            var localizationDir = Path.Combine(sourceDir, "ScreenshotAnnotator.Common", "Resources");
             var outputPath = Path.Combine(repoRoot, "scripts", "setup-languages.nsh");
 
             var allResx = Directory.GetFiles(localizationDir, "*.resx")
@@ -350,7 +350,7 @@ namespace Codice.SortResX
     {
         public static void Generate(string sourceDir)
         {
-            var localizationDir = Path.Combine(sourceDir, "ScreenshotAnnotator", "Resources");
+            var localizationDir = Path.Combine(sourceDir, "ScreenshotAnnotator.Common", "Resources");
             var wingetPkgsDir = Path.Combine(sourceDir, "tools", "winget-pkgs");
 
             var allResx = Directory.GetFiles(localizationDir, "*.resx")

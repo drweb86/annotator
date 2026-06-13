@@ -217,84 +217,30 @@
 			  </StackPanel>
 		  </ToggleButton>
 
-		  <!-- Arrow Tool Button -->
-        <ToggleButton IsChecked="{Binding IsArrowToolSelected}"
-                      Command="{Binding SelectArrowToolCommand}"
-                      ToolTip.Tip="{local:Localize Tooltip_Arrow}">
-          <StackPanel HorizontalAlignment="Center">
-            <Path Data="M2,2 L18,10 L10,12 L8,20 Z M10,12 L18,18"
-                  Stroke="#D8DEE3"
-                  StrokeThickness="2"
-                  Fill="Transparent" />
-            <TextBlock Text="{local:Localize Tool_Arrow}" />
-          </StackPanel>
-        </ToggleButton>
-
-        <!-- Callout Tool Button -->
-        <ToggleButton IsChecked="{Binding IsCalloutToolSelected}"
-                      Command="{Binding SelectCalloutToolCommand}"
-                      ToolTip.Tip="{local:Localize Tooltip_Callout}">
-          <StackPanel HorizontalAlignment="Center">
-            <Path Data="M4,4 L16,4 L16,12 L10,12 L8,16 L8,12 L4,12 Z"
-                  Stroke="#D8DEE3"
-                  StrokeThickness="2"
-                  Fill="Transparent" />
-            <TextBlock Text="{local:Localize Tool_Callout}" />
-          </StackPanel>
-        </ToggleButton>
-
-        <!-- Callout No Arrow Tool Button -->
-        <ToggleButton IsChecked="{Binding IsCalloutNoArrowToolSelected}"
-                      Command="{Binding SelectCalloutNoArrowToolCommand}"
-                      ToolTip.Tip="{local:Localize Tooltip_Note}">
-          <StackPanel HorizontalAlignment="Center">
-            <Path Data="M4,4 L16,4 L16,12 L4,12 Z"
-                  Stroke="#D8DEE3"
-                  StrokeThickness="2"
-                  Fill="Transparent" />
-            <TextBlock Text="{local:Localize Tool_Note}" />
-          </StackPanel>
-        </ToggleButton>
-
-        <!-- Bordered Rectangle Tool Button -->
-        <ToggleButton IsChecked="{Binding IsBorderedRectangleToolSelected}"
-                      Command="{Binding SelectBorderedRectangleToolCommand}"
-                      ToolTip.Tip="{local:Localize Tooltip_Border}">
-          <StackPanel HorizontalAlignment="Center">
-            <Path Data="M2,2 L18,2 L18,18 L2,18 Z"
-                  Stroke="#D8DEE3"
-                  StrokeThickness="2"
-                  Fill="Transparent" />
-            <TextBlock Text="{local:Localize Tool_Border}" />
-          </StackPanel>
-        </ToggleButton>
-
-
-		  <!-- Highlighter Tool Button -->
-		  <ToggleButton IsChecked="{Binding IsHighlighterToolSelected}"
-						Command="{Binding SelectHighlighterToolCommand}"
-						ToolTip.Tip="{local:Localize Tooltip_Highlight}">
-			  <StackPanel HorizontalAlignment="Center">
-				  <Path Data="M2,2 L18,2 L18,18 L2,18 Z"
-						Stroke="Transparent"
-						StrokeThickness="0"
-						Fill="#80FFFF00" />
-				  <TextBlock Text="{local:Localize Tool_Highlight}" />
-			  </StackPanel>
-		  </ToggleButton>
-
-        <!-- Blur Rectangle Tool Button -->
-        <ToggleButton IsChecked="{Binding IsBlurRectangleToolSelected}"
-                      Command="{Binding SelectBlurRectangleToolCommand}"
-                      ToolTip.Tip="{local:Localize Tooltip_Blur}">
-          <StackPanel HorizontalAlignment="Center">
-            <Path Data="M2,2 L18,2 L18,18 L2,18 Z M5,5 L15,5 L15,15 L5,15 Z"
-                  Stroke="#D8DEE3"
-                  StrokeThickness="2"
-                  Fill="#80808080" />
-            <TextBlock Text="{local:Localize Tool_Blur}" />
-          </StackPanel>
-        </ToggleButton>
+		  <!-- Shape tools (built-in + custom plugins) -->
+		  <ItemsControl ItemsSource="{Binding ShapeTools}">
+			  <ItemsControl.ItemsPanel>
+				  <ItemsPanelTemplate>
+					  <StackPanel Orientation="Horizontal" Spacing="0" />
+				  </ItemsPanelTemplate>
+			  </ItemsControl.ItemsPanel>
+			  <ItemsControl.ItemTemplate>
+				  <DataTemplate x:DataType="vm:ShapeToolItemViewModel">
+					  <ToggleButton IsChecked="{Binding IsSelected}"
+					                Command="{Binding SelectCommand}"
+					                ToolTip.Tip="{Binding DisplayName}">
+						  <StackPanel HorizontalAlignment="Center">
+							  <Path Data="{Binding IconGeometry}"
+							        Stroke="{Binding IconStroke, Converter={StaticResource ColorToBrushConverter}}"
+							        Fill="{Binding IconFill, Converter={StaticResource ColorToBrushConverter}}"
+							        StrokeThickness="{Binding IconStrokeThickness}"
+							        IsVisible="{Binding HasIcon}" />
+							  <TextBlock Text="{Binding DisplayName}" />
+						  </StackPanel>
+					  </ToggleButton>
+				  </DataTemplate>
+			  </ItemsControl.ItemTemplate>
+		  </ItemsControl>
 
         <!-- Separator -->
         <Border Width="1" Background="#CCCCCC" Margin="4,0"/>
@@ -370,7 +316,8 @@
                                       HorizontalAlignment="Left"
                                       VerticalAlignment="Top"
                                       Image="{Binding Image, Mode=TwoWay}"
-                                      CurrentTool="{Binding CurrentTool, Mode=TwoWay}"
+                                      AppTool="{Binding AppTool, Mode=TwoWay}"
+                                      ActiveShapeToolId="{Binding ActiveShapeToolId, Mode=TwoWay}"
                                       Shapes="{Binding Shapes}"/>
           <Canvas x:Name="OverlayCanvas"
                   HorizontalAlignment="Left"

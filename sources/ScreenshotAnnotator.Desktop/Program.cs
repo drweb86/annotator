@@ -3,6 +3,7 @@ using Avalonia.Controls;
 using Avalonia.Layout;
 using Avalonia.Media;
 using Avalonia.Threading;
+using ScreenshotAnnotator.Resources;
 using ScreenshotAnnotator.Services;
 using System;
 using System.Linq;
@@ -46,7 +47,7 @@ sealed class Program
                 };
                 var window = new Window
                 {
-                    Title = LocalizationManager.Instance["App_DisplayName"],
+                    Title = Strings.App_DisplayName,
                     Width = 500,
                     SizeToContent = SizeToContent.Height,
                     CanResize = false,

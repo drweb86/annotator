@@ -20,7 +20,7 @@ public class ApplicationSettings : IApplicationSettings
     private static string GetSettingsFile()
     {
         var appDataPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
-        return Path.Combine(appDataPath, AppInfo.ApplicationId, "settings-v1.json");
+        return Path.Combine(appDataPath, CopyrightInfo.ApplicationId, "settings-v1.json");
     }
 
     private void Load()
@@ -29,10 +29,18 @@ public class ApplicationSettings : IApplicationSettings
         if (!_fileSystem.FileExists(file))
             return;
 
-        var json = _fileSystem.ReadAllText(file);
-        var dto = JsonSerializer.Deserialize<ApplicationSettingsV1Dto>(json);
-        if (dto is not null)
-            Settings = dto;
+        try
+        {
+            var json = _fileSystem.ReadAllText(file);
+            var dto = JsonSerializer.Deserialize<ApplicationSettingsV1Dto>(json);
+            if (dto is not null)
+                Settings = dto;
+        }
+        catch (JsonException ex)
+        {
+            LoggingService.GetLogger(nameof(ApplicationSettings))
+                .Warn(ex, "Failed to load settings; using defaults.");
+        }
     }
 
     public void Save()

@@ -1,0 +1,6 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <Import Project="..\Shapes\ShapeProject.props" />
+  <PropertyGroup>
+    <AssemblyName>ScreenshotAnnotator.Shapes.BorderedRectangle</AssemblyName>
+  </PropertyGroup>
+</Project>
