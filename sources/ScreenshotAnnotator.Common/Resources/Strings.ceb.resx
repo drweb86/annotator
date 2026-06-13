@@ -343,4 +343,49 @@ Mga Feature:
   <data name="Winget_ShortDescription" xml:space="preserve">
     <value>Software sa pag-annotate sa screenshot para sa Windows ug Linux.</value>
   </data>
+  <data name="Selection_Copy" xml:space="preserve">
+    <value>Kopya</value>
+  </data>
+  <data name="Tooltip_Selection_Copy" xml:space="preserve">
+    <value>Kopyahon ang piniling lugar sa clipboard</value>
+  </data>
+  <data name="Selection_Delete" xml:space="preserve">
+    <value>Tangtang</value>
+  </data>
+  <data name="Tooltip_Selection_Delete" xml:space="preserve">
+    <value>I-puti ang piniling lugar</value>
+  </data>
+  <data name="Selection_ExtractText" xml:space="preserve">
+    <value>Kuhai ang Teksto</value>
+  </data>
+  <data name="Tooltip_Selection_ExtractText" xml:space="preserve">
+    <value>Kuhai ang teksto gikan sa piniling lugar gamit ang OCR</value>
+  </data>
+  <data name="Ocr_Title" xml:space="preserve">
+    <value>Kuhai ang Teksto (OCR)</value>
+  </data>
+  <data name="Ocr_Engine" xml:space="preserve">
+    <value>OCR Engine</value>
+  </data>
+  <data name="Ocr_Languages" xml:space="preserve">
+    <value>Mga Pinulongan</value>
+  </data>
+  <data name="Ocr_NoEngines" xml:space="preserve">
+    <value>Walay OCR engine nga anaa</value>
+  </data>
+  <data name="Ocr_NoEnginesHelp" xml:space="preserve">
+    <value>Sa Windows, walay dugang software ang gikinahanglan. Sa Linux, i-install ang Tesseract: sudo apt install tesseract-ocr</value>
+  </data>
+  <data name="Ocr_TesseractLangHint" xml:space="preserve">
+    <value>Aron makadugang og mga pinulongan sa Tesseract, i-install ang language packs: sudo apt install tesseract-ocr-&lt;lang&gt;</value>
+  </data>
+  <data name="Ocr_ExtractButton" xml:space="preserve">
+    <value>Kuhai ang Teksto</value>
+  </data>
+  <data name="Ocr_Processing" xml:space="preserve">
+    <value>Nagproseso...</value>
+  </data>
+  <data name="Ocr_Result" xml:space="preserve">
+    <value>Naailhan nga Teksto</value>
+  </data>
 </root>

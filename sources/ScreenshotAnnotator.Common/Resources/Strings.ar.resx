@@ -343,4 +343,49 @@
   <data name="Winget_ShortDescription" xml:space="preserve">
     <value>برنامج لتعليق لقطات الشاشة على Windows وLinux.</value>
   </data>
+  <data name="Selection_Copy" xml:space="preserve">
+    <value>نسخ</value>
+  </data>
+  <data name="Tooltip_Selection_Copy" xml:space="preserve">
+    <value>نسخ المنطقة المحددة إلى الحافظة</value>
+  </data>
+  <data name="Selection_Delete" xml:space="preserve">
+    <value>حذف</value>
+  </data>
+  <data name="Tooltip_Selection_Delete" xml:space="preserve">
+    <value>محو المنطقة المحددة</value>
+  </data>
+  <data name="Selection_ExtractText" xml:space="preserve">
+    <value>استخراج النص</value>
+  </data>
+  <data name="Tooltip_Selection_ExtractText" xml:space="preserve">
+    <value>استخراج النص من المنطقة المحددة باستخدام OCR</value>
+  </data>
+  <data name="Ocr_Title" xml:space="preserve">
+    <value>استخراج النص (OCR)</value>
+  </data>
+  <data name="Ocr_Engine" xml:space="preserve">
+    <value>محرك OCR</value>
+  </data>
+  <data name="Ocr_Languages" xml:space="preserve">
+    <value>اللغات</value>
+  </data>
+  <data name="Ocr_NoEngines" xml:space="preserve">
+    <value>لا تتوفر محركات OCR</value>
+  </data>
+  <data name="Ocr_NoEnginesHelp" xml:space="preserve">
+    <value>لاستخدام OCR على Windows، لا يلزم برنامج إضافي. على Linux، قم بتثبيت Tesseract: sudo apt install tesseract-ocr</value>
+  </data>
+  <data name="Ocr_TesseractLangHint" xml:space="preserve">
+    <value>لإضافة المزيد من اللغات لـ Tesseract، قم بتثبيت حزم اللغات: sudo apt install tesseract-ocr-&lt;lang&gt;</value>
+  </data>
+  <data name="Ocr_ExtractButton" xml:space="preserve">
+    <value>استخراج النص</value>
+  </data>
+  <data name="Ocr_Processing" xml:space="preserve">
+    <value>جاري المعالجة...</value>
+  </data>
+  <data name="Ocr_Result" xml:space="preserve">
+    <value>النص المُعرَّف</value>
+  </data>
 </root>

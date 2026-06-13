@@ -343,4 +343,49 @@
   <data name="Winget_ShortDescription" xml:space="preserve">
     <value>ለ Windows እና Linux የስክሪንሾት ማብራሪያ ሶፍትዌር።</value>
   </data>
+  <data name="Selection_Copy" xml:space="preserve">
+    <value>ቅዳ</value>
+  </data>
+  <data name="Tooltip_Selection_Copy" xml:space="preserve">
+    <value>የተመረጠውን አካባቢ ወደ ቅንጥብ ሰሌዳ ቅዳ</value>
+  </data>
+  <data name="Selection_Delete" xml:space="preserve">
+    <value>ሰርዝ</value>
+  </data>
+  <data name="Tooltip_Selection_Delete" xml:space="preserve">
+    <value>የተመረጠውን አካባቢ ነጭ አድርግ</value>
+  </data>
+  <data name="Selection_ExtractText" xml:space="preserve">
+    <value>ጽሑፍ አውጣ</value>
+  </data>
+  <data name="Tooltip_Selection_ExtractText" xml:space="preserve">
+    <value>ከተመረጠው አካባቢ ጽሑፍ አውጣ (OCR)</value>
+  </data>
+  <data name="Ocr_Title" xml:space="preserve">
+    <value>ጽሑፍ አውጣ (OCR)</value>
+  </data>
+  <data name="Ocr_Engine" xml:space="preserve">
+    <value>የ OCR ሞተር</value>
+  </data>
+  <data name="Ocr_Languages" xml:space="preserve">
+    <value>ቋንቋዎች</value>
+  </data>
+  <data name="Ocr_NoEngines" xml:space="preserve">
+    <value>ምንም የ OCR ሞተሮች አልተገኙም</value>
+  </data>
+  <data name="Ocr_NoEnginesHelp" xml:space="preserve">
+    <value>በ Windows ላይ OCR ለመጠቀም ተጨማሪ ሶፍትዌር አያስፈልግም። በ Linux ላይ፣ Tesseract ይጫኑ፦ sudo apt install tesseract-ocr</value>
+  </data>
+  <data name="Ocr_TesseractLangHint" xml:space="preserve">
+    <value>ለ Tesseract ተጨማሪ ቋንቋዎች ለማከል፣ የቋንቋ ጥቅሎች ይጫኑ፦ sudo apt install tesseract-ocr-&lt;lang&gt;</value>
+  </data>
+  <data name="Ocr_ExtractButton" xml:space="preserve">
+    <value>ጽሑፍ አውጣ</value>
+  </data>
+  <data name="Ocr_Processing" xml:space="preserve">
+    <value>በሂደት ላይ...</value>
+  </data>
+  <data name="Ocr_Result" xml:space="preserve">
+    <value>የተገኘ ጽሑፍ</value>
+  </data>
 </root>

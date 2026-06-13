@@ -343,4 +343,49 @@ Funzionalità:
   <data name="Winget_ShortDescription" xml:space="preserve">
     <value>Software di annotazione degli screenshot per Windows e Linux.</value>
   </data>
+  <data name="Selection_Copy" xml:space="preserve">
+    <value>Copia</value>
+  </data>
+  <data name="Tooltip_Selection_Copy" xml:space="preserve">
+    <value>Copia l'area selezionata negli appunti</value>
+  </data>
+  <data name="Selection_Delete" xml:space="preserve">
+    <value>Elimina</value>
+  </data>
+  <data name="Tooltip_Selection_Delete" xml:space="preserve">
+    <value>Cancella l'area selezionata</value>
+  </data>
+  <data name="Selection_ExtractText" xml:space="preserve">
+    <value>Estrai testo</value>
+  </data>
+  <data name="Tooltip_Selection_ExtractText" xml:space="preserve">
+    <value>Estrai testo dall'area selezionata tramite OCR</value>
+  </data>
+  <data name="Ocr_Title" xml:space="preserve">
+    <value>Estrai testo (OCR)</value>
+  </data>
+  <data name="Ocr_Engine" xml:space="preserve">
+    <value>Motore OCR</value>
+  </data>
+  <data name="Ocr_Languages" xml:space="preserve">
+    <value>Lingue</value>
+  </data>
+  <data name="Ocr_NoEngines" xml:space="preserve">
+    <value>Nessun motore OCR disponibile</value>
+  </data>
+  <data name="Ocr_NoEnginesHelp" xml:space="preserve">
+    <value>Su Windows non è necessario software aggiuntivo. Su Linux installare Tesseract: sudo apt install tesseract-ocr</value>
+  </data>
+  <data name="Ocr_TesseractLangHint" xml:space="preserve">
+    <value>Per aggiungere più lingue a Tesseract, installare i pacchetti lingua: sudo apt install tesseract-ocr-&lt;lang&gt;</value>
+  </data>
+  <data name="Ocr_ExtractButton" xml:space="preserve">
+    <value>Estrai testo</value>
+  </data>
+  <data name="Ocr_Processing" xml:space="preserve">
+    <value>Elaborazione in corso...</value>
+  </data>
+  <data name="Ocr_Result" xml:space="preserve">
+    <value>Testo riconosciuto</value>
+  </data>
 </root>

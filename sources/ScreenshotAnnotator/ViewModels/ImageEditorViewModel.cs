@@ -795,6 +795,31 @@ public partial class ImageEditorViewModel : ViewModelBase, IProjectUi
     }
 
     [RelayCommand]
+    private async Task ExtractText()
+    {
+        if (_editorCanvas?.SelectorRect == null || _mainWindow == null)
+            return;
+
+        var pngData = GetSelectedAreaAsPng();
+        if (pngData == null) return;
+
+        var ocrViewModel = new OcrViewModel(AllServices.ApplicationSettings, pngData);
+        var ocrWindow = new Views.OcrWindow { DataContext = ocrViewModel };
+        await ocrWindow.ShowDialog(_mainWindow);
+    }
+
+    internal byte[]? GetSelectedAreaAsPng()
+    {
+        if (_editorCanvas?.SelectorRect == null) return null;
+        var rendered = Services.ProjectRenderer.Render(
+            _editorCanvas.Image, Shapes, _editorCanvas.SelectorRect.Rectangle);
+        if (rendered == null) return null;
+        using var ms = new MemoryStream();
+        rendered.Save(ms);
+        return ms.ToArray();
+    }
+
+    [RelayCommand]
     private void OpenProjectsFolder() => ProcessHelper.OpenWithShell(AllServices.ProjectManager.ProjectsFolder);
     [RelayCommand]
     private void OpenLogsFolder()

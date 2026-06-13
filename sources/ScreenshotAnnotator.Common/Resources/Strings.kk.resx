@@ -343,4 +343,49 @@
   <data name="Winget_ShortDescription" xml:space="preserve">
     <value>Windows және Linux үшін скриншот аннотациялау бағдарламасы.</value>
   </data>
+  <data name="Selection_Copy" xml:space="preserve">
+    <value>Көшіру</value>
+  </data>
+  <data name="Tooltip_Selection_Copy" xml:space="preserve">
+    <value>Таңдалған аймақты алмасу буферіне көшіру</value>
+  </data>
+  <data name="Selection_Delete" xml:space="preserve">
+    <value>Жою</value>
+  </data>
+  <data name="Tooltip_Selection_Delete" xml:space="preserve">
+    <value>Таңдалған аймақты ақтау</value>
+  </data>
+  <data name="Selection_ExtractText" xml:space="preserve">
+    <value>Мәтін шығару</value>
+  </data>
+  <data name="Tooltip_Selection_ExtractText" xml:space="preserve">
+    <value>OCR арқылы таңдалған аймақтан мәтін шығару</value>
+  </data>
+  <data name="Ocr_Title" xml:space="preserve">
+    <value>Мәтін шығару (OCR)</value>
+  </data>
+  <data name="Ocr_Engine" xml:space="preserve">
+    <value>OCR қозғалтқышы</value>
+  </data>
+  <data name="Ocr_Languages" xml:space="preserve">
+    <value>Тілдер</value>
+  </data>
+  <data name="Ocr_NoEngines" xml:space="preserve">
+    <value>OCR қозғалтқышы жоқ</value>
+  </data>
+  <data name="Ocr_NoEnginesHelp" xml:space="preserve">
+    <value>Windows жүйесінде қосымша бағдарлама қажет емес. Linux жүйесінде Tesseract орнатыңыз: sudo apt install tesseract-ocr</value>
+  </data>
+  <data name="Ocr_TesseractLangHint" xml:space="preserve">
+    <value>Tesseract үшін тіл пакеттерін орнатыңыз: sudo apt install tesseract-ocr-&lt;lang&gt;</value>
+  </data>
+  <data name="Ocr_ExtractButton" xml:space="preserve">
+    <value>Мәтін шығару</value>
+  </data>
+  <data name="Ocr_Processing" xml:space="preserve">
+    <value>Өңделуде...</value>
+  </data>
+  <data name="Ocr_Result" xml:space="preserve">
+    <value>Танылған мәтін</value>
+  </data>
 </root>

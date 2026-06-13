@@ -340,4 +340,49 @@
   <data name="Winget_ShortDescription" xml:space="preserve">
     <value>Windows اور Linux کے لیے اسکرین شاٹ نوٹسازی سافٹ ویئر۔</value>
   </data>
+  <data name="Selection_Copy" xml:space="preserve">
+    <value>کاپی</value>
+  </data>
+  <data name="Tooltip_Selection_Copy" xml:space="preserve">
+    <value>منتخب علاقہ کلپ بورڈ میں کاپی کریں</value>
+  </data>
+  <data name="Selection_Delete" xml:space="preserve">
+    <value>حذف</value>
+  </data>
+  <data name="Tooltip_Selection_Delete" xml:space="preserve">
+    <value>منتخب علاقہ سفید کریں</value>
+  </data>
+  <data name="Selection_ExtractText" xml:space="preserve">
+    <value>متن نکالیں</value>
+  </data>
+  <data name="Tooltip_Selection_ExtractText" xml:space="preserve">
+    <value>OCR کے ذریعے منتخب علاقے سے متن نکالیں</value>
+  </data>
+  <data name="Ocr_Title" xml:space="preserve">
+    <value>متن نکالیں (OCR)</value>
+  </data>
+  <data name="Ocr_Engine" xml:space="preserve">
+    <value>OCR انجن</value>
+  </data>
+  <data name="Ocr_Languages" xml:space="preserve">
+    <value>زبانیں</value>
+  </data>
+  <data name="Ocr_NoEngines" xml:space="preserve">
+    <value>کوئی OCR انجن دستیاب نہیں</value>
+  </data>
+  <data name="Ocr_NoEnginesHelp" xml:space="preserve">
+    <value>ونڈوز میں اضافی سافٹ ویئر کی ضرورت نہیں۔ لینکس میں Tesseract انسٹال کریں: sudo apt install tesseract-ocr</value>
+  </data>
+  <data name="Ocr_TesseractLangHint" xml:space="preserve">
+    <value>Tesseract کے لیے مزید زبانیں شامل کرنے کے لیے زبان کے پیکیج انسٹال کریں: sudo apt install tesseract-ocr-&lt;lang&gt;</value>
+  </data>
+  <data name="Ocr_ExtractButton" xml:space="preserve">
+    <value>متن نکالیں</value>
+  </data>
+  <data name="Ocr_Processing" xml:space="preserve">
+    <value>پروسیسنگ...</value>
+  </data>
+  <data name="Ocr_Result" xml:space="preserve">
+    <value>شناخت شدہ متن</value>
+  </data>
 </root>

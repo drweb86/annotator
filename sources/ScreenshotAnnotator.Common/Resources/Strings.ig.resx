@@ -343,4 +343,49 @@ Atụmatụ:
   <data name="Winget_ShortDescription" xml:space="preserve">
     <value>Ngwa nkọwa foto ihuenyo maka Windows na Linux.</value>
   </data>
+  <data name="Selection_Copy" xml:space="preserve">
+    <value>Detuo</value>
+  </data>
+  <data name="Tooltip_Selection_Copy" xml:space="preserve">
+    <value>Detuo mpaghara ahọpụtara n'ebe edekọ ihe</value>
+  </data>
+  <data name="Selection_Delete" xml:space="preserve">
+    <value>Hichapụ</value>
+  </data>
+  <data name="Tooltip_Selection_Delete" xml:space="preserve">
+    <value>Mee ka mpaghara ahọpụtara bụrụ ọcha</value>
+  </data>
+  <data name="Selection_ExtractText" xml:space="preserve">
+    <value>Wepụ Ederede</value>
+  </data>
+  <data name="Tooltip_Selection_ExtractText" xml:space="preserve">
+    <value>Wepụ ederede site n'mpaghara ahọpụtara site na OCR</value>
+  </data>
+  <data name="Ocr_Title" xml:space="preserve">
+    <value>Wepụ Ederede (OCR)</value>
+  </data>
+  <data name="Ocr_Engine" xml:space="preserve">
+    <value>Injin OCR</value>
+  </data>
+  <data name="Ocr_Languages" xml:space="preserve">
+    <value>Asụsụ</value>
+  </data>
+  <data name="Ocr_NoEngines" xml:space="preserve">
+    <value>Enweghị injin OCR dị</value>
+  </data>
+  <data name="Ocr_NoEnginesHelp" xml:space="preserve">
+    <value>Na Windows, ọ dịghị mkpa iwe ngwaọrụ ọzọ. Na Linux, tinye Tesseract: sudo apt install tesseract-ocr</value>
+  </data>
+  <data name="Ocr_TesseractLangHint" xml:space="preserve">
+    <value>Iji tinye asụsụ ndị ọzọ maka Tesseract, tinye ngwugwu asụsụ: sudo apt install tesseract-ocr-&lt;lang&gt;</value>
+  </data>
+  <data name="Ocr_ExtractButton" xml:space="preserve">
+    <value>Wepụ Ederede</value>
+  </data>
+  <data name="Ocr_Processing" xml:space="preserve">
+    <value>Na-arụ ọrụ...</value>
+  </data>
+  <data name="Ocr_Result" xml:space="preserve">
+    <value>Ederede a chọpụtara</value>
+  </data>
 </root>

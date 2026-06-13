@@ -343,4 +343,49 @@ Funkcje:
   <data name="Winget_ShortDescription" xml:space="preserve">
     <value>Oprogramowanie do adnotacji zrzutów ekranu dla Windows i Linux.</value>
   </data>
+  <data name="Selection_Copy" xml:space="preserve">
+    <value>Kopiuj</value>
+  </data>
+  <data name="Tooltip_Selection_Copy" xml:space="preserve">
+    <value>Skopiuj zaznaczony obszar do schowka</value>
+  </data>
+  <data name="Selection_Delete" xml:space="preserve">
+    <value>Usuń</value>
+  </data>
+  <data name="Tooltip_Selection_Delete" xml:space="preserve">
+    <value>Wymaż zaznaczony obszar</value>
+  </data>
+  <data name="Selection_ExtractText" xml:space="preserve">
+    <value>Wyodrębnij tekst</value>
+  </data>
+  <data name="Tooltip_Selection_ExtractText" xml:space="preserve">
+    <value>Wyodrębnij tekst z zaznaczonego obszaru za pomocą OCR</value>
+  </data>
+  <data name="Ocr_Title" xml:space="preserve">
+    <value>Wyodrębnianie tekstu (OCR)</value>
+  </data>
+  <data name="Ocr_Engine" xml:space="preserve">
+    <value>Silnik OCR</value>
+  </data>
+  <data name="Ocr_Languages" xml:space="preserve">
+    <value>Języki</value>
+  </data>
+  <data name="Ocr_NoEngines" xml:space="preserve">
+    <value>Brak dostępnych silników OCR</value>
+  </data>
+  <data name="Ocr_NoEnginesHelp" xml:space="preserve">
+    <value>W systemie Windows nie jest wymagane żadne dodatkowe oprogramowanie. W systemie Linux zainstaluj Tesseract: sudo apt install tesseract-ocr</value>
+  </data>
+  <data name="Ocr_TesseractLangHint" xml:space="preserve">
+    <value>Aby dodać więcej języków do Tesseract, zainstaluj pakiety językowe: sudo apt install tesseract-ocr-&lt;lang&gt;</value>
+  </data>
+  <data name="Ocr_ExtractButton" xml:space="preserve">
+    <value>Wyodrębnij tekst</value>
+  </data>
+  <data name="Ocr_Processing" xml:space="preserve">
+    <value>Przetwarzanie...</value>
+  </data>
+  <data name="Ocr_Result" xml:space="preserve">
+    <value>Rozpoznany tekst</value>
+  </data>
 </root>

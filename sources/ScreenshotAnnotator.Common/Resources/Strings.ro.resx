@@ -343,4 +343,49 @@ Funcții:
   <data name="Winget_ShortDescription" xml:space="preserve">
     <value>Software de adnotare capturi de ecran pentru Windows și Linux.</value>
   </data>
+  <data name="Selection_Copy" xml:space="preserve">
+    <value>Copiază</value>
+  </data>
+  <data name="Tooltip_Selection_Copy" xml:space="preserve">
+    <value>Copiază zona selectată în clipboard</value>
+  </data>
+  <data name="Selection_Delete" xml:space="preserve">
+    <value>Șterge</value>
+  </data>
+  <data name="Tooltip_Selection_Delete" xml:space="preserve">
+    <value>Albește zona selectată</value>
+  </data>
+  <data name="Selection_ExtractText" xml:space="preserve">
+    <value>Extrage text</value>
+  </data>
+  <data name="Tooltip_Selection_ExtractText" xml:space="preserve">
+    <value>Extrage text din zona selectată folosind OCR</value>
+  </data>
+  <data name="Ocr_Title" xml:space="preserve">
+    <value>Extragere text (OCR)</value>
+  </data>
+  <data name="Ocr_Engine" xml:space="preserve">
+    <value>Motor OCR</value>
+  </data>
+  <data name="Ocr_Languages" xml:space="preserve">
+    <value>Limbi</value>
+  </data>
+  <data name="Ocr_NoEngines" xml:space="preserve">
+    <value>Nu există motoare OCR disponibile</value>
+  </data>
+  <data name="Ocr_NoEnginesHelp" xml:space="preserve">
+    <value>Pe Windows nu este necesar software suplimentar. Pe Linux, instalați Tesseract: sudo apt install tesseract-ocr</value>
+  </data>
+  <data name="Ocr_TesseractLangHint" xml:space="preserve">
+    <value>Pentru a adăuga mai multe limbi în Tesseract, instalați pachete de limbă: sudo apt install tesseract-ocr-&lt;lang&gt;</value>
+  </data>
+  <data name="Ocr_ExtractButton" xml:space="preserve">
+    <value>Extrage text</value>
+  </data>
+  <data name="Ocr_Processing" xml:space="preserve">
+    <value>Se procesează...</value>
+  </data>
+  <data name="Ocr_Result" xml:space="preserve">
+    <value>Text recunoscut</value>
+  </data>
 </root>

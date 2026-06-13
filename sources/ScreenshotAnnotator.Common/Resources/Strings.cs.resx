@@ -343,4 +343,49 @@ Funkce:
   <data name="Winget_ShortDescription" xml:space="preserve">
     <value>Software pro anotaci snímků obrazovky pro Windows a Linux.</value>
   </data>
+  <data name="Selection_Copy" xml:space="preserve">
+    <value>Kopírovat</value>
+  </data>
+  <data name="Tooltip_Selection_Copy" xml:space="preserve">
+    <value>Zkopírovat vybranou oblast do schránky</value>
+  </data>
+  <data name="Selection_Delete" xml:space="preserve">
+    <value>Smazat</value>
+  </data>
+  <data name="Tooltip_Selection_Delete" xml:space="preserve">
+    <value>Vymazat vybranou oblast</value>
+  </data>
+  <data name="Selection_ExtractText" xml:space="preserve">
+    <value>Extrahovat text</value>
+  </data>
+  <data name="Tooltip_Selection_ExtractText" xml:space="preserve">
+    <value>Extrahovat text z vybrané oblasti pomocí OCR</value>
+  </data>
+  <data name="Ocr_Title" xml:space="preserve">
+    <value>Extrahovat text (OCR)</value>
+  </data>
+  <data name="Ocr_Engine" xml:space="preserve">
+    <value>OCR engine</value>
+  </data>
+  <data name="Ocr_Languages" xml:space="preserve">
+    <value>Jazyky</value>
+  </data>
+  <data name="Ocr_NoEngines" xml:space="preserve">
+    <value>Žádné OCR enginy nejsou k dispozici</value>
+  </data>
+  <data name="Ocr_NoEnginesHelp" xml:space="preserve">
+    <value>Pro použití OCR ve Windows není potřeba žádný dodatečný software. Na Linuxu nainstalujte Tesseract: sudo apt install tesseract-ocr</value>
+  </data>
+  <data name="Ocr_TesseractLangHint" xml:space="preserve">
+    <value>Pro přidání dalších jazyků pro Tesseract nainstalujte jazykové balíčky: sudo apt install tesseract-ocr-&lt;lang&gt;</value>
+  </data>
+  <data name="Ocr_ExtractButton" xml:space="preserve">
+    <value>Extrahovat text</value>
+  </data>
+  <data name="Ocr_Processing" xml:space="preserve">
+    <value>Zpracovávám...</value>
+  </data>
+  <data name="Ocr_Result" xml:space="preserve">
+    <value>Rozpoznaný text</value>
+  </data>
 </root>

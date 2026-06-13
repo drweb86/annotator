@@ -343,4 +343,49 @@ Fasaloli:
   <data name="Winget_ShortDescription" xml:space="preserve">
     <value>Software na rubutu kan hoton allo don Windows da Linux.</value>
   </data>
+  <data name="Selection_Copy" xml:space="preserve">
+    <value>Kwafi</value>
+  </data>
+  <data name="Tooltip_Selection_Copy" xml:space="preserve">
+    <value>Kwafi yankin da aka zaɓa zuwa clipboard</value>
+  </data>
+  <data name="Selection_Delete" xml:space="preserve">
+    <value>Goge</value>
+  </data>
+  <data name="Tooltip_Selection_Delete" xml:space="preserve">
+    <value>Fentin yankin da aka zaɓa</value>
+  </data>
+  <data name="Selection_ExtractText" xml:space="preserve">
+    <value>Fitar da Rubutu</value>
+  </data>
+  <data name="Tooltip_Selection_ExtractText" xml:space="preserve">
+    <value>Fitar da rubutu daga yankin da aka zaɓa ta OCR</value>
+  </data>
+  <data name="Ocr_Title" xml:space="preserve">
+    <value>Fitar da Rubutu (OCR)</value>
+  </data>
+  <data name="Ocr_Engine" xml:space="preserve">
+    <value>Injin OCR</value>
+  </data>
+  <data name="Ocr_Languages" xml:space="preserve">
+    <value>Harsunan</value>
+  </data>
+  <data name="Ocr_NoEngines" xml:space="preserve">
+    <value>Ba a sami injin OCR ba</value>
+  </data>
+  <data name="Ocr_NoEnginesHelp" xml:space="preserve">
+    <value>A Windows, ba a buƙatar ƙarin software. A Linux, shigar da Tesseract: sudo apt install tesseract-ocr</value>
+  </data>
+  <data name="Ocr_TesseractLangHint" xml:space="preserve">
+    <value>Don ƙara ƙarin harsunan ga Tesseract, shigar da fakitin harshe: sudo apt install tesseract-ocr-&lt;lang&gt;</value>
+  </data>
+  <data name="Ocr_ExtractButton" xml:space="preserve">
+    <value>Fitar da Rubutu</value>
+  </data>
+  <data name="Ocr_Processing" xml:space="preserve">
+    <value>Ana sarrafa...</value>
+  </data>
+  <data name="Ocr_Result" xml:space="preserve">
+    <value>Rubutun da aka Gane</value>
+  </data>
 </root>

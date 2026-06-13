@@ -1,0 +1,201 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:vm="using:ScreenshotAnnotator.ViewModels"
+        xmlns:ocr="using:ScreenshotAnnotator.Services.Ocr"
+        xmlns:local="using:ScreenshotAnnotator.Markup"
+        mc:Ignorable="d" d:DesignWidth="720" d:DesignHeight="640"
+        x:Class="ScreenshotAnnotator.Views.OcrWindow"
+        x:DataType="vm:OcrViewModel"
+        Title="{local:Localize Ocr_Title}"
+        Width="720" Height="640"
+        MinWidth="520" MinHeight="460"
+        WindowStartupLocation="CenterOwner"
+        Background="#1E1E1E">
+
+  <Design.DataContext>
+    <vm:OcrViewModel />
+  </Design.DataContext>
+
+  <Window.Styles>
+    <Style Selector="TextBlock">
+      <Setter Property="Foreground" Value="#E6E6E6"/>
+      <Setter Property="FontSize" Value="13"/>
+    </Style>
+    <Style Selector="ComboBox">
+      <Setter Property="Background" Value="#3C3C3C"/>
+      <Setter Property="Foreground" Value="#E6E6E6"/>
+    </Style>
+    <Style Selector="ListBox">
+      <Setter Property="Background" Value="#2D2D30"/>
+      <Setter Property="Foreground" Value="#E6E6E6"/>
+    </Style>
+    <Style Selector="CheckBox">
+      <Setter Property="Foreground" Value="#E6E6E6"/>
+    </Style>
+    <Style Selector="TextBox">
+      <Setter Property="Background" Value="#2D2D30"/>
+      <Setter Property="Foreground" Value="#E6E6E6"/>
+      <Setter Property="BorderBrush" Value="#555"/>
+    </Style>
+    <Style Selector="Button.primary">
+      <Setter Property="Background" Value="#0078D4"/>
+      <Setter Property="Foreground" Value="White"/>
+      <Setter Property="Padding" Value="20,8"/>
+      <Setter Property="CornerRadius" Value="4"/>
+      <Setter Property="FontSize" Value="13"/>
+    </Style>
+    <Style Selector="Button.primary:pointerover /template/ ContentPresenter">
+      <Setter Property="Background" Value="#005FA3"/>
+    </Style>
+    <Style Selector="Button.primary:disabled /template/ ContentPresenter">
+      <Setter Property="Background" Value="#555"/>
+    </Style>
+    <Style Selector="Button.close">
+      <Setter Property="Background" Value="#3C3C3C"/>
+      <Setter Property="Foreground" Value="#E6E6E6"/>
+      <Setter Property="Padding" Value="16,6"/>
+      <Setter Property="CornerRadius" Value="4"/>
+    </Style>
+  </Window.Styles>
+
+  <Grid RowDefinitions="*,Auto" Margin="16">
+
+    <!-- Main content -->
+    <ScrollViewer Grid.Row="0" VerticalScrollBarVisibility="Auto">
+      <StackPanel Spacing="16">
+
+        <!-- Top section: cat + controls -->
+        <Grid ColumnDefinitions="Auto,*" MinHeight="160">
+
+          <!-- Cat image -->
+          <Border Grid.Column="0"
+                  Width="148" Height="148"
+                  CornerRadius="8"
+                  Background="#2D2D30"
+                  Margin="0,0,16,0"
+                  VerticalAlignment="Top">
+            <Image Source="{Binding CatBitmap}"
+                   Width="136" Height="136"
+                   Stretch="Uniform"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"/>
+          </Border>
+
+          <!-- Controls column -->
+          <StackPanel Grid.Column="1" Spacing="12" VerticalAlignment="Top">
+
+            <!-- No engines message -->
+            <StackPanel IsVisible="{Binding !HasEngines}" Spacing="8">
+              <TextBlock Text="{local:Localize Ocr_NoEngines}"
+                         FontSize="14"
+                         FontWeight="SemiBold"
+                         Foreground="#F44336"/>
+              <TextBlock Text="{local:Localize Ocr_NoEnginesHelp}"
+                         TextWrapping="Wrap"
+                         Foreground="#AAAAAA"/>
+            </StackPanel>
+
+            <!-- Engine selector -->
+            <StackPanel IsVisible="{Binding HasEngines}" Spacing="6">
+              <TextBlock Text="{local:Localize Ocr_Engine}" FontWeight="SemiBold"/>
+              <ComboBox ItemsSource="{Binding AvailableEngines}"
+                        SelectedItem="{Binding SelectedEngine, Mode=TwoWay}"
+                        HorizontalAlignment="Stretch">
+                <ComboBox.ItemTemplate>
+                  <DataTemplate x:DataType="ocr:IOcrEngine">
+                    <TextBlock Text="{Binding DisplayName}"/>
+                  </DataTemplate>
+                </ComboBox.ItemTemplate>
+              </ComboBox>
+            </StackPanel>
+
+            <!-- Language selection -->
+            <StackPanel IsVisible="{Binding ShowLanguages}" Spacing="6">
+              <TextBlock Text="{local:Localize Ocr_Languages}" FontWeight="SemiBold"/>
+              <Border Background="#2D2D30"
+                      BorderBrush="#555"
+                      BorderThickness="1"
+                      CornerRadius="4"
+                      MaxHeight="160">
+                <ScrollViewer VerticalScrollBarVisibility="Auto">
+                  <ItemsControl ItemsSource="{Binding AvailableLanguages}" Margin="4">
+                    <ItemsControl.ItemTemplate>
+                      <DataTemplate DataType="vm:OcrLanguageItem">
+                        <CheckBox IsChecked="{Binding IsSelected, Mode=TwoWay}"
+                                  Content="{Binding DisplayName}"
+                                  Margin="2,1"/>
+                      </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                  </ItemsControl>
+                </ScrollViewer>
+              </Border>
+            </StackPanel>
+
+            <!-- Tesseract language hint -->
+            <Border IsVisible="{Binding ShowTesseractHint}"
+                    Background="#1A3A5C"
+                    CornerRadius="4"
+                    Padding="10,6">
+              <TextBlock Text="{local:Localize Ocr_TesseractLangHint}"
+                         TextWrapping="Wrap"
+                         Foreground="#90CAF9"
+                         FontSize="12"/>
+            </Border>
+
+            <!-- Extract button -->
+            <Button Classes="primary"
+                    Content="{local:Localize Ocr_ExtractButton}"
+                    Command="{Binding ExtractTextCommand}"
+                    IsEnabled="{Binding CanExtract}"
+                    IsVisible="{Binding HasEngines}"
+                    HorizontalAlignment="Left"/>
+          </StackPanel>
+        </Grid>
+
+        <!-- Separator -->
+        <Border Height="1" Background="#444" IsVisible="{Binding HasResult}"/>
+
+        <!-- Result area -->
+        <StackPanel IsVisible="{Binding HasResult}" Spacing="8">
+          <TextBlock Text="{local:Localize Ocr_Result}"
+                     FontWeight="SemiBold"/>
+          <TextBox Text="{Binding ResultText, Mode=TwoWay}"
+                   AcceptsReturn="True"
+                   TextWrapping="Wrap"
+                   MinHeight="160"
+                   MaxHeight="300"
+                   FontFamily="Courier New, Cascadia Code, Consolas, monospace"
+                   FontSize="13"
+                   Padding="8"
+                   ScrollViewer.VerticalScrollBarVisibility="Auto"/>
+        </StackPanel>
+
+      </StackPanel>
+    </ScrollViewer>
+
+    <!-- Bottom bar -->
+    <Border Grid.Row="1"
+            BorderBrush="#444"
+            BorderThickness="0,1,0,0"
+            Padding="0,12,0,0"
+            Margin="0,12,0,0">
+      <DockPanel>
+        <!-- Processing indicator -->
+        <TextBlock DockPanel.Dock="Left"
+                   Text="{local:Localize Ocr_Processing}"
+                   IsVisible="{Binding IsProcessing}"
+                   VerticalAlignment="Center"
+                   Foreground="#90CAF9"/>
+        <!-- Close button -->
+        <Button DockPanel.Dock="Right"
+                Classes="close"
+                Content="{local:Localize Button_OK}"
+                Click="OnCloseClick"
+                HorizontalAlignment="Right"/>
+      </DockPanel>
+    </Border>
+
+  </Grid>
+</Window>

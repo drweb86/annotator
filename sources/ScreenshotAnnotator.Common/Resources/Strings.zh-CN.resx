@@ -343,4 +343,49 @@
   <data name="Winget_ShortDescription" xml:space="preserve">
     <value>适用于 Windows 和 Linux 的截图标注软件。</value>
   </data>
+  <data name="Selection_Copy" xml:space="preserve">
+    <value>复制</value>
+  </data>
+  <data name="Tooltip_Selection_Copy" xml:space="preserve">
+    <value>将选定区域复制到剪贴板</value>
+  </data>
+  <data name="Selection_Delete" xml:space="preserve">
+    <value>删除</value>
+  </data>
+  <data name="Tooltip_Selection_Delete" xml:space="preserve">
+    <value>将选定区域涂白</value>
+  </data>
+  <data name="Selection_ExtractText" xml:space="preserve">
+    <value>提取文字</value>
+  </data>
+  <data name="Tooltip_Selection_ExtractText" xml:space="preserve">
+    <value>使用OCR从选定区域提取文字</value>
+  </data>
+  <data name="Ocr_Title" xml:space="preserve">
+    <value>文字识别 (OCR)</value>
+  </data>
+  <data name="Ocr_Engine" xml:space="preserve">
+    <value>OCR引擎</value>
+  </data>
+  <data name="Ocr_Languages" xml:space="preserve">
+    <value>语言</value>
+  </data>
+  <data name="Ocr_NoEngines" xml:space="preserve">
+    <value>没有可用的OCR引擎</value>
+  </data>
+  <data name="Ocr_NoEnginesHelp" xml:space="preserve">
+    <value>在Windows上无需额外软件（使用内置OCR）。在Linux上安装Tesseract: sudo apt install tesseract-ocr</value>
+  </data>
+  <data name="Ocr_TesseractLangHint" xml:space="preserve">
+    <value>要为Tesseract添加更多语言，请安装语言包: sudo apt install tesseract-ocr-&lt;lang&gt;</value>
+  </data>
+  <data name="Ocr_ExtractButton" xml:space="preserve">
+    <value>提取文字</value>
+  </data>
+  <data name="Ocr_Processing" xml:space="preserve">
+    <value>处理中...</value>
+  </data>
+  <data name="Ocr_Result" xml:space="preserve">
+    <value>识别结果</value>
+  </data>
 </root>

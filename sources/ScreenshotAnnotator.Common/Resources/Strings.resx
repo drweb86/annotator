@@ -406,6 +406,69 @@ Please either:
     <value>Screenshot Annotator - Image Editor</value>
     <comment>Main window title</comment>
   </data>
+  <!-- Selection floating buttons -->
+  <data name="Selection_Copy" xml:space="preserve">
+    <value>Copy</value>
+    <comment>Floating button: copy selected area to clipboard</comment>
+  </data>
+  <data name="Tooltip_Selection_Copy" xml:space="preserve">
+    <value>Copy selected area to clipboard</value>
+    <comment>Tooltip for floating copy button</comment>
+  </data>
+  <data name="Selection_Delete" xml:space="preserve">
+    <value>Delete</value>
+    <comment>Floating button: white-out selected area</comment>
+  </data>
+  <data name="Tooltip_Selection_Delete" xml:space="preserve">
+    <value>White out selected area</value>
+    <comment>Tooltip for floating delete button</comment>
+  </data>
+  <data name="Selection_ExtractText" xml:space="preserve">
+    <value>Extract Text</value>
+    <comment>Floating button: open OCR dialog</comment>
+  </data>
+  <data name="Tooltip_Selection_ExtractText" xml:space="preserve">
+    <value>Extract text from selected area using OCR</value>
+    <comment>Tooltip for floating extract text button</comment>
+  </data>
+  <!-- OCR window -->
+  <data name="Ocr_Title" xml:space="preserve">
+    <value>Extract Text</value>
+    <comment>OCR window title</comment>
+  </data>
+  <data name="Ocr_Engine" xml:space="preserve">
+    <value>OCR Engine:</value>
+    <comment>Label for OCR engine selector</comment>
+  </data>
+  <data name="Ocr_Languages" xml:space="preserve">
+    <value>Languages:</value>
+    <comment>Label for OCR language list</comment>
+  </data>
+  <data name="Ocr_NoEngines" xml:space="preserve">
+    <value>No OCR engines are available on this system.</value>
+    <comment>Shown when no OCR engine is found</comment>
+  </data>
+  <data name="Ocr_NoEnginesHelp" xml:space="preserve">
+    <value>To enable OCR, install Tesseract OCR and make sure it is in your system PATH.
+You can download it from the Tesseract GitHub page.</value>
+    <comment>Help text when no OCR engine is found</comment>
+  </data>
+  <data name="Ocr_TesseractLangHint" xml:space="preserve">
+    <value>Tip: Additional language packs can be installed for Tesseract — check the Tesseract documentation.</value>
+    <comment>Hint shown when Tesseract engine is selected</comment>
+  </data>
+  <data name="Ocr_ExtractButton" xml:space="preserve">
+    <value>Extract Text</value>
+    <comment>Button to run OCR</comment>
+  </data>
+  <data name="Ocr_Processing" xml:space="preserve">
+    <value>Processing…</value>
+    <comment>Status while OCR is running</comment>
+  </data>
+  <data name="Ocr_Result" xml:space="preserve">
+    <value>Extracted Text:</value>
+    <comment>Label above the OCR result textbox</comment>
+  </data>
   <data name="Winget_Description" xml:space="preserve">
     <value>Screenshot annotator software for Windows and Linux.
 

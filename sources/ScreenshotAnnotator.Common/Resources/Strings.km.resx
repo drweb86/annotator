@@ -343,4 +343,49 @@
   <data name="Winget_ShortDescription" xml:space="preserve">
     <value>កម្មវិធីសរសេរចំណាំរូបថតអេក្រង់សម្រាប់ Windows និង Linux។</value>
   </data>
+  <data name="Selection_Copy" xml:space="preserve">
+    <value>ចម្លង</value>
+  </data>
+  <data name="Tooltip_Selection_Copy" xml:space="preserve">
+    <value>ចម្លងតំបន់ដែលបានជ្រើសរើសទៅក្ដារតម្បៀតខ្ទាស់</value>
+  </data>
+  <data name="Selection_Delete" xml:space="preserve">
+    <value>លុប</value>
+  </data>
+  <data name="Tooltip_Selection_Delete" xml:space="preserve">
+    <value>ធ្វើឱ្យតំបន់ដែលបានជ្រើសរើសមានពណ៌ស</value>
+  </data>
+  <data name="Selection_ExtractText" xml:space="preserve">
+    <value>ដកស្រង់អត្ថបទ</value>
+  </data>
+  <data name="Tooltip_Selection_ExtractText" xml:space="preserve">
+    <value>ដកស្រង់អត្ថបទពីតំបន់ដែលបានជ្រើសរើសដោយប្រើ OCR</value>
+  </data>
+  <data name="Ocr_Title" xml:space="preserve">
+    <value>ដកស្រង់អត្ថបទ (OCR)</value>
+  </data>
+  <data name="Ocr_Engine" xml:space="preserve">
+    <value>ម៉ាស៊ីន OCR</value>
+  </data>
+  <data name="Ocr_Languages" xml:space="preserve">
+    <value>ភាសា</value>
+  </data>
+  <data name="Ocr_NoEngines" xml:space="preserve">
+    <value>មិនមានម៉ាស៊ីន OCR</value>
+  </data>
+  <data name="Ocr_NoEnginesHelp" xml:space="preserve">
+    <value>នៅ Windows មិនចាំបាច់ដំឡើងកម្មវិធីបន្ថែម។ នៅ Linux ដំឡើង Tesseract: sudo apt install tesseract-ocr</value>
+  </data>
+  <data name="Ocr_TesseractLangHint" xml:space="preserve">
+    <value>ដើម្បីបន្ថែមភាសាសម្រាប់ Tesseract ដំឡើងកញ្ចប់ភាសា: sudo apt install tesseract-ocr-&lt;lang&gt;</value>
+  </data>
+  <data name="Ocr_ExtractButton" xml:space="preserve">
+    <value>ដកស្រង់អត្ថបទ</value>
+  </data>
+  <data name="Ocr_Processing" xml:space="preserve">
+    <value>កំពុងដំណើរការ...</value>
+  </data>
+  <data name="Ocr_Result" xml:space="preserve">
+    <value>អត្ថបទដែលបានស្គាល់</value>
+  </data>
 </root>

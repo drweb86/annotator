@@ -343,4 +343,49 @@ Funktioner:
   <data name="Winget_ShortDescription" xml:space="preserve">
     <value>Skärmdumpskommentatorprogramvara för Windows och Linux.</value>
   </data>
+  <data name="Selection_Copy" xml:space="preserve">
+    <value>Kopiera</value>
+  </data>
+  <data name="Tooltip_Selection_Copy" xml:space="preserve">
+    <value>Kopiera markerat område till urklipp</value>
+  </data>
+  <data name="Selection_Delete" xml:space="preserve">
+    <value>Ta bort</value>
+  </data>
+  <data name="Tooltip_Selection_Delete" xml:space="preserve">
+    <value>Vitfyll det markerade området</value>
+  </data>
+  <data name="Selection_ExtractText" xml:space="preserve">
+    <value>Extrahera text</value>
+  </data>
+  <data name="Tooltip_Selection_ExtractText" xml:space="preserve">
+    <value>Extrahera text från markerat område med OCR</value>
+  </data>
+  <data name="Ocr_Title" xml:space="preserve">
+    <value>Extrahera text (OCR)</value>
+  </data>
+  <data name="Ocr_Engine" xml:space="preserve">
+    <value>OCR-motor</value>
+  </data>
+  <data name="Ocr_Languages" xml:space="preserve">
+    <value>Språk</value>
+  </data>
+  <data name="Ocr_NoEngines" xml:space="preserve">
+    <value>Inga OCR-motorer tillgängliga</value>
+  </data>
+  <data name="Ocr_NoEnginesHelp" xml:space="preserve">
+    <value>På Windows krävs ingen extra programvara. På Linux, installera Tesseract: sudo apt install tesseract-ocr</value>
+  </data>
+  <data name="Ocr_TesseractLangHint" xml:space="preserve">
+    <value>För att lägga till fler språk i Tesseract, installera språkpaket: sudo apt install tesseract-ocr-&lt;lang&gt;</value>
+  </data>
+  <data name="Ocr_ExtractButton" xml:space="preserve">
+    <value>Extrahera text</value>
+  </data>
+  <data name="Ocr_Processing" xml:space="preserve">
+    <value>Bearbetar...</value>
+  </data>
+  <data name="Ocr_Result" xml:space="preserve">
+    <value>Igenkänd text</value>
+  </data>
 </root>

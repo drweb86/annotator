@@ -340,4 +340,49 @@ Features:
   <data name="Winget_ShortDescription" xml:space="preserve">
     <value>Software to annotate screenshot for Windows and Linux.</value>
   </data>
+  <data name="Selection_Copy" xml:space="preserve">
+    <value>Kopi</value>
+  </data>
+  <data name="Tooltip_Selection_Copy" xml:space="preserve">
+    <value>Kopi di area wey yu don choose go clipboard</value>
+  </data>
+  <data name="Selection_Delete" xml:space="preserve">
+    <value>Komot</value>
+  </data>
+  <data name="Tooltip_Selection_Delete" xml:space="preserve">
+    <value>Make di area wey yu choose turn white</value>
+  </data>
+  <data name="Selection_ExtractText" xml:space="preserve">
+    <value>Bring out Text</value>
+  </data>
+  <data name="Tooltip_Selection_ExtractText" xml:space="preserve">
+    <value>Use OCR bring out text from di area wey yu choose</value>
+  </data>
+  <data name="Ocr_Title" xml:space="preserve">
+    <value>Bring out Text (OCR)</value>
+  </data>
+  <data name="Ocr_Engine" xml:space="preserve">
+    <value>OCR Engine</value>
+  </data>
+  <data name="Ocr_Languages" xml:space="preserve">
+    <value>Languages</value>
+  </data>
+  <data name="Ocr_NoEngines" xml:space="preserve">
+    <value>No OCR engine dey</value>
+  </data>
+  <data name="Ocr_NoEnginesHelp" xml:space="preserve">
+    <value>For Windows, yu no need extra software. For Linux, install Tesseract: sudo apt install tesseract-ocr</value>
+  </data>
+  <data name="Ocr_TesseractLangHint" xml:space="preserve">
+    <value>To add more languages for Tesseract, install language packs: sudo apt install tesseract-ocr-&lt;lang&gt;</value>
+  </data>
+  <data name="Ocr_ExtractButton" xml:space="preserve">
+    <value>Bring out Text</value>
+  </data>
+  <data name="Ocr_Processing" xml:space="preserve">
+    <value>E dey process...</value>
+  </data>
+  <data name="Ocr_Result" xml:space="preserve">
+    <value>Text wey e recognize</value>
+  </data>
 </root>

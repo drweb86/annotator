@@ -343,4 +343,49 @@ Xüsusiyyətlər:
   <data name="Winget_ShortDescription" xml:space="preserve">
     <value>Windows və Linux üçün ekran şəkli annotasiya proqramı.</value>
   </data>
+  <data name="Selection_Copy" xml:space="preserve">
+    <value>Kopyala</value>
+  </data>
+  <data name="Tooltip_Selection_Copy" xml:space="preserve">
+    <value>Seçilmiş sahəni mübadilə buferinə kopyala</value>
+  </data>
+  <data name="Selection_Delete" xml:space="preserve">
+    <value>Sil</value>
+  </data>
+  <data name="Tooltip_Selection_Delete" xml:space="preserve">
+    <value>Seçilmiş sahəni ağart</value>
+  </data>
+  <data name="Selection_ExtractText" xml:space="preserve">
+    <value>Mətn Çıxar</value>
+  </data>
+  <data name="Tooltip_Selection_ExtractText" xml:space="preserve">
+    <value>Seçilmiş sahədən OCR ilə mətn çıxar</value>
+  </data>
+  <data name="Ocr_Title" xml:space="preserve">
+    <value>Mətn Çıxar (OCR)</value>
+  </data>
+  <data name="Ocr_Engine" xml:space="preserve">
+    <value>OCR Mühəriki</value>
+  </data>
+  <data name="Ocr_Languages" xml:space="preserve">
+    <value>Dillər</value>
+  </data>
+  <data name="Ocr_NoEngines" xml:space="preserve">
+    <value>OCR mühəriki tapılmadı</value>
+  </data>
+  <data name="Ocr_NoEnginesHelp" xml:space="preserve">
+    <value>Windows-da OCR üçün əlavə proqram tələb olunmur. Linux-da Tesseract quraşdırın: sudo apt install tesseract-ocr</value>
+  </data>
+  <data name="Ocr_TesseractLangHint" xml:space="preserve">
+    <value>Tesseract üçün daha çox dil əlavə etmək üçün dil paketlərini quraşdırın: sudo apt install tesseract-ocr-&lt;lang&gt;</value>
+  </data>
+  <data name="Ocr_ExtractButton" xml:space="preserve">
+    <value>Mətn Çıxar</value>
+  </data>
+  <data name="Ocr_Processing" xml:space="preserve">
+    <value>Emal edilir...</value>
+  </data>
+  <data name="Ocr_Result" xml:space="preserve">
+    <value>Tanınan Mətn</value>
+  </data>
 </root>

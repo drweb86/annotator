@@ -343,4 +343,49 @@
   <data name="Winget_ShortDescription" xml:space="preserve">
     <value>Λογισμικό σχολιασμού στιγμιότυπων οθόνης για Windows και Linux.</value>
   </data>
+  <data name="Selection_Copy" xml:space="preserve">
+    <value>Αντιγραφή</value>
+  </data>
+  <data name="Tooltip_Selection_Copy" xml:space="preserve">
+    <value>Αντιγραφή επιλεγμένης περιοχής στο πρόχειρο</value>
+  </data>
+  <data name="Selection_Delete" xml:space="preserve">
+    <value>Διαγραφή</value>
+  </data>
+  <data name="Tooltip_Selection_Delete" xml:space="preserve">
+    <value>Λεύκανση της επιλεγμένης περιοχής</value>
+  </data>
+  <data name="Selection_ExtractText" xml:space="preserve">
+    <value>Εξαγωγή κειμένου</value>
+  </data>
+  <data name="Tooltip_Selection_ExtractText" xml:space="preserve">
+    <value>Εξαγωγή κειμένου από επιλεγμένη περιοχή με OCR</value>
+  </data>
+  <data name="Ocr_Title" xml:space="preserve">
+    <value>Εξαγωγή κειμένου (OCR)</value>
+  </data>
+  <data name="Ocr_Engine" xml:space="preserve">
+    <value>Μηχανή OCR</value>
+  </data>
+  <data name="Ocr_Languages" xml:space="preserve">
+    <value>Γλώσσες</value>
+  </data>
+  <data name="Ocr_NoEngines" xml:space="preserve">
+    <value>Δεν υπάρχουν διαθέσιμες μηχανές OCR</value>
+  </data>
+  <data name="Ocr_NoEnginesHelp" xml:space="preserve">
+    <value>Στα Windows δεν απαιτείται επιπλέον λογισμικό. Στο Linux εγκαταστήστε Tesseract: sudo apt install tesseract-ocr</value>
+  </data>
+  <data name="Ocr_TesseractLangHint" xml:space="preserve">
+    <value>Για περισσότερες γλώσσες στο Tesseract, εγκαταστήστε γλωσσικά πακέτα: sudo apt install tesseract-ocr-&lt;lang&gt;</value>
+  </data>
+  <data name="Ocr_ExtractButton" xml:space="preserve">
+    <value>Εξαγωγή κειμένου</value>
+  </data>
+  <data name="Ocr_Processing" xml:space="preserve">
+    <value>Επεξεργασία...</value>
+  </data>
+  <data name="Ocr_Result" xml:space="preserve">
+    <value>Αναγνωρισμένο κείμενο</value>
+  </data>
 </root>

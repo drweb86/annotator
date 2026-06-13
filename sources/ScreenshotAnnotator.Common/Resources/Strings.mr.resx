@@ -340,4 +340,49 @@
   <data name="Winget_ShortDescription" xml:space="preserve">
     <value>Windows आणि Linux साठी स्क्रीनशॉट अॅनोटेशन सॉफ्टवेअर.</value>
   </data>
+  <data name="Selection_Copy" xml:space="preserve">
+    <value>कॉपी</value>
+  </data>
+  <data name="Tooltip_Selection_Copy" xml:space="preserve">
+    <value>निवडलेला भाग क्लिपबोर्डवर कॉपी करा</value>
+  </data>
+  <data name="Selection_Delete" xml:space="preserve">
+    <value>हटवा</value>
+  </data>
+  <data name="Tooltip_Selection_Delete" xml:space="preserve">
+    <value>निवडलेला भाग पांढरा करा</value>
+  </data>
+  <data name="Selection_ExtractText" xml:space="preserve">
+    <value>मजकूर काढा</value>
+  </data>
+  <data name="Tooltip_Selection_ExtractText" xml:space="preserve">
+    <value>OCR वापरून निवडलेल्या भागातून मजकूर काढा</value>
+  </data>
+  <data name="Ocr_Title" xml:space="preserve">
+    <value>मजकूर काढा (OCR)</value>
+  </data>
+  <data name="Ocr_Engine" xml:space="preserve">
+    <value>OCR इंजिन</value>
+  </data>
+  <data name="Ocr_Languages" xml:space="preserve">
+    <value>भाषा</value>
+  </data>
+  <data name="Ocr_NoEngines" xml:space="preserve">
+    <value>कोणतेही OCR इंजिन उपलब्ध नाही</value>
+  </data>
+  <data name="Ocr_NoEnginesHelp" xml:space="preserve">
+    <value>Windows वर OCR साठी अतिरिक्त सॉफ्टवेअरची आवश्यकता नाही. Linux वर Tesseract इंस्टॉल करा: sudo apt install tesseract-ocr</value>
+  </data>
+  <data name="Ocr_TesseractLangHint" xml:space="preserve">
+    <value>Tesseract साठी अधिक भाषा जोडण्यासाठी भाषा पॅक इंस्टॉल करा: sudo apt install tesseract-ocr-&lt;lang&gt;</value>
+  </data>
+  <data name="Ocr_ExtractButton" xml:space="preserve">
+    <value>मजकूर काढा</value>
+  </data>
+  <data name="Ocr_Processing" xml:space="preserve">
+    <value>प्रक्रिया होत आहे...</value>
+  </data>
+  <data name="Ocr_Result" xml:space="preserve">
+    <value>ओळखलेला मजकूर</value>
+  </data>
 </root>

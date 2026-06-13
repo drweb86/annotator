@@ -343,4 +343,49 @@ Vipengele:
   <data name="Winget_ShortDescription" xml:space="preserve">
     <value>Programu ya kuandika maelezo kwenye picha za skrini kwa Windows na Linux.</value>
   </data>
+  <data name="Selection_Copy" xml:space="preserve">
+    <value>Nakili</value>
+  </data>
+  <data name="Tooltip_Selection_Copy" xml:space="preserve">
+    <value>Nakili eneo lililochaguliwa kwenye clipboard</value>
+  </data>
+  <data name="Selection_Delete" xml:space="preserve">
+    <value>Futa</value>
+  </data>
+  <data name="Tooltip_Selection_Delete" xml:space="preserve">
+    <value>Fanya eneo lililochaguliwa kuwa nyeupe</value>
+  </data>
+  <data name="Selection_ExtractText" xml:space="preserve">
+    <value>Toa Maandishi</value>
+  </data>
+  <data name="Tooltip_Selection_ExtractText" xml:space="preserve">
+    <value>Toa maandishi kutoka eneo lililochaguliwa kwa kutumia OCR</value>
+  </data>
+  <data name="Ocr_Title" xml:space="preserve">
+    <value>Toa Maandishi (OCR)</value>
+  </data>
+  <data name="Ocr_Engine" xml:space="preserve">
+    <value>Injini ya OCR</value>
+  </data>
+  <data name="Ocr_Languages" xml:space="preserve">
+    <value>Lugha</value>
+  </data>
+  <data name="Ocr_NoEngines" xml:space="preserve">
+    <value>Hakuna injini ya OCR inayopatikana</value>
+  </data>
+  <data name="Ocr_NoEnginesHelp" xml:space="preserve">
+    <value>Kwenye Windows, hakuna programu ya ziada inayohitajika. Kwenye Linux, sakinisha Tesseract: sudo apt install tesseract-ocr</value>
+  </data>
+  <data name="Ocr_TesseractLangHint" xml:space="preserve">
+    <value>Ili kuongeza lugha zaidi kwa Tesseract, sakinisha vifurushi vya lugha: sudo apt install tesseract-ocr-&lt;lang&gt;</value>
+  </data>
+  <data name="Ocr_ExtractButton" xml:space="preserve">
+    <value>Toa Maandishi</value>
+  </data>
+  <data name="Ocr_Processing" xml:space="preserve">
+    <value>Inachakata...</value>
+  </data>
+  <data name="Ocr_Result" xml:space="preserve">
+    <value>Maandishi Yaliyotambuliwa</value>
+  </data>
 </root>

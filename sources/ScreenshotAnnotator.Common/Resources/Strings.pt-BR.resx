@@ -343,4 +343,49 @@ Recursos:
   <data name="Winget_ShortDescription" xml:space="preserve">
     <value>Software de anotação de capturas de tela para Windows e Linux.</value>
   </data>
+  <data name="Selection_Copy" xml:space="preserve">
+    <value>Copiar</value>
+  </data>
+  <data name="Tooltip_Selection_Copy" xml:space="preserve">
+    <value>Copiar área selecionada para a área de transferência</value>
+  </data>
+  <data name="Selection_Delete" xml:space="preserve">
+    <value>Excluir</value>
+  </data>
+  <data name="Tooltip_Selection_Delete" xml:space="preserve">
+    <value>Apagar a área selecionada</value>
+  </data>
+  <data name="Selection_ExtractText" xml:space="preserve">
+    <value>Extrair texto</value>
+  </data>
+  <data name="Tooltip_Selection_ExtractText" xml:space="preserve">
+    <value>Extrair texto da área selecionada usando OCR</value>
+  </data>
+  <data name="Ocr_Title" xml:space="preserve">
+    <value>Extrair texto (OCR)</value>
+  </data>
+  <data name="Ocr_Engine" xml:space="preserve">
+    <value>Mecanismo OCR</value>
+  </data>
+  <data name="Ocr_Languages" xml:space="preserve">
+    <value>Idiomas</value>
+  </data>
+  <data name="Ocr_NoEngines" xml:space="preserve">
+    <value>Nenhum mecanismo OCR disponível</value>
+  </data>
+  <data name="Ocr_NoEnginesHelp" xml:space="preserve">
+    <value>No Windows, nenhum software adicional é necessário. No Linux, instale o Tesseract: sudo apt install tesseract-ocr</value>
+  </data>
+  <data name="Ocr_TesseractLangHint" xml:space="preserve">
+    <value>Para adicionar mais idiomas ao Tesseract, instale pacotes de idiomas: sudo apt install tesseract-ocr-&lt;lang&gt;</value>
+  </data>
+  <data name="Ocr_ExtractButton" xml:space="preserve">
+    <value>Extrair texto</value>
+  </data>
+  <data name="Ocr_Processing" xml:space="preserve">
+    <value>Processando...</value>
+  </data>
+  <data name="Ocr_Result" xml:space="preserve">
+    <value>Texto reconhecido</value>
+  </data>
 </root>

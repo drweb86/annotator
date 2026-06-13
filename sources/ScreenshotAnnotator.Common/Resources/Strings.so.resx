@@ -343,4 +343,49 @@ Sifooyinka:
   <data name="Winget_ShortDescription" xml:space="preserve">
     <value>Software sharaxaadda sawirka shaashada ee Windows iyo Linux.</value>
   </data>
+  <data name="Selection_Copy" xml:space="preserve">
+    <value>Koobiyee</value>
+  </data>
+  <data name="Tooltip_Selection_Copy" xml:space="preserve">
+    <value>Koobiyee aagga la doortay clipboard-ka</value>
+  </data>
+  <data name="Selection_Delete" xml:space="preserve">
+    <value>Tirtir</value>
+  </data>
+  <data name="Tooltip_Selection_Delete" xml:space="preserve">
+    <value>Aagga la doortay caddee</value>
+  </data>
+  <data name="Selection_ExtractText" xml:space="preserve">
+    <value>Qoraalka Soo Saar</value>
+  </data>
+  <data name="Tooltip_Selection_ExtractText" xml:space="preserve">
+    <value>OCR adeegsiga qoraalka aagga la doortay ka soo saar</value>
+  </data>
+  <data name="Ocr_Title" xml:space="preserve">
+    <value>Qoraalka Soo Saar (OCR)</value>
+  </data>
+  <data name="Ocr_Engine" xml:space="preserve">
+    <value>Injinka OCR</value>
+  </data>
+  <data name="Ocr_Languages" xml:space="preserve">
+    <value>Luqadaha</value>
+  </data>
+  <data name="Ocr_NoEngines" xml:space="preserve">
+    <value>Ma jiro injin OCR ah</value>
+  </data>
+  <data name="Ocr_NoEnginesHelp" xml:space="preserve">
+    <value>Windows-ka, software dheeraad ah ma loo baahna. Linux-ka, ku rakib Tesseract: sudo apt install tesseract-ocr</value>
+  </data>
+  <data name="Ocr_TesseractLangHint" xml:space="preserve">
+    <value>Si aad u kudaratid luqado badan Tesseract, ku rakib xidhmooyin luqadeed: sudo apt install tesseract-ocr-&lt;lang&gt;</value>
+  </data>
+  <data name="Ocr_ExtractButton" xml:space="preserve">
+    <value>Qoraalka Soo Saar</value>
+  </data>
+  <data name="Ocr_Processing" xml:space="preserve">
+    <value>La daaweynayaa...</value>
+  </data>
+  <data name="Ocr_Result" xml:space="preserve">
+    <value>Qoraalka La Gartay</value>
+  </data>
 </root>

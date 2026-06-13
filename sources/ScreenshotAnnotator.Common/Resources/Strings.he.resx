@@ -343,4 +343,49 @@
   <data name="Winget_ShortDescription" xml:space="preserve">
     <value>תוכנת הוספת הערות לצילומי מסך עבור Windows ו-Linux.</value>
   </data>
+  <data name="Selection_Copy" xml:space="preserve">
+    <value>העתק</value>
+  </data>
+  <data name="Tooltip_Selection_Copy" xml:space="preserve">
+    <value>העתק את האזור הנבחר ללוח</value>
+  </data>
+  <data name="Selection_Delete" xml:space="preserve">
+    <value>מחק</value>
+  </data>
+  <data name="Tooltip_Selection_Delete" xml:space="preserve">
+    <value>הלבן את האזור הנבחר</value>
+  </data>
+  <data name="Selection_ExtractText" xml:space="preserve">
+    <value>חלץ טקסט</value>
+  </data>
+  <data name="Tooltip_Selection_ExtractText" xml:space="preserve">
+    <value>חלץ טקסט מהאזור הנבחר בעזרת OCR</value>
+  </data>
+  <data name="Ocr_Title" xml:space="preserve">
+    <value>חילוץ טקסט (OCR)</value>
+  </data>
+  <data name="Ocr_Engine" xml:space="preserve">
+    <value>מנוע OCR</value>
+  </data>
+  <data name="Ocr_Languages" xml:space="preserve">
+    <value>שפות</value>
+  </data>
+  <data name="Ocr_NoEngines" xml:space="preserve">
+    <value>אין מנועי OCR זמינים</value>
+  </data>
+  <data name="Ocr_NoEnginesHelp" xml:space="preserve">
+    <value>ב-Windows אין צורך בתוכנה נוספת. ב-Linux התקן את Tesseract: sudo apt install tesseract-ocr</value>
+  </data>
+  <data name="Ocr_TesseractLangHint" xml:space="preserve">
+    <value>להוספת שפות נוספות ל-Tesseract, התקן חבילות שפה: sudo apt install tesseract-ocr-&lt;lang&gt;</value>
+  </data>
+  <data name="Ocr_ExtractButton" xml:space="preserve">
+    <value>חלץ טקסט</value>
+  </data>
+  <data name="Ocr_Processing" xml:space="preserve">
+    <value>מעבד...</value>
+  </data>
+  <data name="Ocr_Result" xml:space="preserve">
+    <value>טקסט שזוהה</value>
+  </data>
 </root>

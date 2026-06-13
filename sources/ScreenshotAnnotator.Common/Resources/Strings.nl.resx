@@ -343,4 +343,49 @@ Functies:
   <data name="Winget_ShortDescription" xml:space="preserve">
     <value>Schermafbeelding-annotatiesoftware voor Windows en Linux.</value>
   </data>
+  <data name="Selection_Copy" xml:space="preserve">
+    <value>Kopiëren</value>
+  </data>
+  <data name="Tooltip_Selection_Copy" xml:space="preserve">
+    <value>Geselecteerd gebied naar klembord kopiëren</value>
+  </data>
+  <data name="Selection_Delete" xml:space="preserve">
+    <value>Verwijderen</value>
+  </data>
+  <data name="Tooltip_Selection_Delete" xml:space="preserve">
+    <value>Geselecteerd gebied wit maken</value>
+  </data>
+  <data name="Selection_ExtractText" xml:space="preserve">
+    <value>Tekst extraheren</value>
+  </data>
+  <data name="Tooltip_Selection_ExtractText" xml:space="preserve">
+    <value>Tekst uit geselecteerd gebied extraheren met OCR</value>
+  </data>
+  <data name="Ocr_Title" xml:space="preserve">
+    <value>Tekst extraheren (OCR)</value>
+  </data>
+  <data name="Ocr_Engine" xml:space="preserve">
+    <value>OCR-engine</value>
+  </data>
+  <data name="Ocr_Languages" xml:space="preserve">
+    <value>Talen</value>
+  </data>
+  <data name="Ocr_NoEngines" xml:space="preserve">
+    <value>Geen OCR-engines beschikbaar</value>
+  </data>
+  <data name="Ocr_NoEnginesHelp" xml:space="preserve">
+    <value>Op Windows is geen extra software nodig. Op Linux Tesseract installeren: sudo apt install tesseract-ocr</value>
+  </data>
+  <data name="Ocr_TesseractLangHint" xml:space="preserve">
+    <value>Om meer talen toe te voegen aan Tesseract, taalpakketten installeren: sudo apt install tesseract-ocr-&lt;lang&gt;</value>
+  </data>
+  <data name="Ocr_ExtractButton" xml:space="preserve">
+    <value>Tekst extraheren</value>
+  </data>
+  <data name="Ocr_Processing" xml:space="preserve">
+    <value>Verwerken...</value>
+  </data>
+  <data name="Ocr_Result" xml:space="preserve">
+    <value>Herkende tekst</value>
+  </data>
 </root>

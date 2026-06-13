@@ -1,8 +1,12 @@
 using System.Linq;
+using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Input;
+using Avalonia.Layout;
 using Avalonia.Media;
 using Avalonia.Platform.Storage;
+using ScreenshotAnnotator.Controls;
+using ScreenshotAnnotator.Resources;
 using ScreenshotAnnotator.ViewModels;
 using ScreenshotAnnotator.Services;
 using System.Runtime.InteropServices;
@@ -11,6 +15,8 @@ namespace ScreenshotAnnotator.Views;
 
 public partial class MainWindow : Window
 {
+    private Border? _selectorFloatingPanel;
+
     public MainWindow()
     {
         InitializeComponent();
@@ -33,9 +39,9 @@ public partial class MainWindow : Window
 
         Loaded += (s, e) =>
         {
-            var editorCanvas = this.FindControl<Controls.ImageEditorCanvas>("EditorCanvas");
+            var editorCanvas = this.FindControl<ImageEditorCanvas>("EditorCanvas");
             var overlayCanvas = this.FindControl<Canvas>("OverlayCanvas");
-            var cutOverlay = this.FindControl<Controls.CutAnimationOverlay>("CutOverlay");
+            var cutOverlay = this.FindControl<CutAnimationOverlay>("CutOverlay");
 
             if (editorCanvas != null && overlayCanvas != null)
             {
@@ -64,6 +70,8 @@ public partial class MainWindow : Window
 
                     viewModel.RecentProjects.Initialize();
 
+                    SetupSelectorFloatingButtons(editorCanvas, overlayCanvas, viewModel);
+
                     var hotkeyService = AllServices.GlobalHotkeyService;
                     hotkeyService.Enabled = viewModel.EnablePrintScreenHotkey;
                     hotkeyService.PrintScreenPressed += async () =>
@@ -72,6 +80,143 @@ public partial class MainWindow : Window
                 }
             }
         };
+    }
+
+    private void SetupSelectorFloatingButtons(
+        ImageEditorCanvas editorCanvas, Canvas overlayCanvas, ImageEditorViewModel viewModel)
+    {
+        var panel = BuildSelectorFloatingPanel(editorCanvas, viewModel);
+        panel.IsVisible = false;
+        overlayCanvas.Children.Add(panel);
+        _selectorFloatingPanel = panel;
+
+        // Hide buttons when user starts a new drag (pointer pressed on canvas)
+        editorCanvas.PointerPressed += (_, _) =>
+        {
+            if (_selectorFloatingPanel != null)
+                _selectorFloatingPanel.IsVisible = false;
+        };
+
+        // Show/hide based on selector rect state
+        editorCanvas.SelectorRectChanged += (_, args) =>
+        {
+            if (_selectorFloatingPanel == null) return;
+
+            if (args.Rect == null)
+            {
+                _selectorFloatingPanel.IsVisible = false;
+                return;
+            }
+
+            var r = args.Rect.Rectangle;
+            // Position below selection (or above if near bottom of image)
+            var imageH = editorCanvas.Image?.PixelSize.Height ?? 0;
+            var buttonH = 40.0;
+            var margin = 8.0;
+            var top = (r.Bottom + margin + buttonH < imageH)
+                ? r.Bottom + margin
+                : r.Top - buttonH - margin;
+            var panelW = 260.0;
+            var left = r.X + (r.Width - panelW) / 2.0;
+
+            Canvas.SetLeft(_selectorFloatingPanel, left);
+            Canvas.SetTop(_selectorFloatingPanel, top);
+            _selectorFloatingPanel.IsVisible = true;
+        };
+    }
+
+    private Border BuildSelectorFloatingPanel(ImageEditorCanvas editorCanvas, ImageEditorViewModel viewModel)
+    {
+        var copyBtn = MakeFloatingButton(
+            Strings.Selection_Copy,
+            Strings.Tooltip_Selection_Copy,
+            "#2D2D30",
+            async () => await viewModel.CopyToClipboardCommand.ExecuteAsync(null));
+
+        var deleteBtn = MakeFloatingButton(
+            Strings.Selection_Delete,
+            Strings.Tooltip_Selection_Delete,
+            "#2D2D30",
+            () =>
+            {
+                editorCanvas.WhiteOutCurrentSelectorArea();
+                if (_selectorFloatingPanel != null)
+                    _selectorFloatingPanel.IsVisible = false;
+            });
+
+        var ocrBtn = MakeFloatingButton(
+            Strings.Selection_ExtractText,
+            Strings.Tooltip_Selection_ExtractText,
+            "#1A3A5C",
+            async () =>
+            {
+                if (_selectorFloatingPanel != null)
+                    _selectorFloatingPanel.IsVisible = false;
+                await viewModel.ExtractTextCommand.ExecuteAsync(null);
+                // Restore visibility if selector still active
+                if (editorCanvas.SelectorRect != null && _selectorFloatingPanel != null)
+                    _selectorFloatingPanel.IsVisible = true;
+            });
+
+        var stack = new StackPanel
+        {
+            Orientation = Orientation.Horizontal,
+            Spacing = 6,
+            Children = { copyBtn, deleteBtn, ocrBtn }
+        };
+
+        var panel = new Border
+        {
+            Background = new SolidColorBrush(Color.FromArgb(220, 30, 30, 30)),
+            CornerRadius = new CornerRadius(6),
+            Padding = new Thickness(8, 6),
+            Opacity = 0.7,
+            Child = stack,
+            BoxShadow = new BoxShadows(new BoxShadow
+            {
+                Blur = 8, OffsetX = 0, OffsetY = 2,
+                Color = Color.FromArgb(160, 0, 0, 0)
+            })
+        };
+
+        panel.PointerEntered += (_, _) => panel.Opacity = 1.0;
+        panel.PointerExited += (_, _) => panel.Opacity = 0.7;
+
+        return panel;
+    }
+
+    private static Button MakeFloatingButton(string label, string tooltip, string bgHex, System.Action action)
+    {
+        var btn = new Button
+        {
+            Content = label,
+            Background = new SolidColorBrush(Color.Parse(bgHex)),
+            Foreground = new SolidColorBrush(Colors.White),
+            BorderThickness = new Thickness(0),
+            CornerRadius = new CornerRadius(4),
+            Padding = new Thickness(10, 5),
+            FontSize = 12
+        };
+        ToolTip.SetTip(btn, tooltip);
+        btn.Click += (_, _) => action();
+        return btn;
+    }
+
+    private static Button MakeFloatingButton(string label, string tooltip, string bgHex, System.Func<System.Threading.Tasks.Task> action)
+    {
+        var btn = new Button
+        {
+            Content = label,
+            Background = new SolidColorBrush(Color.Parse(bgHex)),
+            Foreground = new SolidColorBrush(Colors.White),
+            BorderThickness = new Thickness(0),
+            CornerRadius = new CornerRadius(4),
+            Padding = new Thickness(10, 5),
+            FontSize = 12
+        };
+        ToolTip.SetTip(btn, tooltip);
+        btn.Click += async (_, _) => await action();
+        return btn;
     }
 
     private async void OnKeyDown(object? sender, KeyEventArgs e)

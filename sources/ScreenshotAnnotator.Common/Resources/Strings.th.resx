@@ -343,4 +343,49 @@
   <data name="Winget_ShortDescription" xml:space="preserve">
     <value>ซอฟต์แวร์เพิ่มคำอธิบายประกอบบนภาพหน้าจอสำหรับ Windows และ Linux</value>
   </data>
+  <data name="Selection_Copy" xml:space="preserve">
+    <value>คัดลอก</value>
+  </data>
+  <data name="Tooltip_Selection_Copy" xml:space="preserve">
+    <value>คัดลอกพื้นที่ที่เลือกไปยังคลิปบอร์ด</value>
+  </data>
+  <data name="Selection_Delete" xml:space="preserve">
+    <value>ลบ</value>
+  </data>
+  <data name="Tooltip_Selection_Delete" xml:space="preserve">
+    <value>ทำให้พื้นที่ที่เลือกเป็นสีขาว</value>
+  </data>
+  <data name="Selection_ExtractText" xml:space="preserve">
+    <value>แยกข้อความ</value>
+  </data>
+  <data name="Tooltip_Selection_ExtractText" xml:space="preserve">
+    <value>แยกข้อความจากพื้นที่ที่เลือกด้วย OCR</value>
+  </data>
+  <data name="Ocr_Title" xml:space="preserve">
+    <value>แยกข้อความ (OCR)</value>
+  </data>
+  <data name="Ocr_Engine" xml:space="preserve">
+    <value>เครื่องมือ OCR</value>
+  </data>
+  <data name="Ocr_Languages" xml:space="preserve">
+    <value>ภาษา</value>
+  </data>
+  <data name="Ocr_NoEngines" xml:space="preserve">
+    <value>ไม่มีเครื่องมือ OCR</value>
+  </data>
+  <data name="Ocr_NoEnginesHelp" xml:space="preserve">
+    <value>บน Windows ไม่ต้องการซอฟต์แวร์เพิ่มเติม บน Linux ติดตั้ง Tesseract: sudo apt install tesseract-ocr</value>
+  </data>
+  <data name="Ocr_TesseractLangHint" xml:space="preserve">
+    <value>หากต้องการเพิ่มภาษาสำหรับ Tesseract ให้ติดตั้งแพ็คเกจภาษา: sudo apt install tesseract-ocr-&lt;lang&gt;</value>
+  </data>
+  <data name="Ocr_ExtractButton" xml:space="preserve">
+    <value>แยกข้อความ</value>
+  </data>
+  <data name="Ocr_Processing" xml:space="preserve">
+    <value>กำลังประมวลผล...</value>
+  </data>
+  <data name="Ocr_Result" xml:space="preserve">
+    <value>ข้อความที่รู้จัก</value>
+  </data>
 </root>

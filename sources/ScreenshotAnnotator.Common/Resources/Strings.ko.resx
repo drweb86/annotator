@@ -343,4 +343,49 @@
   <data name="Winget_ShortDescription" xml:space="preserve">
     <value>Windows 및 Linux용 스크린샷 주석 소프트웨어.</value>
   </data>
+  <data name="Selection_Copy" xml:space="preserve">
+    <value>복사</value>
+  </data>
+  <data name="Tooltip_Selection_Copy" xml:space="preserve">
+    <value>선택 영역을 클립보드에 복사</value>
+  </data>
+  <data name="Selection_Delete" xml:space="preserve">
+    <value>삭제</value>
+  </data>
+  <data name="Tooltip_Selection_Delete" xml:space="preserve">
+    <value>선택 영역을 흰색으로 채우기</value>
+  </data>
+  <data name="Selection_ExtractText" xml:space="preserve">
+    <value>텍스트 추출</value>
+  </data>
+  <data name="Tooltip_Selection_ExtractText" xml:space="preserve">
+    <value>OCR을 사용하여 선택 영역에서 텍스트 추출</value>
+  </data>
+  <data name="Ocr_Title" xml:space="preserve">
+    <value>텍스트 추출 (OCR)</value>
+  </data>
+  <data name="Ocr_Engine" xml:space="preserve">
+    <value>OCR 엔진</value>
+  </data>
+  <data name="Ocr_Languages" xml:space="preserve">
+    <value>언어</value>
+  </data>
+  <data name="Ocr_NoEngines" xml:space="preserve">
+    <value>사용 가능한 OCR 엔진이 없습니다</value>
+  </data>
+  <data name="Ocr_NoEnginesHelp" xml:space="preserve">
+    <value>Windows에서는 추가 소프트웨어가 필요하지 않습니다. Linux에서는 Tesseract를 설치하세요: sudo apt install tesseract-ocr</value>
+  </data>
+  <data name="Ocr_TesseractLangHint" xml:space="preserve">
+    <value>Tesseract에 언어를 추가하려면 언어 팩을 설치하세요: sudo apt install tesseract-ocr-&lt;lang&gt;</value>
+  </data>
+  <data name="Ocr_ExtractButton" xml:space="preserve">
+    <value>텍스트 추출</value>
+  </data>
+  <data name="Ocr_Processing" xml:space="preserve">
+    <value>처리 중...</value>
+  </data>
+  <data name="Ocr_Result" xml:space="preserve">
+    <value>인식된 텍스트</value>
+  </data>
 </root>

@@ -343,4 +343,49 @@
   <data name="Winget_ShortDescription" xml:space="preserve">
     <value>نرم‌افزار حاشیه‌نویسی اسکرین‌شات برای ویندوز و لینوکس.</value>
   </data>
+  <data name="Selection_Copy" xml:space="preserve">
+    <value>کپی</value>
+  </data>
+  <data name="Tooltip_Selection_Copy" xml:space="preserve">
+    <value>کپی ناحیه انتخابی به کلیپ‌بورد</value>
+  </data>
+  <data name="Selection_Delete" xml:space="preserve">
+    <value>حذف</value>
+  </data>
+  <data name="Tooltip_Selection_Delete" xml:space="preserve">
+    <value>سفید کردن ناحیه انتخابی</value>
+  </data>
+  <data name="Selection_ExtractText" xml:space="preserve">
+    <value>استخراج متن</value>
+  </data>
+  <data name="Tooltip_Selection_ExtractText" xml:space="preserve">
+    <value>استخراج متن از ناحیه انتخابی با OCR</value>
+  </data>
+  <data name="Ocr_Title" xml:space="preserve">
+    <value>استخراج متن (OCR)</value>
+  </data>
+  <data name="Ocr_Engine" xml:space="preserve">
+    <value>موتور OCR</value>
+  </data>
+  <data name="Ocr_Languages" xml:space="preserve">
+    <value>زبان‌ها</value>
+  </data>
+  <data name="Ocr_NoEngines" xml:space="preserve">
+    <value>هیچ موتور OCR در دسترس نیست</value>
+  </data>
+  <data name="Ocr_NoEnginesHelp" xml:space="preserve">
+    <value>در Windows نیازی به نرم‌افزار اضافی نیست. در Linux، Tesseract را نصب کنید: sudo apt install tesseract-ocr</value>
+  </data>
+  <data name="Ocr_TesseractLangHint" xml:space="preserve">
+    <value>برای افزودن زبان‌های بیشتر به Tesseract، بسته‌های زبان را نصب کنید: sudo apt install tesseract-ocr-&lt;lang&gt;</value>
+  </data>
+  <data name="Ocr_ExtractButton" xml:space="preserve">
+    <value>استخراج متن</value>
+  </data>
+  <data name="Ocr_Processing" xml:space="preserve">
+    <value>در حال پردازش...</value>
+  </data>
+  <data name="Ocr_Result" xml:space="preserve">
+    <value>متن تشخیص داده شده</value>
+  </data>
 </root>

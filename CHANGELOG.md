@@ -1,9 +1,15 @@
 # 2026.06.13
-(unpublished)
 
 ## New Features
 - Each release might have different cat icon.
 - Shape extensibility model (preview). It is possible to define own shapes, and have them separately under application or user special folders.
+- **OCR (Optical Character Recognition)**: When a selection area is active, floating action buttons now appear — Copy, Delete, and Extract Text. Clicking Extract Text opens the OCR window.
+  - **Windows**: Uses the built-in Windows OCR engine (`Windows.Media.Ocr`), available on Windows 10 and 11. No additional software required.
+  - **Windows & Linux**: Tesseract OCR is supported if installed and available in the system PATH.
+  - The engine preference and selected languages are remembered between sessions.
+  - Multiple OCR languages can be selected simultaneously.
+  - Recognized text is displayed in an editable text box for easy copying and minor corrections.
+  - A random cat appears in the OCR window, because why not.
 
 ## Bug Fixes
 - Localize the Desktop/Menu icons.

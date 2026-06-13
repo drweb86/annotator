@@ -343,4 +343,49 @@
   <data name="Winget_ShortDescription" xml:space="preserve">
     <value>Windows および Linux 用のスクリーンショット注釈ソフトウェア。</value>
   </data>
+  <data name="Selection_Copy" xml:space="preserve">
+    <value>コピー</value>
+  </data>
+  <data name="Tooltip_Selection_Copy" xml:space="preserve">
+    <value>選択範囲をクリップボードにコピー</value>
+  </data>
+  <data name="Selection_Delete" xml:space="preserve">
+    <value>削除</value>
+  </data>
+  <data name="Tooltip_Selection_Delete" xml:space="preserve">
+    <value>選択範囲を白く塗りつぶす</value>
+  </data>
+  <data name="Selection_ExtractText" xml:space="preserve">
+    <value>テキスト抽出</value>
+  </data>
+  <data name="Tooltip_Selection_ExtractText" xml:space="preserve">
+    <value>OCRで選択範囲からテキストを抽出</value>
+  </data>
+  <data name="Ocr_Title" xml:space="preserve">
+    <value>テキスト抽出 (OCR)</value>
+  </data>
+  <data name="Ocr_Engine" xml:space="preserve">
+    <value>OCRエンジン</value>
+  </data>
+  <data name="Ocr_Languages" xml:space="preserve">
+    <value>言語</value>
+  </data>
+  <data name="Ocr_NoEngines" xml:space="preserve">
+    <value>利用可能なOCRエンジンがありません</value>
+  </data>
+  <data name="Ocr_NoEnginesHelp" xml:space="preserve">
+    <value>Windowsでは追加ソフトウェアは不要です。LinuxではTesseractをインストールしてください: sudo apt install tesseract-ocr</value>
+  </data>
+  <data name="Ocr_TesseractLangHint" xml:space="preserve">
+    <value>Tesseractに言語を追加するには、言語パックをインストールしてください: sudo apt install tesseract-ocr-&lt;lang&gt;</value>
+  </data>
+  <data name="Ocr_ExtractButton" xml:space="preserve">
+    <value>テキスト抽出</value>
+  </data>
+  <data name="Ocr_Processing" xml:space="preserve">
+    <value>処理中...</value>
+  </data>
+  <data name="Ocr_Result" xml:space="preserve">
+    <value>認識されたテキスト</value>
+  </data>
 </root>

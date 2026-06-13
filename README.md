@@ -14,6 +14,7 @@ Screenshot annotator software for Windows and Linux.
 - **Highlighter** - Highlights areas of interest
 - **Project Management** - Automatic project saving and preview thumbnails
 - **Cross-Platform** - Works on both Windows and Linux
+- **OCR** via Teserract and Windows.Media.OCR.
 
 ## Screenshots
 

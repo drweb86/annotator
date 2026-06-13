@@ -343,4 +343,49 @@ Xususiyatlar:
   <data name="Winget_ShortDescription" xml:space="preserve">
     <value>Windows va Linux uchun ekran tasviri izohlash dasturi.</value>
   </data>
+  <data name="Selection_Copy" xml:space="preserve">
+    <value>Nusxalash</value>
+  </data>
+  <data name="Tooltip_Selection_Copy" xml:space="preserve">
+    <value>Tanlangan hududni buferga nusxalash</value>
+  </data>
+  <data name="Selection_Delete" xml:space="preserve">
+    <value>O'chirish</value>
+  </data>
+  <data name="Tooltip_Selection_Delete" xml:space="preserve">
+    <value>Tanlangan hududni oqartirish</value>
+  </data>
+  <data name="Selection_ExtractText" xml:space="preserve">
+    <value>Matnni ajratib olish</value>
+  </data>
+  <data name="Tooltip_Selection_ExtractText" xml:space="preserve">
+    <value>OCR yordamida tanlangan hududdan matnni ajratib olish</value>
+  </data>
+  <data name="Ocr_Title" xml:space="preserve">
+    <value>Matnni ajratib olish (OCR)</value>
+  </data>
+  <data name="Ocr_Engine" xml:space="preserve">
+    <value>OCR mexanizmi</value>
+  </data>
+  <data name="Ocr_Languages" xml:space="preserve">
+    <value>Tillar</value>
+  </data>
+  <data name="Ocr_NoEngines" xml:space="preserve">
+    <value>OCR mexanizmlari mavjud emas</value>
+  </data>
+  <data name="Ocr_NoEnginesHelp" xml:space="preserve">
+    <value>Windows da qo'shimcha dastur kerak emas. Linux da Tesseract o'rnating: sudo apt install tesseract-ocr</value>
+  </data>
+  <data name="Ocr_TesseractLangHint" xml:space="preserve">
+    <value>Tesseract uchun ko'proq til qo'shish uchun til paketlarini o'rnating: sudo apt install tesseract-ocr-&lt;lang&gt;</value>
+  </data>
+  <data name="Ocr_ExtractButton" xml:space="preserve">
+    <value>Matnni ajratib olish</value>
+  </data>
+  <data name="Ocr_Processing" xml:space="preserve">
+    <value>Qayta ishlanmoqda...</value>
+  </data>
+  <data name="Ocr_Result" xml:space="preserve">
+    <value>Tanilgan matn</value>
+  </data>
 </root>

@@ -343,4 +343,49 @@
   <data name="Winget_ShortDescription" xml:space="preserve">
     <value>Програма для анотації знімків екрана для Windows і Linux.</value>
   </data>
+  <data name="Selection_Copy" xml:space="preserve">
+    <value>Копіювати</value>
+  </data>
+  <data name="Tooltip_Selection_Copy" xml:space="preserve">
+    <value>Копіювати вибрану область до буфера обміну</value>
+  </data>
+  <data name="Selection_Delete" xml:space="preserve">
+    <value>Видалити</value>
+  </data>
+  <data name="Tooltip_Selection_Delete" xml:space="preserve">
+    <value>Закрасити вибрану область білим</value>
+  </data>
+  <data name="Selection_ExtractText" xml:space="preserve">
+    <value>Витягти текст</value>
+  </data>
+  <data name="Tooltip_Selection_ExtractText" xml:space="preserve">
+    <value>Витягти текст з вибраної області за допомогою OCR</value>
+  </data>
+  <data name="Ocr_Title" xml:space="preserve">
+    <value>Витягнення тексту (OCR)</value>
+  </data>
+  <data name="Ocr_Engine" xml:space="preserve">
+    <value>Рушій OCR</value>
+  </data>
+  <data name="Ocr_Languages" xml:space="preserve">
+    <value>Мови</value>
+  </data>
+  <data name="Ocr_NoEngines" xml:space="preserve">
+    <value>Немає доступних рушіїв OCR</value>
+  </data>
+  <data name="Ocr_NoEnginesHelp" xml:space="preserve">
+    <value>У Windows додаткове ПЗ не потрібне. У Linux встановіть Tesseract: sudo apt install tesseract-ocr</value>
+  </data>
+  <data name="Ocr_TesseractLangHint" xml:space="preserve">
+    <value>Для додавання мов у Tesseract встановіть мовні пакети: sudo apt install tesseract-ocr-&lt;lang&gt;</value>
+  </data>
+  <data name="Ocr_ExtractButton" xml:space="preserve">
+    <value>Витягти текст</value>
+  </data>
+  <data name="Ocr_Processing" xml:space="preserve">
+    <value>Обробка...</value>
+  </data>
+  <data name="Ocr_Result" xml:space="preserve">
+    <value>Розпізнаний текст</value>
+  </data>
 </root>

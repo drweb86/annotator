@@ -343,4 +343,49 @@ Funkciók:
   <data name="Winget_ShortDescription" xml:space="preserve">
     <value>Képernyőkép-annotáló szoftver Windows és Linux rendszerekhez.</value>
   </data>
+  <data name="Selection_Copy" xml:space="preserve">
+    <value>Másolás</value>
+  </data>
+  <data name="Tooltip_Selection_Copy" xml:space="preserve">
+    <value>A kijelölt terület másolása a vágólapra</value>
+  </data>
+  <data name="Selection_Delete" xml:space="preserve">
+    <value>Törlés</value>
+  </data>
+  <data name="Tooltip_Selection_Delete" xml:space="preserve">
+    <value>A kijelölt terület fehérítése</value>
+  </data>
+  <data name="Selection_ExtractText" xml:space="preserve">
+    <value>Szöveg kinyerése</value>
+  </data>
+  <data name="Tooltip_Selection_ExtractText" xml:space="preserve">
+    <value>Szöveg kinyerése a kijelölt területről OCR segítségével</value>
+  </data>
+  <data name="Ocr_Title" xml:space="preserve">
+    <value>Szöveg kinyerése (OCR)</value>
+  </data>
+  <data name="Ocr_Engine" xml:space="preserve">
+    <value>OCR motor</value>
+  </data>
+  <data name="Ocr_Languages" xml:space="preserve">
+    <value>Nyelvek</value>
+  </data>
+  <data name="Ocr_NoEngines" xml:space="preserve">
+    <value>Nem érhető el OCR motor</value>
+  </data>
+  <data name="Ocr_NoEnginesHelp" xml:space="preserve">
+    <value>Windows alatt nem szükséges extra szoftver. Linux alatt telepítse a Tesseract-ot: sudo apt install tesseract-ocr</value>
+  </data>
+  <data name="Ocr_TesseractLangHint" xml:space="preserve">
+    <value>További nyelvek hozzáadásához a Tesseract-hoz, telepítse a nyelvi csomagokat: sudo apt install tesseract-ocr-&lt;lang&gt;</value>
+  </data>
+  <data name="Ocr_ExtractButton" xml:space="preserve">
+    <value>Szöveg kinyerése</value>
+  </data>
+  <data name="Ocr_Processing" xml:space="preserve">
+    <value>Feldolgozás...</value>
+  </data>
+  <data name="Ocr_Result" xml:space="preserve">
+    <value>Felismert szöveg</value>
+  </data>
 </root>

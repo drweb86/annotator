@@ -343,4 +343,49 @@ Ciri-ciri:
   <data name="Winget_ShortDescription" xml:space="preserve">
     <value>Perisian anotasi tangkapan skrin untuk Windows dan Linux.</value>
   </data>
+  <data name="Selection_Copy" xml:space="preserve">
+    <value>Salin</value>
+  </data>
+  <data name="Tooltip_Selection_Copy" xml:space="preserve">
+    <value>Salin kawasan yang dipilih ke papan keratan</value>
+  </data>
+  <data name="Selection_Delete" xml:space="preserve">
+    <value>Padam</value>
+  </data>
+  <data name="Tooltip_Selection_Delete" xml:space="preserve">
+    <value>Putihkan kawasan yang dipilih</value>
+  </data>
+  <data name="Selection_ExtractText" xml:space="preserve">
+    <value>Ekstrak Teks</value>
+  </data>
+  <data name="Tooltip_Selection_ExtractText" xml:space="preserve">
+    <value>Ekstrak teks dari kawasan yang dipilih menggunakan OCR</value>
+  </data>
+  <data name="Ocr_Title" xml:space="preserve">
+    <value>Ekstrak Teks (OCR)</value>
+  </data>
+  <data name="Ocr_Engine" xml:space="preserve">
+    <value>Enjin OCR</value>
+  </data>
+  <data name="Ocr_Languages" xml:space="preserve">
+    <value>Bahasa</value>
+  </data>
+  <data name="Ocr_NoEngines" xml:space="preserve">
+    <value>Tiada enjin OCR tersedia</value>
+  </data>
+  <data name="Ocr_NoEnginesHelp" xml:space="preserve">
+    <value>Di Windows, tiada perisian tambahan diperlukan. Di Linux, pasang Tesseract: sudo apt install tesseract-ocr</value>
+  </data>
+  <data name="Ocr_TesseractLangHint" xml:space="preserve">
+    <value>Untuk menambah lebih banyak bahasa untuk Tesseract, pasang pek bahasa: sudo apt install tesseract-ocr-&lt;lang&gt;</value>
+  </data>
+  <data name="Ocr_ExtractButton" xml:space="preserve">
+    <value>Ekstrak Teks</value>
+  </data>
+  <data name="Ocr_Processing" xml:space="preserve">
+    <value>Memproses...</value>
+  </data>
+  <data name="Ocr_Result" xml:space="preserve">
+    <value>Teks yang Dikenali</value>
+  </data>
 </root>

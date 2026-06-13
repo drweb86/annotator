@@ -25,6 +25,9 @@ public class ImageEditorCanvas : Control
     // If nobody subscribes the cut is executed immediately (fallback).
     public event EventHandler<CutRequestedEventArgs>? CutRequested;
 
+    /// <summary>Raised when the selector rectangle is created, completed after a drag, or cleared.</summary>
+    public event EventHandler<SelectorRectChangedEventArgs>? SelectorRectChanged;
+
     private bool _pendingCutIsVertical;
     private double _pendingCutStart;
     private double _pendingCutEnd;
@@ -217,6 +220,15 @@ public class ImageEditorCanvas : Control
     {
         _currentSelectorRect = null;
         InvalidateVisual();
+        SelectorRectChanged?.Invoke(this, new SelectorRectChangedEventArgs(null));
+    }
+
+    /// <summary>White-outs the area covered by the current selector rectangle, then clears the selector.</summary>
+    public void WhiteOutCurrentSelectorArea()
+    {
+        if (_currentSelectorRect == null) return;
+        WhiteOutImageArea(_currentSelectorRect.Rectangle);
+        ClearSelector();
     }
 
     private void OnDoubleTapped(object? sender, TappedEventArgs e)
@@ -525,6 +537,15 @@ public class ImageEditorCanvas : Control
             return;
         }
 
+        if (AppTool == AppToolKind.Selector && _currentSelectorRect != null)
+        {
+            var r = _currentSelectorRect.Rectangle;
+            if (r.Width > 5 && r.Height > 5)
+                SelectorRectChanged?.Invoke(this, new SelectorRectChangedEventArgs(_currentSelectorRect));
+            else
+                ClearSelector();
+        }
+
         if (!string.IsNullOrEmpty(ActiveShapeToolId) && _currentShape != null)
         {
             var plugin = ShapeRegistry.GetRequired(ActiveShapeToolId);
@@ -627,6 +648,7 @@ public class ImageEditorCanvas : Control
                 Rectangle = new Rect(0, 0, Image.PixelSize.Width, Image.PixelSize.Height)
             };
             InvalidateVisual();
+            SelectorRectChanged?.Invoke(this, new SelectorRectChangedEventArgs(_currentSelectorRect));
             e.Handled = true;
             return;
         }
@@ -990,4 +1012,9 @@ public sealed class CutRequestedEventArgs(bool isVertical, double start, double 
     public bool   IsVertical { get; } = isVertical;
     public double Start      { get; } = start;
     public double End        { get; } = end;
+}
+
+public sealed class SelectorRectChangedEventArgs(SelectorRectangle? rect) : EventArgs
+{
+    public SelectorRectangle? Rect { get; } = rect;
 }

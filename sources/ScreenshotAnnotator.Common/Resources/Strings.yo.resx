@@ -343,4 +343,49 @@ Awọn ẹya:
   <data name="Winget_ShortDescription" xml:space="preserve">
     <value>Sọfitiwia fun fifọwọsi awọn aworan iboju fun Windows ati Linux.</value>
   </data>
+  <data name="Selection_Copy" xml:space="preserve">
+    <value>Daakọ</value>
+  </data>
+  <data name="Tooltip_Selection_Copy" xml:space="preserve">
+    <value>Daakọ agbegbe ti a yan si clipboard</value>
+  </data>
+  <data name="Selection_Delete" xml:space="preserve">
+    <value>Pa</value>
+  </data>
+  <data name="Tooltip_Selection_Delete" xml:space="preserve">
+    <value>Jẹ ki agbegbe ti a yan di funfun</value>
+  </data>
+  <data name="Selection_ExtractText" xml:space="preserve">
+    <value>Fa Ọrọ Jade</value>
+  </data>
+  <data name="Tooltip_Selection_ExtractText" xml:space="preserve">
+    <value>Fa ọrọ jade lati agbegbe ti a yan nipa lilo OCR</value>
+  </data>
+  <data name="Ocr_Title" xml:space="preserve">
+    <value>Fa Ọrọ Jade (OCR)</value>
+  </data>
+  <data name="Ocr_Engine" xml:space="preserve">
+    <value>Ẹrọ OCR</value>
+  </data>
+  <data name="Ocr_Languages" xml:space="preserve">
+    <value>Awọn ede</value>
+  </data>
+  <data name="Ocr_NoEngines" xml:space="preserve">
+    <value>Ko si ẹrọ OCR ti o wa</value>
+  </data>
+  <data name="Ocr_NoEnginesHelp" xml:space="preserve">
+    <value>Lori Windows, ko si sọfitiwia afikun ti o nilo. Lori Linux, fi Tesseract sii: sudo apt install tesseract-ocr</value>
+  </data>
+  <data name="Ocr_TesseractLangHint" xml:space="preserve">
+    <value>Lati fi awọn ede sii fun Tesseract, fi awọn idii ede sii: sudo apt install tesseract-ocr-&lt;lang&gt;</value>
+  </data>
+  <data name="Ocr_ExtractButton" xml:space="preserve">
+    <value>Fa Ọrọ Jade</value>
+  </data>
+  <data name="Ocr_Processing" xml:space="preserve">
+    <value>N ṣe iṣẹ...</value>
+  </data>
+  <data name="Ocr_Result" xml:space="preserve">
+    <value>Ọrọ Ti A Mọ</value>
+  </data>
 </root>

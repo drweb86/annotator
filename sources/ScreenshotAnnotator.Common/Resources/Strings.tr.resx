@@ -343,4 +343,49 @@ Lütfen şunlardan birini yapın:
   <data name="Winget_ShortDescription" xml:space="preserve">
     <value>Windows ve Linux için ekran görüntüsü notlandırma yazılımı.</value>
   </data>
+  <data name="Selection_Copy" xml:space="preserve">
+    <value>Kopyala</value>
+  </data>
+  <data name="Tooltip_Selection_Copy" xml:space="preserve">
+    <value>Seçilen alanı panoya kopyala</value>
+  </data>
+  <data name="Selection_Delete" xml:space="preserve">
+    <value>Sil</value>
+  </data>
+  <data name="Tooltip_Selection_Delete" xml:space="preserve">
+    <value>Seçilen alanı beyaz yap</value>
+  </data>
+  <data name="Selection_ExtractText" xml:space="preserve">
+    <value>Metin Çıkar</value>
+  </data>
+  <data name="Tooltip_Selection_ExtractText" xml:space="preserve">
+    <value>OCR ile seçilen alandan metin çıkar</value>
+  </data>
+  <data name="Ocr_Title" xml:space="preserve">
+    <value>Metin Çıkarma (OCR)</value>
+  </data>
+  <data name="Ocr_Engine" xml:space="preserve">
+    <value>OCR Motoru</value>
+  </data>
+  <data name="Ocr_Languages" xml:space="preserve">
+    <value>Diller</value>
+  </data>
+  <data name="Ocr_NoEngines" xml:space="preserve">
+    <value>Kullanılabilir OCR motoru yok</value>
+  </data>
+  <data name="Ocr_NoEnginesHelp" xml:space="preserve">
+    <value>Windows'ta ek yazılım gerekmez. Linux'ta Tesseract kurun: sudo apt install tesseract-ocr</value>
+  </data>
+  <data name="Ocr_TesseractLangHint" xml:space="preserve">
+    <value>Tesseract'a daha fazla dil eklemek için dil paketleri kurun: sudo apt install tesseract-ocr-&lt;lang&gt;</value>
+  </data>
+  <data name="Ocr_ExtractButton" xml:space="preserve">
+    <value>Metin Çıkar</value>
+  </data>
+  <data name="Ocr_Processing" xml:space="preserve">
+    <value>İşleniyor...</value>
+  </data>
+  <data name="Ocr_Result" xml:space="preserve">
+    <value>Tanınan Metin</value>
+  </data>
 </root>

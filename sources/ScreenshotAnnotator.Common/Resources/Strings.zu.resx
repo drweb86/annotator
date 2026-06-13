@@ -343,4 +343,49 @@ Izici:
   <data name="Winget_ShortDescription" xml:space="preserve">
     <value>Isoftware yokuchaza izithombe zesikrini ye-Windows ne-Linux.</value>
   </data>
+  <data name="Selection_Copy" xml:space="preserve">
+    <value>Kopisha</value>
+  </data>
+  <data name="Tooltip_Selection_Copy" xml:space="preserve">
+    <value>Kopisha indawo ekhethiwe kuya ku-clipboard</value>
+  </data>
+  <data name="Selection_Delete" xml:space="preserve">
+    <value>Susa</value>
+  </data>
+  <data name="Tooltip_Selection_Delete" xml:space="preserve">
+    <value>Yenza indawo ekhethiwe ibe mhlophe</value>
+  </data>
+  <data name="Selection_ExtractText" xml:space="preserve">
+    <value>Khipha Umbhalo</value>
+  </data>
+  <data name="Tooltip_Selection_ExtractText" xml:space="preserve">
+    <value>Khipha umbhalo wendawo ekhethiwe usebenzisa i-OCR</value>
+  </data>
+  <data name="Ocr_Title" xml:space="preserve">
+    <value>Khipha Umbhalo (OCR)</value>
+  </data>
+  <data name="Ocr_Engine" xml:space="preserve">
+    <value>Injini ye-OCR</value>
+  </data>
+  <data name="Ocr_Languages" xml:space="preserve">
+    <value>Izilimi</value>
+  </data>
+  <data name="Ocr_NoEngines" xml:space="preserve">
+    <value>Ayikho injini ye-OCR etholakalayo</value>
+  </data>
+  <data name="Ocr_NoEnginesHelp" xml:space="preserve">
+    <value>Ku-Windows, akudingeki isoftware eyengeziwe. Ku-Linux, faka i-Tesseract: sudo apt install tesseract-ocr</value>
+  </data>
+  <data name="Ocr_TesseractLangHint" xml:space="preserve">
+    <value>Ukwengeza izilimi eziningi ku-Tesseract, faka amaphepha ezilimi: sudo apt install tesseract-ocr-&lt;lang&gt;</value>
+  </data>
+  <data name="Ocr_ExtractButton" xml:space="preserve">
+    <value>Khipha Umbhalo</value>
+  </data>
+  <data name="Ocr_Processing" xml:space="preserve">
+    <value>Iyasebenza...</value>
+  </data>
+  <data name="Ocr_Result" xml:space="preserve">
+    <value>Umbhalo Owaziwa</value>
+  </data>
 </root>
