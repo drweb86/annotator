@@ -1,5 +1,4 @@
 # 2026.07.14
-(unpublished)
 
 ## Changes
 - Update some libraries.
