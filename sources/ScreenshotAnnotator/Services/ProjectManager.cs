@@ -72,7 +72,7 @@ public class ProjectManager(IFileSystem fileSystem) : IProjectManager
 
         var pngRenderedImageFile = GetRenderedImageFile(projectPath);
         await using (var pngFile = fileSystem.CreateFile(pngRenderedImageFile))
-            renderedImage.Save(pngFile);
+            renderedImage.SavePng(pngFile);
 
         return CreateProjectFileInfo(projectPath);
     }
@@ -105,7 +105,7 @@ public class ProjectManager(IFileSystem fileSystem) : IProjectManager
             if (fileSystem.FileExists(pngPath))
                 fileSystem.FileDelete(pngPath);
             await using (var pngFileStream = fileSystem.CreateFile(pngPath))
-                renderedImage.Save(pngFileStream);
+                renderedImage.SavePng(pngFileStream);
         }
 
         foreach (var shape in shapes)

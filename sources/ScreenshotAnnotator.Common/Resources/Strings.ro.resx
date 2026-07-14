@@ -379,6 +379,9 @@ Funcții:
   <data name="Ocr_TesseractLangHint" xml:space="preserve">
     <value>Pentru a adăuga mai multe limbi în Tesseract, instalați pachete de limbă: sudo apt install tesseract-ocr-&lt;lang&gt;</value>
   </data>
+  <data name="Ocr_WindowsTesseractHint" xml:space="preserve">
+    <value>OCR-ul integrat din Windows poate rata text. Screenshot Annotator acceptă și Tesseract OCR, care extrage adesea textul mai bine. Instalați manual Tesseract pentru a-l folosi aici.</value>
+  </data>
   <data name="Ocr_ExtractButton" xml:space="preserve">
     <value>Extrage text</value>
   </data>

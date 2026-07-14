@@ -379,6 +379,9 @@ Sifooyinka:
   <data name="Ocr_TesseractLangHint" xml:space="preserve">
     <value>Si aad u kudaratid luqado badan Tesseract, ku rakib xidhmooyin luqadeed: sudo apt install tesseract-ocr-&lt;lang&gt;</value>
   </data>
+  <data name="Ocr_WindowsTesseractHint" xml:space="preserve">
+    <value>OCR-ka ku dhex jira Windows wuu seegi karaa qoraal. Screenshot Annotator sidoo kale wuxuu taageeraa Tesseract OCR, oo inta badan si ka fiican u soo saara qoraalka. Ku rakib Tesseract gacanta si aad halkan ugu isticmaasho.</value>
+  </data>
   <data name="Ocr_ExtractButton" xml:space="preserve">
     <value>Qoraalka Soo Saar</value>
   </data>

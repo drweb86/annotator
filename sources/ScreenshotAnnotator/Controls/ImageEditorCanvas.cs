@@ -7,6 +7,7 @@ using Avalonia.Media.Imaging;
 using Avalonia.VisualTree;
 using ScreenshotAnnotator.Interop.Shapes.Common;
 using ScreenshotAnnotator.Interop.Shapes;
+using ScreenshotAnnotator.Helpers;
 using ScreenshotAnnotator.Models;
 using ScreenshotAnnotator.Services;
 using ScreenshotAnnotator.ViewModels;
@@ -823,7 +824,7 @@ public class ImageEditorCanvas : Control
         }
 
         using var stream = new MemoryStream();
-        blurred.Save(stream);
+        blurred.SavePng(stream);
         stream.Position = 0;
         return new Bitmap(stream);
     }
@@ -848,7 +849,7 @@ public class ImageEditorCanvas : Control
             }
 
             using var stream = new MemoryStream();
-            newImage.Save(stream);
+            newImage.SavePng(stream);
             stream.Position = 0;
             Image = new Bitmap(stream);
         }
@@ -901,7 +902,7 @@ public class ImageEditorCanvas : Control
             }
 
             using var stream = new MemoryStream();
-            newImage.Save(stream);
+            newImage.SavePng(stream);
             stream.Position = 0;
             Image = new Bitmap(stream);
         }
@@ -954,7 +955,7 @@ public class ImageEditorCanvas : Control
             }
 
             using var stream = new MemoryStream();
-            newImage.Save(stream);
+            newImage.SavePng(stream);
             stream.Position = 0;
             Image = new Bitmap(stream);
         }

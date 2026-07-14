@@ -379,6 +379,9 @@ Funkcije:
   <data name="Ocr_TesseractLangHint" xml:space="preserve">
     <value>За додавање більше језика у Tesseract, инсталирајте језичке пакете: sudo apt install tesseract-ocr-&lt;lang&gt;</value>
   </data>
+  <data name="Ocr_WindowsTesseractHint" xml:space="preserve">
+    <value>Уграђени Windows OCR може да пропусти текст. Screenshot Annotator такође подржава Tesseract OCR, који често боље издваја текст. Инсталирајте Tesseract ручно да бисте га користили овде.</value>
+  </data>
   <data name="Ocr_ExtractButton" xml:space="preserve">
     <value>Извади текст</value>
   </data>

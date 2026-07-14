@@ -379,6 +379,9 @@ Vipengele:
   <data name="Ocr_TesseractLangHint" xml:space="preserve">
     <value>Ili kuongeza lugha zaidi kwa Tesseract, sakinisha vifurushi vya lugha: sudo apt install tesseract-ocr-&lt;lang&gt;</value>
   </data>
+  <data name="Ocr_WindowsTesseractHint" xml:space="preserve">
+    <value>OCR iliyojengwa ndani ya Windows inaweza kukosa maandishi. Screenshot Annotator pia inaunga mkono Tesseract OCR, ambayo mara nyingi hutoa maandishi vizuri zaidi. Sakinisha Tesseract mwenyewe ili kuitumia hapa.</value>
+  </data>
   <data name="Ocr_ExtractButton" xml:space="preserve">
     <value>Toa Maandishi</value>
   </data>

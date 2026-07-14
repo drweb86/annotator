@@ -376,6 +376,9 @@
   <data name="Ocr_TesseractLangHint" xml:space="preserve">
     <value>Tesseract-এ আরো ভাষা যোগ করতে ভাষা প্যাক ইনস্টল করুন: sudo apt install tesseract-ocr-&lt;lang&gt;</value>
   </data>
+  <data name="Ocr_WindowsTesseractHint" xml:space="preserve">
+    <value>Windows-এর বিল্ট-ইন OCR কিছু লেখা মিস করতে পারে। Screenshot Annotator Tesseract OCR-ও সমর্থন করে, যা প্রায়ই আরও ভালোভাবে লেখা বের করে। এখানে ব্যবহার করতে Tesseract ম্যানুয়ালি ইনস্টল করুন।</value>
+  </data>
   <data name="Ocr_ExtractButton" xml:space="preserve">
     <value>টেক্সট বের করুন</value>
   </data>

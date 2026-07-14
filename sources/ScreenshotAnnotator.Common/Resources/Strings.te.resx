@@ -376,6 +376,9 @@
   <data name="Ocr_TesseractLangHint" xml:space="preserve">
     <value>Tesseract కోసం మరిన్ని భాషలు జోడించడానికి భాషా ప్యాక్‌లు ఇన్‌స్టాల్ చేయండి: sudo apt install tesseract-ocr-&lt;lang&gt;</value>
   </data>
+  <data name="Ocr_WindowsTesseractHint" xml:space="preserve">
+    <value>Windows లోని అంతర్నిర్మిత OCR కొంత వచనాన్ని మిస్ కావచ్చు. Screenshot Annotator Tesseract OCR ను కూడా మద్దతు ఇస్తుంది, ఇది తరచుగా వచనాన్ని మరింత బాగా తీస్తుంది. ఇక్కడ ఉపయోగించడానికి Tesseract ను మాన్యువల్‌గా ఇన్‌స్టాల్ చేయండి.</value>
+  </data>
   <data name="Ocr_ExtractButton" xml:space="preserve">
     <value>వచనాన్ని వెలికితీయి</value>
   </data>

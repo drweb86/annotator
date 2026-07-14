@@ -1,6 +1,7 @@
 ﻿using Avalonia;
 using Avalonia.Media.Imaging;
 using ScreenshotAnnotator.Models;
+using ScreenshotAnnotator.Helpers;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -33,13 +34,13 @@ internal static class ProjectRenderer
             }
 
             using var previewStream = new MemoryStream();
-            scaled.Save(previewStream);
+            scaled.SavePng(previewStream);
             return Convert.ToBase64String(previewStream.ToArray());
         }
 
         using (var previewStream = new MemoryStream())
         {
-            renderedImage.Save(previewStream);
+            renderedImage.SavePng(previewStream);
             return Convert.ToBase64String(previewStream.ToArray());
         }
     }

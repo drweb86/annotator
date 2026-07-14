@@ -379,6 +379,9 @@ Ciri-ciri:
   <data name="Ocr_TesseractLangHint" xml:space="preserve">
     <value>Untuk menambah lebih banyak bahasa untuk Tesseract, pasang pek bahasa: sudo apt install tesseract-ocr-&lt;lang&gt;</value>
   </data>
+  <data name="Ocr_WindowsTesseractHint" xml:space="preserve">
+    <value>OCR terbina dalam Windows boleh terlepas teks. Screenshot Annotator juga menyokong Tesseract OCR, yang sering mengekstrak teks dengan lebih baik. Pasang Tesseract secara manual untuk menggunakannya di sini.</value>
+  </data>
   <data name="Ocr_ExtractButton" xml:space="preserve">
     <value>Ekstrak Teks</value>
   </data>

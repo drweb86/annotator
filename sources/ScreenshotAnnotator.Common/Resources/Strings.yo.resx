@@ -379,6 +379,9 @@ Awọn ẹya:
   <data name="Ocr_TesseractLangHint" xml:space="preserve">
     <value>Lati fi awọn ede sii fun Tesseract, fi awọn idii ede sii: sudo apt install tesseract-ocr-&lt;lang&gt;</value>
   </data>
+  <data name="Ocr_WindowsTesseractHint" xml:space="preserve">
+    <value>OCR tí Windows ní nínú rẹ̀ lè má rí díẹ̀ ninu ọrọ. Screenshot Annotator tún ṣe atilẹyin Tesseract OCR, tí ó sábà máa ń yọ ọrọ jáde dáadáa ju. Fi Tesseract sílẹ̀ fúnra rẹ lati lo o níbí.</value>
+  </data>
   <data name="Ocr_ExtractButton" xml:space="preserve">
     <value>Fa Ọrọ Jade</value>
   </data>

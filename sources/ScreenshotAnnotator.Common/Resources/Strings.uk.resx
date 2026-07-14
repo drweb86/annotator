@@ -379,6 +379,9 @@
   <data name="Ocr_TesseractLangHint" xml:space="preserve">
     <value>Для додавання мов у Tesseract встановіть мовні пакети: sudo apt install tesseract-ocr-&lt;lang&gt;</value>
   </data>
+  <data name="Ocr_WindowsTesseractHint" xml:space="preserve">
+    <value>Вбудований OCR Windows може пропускати текст. Screenshot Annotator також підтримує Tesseract OCR, який часто краще витягує текст. Установіть Tesseract вручну, щоб використовувати його тут.</value>
+  </data>
   <data name="Ocr_ExtractButton" xml:space="preserve">
     <value>Витягти текст</value>
   </data>

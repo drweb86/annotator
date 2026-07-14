@@ -379,6 +379,9 @@ Fasaloli:
   <data name="Ocr_TesseractLangHint" xml:space="preserve">
     <value>Don ƙara ƙarin harsunan ga Tesseract, shigar da fakitin harshe: sudo apt install tesseract-ocr-&lt;lang&gt;</value>
   </data>
+  <data name="Ocr_WindowsTesseractHint" xml:space="preserve">
+    <value>OCR na Windows da aka gina a ciki na iya rasa wasu rubutu. Screenshot Annotator kuma yana goyon bayan Tesseract OCR, wanda sau da yawa yana fitar da rubutu da kyau. Shigar da Tesseract da hannu don amfani da shi a nan.</value>
+  </data>
   <data name="Ocr_ExtractButton" xml:space="preserve">
     <value>Fitar da Rubutu</value>
   </data>

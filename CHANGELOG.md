@@ -1,8 +1,12 @@
-# 2026.07.13
+# 2026.07.14
 (unpublished)
 
 ## Changes
 - Update some libraries.
+- Warning if Tesseract is missing during OCR.
+
+## Bug Fixes
+- It was not possible to see OCR capabilities during all area selection and small text selection.
 
 # 2026.06.14
 

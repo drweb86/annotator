@@ -111,6 +111,17 @@
               </ComboBox>
             </StackPanel>
 
+            <!-- Windows OCR recommendation -->
+            <Border IsVisible="{Binding ShowWindowsTesseractHint}"
+                    Background="#3A2E12"
+                    CornerRadius="4"
+                    Padding="10,6">
+              <TextBlock Text="{local:Localize Ocr_WindowsTesseractHint}"
+                         TextWrapping="Wrap"
+                         Foreground="#FFD54F"
+                         FontSize="12"/>
+            </Border>
+
             <!-- Language selection -->
             <StackPanel IsVisible="{Binding ShowLanguages}" Spacing="6">
               <TextBlock Text="{local:Localize Ocr_Languages}" FontWeight="SemiBold"/>

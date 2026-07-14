@@ -3,6 +3,7 @@ using Avalonia.Input;
 using Avalonia.Input.Platform;
 using Avalonia.Media.Imaging;
 using NLog;
+using ScreenshotAnnotator.Helpers;
 using ScreenshotAnnotator.Interop.Serialization;
 using ScreenshotAnnotator.Models;
 using System;
@@ -68,7 +69,7 @@ internal class ClipboardService: IClipboardService
     private static async Task CopyImage(IClipboard clipboard, RenderTargetBitmap image)
     {
         using var stream = new MemoryStream();
-        image.Save(stream);
+        image.SavePng(stream);
         stream.Position = 0;
 
         await clipboard.SetValueAsync(DataFormat.Bitmap, new Bitmap(stream));

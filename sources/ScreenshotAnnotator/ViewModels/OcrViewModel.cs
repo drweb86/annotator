@@ -50,6 +50,8 @@ public partial class OcrViewModel : ViewModelBase
     [ObservableProperty]
     private bool _showTesseractHint;
 
+    public bool ShowWindowsTesseractHint => OperatingSystem.IsWindows();
+
     [ObservableProperty]
     [NotifyPropertyChangedFor(nameof(CanExtract))]
     private bool _isProcessing;
@@ -103,7 +105,7 @@ public partial class OcrViewModel : ViewModelBase
         if (value == null) return;
 
         ShowLanguages = value.SupportsLanguageSelection;
-        ShowTesseractHint = value.Id == "tesseract" && !OperatingSystem.IsWindows();
+        ShowTesseractHint = value.Id == "tesseract";
 
         if (!value.SupportsLanguageSelection) return;
 

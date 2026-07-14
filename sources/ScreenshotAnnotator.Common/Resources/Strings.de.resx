@@ -379,6 +379,9 @@ Funktionen:
   <data name="Ocr_TesseractLangHint" xml:space="preserve">
     <value>Um weitere Sprachen für Tesseract hinzuzufügen, Sprachpakete installieren: sudo apt install tesseract-ocr-&lt;lang&gt;</value>
   </data>
+  <data name="Ocr_WindowsTesseractHint" xml:space="preserve">
+    <value>Die integrierte Windows-OCR kann Text übersehen. Screenshot Annotator unterstützt auch Tesseract OCR, das Text oft besser extrahiert. Installieren Sie Tesseract manuell, um es hier zu verwenden.</value>
+  </data>
   <data name="Ocr_ExtractButton" xml:space="preserve">
     <value>Text extrahieren</value>
   </data>

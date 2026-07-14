@@ -667,7 +667,7 @@ public partial class ImageEditorViewModel : ViewModelBase, IProjectUi
         byte[] baseImageBytes;
         using (var imageStream = new MemoryStream())
         {
-            _editorCanvas.Image.Save(imageStream);
+            _editorCanvas.Image.SavePng(imageStream);
             baseImageBytes = imageStream.ToArray();
         }
 
@@ -815,7 +815,7 @@ public partial class ImageEditorViewModel : ViewModelBase, IProjectUi
             _editorCanvas.Image, Shapes, _editorCanvas.SelectorRect.Rectangle);
         if (rendered == null) return null;
         using var ms = new MemoryStream();
-        rendered.Save(ms);
+        rendered.SavePng(ms);
         return ms.ToArray();
     }
 

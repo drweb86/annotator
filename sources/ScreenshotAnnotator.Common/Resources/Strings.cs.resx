@@ -379,6 +379,9 @@ Funkce:
   <data name="Ocr_TesseractLangHint" xml:space="preserve">
     <value>Pro přidání dalších jazyků pro Tesseract nainstalujte jazykové balíčky: sudo apt install tesseract-ocr-&lt;lang&gt;</value>
   </data>
+  <data name="Ocr_WindowsTesseractHint" xml:space="preserve">
+    <value>Vestavěné OCR ve Windows může některý text přehlédnout. Screenshot Annotator podporuje také Tesseract OCR, který často extrahuje text lépe. Chcete-li ho zde použít, nainstalujte Tesseract ručně.</value>
+  </data>
   <data name="Ocr_ExtractButton" xml:space="preserve">
     <value>Extrahovat text</value>
   </data>

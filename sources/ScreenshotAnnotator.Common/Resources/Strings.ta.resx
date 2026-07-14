@@ -376,6 +376,9 @@
   <data name="Ocr_TesseractLangHint" xml:space="preserve">
     <value>Tesseract க்கு மேலும் மொழிகள் சேர்க்க மொழி தொகுப்புகளை நிறுவுக: sudo apt install tesseract-ocr-&lt;lang&gt;</value>
   </data>
+  <data name="Ocr_WindowsTesseractHint" xml:space="preserve">
+    <value>Windows-இன் உள்ளமைக்கப்பட்ட OCR சில உரையை தவறவிடலாம். Screenshot Annotator Tesseract OCR-ஐயும் ஆதரிக்கிறது; அது பெரும்பாலும் உரையை சிறப்பாக எடுத்தெடுக்கிறது. இதை இங்கே பயன்படுத்த Tesseract-ஐ கைமுறையாக நிறுவவும்.</value>
+  </data>
   <data name="Ocr_ExtractButton" xml:space="preserve">
     <value>உரையை பிரி</value>
   </data>

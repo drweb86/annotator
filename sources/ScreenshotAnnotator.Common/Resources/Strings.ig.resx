@@ -379,6 +379,9 @@ Atụmatụ:
   <data name="Ocr_TesseractLangHint" xml:space="preserve">
     <value>Iji tinye asụsụ ndị ọzọ maka Tesseract, tinye ngwugwu asụsụ: sudo apt install tesseract-ocr-&lt;lang&gt;</value>
   </data>
+  <data name="Ocr_WindowsTesseractHint" xml:space="preserve">
+    <value>OCR wuru n’ime Windows nwere ike ịhapụ ụfọdụ ederede. Screenshot Annotator na-akwado Tesseract OCR kwa, nke na-ewepụtakarị ederede nke ọma karịa. Wụnye Tesseract n’onwe gị iji ya ebe a.</value>
+  </data>
   <data name="Ocr_ExtractButton" xml:space="preserve">
     <value>Wepụ Ederede</value>
   </data>

@@ -457,6 +457,10 @@ You can download it from the Tesseract GitHub page.</value>
     <value>Tip: Additional language packs can be installed for Tesseract — check the Tesseract documentation.</value>
     <comment>Hint shown when Tesseract engine is selected</comment>
   </data>
+  <data name="Ocr_WindowsTesseractHint" xml:space="preserve">
+    <value>Built-in Windows OCR can miss text. Screenshot Annotator also supports Tesseract OCR, which often extracts text better. Install Tesseract manually to use it here.</value>
+    <comment>Hint shown in OCR window on Windows</comment>
+  </data>
   <data name="Ocr_ExtractButton" xml:space="preserve">
     <value>Extract Text</value>
     <comment>Button to run OCR</comment>

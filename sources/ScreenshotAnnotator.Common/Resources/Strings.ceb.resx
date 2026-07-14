@@ -379,6 +379,9 @@ Mga Feature:
   <data name="Ocr_TesseractLangHint" xml:space="preserve">
     <value>Aron makadugang og mga pinulongan sa Tesseract, i-install ang language packs: sudo apt install tesseract-ocr-&lt;lang&gt;</value>
   </data>
+  <data name="Ocr_WindowsTesseractHint" xml:space="preserve">
+    <value>Ang built-in nga Windows OCR mahimong dili makakuha sa pipila ka teksto. Ang Screenshot Annotator nagsuporta usab sa Tesseract OCR, nga kasagaran mas maayo mokuha og teksto. I-install ang Tesseract manually aron magamit kini dinhi.</value>
+  </data>
   <data name="Ocr_ExtractButton" xml:space="preserve">
     <value>Kuhai ang Teksto</value>
   </data>

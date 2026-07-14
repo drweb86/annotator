@@ -379,6 +379,9 @@
   <data name="Ocr_TesseractLangHint" xml:space="preserve">
     <value>ለ Tesseract ተጨማሪ ቋንቋዎች ለማከል፣ የቋንቋ ጥቅሎች ይጫኑ፦ sudo apt install tesseract-ocr-&lt;lang&gt;</value>
   </data>
+  <data name="Ocr_WindowsTesseractHint" xml:space="preserve">
+    <value>የWindows ውስጠ-ግንቡ OCR ጽሑፍን ሊያመልጥ ይችላል። Screenshot Annotator ብዙ ጊዜ ጽሑፍን በተሻለ የሚያወጣውን Tesseract OCR ንም ይደግፋል። እዚህ ለመጠቀም Tesseract ን በእጅ ይጫኑ።</value>
+  </data>
   <data name="Ocr_ExtractButton" xml:space="preserve">
     <value>ጽሑፍ አውጣ</value>
   </data>

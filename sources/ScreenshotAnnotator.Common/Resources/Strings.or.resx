@@ -379,6 +379,9 @@
   <data name="Ocr_TesseractLangHint" xml:space="preserve">
     <value>Tesseract ପାଇଁ ଅଧିକ ଭାଷା ଯୋଡ଼ିବା ପାଇଁ ଭାଷା ପ୍ୟାକ ଇନ୍ସ୍ଟଲ କରନ୍ତୁ: sudo apt install tesseract-ocr-&lt;lang&gt;</value>
   </data>
+  <data name="Ocr_WindowsTesseractHint" xml:space="preserve">
+    <value>Windows ରେ ଥିବା ନିର୍ମିତ OCR କିଛି ପାଠ୍ୟ ଛାଡ଼ିଦେଇପାରେ। Screenshot Annotator Tesseract OCR କୁ ମଧ୍ୟ ସମର୍ଥନ କରେ, ଯାହା ସାଧାରଣତଃ ପାଠ୍ୟକୁ ଅଧିକ ଭଲ ଭାବରେ ବାହାର କରେ। ଏଠାରେ ବ୍ୟବହାର କରିବାକୁ Tesseract କୁ ହାତେଇ ସ୍ଥାପନ କରନ୍ତୁ।</value>
+  </data>
   <data name="Ocr_ExtractButton" xml:space="preserve">
     <value>ଟେକ୍ସଟ ବାହାର କରନ୍ତୁ</value>
   </data>

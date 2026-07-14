@@ -379,6 +379,9 @@ Izici:
   <data name="Ocr_TesseractLangHint" xml:space="preserve">
     <value>Ukwengeza izilimi eziningi ku-Tesseract, faka amaphepha ezilimi: sudo apt install tesseract-ocr-&lt;lang&gt;</value>
   </data>
+  <data name="Ocr_WindowsTesseractHint" xml:space="preserve">
+    <value>I-OCR eyakhelwe ngaphakathi ku-Windows ingase yeqe umbhalo. I-Screenshot Annotator iphinde isekele i-Tesseract OCR, evame ukukhipha umbhalo kangcono. Faka i-Tesseract mathupha ukuze uyisebenzise lapha.</value>
+  </data>
   <data name="Ocr_ExtractButton" xml:space="preserve">
     <value>Khipha Umbhalo</value>
   </data>

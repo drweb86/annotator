@@ -379,6 +379,9 @@ Tính năng:
   <data name="Ocr_TesseractLangHint" xml:space="preserve">
     <value>Để thêm ngôn ngữ cho Tesseract, cài đặt gói ngôn ngữ: sudo apt install tesseract-ocr-&lt;lang&gt;</value>
   </data>
+  <data name="Ocr_WindowsTesseractHint" xml:space="preserve">
+    <value>OCR tích hợp của Windows có thể bỏ sót văn bản. Screenshot Annotator cũng hỗ trợ Tesseract OCR, thường trích xuất văn bản tốt hơn. Hãy cài đặt Tesseract thủ công để sử dụng tại đây.</value>
+  </data>
   <data name="Ocr_ExtractButton" xml:space="preserve">
     <value>Trích xuất văn bản</value>
   </data>

@@ -379,6 +379,9 @@
   <data name="Ocr_TesseractLangHint" xml:space="preserve">
     <value>Tesseract үшін тіл пакеттерін орнатыңыз: sudo apt install tesseract-ocr-&lt;lang&gt;</value>
   </data>
+  <data name="Ocr_WindowsTesseractHint" xml:space="preserve">
+    <value>Windows жүйесіндегі кірістірілген OCR мәтінді өткізіп алуы мүмкін. Screenshot Annotator мәтінді жиі жақсырақ шығаратын Tesseract OCR-ді де қолдайды. Мұнда пайдалану үшін Tesseract-ты қолмен орнатыңыз.</value>
+  </data>
   <data name="Ocr_ExtractButton" xml:space="preserve">
     <value>Мәтін шығару</value>
   </data>

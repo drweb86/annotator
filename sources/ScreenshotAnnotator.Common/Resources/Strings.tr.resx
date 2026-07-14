@@ -379,6 +379,9 @@ Lütfen şunlardan birini yapın:
   <data name="Ocr_TesseractLangHint" xml:space="preserve">
     <value>Tesseract'a daha fazla dil eklemek için dil paketleri kurun: sudo apt install tesseract-ocr-&lt;lang&gt;</value>
   </data>
+  <data name="Ocr_WindowsTesseractHint" xml:space="preserve">
+    <value>Windows’un yerleşik OCR özelliği bazı metinleri kaçırabilir. Screenshot Annotator, metni çoğu zaman daha iyi çıkaran Tesseract OCR’yi de destekler. Burada kullanmak için Tesseract’i elle yükleyin.</value>
+  </data>
   <data name="Ocr_ExtractButton" xml:space="preserve">
     <value>Metin Çıkar</value>
   </data>

@@ -379,6 +379,9 @@ Funkciók:
   <data name="Ocr_TesseractLangHint" xml:space="preserve">
     <value>További nyelvek hozzáadásához a Tesseract-hoz, telepítse a nyelvi csomagokat: sudo apt install tesseract-ocr-&lt;lang&gt;</value>
   </data>
+  <data name="Ocr_WindowsTesseractHint" xml:space="preserve">
+    <value>A Windows beépített OCR-je kihagyhat szöveget. A Screenshot Annotator a Tesseract OCR-t is támogatja, amely gyakran jobb szövegkinyerést ad. A használatához telepítse kézzel a Tesseractot.</value>
+  </data>
   <data name="Ocr_ExtractButton" xml:space="preserve">
     <value>Szöveg kinyerése</value>
   </data>

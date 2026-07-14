@@ -379,6 +379,9 @@
   <data name="Ocr_TesseractLangHint" xml:space="preserve">
     <value>د Tesseract لپاره نورې ژبې اضافه کولو لپاره د ژبې پاکونه نصب کړئ: sudo apt install tesseract-ocr-&lt;lang&gt;</value>
   </data>
+  <data name="Ocr_WindowsTesseractHint" xml:space="preserve">
+    <value>د Windows جوړ-دننه OCR ځینې متن له لاسه ورکولی شي. Screenshot Annotator د Tesseract OCR ملاتړ هم کوي، چې ډېری وخت متن ښه راوباسي. دلته د کارولو لپاره Tesseract په لاسي ډول نصب کړئ.</value>
+  </data>
   <data name="Ocr_ExtractButton" xml:space="preserve">
     <value>متن راوباسئ</value>
   </data>

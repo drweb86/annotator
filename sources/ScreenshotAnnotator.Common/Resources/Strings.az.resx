@@ -379,6 +379,9 @@ Xüsusiyyətlər:
   <data name="Ocr_TesseractLangHint" xml:space="preserve">
     <value>Tesseract üçün daha çox dil əlavə etmək üçün dil paketlərini quraşdırın: sudo apt install tesseract-ocr-&lt;lang&gt;</value>
   </data>
+  <data name="Ocr_WindowsTesseractHint" xml:space="preserve">
+    <value>Windows-un daxili OCR-i mətni qaçıra bilər. Screenshot Annotator həmçinin mətni çox vaxt daha yaxşı çıxaran Tesseract OCR-i də dəstəkləyir. Burada istifadə etmək üçün Tesseract-i əl ilə quraşdırın.</value>
+  </data>
   <data name="Ocr_ExtractButton" xml:space="preserve">
     <value>Mətn Çıxar</value>
   </data>

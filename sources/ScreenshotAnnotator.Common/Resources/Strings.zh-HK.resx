@@ -379,6 +379,9 @@
   <data name="Ocr_TesseractLangHint" xml:space="preserve">
     <value>要為Tesseract新增更多語言，請安裝語言套件: sudo apt install tesseract-ocr-&lt;lang&gt;</value>
   </data>
+  <data name="Ocr_WindowsTesseractHint" xml:space="preserve">
+    <value>Windows 內建 OCR 可能會漏掉文字。Screenshot Annotator 亦支援 Tesseract OCR，通常可以更好地擷取文字。請手動安裝 Tesseract 以在此使用。</value>
+  </data>
   <data name="Ocr_ExtractButton" xml:space="preserve">
     <value>提取文字</value>
   </data>

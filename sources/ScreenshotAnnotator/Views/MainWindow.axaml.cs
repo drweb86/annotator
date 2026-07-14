@@ -108,16 +108,23 @@ public partial class MainWindow : Window
                 return;
             }
 
-            var r = args.Rect.Rectangle;
-            // Position below selection (or above if near bottom of image)
-            var imageH = editorCanvas.Image?.PixelSize.Height ?? 0;
-            var buttonH = 40.0;
+            var r = args.Rect.Rectangle.Normalize();
+            var imageSize = editorCanvas.Image?.PixelSize;
+            var imageW = imageSize?.Width ?? editorCanvas.Bounds.Width;
+            var imageH = imageSize?.Height ?? editorCanvas.Bounds.Height;
             var margin = 8.0;
-            var top = (r.Bottom + margin + buttonH < imageH)
+
+            _selectorFloatingPanel.Measure(Size.Infinity);
+            var panelW = _selectorFloatingPanel.DesiredSize.Width;
+            var panelH = _selectorFloatingPanel.DesiredSize.Height;
+
+            var left = Clamp(r.Center.X - panelW / 2.0, margin, imageW - panelW - margin);
+
+            // Prefer outside the selected pixels, but keep the menu visible for full-image and tiny selections.
+            var top = r.Bottom + margin + panelH <= imageH
                 ? r.Bottom + margin
-                : r.Top - buttonH - margin;
-            var panelW = 260.0;
-            var left = r.X + (r.Width - panelW) / 2.0;
+                : r.Top - panelH - margin;
+            top = Clamp(top, margin, imageH - panelH - margin);
 
             Canvas.SetLeft(_selectorFloatingPanel, left);
             Canvas.SetTop(_selectorFloatingPanel, top);
@@ -217,6 +224,12 @@ public partial class MainWindow : Window
         ToolTip.SetTip(btn, tooltip);
         btn.Click += async (_, _) => await action();
         return btn;
+    }
+
+    private static double Clamp(double value, double min, double max)
+    {
+        if (max < min) return min;
+        return value < min ? min : value > max ? max : value;
     }
 
     private async void OnKeyDown(object? sender, KeyEventArgs e)
