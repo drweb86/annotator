@@ -2,7 +2,6 @@ using Avalonia.Threading;
 using NLog;
 using SharpHook;
 using SharpHook.Data;
-using SharpHook.Native;
 using System;
 using System.Threading.Tasks;
 

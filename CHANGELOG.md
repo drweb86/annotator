@@ -1,3 +1,10 @@
+# 2026.08.27
+(unpublished)
+
+## Changes
+- Fixup License.
+- Update some libraries.
+
 # 2026.07.14
 
 ## Changes
