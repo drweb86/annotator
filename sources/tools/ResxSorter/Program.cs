@@ -405,10 +405,10 @@ namespace Codice.SortResX
                 writer.WriteLine("Author: Siarhei Kuchuk");
                 writer.WriteLine("PackageName: ScreenshotAnnotator");
                 writer.WriteLine("PackageUrl: https://github.com/drweb86/annotator");
-                writer.WriteLine("License: MIT, GPL, MSPL");
-                writer.WriteLine("LicenseUrl: https://raw.githubusercontent.com/drweb86/annotator/refs/heads/main/LICENSE.md");
+                writer.WriteLine("License: CC0-1.0");
+                writer.WriteLine("LicenseUrl: https://raw.githubusercontent.com/drweb86/annotator/refs/heads/main/LICENSE");
                 writer.WriteLine("Copyright: 2025-CURRENT_YEAR Siarhei Kuchuk");
-                writer.WriteLine("CopyrightUrl: https://raw.githubusercontent.com/drweb86/annotator/refs/heads/main/LICENSE.md");
+                writer.WriteLine("CopyrightUrl: https://raw.githubusercontent.com/drweb86/annotator/refs/heads/main/LICENSE");
                 writer.WriteLine($"ShortDescription: {YamlDoubleQuoted(shortDescription)}");
                 writer.WriteLine("Description: |");
                 foreach (var line in description.Split('\n'))

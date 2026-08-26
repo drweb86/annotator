@@ -46,4 +46,4 @@ See [Installation and uninstallation on Ubuntu](./Ubuntu.md) for Ubuntu-specific
 
 ## Development
 
-This project was developed with AI assistance from Claude (Anthropic's AI assistant), which helped with architecture, implementation, and cross-platform compatibility features.
+This project was developed with AI assistance from Claude (Anthropic's AI assistant); Cursor.

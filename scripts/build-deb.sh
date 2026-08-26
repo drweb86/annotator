@@ -55,12 +55,14 @@ for rid in "${!ARCH_MAP[@]}"; do
     mkdir -p "$pkg_root/usr/bin"
     mkdir -p "$pkg_root/usr/share/applications"
     mkdir -p "$pkg_root/usr/share/pixmaps"
+    mkdir -p "$pkg_root/usr/share/doc/screenshot-annotator"
 
     cp -a "$publish_dir/"* "$pkg_root/usr/lib/screenshot-annotator/"
 
     ln -sf ../lib/screenshot-annotator/ScreenshotAnnotator.Desktop "$pkg_root/usr/bin/screenshot-annotator"
 
     cp "$SCRIPT_DIR/App.png" "$pkg_root/usr/share/pixmaps/screenshot-annotator.png"
+    cp "$REPO_ROOT/LICENSE" "$pkg_root/usr/share/doc/screenshot-annotator/copyright"
 
     cat > "$pkg_root/usr/share/applications/screenshot-annotator.desktop" << 'DESKTOP'
 [Desktop Entry]
@@ -135,6 +137,7 @@ POSTRM
     find "$pkg_root/usr/lib/screenshot-annotator" \( -name "*.so" -o -name "*.so.*" \) -exec chmod 755 {} \;
     chmod 644 "$pkg_root/usr/share/applications/screenshot-annotator.desktop"
     chmod 644 "$pkg_root/usr/share/pixmaps/screenshot-annotator.png"
+    chmod 644 "$pkg_root/usr/share/doc/screenshot-annotator/copyright"
 
     echo "Building .deb..."
     dpkg-deb --build --root-owner-group "$pkg_root" "$deb_file"
