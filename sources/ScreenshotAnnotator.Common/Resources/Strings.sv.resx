@@ -338,7 +338,8 @@ Funktioner:
 - **Vertikal och horisontell klippning** - Klipp vertikala eller horisontella områden av bilden
 - **Markering** - Markera intressanta områden
 - **Projekthantering** - Automatisk projektsparning och förhandsvisningsminiatyrer
-- **Plattformsoberoende** - Fungerar på både Windows och Linux</value>
+- **Plattformsoberoende** - Fungerar på både Windows och Linux
+- **OCR** via Tesseract och Windows.Media.OCR.</value>
   </data>
   <data name="Winget_ShortDescription" xml:space="preserve">
     <value>Skärmdumpskommentatorprogramvara för Windows och Linux.</value>

@@ -338,7 +338,8 @@
 - **垂直・水平スライスの切り取り** - 画像の垂直または水平領域を切り取り
 - **蛍光ペン** - 注目したい領域をハイライト
 - **プロジェクト管理** - プロジェクトの自動保存とプレビューサムネイル
-- **クロスプラットフォーム** - Windows と Linux の両方で動作</value>
+- **クロスプラットフォーム** - Windows と Linux の両方で動作
+- **OCR**（Tesseract および Windows.Media.OCR 経由）</value>
   </data>
   <data name="Winget_ShortDescription" xml:space="preserve">
     <value>Windows および Linux 用のスクリーンショット注釈ソフトウェア。</value>

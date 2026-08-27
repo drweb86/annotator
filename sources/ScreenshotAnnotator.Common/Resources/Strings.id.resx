@@ -338,7 +338,8 @@ Fitur:
 - **Potong irisan vertikal dan horizontal** - Potong area vertikal atau horizontal gambar
 - **Penyorot** - Sorot area yang menarik
 - **Manajemen proyek** - Penyimpanan proyek otomatis dan pratinjau mini
-- **Lintas platform** - Berjalan di Windows dan Linux</value>
+- **Lintas platform** - Berjalan di Windows dan Linux
+- **OCR** melalui Tesseract dan Windows.Media.OCR.</value>
   </data>
   <data name="Winget_ShortDescription" xml:space="preserve">
     <value>Perangkat lunak anotasi tangkapan layar untuk Windows dan Linux.</value>

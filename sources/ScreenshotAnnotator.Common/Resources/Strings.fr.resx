@@ -338,7 +338,8 @@ Fonctionnalités :
 - **Découpe verticale et horizontale** - Découpez des bandes verticales ou horizontales
 - **Surligneur** - Surlignez les zones d'intérêt
 - **Gestion de projets** - Enregistrement automatique et miniatures d'aperçu
-- **Multiplateforme** - Fonctionne sur Windows et Linux</value>
+- **Multiplateforme** - Fonctionne sur Windows et Linux
+- **OCR** via Tesseract et Windows.Media.OCR.</value>
   </data>
   <data name="Winget_ShortDescription" xml:space="preserve">
     <value>Logiciel d'annotation de captures d'écran pour Windows et Linux.</value>

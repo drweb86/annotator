@@ -338,7 +338,8 @@ Ciri-ciri:
 - **Pemotongan menegak dan mendatar** - Potong kawasan menegak atau mendatar imej
 - **Sorotan** - Serlahkan kawasan yang menarik
 - **Pengurusan projek** - Simpanan projek automatik dan lakaran kecil pratonton
-- **Merentas platform** - Berfungsi pada Windows dan Linux</value>
+- **Merentas platform** - Berfungsi pada Windows dan Linux
+- **OCR** melalui Tesseract dan Windows.Media.OCR.</value>
   </data>
   <data name="Winget_ShortDescription" xml:space="preserve">
     <value>Perisian anotasi tangkapan skrin untuk Windows dan Linux.</value>

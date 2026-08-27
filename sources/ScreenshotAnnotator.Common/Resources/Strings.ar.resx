@@ -338,7 +338,8 @@
 - **قص شرائح عمودية وأفقية** - قص أجزاء عمودية أو أفقية من الصورة
 - **تمييز** - تمييز مناطق الاهتمام
 - **إدارة المشاريع** - حفظ تلقائي ومعاينات مصغرة
-- **متعدد المنصات** - يعمل على Windows وLinux</value>
+- **متعدد المنصات** - يعمل على Windows وLinux
+- **OCR** عبر Tesseract وWindows.Media.OCR.</value>
   </data>
   <data name="Winget_ShortDescription" xml:space="preserve">
     <value>برنامج لتعليق لقطات الشاشة على Windows وLinux.</value>

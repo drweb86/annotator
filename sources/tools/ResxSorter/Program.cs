@@ -421,6 +421,7 @@ namespace Codice.SortResX
                 writer.WriteLine("Tags:");
                 writer.WriteLine("- screenshot");
                 writer.WriteLine("- annotate");
+                writer.WriteLine("- ocr");
                 writer.WriteLine("ReleaseNotesUrl: https://raw.githubusercontent.com/drweb86/annotator/refs/heads/main/CHANGELOG.md");
                 writer.WriteLine($"ManifestType: {manifestType}");
                 writer.WriteLine("ManifestVersion: 1.12.0");

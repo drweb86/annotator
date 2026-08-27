@@ -338,7 +338,8 @@
 - **垂直和水平切片裁剪** - 裁剪图像的垂直或水平区域
 - **荧光笔** - 突出显示感兴趣的区域
 - **项目管理** - 自动保存项目和预览缩略图
-- **跨平台** - 同时支持 Windows 和 Linux</value>
+- **跨平台** - 同时支持 Windows 和 Linux
+- **OCR**（通过 Tesseract 和 Windows.Media.OCR）</value>
   </data>
   <data name="Winget_ShortDescription" xml:space="preserve">
     <value>适用于 Windows 和 Linux 的截图标注软件。</value>

@@ -338,7 +338,8 @@ Fasaloli:
 - **Yanke sassan tsaye da kwance** - Yanke sassan tsaye ko kwance na hoto
 - **Haskaka** - Haskaka wurare masu sha'awa
 - **Sarrafa Ayyuka** - Adana aiki ta atomatik da ƙananan hoto na duba
-- **Ƙetare dandali** - Yana aiki a Windows da Linux duka</value>
+- **Ƙetare dandali** - Yana aiki a Windows da Linux duka
+- **OCR** ta hanyar Tesseract da Windows.Media.OCR.</value>
   </data>
   <data name="Winget_ShortDescription" xml:space="preserve">
     <value>Software na rubutu kan hoton allo don Windows da Linux.</value>

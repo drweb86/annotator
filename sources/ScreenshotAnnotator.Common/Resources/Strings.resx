@@ -486,7 +486,8 @@ Features:
 - **Cut out vertical and horizontal slices** - Cut out vertical or horizontal areas of image
 - **Highlighter** - Highlights areas of interest
 - **Project Management** - Automatic project saving and preview thumbnails
-- **Cross-Platform** - Works on both Windows and Linux</value>
+- **Cross-Platform** - Works on both Windows and Linux
+- **OCR** via Tesseract and Windows.Media.OCR.</value>
   </data>
   <data name="Winget_ShortDescription" xml:space="preserve">
     <value>Screenshot annotator software for Windows and Linux.</value>

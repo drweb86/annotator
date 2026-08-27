@@ -338,7 +338,8 @@ Atụmatụ:
 - **Ibelata n'elu n'ala na n'akụkụ** - Belata akụkụ n'elu n'ala ma ọ bụ n'akụkụ nke onyonyo
 - **Kọwapụta** - Kọwapụta mpaghara ndị na-atọ mmasị
 - **Njikwa ọrụ** - Echekwa ọrụ na-akpaliwanye na foto ntụle obere
-- **Ọrụ n'elu ikpo okwu dị iche iche** - Na-arụ ọrụ na Windows na Linux</value>
+- **Ọrụ n'elu ikpo okwu dị iche iche** - Na-arụ ọrụ na Windows na Linux
+- **OCR** site na Tesseract na Windows.Media.OCR.</value>
   </data>
   <data name="Winget_ShortDescription" xml:space="preserve">
     <value>Ngwa nkọwa foto ihuenyo maka Windows na Linux.</value>

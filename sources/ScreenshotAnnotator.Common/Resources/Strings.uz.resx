@@ -338,7 +338,8 @@ Xususiyatlar:
 - **Vertikal va gorizontal kesish** - Rasmning vertikal yoki gorizontal qismlarini kesish
 - **Ajratib ko'rsatish** - Qiziqarli joylarni ajratib ko'rsatish
 - **Loyihalarni boshqarish** - Loyihalarni avtomatik saqlash va oldindan ko'rish rasmlari
-- **Platformalararo** - Ham Windows, ham Linux da ishlaydi</value>
+- **Platformalararo** - Ham Windows, ham Linux da ishlaydi
+- **OCR** Tesseract va Windows.Media.OCR orqali.</value>
   </data>
   <data name="Winget_ShortDescription" xml:space="preserve">
     <value>Windows va Linux uchun ekran tasviri izohlash dasturi.</value>

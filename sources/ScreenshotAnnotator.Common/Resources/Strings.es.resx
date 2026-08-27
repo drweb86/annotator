@@ -338,7 +338,8 @@ Características:
 - **Recorte de franjas verticales y horizontales** - Recorta áreas verticales u horizontales de la imagen
 - **Resaltador** - Resalta áreas de interés
 - **Gestión de proyectos** - Guardado automático de proyectos y miniaturas de vista previa
-- **Multiplataforma** - Funciona en Windows y Linux</value>
+- **Multiplataforma** - Funciona en Windows y Linux
+- **OCR** mediante Tesseract y Windows.Media.OCR.</value>
   </data>
   <data name="Winget_ShortDescription" xml:space="preserve">
     <value>Software de anotación de capturas de pantalla para Windows y Linux.</value>

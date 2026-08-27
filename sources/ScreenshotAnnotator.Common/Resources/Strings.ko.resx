@@ -338,7 +338,8 @@
 - **수직 및 수평 슬라이스 잘라내기** - 이미지의 수직 또는 수평 영역 잘라내기
 - **형광펜** - 관심 영역 강조 표시
 - **프로젝트 관리** - 자동 프로젝트 저장 및 미리보기 썸네일
-- **크로스 플랫폼** - Windows와 Linux 모두에서 작동</value>
+- **크로스 플랫폼** - Windows와 Linux 모두에서 작동
+- **OCR** (Tesseract 및 Windows.Media.OCR 사용)</value>
   </data>
   <data name="Winget_ShortDescription" xml:space="preserve">
     <value>Windows 및 Linux용 스크린샷 주석 소프트웨어.</value>

@@ -338,7 +338,8 @@ Mga Tampok:
 - **Gupitin ang patayo at pahalang na mga slice** - Gupitin ang patayo o pahalang na mga lugar ng larawan
 - **Highlighter** - I-highlight ang mga lugar ng interes
 - **Pamamahala ng Proyekto** - Awtomatikong pag-save ng proyekto at mga preview thumbnail
-- **Cross-Platform** - Gumagana sa parehong Windows at Linux</value>
+- **Cross-Platform** - Gumagana sa parehong Windows at Linux
+- **OCR** sa pamamagitan ng Tesseract at Windows.Media.OCR.</value>
   </data>
   <data name="Winget_ShortDescription" xml:space="preserve">
     <value>Software sa pag-anotasyon ng screenshot para sa Windows at Linux.</value>

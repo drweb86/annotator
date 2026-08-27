@@ -338,7 +338,8 @@ Vipengele:
 - **Kata vipande vya wima na usawa** - Kata maeneo ya wima au usawa ya picha
 - **Kiangalizi** - Angazia maeneo ya kuvutia
 - **Usimamizi wa Miradi** - Uhifadhi wa mradi otomatiki na picha ndogo za hakikisho
-- **Mseto wa Mfumo** - Inafanya kazi kwenye Windows na Linux</value>
+- **Mseto wa Mfumo** - Inafanya kazi kwenye Windows na Linux
+- **OCR** kupitia Tesseract na Windows.Media.OCR.</value>
   </data>
   <data name="Winget_ShortDescription" xml:space="preserve">
     <value>Programu ya kuandika maelezo kwenye picha za skrini kwa Windows na Linux.</value>

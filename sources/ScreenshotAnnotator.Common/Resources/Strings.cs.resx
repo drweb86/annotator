@@ -338,7 +338,8 @@ Funkce:
 - **Svislé a vodorovné ořezání** - Ořezejte svislé nebo vodorovné oblasti obrázku
 - **Zvýraznění** - Zvýrazněte zajímavé oblasti
 - **Správa projektů** - Automatické ukládání projektů a miniatury náhledu
-- **Multiplatformní** - Funguje jak ve Windows, tak v Linuxu</value>
+- **Multiplatformní** - Funguje jak ve Windows, tak v Linuxu
+- **OCR** pomocí Tesseract a Windows.Media.OCR.</value>
   </data>
   <data name="Winget_ShortDescription" xml:space="preserve">
     <value>Software pro anotaci snímků obrazovky pro Windows a Linux.</value>

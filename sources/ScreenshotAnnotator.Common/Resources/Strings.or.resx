@@ -338,7 +338,8 @@
 - **ଲମ୍ବ ଏବଂ ଅନୁଭୂମିକ କଟ** - ଛବିର ଲମ୍ବ ବା ଅନୁଭୂମିକ ଅଂଶ କଟ
 - **ହାଇଲାଇଟ** - ଆଗ୍ରହ ଅଞ୍ଚଳ ହାଇଲାଇଟ
 - **ପ୍ରୋଜେକ୍ଟ ପରିଚାଳନା** - ଆଟୋ ସଂରକ୍ଷଣ ଏବଂ ପ୍ରିଭ୍ୟୁ ଥଙ୍ବନେଲ
-- **କ୍ରସ-ପ୍ଲାଟଫର୍ମ** - Windows ଏବଂ Linux ଉଭୟରେ ଚାଲେ</value>
+- **କ୍ରସ-ପ୍ଲାଟଫର୍ମ** - Windows ଏବଂ Linux ଉଭୟରେ ଚାଲେ
+- **OCR** Tesseract ଏବଂ Windows.Media.OCR ମାଧ୍ୟମରେ।</value>
   </data>
   <data name="Winget_ShortDescription" xml:space="preserve">
     <value>Windows ଏବଂ Linux ପାଇଁ ସ୍କ୍ରିନଶଟ ଆନୋଟେସନ ସଫ୍ଟୱେର।</value>

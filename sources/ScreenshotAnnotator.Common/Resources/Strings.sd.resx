@@ -338,7 +338,8 @@
 - **عمودي ۽ افقي ڪٽائي** - تصوير جا عمودي يا افقي علائقا ڪٽيو
 - **نمايان** - دلچسپ علائقا نمايان ڪريو
 - **منصوبن جو انتظام** - خودڪار منصوبو محفوظ ڪرڻ ۽ پيش نظارو تھمبنيل
-- **ڪراس پليٽ فارم** - Windows ۽ Linux ٻنهي تي ڪم ڪري ٿو</value>
+- **ڪراس پليٽ فارم** - Windows ۽ Linux ٻنهي تي ڪم ڪري ٿو
+- **OCR** Tesseract ۽ Windows.Media.OCR ذريعي.</value>
   </data>
   <data name="Winget_ShortDescription" xml:space="preserve">
     <value>Windows ۽ Linux لاءِ اسڪرين شاٽ تشريح سافٽ ويئر.</value>

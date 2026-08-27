@@ -338,7 +338,8 @@ Sifooyinka:
 - **Goynta toosan iyo dhererka** - Goyn meelaha toosan ama dhererka ee sawirka
 - **Muujinta** - Muuji meelaha xiisaha leh
 - **Maareynta mashruuca** - Keydsiga tooska ah ee mashruuca iyo muuqaalka yar-yar
-- **Wadaagida barnaamijka** - Ku shaqeeya Windows iyo Linux labadaba</value>
+- **Wadaagida barnaamijka** - Ku shaqeeya Windows iyo Linux labadaba
+- **OCR** iyada oo loo marayo Tesseract iyo Windows.Media.OCR.</value>
   </data>
   <data name="Winget_ShortDescription" xml:space="preserve">
     <value>Software sharaxaadda sawirka shaashada ee Windows iyo Linux.</value>

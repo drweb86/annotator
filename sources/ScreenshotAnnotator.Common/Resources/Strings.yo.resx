@@ -338,7 +338,8 @@ Awọn ẹya:
 - **Ge awọn ege inaro ati petele** - Ge awọn agbegbe inaro tabi petele ti aworan
 - **Ẹrọ afihan** - Ṣe afihan awọn agbegbe ti o nifẹ
 - **Iṣakoso Iṣẹ Akanṣe** - Fifipamọ iṣẹ akanṣe aifọwọyi ati awọn aworan kekere iwoye
-- **Ọpọ-pẹpẹ** - Ṣiṣẹ lori Windows ati Linux mejeeji</value>
+- **Ọpọ-pẹpẹ** - Ṣiṣẹ lori Windows ati Linux mejeeji
+- **OCR** nipasẹ Tesseract ati Windows.Media.OCR.</value>
   </data>
   <data name="Winget_ShortDescription" xml:space="preserve">
     <value>Sọfitiwia fun fifọwọsi awọn aworan iboju fun Windows ati Linux.</value>

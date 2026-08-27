@@ -338,7 +338,8 @@ Lütfen şunlardan birini yapın:
 - **Dikey ve yatay dilimler** - Görüntünün dikey veya yatay alanlarını kesin
 - **Vurgulayıcı** - İlgi çekici alanları vurgulayın
 - **Proje yönetimi** - Otomatik kayıt ve önizleme küçük resimleri
-- **Çapraz platform** - Windows ve Linux'ta çalışır</value>
+- **Çapraz platform** - Windows ve Linux'ta çalışır
+- **OCR** Tesseract ve Windows.Media.OCR ile.</value>
   </data>
   <data name="Winget_ShortDescription" xml:space="preserve">
     <value>Windows ve Linux için ekran görüntüsü notlandırma yazılımı.</value>

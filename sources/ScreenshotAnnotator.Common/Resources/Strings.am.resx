@@ -338,7 +338,8 @@
 - **ቁመታዊ እና አግዳሚ ቁርጠቶችን ቁረጡ** - ቁመታዊ ወይም አግዳሚ የምስሉ ቦታዎችን ቁረጡ
 - **ሃይላይተር** - የሚፈለጉ ቦታዎችን ያብሩ
 - **የፕሮጀክት አስተዳደር** - ራስ-ሰር የፕሮጀክት ማስቀመጥ እና ቅድመ-ዕይታ ትናንሽ ምስሎች
-- **ብዙ-መድረክ** - በ Windows እና Linux ሁለቱም ላይ ይሰራል</value>
+- **ብዙ-መድረክ** - በ Windows እና Linux ሁለቱም ላይ ይሰራል
+- **OCR** በ Tesseract እና Windows.Media.OCR በኩል።</value>
   </data>
   <data name="Winget_ShortDescription" xml:space="preserve">
     <value>ለ Windows እና Linux የስክሪንሾት ማብራሪያ ሶፍትዌር።</value>

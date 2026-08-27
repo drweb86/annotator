@@ -338,7 +338,8 @@ Mga Feature:
 - **Vertical ug Horizontal na Pagputol** - Putlon ang mga vertical o horizontal nga lugar sa imahe
 - **Highlight** - I-highlight ang mga lugar nga may interes
 - **Pamamahala sa Proyekto** - Awtomatikong pagtipig sa proyekto ug preview thumbnails
-- **Cross-Platform** - Nagtrabaho sa Windows ug Linux</value>
+- **Cross-Platform** - Nagtrabaho sa Windows ug Linux
+- **OCR** pinaagi sa Tesseract ug Windows.Media.OCR.</value>
   </data>
   <data name="Winget_ShortDescription" xml:space="preserve">
     <value>Software sa pag-annotate sa screenshot para sa Windows ug Linux.</value>

@@ -338,7 +338,8 @@ Recursos:
 - **Recorte de faixas verticais e horizontais** - Recorte áreas verticais ou horizontais da imagem
 - **Marcador** - Destaque áreas de interesse
 - **Gerenciamento de projetos** - Salvamento automático de projetos e miniaturas de pré-visualização
-- **Multiplataforma** - Funciona no Windows e Linux</value>
+- **Multiplataforma** - Funciona no Windows e Linux
+- **OCR** via Tesseract e Windows.Media.OCR.</value>
   </data>
   <data name="Winget_ShortDescription" xml:space="preserve">
     <value>Software de anotação de capturas de tela para Windows e Linux.</value>

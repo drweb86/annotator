@@ -338,7 +338,8 @@ Xüsusiyyətlər:
 - **Şaquli və üfüqi kəsmə** - Şəklin şaquli və ya üfüqi sahələrini kəsin
 - **Vurğulama** - Maraqlı sahələri vurğulayın
 - **Layihə idarəetməsi** - Layihənin avtomatik saxlanması və önizləmə kiçik şəkilləri
-- **Platformalararası** - Həm Windows, həm də Linux-da işləyir</value>
+- **Platformalararası** - Həm Windows, həm də Linux-da işləyir
+- **OCR** Tesseract və Windows.Media.OCR vasitəsilə.</value>
   </data>
   <data name="Winget_ShortDescription" xml:space="preserve">
     <value>Windows və Linux üçün ekran şəkli annotasiya proqramı.</value>

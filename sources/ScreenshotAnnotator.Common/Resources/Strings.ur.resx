@@ -335,7 +335,8 @@
 - **عمودی اور افقی سلائس کاٹیں** - تصویر کے عمودی یا افقی حصے کاٹیں
 - **نمایاں کار** - دلچسپی کے علاقے نمایاں کریں
 - **پروجیکٹ مینجمنٹ** - خودکار محفوظ اور تھمب نیل پیش نظارے
-- **کراس پلیٹ فارم** - Windows اور Linux پر چلتا ہے</value>
+- **کراس پلیٹ فارم** - Windows اور Linux پر چلتا ہے
+- **OCR** Tesseract اور Windows.Media.OCR کے ذریعے۔</value>
   </data>
   <data name="Winget_ShortDescription" xml:space="preserve">
     <value>Windows اور Linux کے لیے اسکرین شاٹ نوٹسازی سافٹ ویئر۔</value>

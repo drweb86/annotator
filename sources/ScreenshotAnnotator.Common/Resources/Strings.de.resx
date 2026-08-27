@@ -338,7 +338,8 @@ Funktionen:
 - **Vertikale und horizontale Streifen ausschneiden** - Schneiden Sie vertikale oder horizontale Bildbereiche aus
 - **Textmarker** - Markieren Sie interessante Bereiche
 - **Projektverwaltung** - Automatische Projektspeicherung und Vorschau-Miniaturansichten
-- **Plattformübergreifend** - Funktioniert unter Windows und Linux</value>
+- **Plattformübergreifend** - Funktioniert unter Windows und Linux
+- **OCR** über Tesseract und Windows.Media.OCR.</value>
   </data>
   <data name="Winget_ShortDescription" xml:space="preserve">
     <value>Screenshot-Annotationssoftware für Windows und Linux.</value>

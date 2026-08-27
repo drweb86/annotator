@@ -338,7 +338,8 @@ Izici:
 - **Ukusika ngokuphezulu nangezansi** - Sika izindawo ezisuka ngokuphezulu noma ngezansi zesithombe
 - **Ukugqamisa** - Gqamisa izindawo ezinomdlandla
 - **Ukuphathwa kwamaphrojekthi** - Ukulondoloza iphrojekthi ngokuzenzakalelayo nezithombe ezincane zokuphana
-- **Izinhlelo** - Isebenza ku-Windows naku-Linux</value>
+- **Izinhlelo** - Isebenza ku-Windows naku-Linux
+- **OCR** nge-Tesseract ne-Windows.Media.OCR.</value>
   </data>
   <data name="Winget_ShortDescription" xml:space="preserve">
     <value>Isoftware yokuchaza izithombe zesikrini ye-Windows ne-Linux.</value>

@@ -338,7 +338,8 @@ Funzionalità:
 - **Ritaglio di fasce verticali e orizzontali** - Ritaglia aree verticali o orizzontali
 - **Evidenziatore** - Evidenzia aree di interesse
 - **Gestione progetti** - Salvataggio automatico e anteprime in miniatura
-- **Multipiattaforma** - Funziona su Windows e Linux</value>
+- **Multipiattaforma** - Funziona su Windows e Linux
+- **OCR** tramite Tesseract e Windows.Media.OCR.</value>
   </data>
   <data name="Winget_ShortDescription" xml:space="preserve">
     <value>Software di annotazione degli screenshot per Windows e Linux.</value>

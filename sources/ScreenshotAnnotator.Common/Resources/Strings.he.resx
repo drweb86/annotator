@@ -338,7 +338,8 @@
 - **חיתוך אנכי ואופקי** - חתוך אזורים אנכיים או אופקיים של התמונה
 - **הדגשה** - הדגש אזורים מעניינים
 - **ניהול פרויקטים** - שמירה אוטומטית של פרויקטים ותמונות ממוזערות לתצוגה מקדימה
-- **רב-פלטפורמי** - פועל גם ב-Windows וגם ב-Linux</value>
+- **רב-פלטפורמי** - פועל גם ב-Windows וגם ב-Linux
+- **OCR** באמצעות Tesseract ו-Windows.Media.OCR.</value>
   </data>
   <data name="Winget_ShortDescription" xml:space="preserve">
     <value>תוכנת הוספת הערות לצילומי מסך עבור Windows ו-Linux.</value>

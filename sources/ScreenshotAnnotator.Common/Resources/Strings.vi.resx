@@ -338,7 +338,8 @@ Tính năng:
 - **Cắt dải dọc và ngang** - Cắt vùng dọc hoặc ngang của ảnh
 - **Bút tô sáng** - Tô sáng vùng quan tâm
 - **Quản lý dự án** - Lưu tự động và ảnh thu nhỏ xem trước
-- **Đa nền tảng** - Chạy trên Windows và Linux</value>
+- **Đa nền tảng** - Chạy trên Windows và Linux
+- **OCR** qua Tesseract và Windows.Media.OCR.</value>
   </data>
   <data name="Winget_ShortDescription" xml:space="preserve">
     <value>Phần mềm chú thích ảnh chụp màn hình cho Windows và Linux.</value>

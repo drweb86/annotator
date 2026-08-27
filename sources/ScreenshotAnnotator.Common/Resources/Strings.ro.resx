@@ -338,7 +338,8 @@ Funcții:
 - **Decupare verticală și orizontală** - Decupați zone verticale sau orizontale ale imaginii
 - **Evidențiere** - Evidențiați zonele de interes
 - **Gestionarea proiectelor** - Salvare automată a proiectelor și miniaturi de previzualizare
-- **Multiplatformă** - Funcționează atât pe Windows, cât și pe Linux</value>
+- **Multiplatformă** - Funcționează atât pe Windows, cât și pe Linux
+- **OCR** prin Tesseract și Windows.Media.OCR.</value>
   </data>
   <data name="Winget_ShortDescription" xml:space="preserve">
     <value>Software de adnotare capturi de ecran pentru Windows și Linux.</value>
