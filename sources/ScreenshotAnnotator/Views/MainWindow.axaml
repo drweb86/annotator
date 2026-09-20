@@ -48,11 +48,16 @@
 						  </MenuItem.Icon>
 					  </MenuItem>
 					  <MenuItem Header="{local:Localize Menu_License}" Command="{Binding OpenLicenseCommand}" />
+					  <MenuItem Header="{local:Localize Menu_Privacy}" Command="{Binding OpenPrivacyCommand}" />
 					  <Separator />
 					  <MenuItem Header="{local:Localize Menu_Options}">
 						  <MenuItem Header="{local:Localize Menu_EnablePrintScreenHotkey}"
 									IsChecked="{Binding EnablePrintScreenHotkey, Mode=TwoWay}"
 									ToggleType="CheckBox" />
+						  <MenuItem Header="{local:Localize Menu_StartWithSystem}"
+									IsChecked="{Binding StartWithSystem, Mode=TwoWay}"
+									ToggleType="CheckBox"
+									IsVisible="{Binding StartWithSystemSupported}" />
 					  </MenuItem>
 				  </MenuItem.Items>
 			  </MenuItem>

@@ -199,14 +199,56 @@ Palihug buhata ang usa sa mosunod:
   <data name="Menu_Options" xml:space="preserve">
     <value>Mga opsyon</value>
   </data>
+  <data name="Menu_Privacy" xml:space="preserve">
+    <value>Pagkapribado</value>
+    <comment>Privacy policy menu item</comment>
+  </data>
+  <data name="Menu_StartWithSystem" xml:space="preserve">
+    <value>Sugdi uban sa sistema</value>
+    <comment>Option to start the app when the system starts</comment>
+  </data>
   <data name="Menu_WebSite" xml:space="preserve">
     <value>Website</value>
+  </data>
+  <data name="Ocr_Engine" xml:space="preserve">
+    <value>OCR Engine</value>
+  </data>
+  <data name="Ocr_ExtractButton" xml:space="preserve">
+    <value>Kuhai ang Teksto</value>
+  </data>
+  <data name="Ocr_Languages" xml:space="preserve">
+    <value>Mga Pinulongan</value>
+  </data>
+  <data name="Ocr_NoEngines" xml:space="preserve">
+    <value>Walay OCR engine nga anaa</value>
+  </data>
+  <data name="Ocr_NoEnginesHelp" xml:space="preserve">
+    <value>Sa Windows, walay dugang software ang gikinahanglan. Sa Linux, i-install ang Tesseract: sudo apt install tesseract-ocr</value>
+  </data>
+  <data name="Ocr_Processing" xml:space="preserve">
+    <value>Nagproseso...</value>
+  </data>
+  <data name="Ocr_Result" xml:space="preserve">
+    <value>Naailhan nga Teksto</value>
+  </data>
+  <data name="Ocr_TesseractLangHint" xml:space="preserve">
+    <value>Aron makadugang og mga pinulongan sa Tesseract, i-install ang language packs: sudo apt install tesseract-ocr-&lt;lang&gt;</value>
+  </data>
+  <data name="Ocr_Title" xml:space="preserve">
+    <value>Kuhai ang Teksto (OCR)</value>
+  </data>
+  <data name="Ocr_WindowsTesseractHint" xml:space="preserve">
+    <value>Ang built-in nga Windows OCR mahimong dili makakuha sa pipila ka teksto. Ang Screenshot Annotator nagsuporta usab sa Tesseract OCR, nga kasagaran mas maayo mokuha og teksto. I-install ang Tesseract manually aron magamit kini dinhi.</value>
   </data>
   <data name="Panel_Projects" xml:space="preserve">
     <value>Mga Proyekto</value>
   </data>
   <data name="Panel_Properties" xml:space="preserve">
     <value>Mga Kabtangan</value>
+  </data>
+  <data name="Privacy_Language" xml:space="preserve">
+    <value>Lengguwahe</value>
+    <comment>Language selector label on license and privacy windows</comment>
   </data>
   <data name="Props_Bold" xml:space="preserve">
     <value>Bold</value>
@@ -225,6 +267,15 @@ Palihug buhata ang usa sa mosunod:
   </data>
   <data name="Screenshot_Instructions" xml:space="preserve">
     <value>I-klik ug i-drag aron mapili ang usa ka lugar, o i-adjust ang mga punto sa sulok. Gamiton ang magnifying glass para sa katukma. Pindota ang OK kung andam na.</value>
+  </data>
+  <data name="Selection_Copy" xml:space="preserve">
+    <value>Kopya</value>
+  </data>
+  <data name="Selection_Delete" xml:space="preserve">
+    <value>Tangtang</value>
+  </data>
+  <data name="Selection_ExtractText" xml:space="preserve">
+    <value>Kuhai ang Teksto</value>
   </data>
   <data name="Tool_Arrow" xml:space="preserve">
     <value>Pana</value>
@@ -319,6 +370,15 @@ Palihug buhata ang usa sa mosunod:
   <data name="Tooltip_Select" xml:space="preserve">
     <value>Pilia ug i-edit ang mga anotasyon</value>
   </data>
+  <data name="Tooltip_Selection_Copy" xml:space="preserve">
+    <value>Kopyahon ang piniling lugar sa clipboard</value>
+  </data>
+  <data name="Tooltip_Selection_Delete" xml:space="preserve">
+    <value>I-puti ang piniling lugar</value>
+  </data>
+  <data name="Tooltip_Selection_ExtractText" xml:space="preserve">
+    <value>Kuhai ang teksto gikan sa piniling lugar gamit ang OCR</value>
+  </data>
   <data name="Update_NewVersionAvailable" xml:space="preserve">
     <value>Ang bag-ong bersyon {0} anaa na.</value>
   </data>
@@ -343,53 +403,5 @@ Mga Feature:
   </data>
   <data name="Winget_ShortDescription" xml:space="preserve">
     <value>Software sa pag-annotate sa screenshot para sa Windows ug Linux.</value>
-  </data>
-  <data name="Selection_Copy" xml:space="preserve">
-    <value>Kopya</value>
-  </data>
-  <data name="Tooltip_Selection_Copy" xml:space="preserve">
-    <value>Kopyahon ang piniling lugar sa clipboard</value>
-  </data>
-  <data name="Selection_Delete" xml:space="preserve">
-    <value>Tangtang</value>
-  </data>
-  <data name="Tooltip_Selection_Delete" xml:space="preserve">
-    <value>I-puti ang piniling lugar</value>
-  </data>
-  <data name="Selection_ExtractText" xml:space="preserve">
-    <value>Kuhai ang Teksto</value>
-  </data>
-  <data name="Tooltip_Selection_ExtractText" xml:space="preserve">
-    <value>Kuhai ang teksto gikan sa piniling lugar gamit ang OCR</value>
-  </data>
-  <data name="Ocr_Title" xml:space="preserve">
-    <value>Kuhai ang Teksto (OCR)</value>
-  </data>
-  <data name="Ocr_Engine" xml:space="preserve">
-    <value>OCR Engine</value>
-  </data>
-  <data name="Ocr_Languages" xml:space="preserve">
-    <value>Mga Pinulongan</value>
-  </data>
-  <data name="Ocr_NoEngines" xml:space="preserve">
-    <value>Walay OCR engine nga anaa</value>
-  </data>
-  <data name="Ocr_NoEnginesHelp" xml:space="preserve">
-    <value>Sa Windows, walay dugang software ang gikinahanglan. Sa Linux, i-install ang Tesseract: sudo apt install tesseract-ocr</value>
-  </data>
-  <data name="Ocr_TesseractLangHint" xml:space="preserve">
-    <value>Aron makadugang og mga pinulongan sa Tesseract, i-install ang language packs: sudo apt install tesseract-ocr-&lt;lang&gt;</value>
-  </data>
-  <data name="Ocr_WindowsTesseractHint" xml:space="preserve">
-    <value>Ang built-in nga Windows OCR mahimong dili makakuha sa pipila ka teksto. Ang Screenshot Annotator nagsuporta usab sa Tesseract OCR, nga kasagaran mas maayo mokuha og teksto. I-install ang Tesseract manually aron magamit kini dinhi.</value>
-  </data>
-  <data name="Ocr_ExtractButton" xml:space="preserve">
-    <value>Kuhai ang Teksto</value>
-  </data>
-  <data name="Ocr_Processing" xml:space="preserve">
-    <value>Nagproseso...</value>
-  </data>
-  <data name="Ocr_Result" xml:space="preserve">
-    <value>Naailhan nga Teksto</value>
   </data>
 </root>

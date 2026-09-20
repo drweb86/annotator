@@ -26,6 +26,15 @@
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="..\..\licenses\*.md"
+                      Exclude="..\..\licenses\README.md"
+                      LogicalName="ScreenshotAnnotator.License.%(Filename)%(Extension)" />
+    <EmbeddedResource Include="..\..\privacy\desktop\*.md"
+                      Exclude="..\..\privacy\desktop\README.md"
+                      LogicalName="ScreenshotAnnotator.Privacy.%(Filename)%(Extension)" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\ScreenshotAnnotator.Interop\ScreenshotAnnotator.Interop.csproj" />
   </ItemGroup>
 </Project>

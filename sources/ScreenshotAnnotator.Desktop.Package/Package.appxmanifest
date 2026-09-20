@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Package
+  xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
+  xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
+  xmlns:uap5="http://schemas.microsoft.com/appx/manifest/uap/windows10/5"
+  xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities"
+  IgnorableNamespaces="uap uap5 rescap">
+
+  <Identity
+    Name="26873SiarheiKuchuk.ScreenshotAnnotator"
+    Publisher="CN=48445635-F577-4A99-ABC2-E3554955850E"
+    Version="__VERSION__"
+    ProcessorArchitecture="__ARCH__" />
+
+  <Properties>
+    <DisplayName>Screenshot Annotator</DisplayName>
+    <PublisherDisplayName>Siarhei Kuchuk</PublisherDisplayName>
+    <Logo>Assets\StoreLogo.png</Logo>
+  </Properties>
+
+  <Dependencies>
+    <TargetDeviceFamily Name="Windows.Desktop" MinVersion="10.0.26100.0" MaxVersionTested="10.0.26100.0" />
+  </Dependencies>
+
+  <!-- Partner Center listing locales, not .NET resx culture names (de vs de-de). -->
+  <Resources>
+    <Resource Language="en-us" />
+    <Resource Language="am-et" />
+    <Resource Language="ar-sa" />
+    <Resource Language="az-latn-az" />
+    <Resource Language="bn-in" />
+    <Resource Language="cs-cz" />
+    <Resource Language="de-de" />
+    <Resource Language="el-gr" />
+    <Resource Language="es-es" />
+    <Resource Language="fa-ir" />
+    <Resource Language="fil-ph" />
+    <Resource Language="fr-fr" />
+    <Resource Language="gu-in" />
+    <Resource Language="ha-latn-ng" />
+    <Resource Language="he-il" />
+    <Resource Language="hi-in" />
+    <Resource Language="hu-hu" />
+    <Resource Language="id-id" />
+    <Resource Language="ig-ng" />
+    <Resource Language="it-it" />
+    <Resource Language="ja-jp" />
+    <Resource Language="kk-kz" />
+    <Resource Language="km-kh" />
+    <Resource Language="kn-in" />
+    <Resource Language="ko-kr" />
+    <Resource Language="mr-in" />
+    <Resource Language="ms-my" />
+    <Resource Language="my-mm" />
+    <Resource Language="ne-np" />
+    <Resource Language="nl-nl" />
+    <Resource Language="or-in" />
+    <Resource Language="pa-in" />
+    <Resource Language="pl-pl" />
+    <Resource Language="ps-af" />
+    <Resource Language="pt-br" />
+    <Resource Language="ro-ro" />
+    <Resource Language="ru-ru" />
+    <Resource Language="si-lk" />
+    <Resource Language="so-so" />
+    <Resource Language="sr-latn-rs" />
+    <Resource Language="sv-se" />
+    <Resource Language="sw-ke" />
+    <Resource Language="ta-in" />
+    <Resource Language="te-in" />
+    <Resource Language="th-th" />
+    <Resource Language="tr-tr" />
+    <Resource Language="uk-ua" />
+    <Resource Language="ur-pk" />
+    <Resource Language="uz-latn-uz" />
+    <Resource Language="vi-vn" />
+    <Resource Language="yo-ng" />
+    <Resource Language="zh-cn" />
+    <Resource Language="zh-hk" />
+    <Resource Language="zu-za" />
+  </Resources>
+
+  <Applications>
+    <Application
+      Id="App"
+      Executable="ScreenshotAnnotator.Desktop.exe"
+      EntryPoint="Windows.FullTrustApplication">
+      <uap:VisualElements
+        DisplayName="Screenshot Annotator"
+        Description="Capture screenshots and annotate them."
+        BackgroundColor="transparent"
+        Square150x150Logo="Assets\Square150x150Logo.png"
+        Square44x44Logo="Assets\Square44x44Logo.png">
+        <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png" />
+        <uap:SplashScreen Image="Assets\SplashScreen.png" />
+      </uap:VisualElements>
+      <Extensions>
+        <uap5:Extension
+          Category="windows.startupTask"
+          Executable="ScreenshotAnnotator.Desktop.exe"
+          EntryPoint="Windows.FullTrustApplication">
+          <uap5:StartupTask
+            TaskId="ScreenshotAnnotatorStartup"
+            Enabled="false"
+            DisplayName="Screenshot Annotator" />
+        </uap5:Extension>
+      </Extensions>
+    </Application>
+  </Applications>
+
+  <Capabilities>
+    <rescap:Capability Name="runFullTrust" />
+  </Capabilities>
+</Package>

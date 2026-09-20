@@ -450,6 +450,7 @@ public partial class ImageEditorViewModel : ViewModelBase, IProjectUi
 
     private Avalonia.Controls.Window? _mainWindow;
     private IApplicationSettings _settings;
+    private static readonly Logger Logger = LoggingService.GetLogger(nameof(ImageEditorViewModel));
 
     public RecentProjectsViewModel RecentProjects { get; }
 
@@ -461,6 +462,8 @@ public partial class ImageEditorViewModel : ViewModelBase, IProjectUi
         AllServices.ApplicationEvents.OnDeleteProject += OnDeleteProject;
         AllServices.ApplicationEvents.OnOpenProject += OnOpenProject;
         InitializeShapeTools();
+        if (_settings.Settings.StartWithSystem)
+            _ = ApplyStartWithSystemAsync(true);
     }
 
     private void InitializeShapeTools()
@@ -760,38 +763,48 @@ public partial class ImageEditorViewModel : ViewModelBase, IProjectUi
         if (_mainWindow is null)
             return;
 
-        // Hide the main window
+        var previousState = _mainWindow.WindowState;
         _mainWindow.WindowState = WindowState.Minimized;
 
-        // Wait a bit for window to hide
-        await Task.Delay(300);
-
-        // Capture screenshot
-        var screenshot = await ScreenshotService.CaptureScreenshotAsync();
-        if (screenshot is null)
-            return;
-
-        // Show preview window for area selection
-        var previewViewModel = new ScreenshotPreviewViewModel();
-        previewViewModel.SetScreenshot(screenshot);
-
-        var previewWindow = new Views.ScreenshotPreviewWindow
+        try
         {
-            DataContext = previewViewModel
-        };
+            await Task.Delay(300);
 
-        await previewWindow.ShowDialog(_mainWindow);
+            var screenshot = await ScreenshotService.CaptureScreenshotAsync();
+            if (screenshot is null)
+                return;
 
-        // Check if user confirmed the selection
-        if (previewViewModel.CroppedImage == null)
-            return;
+            var previewViewModel = new ScreenshotPreviewViewModel();
+            previewViewModel.SetScreenshot(screenshot);
 
-        await SaveCurrentProject();
-        CloseProject();
-        var project = await AllServices.ProjectManager.ImportImage(previewViewModel.CroppedImage.ToStream());
-        await FinishCreatingProject(project);
-     
-        _mainWindow.WindowState = WindowState.Normal;
+            var previewWindow = new Views.ScreenshotPreviewWindow
+            {
+                DataContext = previewViewModel,
+                Topmost = true,
+                ShowActivated = true,
+            };
+
+            var closed = new TaskCompletionSource();
+            previewWindow.Closed += (_, _) => closed.TrySetResult();
+            await Helpers.WindowZOrder.ShowOnTopAsync(previewWindow);
+            await closed.Task;
+
+            if (previewViewModel.CroppedImage == null)
+                return;
+
+            await SaveCurrentProject();
+            CloseProject();
+            var project = await AllServices.ProjectManager.ImportImage(previewViewModel.CroppedImage.ToStream());
+            await FinishCreatingProject(project);
+        }
+        finally
+        {
+            _mainWindow.WindowState = previousState == WindowState.Minimized
+                ? WindowState.Normal
+                : previousState;
+            _mainWindow.Show();
+            _mainWindow.Activate();
+        }
     }
 
     [RelayCommand]
@@ -834,8 +847,22 @@ public partial class ImageEditorViewModel : ViewModelBase, IProjectUi
 
     [RelayCommand]
     private void OpenWebsite() => ProcessHelper.OpenWithShell(ApplicationLinks.AboutUrl);
+
     [RelayCommand]
-    private void OpenLicense() => ProcessHelper.OpenWithShell(ApplicationLinks.LicenseUrl);
+    private async Task OpenLicense()
+    {
+        if (_mainWindow is null)
+            return;
+        await new Views.LicenseWindow().ShowDialog(_mainWindow);
+    }
+
+    [RelayCommand]
+    private async Task OpenPrivacy()
+    {
+        if (_mainWindow is null)
+            return;
+        await new Views.PrivacyPolicyWindow().ShowDialog(_mainWindow);
+    }
 
     public bool EnablePrintScreenHotkey
     {
@@ -846,6 +873,41 @@ public partial class ImageEditorViewModel : ViewModelBase, IProjectUi
             _settings.Save();
             AllServices.GlobalHotkeyService.Enabled = value;
             OnPropertyChanged();
+        }
+    }
+
+    public bool StartWithSystemSupported => StartupWithSystemService.IsSupported;
+
+    public bool StartWithSystem
+    {
+        get => _settings.Settings.StartWithSystem;
+        set
+        {
+            if (_settings.Settings.StartWithSystem == value)
+                return;
+            _settings.Settings.StartWithSystem = value;
+            _settings.Save();
+            OnPropertyChanged();
+            _ = ApplyStartWithSystemAsync(value);
+        }
+    }
+
+    private async Task ApplyStartWithSystemAsync(bool enabled)
+    {
+        try
+        {
+            await StartupWithSystemService.SetEnabledAsync(enabled);
+            var actual = await StartupWithSystemService.GetEnabledAsync();
+            if (actual == _settings.Settings.StartWithSystem)
+                return;
+
+            _settings.Settings.StartWithSystem = actual;
+            _settings.Save();
+            OnPropertyChanged(nameof(StartWithSystem));
+        }
+        catch (Exception ex)
+        {
+            Logger.Warn(ex, "Failed to update start-with-system.");
         }
     }
 

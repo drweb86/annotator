@@ -196,14 +196,56 @@
   <data name="Menu_Options" xml:space="preserve">
     <value>விருப்பங்கள்</value>
   </data>
+  <data name="Menu_Privacy" xml:space="preserve">
+    <value>தனியுரிமை</value>
+    <comment>Privacy policy menu item</comment>
+  </data>
+  <data name="Menu_StartWithSystem" xml:space="preserve">
+    <value>கணினியுடன் தொடங்கு</value>
+    <comment>Option to start the app when the system starts</comment>
+  </data>
   <data name="Menu_WebSite" xml:space="preserve">
     <value>வலைத்தளம்</value>
+  </data>
+  <data name="Ocr_Engine" xml:space="preserve">
+    <value>OCR இயந்திரம்</value>
+  </data>
+  <data name="Ocr_ExtractButton" xml:space="preserve">
+    <value>உரையை பிரி</value>
+  </data>
+  <data name="Ocr_Languages" xml:space="preserve">
+    <value>மொழிகள்</value>
+  </data>
+  <data name="Ocr_NoEngines" xml:space="preserve">
+    <value>OCR இயந்திரம் எதுவும் இல்லை</value>
+  </data>
+  <data name="Ocr_NoEnginesHelp" xml:space="preserve">
+    <value>Windows இல் கூடுதல் மென்பொருள் தேவையில்லை. Linux இல் Tesseract நிறுவுக: sudo apt install tesseract-ocr</value>
+  </data>
+  <data name="Ocr_Processing" xml:space="preserve">
+    <value>செயலாக்கப்படுகிறது...</value>
+  </data>
+  <data name="Ocr_Result" xml:space="preserve">
+    <value>அடையாளம் காணப்பட்ட உரை</value>
+  </data>
+  <data name="Ocr_TesseractLangHint" xml:space="preserve">
+    <value>Tesseract க்கு மேலும் மொழிகள் சேர்க்க மொழி தொகுப்புகளை நிறுவுக: sudo apt install tesseract-ocr-&lt;lang&gt;</value>
+  </data>
+  <data name="Ocr_Title" xml:space="preserve">
+    <value>உரையை பிரி (OCR)</value>
+  </data>
+  <data name="Ocr_WindowsTesseractHint" xml:space="preserve">
+    <value>Windows-இன் உள்ளமைக்கப்பட்ட OCR சில உரையை தவறவிடலாம். Screenshot Annotator Tesseract OCR-ஐயும் ஆதரிக்கிறது; அது பெரும்பாலும் உரையை சிறப்பாக எடுத்தெடுக்கிறது. இதை இங்கே பயன்படுத்த Tesseract-ஐ கைமுறையாக நிறுவவும்.</value>
   </data>
   <data name="Panel_Projects" xml:space="preserve">
     <value>திட்டங்கள்</value>
   </data>
   <data name="Panel_Properties" xml:space="preserve">
     <value>பண்புகள்</value>
+  </data>
+  <data name="Privacy_Language" xml:space="preserve">
+    <value>மொழி</value>
+    <comment>Language selector label on license and privacy windows</comment>
   </data>
   <data name="Props_Bold" xml:space="preserve">
     <value>தடித்த</value>
@@ -222,6 +264,15 @@
   </data>
   <data name="Screenshot_Instructions" xml:space="preserve">
     <value>பகுதியைத் தேர்ந்தெடுக்க கிளிக் செய்து இழுக்கவும், அல்லது மூலைப் புள்ளிகளைச் சரிசெய்யவும். துல்லியத்திற்கு பூதக்கண்ணாடியைப் பயன்படுத்தவும். தயாரானதும் சரி என்பதை அழுத்தவும்.</value>
+  </data>
+  <data name="Selection_Copy" xml:space="preserve">
+    <value>நகலெடு</value>
+  </data>
+  <data name="Selection_Delete" xml:space="preserve">
+    <value>நீக்கு</value>
+  </data>
+  <data name="Selection_ExtractText" xml:space="preserve">
+    <value>உரையை பிரி</value>
   </data>
   <data name="Tool_Arrow" xml:space="preserve">
     <value>அம்பு</value>
@@ -316,6 +367,15 @@
   <data name="Tooltip_Select" xml:space="preserve">
     <value>குறிப்பீடுகளைத் தேர்ந்தெடுத்துத் திருத்து</value>
   </data>
+  <data name="Tooltip_Selection_Copy" xml:space="preserve">
+    <value>தேர்ந்தெடுக்கப்பட்ட பகுதியை கிளிப்போர்டுக்கு நகலெடு</value>
+  </data>
+  <data name="Tooltip_Selection_Delete" xml:space="preserve">
+    <value>தேர்ந்தெடுக்கப்பட்ட பகுதியை வெள்ளையாக்கு</value>
+  </data>
+  <data name="Tooltip_Selection_ExtractText" xml:space="preserve">
+    <value>OCR மூலம் தேர்ந்தெடுக்கப்பட்ட பகுதியிலிருந்து உரையை பிரி</value>
+  </data>
   <data name="Update_NewVersionAvailable" xml:space="preserve">
     <value>புதிய பதிப்பு {0} கிடைக்கிறது.</value>
   </data>
@@ -340,53 +400,5 @@
   </data>
   <data name="Winget_ShortDescription" xml:space="preserve">
     <value>Windows மற்றும் Linux க்கான திரைக்காட்சி குறிப்பீட்டு மென்பொருள்.</value>
-  </data>
-  <data name="Selection_Copy" xml:space="preserve">
-    <value>நகலெடு</value>
-  </data>
-  <data name="Tooltip_Selection_Copy" xml:space="preserve">
-    <value>தேர்ந்தெடுக்கப்பட்ட பகுதியை கிளிப்போர்டுக்கு நகலெடு</value>
-  </data>
-  <data name="Selection_Delete" xml:space="preserve">
-    <value>நீக்கு</value>
-  </data>
-  <data name="Tooltip_Selection_Delete" xml:space="preserve">
-    <value>தேர்ந்தெடுக்கப்பட்ட பகுதியை வெள்ளையாக்கு</value>
-  </data>
-  <data name="Selection_ExtractText" xml:space="preserve">
-    <value>உரையை பிரி</value>
-  </data>
-  <data name="Tooltip_Selection_ExtractText" xml:space="preserve">
-    <value>OCR மூலம் தேர்ந்தெடுக்கப்பட்ட பகுதியிலிருந்து உரையை பிரி</value>
-  </data>
-  <data name="Ocr_Title" xml:space="preserve">
-    <value>உரையை பிரி (OCR)</value>
-  </data>
-  <data name="Ocr_Engine" xml:space="preserve">
-    <value>OCR இயந்திரம்</value>
-  </data>
-  <data name="Ocr_Languages" xml:space="preserve">
-    <value>மொழிகள்</value>
-  </data>
-  <data name="Ocr_NoEngines" xml:space="preserve">
-    <value>OCR இயந்திரம் எதுவும் இல்லை</value>
-  </data>
-  <data name="Ocr_NoEnginesHelp" xml:space="preserve">
-    <value>Windows இல் கூடுதல் மென்பொருள் தேவையில்லை. Linux இல் Tesseract நிறுவுக: sudo apt install tesseract-ocr</value>
-  </data>
-  <data name="Ocr_TesseractLangHint" xml:space="preserve">
-    <value>Tesseract க்கு மேலும் மொழிகள் சேர்க்க மொழி தொகுப்புகளை நிறுவுக: sudo apt install tesseract-ocr-&lt;lang&gt;</value>
-  </data>
-  <data name="Ocr_WindowsTesseractHint" xml:space="preserve">
-    <value>Windows-இன் உள்ளமைக்கப்பட்ட OCR சில உரையை தவறவிடலாம். Screenshot Annotator Tesseract OCR-ஐயும் ஆதரிக்கிறது; அது பெரும்பாலும் உரையை சிறப்பாக எடுத்தெடுக்கிறது. இதை இங்கே பயன்படுத்த Tesseract-ஐ கைமுறையாக நிறுவவும்.</value>
-  </data>
-  <data name="Ocr_ExtractButton" xml:space="preserve">
-    <value>உரையை பிரி</value>
-  </data>
-  <data name="Ocr_Processing" xml:space="preserve">
-    <value>செயலாக்கப்படுகிறது...</value>
-  </data>
-  <data name="Ocr_Result" xml:space="preserve">
-    <value>அடையாளம் காணப்பட்ட உரை</value>
   </data>
 </root>

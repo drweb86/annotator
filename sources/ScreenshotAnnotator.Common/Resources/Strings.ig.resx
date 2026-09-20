@@ -199,14 +199,56 @@ Biko mee otu n'ime ndị a:
   <data name="Menu_Options" xml:space="preserve">
     <value>Nhọrọ</value>
   </data>
+  <data name="Menu_Privacy" xml:space="preserve">
+    <value>Nzuzo</value>
+    <comment>Privacy policy menu item</comment>
+  </data>
+  <data name="Menu_StartWithSystem" xml:space="preserve">
+    <value>Malite na sistemụ</value>
+    <comment>Option to start the app when the system starts</comment>
+  </data>
   <data name="Menu_WebSite" xml:space="preserve">
     <value>Weebụsaịtị</value>
+  </data>
+  <data name="Ocr_Engine" xml:space="preserve">
+    <value>Injin OCR</value>
+  </data>
+  <data name="Ocr_ExtractButton" xml:space="preserve">
+    <value>Wepụ Ederede</value>
+  </data>
+  <data name="Ocr_Languages" xml:space="preserve">
+    <value>Asụsụ</value>
+  </data>
+  <data name="Ocr_NoEngines" xml:space="preserve">
+    <value>Enweghị injin OCR dị</value>
+  </data>
+  <data name="Ocr_NoEnginesHelp" xml:space="preserve">
+    <value>Na Windows, ọ dịghị mkpa iwe ngwaọrụ ọzọ. Na Linux, tinye Tesseract: sudo apt install tesseract-ocr</value>
+  </data>
+  <data name="Ocr_Processing" xml:space="preserve">
+    <value>Na-arụ ọrụ...</value>
+  </data>
+  <data name="Ocr_Result" xml:space="preserve">
+    <value>Ederede a chọpụtara</value>
+  </data>
+  <data name="Ocr_TesseractLangHint" xml:space="preserve">
+    <value>Iji tinye asụsụ ndị ọzọ maka Tesseract, tinye ngwugwu asụsụ: sudo apt install tesseract-ocr-&lt;lang&gt;</value>
+  </data>
+  <data name="Ocr_Title" xml:space="preserve">
+    <value>Wepụ Ederede (OCR)</value>
+  </data>
+  <data name="Ocr_WindowsTesseractHint" xml:space="preserve">
+    <value>OCR wuru n’ime Windows nwere ike ịhapụ ụfọdụ ederede. Screenshot Annotator na-akwado Tesseract OCR kwa, nke na-ewepụtakarị ederede nke ọma karịa. Wụnye Tesseract n’onwe gị iji ya ebe a.</value>
   </data>
   <data name="Panel_Projects" xml:space="preserve">
     <value>Ọrụ</value>
   </data>
   <data name="Panel_Properties" xml:space="preserve">
     <value>Njirimara</value>
+  </data>
+  <data name="Privacy_Language" xml:space="preserve">
+    <value>Asụsụ</value>
+    <comment>Language selector label on license and privacy windows</comment>
   </data>
   <data name="Props_Bold" xml:space="preserve">
     <value>Ike</value>
@@ -225,6 +267,15 @@ Biko mee otu n'ime ndị a:
   </data>
   <data name="Screenshot_Instructions" xml:space="preserve">
     <value>Pịa ma dọkọ iji họrọ mpaghara, ma ọ bụ hazie ihe nchekwa narị. Jiri ihe nlekọta maka ìgwè. Pịa OK mgbe ị dị njikere.</value>
+  </data>
+  <data name="Selection_Copy" xml:space="preserve">
+    <value>Detuo</value>
+  </data>
+  <data name="Selection_Delete" xml:space="preserve">
+    <value>Hichapụ</value>
+  </data>
+  <data name="Selection_ExtractText" xml:space="preserve">
+    <value>Wepụ Ederede</value>
   </data>
   <data name="Tool_Arrow" xml:space="preserve">
     <value>Ube</value>
@@ -319,6 +370,15 @@ Biko mee otu n'ime ndị a:
   <data name="Tooltip_Select" xml:space="preserve">
     <value>Họrọ ma dezie nkọwa</value>
   </data>
+  <data name="Tooltip_Selection_Copy" xml:space="preserve">
+    <value>Detuo mpaghara ahọpụtara n'ebe edekọ ihe</value>
+  </data>
+  <data name="Tooltip_Selection_Delete" xml:space="preserve">
+    <value>Mee ka mpaghara ahọpụtara bụrụ ọcha</value>
+  </data>
+  <data name="Tooltip_Selection_ExtractText" xml:space="preserve">
+    <value>Wepụ ederede site n'mpaghara ahọpụtara site na OCR</value>
+  </data>
   <data name="Update_NewVersionAvailable" xml:space="preserve">
     <value>Ụdị ọhụrụ {0} dị ugbu a.</value>
   </data>
@@ -343,53 +403,5 @@ Atụmatụ:
   </data>
   <data name="Winget_ShortDescription" xml:space="preserve">
     <value>Ngwa nkọwa foto ihuenyo maka Windows na Linux.</value>
-  </data>
-  <data name="Selection_Copy" xml:space="preserve">
-    <value>Detuo</value>
-  </data>
-  <data name="Tooltip_Selection_Copy" xml:space="preserve">
-    <value>Detuo mpaghara ahọpụtara n'ebe edekọ ihe</value>
-  </data>
-  <data name="Selection_Delete" xml:space="preserve">
-    <value>Hichapụ</value>
-  </data>
-  <data name="Tooltip_Selection_Delete" xml:space="preserve">
-    <value>Mee ka mpaghara ahọpụtara bụrụ ọcha</value>
-  </data>
-  <data name="Selection_ExtractText" xml:space="preserve">
-    <value>Wepụ Ederede</value>
-  </data>
-  <data name="Tooltip_Selection_ExtractText" xml:space="preserve">
-    <value>Wepụ ederede site n'mpaghara ahọpụtara site na OCR</value>
-  </data>
-  <data name="Ocr_Title" xml:space="preserve">
-    <value>Wepụ Ederede (OCR)</value>
-  </data>
-  <data name="Ocr_Engine" xml:space="preserve">
-    <value>Injin OCR</value>
-  </data>
-  <data name="Ocr_Languages" xml:space="preserve">
-    <value>Asụsụ</value>
-  </data>
-  <data name="Ocr_NoEngines" xml:space="preserve">
-    <value>Enweghị injin OCR dị</value>
-  </data>
-  <data name="Ocr_NoEnginesHelp" xml:space="preserve">
-    <value>Na Windows, ọ dịghị mkpa iwe ngwaọrụ ọzọ. Na Linux, tinye Tesseract: sudo apt install tesseract-ocr</value>
-  </data>
-  <data name="Ocr_TesseractLangHint" xml:space="preserve">
-    <value>Iji tinye asụsụ ndị ọzọ maka Tesseract, tinye ngwugwu asụsụ: sudo apt install tesseract-ocr-&lt;lang&gt;</value>
-  </data>
-  <data name="Ocr_WindowsTesseractHint" xml:space="preserve">
-    <value>OCR wuru n’ime Windows nwere ike ịhapụ ụfọdụ ederede. Screenshot Annotator na-akwado Tesseract OCR kwa, nke na-ewepụtakarị ederede nke ọma karịa. Wụnye Tesseract n’onwe gị iji ya ebe a.</value>
-  </data>
-  <data name="Ocr_ExtractButton" xml:space="preserve">
-    <value>Wepụ Ederede</value>
-  </data>
-  <data name="Ocr_Processing" xml:space="preserve">
-    <value>Na-arụ ọrụ...</value>
-  </data>
-  <data name="Ocr_Result" xml:space="preserve">
-    <value>Ederede a chọpụtara</value>
   </data>
 </root>

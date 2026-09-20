@@ -12,7 +12,9 @@
         WindowDecorations="None"
         CanResize="False"
         Background="Black"
-        Focusable="True">
+        Focusable="True"
+        Topmost="True"
+        ShowActivated="True">
 
   <Design.DataContext>
     <vm:ScreenshotPreviewViewModel />

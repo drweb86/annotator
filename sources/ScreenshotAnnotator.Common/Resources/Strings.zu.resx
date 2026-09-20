@@ -199,14 +199,56 @@ Sicela wenze esinye salezi:
   <data name="Menu_Options" xml:space="preserve">
     <value>Izinketho</value>
   </data>
+  <data name="Menu_Privacy" xml:space="preserve">
+    <value>Ubumfihlo</value>
+    <comment>Privacy policy menu item</comment>
+  </data>
+  <data name="Menu_StartWithSystem" xml:space="preserve">
+    <value>Qala nohlelo</value>
+    <comment>Option to start the app when the system starts</comment>
+  </data>
   <data name="Menu_WebSite" xml:space="preserve">
     <value>Iwebhusayithi</value>
+  </data>
+  <data name="Ocr_Engine" xml:space="preserve">
+    <value>Injini ye-OCR</value>
+  </data>
+  <data name="Ocr_ExtractButton" xml:space="preserve">
+    <value>Khipha Umbhalo</value>
+  </data>
+  <data name="Ocr_Languages" xml:space="preserve">
+    <value>Izilimi</value>
+  </data>
+  <data name="Ocr_NoEngines" xml:space="preserve">
+    <value>Ayikho injini ye-OCR etholakalayo</value>
+  </data>
+  <data name="Ocr_NoEnginesHelp" xml:space="preserve">
+    <value>Ku-Windows, akudingeki isoftware eyengeziwe. Ku-Linux, faka i-Tesseract: sudo apt install tesseract-ocr</value>
+  </data>
+  <data name="Ocr_Processing" xml:space="preserve">
+    <value>Iyasebenza...</value>
+  </data>
+  <data name="Ocr_Result" xml:space="preserve">
+    <value>Umbhalo Owaziwa</value>
+  </data>
+  <data name="Ocr_TesseractLangHint" xml:space="preserve">
+    <value>Ukwengeza izilimi eziningi ku-Tesseract, faka amaphepha ezilimi: sudo apt install tesseract-ocr-&lt;lang&gt;</value>
+  </data>
+  <data name="Ocr_Title" xml:space="preserve">
+    <value>Khipha Umbhalo (OCR)</value>
+  </data>
+  <data name="Ocr_WindowsTesseractHint" xml:space="preserve">
+    <value>I-OCR eyakhelwe ngaphakathi ku-Windows ingase yeqe umbhalo. I-Screenshot Annotator iphinde isekele i-Tesseract OCR, evame ukukhipha umbhalo kangcono. Faka i-Tesseract mathupha ukuze uyisebenzise lapha.</value>
   </data>
   <data name="Panel_Projects" xml:space="preserve">
     <value>Amaphrojekthi</value>
   </data>
   <data name="Panel_Properties" xml:space="preserve">
     <value>Izakhiwo</value>
+  </data>
+  <data name="Privacy_Language" xml:space="preserve">
+    <value>Ulimi</value>
+    <comment>Language selector label on license and privacy windows</comment>
   </data>
   <data name="Props_Bold" xml:space="preserve">
     <value>Okumnyama</value>
@@ -225,6 +267,15 @@ Sicela wenze esinye salezi:
   </data>
   <data name="Screenshot_Instructions" xml:space="preserve">
     <value>Chofoza uphinde udonse ukuze ukhethe indawo, noma ulungise amaphuzu amagumbi. Sebenzisa i-magnifier yokunemba. Chofoza OK lapho ulungile.</value>
+  </data>
+  <data name="Selection_Copy" xml:space="preserve">
+    <value>Kopisha</value>
+  </data>
+  <data name="Selection_Delete" xml:space="preserve">
+    <value>Susa</value>
+  </data>
+  <data name="Selection_ExtractText" xml:space="preserve">
+    <value>Khipha Umbhalo</value>
   </data>
   <data name="Tool_Arrow" xml:space="preserve">
     <value>Umcibisholo</value>
@@ -319,6 +370,15 @@ Sicela wenze esinye salezi:
   <data name="Tooltip_Select" xml:space="preserve">
     <value>Khetha uphinde ulungise izichazelo</value>
   </data>
+  <data name="Tooltip_Selection_Copy" xml:space="preserve">
+    <value>Kopisha indawo ekhethiwe kuya ku-clipboard</value>
+  </data>
+  <data name="Tooltip_Selection_Delete" xml:space="preserve">
+    <value>Yenza indawo ekhethiwe ibe mhlophe</value>
+  </data>
+  <data name="Tooltip_Selection_ExtractText" xml:space="preserve">
+    <value>Khipha umbhalo wendawo ekhethiwe usebenzisa i-OCR</value>
+  </data>
   <data name="Update_NewVersionAvailable" xml:space="preserve">
     <value>Inguqulo entsha {0} iyatholakala.</value>
   </data>
@@ -343,53 +403,5 @@ Izici:
   </data>
   <data name="Winget_ShortDescription" xml:space="preserve">
     <value>Isoftware yokuchaza izithombe zesikrini ye-Windows ne-Linux.</value>
-  </data>
-  <data name="Selection_Copy" xml:space="preserve">
-    <value>Kopisha</value>
-  </data>
-  <data name="Tooltip_Selection_Copy" xml:space="preserve">
-    <value>Kopisha indawo ekhethiwe kuya ku-clipboard</value>
-  </data>
-  <data name="Selection_Delete" xml:space="preserve">
-    <value>Susa</value>
-  </data>
-  <data name="Tooltip_Selection_Delete" xml:space="preserve">
-    <value>Yenza indawo ekhethiwe ibe mhlophe</value>
-  </data>
-  <data name="Selection_ExtractText" xml:space="preserve">
-    <value>Khipha Umbhalo</value>
-  </data>
-  <data name="Tooltip_Selection_ExtractText" xml:space="preserve">
-    <value>Khipha umbhalo wendawo ekhethiwe usebenzisa i-OCR</value>
-  </data>
-  <data name="Ocr_Title" xml:space="preserve">
-    <value>Khipha Umbhalo (OCR)</value>
-  </data>
-  <data name="Ocr_Engine" xml:space="preserve">
-    <value>Injini ye-OCR</value>
-  </data>
-  <data name="Ocr_Languages" xml:space="preserve">
-    <value>Izilimi</value>
-  </data>
-  <data name="Ocr_NoEngines" xml:space="preserve">
-    <value>Ayikho injini ye-OCR etholakalayo</value>
-  </data>
-  <data name="Ocr_NoEnginesHelp" xml:space="preserve">
-    <value>Ku-Windows, akudingeki isoftware eyengeziwe. Ku-Linux, faka i-Tesseract: sudo apt install tesseract-ocr</value>
-  </data>
-  <data name="Ocr_TesseractLangHint" xml:space="preserve">
-    <value>Ukwengeza izilimi eziningi ku-Tesseract, faka amaphepha ezilimi: sudo apt install tesseract-ocr-&lt;lang&gt;</value>
-  </data>
-  <data name="Ocr_WindowsTesseractHint" xml:space="preserve">
-    <value>I-OCR eyakhelwe ngaphakathi ku-Windows ingase yeqe umbhalo. I-Screenshot Annotator iphinde isekele i-Tesseract OCR, evame ukukhipha umbhalo kangcono. Faka i-Tesseract mathupha ukuze uyisebenzise lapha.</value>
-  </data>
-  <data name="Ocr_ExtractButton" xml:space="preserve">
-    <value>Khipha Umbhalo</value>
-  </data>
-  <data name="Ocr_Processing" xml:space="preserve">
-    <value>Iyasebenza...</value>
-  </data>
-  <data name="Ocr_Result" xml:space="preserve">
-    <value>Umbhalo Owaziwa</value>
   </data>
 </root>

@@ -12,7 +12,8 @@ public partial class UpdateCheckExpanderView : UserControl
         InitializeComponent();
         IsVisible = false;
 #if RELEASE
-        _ = CheckForUpdates();
+        if (!WindowsMsixPackage.IsCurrentProcessPackaged)
+            _ = CheckForUpdates();
 #endif
     }
 

@@ -199,14 +199,56 @@
   <data name="Menu_Options" xml:space="preserve">
     <value>اختیارونه</value>
   </data>
+  <data name="Menu_Privacy" xml:space="preserve">
+    <value>محرمیت</value>
+    <comment>Privacy policy menu item</comment>
+  </data>
+  <data name="Menu_StartWithSystem" xml:space="preserve">
+    <value>له سیسټم سره پیل</value>
+    <comment>Option to start the app when the system starts</comment>
+  </data>
   <data name="Menu_WebSite" xml:space="preserve">
     <value>ویب پاڼه</value>
+  </data>
+  <data name="Ocr_Engine" xml:space="preserve">
+    <value>OCR انجن</value>
+  </data>
+  <data name="Ocr_ExtractButton" xml:space="preserve">
+    <value>متن راوباسئ</value>
+  </data>
+  <data name="Ocr_Languages" xml:space="preserve">
+    <value>ژبې</value>
+  </data>
+  <data name="Ocr_NoEngines" xml:space="preserve">
+    <value>هیڅ OCR انجن شتون نلري</value>
+  </data>
+  <data name="Ocr_NoEnginesHelp" xml:space="preserve">
+    <value>د وینډوز لپاره اضافي سافټویر ته اړتیا نشته. د لینکس لپاره Tesseract نصب کړئ: sudo apt install tesseract-ocr</value>
+  </data>
+  <data name="Ocr_Processing" xml:space="preserve">
+    <value>پروسس کیږي...</value>
+  </data>
+  <data name="Ocr_Result" xml:space="preserve">
+    <value>پیژندل شوی متن</value>
+  </data>
+  <data name="Ocr_TesseractLangHint" xml:space="preserve">
+    <value>د Tesseract لپاره نورې ژبې اضافه کولو لپاره د ژبې پاکونه نصب کړئ: sudo apt install tesseract-ocr-&lt;lang&gt;</value>
+  </data>
+  <data name="Ocr_Title" xml:space="preserve">
+    <value>متن راوباسئ (OCR)</value>
+  </data>
+  <data name="Ocr_WindowsTesseractHint" xml:space="preserve">
+    <value>د Windows جوړ-دننه OCR ځینې متن له لاسه ورکولی شي. Screenshot Annotator د Tesseract OCR ملاتړ هم کوي، چې ډېری وخت متن ښه راوباسي. دلته د کارولو لپاره Tesseract په لاسي ډول نصب کړئ.</value>
   </data>
   <data name="Panel_Projects" xml:space="preserve">
     <value>پروژې</value>
   </data>
   <data name="Panel_Properties" xml:space="preserve">
     <value>ځانتیاوې</value>
+  </data>
+  <data name="Privacy_Language" xml:space="preserve">
+    <value>ژبه</value>
+    <comment>Language selector label on license and privacy windows</comment>
   </data>
   <data name="Props_Bold" xml:space="preserve">
     <value>ډبل</value>
@@ -225,6 +267,15 @@
   </data>
   <data name="Screenshot_Instructions" xml:space="preserve">
     <value>د ساحه غوره کولو لپاره کلیک وکړئ او کش کړئ، یا د کونج ټکي تنظیم کړئ. د دقت لپاره لوپ وکاروئ. کله چې چمتو یاست OK فشار ورکړئ.</value>
+  </data>
+  <data name="Selection_Copy" xml:space="preserve">
+    <value>کاپي</value>
+  </data>
+  <data name="Selection_Delete" xml:space="preserve">
+    <value>ړنګول</value>
+  </data>
+  <data name="Selection_ExtractText" xml:space="preserve">
+    <value>متن راوباسئ</value>
   </data>
   <data name="Tool_Arrow" xml:space="preserve">
     <value>تیر</value>
@@ -319,6 +370,15 @@
   <data name="Tooltip_Select" xml:space="preserve">
     <value>حاشیه نویسي غوره او سمه کړئ</value>
   </data>
+  <data name="Tooltip_Selection_Copy" xml:space="preserve">
+    <value>ټاکل شوي سیمه کلیپ بورډ ته کاپي کړئ</value>
+  </data>
+  <data name="Tooltip_Selection_Delete" xml:space="preserve">
+    <value>ټاکل شوي سیمه سپینه کړئ</value>
+  </data>
+  <data name="Tooltip_Selection_ExtractText" xml:space="preserve">
+    <value>د OCR له لارې ټاکل شوي سیمې څخه متن راوباسئ</value>
+  </data>
   <data name="Update_NewVersionAvailable" xml:space="preserve">
     <value>نوې نسخه {0} شتون لري.</value>
   </data>
@@ -343,53 +403,5 @@
   </data>
   <data name="Winget_ShortDescription" xml:space="preserve">
     <value>د وینډوز او لینکس لپاره د سکرین شاټ حاشیه نویسي سافټویر.</value>
-  </data>
-  <data name="Selection_Copy" xml:space="preserve">
-    <value>کاپي</value>
-  </data>
-  <data name="Tooltip_Selection_Copy" xml:space="preserve">
-    <value>ټاکل شوي سیمه کلیپ بورډ ته کاپي کړئ</value>
-  </data>
-  <data name="Selection_Delete" xml:space="preserve">
-    <value>ړنګول</value>
-  </data>
-  <data name="Tooltip_Selection_Delete" xml:space="preserve">
-    <value>ټاکل شوي سیمه سپینه کړئ</value>
-  </data>
-  <data name="Selection_ExtractText" xml:space="preserve">
-    <value>متن راوباسئ</value>
-  </data>
-  <data name="Tooltip_Selection_ExtractText" xml:space="preserve">
-    <value>د OCR له لارې ټاکل شوي سیمې څخه متن راوباسئ</value>
-  </data>
-  <data name="Ocr_Title" xml:space="preserve">
-    <value>متن راوباسئ (OCR)</value>
-  </data>
-  <data name="Ocr_Engine" xml:space="preserve">
-    <value>OCR انجن</value>
-  </data>
-  <data name="Ocr_Languages" xml:space="preserve">
-    <value>ژبې</value>
-  </data>
-  <data name="Ocr_NoEngines" xml:space="preserve">
-    <value>هیڅ OCR انجن شتون نلري</value>
-  </data>
-  <data name="Ocr_NoEnginesHelp" xml:space="preserve">
-    <value>د وینډوز لپاره اضافي سافټویر ته اړتیا نشته. د لینکس لپاره Tesseract نصب کړئ: sudo apt install tesseract-ocr</value>
-  </data>
-  <data name="Ocr_TesseractLangHint" xml:space="preserve">
-    <value>د Tesseract لپاره نورې ژبې اضافه کولو لپاره د ژبې پاکونه نصب کړئ: sudo apt install tesseract-ocr-&lt;lang&gt;</value>
-  </data>
-  <data name="Ocr_WindowsTesseractHint" xml:space="preserve">
-    <value>د Windows جوړ-دننه OCR ځینې متن له لاسه ورکولی شي. Screenshot Annotator د Tesseract OCR ملاتړ هم کوي، چې ډېری وخت متن ښه راوباسي. دلته د کارولو لپاره Tesseract په لاسي ډول نصب کړئ.</value>
-  </data>
-  <data name="Ocr_ExtractButton" xml:space="preserve">
-    <value>متن راوباسئ</value>
-  </data>
-  <data name="Ocr_Processing" xml:space="preserve">
-    <value>پروسس کیږي...</value>
-  </data>
-  <data name="Ocr_Result" xml:space="preserve">
-    <value>پیژندل شوی متن</value>
   </data>
 </root>

@@ -199,14 +199,56 @@ Molimo uradite jedno od sledećeg:
   <data name="Menu_Options" xml:space="preserve">
     <value>Opcije</value>
   </data>
+  <data name="Menu_Privacy" xml:space="preserve">
+    <value>Privatnost</value>
+    <comment>Privacy policy menu item</comment>
+  </data>
+  <data name="Menu_StartWithSystem" xml:space="preserve">
+    <value>Pokreni sa sistemom</value>
+    <comment>Option to start the app when the system starts</comment>
+  </data>
   <data name="Menu_WebSite" xml:space="preserve">
     <value>Veb sajt</value>
+  </data>
+  <data name="Ocr_Engine" xml:space="preserve">
+    <value>OCR мотор</value>
+  </data>
+  <data name="Ocr_ExtractButton" xml:space="preserve">
+    <value>Извади текст</value>
+  </data>
+  <data name="Ocr_Languages" xml:space="preserve">
+    <value>Језици</value>
+  </data>
+  <data name="Ocr_NoEngines" xml:space="preserve">
+    <value>Нема доступних OCR мотора</value>
+  </data>
+  <data name="Ocr_NoEnginesHelp" xml:space="preserve">
+    <value>На Windows-у није потребан додатни софтвер. На Linux-у инсталирајте Tesseract: sudo apt install tesseract-ocr</value>
+  </data>
+  <data name="Ocr_Processing" xml:space="preserve">
+    <value>Обрађује се...</value>
+  </data>
+  <data name="Ocr_Result" xml:space="preserve">
+    <value>Препознати текст</value>
+  </data>
+  <data name="Ocr_TesseractLangHint" xml:space="preserve">
+    <value>За додавање більше језика у Tesseract, инсталирајте језичке пакете: sudo apt install tesseract-ocr-&lt;lang&gt;</value>
+  </data>
+  <data name="Ocr_Title" xml:space="preserve">
+    <value>Вађење текста (OCR)</value>
+  </data>
+  <data name="Ocr_WindowsTesseractHint" xml:space="preserve">
+    <value>Уграђени Windows OCR може да пропусти текст. Screenshot Annotator такође подржава Tesseract OCR, који често боље издваја текст. Инсталирајте Tesseract ручно да бисте га користили овде.</value>
   </data>
   <data name="Panel_Projects" xml:space="preserve">
     <value>Projekti</value>
   </data>
   <data name="Panel_Properties" xml:space="preserve">
     <value>Svojstva</value>
+  </data>
+  <data name="Privacy_Language" xml:space="preserve">
+    <value>Jezik</value>
+    <comment>Language selector label on license and privacy windows</comment>
   </data>
   <data name="Props_Bold" xml:space="preserve">
     <value>Podebljano</value>
@@ -225,6 +267,15 @@ Molimo uradite jedno od sledećeg:
   </data>
   <data name="Screenshot_Instructions" xml:space="preserve">
     <value>Kliknite i prevucite da biste izabrali oblast ili podesite tačke uglova. Koristite lupu za preciznost. Pritisnite OK kada ste spremni.</value>
+  </data>
+  <data name="Selection_Copy" xml:space="preserve">
+    <value>Копирај</value>
+  </data>
+  <data name="Selection_Delete" xml:space="preserve">
+    <value>Обриши</value>
+  </data>
+  <data name="Selection_ExtractText" xml:space="preserve">
+    <value>Извади текст</value>
   </data>
   <data name="Tool_Arrow" xml:space="preserve">
     <value>Strelica</value>
@@ -319,6 +370,15 @@ Molimo uradite jedno od sledećeg:
   <data name="Tooltip_Select" xml:space="preserve">
     <value>Izaberi i uredi anotacije</value>
   </data>
+  <data name="Tooltip_Selection_Copy" xml:space="preserve">
+    <value>Копирај одабрани предел у клипборд</value>
+  </data>
+  <data name="Tooltip_Selection_Delete" xml:space="preserve">
+    <value>Избели одабрани предео</value>
+  </data>
+  <data name="Tooltip_Selection_ExtractText" xml:space="preserve">
+    <value>Извади текст из одабраног предела помоћу OCR</value>
+  </data>
   <data name="Update_NewVersionAvailable" xml:space="preserve">
     <value>Nova verzija {0} je dostupna.</value>
   </data>
@@ -343,53 +403,5 @@ Funkcije:
   </data>
   <data name="Winget_ShortDescription" xml:space="preserve">
     <value>Softver za anotaciju snimaka ekrana za Windows i Linux.</value>
-  </data>
-  <data name="Selection_Copy" xml:space="preserve">
-    <value>Копирај</value>
-  </data>
-  <data name="Tooltip_Selection_Copy" xml:space="preserve">
-    <value>Копирај одабрани предел у клипборд</value>
-  </data>
-  <data name="Selection_Delete" xml:space="preserve">
-    <value>Обриши</value>
-  </data>
-  <data name="Tooltip_Selection_Delete" xml:space="preserve">
-    <value>Избели одабрани предео</value>
-  </data>
-  <data name="Selection_ExtractText" xml:space="preserve">
-    <value>Извади текст</value>
-  </data>
-  <data name="Tooltip_Selection_ExtractText" xml:space="preserve">
-    <value>Извади текст из одабраног предела помоћу OCR</value>
-  </data>
-  <data name="Ocr_Title" xml:space="preserve">
-    <value>Вађење текста (OCR)</value>
-  </data>
-  <data name="Ocr_Engine" xml:space="preserve">
-    <value>OCR мотор</value>
-  </data>
-  <data name="Ocr_Languages" xml:space="preserve">
-    <value>Језици</value>
-  </data>
-  <data name="Ocr_NoEngines" xml:space="preserve">
-    <value>Нема доступних OCR мотора</value>
-  </data>
-  <data name="Ocr_NoEnginesHelp" xml:space="preserve">
-    <value>На Windows-у није потребан додатни софтвер. На Linux-у инсталирајте Tesseract: sudo apt install tesseract-ocr</value>
-  </data>
-  <data name="Ocr_TesseractLangHint" xml:space="preserve">
-    <value>За додавање більше језика у Tesseract, инсталирајте језичке пакете: sudo apt install tesseract-ocr-&lt;lang&gt;</value>
-  </data>
-  <data name="Ocr_WindowsTesseractHint" xml:space="preserve">
-    <value>Уграђени Windows OCR може да пропусти текст. Screenshot Annotator такође подржава Tesseract OCR, који често боље издваја текст. Инсталирајте Tesseract ручно да бисте га користили овде.</value>
-  </data>
-  <data name="Ocr_ExtractButton" xml:space="preserve">
-    <value>Извади текст</value>
-  </data>
-  <data name="Ocr_Processing" xml:space="preserve">
-    <value>Обрађује се...</value>
-  </data>
-  <data name="Ocr_Result" xml:space="preserve">
-    <value>Препознати текст</value>
   </data>
 </root>

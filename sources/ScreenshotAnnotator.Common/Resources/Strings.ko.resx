@@ -199,14 +199,56 @@
   <data name="Menu_Options" xml:space="preserve">
     <value>옵션</value>
   </data>
+  <data name="Menu_Privacy" xml:space="preserve">
+    <value>개인정보</value>
+    <comment>Privacy policy menu item</comment>
+  </data>
+  <data name="Menu_StartWithSystem" xml:space="preserve">
+    <value>시스템 시작 시 실행</value>
+    <comment>Option to start the app when the system starts</comment>
+  </data>
   <data name="Menu_WebSite" xml:space="preserve">
     <value>웹사이트</value>
+  </data>
+  <data name="Ocr_Engine" xml:space="preserve">
+    <value>OCR 엔진</value>
+  </data>
+  <data name="Ocr_ExtractButton" xml:space="preserve">
+    <value>텍스트 추출</value>
+  </data>
+  <data name="Ocr_Languages" xml:space="preserve">
+    <value>언어</value>
+  </data>
+  <data name="Ocr_NoEngines" xml:space="preserve">
+    <value>사용 가능한 OCR 엔진이 없습니다</value>
+  </data>
+  <data name="Ocr_NoEnginesHelp" xml:space="preserve">
+    <value>Windows에서는 추가 소프트웨어가 필요하지 않습니다. Linux에서는 Tesseract를 설치하세요: sudo apt install tesseract-ocr</value>
+  </data>
+  <data name="Ocr_Processing" xml:space="preserve">
+    <value>처리 중...</value>
+  </data>
+  <data name="Ocr_Result" xml:space="preserve">
+    <value>인식된 텍스트</value>
+  </data>
+  <data name="Ocr_TesseractLangHint" xml:space="preserve">
+    <value>Tesseract에 언어를 추가하려면 언어 팩을 설치하세요: sudo apt install tesseract-ocr-&lt;lang&gt;</value>
+  </data>
+  <data name="Ocr_Title" xml:space="preserve">
+    <value>텍스트 추출 (OCR)</value>
+  </data>
+  <data name="Ocr_WindowsTesseractHint" xml:space="preserve">
+    <value>Windows 기본 OCR은 텍스트를 놓칠 수 있습니다. Screenshot Annotator는 텍스트를 더 잘 추출하는 경우가 많은 Tesseract OCR도 지원합니다. 여기에서 사용하려면 Tesseract를 수동으로 설치하세요.</value>
   </data>
   <data name="Panel_Projects" xml:space="preserve">
     <value>프로젝트</value>
   </data>
   <data name="Panel_Properties" xml:space="preserve">
     <value>속성</value>
+  </data>
+  <data name="Privacy_Language" xml:space="preserve">
+    <value>언어</value>
+    <comment>Language selector label on license and privacy windows</comment>
   </data>
   <data name="Props_Bold" xml:space="preserve">
     <value>굵게</value>
@@ -225,6 +267,15 @@
   </data>
   <data name="Screenshot_Instructions" xml:space="preserve">
     <value>클릭하고 드래그하여 영역을 선택하거나 모서리 포인트를 조정합니다. 정밀도를 높이려면 돋보기를 사용하세요. 준비가 되면 확인을 누르세요.</value>
+  </data>
+  <data name="Selection_Copy" xml:space="preserve">
+    <value>복사</value>
+  </data>
+  <data name="Selection_Delete" xml:space="preserve">
+    <value>삭제</value>
+  </data>
+  <data name="Selection_ExtractText" xml:space="preserve">
+    <value>텍스트 추출</value>
   </data>
   <data name="Tool_Arrow" xml:space="preserve">
     <value>화살표</value>
@@ -319,6 +370,15 @@
   <data name="Tooltip_Select" xml:space="preserve">
     <value>주석 선택 및 편집</value>
   </data>
+  <data name="Tooltip_Selection_Copy" xml:space="preserve">
+    <value>선택 영역을 클립보드에 복사</value>
+  </data>
+  <data name="Tooltip_Selection_Delete" xml:space="preserve">
+    <value>선택 영역을 흰색으로 채우기</value>
+  </data>
+  <data name="Tooltip_Selection_ExtractText" xml:space="preserve">
+    <value>OCR을 사용하여 선택 영역에서 텍스트 추출</value>
+  </data>
   <data name="Update_NewVersionAvailable" xml:space="preserve">
     <value>새 버전 {0}을(를) 사용할 수 있습니다.</value>
   </data>
@@ -343,53 +403,5 @@
   </data>
   <data name="Winget_ShortDescription" xml:space="preserve">
     <value>Windows 및 Linux용 스크린샷 주석 소프트웨어.</value>
-  </data>
-  <data name="Selection_Copy" xml:space="preserve">
-    <value>복사</value>
-  </data>
-  <data name="Tooltip_Selection_Copy" xml:space="preserve">
-    <value>선택 영역을 클립보드에 복사</value>
-  </data>
-  <data name="Selection_Delete" xml:space="preserve">
-    <value>삭제</value>
-  </data>
-  <data name="Tooltip_Selection_Delete" xml:space="preserve">
-    <value>선택 영역을 흰색으로 채우기</value>
-  </data>
-  <data name="Selection_ExtractText" xml:space="preserve">
-    <value>텍스트 추출</value>
-  </data>
-  <data name="Tooltip_Selection_ExtractText" xml:space="preserve">
-    <value>OCR을 사용하여 선택 영역에서 텍스트 추출</value>
-  </data>
-  <data name="Ocr_Title" xml:space="preserve">
-    <value>텍스트 추출 (OCR)</value>
-  </data>
-  <data name="Ocr_Engine" xml:space="preserve">
-    <value>OCR 엔진</value>
-  </data>
-  <data name="Ocr_Languages" xml:space="preserve">
-    <value>언어</value>
-  </data>
-  <data name="Ocr_NoEngines" xml:space="preserve">
-    <value>사용 가능한 OCR 엔진이 없습니다</value>
-  </data>
-  <data name="Ocr_NoEnginesHelp" xml:space="preserve">
-    <value>Windows에서는 추가 소프트웨어가 필요하지 않습니다. Linux에서는 Tesseract를 설치하세요: sudo apt install tesseract-ocr</value>
-  </data>
-  <data name="Ocr_TesseractLangHint" xml:space="preserve">
-    <value>Tesseract에 언어를 추가하려면 언어 팩을 설치하세요: sudo apt install tesseract-ocr-&lt;lang&gt;</value>
-  </data>
-  <data name="Ocr_WindowsTesseractHint" xml:space="preserve">
-    <value>Windows 기본 OCR은 텍스트를 놓칠 수 있습니다. Screenshot Annotator는 텍스트를 더 잘 추출하는 경우가 많은 Tesseract OCR도 지원합니다. 여기에서 사용하려면 Tesseract를 수동으로 설치하세요.</value>
-  </data>
-  <data name="Ocr_ExtractButton" xml:space="preserve">
-    <value>텍스트 추출</value>
-  </data>
-  <data name="Ocr_Processing" xml:space="preserve">
-    <value>처리 중...</value>
-  </data>
-  <data name="Ocr_Result" xml:space="preserve">
-    <value>인식된 텍스트</value>
   </data>
 </root>

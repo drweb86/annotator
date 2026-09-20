@@ -235,9 +235,47 @@
   <data name="Menu_Options" xml:space="preserve">
     <value>Параметры</value>
   </data>
+  <data name="Menu_Privacy" xml:space="preserve">
+    <value>Конфиденциальность</value>
+    <comment>Privacy policy menu item</comment>
+  </data>
+  <data name="Menu_StartWithSystem" xml:space="preserve">
+    <value>Запускать вместе с системой</value>
+    <comment>Option to start the app when the system starts</comment>
+  </data>
   <data name="Menu_WebSite" xml:space="preserve">
     <value>Веб-сайт</value>
     <comment>Website menu label</comment>
+  </data>
+  <data name="Ocr_Engine" xml:space="preserve">
+    <value>Движок OCR</value>
+  </data>
+  <data name="Ocr_ExtractButton" xml:space="preserve">
+    <value>Извлечь текст</value>
+  </data>
+  <data name="Ocr_Languages" xml:space="preserve">
+    <value>Языки</value>
+  </data>
+  <data name="Ocr_NoEngines" xml:space="preserve">
+    <value>Нет доступных движков OCR</value>
+  </data>
+  <data name="Ocr_NoEnginesHelp" xml:space="preserve">
+    <value>В Windows дополнительное ПО не требуется (используется встроенный OCR). В Linux установите Tesseract: sudo apt install tesseract-ocr</value>
+  </data>
+  <data name="Ocr_Processing" xml:space="preserve">
+    <value>Обработка...</value>
+  </data>
+  <data name="Ocr_Result" xml:space="preserve">
+    <value>Распознанный текст</value>
+  </data>
+  <data name="Ocr_TesseractLangHint" xml:space="preserve">
+    <value>Для добавления языков в Tesseract установите языковые пакеты: sudo apt install tesseract-ocr-&lt;lang&gt;</value>
+  </data>
+  <data name="Ocr_Title" xml:space="preserve">
+    <value>Извлечение текста (OCR)</value>
+  </data>
+  <data name="Ocr_WindowsTesseractHint" xml:space="preserve">
+    <value>Встроенный OCR Windows может пропускать текст. Screenshot Annotator также поддерживает Tesseract OCR, который часто лучше извлекает текст. Установите Tesseract вручную, чтобы использовать его здесь.</value>
   </data>
   <data name="Panel_Projects" xml:space="preserve">
     <value>Проекты</value>
@@ -245,6 +283,10 @@
   </data>
   <data name="Panel_Properties" xml:space="preserve">
     <value>Свойства</value>
+  </data>
+  <data name="Privacy_Language" xml:space="preserve">
+    <value>Язык</value>
+    <comment>Language selector label on license and privacy windows</comment>
   </data>
   <data name="Props_Bold" xml:space="preserve">
     <value>Жирный</value>
@@ -264,6 +306,15 @@
   <data name="Screenshot_Instructions" xml:space="preserve">
     <value>Нажмите и перетащите, чтобы выбрать область, или измените угловые точки. Используйте лупу для точности. Нажмите OK, когда готово.</value>
     <comment>Screenshot preview instructions</comment>
+  </data>
+  <data name="Selection_Copy" xml:space="preserve">
+    <value>Копировать</value>
+  </data>
+  <data name="Selection_Delete" xml:space="preserve">
+    <value>Удалить</value>
+  </data>
+  <data name="Selection_ExtractText" xml:space="preserve">
+    <value>Извлечь текст</value>
   </data>
   <data name="Tool_Arrow" xml:space="preserve">
     <value>Стрелка</value>
@@ -387,6 +438,15 @@
     <value>Выбрать и редактировать аннотации</value>
     <comment>Tooltip for Select tool</comment>
   </data>
+  <data name="Tooltip_Selection_Copy" xml:space="preserve">
+    <value>Копировать выбранную область в буфер обмена</value>
+  </data>
+  <data name="Tooltip_Selection_Delete" xml:space="preserve">
+    <value>Закрасить выбранную область белым</value>
+  </data>
+  <data name="Tooltip_Selection_ExtractText" xml:space="preserve">
+    <value>Извлечь текст из выбранной области с помощью OCR</value>
+  </data>
   <data name="Update_NewVersionAvailable" xml:space="preserve">
     <value>Доступна новая версия {0}.</value>
     <comment>Update notification message. {0} is replaced with version number</comment>
@@ -413,53 +473,5 @@
   </data>
   <data name="Winget_ShortDescription" xml:space="preserve">
     <value>Программа для аннотирования скриншотов для Windows и Linux.</value>
-  </data>
-  <data name="Selection_Copy" xml:space="preserve">
-    <value>Копировать</value>
-  </data>
-  <data name="Tooltip_Selection_Copy" xml:space="preserve">
-    <value>Копировать выбранную область в буфер обмена</value>
-  </data>
-  <data name="Selection_Delete" xml:space="preserve">
-    <value>Удалить</value>
-  </data>
-  <data name="Tooltip_Selection_Delete" xml:space="preserve">
-    <value>Закрасить выбранную область белым</value>
-  </data>
-  <data name="Selection_ExtractText" xml:space="preserve">
-    <value>Извлечь текст</value>
-  </data>
-  <data name="Tooltip_Selection_ExtractText" xml:space="preserve">
-    <value>Извлечь текст из выбранной области с помощью OCR</value>
-  </data>
-  <data name="Ocr_Title" xml:space="preserve">
-    <value>Извлечение текста (OCR)</value>
-  </data>
-  <data name="Ocr_Engine" xml:space="preserve">
-    <value>Движок OCR</value>
-  </data>
-  <data name="Ocr_Languages" xml:space="preserve">
-    <value>Языки</value>
-  </data>
-  <data name="Ocr_NoEngines" xml:space="preserve">
-    <value>Нет доступных движков OCR</value>
-  </data>
-  <data name="Ocr_NoEnginesHelp" xml:space="preserve">
-    <value>В Windows дополнительное ПО не требуется (используется встроенный OCR). В Linux установите Tesseract: sudo apt install tesseract-ocr</value>
-  </data>
-  <data name="Ocr_TesseractLangHint" xml:space="preserve">
-    <value>Для добавления языков в Tesseract установите языковые пакеты: sudo apt install tesseract-ocr-&lt;lang&gt;</value>
-  </data>
-  <data name="Ocr_WindowsTesseractHint" xml:space="preserve">
-    <value>Встроенный OCR Windows может пропускать текст. Screenshot Annotator также поддерживает Tesseract OCR, который часто лучше извлекает текст. Установите Tesseract вручную, чтобы использовать его здесь.</value>
-  </data>
-  <data name="Ocr_ExtractButton" xml:space="preserve">
-    <value>Извлечь текст</value>
-  </data>
-  <data name="Ocr_Processing" xml:space="preserve">
-    <value>Обработка...</value>
-  </data>
-  <data name="Ocr_Result" xml:space="preserve">
-    <value>Распознанный текст</value>
   </data>
 </root>

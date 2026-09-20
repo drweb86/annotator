@@ -2,14 +2,17 @@
 
 - Windows 11 x64 Professional;
 - Microsoft Visual Studio 2026;
+- Windows 10/11 SDK (MakeAppx) to pack Microsoft Store MSIX packages;
 
 # Automated Release (GitHub Actions)
 
 The `.github/workflows/publish-deb.yml` workflow runs when a GitHub Release is published. It automatically:
 
 1. **Builds Ubuntu .deb packages** (x64 + arm64), uploads them to the Release, and updates the APT repository on `gh-pages`
-2. **Builds Windows installer** (NSIS .exe with x64 + arm64) and **7z archive**, uploads them to the Release
+2. **Builds Windows installer** (NSIS .exe with x64 + arm64), **7z archive**, and **unsigned Store MSIX** (x64 + arm64), uploads them to the Release
 3. **Creates a branch** in the `drweb86/winget-pkgs` fork with the WinGet manifest for the new version
+
+Microsoft Store: upload the MSIX files at https://partner.microsoft.com/dashboard . Partner Center re-signs after certification.
 
 ## One-time GitHub setup
 

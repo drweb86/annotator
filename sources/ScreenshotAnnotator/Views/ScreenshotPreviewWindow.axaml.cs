@@ -2,6 +2,7 @@ using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Controls.Shapes;
 using Avalonia.Input;
+using ScreenshotAnnotator.Helpers;
 using ScreenshotAnnotator.ViewModels;
 using System;
 
@@ -23,8 +24,12 @@ public partial class ScreenshotPreviewWindow : Window
     protected override void OnOpened(EventArgs e)
     {
         base.OnOpened(e);
+        Topmost = true;
         ApplyFullscreenToPrimaryScreen();
+        Activate();
         Focus();
+        if (OperatingSystem.IsWindows())
+            WindowZOrder.BringToFront(this);
     }
 
     /// <summary>

@@ -1,9 +1,18 @@
 # 2026.09.14
 (unpublished)
 
+## New Features
+- In-app License window with translations for supported languages.
+- In-app Privacy window (English for review) and a privacy folder with a language selector page.
+- Option to start Screenshot Annotator with the system, next to the Print Screen hotkey option.
+- Microsoft Store MSIX packages (x64 and arm64).
+
 ## Changes
 - Fixup License.
 - Update some libraries.
+
+## Bug Fixes
+- Print Screen selector window now stays on top of other windows.
 
 # 2026.07.14
 

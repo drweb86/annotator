@@ -199,14 +199,56 @@
   <data name="Menu_Options" xml:space="preserve">
     <value>選項</value>
   </data>
+  <data name="Menu_Privacy" xml:space="preserve">
+    <value>私隱</value>
+    <comment>Privacy policy menu item</comment>
+  </data>
+  <data name="Menu_StartWithSystem" xml:space="preserve">
+    <value>隨系統啟動</value>
+    <comment>Option to start the app when the system starts</comment>
+  </data>
   <data name="Menu_WebSite" xml:space="preserve">
     <value>網站</value>
+  </data>
+  <data name="Ocr_Engine" xml:space="preserve">
+    <value>OCR引擎</value>
+  </data>
+  <data name="Ocr_ExtractButton" xml:space="preserve">
+    <value>提取文字</value>
+  </data>
+  <data name="Ocr_Languages" xml:space="preserve">
+    <value>語言</value>
+  </data>
+  <data name="Ocr_NoEngines" xml:space="preserve">
+    <value>沒有可用的OCR引擎</value>
+  </data>
+  <data name="Ocr_NoEnginesHelp" xml:space="preserve">
+    <value>在Windows上無需額外軟件（使用內建OCR）。在Linux上安裝Tesseract: sudo apt install tesseract-ocr</value>
+  </data>
+  <data name="Ocr_Processing" xml:space="preserve">
+    <value>處理中...</value>
+  </data>
+  <data name="Ocr_Result" xml:space="preserve">
+    <value>識別結果</value>
+  </data>
+  <data name="Ocr_TesseractLangHint" xml:space="preserve">
+    <value>要為Tesseract新增更多語言，請安裝語言套件: sudo apt install tesseract-ocr-&lt;lang&gt;</value>
+  </data>
+  <data name="Ocr_Title" xml:space="preserve">
+    <value>文字識別 (OCR)</value>
+  </data>
+  <data name="Ocr_WindowsTesseractHint" xml:space="preserve">
+    <value>Windows 內建 OCR 可能會漏掉文字。Screenshot Annotator 亦支援 Tesseract OCR，通常可以更好地擷取文字。請手動安裝 Tesseract 以在此使用。</value>
   </data>
   <data name="Panel_Projects" xml:space="preserve">
     <value>專案</value>
   </data>
   <data name="Panel_Properties" xml:space="preserve">
     <value>屬性</value>
+  </data>
+  <data name="Privacy_Language" xml:space="preserve">
+    <value>語言</value>
+    <comment>Language selector label on license and privacy windows</comment>
   </data>
   <data name="Props_Bold" xml:space="preserve">
     <value>粗體</value>
@@ -225,6 +267,15 @@
   </data>
   <data name="Screenshot_Instructions" xml:space="preserve">
     <value>撳住拖曳揀範圍，或者調整角位。用放大鏡方便對準。搞掂就撳確定。</value>
+  </data>
+  <data name="Selection_Copy" xml:space="preserve">
+    <value>複製</value>
+  </data>
+  <data name="Selection_Delete" xml:space="preserve">
+    <value>刪除</value>
+  </data>
+  <data name="Selection_ExtractText" xml:space="preserve">
+    <value>提取文字</value>
   </data>
   <data name="Tool_Arrow" xml:space="preserve">
     <value>箭嘴</value>
@@ -319,6 +370,15 @@
   <data name="Tooltip_Select" xml:space="preserve">
     <value>選取同編輯標註</value>
   </data>
+  <data name="Tooltip_Selection_Copy" xml:space="preserve">
+    <value>將選定區域複製到剪貼簿</value>
+  </data>
+  <data name="Tooltip_Selection_Delete" xml:space="preserve">
+    <value>將選定區域塗白</value>
+  </data>
+  <data name="Tooltip_Selection_ExtractText" xml:space="preserve">
+    <value>使用OCR從選定區域提取文字</value>
+  </data>
   <data name="Update_NewVersionAvailable" xml:space="preserve">
     <value>有新版本 {0} 可用。</value>
   </data>
@@ -343,53 +403,5 @@
   </data>
   <data name="Winget_ShortDescription" xml:space="preserve">
     <value>適用於 Windows 同 Linux 嘅截圖標註軟件。</value>
-  </data>
-  <data name="Selection_Copy" xml:space="preserve">
-    <value>複製</value>
-  </data>
-  <data name="Tooltip_Selection_Copy" xml:space="preserve">
-    <value>將選定區域複製到剪貼簿</value>
-  </data>
-  <data name="Selection_Delete" xml:space="preserve">
-    <value>刪除</value>
-  </data>
-  <data name="Tooltip_Selection_Delete" xml:space="preserve">
-    <value>將選定區域塗白</value>
-  </data>
-  <data name="Selection_ExtractText" xml:space="preserve">
-    <value>提取文字</value>
-  </data>
-  <data name="Tooltip_Selection_ExtractText" xml:space="preserve">
-    <value>使用OCR從選定區域提取文字</value>
-  </data>
-  <data name="Ocr_Title" xml:space="preserve">
-    <value>文字識別 (OCR)</value>
-  </data>
-  <data name="Ocr_Engine" xml:space="preserve">
-    <value>OCR引擎</value>
-  </data>
-  <data name="Ocr_Languages" xml:space="preserve">
-    <value>語言</value>
-  </data>
-  <data name="Ocr_NoEngines" xml:space="preserve">
-    <value>沒有可用的OCR引擎</value>
-  </data>
-  <data name="Ocr_NoEnginesHelp" xml:space="preserve">
-    <value>在Windows上無需額外軟件（使用內建OCR）。在Linux上安裝Tesseract: sudo apt install tesseract-ocr</value>
-  </data>
-  <data name="Ocr_TesseractLangHint" xml:space="preserve">
-    <value>要為Tesseract新增更多語言，請安裝語言套件: sudo apt install tesseract-ocr-&lt;lang&gt;</value>
-  </data>
-  <data name="Ocr_WindowsTesseractHint" xml:space="preserve">
-    <value>Windows 內建 OCR 可能會漏掉文字。Screenshot Annotator 亦支援 Tesseract OCR，通常可以更好地擷取文字。請手動安裝 Tesseract 以在此使用。</value>
-  </data>
-  <data name="Ocr_ExtractButton" xml:space="preserve">
-    <value>提取文字</value>
-  </data>
-  <data name="Ocr_Processing" xml:space="preserve">
-    <value>處理中...</value>
-  </data>
-  <data name="Ocr_Result" xml:space="preserve">
-    <value>識別結果</value>
   </data>
 </root>

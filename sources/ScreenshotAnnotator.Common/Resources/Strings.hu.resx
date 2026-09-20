@@ -199,14 +199,56 @@ Kérjük, tegye az alábbiak egyikét:
   <data name="Menu_Options" xml:space="preserve">
     <value>Beállítások</value>
   </data>
+  <data name="Menu_Privacy" xml:space="preserve">
+    <value>Adatvédelem</value>
+    <comment>Privacy policy menu item</comment>
+  </data>
+  <data name="Menu_StartWithSystem" xml:space="preserve">
+    <value>Indítás a rendszerrel</value>
+    <comment>Option to start the app when the system starts</comment>
+  </data>
   <data name="Menu_WebSite" xml:space="preserve">
     <value>Weboldal</value>
+  </data>
+  <data name="Ocr_Engine" xml:space="preserve">
+    <value>OCR motor</value>
+  </data>
+  <data name="Ocr_ExtractButton" xml:space="preserve">
+    <value>Szöveg kinyerése</value>
+  </data>
+  <data name="Ocr_Languages" xml:space="preserve">
+    <value>Nyelvek</value>
+  </data>
+  <data name="Ocr_NoEngines" xml:space="preserve">
+    <value>Nem érhető el OCR motor</value>
+  </data>
+  <data name="Ocr_NoEnginesHelp" xml:space="preserve">
+    <value>Windows alatt nem szükséges extra szoftver. Linux alatt telepítse a Tesseract-ot: sudo apt install tesseract-ocr</value>
+  </data>
+  <data name="Ocr_Processing" xml:space="preserve">
+    <value>Feldolgozás...</value>
+  </data>
+  <data name="Ocr_Result" xml:space="preserve">
+    <value>Felismert szöveg</value>
+  </data>
+  <data name="Ocr_TesseractLangHint" xml:space="preserve">
+    <value>További nyelvek hozzáadásához a Tesseract-hoz, telepítse a nyelvi csomagokat: sudo apt install tesseract-ocr-&lt;lang&gt;</value>
+  </data>
+  <data name="Ocr_Title" xml:space="preserve">
+    <value>Szöveg kinyerése (OCR)</value>
+  </data>
+  <data name="Ocr_WindowsTesseractHint" xml:space="preserve">
+    <value>A Windows beépített OCR-je kihagyhat szöveget. A Screenshot Annotator a Tesseract OCR-t is támogatja, amely gyakran jobb szövegkinyerést ad. A használatához telepítse kézzel a Tesseractot.</value>
   </data>
   <data name="Panel_Projects" xml:space="preserve">
     <value>Projektek</value>
   </data>
   <data name="Panel_Properties" xml:space="preserve">
     <value>Tulajdonságok</value>
+  </data>
+  <data name="Privacy_Language" xml:space="preserve">
+    <value>Nyelv</value>
+    <comment>Language selector label on license and privacy windows</comment>
   </data>
   <data name="Props_Bold" xml:space="preserve">
     <value>Félkövér</value>
@@ -225,6 +267,15 @@ Kérjük, tegye az alábbiak egyikét:
   </data>
   <data name="Screenshot_Instructions" xml:space="preserve">
     <value>Kattintson és húzzon a terület kijelöléséhez, vagy állítsa be a sarokpontokat. Használja a nagyítót a pontossághoz. Nyomja meg az OK gombot, ha készen van.</value>
+  </data>
+  <data name="Selection_Copy" xml:space="preserve">
+    <value>Másolás</value>
+  </data>
+  <data name="Selection_Delete" xml:space="preserve">
+    <value>Törlés</value>
+  </data>
+  <data name="Selection_ExtractText" xml:space="preserve">
+    <value>Szöveg kinyerése</value>
   </data>
   <data name="Tool_Arrow" xml:space="preserve">
     <value>Nyíl</value>
@@ -319,6 +370,15 @@ Kérjük, tegye az alábbiak egyikét:
   <data name="Tooltip_Select" xml:space="preserve">
     <value>Megjegyzések kijelölése és szerkesztése</value>
   </data>
+  <data name="Tooltip_Selection_Copy" xml:space="preserve">
+    <value>A kijelölt terület másolása a vágólapra</value>
+  </data>
+  <data name="Tooltip_Selection_Delete" xml:space="preserve">
+    <value>A kijelölt terület fehérítése</value>
+  </data>
+  <data name="Tooltip_Selection_ExtractText" xml:space="preserve">
+    <value>Szöveg kinyerése a kijelölt területről OCR segítségével</value>
+  </data>
   <data name="Update_NewVersionAvailable" xml:space="preserve">
     <value>Az új {0} verzió elérhető.</value>
   </data>
@@ -343,53 +403,5 @@ Funkciók:
   </data>
   <data name="Winget_ShortDescription" xml:space="preserve">
     <value>Képernyőkép-annotáló szoftver Windows és Linux rendszerekhez.</value>
-  </data>
-  <data name="Selection_Copy" xml:space="preserve">
-    <value>Másolás</value>
-  </data>
-  <data name="Tooltip_Selection_Copy" xml:space="preserve">
-    <value>A kijelölt terület másolása a vágólapra</value>
-  </data>
-  <data name="Selection_Delete" xml:space="preserve">
-    <value>Törlés</value>
-  </data>
-  <data name="Tooltip_Selection_Delete" xml:space="preserve">
-    <value>A kijelölt terület fehérítése</value>
-  </data>
-  <data name="Selection_ExtractText" xml:space="preserve">
-    <value>Szöveg kinyerése</value>
-  </data>
-  <data name="Tooltip_Selection_ExtractText" xml:space="preserve">
-    <value>Szöveg kinyerése a kijelölt területről OCR segítségével</value>
-  </data>
-  <data name="Ocr_Title" xml:space="preserve">
-    <value>Szöveg kinyerése (OCR)</value>
-  </data>
-  <data name="Ocr_Engine" xml:space="preserve">
-    <value>OCR motor</value>
-  </data>
-  <data name="Ocr_Languages" xml:space="preserve">
-    <value>Nyelvek</value>
-  </data>
-  <data name="Ocr_NoEngines" xml:space="preserve">
-    <value>Nem érhető el OCR motor</value>
-  </data>
-  <data name="Ocr_NoEnginesHelp" xml:space="preserve">
-    <value>Windows alatt nem szükséges extra szoftver. Linux alatt telepítse a Tesseract-ot: sudo apt install tesseract-ocr</value>
-  </data>
-  <data name="Ocr_TesseractLangHint" xml:space="preserve">
-    <value>További nyelvek hozzáadásához a Tesseract-hoz, telepítse a nyelvi csomagokat: sudo apt install tesseract-ocr-&lt;lang&gt;</value>
-  </data>
-  <data name="Ocr_WindowsTesseractHint" xml:space="preserve">
-    <value>A Windows beépített OCR-je kihagyhat szöveget. A Screenshot Annotator a Tesseract OCR-t is támogatja, amely gyakran jobb szövegkinyerést ad. A használatához telepítse kézzel a Tesseractot.</value>
-  </data>
-  <data name="Ocr_ExtractButton" xml:space="preserve">
-    <value>Szöveg kinyerése</value>
-  </data>
-  <data name="Ocr_Processing" xml:space="preserve">
-    <value>Feldolgozás...</value>
-  </data>
-  <data name="Ocr_Result" xml:space="preserve">
-    <value>Felismert szöveg</value>
   </data>
 </root>

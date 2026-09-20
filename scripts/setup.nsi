@@ -331,6 +331,7 @@ Section Uninstall
   DeleteRegKey HKLM "Software\${PRODUCT_NAME}"
   DeleteRegKey HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\${PRODUCT_NAME}"
   DeleteRegKey HKCU "Software\${PRODUCT_NAME}"
+  DeleteRegValue HKCU "Software\Microsoft\Windows\CurrentVersion\Run" "ScreenshotAnnotator"
 
   SetAutoClose true
 SectionEnd

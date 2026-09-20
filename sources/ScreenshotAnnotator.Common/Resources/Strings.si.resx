@@ -199,14 +199,56 @@
   <data name="Menu_Options" xml:space="preserve">
     <value>විකල්ප</value>
   </data>
+  <data name="Menu_Privacy" xml:space="preserve">
+    <value>පෞද්ගලිකත්වය</value>
+    <comment>Privacy policy menu item</comment>
+  </data>
+  <data name="Menu_StartWithSystem" xml:space="preserve">
+    <value>පද්ධතිය සමඟ ආරම්භ කරන්න</value>
+    <comment>Option to start the app when the system starts</comment>
+  </data>
   <data name="Menu_WebSite" xml:space="preserve">
     <value>වෙබ් අඩවිය</value>
+  </data>
+  <data name="Ocr_Engine" xml:space="preserve">
+    <value>OCR යන්ත්‍රය</value>
+  </data>
+  <data name="Ocr_ExtractButton" xml:space="preserve">
+    <value>පෙළ උකහා ගන්න</value>
+  </data>
+  <data name="Ocr_Languages" xml:space="preserve">
+    <value>භාෂා</value>
+  </data>
+  <data name="Ocr_NoEngines" xml:space="preserve">
+    <value>OCR යන්ත්‍ර නොමැත</value>
+  </data>
+  <data name="Ocr_NoEnginesHelp" xml:space="preserve">
+    <value>Windows හි OCR සඳහා අමතර මෘදුකාංග අවශ්‍ය නොවේ. Linux හි Tesseract ස්ථාපනය කරන්න: sudo apt install tesseract-ocr</value>
+  </data>
+  <data name="Ocr_Processing" xml:space="preserve">
+    <value>සකසමින්...</value>
+  </data>
+  <data name="Ocr_Result" xml:space="preserve">
+    <value>හඳුනාගත් පෙළ</value>
+  </data>
+  <data name="Ocr_TesseractLangHint" xml:space="preserve">
+    <value>Tesseract සඳහා වැඩිදුර භාෂා එකතු කිරීමට භාෂා පැකේජ ස්ථාපනය කරන්න: sudo apt install tesseract-ocr-&lt;lang&gt;</value>
+  </data>
+  <data name="Ocr_Title" xml:space="preserve">
+    <value>පෙළ උකහා ගන්න (OCR)</value>
+  </data>
+  <data name="Ocr_WindowsTesseractHint" xml:space="preserve">
+    <value>Windows හි ඇති OCR සමහර පෙළ අතහැරිය හැක. Screenshot Annotator බොහෝවිට පෙළ වඩා හොඳින් උපුටාගන්නා Tesseract OCR ද සහාය දක්වයි. මෙහි භාවිතා කිරීමට Tesseract අතින් ස්ථාපනය කරන්න.</value>
   </data>
   <data name="Panel_Projects" xml:space="preserve">
     <value>ව්‍යාපෘති</value>
   </data>
   <data name="Panel_Properties" xml:space="preserve">
     <value>ගුණ</value>
+  </data>
+  <data name="Privacy_Language" xml:space="preserve">
+    <value>භාෂාව</value>
+    <comment>Language selector label on license and privacy windows</comment>
   </data>
   <data name="Props_Bold" xml:space="preserve">
     <value>තද</value>
@@ -225,6 +267,15 @@
   </data>
   <data name="Screenshot_Instructions" xml:space="preserve">
     <value>ප්‍රදේශයක් තේරීමට ක්ලික් කර ඇද දමන්න, හෝ කොන ලකුණු සකස් කරන්න. නිරවද්‍යතාව සඳහා විශාලන කාච භාවිතා කරන්න. සූදානම් වූ විට OK 누르න්න.</value>
+  </data>
+  <data name="Selection_Copy" xml:space="preserve">
+    <value>පිටපත් කරන්න</value>
+  </data>
+  <data name="Selection_Delete" xml:space="preserve">
+    <value>මකන්න</value>
+  </data>
+  <data name="Selection_ExtractText" xml:space="preserve">
+    <value>පෙළ උකහා ගන්න</value>
   </data>
   <data name="Tool_Arrow" xml:space="preserve">
     <value>ඊතලය</value>
@@ -319,6 +370,15 @@
   <data name="Tooltip_Select" xml:space="preserve">
     <value>සටහන් තෝරා සංස්කරණය කරන්න</value>
   </data>
+  <data name="Tooltip_Selection_Copy" xml:space="preserve">
+    <value>තෝරාගත් ප්‍රදේශය clipboard වෙත පිටපත් කරන්න</value>
+  </data>
+  <data name="Tooltip_Selection_Delete" xml:space="preserve">
+    <value>තෝරාගත් ප්‍රදේශය සුදු කරන්න</value>
+  </data>
+  <data name="Tooltip_Selection_ExtractText" xml:space="preserve">
+    <value>OCR භාවිතයෙන් තෝරාගත් ප්‍රදේශයෙන් පෙළ උකහා ගන්න</value>
+  </data>
   <data name="Update_NewVersionAvailable" xml:space="preserve">
     <value>නව අනුවාදය {0} ලබා ගත හැකිය.</value>
   </data>
@@ -343,53 +403,5 @@
   </data>
   <data name="Winget_ShortDescription" xml:space="preserve">
     <value>Windows සහ Linux සඳහා තිර රූප සටහන් මෘදුකාංගය.</value>
-  </data>
-  <data name="Selection_Copy" xml:space="preserve">
-    <value>පිටපත් කරන්න</value>
-  </data>
-  <data name="Tooltip_Selection_Copy" xml:space="preserve">
-    <value>තෝරාගත් ප්‍රදේශය clipboard වෙත පිටපත් කරන්න</value>
-  </data>
-  <data name="Selection_Delete" xml:space="preserve">
-    <value>මකන්න</value>
-  </data>
-  <data name="Tooltip_Selection_Delete" xml:space="preserve">
-    <value>තෝරාගත් ප්‍රදේශය සුදු කරන්න</value>
-  </data>
-  <data name="Selection_ExtractText" xml:space="preserve">
-    <value>පෙළ උකහා ගන්න</value>
-  </data>
-  <data name="Tooltip_Selection_ExtractText" xml:space="preserve">
-    <value>OCR භාවිතයෙන් තෝරාගත් ප්‍රදේශයෙන් පෙළ උකහා ගන්න</value>
-  </data>
-  <data name="Ocr_Title" xml:space="preserve">
-    <value>පෙළ උකහා ගන්න (OCR)</value>
-  </data>
-  <data name="Ocr_Engine" xml:space="preserve">
-    <value>OCR යන්ත්‍රය</value>
-  </data>
-  <data name="Ocr_Languages" xml:space="preserve">
-    <value>භාෂා</value>
-  </data>
-  <data name="Ocr_NoEngines" xml:space="preserve">
-    <value>OCR යන්ත්‍ර නොමැත</value>
-  </data>
-  <data name="Ocr_NoEnginesHelp" xml:space="preserve">
-    <value>Windows හි OCR සඳහා අමතර මෘදුකාංග අවශ්‍ය නොවේ. Linux හි Tesseract ස්ථාපනය කරන්න: sudo apt install tesseract-ocr</value>
-  </data>
-  <data name="Ocr_TesseractLangHint" xml:space="preserve">
-    <value>Tesseract සඳහා වැඩිදුර භාෂා එකතු කිරීමට භාෂා පැකේජ ස්ථාපනය කරන්න: sudo apt install tesseract-ocr-&lt;lang&gt;</value>
-  </data>
-  <data name="Ocr_WindowsTesseractHint" xml:space="preserve">
-    <value>Windows හි ඇති OCR සමහර පෙළ අතහැරිය හැක. Screenshot Annotator බොහෝවිට පෙළ වඩා හොඳින් උපුටාගන්නා Tesseract OCR ද සහාය දක්වයි. මෙහි භාවිතා කිරීමට Tesseract අතින් ස්ථාපනය කරන්න.</value>
-  </data>
-  <data name="Ocr_ExtractButton" xml:space="preserve">
-    <value>පෙළ උකහා ගන්න</value>
-  </data>
-  <data name="Ocr_Processing" xml:space="preserve">
-    <value>සකසමින්...</value>
-  </data>
-  <data name="Ocr_Result" xml:space="preserve">
-    <value>හඳුනාගත් පෙළ</value>
   </data>
 </root>

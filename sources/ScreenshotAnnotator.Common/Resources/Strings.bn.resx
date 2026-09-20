@@ -196,14 +196,56 @@
   <data name="Menu_Options" xml:space="preserve">
     <value>বিকল্প</value>
   </data>
+  <data name="Menu_Privacy" xml:space="preserve">
+    <value>গোপনীয়তা</value>
+    <comment>Privacy policy menu item</comment>
+  </data>
+  <data name="Menu_StartWithSystem" xml:space="preserve">
+    <value>সিস্টেমের সাথে চালু করুন</value>
+    <comment>Option to start the app when the system starts</comment>
+  </data>
   <data name="Menu_WebSite" xml:space="preserve">
     <value>ওয়েবসাইট</value>
+  </data>
+  <data name="Ocr_Engine" xml:space="preserve">
+    <value>OCR ইঞ্জিন</value>
+  </data>
+  <data name="Ocr_ExtractButton" xml:space="preserve">
+    <value>টেক্সট বের করুন</value>
+  </data>
+  <data name="Ocr_Languages" xml:space="preserve">
+    <value>ভাষাসমূহ</value>
+  </data>
+  <data name="Ocr_NoEngines" xml:space="preserve">
+    <value>কোনো OCR ইঞ্জিন পাওয়া যায়নি</value>
+  </data>
+  <data name="Ocr_NoEnginesHelp" xml:space="preserve">
+    <value>Windows-এ OCR ব্যবহার করতে অতিরিক্ত সফ্টওয়্যার প্রয়োজন নেই। Linux-এ Tesseract ইনস্টল করুন: sudo apt install tesseract-ocr</value>
+  </data>
+  <data name="Ocr_Processing" xml:space="preserve">
+    <value>প্রক্রিয়াকরণ হচ্ছে...</value>
+  </data>
+  <data name="Ocr_Result" xml:space="preserve">
+    <value>স্বীকৃত টেক্সট</value>
+  </data>
+  <data name="Ocr_TesseractLangHint" xml:space="preserve">
+    <value>Tesseract-এ আরো ভাষা যোগ করতে ভাষা প্যাক ইনস্টল করুন: sudo apt install tesseract-ocr-&lt;lang&gt;</value>
+  </data>
+  <data name="Ocr_Title" xml:space="preserve">
+    <value>টেক্সট বের করুন (OCR)</value>
+  </data>
+  <data name="Ocr_WindowsTesseractHint" xml:space="preserve">
+    <value>Windows-এর বিল্ট-ইন OCR কিছু লেখা মিস করতে পারে। Screenshot Annotator Tesseract OCR-ও সমর্থন করে, যা প্রায়ই আরও ভালোভাবে লেখা বের করে। এখানে ব্যবহার করতে Tesseract ম্যানুয়ালি ইনস্টল করুন।</value>
   </data>
   <data name="Panel_Projects" xml:space="preserve">
     <value>প্রজেক্ট</value>
   </data>
   <data name="Panel_Properties" xml:space="preserve">
     <value>বৈশিষ্ট্য</value>
+  </data>
+  <data name="Privacy_Language" xml:space="preserve">
+    <value>ভাষা</value>
+    <comment>Language selector label on license and privacy windows</comment>
   </data>
   <data name="Props_Bold" xml:space="preserve">
     <value>বোল্ড</value>
@@ -222,6 +264,15 @@
   </data>
   <data name="Screenshot_Instructions" xml:space="preserve">
     <value>এলাকা নির্বাচন করতে ক্লিক করে টানুন, অথবা কোণ সামঞ্জস্য করুন। নির্ভুলতার জন্য ম্যাগনিফায়ার ব্যবহার করুন। প্রস্তুত হলে ঠিক আছে চাপুন।</value>
+  </data>
+  <data name="Selection_Copy" xml:space="preserve">
+    <value>কপি</value>
+  </data>
+  <data name="Selection_Delete" xml:space="preserve">
+    <value>মুছুন</value>
+  </data>
+  <data name="Selection_ExtractText" xml:space="preserve">
+    <value>টেক্সট বের করুন</value>
   </data>
   <data name="Tool_Arrow" xml:space="preserve">
     <value>তীর</value>
@@ -316,6 +367,15 @@
   <data name="Tooltip_Select" xml:space="preserve">
     <value>অ্যানোটেশন নির্বাচন ও সম্পাদনা করুন</value>
   </data>
+  <data name="Tooltip_Selection_Copy" xml:space="preserve">
+    <value>নির্বাচিত এলাকা ক্লিপবোর্ডে কপি করুন</value>
+  </data>
+  <data name="Tooltip_Selection_Delete" xml:space="preserve">
+    <value>নির্বাচিত এলাকা সাদা করুন</value>
+  </data>
+  <data name="Tooltip_Selection_ExtractText" xml:space="preserve">
+    <value>OCR ব্যবহার করে নির্বাচিত এলাকা থেকে টেক্সট বের করুন</value>
+  </data>
   <data name="Update_NewVersionAvailable" xml:space="preserve">
     <value>নতুন সংস্করণ {0} উপলব্ধ।</value>
   </data>
@@ -340,53 +400,5 @@
   </data>
   <data name="Winget_ShortDescription" xml:space="preserve">
     <value>Windows এবং Linux-এর জন্য স্ক্রিনশট অ্যানোটেশন সফটওয়্যার।</value>
-  </data>
-  <data name="Selection_Copy" xml:space="preserve">
-    <value>কপি</value>
-  </data>
-  <data name="Tooltip_Selection_Copy" xml:space="preserve">
-    <value>নির্বাচিত এলাকা ক্লিপবোর্ডে কপি করুন</value>
-  </data>
-  <data name="Selection_Delete" xml:space="preserve">
-    <value>মুছুন</value>
-  </data>
-  <data name="Tooltip_Selection_Delete" xml:space="preserve">
-    <value>নির্বাচিত এলাকা সাদা করুন</value>
-  </data>
-  <data name="Selection_ExtractText" xml:space="preserve">
-    <value>টেক্সট বের করুন</value>
-  </data>
-  <data name="Tooltip_Selection_ExtractText" xml:space="preserve">
-    <value>OCR ব্যবহার করে নির্বাচিত এলাকা থেকে টেক্সট বের করুন</value>
-  </data>
-  <data name="Ocr_Title" xml:space="preserve">
-    <value>টেক্সট বের করুন (OCR)</value>
-  </data>
-  <data name="Ocr_Engine" xml:space="preserve">
-    <value>OCR ইঞ্জিন</value>
-  </data>
-  <data name="Ocr_Languages" xml:space="preserve">
-    <value>ভাষাসমূহ</value>
-  </data>
-  <data name="Ocr_NoEngines" xml:space="preserve">
-    <value>কোনো OCR ইঞ্জিন পাওয়া যায়নি</value>
-  </data>
-  <data name="Ocr_NoEnginesHelp" xml:space="preserve">
-    <value>Windows-এ OCR ব্যবহার করতে অতিরিক্ত সফ্টওয়্যার প্রয়োজন নেই। Linux-এ Tesseract ইনস্টল করুন: sudo apt install tesseract-ocr</value>
-  </data>
-  <data name="Ocr_TesseractLangHint" xml:space="preserve">
-    <value>Tesseract-এ আরো ভাষা যোগ করতে ভাষা প্যাক ইনস্টল করুন: sudo apt install tesseract-ocr-&lt;lang&gt;</value>
-  </data>
-  <data name="Ocr_WindowsTesseractHint" xml:space="preserve">
-    <value>Windows-এর বিল্ট-ইন OCR কিছু লেখা মিস করতে পারে। Screenshot Annotator Tesseract OCR-ও সমর্থন করে, যা প্রায়ই আরও ভালোভাবে লেখা বের করে। এখানে ব্যবহার করতে Tesseract ম্যানুয়ালি ইনস্টল করুন।</value>
-  </data>
-  <data name="Ocr_ExtractButton" xml:space="preserve">
-    <value>টেক্সট বের করুন</value>
-  </data>
-  <data name="Ocr_Processing" xml:space="preserve">
-    <value>প্রক্রিয়াকরণ হচ্ছে...</value>
-  </data>
-  <data name="Ocr_Result" xml:space="preserve">
-    <value>স্বীকৃত টেক্সট</value>
   </data>
 </root>

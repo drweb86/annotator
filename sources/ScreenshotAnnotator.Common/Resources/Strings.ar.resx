@@ -199,14 +199,56 @@
   <data name="Menu_Options" xml:space="preserve">
     <value>خيارات</value>
   </data>
+  <data name="Menu_Privacy" xml:space="preserve">
+    <value>الخصوصية</value>
+    <comment>Privacy policy menu item</comment>
+  </data>
+  <data name="Menu_StartWithSystem" xml:space="preserve">
+    <value>التشغيل مع النظام</value>
+    <comment>Option to start the app when the system starts</comment>
+  </data>
   <data name="Menu_WebSite" xml:space="preserve">
     <value>الموقع</value>
+  </data>
+  <data name="Ocr_Engine" xml:space="preserve">
+    <value>محرك OCR</value>
+  </data>
+  <data name="Ocr_ExtractButton" xml:space="preserve">
+    <value>استخراج النص</value>
+  </data>
+  <data name="Ocr_Languages" xml:space="preserve">
+    <value>اللغات</value>
+  </data>
+  <data name="Ocr_NoEngines" xml:space="preserve">
+    <value>لا تتوفر محركات OCR</value>
+  </data>
+  <data name="Ocr_NoEnginesHelp" xml:space="preserve">
+    <value>لاستخدام OCR على Windows، لا يلزم برنامج إضافي. على Linux، قم بتثبيت Tesseract: sudo apt install tesseract-ocr</value>
+  </data>
+  <data name="Ocr_Processing" xml:space="preserve">
+    <value>جاري المعالجة...</value>
+  </data>
+  <data name="Ocr_Result" xml:space="preserve">
+    <value>النص المُعرَّف</value>
+  </data>
+  <data name="Ocr_TesseractLangHint" xml:space="preserve">
+    <value>لإضافة المزيد من اللغات لـ Tesseract، قم بتثبيت حزم اللغات: sudo apt install tesseract-ocr-&lt;lang&gt;</value>
+  </data>
+  <data name="Ocr_Title" xml:space="preserve">
+    <value>استخراج النص (OCR)</value>
+  </data>
+  <data name="Ocr_WindowsTesseractHint" xml:space="preserve">
+    <value>قد يفوّت OCR المدمج في Windows بعض النصوص. يدعم Screenshot Annotator أيضًا Tesseract OCR، والذي غالبًا ما يستخرج النص بشكل أفضل. ثبّت Tesseract يدويًا لاستخدامه هنا.</value>
   </data>
   <data name="Panel_Projects" xml:space="preserve">
     <value>المشاريع</value>
   </data>
   <data name="Panel_Properties" xml:space="preserve">
     <value>الخصائص</value>
+  </data>
+  <data name="Privacy_Language" xml:space="preserve">
+    <value>اللغة</value>
+    <comment>Language selector label on license and privacy windows</comment>
   </data>
   <data name="Props_Bold" xml:space="preserve">
     <value>عريض</value>
@@ -225,6 +267,15 @@
   </data>
   <data name="Screenshot_Instructions" xml:space="preserve">
     <value>انقر واسحب لتحديد المنطقة، أو اضبط الزوايا. استخدم العدسة للدقة. اضغط موافق عند الانتهاء.</value>
+  </data>
+  <data name="Selection_Copy" xml:space="preserve">
+    <value>نسخ</value>
+  </data>
+  <data name="Selection_Delete" xml:space="preserve">
+    <value>حذف</value>
+  </data>
+  <data name="Selection_ExtractText" xml:space="preserve">
+    <value>استخراج النص</value>
   </data>
   <data name="Tool_Arrow" xml:space="preserve">
     <value>سهم</value>
@@ -319,6 +370,15 @@
   <data name="Tooltip_Select" xml:space="preserve">
     <value>تحديد وتعديل التعليقات</value>
   </data>
+  <data name="Tooltip_Selection_Copy" xml:space="preserve">
+    <value>نسخ المنطقة المحددة إلى الحافظة</value>
+  </data>
+  <data name="Tooltip_Selection_Delete" xml:space="preserve">
+    <value>محو المنطقة المحددة</value>
+  </data>
+  <data name="Tooltip_Selection_ExtractText" xml:space="preserve">
+    <value>استخراج النص من المنطقة المحددة باستخدام OCR</value>
+  </data>
   <data name="Update_NewVersionAvailable" xml:space="preserve">
     <value>يتوفر إصدار جديد {0}.</value>
   </data>
@@ -343,53 +403,5 @@
   </data>
   <data name="Winget_ShortDescription" xml:space="preserve">
     <value>برنامج لتعليق لقطات الشاشة على Windows وLinux.</value>
-  </data>
-  <data name="Selection_Copy" xml:space="preserve">
-    <value>نسخ</value>
-  </data>
-  <data name="Tooltip_Selection_Copy" xml:space="preserve">
-    <value>نسخ المنطقة المحددة إلى الحافظة</value>
-  </data>
-  <data name="Selection_Delete" xml:space="preserve">
-    <value>حذف</value>
-  </data>
-  <data name="Tooltip_Selection_Delete" xml:space="preserve">
-    <value>محو المنطقة المحددة</value>
-  </data>
-  <data name="Selection_ExtractText" xml:space="preserve">
-    <value>استخراج النص</value>
-  </data>
-  <data name="Tooltip_Selection_ExtractText" xml:space="preserve">
-    <value>استخراج النص من المنطقة المحددة باستخدام OCR</value>
-  </data>
-  <data name="Ocr_Title" xml:space="preserve">
-    <value>استخراج النص (OCR)</value>
-  </data>
-  <data name="Ocr_Engine" xml:space="preserve">
-    <value>محرك OCR</value>
-  </data>
-  <data name="Ocr_Languages" xml:space="preserve">
-    <value>اللغات</value>
-  </data>
-  <data name="Ocr_NoEngines" xml:space="preserve">
-    <value>لا تتوفر محركات OCR</value>
-  </data>
-  <data name="Ocr_NoEnginesHelp" xml:space="preserve">
-    <value>لاستخدام OCR على Windows، لا يلزم برنامج إضافي. على Linux، قم بتثبيت Tesseract: sudo apt install tesseract-ocr</value>
-  </data>
-  <data name="Ocr_TesseractLangHint" xml:space="preserve">
-    <value>لإضافة المزيد من اللغات لـ Tesseract، قم بتثبيت حزم اللغات: sudo apt install tesseract-ocr-&lt;lang&gt;</value>
-  </data>
-  <data name="Ocr_WindowsTesseractHint" xml:space="preserve">
-    <value>قد يفوّت OCR المدمج في Windows بعض النصوص. يدعم Screenshot Annotator أيضًا Tesseract OCR، والذي غالبًا ما يستخرج النص بشكل أفضل. ثبّت Tesseract يدويًا لاستخدامه هنا.</value>
-  </data>
-  <data name="Ocr_ExtractButton" xml:space="preserve">
-    <value>استخراج النص</value>
-  </data>
-  <data name="Ocr_Processing" xml:space="preserve">
-    <value>جاري المعالجة...</value>
-  </data>
-  <data name="Ocr_Result" xml:space="preserve">
-    <value>النص المُعرَّف</value>
   </data>
 </root>

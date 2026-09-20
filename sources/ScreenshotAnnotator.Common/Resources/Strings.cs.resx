@@ -199,14 +199,56 @@ Proveďte prosím jednu z následujících akcí:
   <data name="Menu_Options" xml:space="preserve">
     <value>Možnosti</value>
   </data>
+  <data name="Menu_Privacy" xml:space="preserve">
+    <value>Soukromí</value>
+    <comment>Privacy policy menu item</comment>
+  </data>
+  <data name="Menu_StartWithSystem" xml:space="preserve">
+    <value>Spouštět se systémem</value>
+    <comment>Option to start the app when the system starts</comment>
+  </data>
   <data name="Menu_WebSite" xml:space="preserve">
     <value>Webové stránky</value>
+  </data>
+  <data name="Ocr_Engine" xml:space="preserve">
+    <value>OCR engine</value>
+  </data>
+  <data name="Ocr_ExtractButton" xml:space="preserve">
+    <value>Extrahovat text</value>
+  </data>
+  <data name="Ocr_Languages" xml:space="preserve">
+    <value>Jazyky</value>
+  </data>
+  <data name="Ocr_NoEngines" xml:space="preserve">
+    <value>Žádné OCR enginy nejsou k dispozici</value>
+  </data>
+  <data name="Ocr_NoEnginesHelp" xml:space="preserve">
+    <value>Pro použití OCR ve Windows není potřeba žádný dodatečný software. Na Linuxu nainstalujte Tesseract: sudo apt install tesseract-ocr</value>
+  </data>
+  <data name="Ocr_Processing" xml:space="preserve">
+    <value>Zpracovávám...</value>
+  </data>
+  <data name="Ocr_Result" xml:space="preserve">
+    <value>Rozpoznaný text</value>
+  </data>
+  <data name="Ocr_TesseractLangHint" xml:space="preserve">
+    <value>Pro přidání dalších jazyků pro Tesseract nainstalujte jazykové balíčky: sudo apt install tesseract-ocr-&lt;lang&gt;</value>
+  </data>
+  <data name="Ocr_Title" xml:space="preserve">
+    <value>Extrahovat text (OCR)</value>
+  </data>
+  <data name="Ocr_WindowsTesseractHint" xml:space="preserve">
+    <value>Vestavěné OCR ve Windows může některý text přehlédnout. Screenshot Annotator podporuje také Tesseract OCR, který často extrahuje text lépe. Chcete-li ho zde použít, nainstalujte Tesseract ručně.</value>
   </data>
   <data name="Panel_Projects" xml:space="preserve">
     <value>Projekty</value>
   </data>
   <data name="Panel_Properties" xml:space="preserve">
     <value>Vlastnosti</value>
+  </data>
+  <data name="Privacy_Language" xml:space="preserve">
+    <value>Jazyk</value>
+    <comment>Language selector label on license and privacy windows</comment>
   </data>
   <data name="Props_Bold" xml:space="preserve">
     <value>Tučné</value>
@@ -225,6 +267,15 @@ Proveďte prosím jednu z následujících akcí:
   </data>
   <data name="Screenshot_Instructions" xml:space="preserve">
     <value>Kliknutím a přetažením vyberte oblast nebo upravte rohové body. Pro přesnost použijte lupu. Po dokončení stiskněte OK.</value>
+  </data>
+  <data name="Selection_Copy" xml:space="preserve">
+    <value>Kopírovat</value>
+  </data>
+  <data name="Selection_Delete" xml:space="preserve">
+    <value>Smazat</value>
+  </data>
+  <data name="Selection_ExtractText" xml:space="preserve">
+    <value>Extrahovat text</value>
   </data>
   <data name="Tool_Arrow" xml:space="preserve">
     <value>Šipka</value>
@@ -319,6 +370,15 @@ Proveďte prosím jednu z následujících akcí:
   <data name="Tooltip_Select" xml:space="preserve">
     <value>Vybrat a upravit anotace</value>
   </data>
+  <data name="Tooltip_Selection_Copy" xml:space="preserve">
+    <value>Zkopírovat vybranou oblast do schránky</value>
+  </data>
+  <data name="Tooltip_Selection_Delete" xml:space="preserve">
+    <value>Vymazat vybranou oblast</value>
+  </data>
+  <data name="Tooltip_Selection_ExtractText" xml:space="preserve">
+    <value>Extrahovat text z vybrané oblasti pomocí OCR</value>
+  </data>
   <data name="Update_NewVersionAvailable" xml:space="preserve">
     <value>Je k dispozici nová verze {0}.</value>
   </data>
@@ -343,53 +403,5 @@ Funkce:
   </data>
   <data name="Winget_ShortDescription" xml:space="preserve">
     <value>Software pro anotaci snímků obrazovky pro Windows a Linux.</value>
-  </data>
-  <data name="Selection_Copy" xml:space="preserve">
-    <value>Kopírovat</value>
-  </data>
-  <data name="Tooltip_Selection_Copy" xml:space="preserve">
-    <value>Zkopírovat vybranou oblast do schránky</value>
-  </data>
-  <data name="Selection_Delete" xml:space="preserve">
-    <value>Smazat</value>
-  </data>
-  <data name="Tooltip_Selection_Delete" xml:space="preserve">
-    <value>Vymazat vybranou oblast</value>
-  </data>
-  <data name="Selection_ExtractText" xml:space="preserve">
-    <value>Extrahovat text</value>
-  </data>
-  <data name="Tooltip_Selection_ExtractText" xml:space="preserve">
-    <value>Extrahovat text z vybrané oblasti pomocí OCR</value>
-  </data>
-  <data name="Ocr_Title" xml:space="preserve">
-    <value>Extrahovat text (OCR)</value>
-  </data>
-  <data name="Ocr_Engine" xml:space="preserve">
-    <value>OCR engine</value>
-  </data>
-  <data name="Ocr_Languages" xml:space="preserve">
-    <value>Jazyky</value>
-  </data>
-  <data name="Ocr_NoEngines" xml:space="preserve">
-    <value>Žádné OCR enginy nejsou k dispozici</value>
-  </data>
-  <data name="Ocr_NoEnginesHelp" xml:space="preserve">
-    <value>Pro použití OCR ve Windows není potřeba žádný dodatečný software. Na Linuxu nainstalujte Tesseract: sudo apt install tesseract-ocr</value>
-  </data>
-  <data name="Ocr_TesseractLangHint" xml:space="preserve">
-    <value>Pro přidání dalších jazyků pro Tesseract nainstalujte jazykové balíčky: sudo apt install tesseract-ocr-&lt;lang&gt;</value>
-  </data>
-  <data name="Ocr_WindowsTesseractHint" xml:space="preserve">
-    <value>Vestavěné OCR ve Windows může některý text přehlédnout. Screenshot Annotator podporuje také Tesseract OCR, který často extrahuje text lépe. Chcete-li ho zde použít, nainstalujte Tesseract ručně.</value>
-  </data>
-  <data name="Ocr_ExtractButton" xml:space="preserve">
-    <value>Extrahovat text</value>
-  </data>
-  <data name="Ocr_Processing" xml:space="preserve">
-    <value>Zpracovávám...</value>
-  </data>
-  <data name="Ocr_Result" xml:space="preserve">
-    <value>Rozpoznaný text</value>
   </data>
 </root>

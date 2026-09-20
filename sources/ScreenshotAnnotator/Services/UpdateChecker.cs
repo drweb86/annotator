@@ -31,7 +31,15 @@ public static class UpdateChecker
         return await streamReader.ReadToEndAsync().ConfigureAwait(false);
     }
 
-    public static async Task<AppUpdateInfo> CheckForUpdateGithub()
+    public static Task<AppUpdateInfo> CheckForUpdateGithub()
+    {
+        if (WindowsMsixPackage.IsCurrentProcessPackaged)
+            return Task.FromResult(new AppUpdateInfo(false, null, null));
+
+        return CheckForUpdateGithubUnpacked();
+    }
+
+    private static async Task<AppUpdateInfo> CheckForUpdateGithubUnpacked()
     {
         try
         {

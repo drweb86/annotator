@@ -199,14 +199,56 @@
   <data name="Menu_Options" xml:space="preserve">
     <value>Параметри</value>
   </data>
+  <data name="Menu_Privacy" xml:space="preserve">
+    <value>Конфіденційність</value>
+    <comment>Privacy policy menu item</comment>
+  </data>
+  <data name="Menu_StartWithSystem" xml:space="preserve">
+    <value>Запускати разом із системою</value>
+    <comment>Option to start the app when the system starts</comment>
+  </data>
   <data name="Menu_WebSite" xml:space="preserve">
     <value>Вебсайт</value>
+  </data>
+  <data name="Ocr_Engine" xml:space="preserve">
+    <value>Рушій OCR</value>
+  </data>
+  <data name="Ocr_ExtractButton" xml:space="preserve">
+    <value>Витягти текст</value>
+  </data>
+  <data name="Ocr_Languages" xml:space="preserve">
+    <value>Мови</value>
+  </data>
+  <data name="Ocr_NoEngines" xml:space="preserve">
+    <value>Немає доступних рушіїв OCR</value>
+  </data>
+  <data name="Ocr_NoEnginesHelp" xml:space="preserve">
+    <value>У Windows додаткове ПЗ не потрібне. У Linux встановіть Tesseract: sudo apt install tesseract-ocr</value>
+  </data>
+  <data name="Ocr_Processing" xml:space="preserve">
+    <value>Обробка...</value>
+  </data>
+  <data name="Ocr_Result" xml:space="preserve">
+    <value>Розпізнаний текст</value>
+  </data>
+  <data name="Ocr_TesseractLangHint" xml:space="preserve">
+    <value>Для додавання мов у Tesseract встановіть мовні пакети: sudo apt install tesseract-ocr-&lt;lang&gt;</value>
+  </data>
+  <data name="Ocr_Title" xml:space="preserve">
+    <value>Витягнення тексту (OCR)</value>
+  </data>
+  <data name="Ocr_WindowsTesseractHint" xml:space="preserve">
+    <value>Вбудований OCR Windows може пропускати текст. Screenshot Annotator також підтримує Tesseract OCR, який часто краще витягує текст. Установіть Tesseract вручну, щоб використовувати його тут.</value>
   </data>
   <data name="Panel_Projects" xml:space="preserve">
     <value>Проєкти</value>
   </data>
   <data name="Panel_Properties" xml:space="preserve">
     <value>Властивості</value>
+  </data>
+  <data name="Privacy_Language" xml:space="preserve">
+    <value>Мова</value>
+    <comment>Language selector label on license and privacy windows</comment>
   </data>
   <data name="Props_Bold" xml:space="preserve">
     <value>Жирний</value>
@@ -225,6 +267,15 @@
   </data>
   <data name="Screenshot_Instructions" xml:space="preserve">
     <value>Клацніть і перетягніть, щоб вибрати область, або відрегулюйте кути. Для точності використовуйте лупу. Натисніть OK, коли буде готово.</value>
+  </data>
+  <data name="Selection_Copy" xml:space="preserve">
+    <value>Копіювати</value>
+  </data>
+  <data name="Selection_Delete" xml:space="preserve">
+    <value>Видалити</value>
+  </data>
+  <data name="Selection_ExtractText" xml:space="preserve">
+    <value>Витягти текст</value>
   </data>
   <data name="Tool_Arrow" xml:space="preserve">
     <value>Стрілка</value>
@@ -319,6 +370,15 @@
   <data name="Tooltip_Select" xml:space="preserve">
     <value>Вибирати й редагувати анотації</value>
   </data>
+  <data name="Tooltip_Selection_Copy" xml:space="preserve">
+    <value>Копіювати вибрану область до буфера обміну</value>
+  </data>
+  <data name="Tooltip_Selection_Delete" xml:space="preserve">
+    <value>Закрасити вибрану область білим</value>
+  </data>
+  <data name="Tooltip_Selection_ExtractText" xml:space="preserve">
+    <value>Витягти текст з вибраної області за допомогою OCR</value>
+  </data>
   <data name="Update_NewVersionAvailable" xml:space="preserve">
     <value>Доступна нова версія {0}.</value>
   </data>
@@ -343,53 +403,5 @@
   </data>
   <data name="Winget_ShortDescription" xml:space="preserve">
     <value>Програма для анотації знімків екрана для Windows і Linux.</value>
-  </data>
-  <data name="Selection_Copy" xml:space="preserve">
-    <value>Копіювати</value>
-  </data>
-  <data name="Tooltip_Selection_Copy" xml:space="preserve">
-    <value>Копіювати вибрану область до буфера обміну</value>
-  </data>
-  <data name="Selection_Delete" xml:space="preserve">
-    <value>Видалити</value>
-  </data>
-  <data name="Tooltip_Selection_Delete" xml:space="preserve">
-    <value>Закрасити вибрану область білим</value>
-  </data>
-  <data name="Selection_ExtractText" xml:space="preserve">
-    <value>Витягти текст</value>
-  </data>
-  <data name="Tooltip_Selection_ExtractText" xml:space="preserve">
-    <value>Витягти текст з вибраної області за допомогою OCR</value>
-  </data>
-  <data name="Ocr_Title" xml:space="preserve">
-    <value>Витягнення тексту (OCR)</value>
-  </data>
-  <data name="Ocr_Engine" xml:space="preserve">
-    <value>Рушій OCR</value>
-  </data>
-  <data name="Ocr_Languages" xml:space="preserve">
-    <value>Мови</value>
-  </data>
-  <data name="Ocr_NoEngines" xml:space="preserve">
-    <value>Немає доступних рушіїв OCR</value>
-  </data>
-  <data name="Ocr_NoEnginesHelp" xml:space="preserve">
-    <value>У Windows додаткове ПЗ не потрібне. У Linux встановіть Tesseract: sudo apt install tesseract-ocr</value>
-  </data>
-  <data name="Ocr_TesseractLangHint" xml:space="preserve">
-    <value>Для додавання мов у Tesseract встановіть мовні пакети: sudo apt install tesseract-ocr-&lt;lang&gt;</value>
-  </data>
-  <data name="Ocr_WindowsTesseractHint" xml:space="preserve">
-    <value>Вбудований OCR Windows може пропускати текст. Screenshot Annotator також підтримує Tesseract OCR, який часто краще витягує текст. Установіть Tesseract вручну, щоб використовувати його тут.</value>
-  </data>
-  <data name="Ocr_ExtractButton" xml:space="preserve">
-    <value>Витягти текст</value>
-  </data>
-  <data name="Ocr_Processing" xml:space="preserve">
-    <value>Обробка...</value>
-  </data>
-  <data name="Ocr_Result" xml:space="preserve">
-    <value>Розпізнаний текст</value>
   </data>
 </root>

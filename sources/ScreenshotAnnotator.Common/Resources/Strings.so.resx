@@ -199,14 +199,56 @@ Fadlan mid ka mid ah kuwan samee:
   <data name="Menu_Options" xml:space="preserve">
     <value>Xulashooyin</value>
   </data>
+  <data name="Menu_Privacy" xml:space="preserve">
+    <value>Qarsoodi</value>
+    <comment>Privacy policy menu item</comment>
+  </data>
+  <data name="Menu_StartWithSystem" xml:space="preserve">
+    <value>Bilow nidaamka</value>
+    <comment>Option to start the app when the system starts</comment>
+  </data>
   <data name="Menu_WebSite" xml:space="preserve">
     <value>Websaydka</value>
+  </data>
+  <data name="Ocr_Engine" xml:space="preserve">
+    <value>Injinka OCR</value>
+  </data>
+  <data name="Ocr_ExtractButton" xml:space="preserve">
+    <value>Qoraalka Soo Saar</value>
+  </data>
+  <data name="Ocr_Languages" xml:space="preserve">
+    <value>Luqadaha</value>
+  </data>
+  <data name="Ocr_NoEngines" xml:space="preserve">
+    <value>Ma jiro injin OCR ah</value>
+  </data>
+  <data name="Ocr_NoEnginesHelp" xml:space="preserve">
+    <value>Windows-ka, software dheeraad ah ma loo baahna. Linux-ka, ku rakib Tesseract: sudo apt install tesseract-ocr</value>
+  </data>
+  <data name="Ocr_Processing" xml:space="preserve">
+    <value>La daaweynayaa...</value>
+  </data>
+  <data name="Ocr_Result" xml:space="preserve">
+    <value>Qoraalka La Gartay</value>
+  </data>
+  <data name="Ocr_TesseractLangHint" xml:space="preserve">
+    <value>Si aad u kudaratid luqado badan Tesseract, ku rakib xidhmooyin luqadeed: sudo apt install tesseract-ocr-&lt;lang&gt;</value>
+  </data>
+  <data name="Ocr_Title" xml:space="preserve">
+    <value>Qoraalka Soo Saar (OCR)</value>
+  </data>
+  <data name="Ocr_WindowsTesseractHint" xml:space="preserve">
+    <value>OCR-ka ku dhex jira Windows wuu seegi karaa qoraal. Screenshot Annotator sidoo kale wuxuu taageeraa Tesseract OCR, oo inta badan si ka fiican u soo saara qoraalka. Ku rakib Tesseract gacanta si aad halkan ugu isticmaasho.</value>
   </data>
   <data name="Panel_Projects" xml:space="preserve">
     <value>Mashruucyada</value>
   </data>
   <data name="Panel_Properties" xml:space="preserve">
     <value>Sifooyinka</value>
+  </data>
+  <data name="Privacy_Language" xml:space="preserve">
+    <value>Luqadda</value>
+    <comment>Language selector label on license and privacy windows</comment>
   </data>
   <data name="Props_Bold" xml:space="preserve">
     <value>Xooggan</value>
@@ -225,6 +267,15 @@ Fadlan mid ka mid ah kuwan samee:
   </data>
   <data name="Screenshot_Instructions" xml:space="preserve">
     <value>Guji oo jiid si aad u doorato aag, ama hagaaji dhibcaha goshaha. Isticmaal korontada si saxsan. Riix OK marka aad diyaar tahay.</value>
+  </data>
+  <data name="Selection_Copy" xml:space="preserve">
+    <value>Koobiyee</value>
+  </data>
+  <data name="Selection_Delete" xml:space="preserve">
+    <value>Tirtir</value>
+  </data>
+  <data name="Selection_ExtractText" xml:space="preserve">
+    <value>Qoraalka Soo Saar</value>
   </data>
   <data name="Tool_Arrow" xml:space="preserve">
     <value>Fallaar</value>
@@ -319,6 +370,15 @@ Fadlan mid ka mid ah kuwan samee:
   <data name="Tooltip_Select" xml:space="preserve">
     <value>Dooro oo wax ka beddel sharaxaadaha</value>
   </data>
+  <data name="Tooltip_Selection_Copy" xml:space="preserve">
+    <value>Koobiyee aagga la doortay clipboard-ka</value>
+  </data>
+  <data name="Tooltip_Selection_Delete" xml:space="preserve">
+    <value>Aagga la doortay caddee</value>
+  </data>
+  <data name="Tooltip_Selection_ExtractText" xml:space="preserve">
+    <value>OCR adeegsiga qoraalka aagga la doortay ka soo saar</value>
+  </data>
   <data name="Update_NewVersionAvailable" xml:space="preserve">
     <value>Nooca cusub {0} ayaa la heli karaa.</value>
   </data>
@@ -343,53 +403,5 @@ Sifooyinka:
   </data>
   <data name="Winget_ShortDescription" xml:space="preserve">
     <value>Software sharaxaadda sawirka shaashada ee Windows iyo Linux.</value>
-  </data>
-  <data name="Selection_Copy" xml:space="preserve">
-    <value>Koobiyee</value>
-  </data>
-  <data name="Tooltip_Selection_Copy" xml:space="preserve">
-    <value>Koobiyee aagga la doortay clipboard-ka</value>
-  </data>
-  <data name="Selection_Delete" xml:space="preserve">
-    <value>Tirtir</value>
-  </data>
-  <data name="Tooltip_Selection_Delete" xml:space="preserve">
-    <value>Aagga la doortay caddee</value>
-  </data>
-  <data name="Selection_ExtractText" xml:space="preserve">
-    <value>Qoraalka Soo Saar</value>
-  </data>
-  <data name="Tooltip_Selection_ExtractText" xml:space="preserve">
-    <value>OCR adeegsiga qoraalka aagga la doortay ka soo saar</value>
-  </data>
-  <data name="Ocr_Title" xml:space="preserve">
-    <value>Qoraalka Soo Saar (OCR)</value>
-  </data>
-  <data name="Ocr_Engine" xml:space="preserve">
-    <value>Injinka OCR</value>
-  </data>
-  <data name="Ocr_Languages" xml:space="preserve">
-    <value>Luqadaha</value>
-  </data>
-  <data name="Ocr_NoEngines" xml:space="preserve">
-    <value>Ma jiro injin OCR ah</value>
-  </data>
-  <data name="Ocr_NoEnginesHelp" xml:space="preserve">
-    <value>Windows-ka, software dheeraad ah ma loo baahna. Linux-ka, ku rakib Tesseract: sudo apt install tesseract-ocr</value>
-  </data>
-  <data name="Ocr_TesseractLangHint" xml:space="preserve">
-    <value>Si aad u kudaratid luqado badan Tesseract, ku rakib xidhmooyin luqadeed: sudo apt install tesseract-ocr-&lt;lang&gt;</value>
-  </data>
-  <data name="Ocr_WindowsTesseractHint" xml:space="preserve">
-    <value>OCR-ka ku dhex jira Windows wuu seegi karaa qoraal. Screenshot Annotator sidoo kale wuxuu taageeraa Tesseract OCR, oo inta badan si ka fiican u soo saara qoraalka. Ku rakib Tesseract gacanta si aad halkan ugu isticmaasho.</value>
-  </data>
-  <data name="Ocr_ExtractButton" xml:space="preserve">
-    <value>Qoraalka Soo Saar</value>
-  </data>
-  <data name="Ocr_Processing" xml:space="preserve">
-    <value>La daaweynayaa...</value>
-  </data>
-  <data name="Ocr_Result" xml:space="preserve">
-    <value>Qoraalka La Gartay</value>
   </data>
 </root>

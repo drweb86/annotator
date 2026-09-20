@@ -199,14 +199,56 @@
   <data name="Menu_Options" xml:space="preserve">
     <value>ရွေးချယ်စရာများ</value>
   </data>
+  <data name="Menu_Privacy" xml:space="preserve">
+    <value>ကိုယ်ရေးအချက်အလက်</value>
+    <comment>Privacy policy menu item</comment>
+  </data>
+  <data name="Menu_StartWithSystem" xml:space="preserve">
+    <value>စနစ်နှင့်အတူ စတင်ရန်</value>
+    <comment>Option to start the app when the system starts</comment>
+  </data>
   <data name="Menu_WebSite" xml:space="preserve">
     <value>ဝဘ်ဆိုဒ်</value>
+  </data>
+  <data name="Ocr_Engine" xml:space="preserve">
+    <value>OCR အင်ဂျင်</value>
+  </data>
+  <data name="Ocr_ExtractButton" xml:space="preserve">
+    <value>စာသားထုတ်ယူပါ</value>
+  </data>
+  <data name="Ocr_Languages" xml:space="preserve">
+    <value>ဘာသာစကားများ</value>
+  </data>
+  <data name="Ocr_NoEngines" xml:space="preserve">
+    <value>OCR အင်ဂျင် မရှိပါ</value>
+  </data>
+  <data name="Ocr_NoEnginesHelp" xml:space="preserve">
+    <value>Windows တွင် OCR အသုံးပြုရန် ထပ်ဆောင်းဆော့ဖ်ဝဲ မလိုအပ်ပါ။ Linux တွင် Tesseract ထည့်သွင်းပါ: sudo apt install tesseract-ocr</value>
+  </data>
+  <data name="Ocr_Processing" xml:space="preserve">
+    <value>လုပ်ဆောင်နေသည်...</value>
+  </data>
+  <data name="Ocr_Result" xml:space="preserve">
+    <value>မှတ်မိသောစာသား</value>
+  </data>
+  <data name="Ocr_TesseractLangHint" xml:space="preserve">
+    <value>Tesseract အတွက် ဘာသာစကားများ ထပ်ထည့်ရန် ဘာသာစကားပက်ကေ့ ထည့်သွင်းပါ: sudo apt install tesseract-ocr-&lt;lang&gt;</value>
+  </data>
+  <data name="Ocr_Title" xml:space="preserve">
+    <value>စာသားထုတ်ယူပါ (OCR)</value>
+  </data>
+  <data name="Ocr_WindowsTesseractHint" xml:space="preserve">
+    <value>Windows တွင်ပါရှိသော OCR သည် စာသားအချို့ကို လွတ်သွားနိုင်သည်။ Screenshot Annotator သည် စာသားကို မကြာခဏ ပိုကောင်းစွာ ထုတ်ယူနိုင်သော Tesseract OCR ကိုလည်း ပံ့ပိုးထားသည်။ ဤနေရာတွင် အသုံးပြုရန် Tesseract ကို ကိုယ်တိုင် ထည့်သွင်းပါ။</value>
   </data>
   <data name="Panel_Projects" xml:space="preserve">
     <value>ပရောဂျက်များ</value>
   </data>
   <data name="Panel_Properties" xml:space="preserve">
     <value>ဂုဏ်သတ္တိများ</value>
+  </data>
+  <data name="Privacy_Language" xml:space="preserve">
+    <value>ဘာသာစကား</value>
+    <comment>Language selector label on license and privacy windows</comment>
   </data>
   <data name="Props_Bold" xml:space="preserve">
     <value>စာလုံးမဲ</value>
@@ -225,6 +267,15 @@
   </data>
   <data name="Screenshot_Instructions" xml:space="preserve">
     <value>နေရာတစ်ခု ရွေးချယ်ရန် နှိပ်ပြီး ဆွဲချပါ သို့မဟုတ် ထောင့်အမှတ်များ ချိန်ညှိပါ။ တိကျမှုအတွက် မှန်ကြည့်မှန် သုံးပါ။ အဆင်သင့်ဖြစ်သောအခါ OK နှိပ်ပါ။</value>
+  </data>
+  <data name="Selection_Copy" xml:space="preserve">
+    <value>ကူးယူ</value>
+  </data>
+  <data name="Selection_Delete" xml:space="preserve">
+    <value>ဖျက်ပါ</value>
+  </data>
+  <data name="Selection_ExtractText" xml:space="preserve">
+    <value>စာသားထုတ်ယူပါ</value>
   </data>
   <data name="Tool_Arrow" xml:space="preserve">
     <value>မြား</value>
@@ -319,6 +370,15 @@
   <data name="Tooltip_Select" xml:space="preserve">
     <value>မှတ်ချက်များ ရွေးချယ်ပြင်ဆင်</value>
   </data>
+  <data name="Tooltip_Selection_Copy" xml:space="preserve">
+    <value>ရွေးချယ်ထားသောဧရိယာကို clipboard သို့ ကူးယူပါ</value>
+  </data>
+  <data name="Tooltip_Selection_Delete" xml:space="preserve">
+    <value>ရွေးချယ်ထားသောဧရိယာကို အဖြူဖြစ်အောင် ပြုလုပ်ပါ</value>
+  </data>
+  <data name="Tooltip_Selection_ExtractText" xml:space="preserve">
+    <value>OCR ဖြင့် ရွေးချယ်ထားသောဧရိယာမှ စာသားထုတ်ယူပါ</value>
+  </data>
   <data name="Update_NewVersionAvailable" xml:space="preserve">
     <value>ဗားရှင်းအသစ် {0} ရနိုင်ပြီ။</value>
   </data>
@@ -343,53 +403,5 @@
   </data>
   <data name="Winget_ShortDescription" xml:space="preserve">
     <value>Windows နှင့် Linux အတွက် ဖန်သားပြင် မှတ်ချက် ဆော့ဖ်ဝဲ။</value>
-  </data>
-  <data name="Selection_Copy" xml:space="preserve">
-    <value>ကူးယူ</value>
-  </data>
-  <data name="Tooltip_Selection_Copy" xml:space="preserve">
-    <value>ရွေးချယ်ထားသောဧရိယာကို clipboard သို့ ကူးယူပါ</value>
-  </data>
-  <data name="Selection_Delete" xml:space="preserve">
-    <value>ဖျက်ပါ</value>
-  </data>
-  <data name="Tooltip_Selection_Delete" xml:space="preserve">
-    <value>ရွေးချယ်ထားသောဧရိယာကို အဖြူဖြစ်အောင် ပြုလုပ်ပါ</value>
-  </data>
-  <data name="Selection_ExtractText" xml:space="preserve">
-    <value>စာသားထုတ်ယူပါ</value>
-  </data>
-  <data name="Tooltip_Selection_ExtractText" xml:space="preserve">
-    <value>OCR ဖြင့် ရွေးချယ်ထားသောဧရိယာမှ စာသားထုတ်ယူပါ</value>
-  </data>
-  <data name="Ocr_Title" xml:space="preserve">
-    <value>စာသားထုတ်ယူပါ (OCR)</value>
-  </data>
-  <data name="Ocr_Engine" xml:space="preserve">
-    <value>OCR အင်ဂျင်</value>
-  </data>
-  <data name="Ocr_Languages" xml:space="preserve">
-    <value>ဘာသာစကားများ</value>
-  </data>
-  <data name="Ocr_NoEngines" xml:space="preserve">
-    <value>OCR အင်ဂျင် မရှိပါ</value>
-  </data>
-  <data name="Ocr_NoEnginesHelp" xml:space="preserve">
-    <value>Windows တွင် OCR အသုံးပြုရန် ထပ်ဆောင်းဆော့ဖ်ဝဲ မလိုအပ်ပါ။ Linux တွင် Tesseract ထည့်သွင်းပါ: sudo apt install tesseract-ocr</value>
-  </data>
-  <data name="Ocr_TesseractLangHint" xml:space="preserve">
-    <value>Tesseract အတွက် ဘာသာစကားများ ထပ်ထည့်ရန် ဘာသာစကားပက်ကေ့ ထည့်သွင်းပါ: sudo apt install tesseract-ocr-&lt;lang&gt;</value>
-  </data>
-  <data name="Ocr_WindowsTesseractHint" xml:space="preserve">
-    <value>Windows တွင်ပါရှိသော OCR သည် စာသားအချို့ကို လွတ်သွားနိုင်သည်။ Screenshot Annotator သည် စာသားကို မကြာခဏ ပိုကောင်းစွာ ထုတ်ယူနိုင်သော Tesseract OCR ကိုလည်း ပံ့ပိုးထားသည်။ ဤနေရာတွင် အသုံးပြုရန် Tesseract ကို ကိုယ်တိုင် ထည့်သွင်းပါ။</value>
-  </data>
-  <data name="Ocr_ExtractButton" xml:space="preserve">
-    <value>စာသားထုတ်ယူပါ</value>
-  </data>
-  <data name="Ocr_Processing" xml:space="preserve">
-    <value>လုပ်ဆောင်နေသည်...</value>
-  </data>
-  <data name="Ocr_Result" xml:space="preserve">
-    <value>မှတ်မိသောစာသား</value>
   </data>
 </root>

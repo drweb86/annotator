@@ -199,14 +199,56 @@
   <data name="Menu_Options" xml:space="preserve">
     <value>Параметрлер</value>
   </data>
+  <data name="Menu_Privacy" xml:space="preserve">
+    <value>Құпиялылық</value>
+    <comment>Privacy policy menu item</comment>
+  </data>
+  <data name="Menu_StartWithSystem" xml:space="preserve">
+    <value>Жүйемен бірге іске қосу</value>
+    <comment>Option to start the app when the system starts</comment>
+  </data>
   <data name="Menu_WebSite" xml:space="preserve">
     <value>Веб-сайт</value>
+  </data>
+  <data name="Ocr_Engine" xml:space="preserve">
+    <value>OCR қозғалтқышы</value>
+  </data>
+  <data name="Ocr_ExtractButton" xml:space="preserve">
+    <value>Мәтін шығару</value>
+  </data>
+  <data name="Ocr_Languages" xml:space="preserve">
+    <value>Тілдер</value>
+  </data>
+  <data name="Ocr_NoEngines" xml:space="preserve">
+    <value>OCR қозғалтқышы жоқ</value>
+  </data>
+  <data name="Ocr_NoEnginesHelp" xml:space="preserve">
+    <value>Windows жүйесінде қосымша бағдарлама қажет емес. Linux жүйесінде Tesseract орнатыңыз: sudo apt install tesseract-ocr</value>
+  </data>
+  <data name="Ocr_Processing" xml:space="preserve">
+    <value>Өңделуде...</value>
+  </data>
+  <data name="Ocr_Result" xml:space="preserve">
+    <value>Танылған мәтін</value>
+  </data>
+  <data name="Ocr_TesseractLangHint" xml:space="preserve">
+    <value>Tesseract үшін тіл пакеттерін орнатыңыз: sudo apt install tesseract-ocr-&lt;lang&gt;</value>
+  </data>
+  <data name="Ocr_Title" xml:space="preserve">
+    <value>Мәтін шығару (OCR)</value>
+  </data>
+  <data name="Ocr_WindowsTesseractHint" xml:space="preserve">
+    <value>Windows жүйесіндегі кірістірілген OCR мәтінді өткізіп алуы мүмкін. Screenshot Annotator мәтінді жиі жақсырақ шығаратын Tesseract OCR-ді де қолдайды. Мұнда пайдалану үшін Tesseract-ты қолмен орнатыңыз.</value>
   </data>
   <data name="Panel_Projects" xml:space="preserve">
     <value>Жобалар</value>
   </data>
   <data name="Panel_Properties" xml:space="preserve">
     <value>Қасиеттер</value>
+  </data>
+  <data name="Privacy_Language" xml:space="preserve">
+    <value>Тіл</value>
+    <comment>Language selector label on license and privacy windows</comment>
   </data>
   <data name="Props_Bold" xml:space="preserve">
     <value>Қалың</value>
@@ -225,6 +267,15 @@
   </data>
   <data name="Screenshot_Instructions" xml:space="preserve">
     <value>Аймақ таңдау үшін басып сүйреңіз немесе бұрыш нүктелерін реттеңіз. Дәлдік үшін ұлғайтқышты пайдаланыңыз. Дайын болған кезде OK түймесін басыңыз.</value>
+  </data>
+  <data name="Selection_Copy" xml:space="preserve">
+    <value>Көшіру</value>
+  </data>
+  <data name="Selection_Delete" xml:space="preserve">
+    <value>Жою</value>
+  </data>
+  <data name="Selection_ExtractText" xml:space="preserve">
+    <value>Мәтін шығару</value>
   </data>
   <data name="Tool_Arrow" xml:space="preserve">
     <value>Көрсеткі</value>
@@ -319,6 +370,15 @@
   <data name="Tooltip_Select" xml:space="preserve">
     <value>Аннотацияларды таңдау және өңдеу</value>
   </data>
+  <data name="Tooltip_Selection_Copy" xml:space="preserve">
+    <value>Таңдалған аймақты алмасу буферіне көшіру</value>
+  </data>
+  <data name="Tooltip_Selection_Delete" xml:space="preserve">
+    <value>Таңдалған аймақты ақтау</value>
+  </data>
+  <data name="Tooltip_Selection_ExtractText" xml:space="preserve">
+    <value>OCR арқылы таңдалған аймақтан мәтін шығару</value>
+  </data>
   <data name="Update_NewVersionAvailable" xml:space="preserve">
     <value>Жаңа {0} нұсқасы қолжетімді.</value>
   </data>
@@ -343,53 +403,5 @@
   </data>
   <data name="Winget_ShortDescription" xml:space="preserve">
     <value>Windows және Linux үшін скриншот аннотациялау бағдарламасы.</value>
-  </data>
-  <data name="Selection_Copy" xml:space="preserve">
-    <value>Көшіру</value>
-  </data>
-  <data name="Tooltip_Selection_Copy" xml:space="preserve">
-    <value>Таңдалған аймақты алмасу буферіне көшіру</value>
-  </data>
-  <data name="Selection_Delete" xml:space="preserve">
-    <value>Жою</value>
-  </data>
-  <data name="Tooltip_Selection_Delete" xml:space="preserve">
-    <value>Таңдалған аймақты ақтау</value>
-  </data>
-  <data name="Selection_ExtractText" xml:space="preserve">
-    <value>Мәтін шығару</value>
-  </data>
-  <data name="Tooltip_Selection_ExtractText" xml:space="preserve">
-    <value>OCR арқылы таңдалған аймақтан мәтін шығару</value>
-  </data>
-  <data name="Ocr_Title" xml:space="preserve">
-    <value>Мәтін шығару (OCR)</value>
-  </data>
-  <data name="Ocr_Engine" xml:space="preserve">
-    <value>OCR қозғалтқышы</value>
-  </data>
-  <data name="Ocr_Languages" xml:space="preserve">
-    <value>Тілдер</value>
-  </data>
-  <data name="Ocr_NoEngines" xml:space="preserve">
-    <value>OCR қозғалтқышы жоқ</value>
-  </data>
-  <data name="Ocr_NoEnginesHelp" xml:space="preserve">
-    <value>Windows жүйесінде қосымша бағдарлама қажет емес. Linux жүйесінде Tesseract орнатыңыз: sudo apt install tesseract-ocr</value>
-  </data>
-  <data name="Ocr_TesseractLangHint" xml:space="preserve">
-    <value>Tesseract үшін тіл пакеттерін орнатыңыз: sudo apt install tesseract-ocr-&lt;lang&gt;</value>
-  </data>
-  <data name="Ocr_WindowsTesseractHint" xml:space="preserve">
-    <value>Windows жүйесіндегі кірістірілген OCR мәтінді өткізіп алуы мүмкін. Screenshot Annotator мәтінді жиі жақсырақ шығаратын Tesseract OCR-ді де қолдайды. Мұнда пайдалану үшін Tesseract-ты қолмен орнатыңыз.</value>
-  </data>
-  <data name="Ocr_ExtractButton" xml:space="preserve">
-    <value>Мәтін шығару</value>
-  </data>
-  <data name="Ocr_Processing" xml:space="preserve">
-    <value>Өңделуде...</value>
-  </data>
-  <data name="Ocr_Result" xml:space="preserve">
-    <value>Танылған мәтін</value>
   </data>
 </root>

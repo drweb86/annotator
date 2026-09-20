@@ -463,6 +463,24 @@ namespace ScreenshotAnnotator.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Privacy.
+        /// </summary>
+        public static string Menu_Privacy {
+            get {
+                return ResourceManager.GetString("Menu_Privacy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Start with system.
+        /// </summary>
+        public static string Menu_StartWithSystem {
+            get {
+                return ResourceManager.GetString("Menu_StartWithSystem", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Web-Site.
         /// </summary>
         public static string Menu_WebSite {
@@ -577,6 +595,15 @@ namespace ScreenshotAnnotator.Resources {
         public static string Panel_Properties {
             get {
                 return ResourceManager.GetString("Panel_Properties", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Language.
+        /// </summary>
+        public static string Privacy_Language {
+            get {
+                return ResourceManager.GetString("Privacy_Language", resourceCulture);
             }
         }
         
