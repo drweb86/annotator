@@ -1,0 +1,18 @@
+Çəkmək üçün Print Screen və ya tətbiq daxilindəki düyməyə basın, tətbiq arxa planda olsa belə.
+Maraqlı hissəni bir hərəkətlə kəsin, sonra dərhal annotasiya edin.
+İnsanları dəqiq yerə yönəldən fərdiləşdirilə bilən oxlar çəkin.
+Oxunaqlı qalan redaktə oluna bilən mətnli nitq balonu çağırışları əlavə edin.
+İstənilən sahəni izah etmək və ya çərçivələmək üçün qeydlər və haşiyəli düzbucaqlılar qoyun.
+Rəngini dəyişə biləcəyiniz vurğulayıcı ilə vacib olanı vurğulayın.
+Parolları, adları və paylaşmamalı olduğunuz hər şeyi bulanıqlaşdırın.
+Seçilmiş sahəni ağardın və ya yalnız o dilimi buferə kopyalayın.
+Ekran görüntüsü yığcam qalsın deyə boş şaquli və ya üfüqi zolaqları kəsin.
+Daxili Windows OCR ilə seçimdən mətn çıxarın. İstəyə bağlı Tesseract.
+Ekran görüntülərini və fiqurları kopyalayıb yapışdırın. Şəkilləri layihəyə sürükləyin.
+PNG, JPEG və ya WebP ixrac edin. PNG həm də layihənin yanında saxlanılır.
+Layihələr önizləmə kiçik şəkilləri ilə avtomatik saxlanır, dərhal qayıda bilərsiniz.
+Windows ilə başlayın və daxil olduqdan sonra Print Screen çəkilişini hazır saxlayın.
+Açıq mənbə. Reklam yoxdur, analitika yoxdur, hesab yoxdur. Ekran görüntüləri bu kompüterdə qalır.
+Böyük ekran görüntüləri üçün sürüşdürmə panelləri olan tünd, diqqətli iş sahəsi.
+Qeydlərdə, çağırışlarda və oxlarda şrift, rəng, ölçü, qalın və kursiv tənzimləyin.
+Şəkil hekayəni danışana qədər annotasiyaları seçin, köçürün və redaktə edin.

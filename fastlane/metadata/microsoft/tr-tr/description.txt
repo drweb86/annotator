@@ -1,0 +1,27 @@
+Screenshot Annotator dağınık bir ekran yakalamasını saniyeler içinde net bir açıklamaya dönüştürür. Print Screen tuşuna basın, önemli olanı kırpın, işaretleyin ve paylaşın. Açık kaynaktır. Ekran görüntüleriniz bu PC üzerinde kalır. Hesap yok. Reklam yok. Bulut yok.
+
+Yakalama her zaman bir tuş ötede. Print Screen, uygulama arka plandayken veya simge durumundayken bile çalışır. Bölgeyi kırpın; sonra işaretleyin, açıklayın, gizleyin ve cilalayın.
+
+Resim konuşsun
+
+- Tam noktayı gösteren özelleştirilebilir oklar
+- Düzenlenebilir metinli konuşma balonları
+- Önemli olanı çerçevelemek için notlar ve kenarlıklı dikdörtgenler
+- Yeniden renklendirebileceğiniz bir vurgulayıcı
+- Parolalar, adlar ve özel veriler için bulanıklaştırma ve beyaza boyama
+- Boş alanı atmak için dikey ve yatay kesmeler
+- PNG, JPEG veya WebP kopyalama, yapıştırma, içe ve dışa aktarma
+
+Metni ekrandan alın
+
+Bir alan seçin ve yerleşik Windows OCR ile metni çıkarın. Ek yazılım gerekmez. Zaten Tesseract kullanıyorsanız o motor da desteklenir. Sonucu düzenleyin, kopyalayın ve devam edin.
+
+Akışta kalın
+
+Projeler önizleme küçük resimleriyle otomatik kaydedilir; dünün hata raporuna veya bugünün yönergesine anında dönebilirsiniz. Görüntüleri sürükleyin. Bitmiş resmi panoya kopyalayın. Windows ile başlatın ki oturum açtıktan sonra yakalama hazır olsun. Çalışma alanı koyu, hızlı ve 57 dilde kullanılabilir.
+
+Ekran görüntüleriniz sizin
+
+Bu, açık kaynaklı bir masaüstü aracıdır. İşaretlenmiş projeler Resimler klasörünüzde durur. Ayarlar bu bilgisayarda kalır. Hiçbir şey yüklenmez. Nasıl çalıştığını inceleyebilirsiniz. Hata raporları, belgeler, incelemeler, destek kayıtları ve her “şuna bak” anı için kullanın.
+
+İş ciddi kalır. Araç eğlenceli kalır. Dost kediler ara sıra görünür.

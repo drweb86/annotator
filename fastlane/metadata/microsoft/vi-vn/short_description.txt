@@ -1,0 +1,1 @@
+Công cụ chú thích ảnh chụp màn hình mã nguồn mở cho Windows. Chụp, cắt, đánh dấu bằng mũi tên, chú thích, làm mờ và OCR. Không tài khoản, không quảng cáo, không đám mây.

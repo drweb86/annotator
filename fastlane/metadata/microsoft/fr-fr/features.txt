@@ -1,0 +1,18 @@
+Appuyez sur Print Screen ou sur le bouton de l’app pour capturer, même si l’app est en arrière-plan.
+Recadrez la zone intéressante d’un geste, puis annotez tout de suite.
+Dessinez des flèches personnalisables qui pointent exactement au bon endroit.
+Ajoutez des légendes en bulle avec un texte modifiable, toujours lisible.
+Déposez des notes et des rectangles bordés pour expliquer ou encadrer une zone.
+Mettez en avant l’essentiel avec un surligneur que vous pouvez recolorer.
+Floutez les mots de passe, les noms et tout ce que vous ne devez pas partager.
+Blanchissez une zone sélectionnée, ou copiez seulement ce morceau dans le presse-papiers.
+Coupez les bandes vides verticales ou horizontales pour garder une capture compacte.
+Extrayez le texte d’une sélection avec l’OCR Windows intégré. Tesseract en option.
+Copiez et collez captures et formes. Glissez-déposez des images dans un projet.
+Exportez en PNG, JPEG ou WebP. Un PNG est aussi enregistré à côté du projet.
+Les projets s’enregistrent automatiquement avec des miniatures pour y revenir instantanément.
+Démarrez avec Windows pour que la capture Print Screen soit prête après la connexion.
+Open source. Pas de pub, pas d’analytique, pas de compte. Les captures restent sur cet ordinateur.
+Espace de travail sombre et concentré, avec barres de défilement pour les grandes captures.
+Réglez polices, couleurs, taille, gras et italique sur les notes, légendes et flèches.
+Sélectionnez, déplacez et modifiez les annotations jusqu’à ce que l’image raconte l’histoire.

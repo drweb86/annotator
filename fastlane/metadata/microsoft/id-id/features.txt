@@ -1,0 +1,18 @@
+Tekan Print Screen atau tombol di aplikasi untuk menangkap, meski aplikasi di latar belakang.
+Potong bagian penting dalam satu gerakan, lalu langsung beri anotasi.
+Gambar panah yang dapat disesuaikan untuk menunjuk tepat ke tempat yang dimaksud.
+Tambah balon ucapan berisi teks yang bisa diedit dan tetap mudah dibaca.
+Letakkan catatan dan persegi panjang berbingkai untuk menjelaskan atau membingkai area.
+Sorot yang penting dengan pena penanda yang warnanya bisa diubah.
+Buramkan kata sandi, nama, dan apa pun yang tidak boleh dibagikan.
+Putihkan area yang dipilih, atau salin hanya bagian itu ke papan klip.
+Potong pita kosong vertikal atau horizontal agar tangkapan layar tetap ringkas.
+Ekstrak teks dari pilihan dengan Windows OCR bawaan. Tesseract opsional.
+Salin dan tempel tangkapan layar serta bentuk. Seret dan lepas gambar ke proyek.
+Ekspor PNG, JPEG, atau WebP. File PNG juga disimpan di samping proyek.
+Proyek tersimpan otomatis dengan pratinjau, jadi Anda bisa kembali seketika.
+Mulai bersama Windows agar tangkapan Print Screen siap setelah masuk.
+Sumber terbuka. Tanpa iklan, tanpa analitik, tanpa akun. Tangkapan layar tetap di PC ini.
+Ruang kerja gelap dan fokus, dengan bilah gulir untuk tangkapan layar besar.
+Atur font, warna, ukuran, tebal, dan miring pada catatan, balon, dan panah.
+Pilih, pindahkan, dan sunting anotasi sampai gambar menyampaikan ceritanya.

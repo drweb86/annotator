@@ -1,0 +1,18 @@
+Apăsați Print Screen sau butonul din aplicație pentru a captura, chiar dacă aplicația e în fundal.
+Decupați partea interesantă dintr-o mișcare, apoi adnotați imediat.
+Desenați săgeți personalizabile care arată exact punctul.
+Adăugați baloane de text cu text editabil, mereu lizibil.
+Puneți note și dreptunghiuri cu chenar ca să explicați sau să încadrați orice zonă.
+Evidențiați ce contează cu un marker pe care îl puteți recolora.
+Estompați parole, nume și tot ce nu ar trebui să partajați.
+Albiți o zonă selectată sau copiați doar acea felie în clipboard.
+Tăiați benzi goale verticale sau orizontale ca captura să rămână compactă.
+Extrageți text dintr-o selecție cu OCR Windows integrat. Tesseract opțional.
+Copiați și lipiți capturi și forme. Trageți imagini într-un proiect.
+Exportați PNG, JPEG sau WebP. Un PNG este salvat și lângă proiect.
+Proiectele se salvează singure, cu miniaturi, ca să reveniți instant.
+Porniți cu Windows și țineți Print Screen gata după autentificare.
+Open source. Fără reclame, fără analiză, fără cont. Capturile rămân pe acest computer.
+Spațiu de lucru întunecat și concentrat, cu bare de derulare pentru capturi mari.
+Reglați fonturi, culori, dimensiune, aldine și italic pe note, baloane și săgeți.
+Selectați, mutați și editați adnotările până când imaginea spune povestea.

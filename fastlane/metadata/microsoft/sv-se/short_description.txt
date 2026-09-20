@@ -1,0 +1,1 @@
+Annoteringsverktyg med öppen källkod för skärmdumpar på Windows. Fånga, beskär och markera med pilar, pratbubblor, suddning och OCR. Inget konto, inga annonser, inget moln.

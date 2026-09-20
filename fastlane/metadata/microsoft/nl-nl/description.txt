@@ -1,0 +1,27 @@
+Screenshot Annotator maakt van een rommelige schermafbeelding in seconden een heldere uitleg. Druk op Print Screen, snijd bij wat telt, markeer het en deel. Het is open source. Jouw screenshots blijven op deze PC. Geen account. Geen advertenties. Geen cloud.
+
+Vastleggen is altijd één toets verwijderd. Print Screen werkt ook als de app op de achtergrond of geminimaliseerd is. Snijd het gebied bij, wijs, leg uit, verberg en werk af.
+
+Laat het beeld spreken
+
+- Aanpasbare pijlen die naar de exacte plek wijzen
+- Tekstballonnen met bewerkbare tekst
+- Notities en rechthoeken met rand om in te kaderen wat telt
+- Een markeerstift die je van kleur kunt wisselen
+- Vervaging en wit voor wachtwoorden, namen en privégegevens
+- Verticale en horizontale knippen om lege ruimte weg te halen
+- Kopiëren, plakken, importeren en exporteren als PNG, JPEG of WebP
+
+Haal tekst van het scherm
+
+Selecteer een gebied en extraheer tekst met ingebouwde Windows OCR. Geen extra software. Als je al Tesseract gebruikt, wordt die engine ook ondersteund. Bewerk het resultaat, kopieer het en ga verder.
+
+Blijf in de flow
+
+Projecten slaan automatisch op met miniaturen, zodat je terug kunt naar het bugrapport van gisteren of de handleiding van vandaag. Sleep afbeeldingen erin. Kopieer het afgewerkte beeld naar het klembord. Start met Windows zodat vastleggen klaarstaat na het aanmelden. De werkruimte is donker, snel en beschikbaar in 57 talen.
+
+Jouw screenshots zijn van jou
+
+Dit is een open source desktopprogramma. Geannoteerde projecten staan in je map Afbeeldingen. Instellingen blijven op deze computer. Er wordt niets geüpload. Je kunt zien hoe het werkt. Gebruik het voor bugrapporten, documentatie, reviews, supporttickets en elk «kijk hier»-moment.
+
+Het werk blijft serieus. De tool blijft leuk. Vriendelijke katten duiken af en toe op.

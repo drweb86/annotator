@@ -1,0 +1,18 @@
+Druk op Print Screen of op de knop in de app om vast te leggen, ook als de app op de achtergrond draait.
+Snijd het interessante deel in één beweging bij en annoteer meteen.
+Teken aanpasbare pijlen die precies naar de juiste plek wijzen.
+Voeg tekstballonnen toe met bewerkbare tekst die leesbaar blijft.
+Zet notities en rechthoeken met rand neer om een gebied uit te leggen of in te kaderen.
+Markeer wat telt met een markeerstift die je van kleur kunt wisselen.
+Vervaag wachtwoorden, namen en alles wat je niet mag delen.
+Maak een geselecteerd gebied wit, of kopieer alleen dat stuk naar het klembord.
+Knip lege verticale of horizontale stroken weg zodat de screenshot compact blijft.
+Haal tekst uit een selectie met ingebouwde Windows OCR. Optioneel Tesseract.
+Kopieer en plak screenshots en vormen. Sleep afbeeldingen in een project.
+Exporteer PNG, JPEG of WebP. Er wordt ook een PNG naast het project opgeslagen.
+Projecten slaan automatisch op met miniaturen, zodat je meteen terug kunt.
+Start met Windows en houd Print Screen klaar na het aanmelden.
+Open source. Geen advertenties, geen analyses, geen account. Screenshots blijven op deze computer.
+Donkere, gefocuste werkruimte met schuifbalken voor grote screenshots.
+Stem lettertypen, kleuren, grootte, vet en cursief af op notities, bijschriften en pijlen.
+Selecteer, verplaats en bewerk annotaties tot het beeld het verhaal vertelt.

@@ -1,0 +1,27 @@
+Screenshot Annotator förvandlar ett rörigt skärmgrepp till en tydlig förklaring på några sekunder. Tryck på Print Screen, beskär det som spelar roll, markera och dela. Det är öppen källkod. Dina skärmdumpar stannar på den här PC. Inget konto. Inga annonser. Inget moln.
+
+Fångst är alltid en tangent bort. Print Screen fungerar även när appen är i bakgrunden eller minimerad. Beskär området, peka sedan, förklara, dölj och polera.
+
+Låt bilden göra jobbet
+
+- Anpassningsbara pilar som pekar till exakt rätt ställe
+- Pratbubblor med redigerbar text
+- Noteringar och rektanglar med ram för att rama in det viktiga
+- En överstrykningspenna du kan färga om
+- Suddning och vitmålning för lösenord, namn och privat data
+- Vertikala och horisontella klipp för att ta bort tomt utrymme
+- Kopiera, klistra in, importera och exportera PNG, JPEG eller WebP
+
+Dra text från skärmen
+
+Markera ett område och extrahera text med inbyggd Windows OCR. Ingen extra programvara krävs. Om du redan använder Tesseract stöds den motorn också. Redigera resultatet, kopiera det och gå vidare.
+
+Håll flödet
+
+Projekt sparas automatiskt med förhandsminiatyrer, så du kan hoppa tillbaka till gårdagens felrapport eller dagens instruktion. Dra in bilder. Kopiera den färdiga bilden till urklipp. Starta med Windows så att fångsten väntar efter inloggning. Arbetsytan är mörk, snabb och finns på 57 språk.
+
+Dina skärmdumpar är dina
+
+Det här är ett skrivbordsverktyg med öppen källkod. Annoterade projekt ligger i mappen Bilder. Inställningarna stannar på den här datorn. Ingenting laddas upp. Du kan se hur det fungerar. Använd det för felrapporter, dokumentation, recensioner, supportärenden och varje ”titta på det här”-ögonblick.
+
+Arbetet förblir seriöst. Verktyget förblir roligt. Vänliga katter dyker upp då och då.

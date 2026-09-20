@@ -1,0 +1,27 @@
+Binabago ng Screenshot Annotator ang magulong kuha ng screen upang maging malinaw na paliwanag sa ilang segundo. Pindutin ang Print Screen, putulin ang mahalaga, lagyan ng marka, at ibahagi. Open source ito. Nananatili sa PC na ito ang iyong mga kuha. Walang account. Walang patalastas. Walang cloud.
+
+Laging isang pindot ang pagkuha. Gumagana ang Print Screen kahit nasa likuran o pinaliit ang app. Putulin ang rehiyon, tapos ituro, ipaliwanag, itago, at ayusin.
+
+Hayaan mong magsalita ang larawan
+
+- Mga palasong maaaring isaayos na tumuturo sa eksaktong lugar
+- Lobo ng usapan na may tekstong nababago
+- Tala at parihaba na may hangganan para balangkasin ang mahalaga
+- Panandang napapalitan ng kulay
+- Palabo at puti para sa password, pangalan, at pribadong datos
+- Mga hiwa nang patayo at pahiga para alisin ang bakanteng espasyo
+- Kopyahin, idikit, mag-angkat, at mag-export ng PNG, JPEG, o WebP
+
+Kumuha ng teksto mula sa screen
+
+Pumili ng bahagi at kumuha ng teksto gamit ang nakapaloob na Windows OCR. Hindi kailangan ng dagdag na programa. Kung gumagamit ka na ng Tesseract, suportado rin ang makinang iyon. I-edit ang resulta, kopyahin, at magpatuloy.
+
+Manatili sa daloy
+
+Kusang nase-save ang mga proyekto na may preview na thumbnail, kaya makakabalik ka agad sa ulat ng bug kahapon o sa gabay ngayon. I-drag ang mga imahe papasok. Kopyahin ang tapos na larawan sa clipboard. Magsimula kasama ang Windows para handa na ang pagkuha pagkatapos mag-sign in. Madilim at mabilis ang workspace, at may 57 wika.
+
+Sa iyo ang mga kuha
+
+Isa itong open source na programang pang-desktop. Nasa folder ng Mga Larawan ang mga proyektong may anotasyon. Nananatili sa komputer na ito ang mga setting. Walang ina-upload. Masusuri mo kung paano ito gumagana. Gamitin para sa ulat ng bug, dokumentasyon, pagsusuri, tiket ng suporta, at bawat sandaling “tingnan mo ito”.
+
+Seryoso ang gawain. Masaya ang kasangkapan. May palakaibigang pusa na dumaraan paminsan-minsan.

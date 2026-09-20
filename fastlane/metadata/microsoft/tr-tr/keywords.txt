@@ -1,0 +1,7 @@
+ekran görüntüsü
+ekran işaretleme
+görüntü işaretleme
+bulanıklaştırma
+OCR metin çıkarma
+konuşma balonu
+açık kaynak

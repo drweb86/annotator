@@ -1,0 +1,7 @@
+screen capture
+annotate screenshots
+image markup
+blur redaction
+OCR extract text
+callout arrows
+open source

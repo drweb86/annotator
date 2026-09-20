@@ -1,0 +1,27 @@
+Screenshot Annotator turns a messy screen grab into a clear explanation in seconds. Press Print Screen, crop what matters, mark it up, and share. It is open source. Your screenshots stay on this PC. No account. No ads. No cloud.
+
+Capture is always one key away. Print Screen works even when the app is in the background or minimized. Crop the region, then point, explain, hide, and polish.
+
+Make the picture do the talking
+
+- Customizable arrows that point to the exact spot
+- Speech-bubble callouts with editable text
+- Notes and bordered rectangles to frame what matters
+- A highlighter you can recolor
+- Blur and white-out for passwords, names, and private data
+- Vertical and horizontal cuts to drop empty space
+- Copy, paste, import, and export PNG, JPEG, or WebP
+
+Pull text off the screen
+
+Select an area and extract text with built-in Windows OCR. No extra software required. If you already use Tesseract, that engine is supported too. Edit the result, copy it, and move on.
+
+Stay in flow
+
+Projects save automatically with preview thumbnails, so you can jump back to yesterday's bug report or today's how-to. Drag images in. Copy the finished picture to the clipboard. Start with Windows so capture is waiting after you sign in. The workspace is dark, fast, and available in 57 languages.
+
+Your screenshots are yours
+
+This is an open source desktop tool. Annotated projects live in your Pictures folder. Settings stay on this computer. Nothing is uploaded. You can inspect how it works. Use it for bug reports, documentation, reviews, support tickets, and every "look at this" moment.
+
+The work stays serious. The tool stays fun. Friendly cats show up now and then.

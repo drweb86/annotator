@@ -1,0 +1,18 @@
+Premi Print Screen o il pulsante nell’app per catturare, anche se l’app è in background.
+Ritaglia la parte interessante in un gesto, poi annota subito.
+Disegna frecce personalizzabili che indicano esattamente il punto.
+Aggiungi callout a fumetto con testo modificabile, sempre leggibile.
+Inserisci note e rettangoli con bordo per spiegare o inquadrare un’area.
+Evidenzia ciò che conta con un evidenziatore che puoi ricolorare.
+Sfoca password, nomi e tutto ciò che non dovresti condividere.
+Sbianca un’area selezionata, oppure copia solo quel ritaglio negli appunti.
+Taglia fasce vuote verticali o orizzontali perché lo screenshot resti compatto.
+Estrai testo da una selezione con l’OCR Windows integrato. Tesseract opzionale.
+Copia e incolla screenshot e forme. Trascina immagini in un progetto.
+Esporta PNG, JPEG o WebP. Un PNG viene salvato anche accanto al progetto.
+I progetti si salvano da soli, con miniature, per tornarci in un attimo.
+Avvia con Windows e tieni Print Screen pronto dopo l’accesso.
+Open source. Niente pubblicità, niente analitica, nessun account. Gli screenshot restano su questo computer.
+Area di lavoro scura e concentrata, con barre di scorrimento per screenshot grandi.
+Regola font, colori, dimensione, grassetto e corsivo su note, callout e frecce.
+Seleziona, sposta e modifica le annotazioni finché l’immagine racconta la storia.

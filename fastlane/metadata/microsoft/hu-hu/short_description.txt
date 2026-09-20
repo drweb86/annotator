@@ -1,0 +1,1 @@
+Nyílt forráskódú képernyőkép-annotátor Windowsra. Rögzítsen, vágjon, jelöljön nyilakkal, szóbuborékokkal, elmosással és OCR-rel. Nincs fiók, nincs hirdetés, nincs felhő.

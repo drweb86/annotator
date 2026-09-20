@@ -1,0 +1,18 @@
+Nyomja meg a Print Screen gombot vagy az alkalmazás gombját a rögzítéshez, akkor is, ha az alkalmazás a háttérben van.
+Vágja ki az érdekes részt egy mozdulattal, majd azonnal annotáljon.
+Rajzoljon testreszabható nyilakat, amelyek pontosan a helyre mutatnak.
+Adjon hozzá szóbuborékokat szerkeszthető szöveggel, amely olvasható marad.
+Tegyen megjegyzéseket és keretes téglalapokat, hogy magyarázzon vagy keretezzen bármely területet.
+Emelje ki a lényeget egy átszínezhető kiemelővel.
+Mossa el a jelszavakat, neveket és mindent, amit nem kellene megosztani.
+Fehérítse ki a kijelölt területet, vagy másolja csak azt a szeletet a vágólapra.
+Vágja ki az üres függőleges vagy vízszintes sávokat, hogy a képernyőkép tömör maradjon.
+Nyerje ki a szöveget a kijelölésből a beépített Windows OCR-rel. Opcionális Tesseract.
+Másolja és illessze be a képernyőképeket és alakzatokat. Húzzon képeket a projektbe.
+Exportáljon PNG, JPEG vagy WebP formátumban. Egy PNG a projekt mellé is mentődik.
+A projektek automatikusan mentődnek előnézeti bélyegképekkel, hogy azonnal visszaugorhasson.
+Indítsa Windows-szal, és a Print Screen a bejelentkezés után is készen áll.
+Open source. Nincs hirdetés, nincs analitika, nincs fiók. A képernyőképek ezen a számítógépen maradnak.
+Sötét, fókuszált munkaterület görgetősávokkal a nagy képernyőképekhez.
+Hangolja a betűket, színeket, méretet, félkövért és dőltet a megjegyzéseken, szóbuborékokon és nyilakon.
+Jelölje ki, mozgassa és szerkessze a jelöléseket, amíg a kép elmondja a történetet.

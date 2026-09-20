@@ -1,0 +1,18 @@
+Press Print Screen or the in-app button to capture, even when the app is in the background.
+Crop the interesting part in one motion, then annotate immediately.
+Draw customizable arrows that point people to the exact spot.
+Add speech-bubble callouts with editable text that stays readable.
+Drop notes and bordered rectangles to explain or frame any area.
+Highlight what matters with a highlighter you can recolor.
+Blur passwords, names, and anything you should not share.
+White out a selected area, or copy just that slice to the clipboard.
+Cut empty vertical or horizontal strips so the screenshot stays compact.
+Extract text from a selection with built-in Windows OCR. Optional Tesseract.
+Copy and paste screenshots and shapes. Drag and drop images into a project.
+Export PNG, JPEG, or WebP. A PNG is also saved next to the project.
+Projects auto-save with preview thumbnails so you can jump back instantly.
+Start with Windows and keep Print Screen capture ready after you sign in.
+Open source. No ads, no analytics, no account. Screenshots stay on this computer.
+Dark, focused workspace with scrollbars for large screenshots.
+Tune fonts, colors, size, bold, and italic on notes, callouts, and arrows.
+Select, move, and edit annotations until the picture tells the story.

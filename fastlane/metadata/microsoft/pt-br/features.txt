@@ -1,0 +1,18 @@
+Pressione Print Screen ou o botão no app para capturar, mesmo com o app em segundo plano.
+Recorte a parte interessante num só gesto e anote na hora.
+Desenhe setas personalizáveis que apontam exatamente para o ponto.
+Adicione balões de fala com texto editável, sempre legível.
+Solte notas e retângulos com borda para explicar ou enquadrar qualquer área.
+Destaque o que importa com um marca-texto que você pode recolorir.
+Desfoque senhas, nomes e tudo o que não deve ser compartilhado.
+Branqueie uma área selecionada, ou copie só esse recorte para a área de transferência.
+Corte faixas vazias verticais ou horizontais para a captura ficar compacta.
+Extraia texto de uma seleção com o OCR do Windows integrado. Tesseract opcional.
+Copie e cole capturas e formas. Arraste imagens para um projeto.
+Exporte PNG, JPEG ou WebP. Um PNG também é salvo ao lado do projeto.
+Os projetos salvam sozinhos, com miniaturas, para você voltar na hora.
+Inicie com o Windows e deixe o Print Screen pronto depois do login.
+Open source. Sem anúncios, sem análise, sem conta. As capturas ficam neste computador.
+Área de trabalho escura e focada, com barras de rolagem para capturas grandes.
+Ajuste fontes, cores, tamanho, negrito e itálico em notas, balões e setas.
+Selecione, mova e edite as anotações até a imagem contar a história.

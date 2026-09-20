@@ -6,6 +6,7 @@ using ScreenshotAnnotator.Views;
 using ScreenshotAnnotator.Services;
 using ScreenshotAnnotator.Services.Shapes;
 using System;
+using System.Globalization;
 using System.Linq;
 
 namespace ScreenshotAnnotator;
@@ -14,10 +15,24 @@ public partial class App : Application
 {
     public override void Initialize()
     {
+        ApplyScreenshotCulture();
+
         LoggingService.Initialize();
         ShapePluginLoader.Initialize();
 
         AvaloniaXamlLoader.Load(this);
+    }
+
+    public static void ApplyScreenshotCulture()
+    {
+        if (string.IsNullOrWhiteSpace(Environment.GetEnvironmentVariable("SCREENSHOTS")))
+            return;
+
+        var culture = CultureInfo.GetCultureInfo("en-US");
+        CultureInfo.DefaultThreadCurrentCulture = culture;
+        CultureInfo.DefaultThreadCurrentUICulture = culture;
+        CultureInfo.CurrentCulture = culture;
+        CultureInfo.CurrentUICulture = culture;
     }
 
     public override void OnFrameworkInitializationCompleted()

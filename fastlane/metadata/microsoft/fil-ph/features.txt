@@ -1,0 +1,18 @@
+Pindutin ang Print Screen o ang pindutan sa app para kumuha, kahit nasa likuran ang app.
+Putulin ang mahalagang bahagi sa isang galaw, tapos lagyan agad ng anotasyon.
+Gumuhit ng palasong maaaring isaayos na tumuturo sa eksaktong lugar.
+Magdagdag ng lobo ng usapan na may tekstong nababago at nananatiling nababasa.
+Maglagay ng tala at parihaba na may hangganan para ipaliwanag o balangkasin ang bahagi.
+Bigyang-diin ang mahalaga gamit ang panandang napapalitan ng kulay.
+Palabuin ang mga password, pangalan, at anumang hindi dapat ibahagi.
+Putiin ang napiling bahagi, o kopyahin lang iyon sa clipboard.
+Putulin ang bakanteng pirasong patayo o pahiga para manatiling masinsin ang kuha.
+Kumuha ng teksto mula sa seleksiyon gamit ang nakapaloob na Windows OCR. Opsiyonal ang Tesseract.
+Kopyahin at idikit ang mga kuha at hugis. I-drag at i-drop ang mga imahe papunta sa proyekto.
+I-export ang PNG, JPEG, o WebP. May PNG ring nasasagip sa tabi ng proyekto.
+Kusang nase-save ang mga proyekto na may preview na thumbnail, kaya agad kang makakabalik.
+Magsimula kasama ang Windows para handa ang pagkuha sa Print Screen pagkatapos mag-sign in.
+Open source. Walang patalastas, walang analytics, walang account. Nananatili sa PC na ito ang mga kuha.
+Madilim at nakatuong workspace na may scrollbar para sa malalaking kuha.
+Isaayos ang mga font, kulay, laki, makapal, at italiko sa tala, lobo, at palaso.
+Piliin, ilipat, at i-edit ang mga anotasyon hanggang masabi ng larawan ang kuwento.

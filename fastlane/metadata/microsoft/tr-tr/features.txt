@@ -1,0 +1,18 @@
+Print Screen veya uygulama içi düğmeyle yakalayın; uygulama arka plandayken bile çalışır.
+İlgilendiğiniz bölümü tek hareketle kırpın, ardından hemen işaretleyin.
+İnsanları tam noktaya yönlendiren özelleştirilebilir oklar çizin.
+Düzenlenebilir ve okunaklı metinle konuşma balonu ekleyin.
+Herhangi bir alanı açıklamak veya çerçevelemek için notlar ve kenarlıklı dikdörtgenler bırakın.
+Yeniden renklendirebileceğiniz bir vurgulayıcıyla önemli olanı öne çıkarın.
+Parolaları, adları ve paylaşmamanız gereken her şeyi bulanıklaştırın.
+Seçili alanı beyaza boyayın veya yalnızca o dilimi panoya kopyalayın.
+Ekran görüntüsü kompakt kalsın diye boş dikey veya yatay şeritleri kesin.
+Seçimden metni yerleşik Windows OCR ile çıkarın. İsteğe bağlı Tesseract.
+Ekran görüntülerini ve şekilleri kopyalayıp yapıştırın. Görüntüleri projeye sürükleyip bırakın.
+PNG, JPEG veya WebP dışa aktarın. PNG ayrıca projenin yanına kaydedilir.
+Projeler önizleme küçük resimleriyle otomatik kaydedilir; anında geri dönebilirsiniz.
+Windows ile başlatın; oturum açtıktan sonra Print Screen yakalama hazır olsun.
+Açık kaynak. Reklam yok, analitik yok, hesap yok. Ekran görüntüleri bu bilgisayarda kalır.
+Büyük ekran görüntüleri için kaydırma çubukları olan karanlık, odaklı çalışma alanı.
+Notlarda, balonlarda ve oklarda yazı tipi, renk, boyut, kalın ve italik ayarlayın.
+Resim hikâyeyi anlatana kadar ek açıklamaları seçin, taşıyın ve düzenleyin.

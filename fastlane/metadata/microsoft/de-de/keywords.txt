@@ -1,0 +1,7 @@
+Screenshot aufnehmen
+Screenshots annotieren
+Bild markieren
+Unschärfe zensieren
+OCR Text extrahieren
+Sprechblasen Pfeile
+quelloffen

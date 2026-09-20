@@ -1,0 +1,18 @@
+Stiskněte Print Screen nebo tlačítko v aplikaci a zachyťte obrazovku, i když aplikace běží na pozadí.
+Ořízněte zajímavou část jedním pohybem a hned anotujte.
+Kreslete přizpůsobitelné šipky, které ukazují přesně na dané místo.
+Přidejte popisky v bublině s upravitelným textem, který zůstane čitelný.
+Vkládejte poznámky a obdélníky s rámečkem, abyste vysvětlili nebo orámovali libovolnou oblast.
+Zvýrazněte, na čem záleží, zvýrazňovačem, který můžete přebarvit.
+Rozmažte hesla, jména a vše, co byste neměli sdílet.
+Zabělte vybranou oblast, nebo zkopírujte jen ten výřez do schránky.
+Odřízněte prázdné svislé nebo vodorovné pruhy, aby snímek zůstal úsporný.
+Extrahujte text z výběru vestavěným Windows OCR. Volitelně Tesseract.
+Kopírujte a vkládejte snímky i tvary. Přetahujte obrázky do projektu.
+Exportujte PNG, JPEG nebo WebP. PNG se uloží i vedle projektu.
+Projekty se ukládají samy, s náhledy, abyste se mohli okamžitě vrátit.
+Spouštějte s Windows a mějte Print Screen připravený po přihlášení.
+Open source. Žádné reklamy, žádná analytika, žádný účet. Snímky zůstanou v tomto počítači.
+Tmavé, soustředěné pracovní prostředí s posuvníky pro velké snímky.
+Upravte písma, barvy, velikost, tučné a kurzívu u poznámek, popisků a šipek.
+Vyberte, přesuňte a upravte anotace, dokud obrázek nevypráví příběh.

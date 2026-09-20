@@ -1,0 +1,27 @@
+Screenshot Annotator tartibsiz ekran olishni soniyalar ichida tushunarli izohga aylantiradi. Print Screen ni bosing, muhimini kesing, belgilang va ulashing. Bu ochiq manba. Ekran tasvirlaringiz shu PC da qoladi. Hisob yoʻq. Reklama yoʻq. Bulut yoʻq.
+
+Suratga olish har doim bitta tugma uzoqlikda. Print Screen ilova fonda yoki kichraytirilgan boʻlsa ham ishlaydi. Hududni kesing, soʻng koʻrsating, tushuntiring, yashiring va sayqallang.
+
+Rasm gapirsin
+
+- Aniq joyga ishora qiladigan sozlanadigan oʻqlar
+- Tahrirlanadigan matnli nutq pufagi chaqiriqlari
+- Muhim narsani ramkalash uchun izohlar va chegarali toʻrtburchaklar
+- Rangini oʻzgartira oladigan belgilagich
+- Parollar, ismlar va shaxsiy maʼlumotlar uchun xiralashtirish va oqlash
+- Boʻsh joyni olib tashlash uchun tik va gorizontal kesmalar
+- PNG, JPEG yoki WebP nusxalash, qoʻyish, import va eksport
+
+Matnni ekrandan oling
+
+Hududni tanlang va oʻrnatilgan Windows OCR bilan matnni ajrating. Qoʻshimcha dastur shart emas. Allaqachon Tesseract ishlatsangiz, oʻsha dvigatel ham qoʻllab-quvvatlanadi. Natijani tahrirlang, nusxalang va davom eting.
+
+Oqimda qoling
+
+Loyihalar oldindan koʻrish miniatyuralari bilan avtomatik saqlanadi, shuning uchun kechagi xato hisobotiga yoki bugungi qoʻllanmaga darhol qaytishingiz mumkin. Rasmlarni sudrab kiriting. Tayyor rasmni buferga nusxalang. Windows bilan ishga tushiring, kirgandan keyin suratga olish kutib tursin. Ish maydoni qorongʻu, tez va 57 tilda mavjud.
+
+Ekran tasvirlaringiz sizniki
+
+Bu ochiq manbali ish stoli vositasi. Annotatsiya qilingan loyihalar Rasmlar jildingizda saqlanadi. Sozlamalar shu kompyuterda qoladi. Hech narsa yuklanmaydi. Qanday ishlashini tekshirishingiz mumkin. Xato hisobotlari, hujjatlar, sharhlar, qoʻllab-quvvatlash chiptalari va har bir «bunga qarang» lahzasi uchun ishlating.
+
+Ish jiddiy qoladi. Vosita qiziqarli qoladi. Doʻstona mushuklar goh-goh paydo boʻladi.

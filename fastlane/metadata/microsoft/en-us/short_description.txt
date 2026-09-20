@@ -1,0 +1,1 @@
+Open source screenshot annotator for Windows. Capture, crop, mark up with arrows, callouts, blur, and OCR. No account, no ads, no cloud.

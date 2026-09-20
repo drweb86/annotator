@@ -1,0 +1,18 @@
+Nhấn Print Screen hoặc nút trong ứng dụng để chụp, kể cả khi ứng dụng đang chạy nền.
+Cắt phần cần thiết trong một thao tác, rồi chú thích ngay.
+Vẽ mũi tên tùy chỉnh để chỉ đúng chỗ cần nhìn.
+Thêm chú thích bong bóng với chữ chỉnh sửa được, luôn dễ đọc.
+Thả ghi chú và hình chữ nhật có viền để giải thích hoặc khoanh vùng.
+Tô sáng phần quan trọng bằng bút đánh dấu đổi màu được.
+Làm mờ mật khẩu, tên và những gì không nên chia sẻ.
+Tẩy trắng vùng đã chọn, hoặc chỉ sao chép phần đó vào clipboard.
+Cắt các dải trống dọc hoặc ngang để ảnh chụp gọn hơn.
+Trích chữ từ vùng chọn bằng Windows OCR có sẵn. Tùy chọn Tesseract.
+Sao chép và dán ảnh chụp cùng hình vẽ. Kéo thả ảnh vào dự án.
+Xuất PNG, JPEG hoặc WebP. Một file PNG cũng được lưu cạnh dự án.
+Dự án tự lưu kèm ảnh xem trước, quay lại ngay được.
+Khởi động cùng Windows, chụp Print Screen sẵn sàng sau khi đăng nhập.
+Mã nguồn mở. Không quảng cáo, không phân tích, không tài khoản. Ảnh chụp ở lại PC này.
+Không gian làm việc tối, tập trung, có thanh cuộn cho ảnh lớn.
+Chỉnh phông, màu, cỡ, đậm và nghiêng trên ghi chú, chú thích và mũi tên.
+Chọn, di chuyển và sửa chú thích cho đến khi hình kể đủ câu chuyện.

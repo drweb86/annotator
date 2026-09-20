@@ -1,0 +1,1 @@
+Annotateur de captures d’écran open source pour Windows. Capturez, recadrez, annotez avec flèches, légendes, flou et OCR. Pas de compte, pas de pub, pas de cloud.

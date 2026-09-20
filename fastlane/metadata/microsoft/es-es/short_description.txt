@@ -1,0 +1,1 @@
+Anotador de capturas de pantalla de código abierto para Windows. Captura, recorta y marca con flechas, llamadas, desenfoque y OCR. Sin cuenta, sin anuncios, sin nube.

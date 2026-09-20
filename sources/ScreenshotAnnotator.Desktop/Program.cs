@@ -19,6 +19,7 @@ sealed class Program
     [STAThread]
     public static void Main(string[] args)
     {
+        App.ApplyScreenshotCulture();
         ImproveIt.HandleUiError = HandleUiError;
         TaskScheduler.UnobservedTaskException += TaskScheduler_UnobservedTaskException;
         AppDomain.CurrentDomain.UnhandledException += CurrentDomain_UnhandledException;

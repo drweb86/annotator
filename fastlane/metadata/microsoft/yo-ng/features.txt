@@ -1,0 +1,18 @@
+Tẹ Print Screen tàbí bọ́tìnì inú èto láti ya àwòrán, kódà bí èto bá wà lẹ́yìn.
+Gé apá tó wuni nínú ìṣípò kan, lẹ́yìn náà ṣàlàyé lẹ́sẹ̀kẹsẹ̀.
+Ya àwọn ọfà tí a lè ṣàtúnṣe tí wọ́n tọ́ka àwọn ènìyàn sí ibi tó tọ́.
+Fi ìpè àgbọ̀n ọ̀rọ̀ kún un pẹ̀lú ọ̀rọ̀ tí a lè tún kọ tí ó ṣì ṣeé kà.
+Fi àkíyèsí àti onígun mẹ́rin oníàlà sílẹ̀ láti ṣàlàyé tàbí yí agbègbè èyíkéyìí.
+Fi àmì ìmọ́lẹ̀ sí ohun tó ṣe pàtàkì pẹ̀lú ìkọ̀wé ìmọ́lẹ̀ tí o lè yí àwọ̀ padà.
+Ṣe ìṣokùnkùn àwọn ọ̀rọ̀ ìgbaniwọlé, orúkọ àti ohunkóhun tí kò yẹ kí o pín.
+Fun agbègbè tí a yàn ní funfun, tàbí da ẹ̀yà yẹn nìkan sínú pátákó ìdàkọ.
+Gé àwọn ìla òfo lóòró tàbí lọ́nà ìbú kí àwòrán ojú ìwòrán ó kù ní kíkúrú.
+Yo ọ̀rọ̀ jáde láti inú àṣàyàn pẹ̀lú Windows OCR inú ẹ̀rọ. Tesseract àṣàyàn.
+Da kí o sì lẹ̀ àwọn àwòrán ojú ìwòrán àti àwọn fọ́ọ̀mù. Wọ́ àwọn àwòrán sínú iṣẹ́.
+Gbé PNG, JPEG tàbí WebP jáde. A tún fi PNG pamọ́ lẹ́gbẹ̀ẹ́ iṣẹ́ náà.
+Àwọn iṣẹ́ ń fi ara wọn pamọ́ pẹ̀lú àwọn àwòrán kékeré àkọ́kọ́yẹ̀wò kí o lè padà lẹ́sẹ̀kẹsẹ̀.
+Bẹ̀rẹ̀ pẹ̀lú Windows kí ìyàwòrán Print Screen ó wà ní ìmúra lẹ́yìn ìwọlé.
+Orísun ṣíṣí. Kò sí ìpolówó, kò sí ìtúpalẹ̀, kò sí àkántì. Àwọn àwòrán ojú ìwòrán wà lórí kọ̀ǹpútà yìí.
+Ibi iṣẹ́ dúdú, tí ó dojú kọ iṣẹ́, pẹ̀lú ọ̀pá ìyípo fún àwọn àwòrán ojú ìwòrán ńlá.
+Tún fọ́ntì, àwọ̀, ìwọ̀n, ìlẹ̀kùn àti ìtẹ̀ sílẹ̀ lórí àkíyèsí, ìpè àti ọfà.
+Yan, gbé, kí o sì tún àwọn àlàyé ṣe títí àwòrán yóò fi sọ ìtàn.

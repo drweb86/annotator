@@ -1,0 +1,18 @@
+Pritisnite Print Screen ili dugme u aplikaciji da snimite, čak i kada je aplikacija u pozadini.
+Isečite zanimljiv deo jednim pokretom, pa odmah anotirajte.
+Crtajte podesive strelice koje pokazuju tačno na pravo mesto.
+Dodajte oblačiće sa tekstom koji se može uređivati i ostaje čitljiv.
+Stavite beleške i pravougaonike sa ivicom da objasnite ili uokvirite bilo koju oblast.
+Istaknite bitno markerom čiju boju možete promeniti.
+Zamućujte lozinke, imena i sve što ne treba da delite.
+Prekrijte belim izabranu oblast ili kopirajte samo taj isečak u privremenu memoriju.
+Isecite prazne vertikalne ili horizontalne trake da snimak ostane kompaktan.
+Izvucite tekst iz selekcije ugrađenim Windows OCR. Opciono Tesseract.
+Kopirajte i nalepite snimke ekrana i oblike. Prevucite slike u projekat.
+Izvezite PNG, JPEG ili WebP. PNG se takođe čuva pored projekta.
+Projekti se automatski čuvaju sa sličicama pregleda da se odmah vratite.
+Pokrenite uz Windows da Print Screen hvatanje bude spremno posle prijave.
+Otvoreni kod. Bez reklama, bez analitike, bez naloga. Snimci ostaju na ovom računaru.
+Tamno, fokusirano radno okruženje sa klizačima za velike snimke ekrana.
+Podesite fontove, boje, veličinu, podebljano i kurziv na beleškama, oblačićima i strelicama.
+Izaberite, pomerajte i uređujte anotacije dok slika ne ispriča priču.

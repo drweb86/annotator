@@ -1,0 +1,7 @@
+snímek obrazovky
+anotace snímků
+zvýraznění obrázku
+rozmazání cenzura
+OCR extrahovat text
+šipky popisky
+open source

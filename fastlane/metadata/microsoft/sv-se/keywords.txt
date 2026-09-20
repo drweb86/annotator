@@ -1,0 +1,7 @@
+skärmdump
+annotera skärmdump
+bildmarkering
+sudda skärmdump
+OCR extrahera text
+pratbubblor pilar
+öppen källkod

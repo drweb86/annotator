@@ -1,0 +1,27 @@
+Screenshot Annotator zamienia chaotyczny zrzut ekranu w jasne wyjaśnienie w kilka sekund. Naciśnij Print Screen, przytnij to, co ważne, oznacz i udostępnij. To open source. Twoje zrzuty zostają na tym PC. Bez konta. Bez reklam. Bez chmury.
+
+Przechwytywanie jest zawsze o jeden klawisz. Print Screen działa nawet gdy aplikacja jest w tle lub zminimalizowana. Przytnij obszar, potem wskaż, wyjaśnij, ukryj i dopracuj.
+
+Niech obraz mówi
+
+- Dostosowywalne strzałki, które wskazują dokładne miejsce
+- Dymki z edytowalnym tekstem
+- Notatki i prostokąty z obramowaniem, by obudować to, co ważne
+- Zakreślacz, którego kolor możesz zmienić
+- Rozmycie i bielenie haseł, nazwisk i danych prywatnych
+- Pionowe i poziome cięcia, by usunąć pustą przestrzeń
+- Kopiowanie, wklejanie, import i eksport PNG, JPEG lub WebP
+
+Zdejmij tekst z ekranu
+
+Zaznacz obszar i wyodrębnij tekst wbudowanym Windows OCR. Bez dodatkowego oprogramowania. Jeśli już używasz Tesseract, ten silnik też jest obsługiwany. Edytuj wynik, skopiuj i idź dalej.
+
+Zostań w przepływie
+
+Projekty zapisują się automatycznie z miniaturami, więc wrócisz do wczorajszego zgłoszenia błędu albo dzisiejszej instrukcji. Przeciągaj obrazy. Kopiuj gotowy obraz do schowka. Uruchamiaj z Windows, by przechwytywanie czekało po zalogowaniu. Obszar roboczy jest ciemny, szybki i dostępny w 57 językach.
+
+Twoje zrzuty są twoje
+
+To otwartoźródłowe narzędzie pulpitowe. Adnotowane projekty żyją w folderze Obrazy. Ustawienia zostają na tym komputerze. Nic nie jest wysyłane. Możesz sprawdzić, jak to działa. Używaj do zgłoszeń błędów, dokumentacji, recenzji, zgłoszeń wsparcia i każdego momentu „spójrz na to”.
+
+Praca zostaje poważna. Narzędzie zostaje przyjemne. Przyjazne koty pojawiają się od czasu do czasu.

@@ -1,0 +1,18 @@
+Pulsa Print Screen o el botón de la app para capturar, incluso si la app está en segundo plano.
+Recorta la zona interesante de un gesto y anota al momento.
+Dibuja flechas personalizables que señalan exactamente el punto.
+Añade llamadas en forma de bocadillo con texto editable y siempre legible.
+Coloca notas y rectángulos con borde para explicar o enmarcar cualquier zona.
+Resalta lo importante con un rotulador que puedes recolorear.
+Difumina contraseñas, nombres y todo lo que no debas compartir.
+Blanquea un área seleccionada, o copia solo ese recorte al portapapeles.
+Corta franjas vacías verticales u horizontales para que la captura siga compacta.
+Extrae texto de una selección con el OCR de Windows integrado. Tesseract opcional.
+Copia y pega capturas y formas. Arrastra imágenes a un proyecto.
+Exporta PNG, JPEG o WebP. También se guarda un PNG junto al proyecto.
+Los proyectos se guardan solos, con miniaturas, para volver en un instante.
+Inicia con Windows y deja Print Screen listo tras iniciar sesión.
+Open source. Sin anuncios, sin analítica, sin cuenta. Las capturas se quedan en este equipo.
+Espacio de trabajo oscuro y centrado, con barras de desplazamiento para capturas grandes.
+Ajusta fuentes, colores, tamaño, negrita y cursiva en notas, llamadas y flechas.
+Selecciona, mueve y edita las anotaciones hasta que la imagen cuente la historia.

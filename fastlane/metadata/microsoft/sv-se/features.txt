@@ -1,0 +1,18 @@
+Tryck på Print Screen eller knappen i appen för att fånga, även när appen är i bakgrunden.
+Beskär den intressanta delen i en rörelse och annotera direkt.
+Rita anpassningsbara pilar som pekar folk till exakt rätt ställe.
+Lägg till pratbubblor med redigerbar text som förblir läsbar.
+Släpp noteringar och rektanglar med ram för att förklara eller rama in ett område.
+Markera det som spelar roll med en överstrykningspenna du kan färga om.
+Sudda lösenord, namn och allt du inte bör dela.
+Vitmåla ett valt område, eller kopiera bara den biten till urklipp.
+Klipp bort tomma vertikala eller horisontella remsor så skärmdumpen hålls kompakt.
+Extrahera text från ett urval med inbyggd Windows OCR. Valfritt Tesseract.
+Kopiera och klistra in skärmdumpar och former. Dra och släpp bilder i ett projekt.
+Exportera PNG, JPEG eller WebP. En PNG sparas också bredvid projektet.
+Projekt autosparas med förhandsminiatyrer så du kan hoppa tillbaka direkt.
+Starta med Windows och ha Print Screen-fångst redo efter inloggning.
+Öppen källkod. Inga annonser, ingen analys, inget konto. Skärmdumpar stannar på den här datorn.
+Mörk, fokuserad arbetsyta med rullningslister för stora skärmdumpar.
+Justera typsnitt, färger, storlek, fetstil och kursiv på noteringar, pratbubblor och pilar.
+Markera, flytta och redigera annoteringar tills bilden berättar historien.

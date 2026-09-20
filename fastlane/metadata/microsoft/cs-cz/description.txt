@@ -1,0 +1,27 @@
+Screenshot Annotator promění chaotický snímek obrazovky v jasné vysvětlení během sekund. Stiskněte Print Screen, ořízněte, co je důležité, označte to a sdílejte. Je to open source. Vaše snímky zůstanou na tomto PC. Žádný účet. Žádné reklamy. Žádný cloud.
+
+Zachycení je vždy o jednu klávesu. Print Screen funguje, i když je aplikace na pozadí nebo minimalizovaná. Ořízněte oblast, pak ukažte, vysvětlete, skryjte a vyleštěte.
+
+Ať mluví obrázek
+
+- Přizpůsobitelné šipky, které ukazují přesně na místo
+- Bublinové popisky s upravitelným textem
+- Poznámky a obdélníky s rámečkem, které orámují, na čem záleží
+- Zvýrazňovač, který můžete přebarvit
+- Rozmazání a zabělení hesel, jmen a soukromých dat
+- Svislé a vodorovné řezy, které odstraní prázdné místo
+- Kopírování, vkládání, import a export PNG, JPEG nebo WebP
+
+Stáhněte text z obrazovky
+
+Vyberte oblast a extrahujte text vestavěným Windows OCR. Žádný další software. Pokud už používáte Tesseract, je tento engine také podporován. Upravte výsledek, zkopírujte ho a pokračujte.
+
+Zůstaňte v proudu
+
+Projekty se ukládají automaticky s náhledy, takže se vrátíte k včerejší chybové hlášce nebo k dnešnímu návodu. Přetáhněte obrázky. Zkopírujte hotový obrázek do schránky. Spouštějte s Windows, aby zachycení čekalo po přihlášení. Pracovní prostředí je tmavé, rychlé a dostupné v 57 jazycích.
+
+Vaše snímky jsou vaše
+
+Toto je open source desktopový nástroj. Anotované projekty žijí ve složce Obrázky. Nastavení zůstanou v tomto počítači. Nic se nenahrává. Můžete se podívat, jak to funguje. Použijte ho na hlášení chyb, dokumentaci, recenze, lístky podpory a každý moment „koukni na to“.
+
+Práce zůstává vážná. Nástroj zůstává zábavný. Přátelské kočky se občas objeví.

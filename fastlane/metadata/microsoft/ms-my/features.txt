@@ -1,0 +1,18 @@
+Tekan Print Screen atau butang dalam apl untuk menangkap, walaupun apl di latar belakang.
+Potong bahagian penting dalam satu gerakan, kemudian anotasi serta-merta.
+Lukis anak panah boleh suai yang menunjuk tepat ke tempat yang dimaksudkan.
+Tambah gelembung ucapan dengan teks boleh edit yang kekal mudah dibaca.
+Letakkan nota dan segi empat berbingkai untuk menjelaskan atau membingkai kawasan.
+Serlahkan yang penting dengan pen sorot yang boleh ditukar warna.
+Kaburkan kata laluan, nama, dan apa-apa yang tidak patut dikongsi.
+Lorek putih kawasan dipilih, atau salin hanya bahagian itu ke papan klip.
+Potong jalur kosong menegak atau mendatar supaya tangkapan skrin kekal padat.
+Ekstrak teks daripada pilihan dengan Windows OCR terbina dalam. Tesseract pilihan.
+Salin dan tampal tangkapan skrin serta bentuk. Seret dan lepas imej ke dalam projek.
+Eksport PNG, JPEG, atau WebP. Fail PNG juga disimpan di sebelah projek.
+Projek disimpan automatik dengan pratonton, jadi anda boleh kembali serta-merta.
+Mula bersama Windows supaya tangkapan Print Screen sedia selepas log masuk.
+Sumber terbuka. Tiada iklan, tiada analitik, tiada akaun. Tangkapan skrin kekal pada PC ini.
+Ruang kerja gelap dan fokus, dengan bar tatal untuk tangkapan skrin besar.
+Laraskan fon, warna, saiz, tebal, dan condong pada nota, gelembung, dan anak panah.
+Pilih, alih, dan edit anotasi sehingga gambar menceritakan kisahnya.

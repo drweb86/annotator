@@ -1,0 +1,27 @@
+Screenshot Annotator za nekoliko sekundi pretvara neredan snimak ekrana u jasno objašnjenje. Pritisnite Print Screen, isečite bitno, označite i podelite. Otvoreni je kod. Snimci ekrana ostaju na ovom PC. Bez naloga. Bez reklama. Bez oblaka.
+
+Hvatanje je uvek na jedan taster. Print Screen radi i kada je aplikacija u pozadini ili minimizovana. Isečite oblast, zatim pokažite, objasnite, sakrijte i doterajte.
+
+Neka slika govori umesto vas
+
+- Podesive strelice koje pokazuju tačno na pravo mesto
+- Oblačići sa tekstom koji se može uređivati
+- Beleške i pravougaonici sa ivicom da uokvirite bitno
+- Marker čiju boju možete promeniti
+- Zamućenje i belo prekrivanje za lozinke, imena i privatne podatke
+- Vertikalni i horizontalni isečci da uklonite prazan prostor
+- Kopiranje, nalepljivanje, uvoz i izvoz PNG, JPEG ili WebP
+
+Skonite tekst sa ekrana
+
+Izaberite oblast i izvucite tekst ugrađenim Windows OCR. Nije potreban dodatni softver. Ako već koristite Tesseract, i taj mehanizam je podržan. Uredite rezultat, kopirajte ga i nastavite.
+
+Ostanite u toku
+
+Projekti se čuvaju automatski sa sličicama pregleda, pa se možete odmah vratiti na jučerašnji izveštaj o grešci ili današnje uputstvo. Prevucite slike. Kopirajte gotovu sliku u privremenu memoriju. Pokrenite uz Windows da hvatanje čeka posle prijave. Radno okruženje je tamno, brzo i dostupno na 57 jezika.
+
+Vaši snimci ekrana su vaši
+
+Ovo je desktop alat otvorenog koda. Anotirani projekti žive u folderu Slike. Podešavanja ostaju na ovom računaru. Ništa se ne otprema. Možete videti kako radi. Koristite ga za izveštaje o greškama, dokumentaciju, recenzije, tikete podrške i svaki trenutak „pogledaj ovo“.
+
+Posao ostaje ozbiljan. Alat ostaje zabavan. Prijateljske mace se ponekad pojave.

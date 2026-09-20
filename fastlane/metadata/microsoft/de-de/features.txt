@@ -1,0 +1,18 @@
+Mit Print Screen oder der Schaltfläche in der App aufnehmen – auch wenn die App im Hintergrund läuft.
+Den relevanten Bereich in einer Bewegung zuschneiden und sofort annotieren.
+Anpassbare Pfeile zeichnen, die genau auf die richtige Stelle zeigen.
+Sprechblasen mit bearbeitbarem Text hinzufügen, der gut lesbar bleibt.
+Notizen und Rahmen setzen, um Bereiche zu erklären oder einzurahmen.
+Wichtiges mit einem Hervorheben-Stift markieren, den Sie umfärben können.
+Passwörter, Namen und alles, was nicht geteilt werden sollte, unscharf machen.
+Einen Bereich weiß überdecken oder nur diesen Ausschnitt in die Zwischenablage kopieren.
+Leere vertikale oder horizontale Streifen entfernen, damit der Screenshot kompakt bleibt.
+Text aus einer Auswahl mit integriertem Windows OCR extrahieren. Optional Tesseract.
+Screenshots und Formen kopieren und einfügen. Bilder per Drag-and-Drop ins Projekt ziehen.
+Als PNG, JPEG oder WebP exportieren. Ein PNG wird zusätzlich neben dem Projekt gespeichert.
+Projekte speichern automatisch mit Vorschaubildern, damit Sie sofort weitermachen können.
+Mit Windows starten und Print Screen nach der Anmeldung sofort nutzen.
+Open Source. Keine Werbung, keine Analyse, kein Konto. Screenshots bleiben auf diesem Computer.
+Dunkler, fokussierter Arbeitsbereich mit Bildlaufleisten für große Screenshots.
+Schrift, Farben, Größe, Fett und Kursiv an Notizen, Sprechblasen und Pfeilen anpassen.
+Annotationen auswählen, verschieben und bearbeiten, bis das Bild die Geschichte erzählt.

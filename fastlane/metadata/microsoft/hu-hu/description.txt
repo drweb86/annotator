@@ -1,0 +1,27 @@
+A Screenshot Annotator másodpercek alatt tiszta magyarázattá alakítja a kusza képernyőképet. Nyomja meg a Print Screen gombot, vágja ki a lényeget, jelölje meg, és ossza meg. Nyílt forráskódú. A képernyőképei ezen a PC-n maradnak. Nincs fiók. Nincs hirdetés. Nincs felhő.
+
+A rögzítés mindig egy gombnyomás. A Print Screen akkor is működik, ha az alkalmazás a háttérben van vagy kicsinyítve. Vágja ki a területet, majd mutasson, magyarázzon, rejtsen és csiszoljon.
+
+Hagyja, hogy a kép beszéljen
+
+- Testreszabható nyilak, amelyek a pontos helyre mutatnak
+- Szóbuborékok szerkeszthető szöveggel
+- Megjegyzések és keretes téglalapok a lényeg keretezéséhez
+- Átszínezhető kiemelő
+- Elmosás és fehérítés jelszavakhoz, nevekhez és privát adatokhoz
+- Függőleges és vízszintes vágások az üres tér eltávolításához
+- Másolás, beillesztés, importálás és exportálás PNG, JPEG vagy WebP formátumban
+
+Szöveg a képernyőről
+
+Jelöljön ki egy területet, és nyerje ki a szöveget a beépített Windows OCR-rel. Nincs extra szoftver. Ha már Tesseract motort használ, az a motor is támogatott. Szerkessze az eredményt, másolja, és lépjen tovább.
+
+Maradjon a folyamatban
+
+A projektek automatikusan mentődnek előnézeti bélyegképekkel, így visszaugorhat a tegnapi hibajelentéshez vagy a mai útmutatóhoz. Húzzon be képeket. Másolja a kész képet a vágólapra. Indítsa Windows-szal, hogy a rögzítés a bejelentkezés után várjon. A munkaterület sötét, gyors, és 57 nyelven elérhető.
+
+A képernyőképei a sajátjai
+
+Ez egy nyílt forráskódú asztali eszköz. A jelölt projektek a Képek mappában élnek. A beállítások ezen a számítógépen maradnak. Semmi nem töltődik fel. Megnézheti, hogyan működik. Használja hibajelentésekhez, dokumentációhoz, értékelésekhez, támogatási jegyekhez és minden „nézze ezt” pillanathoz.
+
+A munka komoly marad. Az eszköz szórakoztató marad. Barátságos macskák időnként felbukkannak.

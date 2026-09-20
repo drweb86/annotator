@@ -1,0 +1,18 @@
+Bonyeza Print Screen au kitufe ndani ya programu ili kupiga, hata programu ikiwa nyuma.
+Kata sehemu inayovutia kwa mwendo mmoja, kisha chambua mara moja.
+Chora mishale inayoweza kubadilishwa inayowaonyesha watu mahali hasa.
+Ongeza baluni za maelezo zenye maandishi yanayoweza kuhaririwa na kusomeka.
+Weka madokezo na mistatili yenye mipaka ili kueleza au kuweka fremu eneo lolote.
+Angazia kinachohusu kwa kialamishi unachoweza kubadilisha rangi.
+Ficha kwa ukungu nywila, majina, na chochote usichopaswa kushiriki.
+Funika eneo teule kwa nyeupe, au nakili kipande hicho pekee kwenye ubao nakili.
+Kata vipande tupu wima au mlalo ili picha ya skrini ibaki fupi.
+Toa maandishi kutoka uteuzi kwa Windows OCR iliyojengewa ndani. Tesseract ya hiari.
+Nakili na ubandike picha za skrini na maumbo. Kokota na udondoshe picha kwenye mradi.
+Hamisha PNG, JPEG au WebP. PNG pia huhifadhiwa kando ya mradi.
+Miradi huhifadhiwa kiotomatiki na vijipicha vya hakikisho ili urudi papo hapo.
+Anza na Windows na uweke upigaji wa Print Screen tayari baada ya kuingia.
+Msimbo huria. Hakuna matangazo, hakuna uchambuzi, hakuna akaunti. Picha za skrini zinabaki kwenye kompyuta hii.
+Kituo cha kazi cheusi, kilicholenga, chenye mistari ya kusogeza kwa picha kubwa za skrini.
+Rekebisha fonti, rangi, ukubwa, nene na italiki kwenye madokezo, baluni na mishale.
+Chagua, songesha na hariri maelezo hadi picha iseme hadithi.

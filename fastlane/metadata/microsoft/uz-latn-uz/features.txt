@@ -1,0 +1,18 @@
+Suratga olish uchun Print Screen yoki ilova ichidagi tugmani bosing, ilova fonda boʻlsa ham.
+Qiziqarli qismni bitta harakatda kesing, soʻng darhol annotatsiya qiling.
+Odamlarni aniq joyga yoʻnaltiradigan sozlanadigan oʻqlar chizing.
+Oʻqiladigan qoladigan tahrirlanadigan matnli nutq pufagi chaqiriqlarini qoʻshing.
+Istalgan joyni tushuntirish yoki ramkalash uchun izohlar va chegarali toʻrtburchaklar qoʻying.
+Rangini oʻzgartira oladigan belgilagich bilan muhim narsani ajrating.
+Parollar, ismlar va ulashmasligingiz kerak boʻlgan narsalarni xiralashtiring.
+Tanlangan joyni oqlang yoki faqat oʻsha boʻlakni buferga nusxalang.
+Ekran tasviri ixcham qolishi uchun boʻsh tik yoki gorizontal chiziqlarni kesib tashlang.
+Oʻrnatilgan Windows OCR bilan tanlovdan matn ajrating. Ixtiyoriy Tesseract.
+Ekran tasvirlari va shakllarni nusxalang va qoʻying. Rasmlarni loyihaga sudrab tashlang.
+PNG, JPEG yoki WebP eksport qiling. PNG loyiha yonida ham saqlanadi.
+Loyihalar oldindan koʻrish miniatyuralari bilan avtomatik saqlanadi, darhol qaytishingiz mumkin.
+Windows bilan ishga tushiring va kirgandan keyin Print Screen suratga olishni tayyor tuting.
+Ochiq manba. Reklama yoʻq, tahlil yoʻq, hisob yoʻq. Ekran tasvirlari shu kompyuterda qoladi.
+Katta ekran tasvirlari uchun aylantirish panellari bor qorongʻu, diqqatli ish maydoni.
+Izohlar, chaqiriqlar va oʻqlarda shrift, rang, oʻlcham, qalin va kursivni sozlang.
+Rasm hikoyani aytib berguncha annotatsiyalarni tanlang, koʻchiring va tahrirlang.
