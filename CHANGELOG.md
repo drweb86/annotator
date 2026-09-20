@@ -1,5 +1,4 @@
 # 2026.09.14
-(unpublished)
 
 ## New Features
 - In-app License window with translations for supported languages.
