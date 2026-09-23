@@ -2,6 +2,8 @@
 
 Screenshot annotator software for Windows and Linux.
 
+[Microsoft Store](https://apps.microsoft.com/detail/9nfpjcs6r9r6) [Win-get](./win-get.md) [Ubuntu](./Ubuntu.md)
+
 ## Features
 
 - **Arrows** - Draw attention to specific areas with customizable arrows
