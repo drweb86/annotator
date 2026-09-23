@@ -75,15 +75,6 @@ namespace ScreenshotAnnotator.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to en-US.
-        /// </summary>
-        public static string _Technical_WingetLocale {
-            get {
-                return ResourceManager.GetString("_Technical_WingetLocale", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Screenshot Annotator.
         /// </summary>
         public static string App_DisplayName {
@@ -1009,33 +1000,6 @@ namespace ScreenshotAnnotator.Resources {
         public static string Window_Title {
             get {
                 return ResourceManager.GetString("Window_Title", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Screenshot annotator software for Windows and Linux.
-        ///
-        ///Features:
-        ///- **Arrows** - Draw attention to specific areas with customizable arrows
-        ///- **Callouts** - Add speech bubble annotations with editable text
-        ///- **Notes** - Create text boxes for additional information
-        ///- **Border Selection** - Highlight areas with bordered rectangles
-        ///- **Blur** - Obscure sensitive information with blur effects
-        ///- **Selection Tool** - Select portions of the image to copy (Ctrl+C) or delete (Delete key)
-        ///- **Cut out vertical a [rest of string was truncated]&quot;;.
-        /// </summary>
-        public static string Winget_Description {
-            get {
-                return ResourceManager.GetString("Winget_Description", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Screenshot annotator software for Windows and Linux..
-        /// </summary>
-        public static string Winget_ShortDescription {
-            get {
-                return ResourceManager.GetString("Winget_ShortDescription", resourceCulture);
             }
         }
     }

@@ -62,9 +62,6 @@
   <data name="_Technical_NsisLanguage" xml:space="preserve">
     <value></value>
   </data>
-  <data name="_Technical_WingetLocale" xml:space="preserve">
-    <value>fil-PH</value>
-  </data>
   <data name="App_DisplayName" xml:space="preserve">
     <value>Screenshot Annotator</value>
     <comment>Short app display name for installer, shortcuts and error dialogs</comment>
@@ -384,24 +381,5 @@ Mangyaring gawin ang isa sa mga sumusunod:
   </data>
   <data name="Window_Title" xml:space="preserve">
     <value>Screenshot Annotator - Image Editor</value>
-  </data>
-  <data name="Winget_Description" xml:space="preserve">
-    <value>Software sa pag-anotasyon ng screenshot para sa Windows at Linux.
-
-Mga Tampok:
-- **Mga Arrow** - Akitin ang pansin sa mga partikular na lugar gamit ang mga nako-customize na arrow
-- **Mga Callout** - Magdagdag ng mga speech bubble annotation na may nae-edit na teksto
-- **Mga Tala** - Lumikha ng mga text box para sa karagdagang impormasyon
-- **Pagpili ng Border** - I-highlight ang mga lugar gamit ang mga bordered na rektangulo
-- **Blur** - Itago ang sensitibong impormasyon gamit ang mga blur effect
-- **Tool ng Pagpili** - Pumili ng mga bahagi ng larawan para kopyahin (Ctrl+C) o burahin (Delete key)
-- **Gupitin ang patayo at pahalang na mga slice** - Gupitin ang patayo o pahalang na mga lugar ng larawan
-- **Highlighter** - I-highlight ang mga lugar ng interes
-- **Pamamahala ng Proyekto** - Awtomatikong pag-save ng proyekto at mga preview thumbnail
-- **Cross-Platform** - Gumagana sa parehong Windows at Linux
-- **OCR** sa pamamagitan ng Tesseract at Windows.Media.OCR.</value>
-  </data>
-  <data name="Winget_ShortDescription" xml:space="preserve">
-    <value>Software sa pag-anotasyon ng screenshot para sa Windows at Linux.</value>
   </data>
 </root>

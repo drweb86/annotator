@@ -1,0 +1,1 @@
+Open source nga screenshot annotator para sa Windows. Kuhaa, i-crop, ug markahi gamit ang mga udyong, callout, blur, ug OCR. Walay account, walay ads, walay cloud.

@@ -73,9 +73,6 @@
   <data name="_Technical_NsisLanguage" xml:space="preserve">
     <value>Russian</value>
   </data>
-  <data name="_Technical_WingetLocale" xml:space="preserve">
-    <value>ru-RU</value>
-  </data>
   <data name="App_DisplayName" xml:space="preserve">
     <value>Аннотатор скриншотов</value>
     <comment>Short app display name for installer, shortcuts and error dialogs</comment>
@@ -454,24 +451,5 @@
   <data name="Window_Title" xml:space="preserve">
     <value>Аннотатор скриншотов - Редактор изображений</value>
     <comment>Main window title</comment>
-  </data>
-  <data name="Winget_Description" xml:space="preserve">
-    <value>Программа для аннотирования скриншотов для Windows и Linux.
-
-Возможности:
-- **Стрелки** - Привлекайте внимание к определённым областям с помощью настраиваемых стрелок
-- **Выноски** - Добавляйте аннотации в виде речевых пузырей с редактируемым текстом
-- **Заметки** - Создавайте текстовые блоки для дополнительной информации
-- **Выделение рамкой** - Выделяйте области прямоугольниками с рамкой
-- **Размытие** - Скрывайте конфиденциальную информацию с помощью эффекта размытия
-- **Инструмент выделения** - Выделяйте части изображения для копирования (Ctrl+C) или удаления (Delete)
-- **Вырезание вертикальных и горизонтальных полос** - Вырезайте вертикальные или горизонтальные области изображения
-- **Маркер** - Выделяйте интересующие области
-- **Управление проектами** - Автоматическое сохранение проектов и предпросмотр миниатюр
-- **Кроссплатформенность** - Работает на Windows и Linux
-- **OCR** через Tesseract и Windows.Media.OCR.</value>
-  </data>
-  <data name="Winget_ShortDescription" xml:space="preserve">
-    <value>Программа для аннотирования скриншотов для Windows и Linux.</value>
   </data>
 </root>

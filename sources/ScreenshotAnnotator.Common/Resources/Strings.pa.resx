@@ -62,9 +62,6 @@
   <data name="_Technical_NsisLanguage" xml:space="preserve">
     <value></value>
   </data>
-  <data name="_Technical_WingetLocale" xml:space="preserve">
-    <value>pa-IN</value>
-  </data>
   <data name="App_DisplayName" xml:space="preserve">
     <value>Screenshot Annotator</value>
     <comment>Short app display name for installer, shortcuts and error dialogs</comment>
@@ -384,24 +381,5 @@
   </data>
   <data name="Window_Title" xml:space="preserve">
     <value>Screenshot Annotator - ਚਿੱਤਰ ਸੰਪਾਦਕ</value>
-  </data>
-  <data name="Winget_Description" xml:space="preserve">
-    <value>Windows ਅਤੇ Linux ਲਈ ਸਕਰੀਨਸ਼ਾਟ ਐਨੋਟੇਸ਼ਨ ਸੌਫਟਵੇਅਰ।
-
-ਵਿਸ਼ੇਸ਼ਤਾਵਾਂ:
-- **ਤੀਰ** - ਅਨੁਕੂਲਿਤ ਤੀਰਾਂ ਨਾਲ ਖਾਸ ਖੇਤਰਾਂ ਵੱਲ ਧਿਆਨ ਖਿੱਚੋ
-- **ਕਾਲਆਊਟ** - ਸੰਪਾਦਿਤ ਟੈਕਸਟ ਵਾਲੇ ਸਪੀਚ ਬਬਲ ਐਨੋਟੇਸ਼ਨ ਜੋੜੋ
-- **ਨੋਟ** - ਵਾਧੂ ਜਾਣਕਾਰੀ ਲਈ ਟੈਕਸਟ ਬਾਕਸ ਬਣਾਓ
-- **ਸਰਹੱਦ ਚੋਣ** - ਸਰਹੱਦ ਵਾਲੀਆਂ ਆਇਤਾਂ ਨਾਲ ਖੇਤਰ ਉਜਾਗਰ ਕਰੋ
-- **ਧੁੰਦਲਾ** - ਧੁੰਦਲੇ ਪ੍ਰਭਾਵਾਂ ਨਾਲ ਸੰਵੇਦਨਸ਼ੀਲ ਜਾਣਕਾਰੀ ਲੁਕਾਓ
-- **ਚੋਣ ਸੰਦ** - ਕਾਪੀ (Ctrl+C) ਜਾਂ ਮਿਟਾਉਣ (Delete ਕੁੰਜੀ) ਲਈ ਚਿੱਤਰ ਦੇ ਹਿੱਸੇ ਚੁਣੋ
-- **ਲੰਬਕਾਰੀ ਅਤੇ ਖਿਤਿਜੀ ਟੁਕੜੇ ਕੱਟੋ** - ਚਿੱਤਰ ਦੇ ਲੰਬਕਾਰੀ ਜਾਂ ਖਿਤਿਜੀ ਖੇਤਰ ਕੱਟੋ
-- **ਉਜਾਗਰਕਰਤਾ** - ਦਿਲਚਸਪੀ ਦੇ ਖੇਤਰ ਉਜਾਗਰ ਕਰੋ
-- **ਪ੍ਰੋਜੈਕਟ ਪ੍ਰਬੰਧਨ** - ਆਟੋਮੈਟਿਕ ਪ੍ਰੋਜੈਕਟ ਸੇਵਿੰਗ ਅਤੇ ਪ੍ਰੀਵਿਊ ਥੰਬਨੇਲ
-- **ਕਰਾਸ-ਪਲੇਟਫਾਰਮ** - Windows ਅਤੇ Linux ਦੋਵਾਂ 'ਤੇ ਕੰਮ ਕਰਦਾ ਹੈ
-- **OCR** Tesseract ਅਤੇ Windows.Media.OCR ਰਾਹੀਂ।</value>
-  </data>
-  <data name="Winget_ShortDescription" xml:space="preserve">
-    <value>Windows ਅਤੇ Linux ਲਈ ਸਕਰੀਨਸ਼ਾਟ ਐਨੋਟੇਸ਼ਨ ਸੌਫਟਵੇਅਰ।</value>
   </data>
 </root>

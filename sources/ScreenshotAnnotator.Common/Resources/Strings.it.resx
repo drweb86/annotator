@@ -62,9 +62,6 @@
   <data name="_Technical_NsisLanguage" xml:space="preserve">
     <value>Italian</value>
   </data>
-  <data name="_Technical_WingetLocale" xml:space="preserve">
-    <value>it-IT</value>
-  </data>
   <data name="App_DisplayName" xml:space="preserve">
     <value>Annotatore di screenshot</value>
     <comment>Short app display name for installer, shortcuts and error dialogs</comment>
@@ -384,24 +381,5 @@ Scegliere una delle seguenti opzioni:
   </data>
   <data name="Window_Title" xml:space="preserve">
     <value>Annotatore di screenshot - Editor di immagini</value>
-  </data>
-  <data name="Winget_Description" xml:space="preserve">
-    <value>Software di annotazione degli screenshot per Windows e Linux.
-
-Funzionalità:
-- **Frecce** - Attira l'attenzione su aree specifiche con frecce personalizzabili
-- **Callout** - Aggiungi fumetti con testo modificabile
-- **Note** - Crea caselle di testo per informazioni aggiuntive
-- **Selezione con bordo** - Evidenzia aree con rettangoli contornati
-- **Sfocatura** - Oscura informazioni sensibili
-- **Strumento di selezione** - Seleziona parti dell'immagine da copiare (Ctrl+C) o eliminare (Elimina)
-- **Ritaglio di fasce verticali e orizzontali** - Ritaglia aree verticali o orizzontali
-- **Evidenziatore** - Evidenzia aree di interesse
-- **Gestione progetti** - Salvataggio automatico e anteprime in miniatura
-- **Multipiattaforma** - Funziona su Windows e Linux
-- **OCR** tramite Tesseract e Windows.Media.OCR.</value>
-  </data>
-  <data name="Winget_ShortDescription" xml:space="preserve">
-    <value>Software di annotazione degli screenshot per Windows e Linux.</value>
   </data>
 </root>

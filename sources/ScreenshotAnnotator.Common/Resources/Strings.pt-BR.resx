@@ -62,9 +62,6 @@
   <data name="_Technical_NsisLanguage" xml:space="preserve">
     <value>PortugueseBR</value>
   </data>
-  <data name="_Technical_WingetLocale" xml:space="preserve">
-    <value>pt-BR</value>
-  </data>
   <data name="App_DisplayName" xml:space="preserve">
     <value>Anotador de Capturas</value>
     <comment>Short app display name for installer, shortcuts and error dialogs</comment>
@@ -384,24 +381,5 @@ Por favor, escolha uma das opções:
   </data>
   <data name="Window_Title" xml:space="preserve">
     <value>Anotador de Capturas - Editor de Imagens</value>
-  </data>
-  <data name="Winget_Description" xml:space="preserve">
-    <value>Software de anotação de capturas de tela para Windows e Linux.
-
-Recursos:
-- **Setas** - Chame a atenção para áreas específicas com setas personalizáveis
-- **Balões** - Adicione anotações em balões de fala com texto editável
-- **Notas** - Crie caixas de texto para informações adicionais
-- **Seleção de borda** - Destaque áreas com retângulos com bordas
-- **Desfoque** - Oculte informações sensíveis com efeitos de desfoque
-- **Ferramenta de seleção** - Selecione partes da imagem para copiar (Ctrl+C) ou excluir (tecla Delete)
-- **Recorte de faixas verticais e horizontais** - Recorte áreas verticais ou horizontais da imagem
-- **Marcador** - Destaque áreas de interesse
-- **Gerenciamento de projetos** - Salvamento automático de projetos e miniaturas de pré-visualização
-- **Multiplataforma** - Funciona no Windows e Linux
-- **OCR** via Tesseract e Windows.Media.OCR.</value>
-  </data>
-  <data name="Winget_ShortDescription" xml:space="preserve">
-    <value>Software de anotação de capturas de tela para Windows e Linux.</value>
   </data>
 </root>

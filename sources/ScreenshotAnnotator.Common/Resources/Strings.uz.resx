@@ -62,9 +62,6 @@
   <data name="_Technical_NsisLanguage" xml:space="preserve">
     <value>Uzbek</value>
   </data>
-  <data name="_Technical_WingetLocale" xml:space="preserve">
-    <value>uz-UZ</value>
-  </data>
   <data name="App_DisplayName" xml:space="preserve">
     <value>Screenshot Annotator</value>
     <comment>Short app display name for installer, shortcuts and error dialogs</comment>
@@ -384,24 +381,5 @@ Iltimos, quyidagilardan birini bajaring:
   </data>
   <data name="Window_Title" xml:space="preserve">
     <value>Screenshot Annotator - Rasm muharriri</value>
-  </data>
-  <data name="Winget_Description" xml:space="preserve">
-    <value>Windows va Linux uchun ekran tasviri izohlash dasturi.
-
-Xususiyatlar:
-- **O'qlar** - Moslashtirilgan o'qlar bilan muayyan joylarga e'tiborni jalb qilish
-- **Izohlar** - Tahrir qilinadigan matn bilan pufakcha izohlar qo'shish
-- **Eslatmalar** - Qo'shimcha ma'lumot bilan matn qutilari yaratish
-- **Chegara ajratib ko'rsatish** - Chegarali to'rtburchaklar bilan joylarni ajratib ko'rsatish
-- **Xiralash** - Xiralash effektlari bilan maxfiy ma'lumotlarni yashirish
-- **Tanlash vositasi** - Nusxalash (Ctrl+C) yoki o'chirish (Delete) uchun rasm qismlarini tanlash
-- **Vertikal va gorizontal kesish** - Rasmning vertikal yoki gorizontal qismlarini kesish
-- **Ajratib ko'rsatish** - Qiziqarli joylarni ajratib ko'rsatish
-- **Loyihalarni boshqarish** - Loyihalarni avtomatik saqlash va oldindan ko'rish rasmlari
-- **Platformalararo** - Ham Windows, ham Linux da ishlaydi
-- **OCR** Tesseract va Windows.Media.OCR orqali.</value>
-  </data>
-  <data name="Winget_ShortDescription" xml:space="preserve">
-    <value>Windows va Linux uchun ekran tasviri izohlash dasturi.</value>
   </data>
 </root>

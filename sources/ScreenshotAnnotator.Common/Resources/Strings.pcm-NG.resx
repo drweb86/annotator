@@ -59,9 +59,6 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <!-- Nigerian Pidgin -->
-  <data name="_Technical_WingetLocale" xml:space="preserve">
-    <value>pcm-NG</value>
-  </data>
   <data name="App_DisplayName" xml:space="preserve">
     <value>Screenshot Annotator</value>
     <comment>Short app display name for installer, shortcuts and error dialogs</comment>
@@ -381,24 +378,5 @@ Abeg do one of dese:
   </data>
   <data name="Window_Title" xml:space="preserve">
     <value>Screenshot Annotator - Image Editor</value>
-  </data>
-  <data name="Winget_Description" xml:space="preserve">
-    <value>Software to annotate screenshot for Windows and Linux.
-
-Features:
-- **Arrows** - Draw attention to specific areas with customizable arrows
-- **Callouts** - Add speech bubble annotations with editable text
-- **Notes** - Create text boxes for extra information
-- **Border selection** - Highlight areas with bordered rectangles
-- **Blur** - Hide sensitive information with blur
-- **Selection tool** - Select parts of image to copy (Ctrl+C) or delete (Delete key)
-- **Cut vertical and horizontal slices** - Cut vertical or horizontal areas of image
-- **Highlighter** - Highlight areas of interest
-- **Project management** - Automatic project saving and preview thumbnails
-- **Cross-platform** - E dey work for Windows and Linux
-- **OCR** through Tesseract and Windows.Media.OCR.</value>
-  </data>
-  <data name="Winget_ShortDescription" xml:space="preserve">
-    <value>Software to annotate screenshot for Windows and Linux.</value>
   </data>
 </root>

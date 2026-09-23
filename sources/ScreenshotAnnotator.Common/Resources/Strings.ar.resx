@@ -62,9 +62,6 @@
   <data name="_Technical_NsisLanguage" xml:space="preserve">
     <value>Arabic</value>
   </data>
-  <data name="_Technical_WingetLocale" xml:space="preserve">
-    <value>ar-SA</value>
-  </data>
   <data name="App_DisplayName" xml:space="preserve">
     <value>منشئ تعليقات لقطات الشاشة</value>
     <comment>Short app display name for installer, shortcuts and error dialogs</comment>
@@ -384,24 +381,5 @@
   </data>
   <data name="Window_Title" xml:space="preserve">
     <value>منشئ تعليقات لقطات الشاشة - محرر الصور</value>
-  </data>
-  <data name="Winget_Description" xml:space="preserve">
-    <value>برنامج لتعليق لقطات الشاشة على Windows وLinux.
-
-الميزات:
-- **أسهم** - لفت الانتباه إلى مناطق محددة بأسهم قابلة للتخصيص
-- **تعليقات** - إضافة فقاعات حوار مع نص قابل للتحرير
-- **ملاحظات** - مربعات نص لمعلومات إضافية
-- **تحديد بإطار** - تظليل مناطق بمستطيلات محددة
-- **ضبابية** - إخفاء المعلومات الحساسة
-- **أداة التحديد** - تحديد أجزاء للنسخ (Ctrl+C) أو الحذف (Delete)
-- **قص شرائح عمودية وأفقية** - قص أجزاء عمودية أو أفقية من الصورة
-- **تمييز** - تمييز مناطق الاهتمام
-- **إدارة المشاريع** - حفظ تلقائي ومعاينات مصغرة
-- **متعدد المنصات** - يعمل على Windows وLinux
-- **OCR** عبر Tesseract وWindows.Media.OCR.</value>
-  </data>
-  <data name="Winget_ShortDescription" xml:space="preserve">
-    <value>برنامج لتعليق لقطات الشاشة على Windows وLinux.</value>
   </data>
 </root>

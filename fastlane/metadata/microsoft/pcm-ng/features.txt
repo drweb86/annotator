@@ -1,0 +1,18 @@
+Press Print Screen or di button for di app to capture, even if di app dey background.
+Crop di interesting part for one move, then annotate sharp sharp.
+Draw arrows wey you fit customize wey dey point people to di exact spot.
+Add speech-bubble callouts with text wey you fit edit and wey dey easy to read.
+Drop notes and bordered rectangles to explain or frame any area.
+Highlight wetin matter with highlighter wey you fit change di color.
+Blur passwords, names, and anything wey you no suppose share.
+White out one selected area, or copy only dat slice go clipboard.
+Cut empty vertical or horizontal strips so di screenshot go stay compact.
+Comot text from selection with Windows OCR wey dey inside. Tesseract na optional.
+Copy and paste screenshots and shapes. Drag and drop images enter project.
+Export PNG, JPEG, or WebP. PNG go also save beside di project.
+Projects dey auto-save with preview thumbnails so you fit jump back quick.
+Start with Windows and keep Print Screen capture ready after you sign in.
+Open source. No ads, no analytics, no account. Screenshots dey stay for this computer.
+Dark, focused workspace with scrollbars for large screenshots.
+Tune font, color, size, bold, and italic for notes, callouts, and arrows.
+Select, move, and edit annotations until di picture tell di story.

@@ -1,0 +1,18 @@
+Pindota ang Print Screen o ang buton sa app aron mokuha, bisan anaa ang app sa background.
+I-crop ang makapaikag nga bahin sa usa ka lihok, dayon i-annotate dayon.
+Pagdibuho og mapa-customize nga mga udyong nga motudlo sa eksaktong lugar.
+Idugang ang speech-bubble callout nga adunay ma-edit nga teksto nga magpabiling mabasa.
+Ibutang ang mga nota ug bordered rectangle aron ipasabot o i-frame ang bisan unsang lugar.
+I-highlight ang importante gamit ang highlighter nga mahimo nimong usbon ang kolor.
+I-blur ang mga password, ngalan, ug bisan unsa nga dili angay i-share.
+I-white out ang napiling lugar, o kopyaha lang kana nga hiwa ngadto sa clipboard.
+Putla ang walay sulod nga bertikal o horizontal nga mga strip aron magpabiling compact ang screenshot.
+Kuhaa ang teksto gikan sa pinili gamit ang built-in nga Windows OCR. Opsyonal ang Tesseract.
+Kopyaha ug i-paste ang mga screenshot ug mga porma. I-drag ug i-drop ang mga hulagway ngadto sa proyekto.
+I-export ang PNG, JPEG, o WebP. Usa ka PNG ang ma-save usab tupad sa proyekto.
+Ang mga proyekto mag-auto-save uban ang preview thumbnail aron makabalik ka dayon.
+Sugdi uban sa Windows ug ipadayon nga andam ang Print Screen human ka mo-sign in.
+Open source. Walay ads, walay analytics, walay account. Ang mga screenshot magpabilin niini nga kompyuter.
+Ngitngit, nakatutok nga workspace nga adunay scrollbar para sa dagkong screenshot.
+I-adjust ang font, kolor, gidak-on, bold, ug italic sa mga nota, callout, ug udyong.
+Pagpili, ibalhin, ug i-edit ang mga annotation hangtod ang hulagway mosulti sa istorya.

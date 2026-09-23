@@ -1,0 +1,27 @@
+Screenshot Annotator maghimo sa gubot nga kuha sa screen nga tin-aw nga pasabot sulod sa pipila ka segundo. Pindota ang Print Screen, i-crop ang importante, markahi, ug i-share. Open source kini. Ang imong mga screenshot magpabilin niini nga PC. Walay account. Walay ads. Walay cloud.
+
+Ang pagkuha usa ra ka key. Ang Print Screen molihok bisan ang app anaa sa background o naka-minimize. I-crop ang bahin, dayon itudlo, ipasabot, tagoa, ug pahimutanga.
+
+Pahimoa nga ang hulagway maoy mosulti
+
+- Mga udyong nga mapa-customize nga motudlo sa eksaktong lugar
+- Mga speech-bubble callout nga adunay teksto nga ma-edit
+- Mga nota ug rectangle nga adunay border aron i-frame ang importante
+- Highlighter nga mahimo nimong usbon ang kolor
+- Blur ug white-out para sa mga password, ngalan, ug pribadong datos
+- Bertikal ug horizontal nga pagputol aron tangtangon ang walay sulod nga luna
+- Kopyaha, i-paste, i-import, ug i-export ang PNG, JPEG, o WebP
+
+Kuhaa ang teksto gikan sa screen
+
+Pagpili og lugar ug kuhaa ang teksto gamit ang built-in nga Windows OCR. Dili na kinahanglan pa og laing software. Kung naggamit ka na og Tesseract, suportado usab kana nga engine. I-edit ang resulta, kopyaha, ug padayon.
+
+Magpabilin sa dagan
+
+Ang mga proyekto mag-save sa ilang kaugalingon uban ang preview thumbnail, aron makabalik ka sa bug report kagahapon o sa how-to karong adlawa. I-drag ang mga hulagway. Kopyaha ang nahuman nga hulagway ngadto sa clipboard. Sugdi uban sa Windows aron andam na ang pagkuha human ka mo-sign in. Ang workspace ngitngit, paspas, ug anaa sa 57 ka pinulongan.
+
+Imo ang imong mga screenshot
+
+Kini usa ka open source nga desktop tool. Ang mga proyekto nga na-annotate anaa sa imong Pictures folder. Ang mga setting magpabilin niini nga kompyuter. Walay gi-upload. Mahimo nimong susihon kung giunsa kini molihok. Gamita kini para sa mga bug report, dokumentasyon, review, support ticket, ug sa matag "tan-awa ni".
+
+Ang trabaho magpabiling seryoso. Ang himan magpabiling malipayon. Ang mahigalaong mga iring mopakita panagsa.

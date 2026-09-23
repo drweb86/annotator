@@ -62,9 +62,6 @@
   <data name="_Technical_NsisLanguage" xml:space="preserve">
     <value>Ukrainian</value>
   </data>
-  <data name="_Technical_WingetLocale" xml:space="preserve">
-    <value>uk-UA</value>
-  </data>
   <data name="App_DisplayName" xml:space="preserve">
     <value>Анотатор знімків екрана</value>
     <comment>Short app display name for installer, shortcuts and error dialogs</comment>
@@ -384,24 +381,5 @@
   </data>
   <data name="Window_Title" xml:space="preserve">
     <value>Анотатор знімків екрана — редактор зображень</value>
-  </data>
-  <data name="Winget_Description" xml:space="preserve">
-    <value>Програма для анотації знімків екрана для Windows і Linux.
-
-Можливості:
-- **Стрілки** - Привертайте увагу до ділянок за допомогою налаштовуваних стрілок
-- **Виноски** - Додавайте «хмаринки» з текстом, який можна редагувати
-- **Нотатки** - Створюйте текстові поля для додаткової інформації
-- **Виділення рамкою** - Підсвічуйте області прямокутниками з контуром
-- **Розмиття** - Приховуйте чутливу інформацію
-- **Інструмент виділення** - Виділяйте частини зображення для копіювання (Ctrl+C) або видалення (Delete)
-- **Вирізання вертикальних і горизонтальних смуг** - Вирізайте вертикальні або горизонтальні ділянки зображення
-- **Маркер** - Підсвічуйте цікаві області
-- **Керування проєктами** - Автозбереження та мініатюри попереднього перегляду
-- **Кросплатформність** - Працює на Windows і Linux
-- **OCR** через Tesseract та Windows.Media.OCR.</value>
-  </data>
-  <data name="Winget_ShortDescription" xml:space="preserve">
-    <value>Програма для анотації знімків екрана для Windows і Linux.</value>
   </data>
 </root>

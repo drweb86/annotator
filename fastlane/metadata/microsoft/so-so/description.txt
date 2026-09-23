@@ -1,0 +1,27 @@
+Screenshot Annotator wuxuu sawir shaashadeed oo qasan ku beddelaa sharaxaad cad ilbiriqsiyo gudahood. Riix Print Screen, jar waxa muhiimka ah, calaamadee, kadibna la wadaag. Waa il furan. Sawirradaadu waxay ku sii nagaanayaan kombuyuutarkan. Akoon malahan. Xayeysiin malahan. Daruur malahan.
+
+Qabashadu waa hal fur. Print Screen wuxuu shaqeeyaa xitaa marka app-ku gadaal yahay ama la yareeyay. Jar aagga, kadibna tilmaan, sharax, qari, oo nadiifi.
+
+Sawirku ha hadlo
+
+- Fallaaro la beddeli karo oo tilmaamaya meesha saxda ah
+- Xumbo-hadal oo qoraal la tafatiri karo leh
+- Qoraallo iyo leexo xuduud leh oo waxa muhiimka ah koobaya
+- Midab-calaamadeeye oo midabkiisa la beddeli karo
+- Blur iyo cadayn loogu talagalay furaha sirta, magacyada, iyo xogta gaarka ah
+- Gooyo toosan iyo jiif ah si booska madhan looga saaro
+- Koobiye, dheji, soo deji, oo dhoofi PNG, JPEG, ama WebP
+
+Ka soo saar qoraalka shaashadda
+
+Dooro aag oo ka soo saar qoraal adigoo isticmaalaya Windows OCR ee ku dhex jira. Software dheeraad ah looma baahna. Haddii aad horey u isticmaasho Tesseract, matoorkaasna waa la taageeraa. Tafatir natiijada, koobiye, kadibna sii wad.
+
+Ku sii soco shaqada
+
+Mashaariicdu si toos ah ayay u kaydsamaan iyagoo leh sawirro yar yar, si aad ugu noqoto warbixinta ciladda shalay ama hagitaanka maanta. Jiid sawirrada. Koobiye sawirka dhammaystiran oo geli clipboard-ka. Ku bilow Windows si qabashadu diyaar ugu ahaato kadib markaad soo gasho. Goobta shaqadu waa mugdi, degdeg, waxayna ku taal 57 luqadood.
+
+Sawirradaadu adiga ayay kuu yihiin
+
+Kani waa qalab desktop oo il furan ah. Mashaariicda la calaamadeeyay waxay ku jiraan galka Pictures. Dejintu waxay ku sii ahaanaysaa kombuyuutarkan. Waxba lama raro. Waad eegi kartaa sida uu u shaqeeyo. U isticmaal warbixinada ciladaha, dukumentiyada, dib-u-eegista, tigidhada taageerada, iyo daqiiqad kasta oo "eeg tan".
+
+Shaqadu way sii ahaanaysaa mid dhab ah. Qalabkuna waa mid xiiso leh. Bisado saaxiibtinimo ah ayaa mar mar soo baxa.

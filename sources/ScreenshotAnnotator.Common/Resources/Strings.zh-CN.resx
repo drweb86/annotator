@@ -62,9 +62,6 @@
   <data name="_Technical_NsisLanguage" xml:space="preserve">
     <value>SimpChinese</value>
   </data>
-  <data name="_Technical_WingetLocale" xml:space="preserve">
-    <value>zh-CN</value>
-  </data>
   <data name="App_DisplayName" xml:space="preserve">
     <value>截图注释器</value>
     <comment>Short app display name for installer, shortcuts and error dialogs</comment>
@@ -384,24 +381,5 @@
   </data>
   <data name="Window_Title" xml:space="preserve">
     <value>截图注释器 - 图像编辑器</value>
-  </data>
-  <data name="Winget_Description" xml:space="preserve">
-    <value>适用于 Windows 和 Linux 的截图标注软件。
-
-功能特性：
-- **箭头** - 使用可自定义的箭头将注意力引向特定区域
-- **标注** - 添加带有可编辑文本的气泡式标注
-- **注释** - 创建文本框以添加附加信息
-- **边框选择** - 使用带边框的矩形突出显示区域
-- **模糊** - 使用模糊效果遮盖敏感信息
-- **选择工具** - 选择图像的部分区域进行复制（Ctrl+C）或删除（Delete键）
-- **垂直和水平切片裁剪** - 裁剪图像的垂直或水平区域
-- **荧光笔** - 突出显示感兴趣的区域
-- **项目管理** - 自动保存项目和预览缩略图
-- **跨平台** - 同时支持 Windows 和 Linux
-- **OCR**（通过 Tesseract 和 Windows.Media.OCR）</value>
-  </data>
-  <data name="Winget_ShortDescription" xml:space="preserve">
-    <value>适用于 Windows 和 Linux 的截图标注软件。</value>
   </data>
 </root>

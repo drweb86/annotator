@@ -62,9 +62,6 @@
   <data name="_Technical_NsisLanguage" xml:space="preserve">
     <value></value>
   </data>
-  <data name="_Technical_WingetLocale" xml:space="preserve">
-    <value>ceb-PH</value>
-  </data>
   <data name="App_DisplayName" xml:space="preserve">
     <value>Screenshot Annotator</value>
     <comment>Short app display name for installer, shortcuts and error dialogs</comment>
@@ -384,24 +381,5 @@ Palihug buhata ang usa sa mosunod:
   </data>
   <data name="Window_Title" xml:space="preserve">
     <value>Screenshot Annotator - Editor sa Imahe</value>
-  </data>
-  <data name="Winget_Description" xml:space="preserve">
-    <value>Software sa pag-annotate sa screenshot para sa Windows ug Linux.
-
-Mga Feature:
-- **Mga Pana** - Pagdani og atensyon sa piho nga mga lugar gamit ang mga pana nga mapasibo
-- **Mga Callout** - Idugang ang mga anotasyon nga estilo sa bula nga may mausab nga teksto
-- **Mga Nota** - Paghimog mga kahon sa teksto nga may dugang nga impormasyon
-- **Border Highlight** - I-highlight ang mga lugar gamit ang mga rektanggulo nga may border
-- **Blur** - Itago ang sensitibong impormasyon gamit ang mga epekto sa blur
-- **Tool sa Pagpili** - Pilia ang mga bahin sa imahe aron kopyahon (Ctrl+C) o papason (Delete key)
-- **Vertical ug Horizontal na Pagputol** - Putlon ang mga vertical o horizontal nga lugar sa imahe
-- **Highlight** - I-highlight ang mga lugar nga may interes
-- **Pamamahala sa Proyekto** - Awtomatikong pagtipig sa proyekto ug preview thumbnails
-- **Cross-Platform** - Nagtrabaho sa Windows ug Linux
-- **OCR** pinaagi sa Tesseract ug Windows.Media.OCR.</value>
-  </data>
-  <data name="Winget_ShortDescription" xml:space="preserve">
-    <value>Software sa pag-annotate sa screenshot para sa Windows ug Linux.</value>
   </data>
 </root>

@@ -62,9 +62,6 @@
   <data name="_Technical_NsisLanguage" xml:space="preserve">
     <value>Vietnamese</value>
   </data>
-  <data name="_Technical_WingetLocale" xml:space="preserve">
-    <value>vi-VN</value>
-  </data>
   <data name="App_DisplayName" xml:space="preserve">
     <value>Trình chú thích ảnh chụp màn hình</value>
     <comment>Short app display name for installer, shortcuts and error dialogs</comment>
@@ -384,24 +381,5 @@ Vui lòng:
   </data>
   <data name="Window_Title" xml:space="preserve">
     <value>Trình chú thích ảnh chụp màn hình - Trình sửa ảnh</value>
-  </data>
-  <data name="Winget_Description" xml:space="preserve">
-    <value>Phần mềm chú thích ảnh chụp màn hình cho Windows và Linux.
-
-Tính năng:
-- **Mũi tên** - Thu hút sự chú ý bằng mũi tên tùy chỉnh
-- **Chú thích** - Thêm bong bóng thoại có thể chỉnh sửa
-- **Ghi chú** - Tạo hộp văn bản cho thông tin bổ sung
-- **Chọn viền** - Làm nổi bật vùng bằng hình chữ nhật có viền
-- **Làm mờ** - Che thông tin nhạy cảm
-- **Công cụ chọn** - Chọn phần ảnh để sao chép (Ctrl+C) hoặc xóa (Delete)
-- **Cắt dải dọc và ngang** - Cắt vùng dọc hoặc ngang của ảnh
-- **Bút tô sáng** - Tô sáng vùng quan tâm
-- **Quản lý dự án** - Lưu tự động và ảnh thu nhỏ xem trước
-- **Đa nền tảng** - Chạy trên Windows và Linux
-- **OCR** qua Tesseract và Windows.Media.OCR.</value>
-  </data>
-  <data name="Winget_ShortDescription" xml:space="preserve">
-    <value>Phần mềm chú thích ảnh chụp màn hình cho Windows và Linux.</value>
   </data>
 </root>

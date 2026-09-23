@@ -11,6 +11,7 @@ TEMPLATE = Path(
     r"C:\Users\siarh\Downloads\listingData-9NFPJCS6R9R6-1152921505701937539 (1).csv"
 )
 DEVELOPER = "Siarhei Kuchuk"
+TITLE = "Screenshot Annotator"
 SCREENSHOT_URLS = [
     "https://developer.microsoft.com/en-us/dashboard/apps/9NFPJCS6R9R6/submissions/1152921505701937539/listings/1152922700027662560/listingassets/3040704988215426762",
     "https://developer.microsoft.com/en-us/dashboard/apps/9NFPJCS6R9R6/submissions/1152921505701937539/listings/1152922700027662560/listingassets/3057176470511919281",
@@ -38,7 +39,7 @@ def read_lines(path: Path) -> list[str]:
 
 def load_locale(folder: Path) -> dict[str, str]:
     values: dict[str, str] = {
-        "Title": read_text(folder / "name.txt").strip(),
+        "Title": TITLE,
         "ShortDescription": read_text(folder / "short_description.txt").strip(),
         "Description": read_text(folder / "description.txt").strip(),
         "ReleaseNotes": read_text(folder / "release_notes.txt").strip(),
@@ -114,9 +115,9 @@ def main() -> int:
         for index, name in enumerate(header)
         if index >= 3 and name
     }
-    missing = [locale for locale in locales if locale not in locale_indexes]
-    if missing:
-        raise SystemExit("CSV is missing columns: " + ", ".join(missing))
+    skipped = [locale for locale in locales if locale not in locale_indexes]
+    if skipped:
+        print("WinGet-only locales, not in the Store CSV: " + ", ".join(skipped))
 
     field_row_indexes = {
         row[0]: index
@@ -125,6 +126,8 @@ def main() -> int:
     }
 
     for locale, values in translations.items():
+        if locale not in locale_indexes:
+            continue
         column = locale_indexes[locale]
         for field, value in values.items():
             row_index = field_row_indexes.get(field)
@@ -139,7 +142,7 @@ def main() -> int:
         writer = csv.writer(handle, lineterminator="\r\n")
         writer.writerows(rows)
 
-    print(f"Wrote {len(locales)} locales into {csv_path}")
+    print(f"Wrote {len(locales) - len(skipped)} locales into {csv_path}")
     return 0
 
 

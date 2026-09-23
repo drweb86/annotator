@@ -62,9 +62,6 @@
   <data name="_Technical_NsisLanguage" xml:space="preserve">
     <value>Serbian</value>
   </data>
-  <data name="_Technical_WingetLocale" xml:space="preserve">
-    <value>sr-Latn-RS</value>
-  </data>
   <data name="App_DisplayName" xml:space="preserve">
     <value>Screenshot Annotator</value>
     <comment>Short app display name for installer, shortcuts and error dialogs</comment>
@@ -384,24 +381,5 @@ Molimo uradite jedno od sledećeg:
   </data>
   <data name="Window_Title" xml:space="preserve">
     <value>Screenshot Annotator - Uređivač slika</value>
-  </data>
-  <data name="Winget_Description" xml:space="preserve">
-    <value>Softver za anotaciju snimaka ekrana za Windows i Linux.
-
-Funkcije:
-- **Strelice** - Skrenite pažnju na određene oblasti prilagodljivim strelicama
-- **Oblačići** - Dodajte anotacije u stilu oblačića sa izmenjivim tekstom
-- **Beleške** - Napravite tekstualna polja sa dodatnim informacijama
-- **Isticanje ivicom** - Istaknite oblasti pravougaonicima sa ivicom
-- **Zamućenje** - Sakrijte osetljive informacije efektima zamućenja
-- **Alat za izbor** - Izaberite delove slike za kopiranje (Ctrl+C) ili brisanje (taster Delete)
-- **Vertikalno i horizontalno isecanje** - Isecite vertikalne ili horizontalne oblasti slike
-- **Isticanje** - Istaknite oblasti od interesa
-- **Upravljanje projektima** - Automatsko čuvanje projekata i sličice pregleda
-- **Višeplatformski** - Radi i na Windows-u i na Linux-u
-- **OCR** putem Tesseract-a i Windows.Media.OCR.</value>
-  </data>
-  <data name="Winget_ShortDescription" xml:space="preserve">
-    <value>Softver za anotaciju snimaka ekrana za Windows i Linux.</value>
   </data>
 </root>

@@ -62,9 +62,6 @@
   <data name="_Technical_NsisLanguage" xml:space="preserve">
     <value>Dutch</value>
   </data>
-  <data name="_Technical_WingetLocale" xml:space="preserve">
-    <value>nl-NL</value>
-  </data>
   <data name="App_DisplayName" xml:space="preserve">
     <value>Screenshot Annotator</value>
     <comment>Short app display name for installer, shortcuts and error dialogs</comment>
@@ -384,24 +381,5 @@ Kies een van de volgende opties:
   </data>
   <data name="Window_Title" xml:space="preserve">
     <value>Screenshot Annotator - Afbeeldingseditor</value>
-  </data>
-  <data name="Winget_Description" xml:space="preserve">
-    <value>Schermafbeelding-annotatiesoftware voor Windows en Linux.
-
-Functies:
-- **Pijlen** - Vestig de aandacht op specifieke gebieden met aanpasbare pijlen
-- **Bijschriften** - Voeg belletjesannotaties toe met bewerkbare tekst
-- **Notities** - Maak tekstvakken met aanvullende informatie
-- **Randmarkering** - Markeer gebieden met rechthoeken met rand
-- **Vervagen** - Verberg gevoelige informatie met vervagingseffecten
-- **Selectiehulpmiddel** - Selecteer delen van de afbeelding om te kopiëren (Ctrl+C) of te verwijderen (Delete-toets)
-- **Verticaal en horizontaal knippen** - Knip verticale of horizontale gebieden van de afbeelding
-- **Markeren** - Markeer interessante gebieden
-- **Projectbeheer** - Automatisch opslaan van projecten en voorbeeldminiaturen
-- **Platformonafhankelijk** - Werkt op zowel Windows als Linux
-- **OCR** via Tesseract en Windows.Media.OCR.</value>
-  </data>
-  <data name="Winget_ShortDescription" xml:space="preserve">
-    <value>Schermafbeelding-annotatiesoftware voor Windows en Linux.</value>
   </data>
 </root>

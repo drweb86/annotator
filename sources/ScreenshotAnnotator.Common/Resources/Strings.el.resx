@@ -62,9 +62,6 @@
   <data name="_Technical_NsisLanguage" xml:space="preserve">
     <value>Greek</value>
   </data>
-  <data name="_Technical_WingetLocale" xml:space="preserve">
-    <value>el-GR</value>
-  </data>
   <data name="App_DisplayName" xml:space="preserve">
     <value>Screenshot Annotator</value>
     <comment>Short app display name for installer, shortcuts and error dialogs</comment>
@@ -384,24 +381,5 @@
   </data>
   <data name="Window_Title" xml:space="preserve">
     <value>Screenshot Annotator - Επεξεργαστής εικόνων</value>
-  </data>
-  <data name="Winget_Description" xml:space="preserve">
-    <value>Λογισμικό σχολιασμού στιγμιότυπων οθόνης για Windows και Linux.
-
-Λειτουργίες:
-- **Βέλη** - Εφιστάτε την προσοχή σε συγκεκριμένες περιοχές με προσαρμόσιμα βέλη
-- **Επεξηγήσεις** - Προσθέστε σχολιασμούς στυλ φυσαλίδας με επεξεργάσιμο κείμενο
-- **Σημειώσεις** - Δημιουργήστε πλαίσια κειμένου με πρόσθετες πληροφορίες
-- **Επισήμανση περιγράμματος** - Επισημαίνετε περιοχές με ορθογώνια με περίγραμμα
-- **Θόλωμα** - Αποκρύψτε ευαίσθητες πληροφορίες με εφέ θολώματος
-- **Εργαλείο επιλογής** - Επιλέξτε τμήματα εικόνας για αντιγραφή (Ctrl+C) ή διαγραφή (Delete)
-- **Κατακόρυφη και οριζόντια κοπή** - Κόψτε κατακόρυφες ή οριζόντιες περιοχές εικόνας
-- **Επισήμανση** - Επισημαίνετε περιοχές ενδιαφέροντος
-- **Διαχείριση έργων** - Αυτόματη αποθήκευση έργων και μικρογραφίες προεπισκόπησης
-- **Διαπλατφορμικό** - Λειτουργεί τόσο σε Windows όσο και σε Linux
-- **OCR** μέσω Tesseract και Windows.Media.OCR.</value>
-  </data>
-  <data name="Winget_ShortDescription" xml:space="preserve">
-    <value>Λογισμικό σχολιασμού στιγμιότυπων οθόνης για Windows και Linux.</value>
   </data>
 </root>

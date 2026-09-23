@@ -62,9 +62,6 @@
   <data name="_Technical_NsisLanguage" xml:space="preserve">
     <value>German</value>
   </data>
-  <data name="_Technical_WingetLocale" xml:space="preserve">
-    <value>de-DE</value>
-  </data>
   <data name="App_DisplayName" xml:space="preserve">
     <value>Screenshot-Annotator</value>
     <comment>Short app display name for installer, shortcuts and error dialogs</comment>
@@ -384,24 +381,5 @@ Bitte wählen Sie eine der folgenden Optionen:
   </data>
   <data name="Window_Title" xml:space="preserve">
     <value>Screenshot-Annotator - Bildbearbeitung</value>
-  </data>
-  <data name="Winget_Description" xml:space="preserve">
-    <value>Screenshot-Annotationssoftware für Windows und Linux.
-
-Funktionen:
-- **Pfeile** - Lenken Sie die Aufmerksamkeit auf bestimmte Bereiche mit anpassbaren Pfeilen
-- **Sprechblasen** - Fügen Sie Sprechblasen-Annotationen mit bearbeitbarem Text hinzu
-- **Notizen** - Erstellen Sie Textfelder für zusätzliche Informationen
-- **Rahmenauswahl** - Heben Sie Bereiche mit umrahmten Rechtecken hervor
-- **Unschärfe** - Verbergen Sie vertrauliche Informationen mit Unschärfe-Effekten
-- **Auswahlwerkzeug** - Wählen Sie Bildausschnitte zum Kopieren (Strg+C) oder Löschen (Entf-Taste)
-- **Vertikale und horizontale Streifen ausschneiden** - Schneiden Sie vertikale oder horizontale Bildbereiche aus
-- **Textmarker** - Markieren Sie interessante Bereiche
-- **Projektverwaltung** - Automatische Projektspeicherung und Vorschau-Miniaturansichten
-- **Plattformübergreifend** - Funktioniert unter Windows und Linux
-- **OCR** über Tesseract und Windows.Media.OCR.</value>
-  </data>
-  <data name="Winget_ShortDescription" xml:space="preserve">
-    <value>Screenshot-Annotationssoftware für Windows und Linux.</value>
   </data>
 </root>

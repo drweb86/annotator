@@ -62,9 +62,6 @@
   <data name="_Technical_NsisLanguage" xml:space="preserve">
     <value></value>
   </data>
-  <data name="_Technical_WingetLocale" xml:space="preserve">
-    <value>yo-NG</value>
-  </data>
   <data name="App_DisplayName" xml:space="preserve">
     <value>Screenshot Annotator</value>
     <comment>Short app display name for installer, shortcuts and error dialogs</comment>
@@ -384,24 +381,5 @@ Jọwọ ṣe ọkan ninu iwọnyi:
   </data>
   <data name="Window_Title" xml:space="preserve">
     <value>Screenshot Annotator - Olootu aworan</value>
-  </data>
-  <data name="Winget_Description" xml:space="preserve">
-    <value>Sọfitiwia fun fifọwọsi awọn aworan iboju fun Windows ati Linux.
-
-Awọn ẹya:
-- **Awọn ọfa** - Fa ifojusi si awọn agbegbe pato pẹlu awọn ọfa ti a le ṣatunṣe
-- **Awọn alaye** - Fi awọn akọsilẹ ìṣòro ọrọ pẹlu ọrọ ti a le ṣatunṣe kun
-- **Awọn akọsilẹ** - Ṣẹda awọn apoti ọrọ fun alaye afikun
-- **Yiyan Aala** - Ṣe afihan awọn agbegbe pẹlu awọn onigun merin ti o ni aala
-- **Daru** - Fi alaye ifura pamọ pẹlu awọn ipa daru
-- **Irinṣẹ Yiyan** - Yan awọn apakan ti aworan lati daakọ (Ctrl+C) tabi paarẹ (bọtini Delete)
-- **Ge awọn ege inaro ati petele** - Ge awọn agbegbe inaro tabi petele ti aworan
-- **Ẹrọ afihan** - Ṣe afihan awọn agbegbe ti o nifẹ
-- **Iṣakoso Iṣẹ Akanṣe** - Fifipamọ iṣẹ akanṣe aifọwọyi ati awọn aworan kekere iwoye
-- **Ọpọ-pẹpẹ** - Ṣiṣẹ lori Windows ati Linux mejeeji
-- **OCR** nipasẹ Tesseract ati Windows.Media.OCR.</value>
-  </data>
-  <data name="Winget_ShortDescription" xml:space="preserve">
-    <value>Sọfitiwia fun fifọwọsi awọn aworan iboju fun Windows ati Linux.</value>
   </data>
 </root>

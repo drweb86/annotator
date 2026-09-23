@@ -62,9 +62,6 @@
   <data name="_Technical_NsisLanguage" xml:space="preserve">
     <value>Hebrew</value>
   </data>
-  <data name="_Technical_WingetLocale" xml:space="preserve">
-    <value>he-IL</value>
-  </data>
   <data name="App_DisplayName" xml:space="preserve">
     <value>Screenshot Annotator</value>
     <comment>Short app display name for installer, shortcuts and error dialogs</comment>
@@ -384,24 +381,5 @@
   </data>
   <data name="Window_Title" xml:space="preserve">
     <value>Screenshot Annotator - עורך תמונות</value>
-  </data>
-  <data name="Winget_Description" xml:space="preserve">
-    <value>תוכנת הוספת הערות לצילומי מסך עבור Windows ו-Linux.
-
-תכונות:
-- **חצים** - משוך תשומת לב לאזורים ספציפיים עם חצים הניתנים להתאמה אישית
-- **בועות דיבור** - הוסף הערות בסגנון בועה עם טקסט הניתן לעריכה
-- **הערות** - צור תיבות טקסט עם מידע נוסף
-- **הדגשת מסגרת** - הדגש אזורים עם מלבנים ממוסגרים
-- **טשטוש** - הסתר מידע רגיש עם אפקטי טשטוש
-- **כלי בחירה** - בחר חלקי תמונה להעתקה (Ctrl+C) או מחיקה (מקש Delete)
-- **חיתוך אנכי ואופקי** - חתוך אזורים אנכיים או אופקיים של התמונה
-- **הדגשה** - הדגש אזורים מעניינים
-- **ניהול פרויקטים** - שמירה אוטומטית של פרויקטים ותמונות ממוזערות לתצוגה מקדימה
-- **רב-פלטפורמי** - פועל גם ב-Windows וגם ב-Linux
-- **OCR** באמצעות Tesseract ו-Windows.Media.OCR.</value>
-  </data>
-  <data name="Winget_ShortDescription" xml:space="preserve">
-    <value>תוכנת הוספת הערות לצילומי מסך עבור Windows ו-Linux.</value>
   </data>
 </root>

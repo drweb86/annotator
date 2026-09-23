@@ -62,9 +62,6 @@
   <data name="_Technical_NsisLanguage" xml:space="preserve">
     <value></value>
   </data>
-  <data name="_Technical_WingetLocale" xml:space="preserve">
-    <value>my-MM</value>
-  </data>
   <data name="App_DisplayName" xml:space="preserve">
     <value>Screenshot Annotator</value>
     <comment>Short app display name for installer, shortcuts and error dialogs</comment>
@@ -384,24 +381,5 @@
   </data>
   <data name="Window_Title" xml:space="preserve">
     <value>Screenshot Annotator - ပုံတည်းဖြတ်သူ</value>
-  </data>
-  <data name="Winget_Description" xml:space="preserve">
-    <value>Windows နှင့် Linux အတွက် ဖန်သားပြင် မှတ်ချက် ဆော့ဖ်ဝဲ။
-
-အင်္ဂါရပ်များ-
-- **မြားများ** - စိတ်ကြိုက်ပြင်ဆင်နိုင်သော မြားများဖြင့် တိကျသောနေရာများကို အာရုံစိုက်ပါ
-- **ကာတွန်းဘူဘယ်များ** - တည်းဖြတ်နိုင်သော စာသားပါ ဘူဘယ်ပုံစံ မှတ်ချက်များ ထည့်ပါ
-- **မှတ်စုများ** - နောက်ထပ်အချက်အလက်နှင့် စာသားဘောက်များ ဖန်တီးပါ
-- **နယ်နိမိတ် မီးမောင်း** - နယ်နိမိတ်ထောင့်မှန်စတုဂံဖြင့် နေရာများ မီးမောင်းပါ
-- **ဝါးမှိုင်း** - ဝါးမှိုင်းအကျိုးသက်ရောက်မှုဖြင့် အရေးကြီးသောအချက်အလက် ဝှက်ပါ
-- **ရွေးချယ်မှုကိရိယာ** - ကူးယူရန် (Ctrl+C) သို့မဟုတ် ဖျက်ရန် (Delete ခလုတ်) ပုံအပိုင်းများ ရွေးချယ်ပါ
-- **ဒေါင်လိုက်နှင့် အလျားလိုက် ဖြတ်တောက်မှု** - ပုံ၏ ဒေါင်လိုက် သို့မဟုတ် အလျားလိုက် နေရာများ ဖြတ်တောက်ပါ
-- **မီးမောင်း** - စိတ်ဝင်စားဖွယ် နေရာများ မီးမောင်းပါ
-- **ပရောဂျက် စီမံခန့်ခွဲမှု** - အလိုအလျောက် ပရောဂျက် သိမ်းဆည်းမှုနှင့် ကြိုတင်ကြည့်ရှုနိုင်သော ပုံသေး
-- **ဆော့ဖ်ဝဲ ခြားနားချက်** - Windows နှင့် Linux နှစ်ခုစလုံးတွင် အလုပ်လုပ်သည်
-- **OCR** ကို Tesseract နှင့် Windows.Media.OCR မှတစ်ဆင့်။</value>
-  </data>
-  <data name="Winget_ShortDescription" xml:space="preserve">
-    <value>Windows နှင့် Linux အတွက် ဖန်သားပြင် မှတ်ချက် ဆော့ဖ်ဝဲ။</value>
   </data>
 </root>

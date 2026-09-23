@@ -59,9 +59,6 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <!-- Urdu -->
-  <data name="_Technical_WingetLocale" xml:space="preserve">
-    <value>ur-PK</value>
-  </data>
   <data name="App_DisplayName" xml:space="preserve">
     <value>اسکرین شاٹ نوٹساز</value>
     <comment>Short app display name for installer, shortcuts and error dialogs</comment>
@@ -381,24 +378,5 @@
   </data>
   <data name="Window_Title" xml:space="preserve">
     <value>اسکرین شاٹ نوٹساز - امیج ایڈیٹر</value>
-  </data>
-  <data name="Winget_Description" xml:space="preserve">
-    <value>Windows اور Linux کے لیے اسکرین شاٹ نوٹسازی سافٹ ویئر۔
-
-خصوصیات:
-- **تیر** - حسب ضرورت تیروں سے مخصوص علاقوں پر توجہ مرکوز کریں
-- **کال آؤٹ** - قابل ترمیم متن کے ساتھ تقریر کے بلبلے شامل کریں
-- **نوٹس** - اضافی معلومات کے لیے متن خانے بنائیں
-- **بارڈر انتخاب** - بارڈر والے مستطیلات سے علاقے نمایاں کریں
-- **دھندلاپن** - حساس معلومات چھپائیں
-- **منتخب آلہ** - نقل (Ctrl+C) یا حذف (Delete) کے لیے تصویر کے حصے منتخب کریں
-- **عمودی اور افقی سلائس کاٹیں** - تصویر کے عمودی یا افقی حصے کاٹیں
-- **نمایاں کار** - دلچسپی کے علاقے نمایاں کریں
-- **پروجیکٹ مینجمنٹ** - خودکار محفوظ اور تھمب نیل پیش نظارے
-- **کراس پلیٹ فارم** - Windows اور Linux پر چلتا ہے
-- **OCR** Tesseract اور Windows.Media.OCR کے ذریعے۔</value>
-  </data>
-  <data name="Winget_ShortDescription" xml:space="preserve">
-    <value>Windows اور Linux کے لیے اسکرین شاٹ نوٹسازی سافٹ ویئر۔</value>
   </data>
 </root>

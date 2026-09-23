@@ -62,9 +62,6 @@
   <data name="_Technical_NsisLanguage" xml:space="preserve">
     <value>Hungarian</value>
   </data>
-  <data name="_Technical_WingetLocale" xml:space="preserve">
-    <value>hu-HU</value>
-  </data>
   <data name="App_DisplayName" xml:space="preserve">
     <value>Screenshot Annotator</value>
     <comment>Short app display name for installer, shortcuts and error dialogs</comment>
@@ -384,24 +381,5 @@ Kérjük, tegye az alábbiak egyikét:
   </data>
   <data name="Window_Title" xml:space="preserve">
     <value>Screenshot Annotator - Képszerkesztő</value>
-  </data>
-  <data name="Winget_Description" xml:space="preserve">
-    <value>Képernyőkép-annotáló szoftver Windows és Linux rendszerekhez.
-
-Funkciók:
-- **Nyilak** - Irányítsa a figyelmet meghatározott területekre testreszabható nyilakkal
-- **Szóbuborékok** - Szerkeszthető szövegű buborékstílusú megjegyzések hozzáadása
-- **Megjegyzések** - Szövegmezők létrehozása kiegészítő információkkal
-- **Keret kiemelés** - Területek kiemelése keretes téglalapokkal
-- **Elmosás** - Érzékeny információk elrejtése elmosási effektekkel
-- **Kijelölő eszköz** - Képrészletek kijelölése másoláshoz (Ctrl+C) vagy törléshez (Delete)
-- **Függőleges és vízszintes vágás** - A kép függőleges vagy vízszintes területeinek kivágása
-- **Kiemelés** - Érdekességek kiemelése
-- **Projektkezelés** - Automatikus projektmentés és előnézeti bélyegképek
-- **Platformfüggetlen** - Windows és Linux rendszereken egyaránt működik
-- **OCR** Tesseract és Windows.Media.OCR segítségével.</value>
-  </data>
-  <data name="Winget_ShortDescription" xml:space="preserve">
-    <value>Képernyőkép-annotáló szoftver Windows és Linux rendszerekhez.</value>
   </data>
 </root>
