@@ -232,6 +232,7 @@ jobs:
             sources/tools/winget-pkgs
             sources/tools/ResxSorter
             sources/ScreenshotAnnotator.Common/Resources
+            fastlane/metadata/microsoft
 
       - name: Setup .NET 10
         uses: actions/setup-dotnet@v4
