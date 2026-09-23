@@ -20,7 +20,13 @@ Screenshot annotator software for Windows and Linux.
 
 ## Screenshots
 
-<img width="1262" height="1069" alt="image" src="https://github.com/user-attachments/assets/5c73a83f-a3ca-4081-8e30-cafee1a4ee42" />
+<img width="1368" height="769" alt="Screenshot Annotator with an empty canvas" src="docs/screenshots/editor.png" />
+
+<img width="1501" height="919" alt="Selecting a region of the screen to capture" src="docs/screenshots/capture.png" />
+
+<img width="1425" height="867" alt="Annotated screenshot with notes, callouts, arrows, and blur" src="docs/screenshots/annotations.png" />
+
+<img width="1421" height="863" alt="Extracting text from a selected area with OCR" src="docs/screenshots/ocr.png" />
 
 
 <details>
