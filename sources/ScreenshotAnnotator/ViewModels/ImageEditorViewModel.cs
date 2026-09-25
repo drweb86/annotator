@@ -864,6 +864,14 @@ public partial class ImageEditorViewModel : ViewModelBase, IProjectUi
         await new Views.PrivacyPolicyWindow().ShowDialog(_mainWindow);
     }
 
+    [RelayCommand]
+    private async Task OpenThirdPartyNotices()
+    {
+        if (_mainWindow is null)
+            return;
+        await new Views.ThirdPartyNoticesWindow().ShowDialog(_mainWindow);
+    }
+
     public bool EnablePrintScreenHotkey
     {
         get => _settings.Settings.EnablePrintScreenHotkey;

@@ -454,6 +454,15 @@ namespace ScreenshotAnnotator.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Third-party notices.
+        /// </summary>
+        public static string Menu_ThirdPartyNotices {
+            get {
+                return ResourceManager.GetString("Menu_ThirdPartyNotices", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Privacy.
         /// </summary>
         public static string Menu_Privacy {

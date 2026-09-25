@@ -23,6 +23,16 @@ public class LegalDocumentsTests
     }
 
     [Fact]
+    public void Third_party_notices_load()
+    {
+        var markdown = ThirdPartyNotices.Load();
+        Assert.Contains("SharpHook", markdown);
+        Assert.Contains("libuiohook", markdown);
+        Assert.Contains("LGPL", markdown);
+        Assert.NotEmpty(PrivacyMarkdown.Parse(markdown));
+    }
+
+    [Fact]
     public void Privacy_english_markdown_loads()
     {
         var markdown = PrivacyDocuments.LoadMarkdown("en.md");

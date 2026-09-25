@@ -32,6 +32,8 @@
     <EmbeddedResource Include="..\..\privacy\desktop\*.md"
                       Exclude="..\..\privacy\desktop\README.md"
                       LogicalName="ScreenshotAnnotator.Privacy.%(Filename)%(Extension)" />
+    <EmbeddedResource Include="..\..\THIRD-PARTY-NOTICES.md"
+                      LogicalName="ScreenshotAnnotator.ThirdPartyNotices.md" />
   </ItemGroup>
 
   <ItemGroup>

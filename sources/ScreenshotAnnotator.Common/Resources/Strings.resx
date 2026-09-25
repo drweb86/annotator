@@ -241,6 +241,10 @@ Please either:
     <value>Privacy</value>
     <comment>Privacy policy menu item</comment>
   </data>
+  <data name="Menu_ThirdPartyNotices" xml:space="preserve">
+    <value>Third-party notices</value>
+    <comment>Third-party notices menu item</comment>
+  </data>
   <data name="Menu_StartWithSystem" xml:space="preserve">
     <value>Start with system</value>
     <comment>Option to start the app when the system starts</comment>

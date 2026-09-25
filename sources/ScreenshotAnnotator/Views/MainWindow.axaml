@@ -49,6 +49,7 @@
 					  </MenuItem>
 					  <MenuItem Header="{local:Localize Menu_License}" Command="{Binding OpenLicenseCommand}" />
 					  <MenuItem Header="{local:Localize Menu_Privacy}" Command="{Binding OpenPrivacyCommand}" />
+					  <MenuItem Header="{local:Localize Menu_ThirdPartyNotices}" Command="{Binding OpenThirdPartyNoticesCommand}" />
 					  <Separator />
 					  <MenuItem Header="{local:Localize Menu_Options}">
 						  <MenuItem Header="{local:Localize Menu_EnablePrintScreenHotkey}"

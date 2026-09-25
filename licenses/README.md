@@ -1,6 +1,6 @@
 # License (CC0 1.0 Universal)
 
-Screenshot Annotator by Siarhei Kuchuk is dedicated to the public domain under CC0 1.0 Universal.
+Screenshot Annotator by Siarhei Kuchuk is dedicated to the public domain under CC0 1.0 Universal. Third-party components keep their own licenses. See [THIRD-PARTY-NOTICES.md](../THIRD-PARTY-NOTICES.md).
 Official Creative Commons translations are used where they exist.
 Other languages are unofficial translations; the English legal code governs.
 

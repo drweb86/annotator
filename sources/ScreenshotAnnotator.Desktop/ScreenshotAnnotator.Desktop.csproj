@@ -23,6 +23,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="..\..\THIRD-PARTY-NOTICES.md" Link="THIRD-PARTY-NOTICES.md" CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="..\..\third-party\libuiohook-LGPL-3.0.txt" Link="libuiohook-LGPL-3.0.txt" CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="..\..\third-party\libuiohook-GPL-3.0.txt" Link="libuiohook-GPL-3.0.txt" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\ScreenshotAnnotator\ScreenshotAnnotator.csproj" />
   </ItemGroup>
 </Project>

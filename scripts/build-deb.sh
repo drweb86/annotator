@@ -63,6 +63,9 @@ for rid in "${!ARCH_MAP[@]}"; do
 
     cp "$SCRIPT_DIR/App.png" "$pkg_root/usr/share/pixmaps/screenshot-annotator.png"
     cp "$REPO_ROOT/LICENSE" "$pkg_root/usr/share/doc/screenshot-annotator/copyright"
+    cp "$REPO_ROOT/THIRD-PARTY-NOTICES.md" "$pkg_root/usr/share/doc/screenshot-annotator/THIRD-PARTY-NOTICES.md"
+    cp "$REPO_ROOT/third-party/libuiohook-LGPL-3.0.txt" "$pkg_root/usr/share/doc/screenshot-annotator/libuiohook-LGPL-3.0.txt"
+    cp "$REPO_ROOT/third-party/libuiohook-GPL-3.0.txt" "$pkg_root/usr/share/doc/screenshot-annotator/libuiohook-GPL-3.0.txt"
 
     cat > "$pkg_root/usr/share/applications/screenshot-annotator.desktop" << 'DESKTOP'
 [Desktop Entry]
