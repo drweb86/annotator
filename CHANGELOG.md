@@ -4,6 +4,9 @@
 ## Changes
 - Update some libraries.
 
+## Bug Fixes
+- Microsoft Store taskbar icon no longer has a black background behind the cat.
+
 # 2026.09.26
 
 ## Changes
