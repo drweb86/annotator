@@ -71,6 +71,8 @@ Binaries are good if setups and zip archives are blocked by corporate policies. 
 
 <summary>📦 Installation for Linux</summary>
 
+Debian, Ubuntu, and derivatives
+
 A. Installation via APT Repository
 
 Best option. System will keep application updated.
@@ -137,7 +139,29 @@ Uninstallation (source install only):
 
 `wget -O - https://raw.githubusercontent.com/drweb86/annotator/master/scripts/ubuntu-uninstall.sh | bash`
 
-After installation, the following command is available: **`screenshot-annotator`** — graphical application.
+Fedora, RHEL, Rocky, Alma, and openSUSE
+
+RPM [look for asset linux_x86_64.rpm and linux_aarch64.rpm](https://github.com/drweb86/annotator/releases/latest)
+
+`sudo dnf install ./screenshot-annotator_*_linux_*.rpm`
+
+openSUSE: `sudo zypper install ./screenshot-annotator_*_linux_*.rpm`
+
+Arch Linux, Manjaro, and EndeavourOS
+
+Pacman [look for asset linux_x86_64.pkg.tar.zst and linux_aarch64.pkg.tar.zst](https://github.com/drweb86/annotator/releases/latest)
+
+`sudo pacman -U screenshot-annotator_*_linux_*.pkg.tar.zst`
+
+Other glibc Linux (amd64 and arm64)
+
+Tarball [look for asset linux_amd64.tar.gz and linux_arm64.tar.gz](https://github.com/drweb86/annotator/releases/latest)
+
+`sudo tar -C / -xzf screenshot-annotator_*_linux_*.tar.gz`
+
+The tarball unpacks into `/usr`. The system needs glibc, libstdc++, libX11, and fontconfig.
+
+After installation, the following command is available: **`screenshot-annotator`** — graphical application. Debian, Fedora, and Arch packages depend on gnome-screenshot. On the tarball, install gnome-screenshot, or scrot, or ImageMagick, when it is not already present.
 
 </details>
 

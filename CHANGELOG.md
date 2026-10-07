@@ -1,6 +1,9 @@
 # 2026.10.07
 (unpublished)
 
+## New Features
+- Linux packages for Debian and Ubuntu (.deb), Fedora and openSUSE (.rpm), Arch (.pkg.tar.zst), and a glibc tarball, each for amd64 and arm64.
+
 ## Changes
 - Update some libraries.
 
