@@ -21,18 +21,18 @@ The full license texts are shipped next to this application as `libuiohook-LGPL-
 ### MIT
 
 - **.NET Runtime** 10. Copyright (c) .NET Foundation and Contributors. [https://dot.net/](https://dot.net/)
-- **Avalonia** 12.1.2. Copyright 2013-2026 © The AvaloniaUI Project. [https://avaloniaui.net/](https://avaloniaui.net/)
-- **Avalonia.Desktop** 12.1.2. Copyright 2013-2026 © The AvaloniaUI Project. [https://avaloniaui.net/](https://avaloniaui.net/)
-- **Avalonia.Fonts.Inter** 12.1.2. Copyright 2013-2026 © The AvaloniaUI Project. The Inter typeface itself is OFL-1.1. [https://avaloniaui.net/](https://avaloniaui.net/)
-- **Avalonia.FreeDesktop** 12.1.2. Copyright 2013-2026 © The AvaloniaUI Project. [https://avaloniaui.net/](https://avaloniaui.net/)
-- **Avalonia.FreeDesktop.AtSpi** 12.1.2. Copyright 2013-2026 © The AvaloniaUI Project. [https://avaloniaui.net/](https://avaloniaui.net/)
-- **Avalonia.HarfBuzz** 12.1.2. Copyright 2013-2026 © The AvaloniaUI Project. [https://avaloniaui.net/](https://avaloniaui.net/)
-- **Avalonia.Native** 12.1.2. Copyright 2013-2026 © The AvaloniaUI Project. [https://avaloniaui.net/](https://avaloniaui.net/)
-- **Avalonia.Remote.Protocol** 12.1.2. Copyright 2013-2026 © The AvaloniaUI Project. [https://avaloniaui.net/](https://avaloniaui.net/)
-- **Avalonia.Skia** 12.1.2. Copyright 2013-2026 © The AvaloniaUI Project. [https://avaloniaui.net/](https://avaloniaui.net/)
-- **Avalonia.Themes.Fluent** 12.1.2. Copyright 2013-2026 © The AvaloniaUI Project. [https://avaloniaui.net/](https://avaloniaui.net/)
-- **Avalonia.Win32** 12.1.2. Copyright 2013-2026 © The AvaloniaUI Project. [https://avaloniaui.net/](https://avaloniaui.net/)
-- **Avalonia.X11** 12.1.2. Copyright 2013-2026 © The AvaloniaUI Project. [https://avaloniaui.net/](https://avaloniaui.net/)
+- **Avalonia** 12.1.3. Copyright 2013-2026 © The AvaloniaUI Project. [https://avaloniaui.net/](https://avaloniaui.net/)
+- **Avalonia.Desktop** 12.1.3. Copyright 2013-2026 © The AvaloniaUI Project. [https://avaloniaui.net/](https://avaloniaui.net/)
+- **Avalonia.Fonts.Inter** 12.1.3. Copyright 2013-2026 © The AvaloniaUI Project. The Inter typeface itself is OFL-1.1. [https://avaloniaui.net/](https://avaloniaui.net/)
+- **Avalonia.FreeDesktop** 12.1.3. Copyright 2013-2026 © The AvaloniaUI Project. [https://avaloniaui.net/](https://avaloniaui.net/)
+- **Avalonia.FreeDesktop.AtSpi** 12.1.3. Copyright 2013-2026 © The AvaloniaUI Project. [https://avaloniaui.net/](https://avaloniaui.net/)
+- **Avalonia.HarfBuzz** 12.1.3. Copyright 2013-2026 © The AvaloniaUI Project. [https://avaloniaui.net/](https://avaloniaui.net/)
+- **Avalonia.Native** 12.1.3. Copyright 2013-2026 © The AvaloniaUI Project. [https://avaloniaui.net/](https://avaloniaui.net/)
+- **Avalonia.Remote.Protocol** 12.1.3. Copyright 2013-2026 © The AvaloniaUI Project. [https://avaloniaui.net/](https://avaloniaui.net/)
+- **Avalonia.Skia** 12.1.3. Copyright 2013-2026 © The AvaloniaUI Project. [https://avaloniaui.net/](https://avaloniaui.net/)
+- **Avalonia.Themes.Fluent** 12.1.3. Copyright 2013-2026 © The AvaloniaUI Project. [https://avaloniaui.net/](https://avaloniaui.net/)
+- **Avalonia.Win32** 12.1.3. Copyright 2013-2026 © The AvaloniaUI Project. [https://avaloniaui.net/](https://avaloniaui.net/)
+- **Avalonia.X11** 12.1.3. Copyright 2013-2026 © The AvaloniaUI Project. [https://avaloniaui.net/](https://avaloniaui.net/)
 - **CommunityToolkit.Mvvm** 8.4.2. (c) .NET Foundation and Contributors. All rights reserved. [https://github.com/CommunityToolkit/dotnet](https://github.com/CommunityToolkit/dotnet)
 - **HarfBuzzSharp** 8.3.1.3. © Microsoft Corporation. All rights reserved. [https://go.microsoft.com/fwlink/](https://go.microsoft.com/fwlink/)
 - **HarfBuzzSharp.NativeAssets.Linux** 8.3.1.3. © Microsoft Corporation. All rights reserved.
@@ -53,10 +53,10 @@ Windows desktop builds also include **Avalonia.Angle.Windows.Natives** 2.1.27548
 
 These projects are not the Windows and Linux desktop builds.
 
-- **Avalonia.Android** 11.3.10. MIT.
-- **Avalonia.iOS** 11.3.10. MIT.
-- **Avalonia.Browser** 11.3.10. MIT.
-- **Xamarin.AndroidX.Core.SplashScreen** 1.0.1.15. .NET binding. Upstream AndroidX is Apache-2.0.
+- **Avalonia.Android** 12.1.3. MIT.
+- **Avalonia.iOS** 12.1.3. MIT.
+- **Avalonia.Browser** 12.1.3. MIT.
+- **Xamarin.AndroidX.Core.SplashScreen** 1.2.0.2. .NET binding. Upstream AndroidX is Apache-2.0.
 
 ## BSD 3-Clause License text
 
