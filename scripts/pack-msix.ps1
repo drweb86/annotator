@@ -286,20 +286,20 @@ foreach ($arch in $arches) {
     $utf8NoBom = New-Object System.Text.UTF8Encoding $false
     [System.IO.File]::WriteAllText($manifestPath, $manifestText, $utf8NoBom)
 
-    # Index only the manifest and Assets. The published app has dotted assembly names
-    # (System.Collections.dll) that makepri would treat as resource qualifiers.
+    # Index only Assets. The published app has dotted assembly names (System.Collections.dll)
+    # that makepri would treat as resource qualifiers. The manifest stays outside this folder
+    # and is passed with /mn so it is not indexed as a file resource.
     $priLayout = Join-Path $staging "pri-layout"
     if (Test-Path $priLayout) {
         Remove-Item $priLayout -Recurse -Force
     }
     New-Item -ItemType Directory -Force -Path (Join-Path $priLayout "Assets") | Out-Null
-    Copy-Item $manifestPath (Join-Path $priLayout "AppxManifest.xml")
     Copy-Item -Path (Join-Path $assetsDest "*") -Destination (Join-Path $priLayout "Assets") -Force
     $priConfig = Join-Path $RepoRoot "Output\priconfig.xml"
     [System.IO.File]::WriteAllText($priConfig, (Get-PriConfigXml), $utf8NoBom)
     $priPath = Join-Path $staging "resources.pri"
     Write-Output "Indexing logo variants into resources.pri"
-    & $makePri new /pr $priLayout /cf $priConfig /mn (Join-Path $priLayout "AppxManifest.xml") /of $priPath /o
+    & $makePri new /pr $priLayout /cf $priConfig /mn $manifestPath /of $priPath /o
     if ($LASTEXITCODE -ne 0) {
         throw "makepri failed for $($arch.Folder) with exit code $LASTEXITCODE"
     }
