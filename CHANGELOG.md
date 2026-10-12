@@ -9,6 +9,7 @@
 
 ## Bug Fixes
 - Microsoft Store taskbar icon no longer has a black background behind the cat.
+- Print Screen is consumed by this app, so Windows Snipping Tool no longer overlays and corrupts the capture.
 
 # 2026.09.26
 
