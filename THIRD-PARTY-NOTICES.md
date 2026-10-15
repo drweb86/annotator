@@ -10,7 +10,7 @@ Avalonia.BuildServices is a build tool and is not part of the published applicat
 
 ### BSD-3-Clause
 
-- **NLog** 6.2.1. Copyright (c) 2004-2026 NLog Project. Authors: Jarek Kowalski, Kim Christensen, Julian Verdurmen. [https://nlog-project.org/](https://nlog-project.org/)
+- **NLog** 6.2.2. Copyright (c) 2004-2026 NLog Project. Authors: Jarek Kowalski, Kim Christensen, Julian Verdurmen. [https://nlog-project.org/](https://nlog-project.org/)
 
 ### LGPL-3.0
 
