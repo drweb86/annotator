@@ -1,5 +1,4 @@
 # 2026.11.11
-(unpublished)
 
 ## Changes
 - Upgrade to .NET 11. Runtime async is enabled for CoreCLR projects. Android, iOS, and Browser leave it off, because that preview does not run on Mono.
@@ -7,9 +6,6 @@
 
 ## New Features
 - Linux packages for Debian and Ubuntu (.deb), Fedora and openSUSE (.rpm), Arch (.pkg.tar.zst), and a glibc tarball, each for amd64 and arm64.
-
-## Changes
-- Update some libraries.
 
 ## Bug Fixes
 - Microsoft Store taskbar icon no longer has a black background behind the cat.
