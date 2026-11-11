@@ -14,32 +14,32 @@ Avalonia.BuildServices is a build tool and is not part of the published applicat
 
 ### LGPL-3.0
 
-- **libuiohook**, bundled inside **SharpHook** 8.0.0. Copyright Alexander Barker and contributors to libuiohook. The SharpHook package itself is MIT; the native library it ships is the GNU Lesser General Public License v3.0, which includes the GNU GPL v3.0 by reference. [https://github.com/TolikPylypchuk/libuiohook](https://github.com/TolikPylypchuk/libuiohook)
+- **libuiohook**, bundled inside **SharpHook** 8.0.1. Copyright Alexander Barker and contributors to libuiohook. The SharpHook package itself is MIT; the native library it ships is the GNU Lesser General Public License v3.0, which includes the GNU GPL v3.0 by reference. [https://github.com/TolikPylypchuk/libuiohook](https://github.com/TolikPylypchuk/libuiohook)
 
 The full license texts are shipped next to this application as `libuiohook-LGPL-3.0.txt` and `libuiohook-GPL-3.0.txt`.
 
 ### MIT
 
-- **.NET Runtime** 10. Copyright (c) .NET Foundation and Contributors. [https://dot.net/](https://dot.net/)
-- **Avalonia** 12.1.4. Copyright 2013-2026 © The AvaloniaUI Project. [https://avaloniaui.net/](https://avaloniaui.net/)
-- **Avalonia.Desktop** 12.1.4. Copyright 2013-2026 © The AvaloniaUI Project. [https://avaloniaui.net/](https://avaloniaui.net/)
-- **Avalonia.Fonts.Inter** 12.1.4. Copyright 2013-2026 © The AvaloniaUI Project. The Inter typeface itself is OFL-1.1. [https://avaloniaui.net/](https://avaloniaui.net/)
-- **Avalonia.FreeDesktop** 12.1.4. Copyright 2013-2026 © The AvaloniaUI Project. [https://avaloniaui.net/](https://avaloniaui.net/)
-- **Avalonia.FreeDesktop.AtSpi** 12.1.4. Copyright 2013-2026 © The AvaloniaUI Project. [https://avaloniaui.net/](https://avaloniaui.net/)
-- **Avalonia.HarfBuzz** 12.1.4. Copyright 2013-2026 © The AvaloniaUI Project. [https://avaloniaui.net/](https://avaloniaui.net/)
-- **Avalonia.Native** 12.1.4. Copyright 2013-2026 © The AvaloniaUI Project. [https://avaloniaui.net/](https://avaloniaui.net/)
-- **Avalonia.Remote.Protocol** 12.1.4. Copyright 2013-2026 © The AvaloniaUI Project. [https://avaloniaui.net/](https://avaloniaui.net/)
-- **Avalonia.Skia** 12.1.4. Copyright 2013-2026 © The AvaloniaUI Project. [https://avaloniaui.net/](https://avaloniaui.net/)
-- **Avalonia.Themes.Fluent** 12.1.4. Copyright 2013-2026 © The AvaloniaUI Project. [https://avaloniaui.net/](https://avaloniaui.net/)
-- **Avalonia.Win32** 12.1.4. Copyright 2013-2026 © The AvaloniaUI Project. [https://avaloniaui.net/](https://avaloniaui.net/)
-- **Avalonia.X11** 12.1.4. Copyright 2013-2026 © The AvaloniaUI Project. [https://avaloniaui.net/](https://avaloniaui.net/)
+- **.NET Runtime** 11. Copyright (c) .NET Foundation and Contributors. [https://dot.net/](https://dot.net/)
+- **Avalonia** 12.1.6. Copyright 2013-2026 © The AvaloniaUI Project. [https://avaloniaui.net/](https://avaloniaui.net/)
+- **Avalonia.Desktop** 12.1.6. Copyright 2013-2026 © The AvaloniaUI Project. [https://avaloniaui.net/](https://avaloniaui.net/)
+- **Avalonia.Fonts.Inter** 12.1.6. Copyright 2013-2026 © The AvaloniaUI Project. The Inter typeface itself is OFL-1.1. [https://avaloniaui.net/](https://avaloniaui.net/)
+- **Avalonia.FreeDesktop** 12.1.6. Copyright 2013-2026 © The AvaloniaUI Project. [https://avaloniaui.net/](https://avaloniaui.net/)
+- **Avalonia.FreeDesktop.AtSpi** 12.1.6. Copyright 2013-2026 © The AvaloniaUI Project. [https://avaloniaui.net/](https://avaloniaui.net/)
+- **Avalonia.HarfBuzz** 12.1.6. Copyright 2013-2026 © The AvaloniaUI Project. [https://avaloniaui.net/](https://avaloniaui.net/)
+- **Avalonia.Native** 12.1.6. Copyright 2013-2026 © The AvaloniaUI Project. [https://avaloniaui.net/](https://avaloniaui.net/)
+- **Avalonia.Remote.Protocol** 12.1.6. Copyright 2013-2026 © The AvaloniaUI Project. [https://avaloniaui.net/](https://avaloniaui.net/)
+- **Avalonia.Skia** 12.1.6. Copyright 2013-2026 © The AvaloniaUI Project. [https://avaloniaui.net/](https://avaloniaui.net/)
+- **Avalonia.Themes.Fluent** 12.1.6. Copyright 2013-2026 © The AvaloniaUI Project. [https://avaloniaui.net/](https://avaloniaui.net/)
+- **Avalonia.Win32** 12.1.6. Copyright 2013-2026 © The AvaloniaUI Project. [https://avaloniaui.net/](https://avaloniaui.net/)
+- **Avalonia.X11** 12.1.6. Copyright 2013-2026 © The AvaloniaUI Project. [https://avaloniaui.net/](https://avaloniaui.net/)
 - **CommunityToolkit.Mvvm** 8.4.2. (c) .NET Foundation and Contributors. All rights reserved. [https://github.com/CommunityToolkit/dotnet](https://github.com/CommunityToolkit/dotnet)
 - **HarfBuzzSharp** 8.3.1.3. © Microsoft Corporation. All rights reserved. [https://go.microsoft.com/fwlink/](https://go.microsoft.com/fwlink/)
 - **HarfBuzzSharp.NativeAssets.Linux** 8.3.1.3. © Microsoft Corporation. All rights reserved.
 - **HarfBuzzSharp.NativeAssets.WebAssembly** 8.3.1.3. © Microsoft Corporation. All rights reserved.
 - **HarfBuzzSharp.NativeAssets.Win32** 8.3.1.3. © Microsoft Corporation. All rights reserved.
 - **MicroCom.Runtime** 0.11.6. Copyright 2021 © Nikita Tsukanov.
-- **SharpHook** 8.0.0. Copyright (c) 2021 Anatoliy Pylypchuk. [https://github.com/TolikPylypchuk/SharpHook](https://github.com/TolikPylypchuk/SharpHook)
+- **SharpHook** 8.0.1. Copyright (c) 2021 Anatoliy Pylypchuk. [https://github.com/TolikPylypchuk/SharpHook](https://github.com/TolikPylypchuk/SharpHook)
 - **SkiaSharp** 3.119.4. © Microsoft Corporation. All rights reserved. [https://go.microsoft.com/fwlink/](https://go.microsoft.com/fwlink/)
 - **SkiaSharp.NativeAssets.Linux** 3.119.4. © Microsoft Corporation. All rights reserved.
 - **SkiaSharp.NativeAssets.macOS** 3.119.4. © Microsoft Corporation. All rights reserved.
@@ -53,9 +53,9 @@ Windows desktop builds also include **Avalonia.Angle.Windows.Natives** 2.1.27548
 
 These projects are not the Windows and Linux desktop builds.
 
-- **Avalonia.Android** 12.1.4. MIT.
-- **Avalonia.iOS** 12.1.4. MIT.
-- **Avalonia.Browser** 12.1.4. MIT.
+- **Avalonia.Android** 12.1.6. MIT.
+- **Avalonia.iOS** 12.1.6. MIT.
+- **Avalonia.Browser** 12.1.6. MIT.
 - **Xamarin.AndroidX.Core.SplashScreen** 1.2.0.3. .NET binding. Upstream AndroidX is Apache-2.0.
 
 ## BSD 3-Clause License text

@@ -1,5 +1,9 @@
-# 2026.10.07
+# 2026.11.11
 (unpublished)
+
+## Changes
+- Upgrade to .NET 11. Runtime async is enabled for CoreCLR projects. Android, iOS, and Browser leave it off, because that preview does not run on Mono.
+- Avalonia 12.1.6, SharpHook 8.0.1, Microsoft.NET.Test.Sdk 18.12.0, and xunit.v3 4.0.3. SkiaSharp stays on 3.119.4, which is the version Avalonia 12.1.6 is built against.
 
 ## New Features
 - Linux packages for Debian and Ubuntu (.deb), Fedora and openSUSE (.rpm), Arch (.pkg.tar.zst), and a glibc tarball, each for amd64 and arm64.

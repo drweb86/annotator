@@ -168,7 +168,7 @@ After installation, the following command is available: **`screenshot-annotator`
 ## Technology Stack
 
 - Built with [Avalonia UI](https://avaloniaui.net/) for cross-platform support
-- .NET 10
+- .NET 11
 - SkiaSharp for image processing
 
 ## Development

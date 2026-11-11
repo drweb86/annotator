@@ -4,7 +4,7 @@ Screenshot Annotator supports custom annotation shapes delivered as plugin assem
 
 ## Quick start
 
-1. Create a class library targeting `net10.0`.
+1. Create a class library targeting `net11.0`.
 2. Add a project reference to `ScreenshotAnnotator.Interop`.
 3. Implement `IShapePlugin` and register your shape types through the plugin loader folder layout (see below).
 4. Copy the built plugin folder to one of the supported locations and restart the app.
@@ -58,7 +58,7 @@ plugins/shapes/my-stamp/
    - `TypeId` must match the serializable `Type` value.
    - Implement `Serialize` / `Deserialize` for project save/load.
    - Implement drawing helpers used by the canvas (`CreateShape`, `UpdateWhileDrawing`, `IsValidForAdd`, handle drag methods).
-4. Build for `net10.0` against the same Avalonia major version as the host.
+4. Build for `net11.0` against the same Avalonia major version as the host.
 
 Optional capability interfaces (in Interop) reduce boilerplate for common behaviors:
 
@@ -100,7 +100,7 @@ Shapes are stored in `.anp` project JSON under `Shapes[]` with a `"Type"` discri
 
 - **No access to `ScreenshotAnnotator.Common`** — do not rely on built-in localization RESX files; provide your own display strings in the plugin.
 - **Type IDs must be unique** — conflicts with built-in or other plugin IDs are skipped at load time.
-- **Same runtime** — target `net10.0` and compatible Avalonia packages.
+- **Same runtime** — target `net11.0` and compatible Avalonia packages.
 
 ## Built-in shapes
 

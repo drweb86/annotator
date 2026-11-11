@@ -1,0 +1,7 @@
+<Project>
+  <!-- Runtime async is a .NET 11 preview and runs on CoreCLR only.
+       Android, iOS, and Browser use Mono, which does not support it. -->
+  <PropertyGroup>
+    <Features Condition="'$(MSBuildProjectName)' != 'ScreenshotAnnotator.Android' and '$(MSBuildProjectName)' != 'ScreenshotAnnotator.iOS' and '$(MSBuildProjectName)' != 'ScreenshotAnnotator.Browser'">runtime-async=on</Features>
+  </PropertyGroup>
+</Project>
