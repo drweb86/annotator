@@ -1,0 +1,18 @@
+Package: screenshot-annotator
+Version: 2026.11.12
+Architecture: amd64
+Maintainer: Siarhei Kuchuk <https://github.com/drweb86>
+Installed-Size: 154982
+Depends: libc6, libgcc-s1, libstdc++6, libx11-6, libfontconfig1, dbus-x11, gnome-screenshot
+Filename: pool/main/screenshot-annotator_2026.11.12_linux_amd64.deb
+Size: 52695344
+MD5sum: 37f9545e272b6a89ab512fd30278b56a
+SHA1: 1bdd99669e4ceca3fc82ba10f82f46908b080a31
+SHA256: 2a73aed42e13552e174a36c50fe63bf55902435973d5f9e69fee04e859d01e9e
+Section: graphics
+Priority: optional
+Homepage: https://github.com/drweb86/annotator
+Description: Helps to annotate screenshots
+License: CC0-1.0
+Vendor: none
+
