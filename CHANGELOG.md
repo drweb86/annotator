@@ -1,4 +1,4 @@
-# 2026.11.11
+# 2026.11.12
 
 ## Changes
 - Upgrade to .NET 11. Runtime async is enabled for CoreCLR projects. Android, iOS, and Browser leave it off, because that preview does not run on Mono.
