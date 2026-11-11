@@ -353,7 +353,8 @@ namespace Codice.SortResX
 
     public static class WingetLocaleGenerator
     {
-        // https://aka.ms/winget-manifest.defaultLocale.1.12.0.schema.json
+        // https://aka.ms/winget-manifest.defaultLocale.1.28.0.schema.json
+        const string ManifestSchemaVersion = "1.28.0";
         const int ShortDescriptionMin = 3;
         const int ShortDescriptionMax = 256;
         const int DescriptionMin = 3;
@@ -441,7 +442,7 @@ namespace Codice.SortResX
         {
             var schemaType = manifest.IsDefault ? "defaultLocale" : "locale";
             using var writer = new StreamWriter(outputPath, false, new UTF8Encoding(false));
-            writer.WriteLine($"# yaml-language-server: $schema=https://aka.ms/winget-manifest.{schemaType}.1.12.0.schema.json");
+            writer.WriteLine($"# yaml-language-server: $schema=https://aka.ms/winget-manifest.{schemaType}.{ManifestSchemaVersion}.schema.json");
             writer.WriteLine();
             writer.WriteLine("PackageIdentifier: SiarheiKuchuk.ScreenshotAnnotator");
             writer.WriteLine("PackageVersion: APP_VERSION_STRING");
@@ -469,7 +470,7 @@ namespace Codice.SortResX
                 writer.WriteLine($"- {YamlDoubleQuoted(tag)}");
             writer.WriteLine("ReleaseNotesUrl: https://raw.githubusercontent.com/drweb86/annotator/refs/heads/main/CHANGELOG.md");
             writer.WriteLine($"ManifestType: {schemaType}");
-            writer.WriteLine("ManifestVersion: 1.12.0");
+            writer.WriteLine($"ManifestVersion: {ManifestSchemaVersion}");
         }
 
         static string ToWingetLocale(string folderName)
