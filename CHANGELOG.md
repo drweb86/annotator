@@ -1,3 +1,9 @@
+# 2026.11.16
+(unpublished)
+
+## Bug Fixes
+- Fix icon borders.
+
 # 2026.11.12
 
 ## Changes

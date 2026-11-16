@@ -1,5 +1,6 @@
 using System.Text;
 using System.Xml;
+using SkiaSharp;
 
 // =============================================================================
 // TECHNICAL KEYS IN RESX FILES (DO NOT TRANSLATE)
@@ -297,6 +298,12 @@ namespace Codice.SortResX
             var selected = catFiles[new Random().Next(catFiles.Length)];
             Console.WriteLine($"Selected cat icon: {Path.GetFileName(selected)}");
 
+            // The cats share one canvas. Artwork that does not reach the edges
+            // leaves a transparent margin, and the whole file is used as the icon,
+            // so those cats draw smaller than other icons. Crop to the painted
+            // pixels and scale that artwork to fill the square.
+            var iconPng = FitArtwork(selected);
+
             string[] pngTargets =
             [
                 Path.Combine(scriptsDir, "App.png"),
@@ -305,7 +312,7 @@ namespace Codice.SortResX
 
             foreach (var target in pngTargets)
             {
-                File.Copy(selected, target, overwrite: true);
+                File.WriteAllBytes(target, iconPng);
                 Console.WriteLine($"Updated {target}");
             }
 
@@ -317,14 +324,93 @@ namespace Codice.SortResX
 
             foreach (var target in icoTargets)
             {
-                WritePngAsIco(selected, target);
+                WritePngAsIco(iconPng, target);
                 Console.WriteLine($"Updated {target}");
             }
         }
 
-        static void WritePngAsIco(string pngPath, string icoPath)
+        static byte[] FitArtwork(string pngPath)
         {
-            var pngData = File.ReadAllBytes(pngPath);
+            var original = File.ReadAllBytes(pngPath);
+            using var bitmap = SKBitmap.Decode(original);
+            if (bitmap is null)
+                return original;
+
+            if (!TryGetArtworkBounds(bitmap, out int left, out int top, out int right, out int bottom))
+                return original;
+
+            int contentWidth = right - left;
+            int contentHeight = bottom - top;
+            int padLeft = left;
+            int padTop = top;
+            int padRight = bitmap.Width - right;
+            int padBottom = bitmap.Height - bottom;
+            int maxPad = Math.Max(Math.Max(padLeft, padRight), Math.Max(padTop, padBottom));
+            // Already edge to edge. Keep the original bytes so full-bleed scenes are not resampled.
+            if (maxPad <= 2)
+                return original;
+
+            int side = Math.Max(bitmap.Width, bitmap.Height);
+            float scale = Math.Min((float)side / contentWidth, (float)side / contentHeight);
+            float drawnWidth = contentWidth * scale;
+            float drawnHeight = contentHeight * scale;
+            float destLeft = (side - drawnWidth) / 2f;
+            float destTop = (side - drawnHeight) / 2f;
+
+            var info = new SKImageInfo(side, side, SKColorType.Rgba8888, SKAlphaType.Premul);
+            using var fitted = new SKBitmap(info);
+            using (var canvas = new SKCanvas(fitted))
+            {
+                canvas.Clear(SKColors.Transparent);
+                using var image = SKImage.FromBitmap(bitmap);
+                var source = new SKRect(left, top, right, bottom);
+                var dest = new SKRect(destLeft, destTop, destLeft + drawnWidth, destTop + drawnHeight);
+                canvas.DrawImage(image, source, dest, new SKSamplingOptions(SKCubicResampler.Mitchell));
+            }
+
+            using var encoded = fitted.Encode(SKEncodedImageFormat.Png, 100);
+            if (encoded is null)
+                return original;
+
+            Console.WriteLine(
+                $"Filled icon canvas with artwork {contentWidth}x{contentHeight} " +
+                $"(was inset L{padLeft} T{padTop} R{padRight} B{padBottom} on {bitmap.Width}x{bitmap.Height}).");
+            return encoded.ToArray();
+        }
+
+        static bool TryGetArtworkBounds(SKBitmap bitmap, out int left, out int top, out int right, out int bottom)
+        {
+            int width = bitmap.Width;
+            int height = bitmap.Height;
+            var pixels = bitmap.Pixels;
+            left = width;
+            top = height;
+            right = 0;
+            bottom = 0;
+
+            for (int y = 0; y < height; y++)
+            {
+                int row = y * width;
+                for (int x = 0; x < width; x++)
+                {
+                    if (pixels[row + x].Alpha <= 16)
+                        continue;
+                    if (x < left)
+                        left = x;
+                    if (y < top)
+                        top = y;
+                    if (x + 1 > right)
+                        right = x + 1;
+                    if (y + 1 > bottom)
+                        bottom = y + 1;
+                }
+            }
+
+            return right > left && bottom > top;
+        }
+
+        static void WritePngAsIco(byte[] pngData, string icoPath)
+        {
             // PNG IHDR chunk starts at byte 16: 4-byte width, 4-byte height (big-endian)
             int width  = (pngData[16] << 24) | (pngData[17] << 16) | (pngData[18] << 8) | pngData[19];
             int height = (pngData[20] << 24) | (pngData[21] << 16) | (pngData[22] << 8) | pngData[23];

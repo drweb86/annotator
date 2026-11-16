@@ -125,16 +125,11 @@ public static class UnplatedLogoWriter
     }
 
     // Premultiplied box filter. Transparent pixels in the cat art are RGB black, and
-    // GDI+ HighQualityBicubic blends that black into the edge.
+    // GDI+ HighQualityBicubic blends that black into the edge. The source is already
+    // cropped to the artwork, so these tiles stay full-bleed. An extra margin here
+    // made the cat smaller than other taskbar icons.
     static Bitmap Scale(byte[] src, int srcStride, int sw, int sh, int size)
     {
-        int pad = (int)Math.Round(size * 3.0 / 44.0);
-        if (pad < 0)
-            pad = 0;
-        if (pad * 2 >= size)
-            pad = 0;
-        int inner = size - (pad * 2);
-
         Bitmap dest = new Bitmap(size, size, PixelFormat.Format32bppArgb);
         Rectangle rect = new Rectangle(0, 0, size, size);
         BitmapData data = dest.LockBits(rect, ImageLockMode.WriteOnly, PixelFormat.Format32bppArgb);
@@ -142,16 +137,16 @@ public static class UnplatedLogoWriter
         {
             int stride = data.Stride;
             byte[] bytes = new byte[stride * size];
-            for (int y = 0; y < inner; y++)
+            for (int y = 0; y < size; y++)
             {
-                int sy0 = (int)((long)y * sh / inner);
-                int sy1 = (int)((long)(y + 1) * sh / inner);
+                int sy0 = (int)((long)y * sh / size);
+                int sy1 = (int)((long)(y + 1) * sh / size);
                 if (sy1 <= sy0)
                     sy1 = Math.Min(sh, sy0 + 1);
-                for (int x = 0; x < inner; x++)
+                for (int x = 0; x < size; x++)
                 {
-                    int sx0 = (int)((long)x * sw / inner);
-                    int sx1 = (int)((long)(x + 1) * sw / inner);
+                    int sx0 = (int)((long)x * sw / size);
+                    int sx1 = (int)((long)(x + 1) * sw / size);
                     if (sx1 <= sx0)
                         sx1 = Math.Min(sw, sx0 + 1);
                     long sumB = 0, sumG = 0, sumR = 0, sumA = 0;
@@ -170,7 +165,7 @@ public static class UnplatedLogoWriter
                             count++;
                         }
                     }
-                    int di = ((y + pad) * stride) + ((x + pad) * 4);
+                    int di = (y * stride) + (x * 4);
                     if (sumA == 0 || count == 0)
                         continue;
                     bytes[di] = (byte)(sumB / sumA);
