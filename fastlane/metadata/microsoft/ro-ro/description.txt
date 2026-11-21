@@ -18,7 +18,7 @@ Selectați o zonă și extrageți textul cu OCR Windows integrat. Fără softwar
 
 Rămâneți în flux
 
-Proiectele se salvează automat cu miniaturi, ca să reveniți la raportul de eroare de ieri sau la ghidul de azi. Trageți imagini. Copiați imaginea gata în clipboard. Porniți cu Windows ca captura să aștepte după autentificare. Spațiul de lucru e întunecat, rapid și disponibil în 57 de limbi.
+Proiectele se salvează automat cu miniaturi, ca să reveniți la raportul de eroare de ieri sau la ghidul de azi. Trageți imagini. Copiați imaginea gata în clipboard. Începeți odată cu Windows ca captura să aștepte după autentificare. Spațiul de lucru e întunecat, rapid și disponibil în 57 de limbi.
 
 Capturile vă aparțin
 

@@ -2,7 +2,7 @@ Screenshot Annotator transforme une capture brouillonne en explication claire en
 
 La capture n’est jamais qu’une touche. Print Screen fonctionne même si l’app est en arrière-plan ou réduite. Recadrez la zone, puis pointez, expliquez, masquez et peaufinez.
 
-Laissez l’image parler
+Laissez l’image raconter
 
 - Flèches personnalisables qui pointent exactement au bon endroit
 - Légendes en bulle avec texte modifiable

@@ -11,7 +11,7 @@ Extrageți text dintr-o selecție cu OCR Windows integrat. Tesseract opțional.
 Copiați și lipiți capturi și forme. Trageți imagini într-un proiect.
 Exportați PNG, JPEG sau WebP. Un PNG este salvat și lângă proiect.
 Proiectele se salvează singure, cu miniaturi, ca să reveniți instant.
-Porniți cu Windows și țineți Print Screen gata după autentificare.
+Începeți odată cu Windows și țineți Print Screen gata după autentificare.
 Open source. Fără reclame, fără analiză, fără cont. Capturile rămân pe acest computer.
 Spațiu de lucru întunecat și concentrat, cu bare de derulare pentru capturi mari.
 Reglați fonturi, culori, dimensiune, aldine și italic pe note, baloane și săgeți.
