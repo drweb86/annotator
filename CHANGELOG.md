@@ -1,5 +1,8 @@
-# 2026.11.16
+# 2026.11.21
 (unpublished)
+
+## Changes
+- SharpHook 8.0.3, which bundles libuiohook 2.0.3.
 
 ## Bug Fixes
 - Fix icon borders.
